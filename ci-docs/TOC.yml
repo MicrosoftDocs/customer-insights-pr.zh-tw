@@ -1,0 +1,226 @@
+- name: Dynamics 365 Customer Insights
+  href: index.yml
+- name: 產品概觀
+  href: overview.md
+- name: 存取您的環境
+  href: 'https://home.ci.ai.dynamics.com/'
+- name: 對象見解
+  items:
+    - name: 求助中樞
+      href: audience-insights/index.yml
+    - name: 能力總覽
+      href: audience-insights/overview.md
+    - name: 免費試用
+      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
+    - name: 新功能與更新功能
+      href: audience-insights/whats-new-audience-insights.md
+    - name: 開始使用
+      items:
+        - name: 建立新環境
+          href: audience-insights/home.md
+        - name: 內嵌資料
+          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+        - name: 建立統整的客戶設定檔
+          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+        - name: 使用應用程式
+          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+        - name: 豐富資料和預測
+          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+    - name: 資料來源
+      items:
+        - name: 資料來源概觀
+          href: audience-insights/data-sources.md
+        - name: 透過 Power Query 連接器新增資料來源
+          href: audience-insights/connect-power-query.md
+        - name: 新增 Common Data Model 資料夾做為資料來源
+          href: audience-insights/connect-common-data-model.md
+        - name: 新增 Common Data Service 受管理資料湖
+          href: audience-insights/connect-common-data-service-lake.md
+        - name: 資料來源的增量重新整理
+          href: audience-insights/incremental-refresh-data-sources.md
+        - name: 即時資料擷取
+          href: audience-insights/real-time-data-ingestion.md
+        - name: 了解實體和資料集
+          href: audience-insights/entities.md
+    - name: 資料統整
+      items:
+        - name: 統整概觀
+          href: audience-insights/data-unification.md
+        - name: 對應實體和屬性
+          href: audience-insights/map-entities.md
+        - name: 比對實體
+          href: audience-insights/match-entities.md
+        - name: 合併實體
+          href: audience-insights/merge-entities.md
+        - name: 檢閱統整的客戶設定檔
+          href: audience-insights/customer-profiles.md
+        - name: 篩選統整的客戶設定檔
+          href: audience-insights/search-filter-index.md
+        - name: 建置關聯和連接的實體
+          href: audience-insights/relationships.md
+        - name: 列出客戶活動
+          href: audience-insights/activities.md
+    - name: 資料擴充
+      items:
+        - name: 擴充客戶設定檔
+          href: audience-insights/enrichment-hub.md
+        - name: 品牌與興趣親和性
+          href: audience-insights/enrichment-microsoft-graph.md
+        - name: 使用 HERE Technologies 豐富
+          href: audience-insights/enrichment-here.md
+        - name: 透過 Leadspace 擴充
+          href: audience-insights/enrichment-leadspace.md
+        - name: 透過 Experian 擴充
+          href: audience-insights/enrichment-experian.md
+        - name: 使用 SFTP 自訂匯入豐富
+          href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: 客戶細分與量值
+      items:
+        - name: 建立區段和客戶群組
+          href: audience-insights/segments.md
+        - name: 取得對客戶細分的見解
+          href: audience-insights/segment-insights.md
+        - name: 尋找類似的客戶
+          href: audience-insights/find-similar-customer-segments.md
+        - name: 定義量值和 KPI
+          href: audience-insights/measures.md
+    - name: 預測
+      items:
+        - name: 使用值預測完成資料
+          href: audience-insights/predictions.md
+        - name: 預測訂閱流失率
+          href: audience-insights/predict-subscription-churn.md
+        - name: 訂閱流失預測範例指南
+          href: audience-insights/sample-guide-predict-subscription-churn.md
+        - name: 預測交易性流失
+          href: audience-insights/predict-transactional-churn.md
+        - name: 交易性流失預測範例指南
+          href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: 實作自訂機器學習模型
+          href: audience-insights/custom-models.md
+        - name: Azure Machine Learning 實驗
+          href: audience-insights/azure-machine-learning-experiments.md
+        - name: Azure Machine Learning Studio 實驗
+          href: audience-insights/machine-learning-studio-experiments.md
+    - name: 匯出選項
+      items:
+        - name: 探索匯出目的地
+          href: audience-insights/export-destinations.md
+        - name: Azure Blob 儲存體
+          href: audience-insights/export-azure-blob-storage.md
+        - name: DotDigital
+          href: audience-insights/export-dotdigital.md
+        - name: Dynamics 365 Customer Service (增益集)
+          href: audience-insights/customer-card-add-in.md
+        - name: Dynamics 365 Marketing
+          href: audience-insights/export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: audience-insights/export-dynamics365-sales.md
+        - name: Dynamics 365 Sales 中心 (增益集)
+          href: audience-insights/customer-card-add-in.md
+        - name: Facebook 廣告管理員
+          href: audience-insights/export-facebook.md
+        - name: Google Ads
+          href: audience-insights/export-google-ads.md
+        - name: LiveRamp
+          href: audience-insights/export-liveramp.md
+        - name: Mailchimp
+          href: audience-insights/export-mailchimp.md
+        - name: Microsoft Teams (機器人)
+          href: audience-insights/export-teams-bot.md
+        - name: Marketo
+          href: audience-insights/export-marketo.md
+        - name: Power BI
+          href: audience-insights/export-power-bi.md
+        - name: Power Apps
+          href: audience-insights/export-power-apps.md
+        - name: Power Automate
+          href: audience-insights/export-power-automate.md
+        - name: SFTP
+          href: audience-insights/export-sftp.md
+    - name: 系統管理
+      items:
+        - name: 設定系統設定
+          href: audience-insights/system.md
+        - name: 指派使用者權限
+          href: audience-insights/permissions.md
+        - name: 管理多個環境
+          href: audience-insights/manage-environments.md
+        - name: 使用服務主體連接到 ADLS 儲存體帳戶
+          href: audience-insights/connect-service-principal.md
+        - name: 支援的語言
+          href: audience-insights/supported-languages.md
+    - name: 擴充性
+      items:
+        - name: 檢閱 Common Data Model 中的實體結構描述
+          href: audience-insights/entity-schemas.md
+        - name: 使用 API
+          href: audience-insights/apis.md
+        - name: API 參考
+          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: 服務限制
+      href: audience-insights/service-limits.md
+    - name: 符合 GDPR 的 DSR 要求
+      href: audience-insights/gdpr.md
+- name: 參與見解 (預覽版)
+  items:
+    - name: 求助中樞
+      href: engagement-insights/index.yml
+    - name: 能力總覽
+      href: engagement-insights/overview.md
+    - name: 免費試用
+      href: 'https://pi.dynamics.com/'
+    - name: 快速入門
+      items:
+        - name: 公開預覽快速入門
+          href: engagement-insights/quickstart.md
+    - name: 開始使用
+      items:
+        - name: 開始使用
+          href: engagement-insights/get-started.md
+        - name: 建立工作區
+          href: engagement-insights/create-workspace.md
+        - name: 架設您的網站
+          href: engagement-insights/instrument-website.md
+        - name: 概念和術語
+          href: engagement-insights/glossary.md
+    - name: 事件
+      items:
+        - name: 建立和修改事件
+          href: engagement-insights/refined-events.md
+        - name: 匯出事件
+          href: engagement-insights/export-events.md
+    - name: 報告
+      items:
+        - name: 查看報告
+          href: engagement-insights/view-reports.md
+        - name: 建立自訂報表
+          href: engagement-insights/custom-reports.md
+        - name: 建立統整的設定檔報表
+          href: engagement-insights/profile-reports.md
+    - name: 開發人員資源
+      items:
+        - name: 開發人員資源總覽
+          href: engagement-insights/developer-resources.md
+        - name: Web SDK 教學課程
+          href: engagement-insights/advanced-SDK-implementation.md
+        - name: Web SDK 範例
+          href: engagement-insights/websdk-sample.md
+    - name: 系統管理
+      items:
+        - name: 角色和權限
+          href: engagement-insights/user-roles.md
+        - name: 管理環境和工作區
+          href: engagement-insights/manage-environments-workspaces.md
+        - name: 組態連接
+          href: engagement-insights/configure-connections.md
+        - name: 管理 cookie 和使用者同意
+          href: engagement-insights/user-consent-storage.md
+    - name: GDPR
+      items:
+        - name: 刪除和匯出個人資料
+          href: engagement-insights/delete-export-personal-data.md
+    - name: 服務限制
+      href: engagement-insights/quotas.md
+- name: 連絡支援人員
+  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
