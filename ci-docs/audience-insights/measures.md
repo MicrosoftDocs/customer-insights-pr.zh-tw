@@ -1,7 +1,7 @@
 ---
-title: 建立和編輯量值
-description: 定義客戶相關的量值，以分析和反映特定業務領域的績效。
-ms.date: 10/15/2020
+title: 建立和管理量值
+description: 定義要分析並反映商務效能的量值。
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,105 +9,111 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405280"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269918"
 ---
-# <a name="define-and-manage-measures"></a><span data-ttu-id="5c71c-103">定義和管理量值</span><span class="sxs-lookup"><span data-stu-id="5c71c-103">Define and manage measures</span></span>
+# <a name="define-and-manage-measures"></a><span data-ttu-id="27c95-103">定義和管理量值</span><span class="sxs-lookup"><span data-stu-id="27c95-103">Define and manage measures</span></span>
 
-<span data-ttu-id="5c71c-104">**量值** 代表反映特定業務領域之績效和健康情況的關鍵效能指標 (KPI)。</span><span class="sxs-lookup"><span data-stu-id="5c71c-104">**Measures** represent key performance indicators (KPIs) that reflect the performance and health of specific business areas.</span></span> <span data-ttu-id="5c71c-105">對象見解提供直覺式體驗方便組建不同類型的量值，使用不需要您手動編碼或驗證量值的查詢組建程式。</span><span class="sxs-lookup"><span data-stu-id="5c71c-105">Audience insights provides an intuitive experience for building different types of measures, using a query builder that doesn't require you to code or validate your measures manually.</span></span> <span data-ttu-id="5c71c-106">您可以在 **首頁** 追蹤您的業務量值、在 **客戶卡片** 上查看特定客戶的量值，以及使用量值來定義 **區段** 頁面上的客戶區段。</span><span class="sxs-lookup"><span data-stu-id="5c71c-106">You can track your business measures on the **Home** page, see measures for specific customers on the **Customer Card**, and use measures to define customer segments on the **Segments** page.</span></span>
+<span data-ttu-id="27c95-104">量值可從 [整合設定檔](data-unification.md)擷取相關值，協助您更好地瞭解客戶行為和業務效能。</span><span class="sxs-lookup"><span data-stu-id="27c95-104">Measures help you to better understand customer behaviors and business performance by retrieving relevant values from [unified profiles](data-unification.md).</span></span> <span data-ttu-id="27c95-105">例如，公司想要查看 *每位客戶的總消費額* 瞭解每個客戶的購買歷史。</span><span class="sxs-lookup"><span data-stu-id="27c95-105">For example, a business wants to see the *total spend per customer* to understand individual customer’s purchase history.</span></span> <span data-ttu-id="27c95-106">或衡量 *公司的總銷售額* 瞭解全部業務的彙總營收。</span><span class="sxs-lookup"><span data-stu-id="27c95-106">Or measure *total sales of the company* to understand the aggregate-level revenue in the whole business.</span></span>  
 
-## <a name="create-a-measure"></a><span data-ttu-id="5c71c-107">建立量值</span><span class="sxs-lookup"><span data-stu-id="5c71c-107">Create a measure</span></span>
+<span data-ttu-id="27c95-107">量值可以使用量值建立器工具 (一種包含各種運算子和簡單對應選項的資料查詢平臺) 建立。</span><span class="sxs-lookup"><span data-stu-id="27c95-107">Measures are created using the measure builder, a data query platform with various operators and simple mapping options.</span></span> <span data-ttu-id="27c95-108">它可讓您篩選資料、分組結果、偵測 [實體關聯路徑](relationships.md)，以及預覽輸出。</span><span class="sxs-lookup"><span data-stu-id="27c95-108">It lets you filter the data, group results, detect [entity relationship paths](relationships.md), and preview the output.</span></span>
 
-<span data-ttu-id="5c71c-108">本節將引導您從頭開始建立量值。</span><span class="sxs-lookup"><span data-stu-id="5c71c-108">This section walks you through creating a measure from scratch.</span></span> <span data-ttu-id="5c71c-109">您可以使用透過客戶實體連接的多個資料來源中的資料來建立量值。</span><span class="sxs-lookup"><span data-stu-id="5c71c-109">You can build measures with data from multiple data sources that are connected through the Customer entity.</span></span> <span data-ttu-id="5c71c-110">適用若干 [服務限制](service-limits.md)。</span><span class="sxs-lookup"><span data-stu-id="5c71c-110">Some [service limits](service-limits.md) apply.</span></span>
+<span data-ttu-id="27c95-109">規劃商務活動時，您可以使用量值建立工具查詢客戶資料並抽取見解。</span><span class="sxs-lookup"><span data-stu-id="27c95-109">Use the measure builder to plan business activities by querying customer data and extract insights.</span></span> <span data-ttu-id="27c95-110">例如，建立 *每個客戶的總消費額* 以及 *每個客戶的總利潤額*，能協助找出大量消費額度高且利潤高的客戶。</span><span class="sxs-lookup"><span data-stu-id="27c95-110">For example, creating a measure of *total spend per customer* and *total return per customer* helps identify a group of customers with high spend yet high return.</span></span> <span data-ttu-id="27c95-111">您可以[建立一個區段](segments.md)來推動下一個最佳動作。</span><span class="sxs-lookup"><span data-stu-id="27c95-111">You can [create a segment](segments.md) to drive next best actions.</span></span> 
 
-1. <span data-ttu-id="5c71c-111">請在對象見解中前往 **量值**。</span><span class="sxs-lookup"><span data-stu-id="5c71c-111">In audience insights, go to **Measures**.</span></span>
+## <a name="create-a-measure"></a><span data-ttu-id="27c95-112">建立量值</span><span class="sxs-lookup"><span data-stu-id="27c95-112">Create a measure</span></span>
 
-2. <span data-ttu-id="5c71c-112">選取 **新增量值**。</span><span class="sxs-lookup"><span data-stu-id="5c71c-112">Select **New measure**.</span></span>
+<span data-ttu-id="27c95-113">本節將引導您從頭開始建立新的量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-113">This section walks you through creating a new measure from scratch.</span></span> <span data-ttu-id="27c95-114">以資料屬性建立量值，資料屬性來自的資料實體，已設定關聯連接到客戶實體。</span><span class="sxs-lookup"><span data-stu-id="27c95-114">You can build a measure with data attributes from data entities that have a relationship set up to connect with the Customer entity.</span></span> 
 
-3. <span data-ttu-id="5c71c-113">選擇量值 **類型**：</span><span class="sxs-lookup"><span data-stu-id="5c71c-113">Choose the measure **Type**:</span></span>
+1. <span data-ttu-id="27c95-115">請在對象見解中前往 **量值**。</span><span class="sxs-lookup"><span data-stu-id="27c95-115">In audience insights, go to **Measures**.</span></span>
 
-   - <span data-ttu-id="5c71c-114">**客戶屬性**：每個客戶的單一欄位，會反映客戶的分數、值或狀態。</span><span class="sxs-lookup"><span data-stu-id="5c71c-114">**Customer attribute**: A single field per customer that reflects a score, value, or state for the customer.</span></span> <span data-ttu-id="5c71c-115">客戶屬性會在新的系統產生實體中建立為屬性，稱為 **Customer_Measure**。</span><span class="sxs-lookup"><span data-stu-id="5c71c-115">Customer attributes are created as attributes in a new system-generated entity called **Customer_Measure**.</span></span>
+1. <span data-ttu-id="27c95-116">選取 **新增**。</span><span class="sxs-lookup"><span data-stu-id="27c95-116">Select **New**.</span></span>
 
-   - <span data-ttu-id="5c71c-116">**客戶量值**：根據選取的維度而解析的客戶行為見解。</span><span class="sxs-lookup"><span data-stu-id="5c71c-116">**Customer measure**: Insights on customer behavior with breakdown by selected dimensions.</span></span> <span data-ttu-id="5c71c-117">會為每個量值產生新的實體，這可能會針對每個客戶有多個記錄。</span><span class="sxs-lookup"><span data-stu-id="5c71c-117">A new entity is generated for each measure, potentially with multiple records per customer.</span></span>
-
-   - <span data-ttu-id="5c71c-118">**業務量值**：追蹤業務績效和業務的健康情況。</span><span class="sxs-lookup"><span data-stu-id="5c71c-118">**Business measure**: Tracks your business performance and health of the business.</span></span> <span data-ttu-id="5c71c-119">業務量值可以有兩種不同的輸出：顯示在 **首頁** 的數字輸出，或是您在 **實體** 頁面上找到的新實體。</span><span class="sxs-lookup"><span data-stu-id="5c71c-119">Business measures can have two different outputs: a numeric output that shows on the **Home** page or a new entity that you find on the **Entities** page.</span></span>
-
-4. <span data-ttu-id="5c71c-120">提供 **名稱** 及選擇性 **顯示名稱**，然後選取 **下一步**。</span><span class="sxs-lookup"><span data-stu-id="5c71c-120">Provide a **Name** and an optional **Display name**, then select **Next**.</span></span>
-
-5. <span data-ttu-id="5c71c-121">在 **實體** 區段中，從下拉式清單選取第一個實體。</span><span class="sxs-lookup"><span data-stu-id="5c71c-121">In the **Entities** section, select the first entity from the drop-down list.</span></span> <span data-ttu-id="5c71c-122">此時，您應該決定量值定義是否需要其他實體。</span><span class="sxs-lookup"><span data-stu-id="5c71c-122">At this point, you should decide whether additional entities are needed as part of your measure definition.</span></span>
-
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="5c71c-123">![量值定義](media/measure-definition.png "量值定義")</span><span class="sxs-lookup"><span data-stu-id="5c71c-123">![Measure definition](media/measure-definition.png "Measure definition")</span></span>
-
-   <span data-ttu-id="5c71c-124">若要新增更多的實體，請選取 **新增實體**，並選取要用於量值的實體。</span><span class="sxs-lookup"><span data-stu-id="5c71c-124">To add more entities, select **Add entity** and select entities you want to use for the measure.</span></span>
-
+1. <span data-ttu-id="27c95-117">選取 **編輯名稱**，並提供量值的 **名稱**。</span><span class="sxs-lookup"><span data-stu-id="27c95-117">Select **Edit name** and provide a **Name** for the measure.</span></span> 
    > [!NOTE]
-   > <span data-ttu-id="5c71c-125">您只能選取與您的開始實體有關聯的實體。</span><span class="sxs-lookup"><span data-stu-id="5c71c-125">You can select only entities that have relationships to your starting entity.</span></span> <span data-ttu-id="5c71c-126">如需有關定義關聯的詳細資訊，請參閱[關聯](relationships.md)。</span><span class="sxs-lookup"><span data-stu-id="5c71c-126">For more information about defining relationships, see [Relationships](relationships.md).</span></span>
+   > <span data-ttu-id="27c95-118">如果您的新量值設定只有兩個欄位 (例如：CustomerID 和一個計算)，則會在名稱為 Customer_Measure 的系統生成實體中將輸出新增為新資料行。</span><span class="sxs-lookup"><span data-stu-id="27c95-118">If your new measure configuration has only two fields, for exmample, CustomerID and one calculation, the output will be added as a new column to the system generated entity called Customer_Measure.</span></span> <span data-ttu-id="27c95-119">而且，您將可以在整合客戶設定檔中看到量值的值。</span><span class="sxs-lookup"><span data-stu-id="27c95-119">And you will be able to see the measure’s value in the unified customer profile.</span></span> <span data-ttu-id="27c95-120">其他量值會生成自己的實體。</span><span class="sxs-lookup"><span data-stu-id="27c95-120">Other measures will generate their own entities.</span></span>
 
-6. <span data-ttu-id="5c71c-127">您也可以選擇設定變數。</span><span class="sxs-lookup"><span data-stu-id="5c71c-127">Optionally, you can configure variables.</span></span> <span data-ttu-id="5c71c-128">在 **變數** 區段中，選取 **新增變數**。</span><span class="sxs-lookup"><span data-stu-id="5c71c-128">In the **Variables** section, select **New variable**.</span></span>
+1. <span data-ttu-id="27c95-121">在設定區域中，於 **選取函數** 下拉式功能表中選擇彙總函式。</span><span class="sxs-lookup"><span data-stu-id="27c95-121">In the configuration area, choose the aggregation function from the **Select Function** drop-down menu.</span></span> <span data-ttu-id="27c95-122">彙總函式包括：</span><span class="sxs-lookup"><span data-stu-id="27c95-122">Aggregation functions include:</span></span> 
+   - <span data-ttu-id="27c95-123">**Sum**</span><span class="sxs-lookup"><span data-stu-id="27c95-123">**Sum**</span></span>
+   - <span data-ttu-id="27c95-124">**平均值**</span><span class="sxs-lookup"><span data-stu-id="27c95-124">**Average**</span></span>
+   - <span data-ttu-id="27c95-125">**計數**</span><span class="sxs-lookup"><span data-stu-id="27c95-125">**Count**</span></span>
+   - <span data-ttu-id="27c95-126">**計數唯一**</span><span class="sxs-lookup"><span data-stu-id="27c95-126">**Count Unique**</span></span>
+   - <span data-ttu-id="27c95-127">**最大**</span><span class="sxs-lookup"><span data-stu-id="27c95-127">**Max**</span></span>
+   - <span data-ttu-id="27c95-128">**Min**</span><span class="sxs-lookup"><span data-stu-id="27c95-128">**Min**</span></span>
+   - <span data-ttu-id="27c95-129">**第一個**：提取資料記錄的第一個值</span><span class="sxs-lookup"><span data-stu-id="27c95-129">**First**: takes the first value of the data record</span></span>
+   - <span data-ttu-id="27c95-130">**最後一個**：提取新增至資料記錄的最後一個值</span><span class="sxs-lookup"><span data-stu-id="27c95-130">**Last**: takes the last value that was added to the data record</span></span>
 
-   <span data-ttu-id="5c71c-129">變數是在每個所選記錄上進行的計算。</span><span class="sxs-lookup"><span data-stu-id="5c71c-129">Variables are calculations that are made on each of your selected records.</span></span> <span data-ttu-id="5c71c-130">例如，加總銷售點 (POS) 和每個客戶記錄的線上銷售。</span><span class="sxs-lookup"><span data-stu-id="5c71c-130">For example, summing point-of-sale (POS) and online sales for each of your customers' records.</span></span>
+   :::image type="content" source="media/measure-operators.png" alt-text="用於量值計算的運算子。":::
 
-7. <span data-ttu-id="5c71c-131">提供變數的 **名稱**。</span><span class="sxs-lookup"><span data-stu-id="5c71c-131">Provide a **Name** for the variable.</span></span>
+1. <span data-ttu-id="27c95-132">選取 **新增屬性** 來選取您要建立此量值所需的資料。</span><span class="sxs-lookup"><span data-stu-id="27c95-132">Select **Add attribute** to select the data you need to create this measure.</span></span>
+   
+   1. <span data-ttu-id="27c95-133">選取 **屬性** 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="27c95-133">Select the **Attributes** tab.</span></span> 
+   1. <span data-ttu-id="27c95-134">資料實體：選擇實體，其屬性是您想要測量的。</span><span class="sxs-lookup"><span data-stu-id="27c95-134">Data entity: Choose the entity that includes the attribute you want to measure.</span></span> 
+   1. <span data-ttu-id="27c95-135">資料屬性：選擇要在彙總函式中用來計算量值的屬性。</span><span class="sxs-lookup"><span data-stu-id="27c95-135">Data attribute: Choose the attribute you want to use in the aggregation function to calculate the measure.</span></span> <span data-ttu-id="27c95-136">您一次只能選取一個屬性。</span><span class="sxs-lookup"><span data-stu-id="27c95-136">You can only select one attribute at a time.</span></span>
+   1. <span data-ttu-id="27c95-137">透過 **量值** 索引標籤，您也可以選取從現有的量值中選取資料屬性。或者，您可以搜尋實體或量值名稱。</span><span class="sxs-lookup"><span data-stu-id="27c95-137">You can also select a data attribute from an existing measure by selecting the **Measures** tab. Or, you can search for an entity or measure name.</span></span> 
+   1. <span data-ttu-id="27c95-138">選取 **新增**，將選取的屬性新增至量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-138">Select **Add** to add the selected attribute to the measure.</span></span>
 
-8. <span data-ttu-id="5c71c-132">在 **運算式** 區域中，選取要用來開始計算的欄位。</span><span class="sxs-lookup"><span data-stu-id="5c71c-132">In the **Expression** area, choose a field to begin your calculation with.</span></span>
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="選取要在計算中使用的屬性。":::
 
-9. <span data-ttu-id="5c71c-133">在選擇要納入計算中的其他欄位時，請在 **運算式** 區域中輸入運算式。</span><span class="sxs-lookup"><span data-stu-id="5c71c-133">Type an expression in the **Expression** area while choosing more fields to be included in your calculation.</span></span>
+1. <span data-ttu-id="27c95-140">若要建立更複雜的量值，您可以新增更多屬性，或在量值函數上使用數學運算子。</span><span class="sxs-lookup"><span data-stu-id="27c95-140">To build more complex measures, you can add more attributes or use math operators on your measure function.</span></span>
 
-   > [!NOTE]
-   > <span data-ttu-id="5c71c-134">目前只支援算術運算式。</span><span class="sxs-lookup"><span data-stu-id="5c71c-134">Currently, only arithmetic expressions are supported.</span></span> <span data-ttu-id="5c71c-135">此外，不同[實體路徑](relationships.md)中的實體不支援變數計算。</span><span class="sxs-lookup"><span data-stu-id="5c71c-135">Additionally, variable calculation isn't supported for entities from different [entity paths](relationships.md).</span></span>
+   :::image type="content" source="media/measure-math-operators.png" alt-text="使用數學運算子建立複雜的量值。":::
 
-10. <span data-ttu-id="5c71c-136">選取 **完成**。</span><span class="sxs-lookup"><span data-stu-id="5c71c-136">Select **Done**.</span></span>
+1. <span data-ttu-id="27c95-142">若要新增篩選，請在設定區域中選取 **篩選**。</span><span class="sxs-lookup"><span data-stu-id="27c95-142">To add filters, select the **Filter** in the configuration area.</span></span> 
+  
+   1. <span data-ttu-id="27c95-143">在 **篩選** 窗格的 **新增屬性** 區段中，選取您要用來建立篩選的屬性。</span><span class="sxs-lookup"><span data-stu-id="27c95-143">In **Add attribute** section of the **Filters** pane, select the attribute you want to use to create filters.</span></span>
+   1. <span data-ttu-id="27c95-144">設定篩選運算子，為已選取的每個屬性定義篩選。</span><span class="sxs-lookup"><span data-stu-id="27c95-144">Set the filter operators to define the filter for every selected attribute.</span></span>
+   1. <span data-ttu-id="27c95-145">選取 **套用**，新增篩選至量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-145">Select **Apply** to add the filters to the measure.</span></span>
 
-11. <span data-ttu-id="5c71c-137">在 **量值定義** 區段中，您將定義如何在新的量值實體或屬性中彙總選取的實體與計算變數。</span><span class="sxs-lookup"><span data-stu-id="5c71c-137">In the **Measure definition** section, you'll define how your chosen entities and calculated variables are aggregated in a new measure entity or attribute.</span></span>
+1. <span data-ttu-id="27c95-146">若要新增維度，請在設定區域中選取 **維度**。</span><span class="sxs-lookup"><span data-stu-id="27c95-146">To add dimensions, select **Dimension** in the configuration area.</span></span> <span data-ttu-id="27c95-147">在量值輸出實體中，維度將顯示為欄。</span><span class="sxs-lookup"><span data-stu-id="27c95-147">Dimensions will show as columns in the measure output entity.</span></span>
+   1. <span data-ttu-id="27c95-148">選取 **編輯維度**，以新增您要用來分組量值的資料屬性。</span><span class="sxs-lookup"><span data-stu-id="27c95-148">Select **Edit dimensions** to add data attributes you want to group the measure values by.</span></span> <span data-ttu-id="27c95-149">例如市/鎮或性別。</span><span class="sxs-lookup"><span data-stu-id="27c95-149">For example, city or gender.</span></span> <span data-ttu-id="27c95-150">根據預設，會選取 *CustomerID* 維度以建立 *客戶層級的量值*。</span><span class="sxs-lookup"><span data-stu-id="27c95-150">By default, the *CustomerID* dimension is selected to create *customer-level measures*.</span></span> <span data-ttu-id="27c95-151">如果您要建立 *業務層級的量值*，您可以移除預設維度。</span><span class="sxs-lookup"><span data-stu-id="27c95-151">You can remove the default dimension if you want to create *business-level measures*.</span></span>
+   1. <span data-ttu-id="27c95-152">選取 **完成**，新增維度至量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-152">Select **Done** to add the dimensions to the measure.</span></span>
 
-12. <span data-ttu-id="5c71c-138">選取 **新增維度**。</span><span class="sxs-lookup"><span data-stu-id="5c71c-138">Select **New dimension**.</span></span> <span data-ttu-id="5c71c-139">您可以將維度視為 *群組依據* 函數。</span><span class="sxs-lookup"><span data-stu-id="5c71c-139">You can think of a dimension as a *group by* function.</span></span> <span data-ttu-id="5c71c-140">您的量值實體或屬性的資料輸出將會根據您定義的所有維度進行分組。</span><span class="sxs-lookup"><span data-stu-id="5c71c-140">The data output of your Measure entity or attribute will be grouped by all of your defined dimensions.</span></span>
+1. <span data-ttu-id="27c95-153">如果已對應的資料實體與客戶實體之間有多個路徑，您必須選擇一個已識別的[實體關聯路徑](relationships.md)。</span><span class="sxs-lookup"><span data-stu-id="27c95-153">If there are multiple paths between the data entity you mapped and the Customer entity, you have to choose one of the identified [entity relationship paths](relationships.md).</span></span> <span data-ttu-id="27c95-154">視所選取的路徑而定，量值結果可能會不同。</span><span class="sxs-lookup"><span data-stu-id="27c95-154">Measure results can vary depending on the selected path.</span></span>
+   1. <span data-ttu-id="27c95-155">選取 **資料喜好設定**，然後選擇應該用來識別量值的實體路徑。</span><span class="sxs-lookup"><span data-stu-id="27c95-155">Select **Data preferences** and choose the entity path that should be used to identify your measure.</span></span>
+   1. <span data-ttu-id="27c95-156">選取 **完成** 以套用至您的選取。</span><span class="sxs-lookup"><span data-stu-id="27c95-156">Select **Done** to apply your selection.</span></span> 
 
-    > [!div class="mx-imgBorder"]
-    > <span data-ttu-id="5c71c-141">![選擇彙總週期](media/measures-businessreport-measure-definition2.png "選擇彙總週期")</span><span class="sxs-lookup"><span data-stu-id="5c71c-141">![Choose aggregate cycle](media/measures-businessreport-measure-definition2.png "Choose aggregate cycle")</span></span>
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="為量值選取實體路徑。":::
 
-    <span data-ttu-id="5c71c-142">選取或輸入下列資訊做為維度定義的一部分：</span><span class="sxs-lookup"><span data-stu-id="5c71c-142">Select or enter the following information as part of your dimension's definition:</span></span>
+1. <span data-ttu-id="27c95-158">若要對量值新增更多計算，請選取 **新增計算**。</span><span class="sxs-lookup"><span data-stu-id="27c95-158">To add more calculations for the measure, select **New calculation**.</span></span> <span data-ttu-id="27c95-159">要使用實體進行新的計算，您只能在相同實體路徑進行。</span><span class="sxs-lookup"><span data-stu-id="27c95-159">You can only use entities on the same entity path for new calculations.</span></span> <span data-ttu-id="27c95-160">在量值輸出實體中，更多計算將顯示為新的欄。</span><span class="sxs-lookup"><span data-stu-id="27c95-160">More calculations will show as new columns in the measure output entity.</span></span>
 
-    - <span data-ttu-id="5c71c-143">**實體**：如果您定義一個量值實體，則它至少應包括一個屬性。</span><span class="sxs-lookup"><span data-stu-id="5c71c-143">**Entity**: If you define a Measure entity, it should include at least one attribute.</span></span> <span data-ttu-id="5c71c-144">如果您定義一個量值屬性，預設只會包含一個屬性。</span><span class="sxs-lookup"><span data-stu-id="5c71c-144">If you define a Measure attribute, it will include only one attribute by default.</span></span> <span data-ttu-id="5c71c-145">這項選擇是關於如何選擇包含該屬性的實體。</span><span class="sxs-lookup"><span data-stu-id="5c71c-145">This selection is about choosing the entity that includes that attribute.</span></span>
-    - <span data-ttu-id="5c71c-146">**欄位**：選擇要在您的量值實體或屬性中包含的特定屬性。</span><span class="sxs-lookup"><span data-stu-id="5c71c-146">**Field**: Choose the specific attribute to be included either in your Measure entity or attribute.</span></span>
-    - <span data-ttu-id="5c71c-147">**貯體**：選擇是要依據每天、每月或每年來匯總資料。</span><span class="sxs-lookup"><span data-stu-id="5c71c-147">**Bucket**: Choose whether you want to aggregate data on a daily, monthly, or annual basis.</span></span> <span data-ttu-id="5c71c-148">只有在您已選取日期類型屬性時，它才是必要的選取。</span><span class="sxs-lookup"><span data-stu-id="5c71c-148">It's a required selection only if you've selected a Date type attribute.</span></span>
-    - <span data-ttu-id="5c71c-149">**做為**：定義新欄位的名稱。</span><span class="sxs-lookup"><span data-stu-id="5c71c-149">**As**: Defines the name of your new field.</span></span>
-    - <span data-ttu-id="5c71c-150">**顯示名稱**：定義欄位的顯示名稱。</span><span class="sxs-lookup"><span data-stu-id="5c71c-150">**Display name**: Defines the display name of your field.</span></span>
+1. <span data-ttu-id="27c95-161">選取計算上的 **...**，從量值 **複製**、**重新命名** 或 **移除** 計算。</span><span class="sxs-lookup"><span data-stu-id="27c95-161">Select **...** on the calculation to **Duplicate**, **Rename**, or **Remove** a calculation from a measure.</span></span>
 
-    > [!NOTE]
-    > <span data-ttu-id="5c71c-151">您的業務量值會儲存為單數實體，並顯示在 **首頁** 上，除非您將更多維度新增至您的量值。</span><span class="sxs-lookup"><span data-stu-id="5c71c-151">Your business measure will be saved as a single-number entity and will appear on the **Home** page unless you add more dimensions to your measure.</span></span> <span data-ttu-id="5c71c-152">在新增更多維度之後，此量值就 *不會* 顯示在 **首頁** 上。</span><span class="sxs-lookup"><span data-stu-id="5c71c-152">After adding more dimensions, the measure will *not* show up on the **Home** page.</span></span>
+1. <span data-ttu-id="27c95-162">在 **預覽** 區域中，您會看到量值輸出實體的資料架構，其中包括篩選和維度。</span><span class="sxs-lookup"><span data-stu-id="27c95-162">In the **Preview** area, you'll see the data schema of the measure output entity, including filters and dimensions.</span></span> <span data-ttu-id="27c95-163">預覽會動態反應設定中的變更。</span><span class="sxs-lookup"><span data-stu-id="27c95-163">The preview reacts dynamically to changes in the configuration.</span></span>
 
-13. <span data-ttu-id="5c71c-153">或者，新增彙總函數。</span><span class="sxs-lookup"><span data-stu-id="5c71c-153">Optionally, add aggregation functions.</span></span> <span data-ttu-id="5c71c-154">您建立的任何彙總都會在量值實體或屬性中產生新的值。</span><span class="sxs-lookup"><span data-stu-id="5c71c-154">Any aggregation that you create results in a new value within your Measures entity or attribute.</span></span> <span data-ttu-id="5c71c-155">支援的彙總函數包括：**最小值**、**最大值**、**平均**、**中位數**、**總和**、**計數唯一**、**第一個**（取得維度值的第一個記錄）和 **最後一個**（取得新增到維度值的最後一個記錄）。</span><span class="sxs-lookup"><span data-stu-id="5c71c-155">Supported aggregation functions are: **Min**, **Max**, **Average**, **Median**, **Sum**, **Count Unique**, **First** (takes the first record of a dimension value), and **Last** (takes the last record added to a dimension value).</span></span>
+1. <span data-ttu-id="27c95-164">選取 **執行**，為設定完成的量值計算結果。</span><span class="sxs-lookup"><span data-stu-id="27c95-164">Select **Run** to calculate results for the configured measure.</span></span> <span data-ttu-id="27c95-165">如果您要保留目前的設定稍後執行測量，請選取 **儲存後關閉**。</span><span class="sxs-lookup"><span data-stu-id="27c95-165">Select **Save and close** if you want to keep the current configuration and run the measure later.</span></span>
 
-14. <span data-ttu-id="5c71c-156">選取 **儲存** 以套用對量值的變更。</span><span class="sxs-lookup"><span data-stu-id="5c71c-156">Select **Save** to apply your changes to the measure.</span></span>
+1. <span data-ttu-id="27c95-166">移至 **量值**，以查看清單中的新建立的量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-166">Go to **Measures** to see the newly created measure in the list.</span></span>
 
-## <a name="manage-your-measures"></a><span data-ttu-id="5c71c-157">管理您的量值</span><span class="sxs-lookup"><span data-stu-id="5c71c-157">Manage your measures</span></span>
+## <a name="manage-your-measures"></a><span data-ttu-id="27c95-167">管理您的量值</span><span class="sxs-lookup"><span data-stu-id="27c95-167">Manage your measures</span></span>
 
-<span data-ttu-id="5c71c-158">建立至少一個量值後，您將在 **量值** 頁面上看到量值清單。</span><span class="sxs-lookup"><span data-stu-id="5c71c-158">After creating at least one measure, you'll see a list of measures on the **Measures** page.</span></span>
+<span data-ttu-id="27c95-168">至少 [建立一個量值](#create-a-measure)後，您將在 **量值** 頁面上看到量值清單。</span><span class="sxs-lookup"><span data-stu-id="27c95-168">After [creating a measure](#create-a-measure), you see a list of measures on the **Measures** page.</span></span>
 
-<span data-ttu-id="5c71c-159">您將會找到有關量值類別、建立者、建立日期和時間、上次編輯日期和時間、狀態（該量值為使用中、非使用中或失敗）以及上次重新整理日期和時間的資訊。</span><span class="sxs-lookup"><span data-stu-id="5c71c-159">You'll find information about the measure type, the creator, creation date and time, last edit date and time, status (whether the measure is active, inactive, or failed), and last refresh date and time.</span></span> <span data-ttu-id="5c71c-160">當您從清單中選取量值時，您可以查看其輸出的預覽。</span><span class="sxs-lookup"><span data-stu-id="5c71c-160">When you select a measure from the list, you can see a preview of its output.</span></span>
+<span data-ttu-id="27c95-169">您可以找到有關量值類型、建立者、建立日期、狀態及狀況的資訊。</span><span class="sxs-lookup"><span data-stu-id="27c95-169">You'll find information about the measure type, the creator, creation date, status, and state.</span></span> <span data-ttu-id="27c95-170">當您從清單中選取量值時，您可以預覽輸出並下載 CSV 檔。</span><span class="sxs-lookup"><span data-stu-id="27c95-170">When you select a measure from the list, you can preview the output and download a .CSV file.</span></span>
 
-<span data-ttu-id="5c71c-161">若要同時重新整理所有的量值，請選取 **全部重新整理**，而不選取特定的量值。</span><span class="sxs-lookup"><span data-stu-id="5c71c-161">To refresh all of your measures at the same time, select **Refresh all** without selecting a specific measure.</span></span>
+<span data-ttu-id="27c95-171">若要同時重新整理所有的量值，請選取 **全部重新整理**，而不選取特定的量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-171">To refresh all of your measures at the same time, select **Refresh all** without selecting a specific measure.</span></span>
 
 > [!div class="mx-imgBorder"]
-> <span data-ttu-id="5c71c-162">![管理單一量值的動作](media/measure-actions.png "管理單一量值的動作")</span><span class="sxs-lookup"><span data-stu-id="5c71c-162">![Actions to manage single measures](media/measure-actions.png "Actions to manage single measures")</span></span>
+> <span data-ttu-id="27c95-172">![管理單一量值的動作](media/measure-actions.png "管理單一量值的動作")</span><span class="sxs-lookup"><span data-stu-id="27c95-172">![Actions to manage single measures](media/measure-actions.png "Actions to manage single measures")</span></span>
 
-<span data-ttu-id="5c71c-163">或者，從清單中選取一個量值，然後執行下列其中一項動作：</span><span class="sxs-lookup"><span data-stu-id="5c71c-163">Alternatively, select a measure from the list and perform one of the following actions:</span></span>
+<span data-ttu-id="27c95-173">為下列選項，從清單中選取量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-173">Select a measure from the list for the following options:</span></span>
 
-- <span data-ttu-id="5c71c-164">選取量值名稱以查看其詳細資料。</span><span class="sxs-lookup"><span data-stu-id="5c71c-164">Select the measure name to see its details.</span></span>
-- <span data-ttu-id="5c71c-165">**編輯** 量值的設定。</span><span class="sxs-lookup"><span data-stu-id="5c71c-165">**Edit** the configuration of the measure.</span></span>
-- <span data-ttu-id="5c71c-166">**重新命名** 量值。</span><span class="sxs-lookup"><span data-stu-id="5c71c-166">**Rename** the measure.</span></span>
-- <span data-ttu-id="5c71c-167">**刪除** 量值。</span><span class="sxs-lookup"><span data-stu-id="5c71c-167">**Delete** the measure.</span></span>
-- <span data-ttu-id="5c71c-168">選取省略符號 (...)，然後 **重新整理**，以開始量值的重新整理程序。</span><span class="sxs-lookup"><span data-stu-id="5c71c-168">Select the ellipsis (...) and then **Refresh** to start the refresh process for the measure.</span></span>
-- <span data-ttu-id="5c71c-169">選取省略符號 (...)，然後 **下載** 以取得量值的 .CSV 檔。</span><span class="sxs-lookup"><span data-stu-id="5c71c-169">Select the ellipsis (...) and then **Download** to get a .CSV file of the measure.</span></span>
+- <span data-ttu-id="27c95-174">選取量值名稱以查看其詳細資料。</span><span class="sxs-lookup"><span data-stu-id="27c95-174">Select the measure name to see its details.</span></span>
+- <span data-ttu-id="27c95-175">**編輯** 量值的設定。</span><span class="sxs-lookup"><span data-stu-id="27c95-175">**Edit** the configuration of the measure.</span></span>
+- <span data-ttu-id="27c95-176">**重新整理** 根據最新資料的量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-176">**Refresh** the measure based on the latest data.</span></span>
+- <span data-ttu-id="27c95-177">**重新命名** 量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-177">**Rename** the measure.</span></span>
+- <span data-ttu-id="27c95-178">**刪除** 量值。</span><span class="sxs-lookup"><span data-stu-id="27c95-178">**Delete** the measure.</span></span>
+- <span data-ttu-id="27c95-179">**啟用** 或 **停用**。</span><span class="sxs-lookup"><span data-stu-id="27c95-179">**Activate** or **Deactivate**.</span></span> <span data-ttu-id="27c95-180">停用量值時，不會在[排程的重新整理](system.md#schedule-tab)時進行重新整理。</span><span class="sxs-lookup"><span data-stu-id="27c95-180">Inactive measures won't get refreshed during a [scheduled refresh](system.md#schedule-tab).</span></span>
 
 > [!TIP]
-> <span data-ttu-id="5c71c-170">任務/流程目前有 [六種類型的狀態](system.md#status-types)。</span><span class="sxs-lookup"><span data-stu-id="5c71c-170">There are [six types of status](system.md#status-types) for tasks/processes.</span></span> <span data-ttu-id="5c71c-171">此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。</span><span class="sxs-lookup"><span data-stu-id="5c71c-171">Additionally, most processes [depend on other downstream processes](system.md#refresh-policies).</span></span> <span data-ttu-id="5c71c-172">您可以選取程序的狀態，以查看整個工作的進度詳細資料。</span><span class="sxs-lookup"><span data-stu-id="5c71c-172">You can select the status of a process to see details on the progress of the entire job.</span></span> <span data-ttu-id="5c71c-173">針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。</span><span class="sxs-lookup"><span data-stu-id="5c71c-173">After selecting **See details** for one of the job's tasks, you find additional information: processing time, the last processing date, and all errors and warnings associated with the task.</span></span>
+> <span data-ttu-id="27c95-181">任務/流程目前有 [六種類型的狀態](system.md#status-types)。</span><span class="sxs-lookup"><span data-stu-id="27c95-181">There are [six types of status](system.md#status-types) for tasks/processes.</span></span> <span data-ttu-id="27c95-182">此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。</span><span class="sxs-lookup"><span data-stu-id="27c95-182">Additionally, most processes [depend on other downstream processes](system.md#refresh-policies).</span></span> <span data-ttu-id="27c95-183">您可以選取程序的狀態，以查看整個工作的進度詳細資料。</span><span class="sxs-lookup"><span data-stu-id="27c95-183">You can select the status of a process to see details on the progress of the entire job.</span></span> <span data-ttu-id="27c95-184">針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。</span><span class="sxs-lookup"><span data-stu-id="27c95-184">After selecting **See details** for one of the job's tasks, you find additional information: processing time, the last processing date, and all errors and warnings associated with the task.</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="5c71c-174">下一個步驟</span><span class="sxs-lookup"><span data-stu-id="5c71c-174">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="27c95-185">下一個步驟</span><span class="sxs-lookup"><span data-stu-id="27c95-185">Next step</span></span>
 
-<span data-ttu-id="5c71c-175">您可使用現有的量值，在 **區段** 頁面上建立您的第一個客戶區段。</span><span class="sxs-lookup"><span data-stu-id="5c71c-175">You cam use existing measures to create your first customer segment on the **Segments** page.</span></span> <span data-ttu-id="5c71c-176">如需詳細資訊，請參閱[區段](segments.md)。</span><span class="sxs-lookup"><span data-stu-id="5c71c-176">For more information, see [Segments](segments.md).</span></span>
+<span data-ttu-id="27c95-186">您可以使用現有的量值來建立[客戶細分](segments.md)。</span><span class="sxs-lookup"><span data-stu-id="27c95-186">You cam use existing measures to create [a customer segment](segments.md).</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

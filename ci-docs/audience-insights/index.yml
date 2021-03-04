@@ -6,16 +6,16 @@ metadata:
   description: 含對象見解關鍵連結的求助中樞。
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4405273"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745711"
 landingContent:
 - title: 關於對象見解
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: 社群網站
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: 擷取資料來源
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: 新增資料來源
-      url: data-sources.md
-    - text: 累加重新整理
-      url: incremental-refresh-data-sources.md
-    - text: 了解實體
-      url: entities.md
 - title: 統整資料
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 對應
-      url: map-entities.md
-    - text: 相符項目
-      url: match-entities.md
-    - text: 執行合併​​
-      url: merge-entities.md
-- title: 縮小客戶設定檔搜尋範圍
+    - text: 資料來源概觀
+      url: data-sources.md
+    - text: 統整概觀
+      url: data-unification.md
+    - text: 了解實體
+      url: entities.md
+- title: 擴充和精簡資料
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: 擴充客戶設定檔
+      url: enrichment-hub.md
     - text: 設定關聯
       url: relationships.md
     - text: 列出客戶活動
       url: activities.md
-    - text: 提供您自己的機器學習模型
-      url: custom-models.md
+- title: 取得見解
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 建立客戶細分
+      url: segments.md
+    - text: 建立量值
+      url: measures.md
+    - text: 以預測完成資料
+      url: predictions.md
 - title: 匯出客戶資料
   linkLists:
   - linkListType: how-to-guide
