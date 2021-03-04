@@ -4,17 +4,17 @@ description: 比對實體以建立統整的客戶設定檔。
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405278"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267468"
 ---
 # <a name="match-entities"></a>比對實體
 
@@ -22,7 +22,7 @@ ms.locfileid: "4405278"
 
 ## <a name="specify-the-match-order"></a>指定比對順序
 
-移至 **統整** > **比對** 並選取 **設定順序** 來開始比對階段。
+移至 **資料** > **統整** > **比對**，然後選取 **設定順序**，開始比對階段。
 
 每個比對都會將兩個或多個實體統整成單一實體，同時保留每個唯一的客戶記錄。 在下列範例中，我們選取三個實體：**ContactCSV: TestData** 做為 **主要** 實體、**WebAccountCSV: TestData** 做為 **實體 2**，以及 **CallRecordSmall: TestData** 做為 **實體 3**。 選取項目上方的圖表將闡釋如何執行比對順序。
 
@@ -136,7 +136,7 @@ ms.locfileid: "4405278"
 
 1. 現在執行比對流程會根據重複資料消除規則中定義的條件分組記錄。 記錄分組之後就會套用合併規則找出贏家記錄。
 
-1. 接著此筆贏家記錄會傳遞到交叉實體比對流程。
+1. 然後，此勝出記錄會傳遞至交叉實體比對，同時也會傳遞非勝出記錄 (例如，替代識別碼)，以改善比對品質。
 
 1. 任何定義為永遠符合和從不符合的自訂比對規則都會否決重複資料刪除規則。 若重複資料刪除規則找出比對記錄，且自訂比對規則設定為永不符合那些記錄，則這兩筆記錄將無法符合。
 
@@ -157,6 +157,17 @@ ms.locfileid: "4405278"
 
 > [!TIP]
 > 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。
+
+## <a name="deduplication-output-as-an-entity"></a>重複資料刪除輸出成實體
+除了作為部分交叉實體比對而建立的整合主要實體之外，重複資料刪除程序也會為比對程序中的每個實體生成新的實體，以找出重複資料刪除記錄。 這些實體與 **ConflationMatchPairs:CustomerInsights** 都可以找到，位在 **實體** 頁面的 **系統** 區段中，名稱為 **Deduplication_Datasource_Entity**。
+
+重複資料刪除輸出實體包含下列資訊：
+- 識別碼/金鑰
+  - 主索引鍵欄位及其替代識別碼欄位。 替代識別碼欄位是由被辨識為記錄的替代識別碼所組成。
+  - 根據指定的重複資料刪除欄位，Deduplication_GroupId 欄位顯示實體中辨識出的群組或叢集，裡面都是類似記錄。 這是為了進行系統處理。 如果未指定手動重複資料刪除規則，並套用系統定義的重複資料刪除規則，您就不會在重複資料刪除輸出實體中找到此欄位。
+  - Deduplication_WinnerId：此欄位包含的勝出識別碼來自於已辨識的群組或叢集。 如果 Deduplication_WinnerId 與記錄的主索引鍵相同，則表示該記錄是勝出的記錄。
+- 用來定義重複資料刪除規則的欄位。
+- 規則和分數欄位，表示所套用的重複資料刪除規則和比對演算法回傳的分數。
 
 ## <a name="review-and-validate-your-matches"></a>檢閱和驗證您的比對
 
@@ -200,6 +211,11 @@ ms.locfileid: "4405278"
   > [!div class="mx-imgBorder"]
   > ![複製規則](media/configure-data-duplicate-rule.png "複製規則")
 
+- **停用規則**，從比對程序排除規則時，保留比對規則。
+
+  > [!div class="mx-imgBorder"]
+  > ![停用規則](media/configure-data-deactivate-rule.png "停用規則")
+
 - **編輯您的規則**：選取 **編輯** 符號。 您可以套用下列變更：
 
   - 變更條件的屬性：在特定的條件列中選取新屬性。
@@ -229,6 +245,8 @@ ms.locfileid: "4405278"
     - Entity2Key：34567
 
    相同的範本檔案可以指定來自多個實體的自訂比對記錄。
+   
+   如果您想要在實體上指定重複資料刪除的自訂比對，請提供相同的實體當作 Entity1 和 Entity2 ，並設定不同主索引鍵值。
 
 5. 在新增您要套用的所有覆寫之後，儲存範本檔案。
 
@@ -250,3 +268,6 @@ ms.locfileid: "4405278"
 ## <a name="next-step"></a>後續步驟
 
 在完成至少一個比對配對的比對程序之後，您可以透過 [**合併**](merge-entities.md)主題來解決資料中可能的矛盾。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

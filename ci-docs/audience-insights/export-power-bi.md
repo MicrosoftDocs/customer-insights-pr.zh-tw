@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405242"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477078"
 ---
 # <a name="connector-for-power-bi-preview"></a>適用於 Power BI 的連接器 (預覽)
 
@@ -31,7 +31,7 @@ ms.locfileid: "4405242"
 
 1. 選取 **顯示較多資訊** 並搜尋 **Dynamics 365 Customer Insights**
 
-1. 選取結果並選取 **關係**。
+1. 選取 **Connect**。
 
 1. 使用與用於 Customer Insights 相同的組織帳戶 **登入**，並選取 **關係**。
    > [!NOTE]
@@ -52,3 +52,22 @@ Power BI 的 Customer Insights 連接器是設計來處理包含多達 1 百萬�
 ### <a name="work-with-a-subset-of-data"></a>使用資料的子集
 
 考慮搭配您的資料子集合處理。 例如您可以建立 [區段](segments.md) 而不是將所有客戶記錄匯出到 Power BI。
+
+## <a name="troubleshooting"></a>疑難排解​​
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Customer Insights 環境沒有顯示在 Power BI 中
+
+環境中的兩個相同實體在對象見解中定義了超過一個的[關聯](relationships.md)，則在 Power BI 連接器中無法使用該環境。
+
+您可以找出並移除重複的關聯。
+
+1. 到您在 Power BI 遺失的環境，在對象見解中移至其 **資料** > **關聯**。
+2. 找出重複的關聯：
+   - 檢查是否對相同的兩個實體定義了多個關聯。
+   - 檢查是否有關聯建立在兩個同時包含在整合程序中的實體。 在整合程序中包含的所有實體，都會被定義隱式關聯。
+3. 移除任何已發現的重複關聯。
+
+移除重複的關聯之後，請再次嘗試設定 Power BI連接器。 環境現在應該可以使用了。
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

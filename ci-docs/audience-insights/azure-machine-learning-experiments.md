@@ -4,17 +4,17 @@ description: 在 Dynamics 365 Customer Insights 中使用 Azure 機器學習式�
 ms.date: 11/30/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: naravill
 ms.author: mhart
 ms.reviewer: m-hartmann
 manager: shellyha
-ms.openlocfilehash: 6f00d3202dc29d810bdd218d06c7d04e551846e8
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668758"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267896"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>使用 Azure 機器學習式模型
 
@@ -39,7 +39,7 @@ Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>搭配 Azure Machine Learning SDK 處理
 
-資料科學家和 AI 開發人員使用 [Azure Machine Learning SDK ](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) 組建機器學習工作流程。 目前使用 SDK 訓練的模型無法直接與 Customer Insights 整合。 使用該模型的批次推論管道需要與 Customer Insights 整合。
+資料科學家和 AI 開發人員使用 [Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) 組建機器學習工作流程。 目前使用 SDK 訓練的模型無法直接與 Customer Insights 整合。 使用該模型的批次推論管道需要與 Customer Insights 整合。
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Customer Insights 整合的批次處理管道需求
 
@@ -97,3 +97,6 @@ Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合
       # datastore.upload(src_dir=<<working directory>>, target_path=directory_name, overwrite=False, show_progress=True)
       output_dataset = Dataset.File.upload_directory(src_dir=<<working directory>>, target = (datastore, directory_name)) # Remove trailing "/" from directory_name
    ```
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

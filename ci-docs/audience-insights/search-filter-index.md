@@ -1,7 +1,7 @@
 ---
 title: 搜尋和篩選客戶設定檔
 description: 快速尋找有關所指定屬性的統整客戶設定檔和篩選的相關資訊。
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405284"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270056"
 ---
 # <a name="customer-profiles-search--filter-index"></a>客戶設定檔：搜尋及篩選索引
 
@@ -28,14 +28,6 @@ ms.locfileid: "4405284"
 如果是第一次以系統管理員身分定義可搜尋屬性，則必須先定義索引欄位。 我們建議您在 **客戶** 頁面上選擇使用者可以用來搜尋和篩選客戶的所有屬性。 您只能指定在資料統整程序中所建立之客戶設定檔實體中存在的屬性。
 
 1. 開啟 **客戶** 頁面，然後選取 **搜尋和篩選索引**。
-
-> [!NOTE]
-> 我們會根據客戶實體的可用屬性，從 [地圖] 頁面所定義的下列語意類型建立預設搜尋索引設定。
-> - 個人名字、姓氏、中間名、全名
-> - 組織名稱
-> - 電子郵件地址
-> - 電話號碼
-> - 位置資訊
 
 2. 選取 **+ 新增** 以指定索引欄位。
 
@@ -65,3 +57,10 @@ ms.locfileid: "4405284"
 2. 選取 **儲存** 套用變更。
 
 3. 當您準備好套用您的設定時，請選取 **執行**。
+
+## <a name="next-steps"></a>後續步驟
+
+移至 **客戶** 頁面以搜尋客戶設定檔，或使用索引欄位來查看所有客戶設定檔的子集。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

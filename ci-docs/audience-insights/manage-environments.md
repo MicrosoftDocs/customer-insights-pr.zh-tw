@@ -1,20 +1,20 @@
 ---
 title: 建立和管理環境
 description: 瞭解如何註冊服務及管理環境。
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644123"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270102"
 ---
 # <a name="manage-environments"></a>管理環境
 
@@ -46,9 +46,9 @@ ms.locfileid: "4644123"
 
 若要建立環境：
 
-1. 選取應用程式標題中的 **設定** 符號。
+1. 在應用程式的標頭中選取 **環境** 選取器。
 
-1. 選取 **新增環境**。
+1. 選取 **新增**。
 
    > [!div class="mx-imgBorder"]
    > ![環境設定](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ ms.locfileid: "4644123"
 
    - Azure Data Lake Storage Gen2 選項方面，您可以在資源式選項和訂閱式選項之間選擇進行驗證。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 **容器** 名稱無法變更，將為 "customerinsights"。
    
-   - 如果您要使用 [預測](predictions.md)，請在 **使用預測** 下方的 **欄位位址** 中輸入 Common Data Service 執行個體 URL。
+   - 如果您想要使用 [預測](predictions.md)或以 Microsoft Dataverse 設定共用資料給應用程式和解決方案，請在 **與 Microsoft Dataverse 資料共用的設定並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
+
+     > [!NOTE]
+     > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
+     > - 當您啟用資料共用給 Microsoft Dataverse Managed Data Lake 時，目前不支援[實體中遺失值的預測](predictions.md)。
+
+     > [!div class="mx-imgBorder"]
+     > ![啟用與 Microsoft Dataverse 共用資料的組態選項](media/Datasharing-with-DataverseMDL.png)
 
    當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 資料檔案和 model.json 檔案會根據您執行的程序，建立並新增至各自的子資料夾。
 
@@ -86,7 +93,7 @@ ms.locfileid: "4644123"
 下列組態設定已複製，
 
 - 功能設定
-- 擷取/匯入的資料來源
+- 內嵌/匯入的資料來源
 - 資料統一 (對應、比對、合併) 設定
 - 客戶細分
 - 量值
@@ -120,11 +127,11 @@ ms.locfileid: "4644123"
 
 您可以編輯現有環境的部分詳細資料。
 
-1. 移至 **管理** > **系統** > **關於**。
+1.  在應用程式的標頭中選取 **環境** 選取器。
 
-2. 選取 **編輯**。
+2.  選取 **編輯** 圖示。
 
-3. 您可以更新環境的 **顯示名稱**，但無法變更 **區域** 或 **類型**。
+3. 在 **編輯環境** 方塊中，您可以更新環境的 **顯示名稱**，但是不可以變更 **區域** 或 **類型**。
 
 4. 如果環境設定為在 Azure Data Lake Storage Gen2 中儲存資料，您可以更新 **帳戶金鑰**。 不過，您無法變更 **帳戶名稱** 或 **容器** 名稱。
 
@@ -132,19 +139,27 @@ ms.locfileid: "4644123"
 
 ## <a name="reset-an-existing-environment"></a>重設現有環境中
 
-如果您要刪除所有組態並移除內嵌的資料，您可以將環境重設為空白狀態。
+作為管理員，如果您要刪除所有組態並移除內嵌的資料，您可以將環境重設為空白狀態。
 
-1.  移至 **管理** > **系統** > **關於**。
+1.  在應用程式的標頭中選取 **環境** 選取器。 
 
-2.  選取 **重設**。 
+2.  選取您要重設的環境，並選取省略號 **...**。 
 
-3.  若要確認刪除，請輸入環境名稱並選取 **重設**。
+3. 選擇 **重設** 選項。 
+
+4.  若要確認刪除，請輸入環境名稱並選取 **重設**。
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>刪除現有的環境 (只有系統管理員可以使用)
+
+作為管理員，您可以刪除您所管理的環境。
+
+1.  在應用程式的標頭中選取 **環境** 選取器。
+
+2.  選取您要重設的環境，並選取省略號 **...**。 
+
+3. 選擇 **刪除** 選項。 
+
+4.  若要確認刪除，請輸入環境名稱，然後選取 **刪除**。
 
 
-## <a name="delete-an-existing-environment"></a>刪除現有環境
-
-1. 移至 **管理** > **系統** > **關於**。
-
-1. 選取 **刪除**。
-
-1. 若要確認刪除，請輸入環境名稱，然後選取 **刪除**。
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

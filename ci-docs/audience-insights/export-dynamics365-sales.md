@@ -1,20 +1,20 @@
 ---
 title: 匯出 Customer Insights 資料到 Dynamics 365 Sales
 description: 了解如何設定與 Dynamics 365 Sales 的連接。
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643808"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268998"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Dynamics 365 Sales 的連接器 (預覽)
 
@@ -24,7 +24,10 @@ ms.locfileid: "4643808"
 
 ## <a name="prerequisite"></a>先決條件
 
-[從 Dynamics 365 Sales 內嵌使用 Common Data Service](connect-power-query.md) 的連絡人記錄。
+1. 連絡人記錄必須存在於Dynamics 365 Sales 中，才能將客戶細分從 Customer Insights 匯出至 Sales。 瞭解如何[使用 Common Data Services 在 Dynamics 365 Sales 裡面](connect-power-query.md)內嵌連絡人。
+
+   > [!NOTE]
+   > 將客戶細分中從對象見解中匯出到 Sales，並不會在 Sales 的執行個體中建立新的連絡人記錄。 Sales 中的連絡人記錄必須內嵌在對象見解中，並作為資料來源使用。 他們也必須包含整合客戶實體中，才能客戶細分匯出前，先將客戶識別碼對應至連絡人的識別碼。
 
 ## <a name="configure-the-connector-for-sales"></a>設定 Sales 的連接器
 
@@ -49,3 +52,6 @@ ms.locfileid: "4643808"
 ## <a name="export-the-data"></a>匯出資料
 
 您可以[視需要匯出資料](export-destinations.md)。 匯出也會與每個[排定的重新整理](system.md#schedule-tab)一起執行。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Power Automate 連接器 | Microsoft Docs
 description: 在 Microsoft Power Automate 中從 Dynamics 365 Customer Insights 建立流程。
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405237"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268814"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate 連接器 (預覽)
 
@@ -22,7 +22,7 @@ ms.locfileid: "4405237"
 
 ## <a name="power-automate-triggers"></a>Power Automate 觸發程序
 
-您可以使用各種允許您建立流程的觸發程序來自動化重複性工作，例如通知或其他進階動作。 
+使用觸發程序來建立雲端流程並自動化重複工作，例如通知或更多進階動作。 
 
 - 當資料來源重新整理失敗時觸發。 
 - 當資料來源重新整理成功時觸發。
@@ -36,14 +36,20 @@ ms.locfileid: "4405237"
 ## <a name="power-automate-actions"></a>Power Automate 動作
 Power Automate 連接器提供可用觸發程序以外的動作。 如需詳細資訊，請參閱《[Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/)》。
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>在對象見解中建立 Power Automate 流程
+## <a name="create-a-power-automate-flow"></a>建立 Power Automate 流程
 
-1. 請在對象見解中前往 **管理員** > **系統**。
+1. 在對象見解中，前往 **系統管理員** > **匯出目的地**。
 
-1. 在 **系統** 頁面上，選取 **狀態** 索引標籤。
+1. 在 **Power Automate** 圖格中，選取 **設定**。
 
-1. 在 **資料來源** 區段中，選取 **流程**，然後從下拉式清單中選取 **建立流程**。
-   > [!div class="mx-imgBorder"]
-   > ![顯示建立流程動作的 Power Automate 連接器](media/power-automate-connector-create-flow.png "顯示建立流程動作的 Power Automate 連接器")
+1. Power Automate 中的 Customer Insights 連結器 (preview) 開啟。 **登入** Power Automate。
 
-1. 在 Power Automate 中，選取其中一個可用的觸發程序，以建立您喜歡的流程。 如果您正在建立第一個流程，則必須先使用 Power Automate 連接器進行驗證。
+1. 選擇其中一個可用的觸發程序，並在新流程中新增更多步驟。 如需詳細資訊，請參閱[在 Power Automate 中建立雲端工作流程](https://docs.microsoft.com/power-automate/get-started-logic-flow)。
+
+如何使用流程的範例： 
+- 若資料來源重新整理失敗，請將訊息張貼到 Microsoft Teams 頻道。 
+- 達到客戶細分上的閾值時，將電子郵件傳送給資料負責人。
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

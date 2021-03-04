@@ -4,17 +4,17 @@ description: 在 Dynamics 365 Customer Insights 中使用 Azure Machine Learning
 ms.date: 12/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: ameetj
 manager: shellyha
-ms.openlocfilehash: 556b6810db0ed2733a3f086291757bd85b77e371
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4669008"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270194"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>根據 Azure Machine Learning Studio (經典版) 基礎使用各模型
 
@@ -171,3 +171,6 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 若要在 Customer Insights 中使用這些預測，您必須連同客戶識別碼一起 **匯出** 預測。 [將它們匯出到您預計匯出](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) 來源資料的同一個 Azure Blob 儲存體位置。 您可以將預測型 Web 服務排定為定期執行，並更新分數。
 
 自訂模型產生的資料可用來進一步富集您的客戶資料。 如需詳細資訊，請參閱[自訂機器學習模型](custom-models.md)。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

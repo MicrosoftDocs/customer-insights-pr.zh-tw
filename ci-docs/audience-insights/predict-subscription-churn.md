@@ -5,16 +5,16 @@ ms.date: 08/19/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 03178fc1bfe611b1b0ced08bbbef876035875825
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c12adab2e4573b1315d74f2111cf13b9f4ee6045
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643718"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268354"
 ---
 # <a name="subscription-churn-prediction-preview"></a>訂閱流失預測 (預覽)
 
@@ -164,3 +164,6 @@ ms.locfileid: "4643718"
 
 > [!NOTE]
 > 刪除預測將會移除其輸出實體。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

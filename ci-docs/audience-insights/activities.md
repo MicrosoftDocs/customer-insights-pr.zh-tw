@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667219"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267422"
 ---
 # <a name="customer-activities"></a>客戶活動
 
@@ -44,13 +44,13 @@ ms.locfileid: "4667219"
 
 1. 在 **設定關聯** 區段中，設定詳細資料，將您的活動資料連接至其對應的客戶。
 
-   > [!div class="mx-imgBorder"]
-   > ![定義實體關聯](media/activities-entities-define.png "定義實體關聯")
-
     - **活動實體欄位**：選取活動實體中用來建立與另一個實體的關聯的欄位。
     - **客戶實體**：選取您的活動實體要與其關聯的對應來源客戶實體。 您只能關聯至資料統整處理中所使用的來源客戶實體。
     - **客戶實體欄位**：此欄位會顯示對應程序中所選取的來源客戶實體主索引鍵。 來源客戶實體中的這個主索引鍵欄位是用來建立與活動實體的關聯。
     - **名稱**：如果此活動實體與所選取的源客戶實體之間的關聯已存在，則關聯名稱將為唯讀模式。 如果不存在這樣的關聯，則會以此處提供的名稱建立新關聯。
+   
+   > [!div class="mx-imgBorder"]
+   > ![定義實體關聯](media/activities-entities-define.png "定義實體關聯")
 
 1. 選取 **儲存** 套用變更。
 
@@ -82,3 +82,6 @@ ms.locfileid: "4667219"
 3. 選取 **刪除** 圖示。
 
 4. 確認刪除。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,26 +1,26 @@
 ---
 title: 使用 Microsoft Graph 富集客戶設定檔
 description: 使用 Microsoft Graph 的專有資料，使用品牌和興趣親和性來擴充您的客戶資料。
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405249"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269320"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>使用品牌和興趣親和性來擴充客戶設定檔 (預覽)
 
 使用 Microsoft Graph 的專有資料，使用品牌和興趣親和性來擴充您的客戶資料。 這些親和性是根據與客戶有類似人口統計資料之人員的資料所決定。 此資訊可協助您更清楚了解客戶，並根據客戶與特定品牌及興趣的親和性建立其區段。
 
-請在對象見解中前往 **資料** > **富集** 以便 [組態和檢視富集群](enrichment-hub.md)。
+請在對象見解中前往 **資料** > **擴充** 以便 [設定和檢視擴充](enrichment-hub.md)。
 
 若要設定品牌親和性擴充，請移至 **探索** 索引標籤 ，並選取 **品牌** 圖標上的 **擴充我的資料**。
 
@@ -35,16 +35,21 @@ ms.locfileid: "4405249"
 
 [深入了解 Microsoft Graph](https://docs.microsoft.com/graph/overview)。
 
-## <a name="affinity-score-and-confidence"></a>親和性分數和信賴度
+## <a name="affinity-level-and-score"></a>親合性等級和分數
 
-**親和性分數** 是以 100 分為滿分來計算，100 表示對品牌或興趣有最高親和性的區段。
+每一個擴充的客戶設定檔，我們都提供兩個相關的值 – 親合性等級和親合性分數。 這些值可協助您判斷與其他人口統計資料段相比，該設定檔人口統計資料客戶細分、品牌或興趣的親和性強弱程度。
 
-**親和性信賴度** 也是以 100 分為滿分來計算。 它表示某個區段與該品牌或興趣有親和性的系統信賴度等級。 信賴度等級是根據區段大小和區段細微性而定。 區段大小是由特定區段的資料量所決定。 區段資料粒度是由設定檔中可用的屬性（年齡、性別、位置）所決定。
+*親和性等級* 由四個等級所組成，而 *親和性分數* 是在對應親和性等級在 100 分範圍中的計算結果。
 
-我們不會將資料集的分數正常化。 因此，您可能看不到資料集所有可能的親和性分數值。 例如，在您的資料中，可能不會有親和性分數為 100 的任何使用者設定檔。 如果人口統計區段中並未有針對給定的品牌或興趣而計分 100 的客戶，就可能會發生這種情況。
 
-> [!TIP]
-> 使用親和性分數[建立區段](segments.md)時，請先檢閱資料集的親和性分數的分佈，再依據適當的分數閾值做決定。 例如，評分為 10 的親和性分數可在對特定品牌或興趣的親和性分數最高只有 25 的特定資料集中視為顯著。
+|親和性等級 |親和性分數  |
+|---------|---------|
+|非常高     | 85-100       |
+|高     | 70-84        |
+|中     | 35-69        |
+|低     | 1-34        |
+
+根據您要測量親和性的細微程度，您可以使用親和性等級或分數。 親和性分數提供更精確的控制。
 
 ## <a name="supported-countriesregions"></a>支援的國家/地區
 
@@ -54,17 +59,13 @@ ms.locfileid: "4405249"
 
 ### <a name="implications-related-to-country-selection"></a>與國家/地區選取相關的影響
 
-- [選擇您自己的品牌](#define-your-brands-or-interests)時，我們會根據選取的國家/地區提供建議。
+- 當[選擇您的自有品牌](#define-your-brands-or-interests)時，系統會根據選取的國家或地區提供建議。
 
-- 當您[選擇產業](#define-your-brands-or-interests)時，我們會根據選取的國家/地區找出最相關的品牌或興趣。
+- [選擇產業時](#define-your-brands-or-interests)，將得到與您選取的國家或地區最相關的品牌或興趣。
 
-- [對應您的欄位](#map-your-fields)時，如果未對應 [國家/地區] 欄位，我們將使用所選國家/地區的 Microsoft Graph 資料來擴充您的客戶設定檔。 我們也會使用該選取項目來擴充沒有提供國家/地區資料的客戶設定檔。
-
-- [擴充設定檔](#refresh-enrichment)時，我們會擴充所有我們有 Microsoft Graph 資料適用於所選品牌及興趣的客戶設定檔，包括不屬於所選國家/地區的設定檔。 例如，當您選取德國時，如果我們在美國有適用於所選品牌及興趣的 Microsoft Graph 資料，則會擴充位於美國的設定檔。
+- 在[擴充設定檔](#refresh-enrichment)時，我們會針對選取的品牌和興趣資料用已取得的資料擴充所有客戶設定檔。 包括不在選取的國家或地區中的設定檔。 例如，當您選取德國時，如果我們在美國有適用於所選品牌及興趣的 Microsoft Graph 資料，則會擴充位於美國的設定檔。
 
 ## <a name="configure-enrichment"></a>設定擴充
-
-設定品牌或興趣擴充包括兩個步驟：
 
 ### <a name="define-your-brands-or-interests"></a>定義您的品牌或興趣
 
@@ -75,9 +76,19 @@ ms.locfileid: "4405249"
 
 若要新增品牌或興趣，請在輸入區域中輸入，以依據符合的字詞取得建議。 如果我們未列出您要尋找的品牌或興趣，請使用 **建議** 連結向我們傳送意見。
 
-### <a name="map-your-fields"></a>對應您的欄位
+### <a name="review-enrichment-preferences"></a>查看擴充喜好設定
 
-將您的統整客戶實體中的欄位對應至至少兩個屬性，以定義您要用來擴充客戶資料的人口統計區段。 選取 **編輯** 以定義欄位對應，並在完成時選取 **套用**。 選取 **儲存** 來完成欄位對應。
+查看預設的擴充喜好設定，並視需要加以更新。
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="擴充喜好設定視窗的螢幕擷取畫面。":::
+
+### <a name="select-entity-to-enrich"></a>選取要擴充的實體
+
+選取 **擴充實體**，然後選擇要用 Microsoft Graph 中的公司資料進行擴充的資料集。 您可以選取客戶實體來擴充所有的客戶設定檔，或選取客戶細分實體僅擴充位於該客戶細分的客戶設定檔。
+
+### <a name="map-your-fields"></a>對應欄位
+
+對應統整客戶實體中的欄位，以定義您要讓系統用來擴充客戶資料的人口統計客戶細分。 對應國家/地區以及至少要出生日期或性別屬性。 此外，您至少必須對應一個市/鎮 (和縣/市) 或郵遞區號。 選取 **編輯** 以定義欄位對應，並在完成時選取 **套用**。 選取 **儲存** 來完成欄位對應。
 
 支援下列格式和值，這些值不區分大小寫：
 
@@ -120,3 +131,6 @@ ms.locfileid: "4405249"
 ## <a name="next-steps"></a>後續步驟
 
 建立在您擴充的客戶資料之上。 建立[區段](segments.md)、[量值](measures.md)，甚至[匯出資料](export-destinations.md)，以便傳送個人化體驗給您的客戶。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

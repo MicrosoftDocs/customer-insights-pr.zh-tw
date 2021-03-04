@@ -1,20 +1,20 @@
 ---
 title: 匯出 Customer Insights 資料到 Dynamics 365 Marketing
 description: 了解如何設定與 Dynamics 365 Marketing 的連接。
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643763"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269044"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Dynamics 365 Marketing 的連接器 (預覽)
 
@@ -24,7 +24,10 @@ ms.locfileid: "4643763"
 
 ## <a name="prerequisite"></a>先決條件
 
-[從 Dynamics 365 Marketing 內嵌的 Common Data Service](connect-power-query.md) 連絡人記錄。
+- 連絡人記錄必須在 Dynamics 365 Marketing 中，才能將客戶細分從 Customer Insights 匯出至 Marketing。 瞭解如何[用 Common Data Services 在 Dynamics 365 Marketing 裡面](connect-power-query.md)內嵌連絡人 。
+
+  > [!NOTE]
+  > 將客戶細分中從對象見解中匯出到 Marketing，並不會在 Marketing 的執行個體中建立新的連絡人記錄。 Marketing 中的連絡人記錄必須內嵌在對象見解中，並當成資料來源使用。 他們也必須包含整合客戶實體中，才能客戶細分匯出前，先將客戶識別碼對應至連絡人的識別碼。
 
 ## <a name="configure-the-connector-for-marketing"></a>設定 Marketing 的連接器
 
@@ -49,3 +52,6 @@ ms.locfileid: "4643763"
 ## <a name="export-the-data"></a>匯出資料
 
 您可以[視需要匯出資料](export-destinations.md)。 匯出也會與每個[排定的重新整理](system.md#schedule-tab)一起執行。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

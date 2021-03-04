@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644393"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268308"
 ---
 # <a name="transactional-churn-prediction-preview"></a>交易性流失預測 (預覽版)
 
@@ -96,6 +96,8 @@ ms.locfileid: "4644393"
 1. 或者選取 **新增** **客戶活動資料**。 選擇提供先決條件中描述客戶活動資訊的實體。
 
 1. 將語義欄位對應到您的客戶活動實體中的屬性，並選取 **下一步**。 如需欄位的描述，請查看[先決條件](#prerequisites)。
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="為交易資料對應至客戶欄位。":::
 
 1. 選取與您要設定之客戶活動類型相配的活動類型。 請選取 **新建** 並選擇可用的活動類型或建立新類型。
 
@@ -185,3 +187,6 @@ ms.locfileid: "4644393"
 1. 選取您要刪除之預測旁邊的垂直省略符號。
 
 1. 選取 **刪除**。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

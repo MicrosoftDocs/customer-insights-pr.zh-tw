@@ -1,20 +1,20 @@
 ---
 title: 使用服務主體連接到 Azure Data Lake Storage Gen2 帳戶
-description: 當附加到對象見解時，請使用適用對象見解的 Azure 服務主體連接您自己的 Data Lake。
-ms.date: 11/24/2020
+description: 在將 data lake 附加到對象見解時，請使用適用對象見解的 Azure 服務主體連接您自己的 data lake。
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644078"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267712"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>使用適用對象見解的 Azure 服務主體連接到 Azure Data Lake Storage Gen2 帳戶
 
@@ -22,7 +22,9 @@ ms.locfileid: "4644078"
 
 您可以使用服務主體安全地將 [Common Data Model 資料夾新增或編輯為資料來源](connect-common-data-model.md) 或 [建立全新或更新現有的環境](manage-environments.md#create-an-environment-in-an-existing-organization)。
 
-您需要適用您的 Azure 訂閱的系統管理員權限建立服務主體。
+> [!IMPORTANT]
+> - 要使用服務主體的 Azure Data Lake Gen2 儲存體帳戶必須已[啟用階層命名空間 (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace)。
+> - 您需要適用您的 Azure 訂閱的系統管理員權限建立服務主體。
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>建立適用對象見解的 Azure 服務主體
 
@@ -83,7 +85,7 @@ ms.locfileid: "4644078"
 
 請遵循下列步驟提供選取方法的必要資訊。
 
-### <a name="resounce-based-storage-account-connection"></a>資料式儲存體帳戶連接
+### <a name="resource-based-storage-account-connection"></a>資源型儲存體帳戶連接
 
 1. 請前往 [Azure 管理員入口網站](https://portal.azure.com) 登入到您的訂閱並打開儲存體帳戶。
 
@@ -108,7 +110,8 @@ ms.locfileid: "4644078"
 1. 請評論 **訂閱**、**資源群組** 和儲存體帳戶 **名稱** 以確定您在對象見解中選取正確值。
 
 1. 請在對象見解中選擇附加儲存體帳戶的值或對應欄位。
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="輸入儲存體帳戶資源識別碼資訊。":::
    
 1. 繼續進行對象見解中的其餘步驟以便附加儲存體帳戶。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

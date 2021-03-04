@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643583"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269780"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>交易性流失預測 (預覽版) 範例指南
 
@@ -49,7 +49,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
    [!div class="mx-imgBorder"]
    ![轉換出生日期到日期](media/ecommerce-dob-date.PNG "將出生日期轉換為日期")
 
-1. 請在右側窗格的 '名稱' 欄位中將您的資料來源從 **查詢** 重新命名為 **eCommerceContacts**
+1. 請在右側窗格的 **名稱** 欄位中將您的資料來源從 **查詢** 重新命名為 **eCommerceContacts**
 
 1. 儲存資料來源。
 
@@ -66,7 +66,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
    - **PurchasedOn**：日期/時間
    - **TotalPrice**：貨幣
    
-1. 請在右側窗格的 '名稱' 欄位中將您的資料來源從 **查詢** 重新命名為 **eCommercePurchases**。
+1. 請在右側窗格的 **名稱** 欄位中將您的資料來源從 **查詢** 重新命名為 **eCommercePurchases**。
 
 1. 儲存資料來源。
 
@@ -84,7 +84,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
    - **RewardsPoints**: 整數
    - **CreatedOn**：日期/時間
 
-1. 請在右側窗格的 '名稱' 欄位中將您的資料來源從 **查詢** 重新命名為 **loyCustomers**。
+1. 請在右側窗格的 **名稱** 欄位中將您的資料來源從 **查詢** 重新命名為 **loyCustomers**。
 
 1. 儲存資料來源。
 
@@ -166,7 +166,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
      :::image type="content" source="media/model-levers.PNG" alt-text="選取模型槓桿預測視窗和流失定義。":::
 
-1. 選取 **購買歷史記錄 (必要項目)** 和 **新增** 訂閱歷史資料。
+1. 選取 **購買歷史記錄 (必要項目)** 和 **新增** 購買歷史資料。
 
 1. 新增 **eCommercePurchases：電子商務** 實體並將電子商務欄位對應到模型所需的對應欄位。
 
@@ -204,3 +204,6 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 您現在有動態更新的區段，其找出對此訂閱業務而言屬於高流失風險的客戶。
 
 如需詳細資訊，請參閱[建立和管理客戶細分](segments.md)。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

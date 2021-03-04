@@ -1,30 +1,26 @@
 ---
-title: 對象見解能力
-description: Dynamics 365 Customer Insights 對象見解能力總覽。
-ms.date: 02/05/2020
+title: Dynamics 365 Customer Insights 的對象見解概述
+description: Dynamics 365 Customer Insights 的對象見解概述。
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405271"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476985"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Dynamics 365 Customer Insights 對象見解能力
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Dynamics 365 Customer Insights 的對象見解概述
 
-客戶體驗是每個組織數位化轉型計畫的最核心部分。 若要在現今市場上競爭，組織就必須在個人層級上與客戶建立有意義的關聯。 有效的大規模個人化需要完整統一的客戶觀點。
+對象見解協助您更深入瞭解您的客戶。 連接各種不同交易、行為及觀測來源的資料，以建立全方位客戶視角。 利用這些見解來推動以客戶為中心的體驗與程序。 統整和瞭解客戶資料並充分運用以取得智慧見解和動作。
 
-對象見解協助您更深入瞭解您的客戶。 連接各種不同交易、行為及觀測來源的資料，以建立全方位客戶視角。 利用這些見解來推動以客戶為中心的體驗與程序。
-
-**統整和瞭解客戶資料並充分運用以取得智慧見解和動作。**
-
-藉助對象見解，各組織可以：  
+## <a name="main-benefits"></a>主要好處 
 
 - **消除資料隔閡並整合客戶資料**
 
@@ -33,15 +29,15 @@ ms.locfileid: "4405271"
 
 - **透過 Microsoft Graph 中包含的受眾智慧擴充**
 
-  - 結合 Microsoft Graph 中包含受眾智慧，建立更豐富的客戶設定檔。  
+  - [結合 Microsoft Graph 的對象智慧](enrichment-microsoft-graph.md)，建立更豐富的客戶設定檔。  
 
 - **推行您的商務程序並個人化客戶體驗**
 
   - 在各種管道上推動個人化參與 — 為行銷、銷售和服務專業人員提供內建關聯式 Customer Insights，以及量身打造且已融入他們已經每天使用的商務應用程式的客戶設定檔
   - 根據可自訂的設定檔、業務量值和區段，自動化以客戶為中心的體驗和程序。
-  - 啟用並擴充以在 Microsoft Power Platform 基礎上組建的企業營運體驗。 使用威力強大的 PowerApps 低程式碼方法快速組建含嵌入見解的應用程式。  
+  - 啟用並擴充建立在 [Microsoft Power Platform](https://powerplatform.microsoft.com/) 的企業營運體驗。 使用威力強大的 PowerApps 低程式碼方法快速組建含嵌入見解的應用程式。  
 
-對象見解包括適用下列主要使用者的能力：
+## <a name="key-audiences"></a>關鍵對象
 
 - **資料分析師/管理員：**
 
@@ -58,5 +54,8 @@ ms.locfileid: "4405271"
 
 - **業務分析員：**
 
-  - 建立可自訂的設定檔、定義量值並建立區段，以取得組織特有的全方位客戶觀點。  
-  - 將創新連接器用於 PowerApps 或 Microsoft Power BI 或 API，在您的商務應用程式或 BI 解決方案呈現見解。  
+  - 建立可自訂的設定檔、定義量值、建立區段並從預測分析中獲益，取得專屬於組織的 360 度客戶檢視。  
+  - 好幾個 Microsoft 和協力廠商的應用程式或 API 具備立即可用的連接器，能進一步處理見解。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 13308c2f40cda0d7e813b4d94ab47d53b5ce2115
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: a5d928ae518f3cb1afbf8e2b197e51b27665f6e0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653880"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269734"
 ---
 # <a name="customer-profiles"></a>客戶設定檔
 
@@ -70,3 +70,6 @@ ms.locfileid: "4653880"
 ## <a name="next-steps"></a>後續步驟
 
 [新增其他資料來源](data-sources.md)或[建立客戶區段](segments.md)。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

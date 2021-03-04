@@ -4,16 +4,16 @@ description: 在 Dynamics 365 Customer Insights 中使用 Azure Machine Learning
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668893"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267224"
 ---
 # <a name="custom-machine-learning-models"></a>自訂機器學習模型
 
@@ -46,15 +46,15 @@ ms.locfileid: "4668893"
 
 1. 在 **包含您的模型的下拉式選單的 Web 服務** 中選擇 Machine Learning Studio (經典版) web 服務或 Azure Machine Learning 管道。 然後選取 **下一步**。
    - 瞭解更多有關 [Machine Learning Studio (經典版) 中發佈 Web 服務](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - 深入瞭解關於 [使用 Designer 程式](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) 或 [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) 發佈 Azure Machine Learning 中的管道。 
-     > [!NOTE]
-     > 您的管道必須在 [管道端點](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) 下發佈。
+   - 深入瞭解關於 [使用 Designer 程式](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) 或 [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) 發佈 Azure Machine Learning 中的管道。 您的管道必須在 [管道端點](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) 下發佈。
 
 1. 各 **Web 服務輸入** 方面，請從對象見解選取符合的 **實體** 並選取 **下一步**。
+   > [!NOTE]
+   > 自訂模型工作流程將會套用啟發型方法，根據欄位的名稱和資料類型，將 web 服務輸入欄位對應至實體屬性。 如果 web 服務欄位無法對應至實體，則會出現錯誤。
 
    > [!div class="mx-imgBorder"]
    > ![設定工作流程](media/intelligence-screen2-updated.png "設定工作流程")
-
+   
 1. 請在 **模型輸出參數** 步驟中設定下列屬性：
    - Machine Learning Studio (經典版)
       1. 輸入您想讓 Web 服務輸出結果流入的輸出 **實體名稱**。
@@ -112,3 +112,6 @@ ms.locfileid: "4668893"
 1. 選取 **刪除**，並確認刪除。
 
 將會刪除您的工作流程。 您建立工作流程時所建立的 [實體](entities.md)仍然存在，而且可以從 **實體** 頁面來檢視此實體。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

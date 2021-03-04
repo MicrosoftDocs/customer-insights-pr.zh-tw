@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689165"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270270"
 ---
 # <a name="real-time-data-ingestion-preview"></a>即時資料擷取 (預覽)
 
@@ -83,6 +83,7 @@ ms.locfileid: "4689165"
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>了解遙測的即時使用方式
 
-取得即時 API 的要求量和系統可能遭遇的問題相關資訊總覽。 您可以移至 **管理** > **系統** > **API 使用方式**，[存取即時遙測](system.md#api-usage-tab)。 在 **作業** 表格中，使用即時方法的 API 作業行包含即時 API 使用方式檢視按鈕。 此按鈕透過望遠鏡符號視覺化。 選取此按鈕打開內含目前環境中即時 API 使用方式詳細資料的側窗格。
+取得即時 API 的要求量和系統可能遭遇的問題相關資訊總覽。 您可以[存取即時遙測](system.md#api-usage-tab)。 
 
-使用 **群組依據** 選取器選擇即時互動在時間表上的最佳呈現方式，範圍從過去 24 小時到最近 30 天。 您可以依據 API 方法、實體限定名稱 (擷取的實體)、建立者(事件來源)、結果 (成功或失敗) 或錯誤碼來分組資料。 資料可以表示為歷史圖和表格。
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

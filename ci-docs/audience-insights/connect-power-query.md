@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405261"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267758"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連接至 Power Query 資料來源
 
@@ -28,7 +28,10 @@ Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Custom
 
 1. 選擇 **匯入資料** 方法，然後選取 **下一步**。
 
-1. 提供資料來源的 **名稱**，然後選取 **下一步** 以建立資料來源。
+1. 提供資料來源的 **名稱**，然後選取 **下一步** 以建立資料來源。 命名方針： 
+   - 名稱必須以字母開頭。
+   - 只能使用字母和數字。 不可以使用空格和特殊字元。
+   - 接受 3 到 64 個字元。
 
 1. 選取其中一個[可用的連接器](#available-power-query-data-sources)。 在此範例中，我們選取 **文字/CSV** 連接器。
 
@@ -77,3 +80,6 @@ Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Custom
 3. 在 **Power Query - 編輯查詢** 對話方塊中套用您的變更和轉換，如[建立新的資料來源](#create-a-new-data-source)一節中所述。
 
 4. 完成編輯後，選取 Power Query 中的 **儲存** 以儲存變更。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

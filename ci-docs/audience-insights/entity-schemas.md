@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2cf01029ef6b64fe566022d09ce65bca3603189c
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643898"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269274"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model 中的實體結構描述
 
@@ -45,3 +45,6 @@ ms.locfileid: "4643898"
 您可以在 [Common Data Model 實體導航器中](https://microsoft.github.io/CDM/) 檢視實體。 選取 **從 GitHub 載入！** 按鈕，然後瀏覽至 **foundationCommon** > **crmCommon** > **解決方案** > **customerInsights**，您會在其中找到 Customer Insights 實體及其定義的清單。
 > [!div class="mx-imgBorder"]
 > ![顯示 CustomerActivity 實體的 CDM 實體導覽器](media/CDM-entity-navigator.png "顯示 CustomerActivity 實體的 CDM 實體導覽器")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

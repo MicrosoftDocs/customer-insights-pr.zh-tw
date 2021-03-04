@@ -1,20 +1,20 @@
 ---
 title: 藉助協力廠商 Enrichment Experian 的富集作用
 description: 有關 Experian 協力廠商富集作用的一般資訊。
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668794"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269550"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>使用 Experian 提供的人口統計資料擴充客戶設定檔 (預覽)
 
@@ -41,7 +41,9 @@ Experian 是消費者與企業信用報告以及行銷服務的全球領導者�
 
 ## <a name="map-your-fields"></a>對應欄位
 
-1. 選取 **新增資料**，然後從 **名稱和地址**、**電子郵件** 或 **電話** 選擇您的金鑰識別元以傳送至 Experian 進行身分識別解析。
+1.  選取 **新增資料**，然後選擇要用 Experian 中的人口統計資料擴充的 **客戶資料集**。 您可以選取 **客戶** 實體來擴充所有的客戶設定檔，或選取客戶細分實體僅擴充位於該客戶細分的客戶設定檔。
+
+1. 從 **名稱和地址**、**電子郵件** 或 **電話** 選取金鑰識別碼，傳送至 Experian 進行身分識別解析。
 
    > [!TIP]
    > 傳送至 Experian 的金鑰識別元屬性愈多，可能產生的適配率愈高。
@@ -52,8 +54,8 @@ Experian 是消費者與企業信用報告以及行銷服務的全球領導者�
 
 1.  選取 **儲存** 來完成欄位對應。
 
-   > [!div class="mx-imgBorder"]
-   > ![Experian 欄位對應](media/experian-field-mapping.png "Experian 欄位對應")
+    > [!div class="mx-imgBorder"]
+    > ![Experian 欄位對應](media/experian-field-mapping.png "Experian 欄位對應")
 
 ## <a name="enrichment-results"></a>擴充結果
 
@@ -71,3 +73,6 @@ Experian 是消費者與企業信用報告以及行銷服務的全球領導者�
 
 當您啟用 Dynamics 365 Customer Insights 將資料傳輸給 Experian 時，您允許在合規性邊界之外傳輸 Dynamics 365 Customer Insights 資料，包括潛在敏感性資料如個人資料。 Microsoft 將依據您的指示傳輸此資料，但您須負責確保 Experian 符合您可能應盡的任何隱私權或資訊安全義務。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
 您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此富集作用，以便不再繼續使用此功能。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

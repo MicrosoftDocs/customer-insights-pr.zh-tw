@@ -1,7 +1,7 @@
 ---
 title: 安裝和組態客戶卡片增益集
 description: 安裝及設定 Dynamics 365 Customer Insights 客戶卡片增益集。
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644033"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268034"
 ---
 # <a name="customer-card-add-in-preview"></a>客戶卡片增益集 (預覽)
 
@@ -28,7 +28,7 @@ ms.locfileid: "4644033"
 - [從使用 Common Data Service](connect-power-query.md) 的 Dynamics 365 應用程式內嵌的客戶設定檔。
 - 客戶卡片增益集使用者在對象見解中必須 [新增為使用者](permissions.md)。
 - [組態的搜尋和篩選功能](search-filter-index.md)。
-- 人口統計控制項：如年齡或性別的人口統計欄位可在統一客戶設定檔中使用。
+- 人口統計控制項：在統整的客戶設定檔中可以使用人口統計欄位 (如年齡或性別)。
 - 擴充控制項：需要將使用中[擴充內容](enrichment-hub.md)套用至客戶設定檔。
 - 智慧控制項：需要使用 Azure Machine Learning ([預測](predictions.md) 或 [自訂模型](custom-models.md)) 產生的資料
 - 量值控制項：需要 [組態的量值](measures.md)。
@@ -92,10 +92,26 @@ ms.locfileid: "4644033"
 
 1. 在 **欄位屬性** 對話方塊中，清除 **顯示表單的標籤** 核取方塊。
 
-1. 選取控制項的 **Web** 選項。 對於擴充控制項，您可以設定 **enrichmentType** 欄位，以選取要顯示的擴充內容類型。 您必須為每個擴充內容類型個別新增不同的擴充控制項。
+1. 選取控制項的 **Web** 選項。 對於擴充控制項，您可以設定 **enrichmentType** 欄位，以選取要顯示的擴充內容類型。 為每個擴充類型新增擴充控制項。
 
 1. 選取 **儲存** 和 **發佈** 以發佈更新的連絡人表單。
 
 1. 移至發行的連絡人表單。 您會看到最新新增的控制項。 您可能需要在第一次使用時登入。
 
 1. 若要自訂想要在自訂控制項上顯示的內容，請在右上角選取編輯按鈕。
+
+## <a name="upgrade-customer-card-add-in"></a>升級客戶卡片增益集
+客戶卡片增益集不會自動升級。 若要升級為最新版本，請在已安裝增益集的 Dynamics 365 應用程式中執行此步驟。
+
+1. 在 Dynamics 365 應用程式中，移至 **設定** > **自訂**，然後選取 **解決方案**。
+
+1. 在增益集表格中尋找 **CustomerInsightsCustomerCard**，並選取該資料列。
+
+1. 在動作列中選取 **套用解決方案升級**。
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="在 Dynamics 365 應用程式的自訂區域中升級解決方案":::
+
+1. 開始升級程序之後，會顯示載入指標直到升級完成。 如果不存在可更新的版本，會出現升級錯誤訊息。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643853"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477123"
 ---
-# <a name="export-destinations-preview"></a>匯出目的地 (預覽)
+# <a name="export-destinations-preview-overview"></a>匯出目的地 (預覽版) 概觀
 
 **匯出目的地** 頁面會顯示所有您已設定要匯出到的位置。 您也可以加入新的匯出目的地。 此外它顯示匯出目前可用的選項。 取得快速概觀、描述，並了解每個擴充性選項可用來執行的工作。 將統一的設定檔、量值及區段匯出至與您的業務相關的支援應用程式。
 
@@ -27,10 +27,13 @@ ms.locfileid: "4643853"
 - [Power Automate 連接器](export-power-automate.md)
 - [Power Apps 連接器](export-power-apps.md)
 - [Power BI 連接器](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure Blob 儲存體](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [LiveRamp &reg; 連接器](export-liveramp.md)
 - [Microsoft Teams 的機器人](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ ms.locfileid: "4643853"
 2. 從下拉式功能表中選取 **移除**。
 
 3. 在確認畫面上選取 **移除** 以確認移除。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

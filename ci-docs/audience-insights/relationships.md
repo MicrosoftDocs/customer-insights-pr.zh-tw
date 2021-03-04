@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405283"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269860"
 ---
 # <a name="relationships-between-entities"></a>實體間的關聯
 
@@ -28,8 +28,8 @@ ms.locfileid: "4405283"
 > ![關聯建立](media/relationships-entities-merge.png "關聯建立")
 
 - ***CustomerToContact* 關聯** 是在客戶實體與連絡人實體之間建立的。 客戶實體會取得與連絡人實體索引鍵欄位 **contactId** 相關的 **Contact_contactId** 索引鍵欄位。
-- **_CustomerToAccount_ 關聯** 是在客戶實體與帳戶實體之間建立的。 客戶實體會取得與帳戶實體索引鍵欄位 **accountId** 相關的 **Account_accountId** 索引鍵欄位。
-- **_CustomerToWebAccount_ 關聯** 是在客戶實體與 WebAccount 實體之間建立的。 客戶實體會取得與 WebAccount 實體索引鍵欄位 **webaccountId** 相關的 **WebAccount_webaccountId** 索引鍵欄位。
+- ***CustomerToAccount* 關聯** 是在客戶實體與帳戶實體之間建立的。 客戶實體會取得與帳戶實體索引鍵欄位 **accountId** 相關的 **Account_accountId** 索引鍵欄位。
+- ***CustomerToWebAccount* 關聯** 是在客戶實體與 WebAccount 實體之間建立的。 客戶實體會取得與 WebAccount 實體索引鍵欄位 **webaccountId** 相關的 **WebAccount_webaccountId** 索引鍵欄位。
 
 ## <a name="create-a-relationship"></a>建立關聯
 
@@ -69,3 +69,6 @@ ms.locfileid: "4405283"
 ## <a name="next-step"></a>後續步驟
 
 系統和自訂關聯是根據已不再分散的多個資料來源來建立區段。 如需詳細資訊，請參閱[區段](segments.md)。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

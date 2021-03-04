@@ -4,17 +4,17 @@ description: 建立客戶的區段，以依據各種屬性來群組。
 ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: jimsonc
 manager: shellyha
-ms.openlocfilehash: 6931110c2ae93cd2792d319aa5a34f0df3088552
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405289"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270346"
 ---
 # <a name="create-and-manage-segments"></a>建立和管理區段
 
@@ -222,3 +222,6 @@ ms.locfileid: "4405289"
 ## <a name="next-steps"></a>後續步驟
 
 [匯出區段](export-destinations.md)並探索[客戶卡片](customer-card-add-in.md)和[連接器](export-power-bi.md)，以取得客戶等級的見解。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

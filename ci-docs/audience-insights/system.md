@@ -1,7 +1,7 @@
 ---
 title: 對象見解中的系統組態
 description: 瞭解 Dynamics 365 Customer Insights 對象見解能力中的系統設定。
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405281"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267330"
 ---
 # <a name="system-configuration"></a>系統設定
 
-**系統** 頁面包括四個索引標籤：**狀態**、**排程**、**關於** 和 **一般**。
+**系統** 頁面包括下列索引標籤：
+- [狀態](#status-tab)
+- [排程](#schedule-tab)
+- [API 使用情況](#api-usage-tab)
+- [關於](#about-tab)
+- [一般](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![系統頁面](media/system-tabs.png "系統頁面")
 
 ## <a name="status-tab"></a>狀態索引標籤
 
-**狀態索引標籤** 可讓您追蹤資料擷取、資料匯入及數個重要產品程序的進度。 評論此索引標籤上的資訊確保有效流程的完整性。
+**狀態索引標籤** 可讓您追蹤資料擷取、資料匯出和數個其他重要產品程序的進度。 評論此索引標籤上的資訊確保有效流程的完整性。
 
-此索引標籤包含 **資料來源**、**系統程序** 和 **資料準備** 的狀態表格。 每個表格都會追蹤工作的 **名稱** 及其對應的實體、最近的執行 **狀態** 以及 **上次更新** 時間。
+此索引標籤包括的表格具備各種程序的狀態和處理中的資訊。 每個表格都會追蹤工作的 **名稱** 及其對應的實體、最近的執行 **狀態** 以及 **上次更新** 時間。
 
 選取工作名稱，以檢視該工作最後幾次執行的詳細資料。
 
@@ -40,7 +45,7 @@ ms.locfileid: "4405281"
 - **已略過：** 已跳過的工作。 此工作相依的一個或多個下游程序失敗或已略過。
 - **失敗：** 工作處理失敗。
 - **已取消：** 使用者在完成之前已取消處理。
-- **已排入佇列：** 處理已排入佇列，並會在所有下游工作都完成後開始。 如需詳細資訊，請參閱[重新整理原則](#refresh-policies)。
+- **已佇列：** 處理已排入佇列，並會在所有上游工作都完成後開始。 如需詳細資訊，請參閱[重新整理原則](#refresh-policies)。
 
 ### <a name="refresh-policies"></a>重新整理原則
 
@@ -89,4 +94,17 @@ ms.locfileid: "4405281"
 
 ## <a name="api-usage-tab"></a>API 使用方式索引標籤
 
-尋找有關即時 API 使用方式的詳細資料，並查看哪些事件是在時間範圍內發生的事件。 如需詳細資訊，請參閱[即時資料擷取](real-time-data-ingestion.md)。
+尋找有關即時 API 用法的詳細資料，並查看在指定時間範圍中發生的事件。 在 **選取時間範圍** 下拉式功能表中選擇時間範圍。 
+
+**API 用法** 包含三個區段： 
+- **API 呼叫** - 在選取的時間範圍中，會視覺化 API 彙總數量的圖表。
+
+- **資料傳輸** - 圖表上顯示選取的時間範圍中，透過 API 傳送的資料總量。
+
+-  **作業** - 表格上的列是每個可用的 API 作業，以及有關作業使用方式的詳細資料。 您可以選取作業名稱並移至 [API 參考](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)。
+
+   使用到[即時資料擷取的操作](real-time-data-ingestion.md)的作業，其中包含帶有望遠鏡符號的按鈕，可以查看即時 API 的使用方式。 選取此按鈕打開內含目前環境中即時 API 使用方式詳細資料的側窗格。   
+   使用 **即時 API 使用方式** 窗格中的 **分組依據** 方塊，以選擇如何最好地呈現您的即時互動。 您可以依據 API 方法、實體限定名稱 (擷取的實體)、建立者(事件來源)、結果 (成功或失敗) 或錯誤碼來分組資料。 資料可以表示為歷史圖和表格。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

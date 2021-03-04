@@ -4,17 +4,17 @@ description: 從 Common Data Service 受管理的資料湖匯入資料。
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643388"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267796"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>連線至 Common Data Service 受管理資料湖中的資料
 
@@ -34,7 +34,10 @@ ms.locfileid: "4643388"
 
 3. 選取 **連接至 Common Data Service**，然後選取 **下一步**。
 
-4. 輸入資料來源的 **名稱**，然後選取 **下一步**。
+4. 輸入資料來源的 **名稱**，然後選取 **下一步**。 命名方針： 
+   - 名稱必須以字母開頭。
+   - 只能使用字母和數字。 不可以使用空格和特殊字元。
+   - 接受 3 到 64 個字元。
 
 5. 提供 Common Data Service 組織的 **伺服器位址**，並選取 **登入**。
 
@@ -65,3 +68,6 @@ ms.locfileid: "4643388"
 3. 從清單中選取 **編輯** 選項。
 
 4. 從可用實體清單選取額外實體，然後選取 **儲存**。
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
