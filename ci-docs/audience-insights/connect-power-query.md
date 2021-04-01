@@ -2,23 +2,23 @@
 title: 透過 Power Query 連接器內嵌資料
 description: 以 Power Query 為基礎的資料來源連接器。
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267758"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596903"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連接至 Power Query 資料來源
 
-Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Customer Insights 支援大部分這些連接器。 新增以 Power Query 連接器為基礎的資料來源通常要依照下一節中所述的步驟進行。 不過，視您使用的連接器而定，也需要不同的資訊。 如需詳細資訊，請參閱 [Power Query 連接器參考](https://docs.microsoft.com/power-query/connectors/)中個別連接器的文件。
+Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Customer Insights 支援大部分這些連接器。 新增以 Power Query 連接器為基礎的資料來源通常要依照下一節中所述的步驟進行。 不過，視您使用的連接器而定，也需要不同的資訊。 如需詳細資訊，請參閱 [Power Query 連接器參考](/power-query/connectors/)中個別連接器的文件。
 
 ## <a name="create-a-new-data-source"></a>建立新的資料來源
 
@@ -44,7 +44,7 @@ Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Custom
    > [!div class="mx-imgBorder"]
    > ![編輯查詢對話方塊](media/data-manager-configure-edit-queries.png "編輯查詢對話方塊")
 
-1. 您也可以轉換資料。 選取要編輯或變換的實體。 使用 Power Query 視窗中的選項來套用變換。 每個轉換都會在 **套用的步驟** 底下列出。 Power Query 提供許多預建轉換選項。 如需詳細資訊，請參閱 [Power Query 轉換](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations)。
+1. 您也可以轉換資料。 選取要編輯或變換的實體。 使用 Power Query 視窗中的選項來套用變換。 每個轉換都會在 **套用的步驟** 底下列出。 Power Query 提供許多預建轉換選項。 如需詳細資訊，請參閱 [Power Query 轉換](/power-query/power-query-what-is-power-query#transformations)。
 
 1. 您可以在 **編輯查詢** 對話方塊中選取 **取得資料**，將其他實體新增至您的資料來源。
 
@@ -59,7 +59,7 @@ Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Custom
 
 ## <a name="available-power-query-data-sources"></a>可用的 Power Query 資料來源
 
-如需可選來將資料匯入至 Customer Insights 之連接器的最新清單，請參閱 [Power Query 連接器參考](https://docs.microsoft.com/power-query/connectors/)。 
+如需可選來將資料匯入至 Customer Insights 之連接器的最新清單，請參閱 [Power Query 連接器參考](/power-query/connectors/)。 
 
 在 **Customer Insights (資料流程)** 欄中有核取記號的連接器可用來建立以 Power Query 為基礎的新資料來源。 檢閱特定連接器的文件，進一步了解其先決條件、限制及其他詳細資料。
 

@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267896"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597409"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>使用 Azure 機器學習式模型
 
@@ -29,9 +29,9 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>設定 Azure Machine Learning 工作區
 
-1. 請見 [建立 Azure Machine Learning 工作區](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) 了解不同的工作區建立選項。 為了取得最佳效能，請在地理位置上最接近您的 Customer Insights 環境的 Azure 區域中建立工作區。
+1. 請見 [建立 Azure Machine Learning 工作區](/azure/machine-learning/concept-workspace#-create-a-workspace) 了解不同的工作區建立選項。 為了取得最佳效能，請在地理位置上最接近您的 Customer Insights 環境的 Azure 區域中建立工作區。
 
-1. 透過 [Azure Machine Learning Studio](https://ml.azure.com/) 存取您的工作區。 目前有幾種 [方式與](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) 您的工作區互動。
+1. 透過 [Azure Machine Learning Studio](https://ml.azure.com/) 存取您的工作區。 目前有幾種 [方式與](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) 您的工作區互動。
 
 ## <a name="work-with-azure-machine-learning-designer"></a>搭配 Azure Machine Learning 設計師處理
 
@@ -39,13 +39,13 @@ Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>搭配 Azure Machine Learning SDK 處理
 
-資料科學家和 AI 開發人員使用 [Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) 組建機器學習工作流程。 目前使用 SDK 訓練的模型無法直接與 Customer Insights 整合。 使用該模型的批次推論管道需要與 Customer Insights 整合。
+資料科學家和 AI 開發人員使用 [Azure Machine Learning SDK](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) 組建機器學習工作流程。 目前使用 SDK 訓練的模型無法直接與 Customer Insights 整合。 使用該模型的批次推論管道需要與 Customer Insights 整合。
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Customer Insights 整合的批次處理管道需求
 
 ### <a name="dataset-configuration"></a>資料集組態
 
-您必須建立資料集才能使用從 Customer Insights 到您的批次處理推論管道使用實體資料。 這些資料集必須在工作區註冊。 目前我們只支援.csv 格式的 [表格式資料集](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset)。 對應實體資料的資料集必須參數化為管道參數。
+您必須建立資料集才能使用從 Customer Insights 到您的批次處理推論管道使用實體資料。 這些資料集必須在工作區註冊。 目前我們只支援.csv 格式的 [表格式資料集](/azure/machine-learning/how-to-create-register-datasets#tabulardataset)。 對應實體資料的資料集必須參數化為管道參數。
    
 * Designer 中的資料集參數
    
@@ -76,7 +76,7 @@ Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>將管道資料匯入 Customer Insights
 
-* Designer 程式提供 [匯出資料模組](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data)，允許將管道輸出匯出到 Azure 儲存體。 目前模組必須使用資料儲存類型 **Azure Blob 儲存體** 並將 **資料儲存** 和相對 **路徑** 參數化。 管道執行資料儲存及產品可存取的路徑時，Customer Insights 會覆寫這兩個參數。
+* Designer 程式提供 [匯出資料模組](/azure/machine-learning/algorithm-module-reference/export-data)，允許將管道輸出匯出到 Azure 儲存體。 目前模組必須使用資料儲存類型 **Azure Blob 儲存體** 並將 **資料儲存** 和相對 **路徑** 參數化。 管道執行資料儲存及產品可存取的路徑時，Customer Insights 會覆寫這兩個參數。
    > [!div class="mx-imgBorder"]
    > ![匯出資料模組組態](media/intelligence-designer-importdata.png "匯出資料模組組態")
    

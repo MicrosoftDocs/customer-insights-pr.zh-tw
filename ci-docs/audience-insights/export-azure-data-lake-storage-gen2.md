@@ -2,19 +2,19 @@
 title: 匯出 Customer Insights 資料到 Azure Data Lake Storage Gen2
 description: 瞭解如何設定與 Azure Data Lake Storage Gen2 的連接。
 ms.date: 02/04/2021
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477169"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596627"
 ---
 # <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>適用 Azure Data Lake Storage Gen2 的連接器 (預覽版)
 
@@ -29,8 +29,8 @@ ms.locfileid: "5477169"
 1. 在 **顯示名稱** 欄位中，為目的地提供可辨識的名稱。
 
 1. 在您的 Azure Data Lake Storage Gen2 輸入 **帳戶名稱**、**帳戶金鑰** 和 **容器**。
-    - 若要瞭解如何建立要可搭配 Azure Data Lake Storage Gen2 使用的儲存體帳戶，請參閱[建立儲存體帳戶](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account)。 
-    - 若要進一步瞭解如何尋找 Azure Data Lake Gen2 儲存體帳戶名稱及帳戶金鑰，請參閱 [在 Azure portal 中管理儲存體帳戶的設定](https://docs.microsoft.com/azure/storage/common/storage-account-manage)。
+    - 若要瞭解如何建立要可搭配 Azure Data Lake Storage Gen2 使用的儲存體帳戶，請參閱[建立儲存體帳戶](/azure/storage/blobs/create-data-lake-storage-account)。 
+    - 若要進一步瞭解如何尋找 Azure Data Lake Gen2 儲存體帳戶名稱及帳戶金鑰，請參閱 [在 Azure portal 中管理儲存體帳戶的設定](/azure/storage/common/storage-account-manage)。
 
 1. 選取 **下一步**。
 

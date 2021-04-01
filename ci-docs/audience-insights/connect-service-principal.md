@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267712"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596489"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>使用適用對象見解的 Azure 服務主體連接到 Azure Data Lake Storage Gen2 帳戶
 
@@ -23,7 +23,7 @@ ms.locfileid: "5267712"
 您可以使用服務主體安全地將 [Common Data Model 資料夾新增或編輯為資料來源](connect-common-data-model.md) 或 [建立全新或更新現有的環境](manage-environments.md#create-an-environment-in-an-existing-organization)。
 
 > [!IMPORTANT]
-> - 要使用服務主體的 Azure Data Lake Gen2 儲存體帳戶必須已[啟用階層命名空間 (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace)。
+> - 要使用服務主體的 Azure Data Lake Gen2 儲存體帳戶必須已[啟用階層命名空間 (HNS)](/azure/storage/blobs/data-lake-storage-namespace)。
 > - 您需要適用您的 Azure 訂閱的系統管理員權限建立服務主體。
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>建立適用對象見解的 Azure 服務主體
@@ -48,7 +48,7 @@ ms.locfileid: "5267712"
 
 ### <a name="create-a-new-service-principal"></a>建立全新服務主體
 
-1. 安裝最新版本的 **Azure Active Directory PowerShell for Graph**。 如需詳細資訊，請見 [安裝 Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2)。
+1. 安裝最新版本的 **Azure Active Directory PowerShell for Graph**。 如需詳細資訊，請見 [安裝 Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2)。
    - 請在您的 PC 上選取鍵盤上的 Windows 鍵並搜尋 **Windows PowerShell** 和 **以系統管理員身份執行**。
    
    - 請在打開的 PowerShell 視窗中輸入 `Install-Module AzureAD`。

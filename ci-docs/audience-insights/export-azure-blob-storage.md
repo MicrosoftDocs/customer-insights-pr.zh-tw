@@ -2,19 +2,19 @@
 title: 將 Customer Insights 資料匯出到 Azure Blob 儲存體
 description: 了解如何設定與 Azure Blob 儲存體的連接。
 ms.date: 09/18/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ecacf20365e78ced8859dfa54b1b16cb923c00eb
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 0986ee5caf5fa079994ca584fb2c4d9294ddb80b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269182"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596167"
 ---
 # <a name="connector-for-azure-blob-storage-preview"></a>Azure Blob 儲存體的連接器 (預覽)
 
@@ -27,8 +27,8 @@ ms.locfileid: "5269182"
 1. 在 **Azure Blob 儲存體** 底下，選取 **設定**。
 
 1. 輸入 Azure Blob 儲存體帳戶的 **帳戶名稱**、**帳戶金鑰** 和 **容器**。
-    - 若要進一步了解如何尋找 Azure Blob 儲存體帳戶名稱及帳戶金鑰，請參閱 [管理 Azure 入口網站中的儲存體帳戶設定](https://docs.microsoft.com/azure/storage/common/storage-account-manage)。
-    - 若要了解如何建立容器，請參閱[建立容器](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)。
+    - 若要進一步了解如何尋找 Azure Blob 儲存體帳戶名稱及帳戶金鑰，請參閱 [管理 Azure 入口網站中的儲存體帳戶設定](/azure/storage/common/storage-account-manage)。
+    - 若要了解如何建立容器，請參閱[建立容器](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)。
 
 1. 在 **顯示名稱** 欄位中，為目的地提供可辨識的名稱。
 
@@ -42,7 +42,7 @@ ms.locfileid: "5269182"
 
 - 關於系統產生的來源實體和實體：`%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
   - 範例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- 匯出的實體的 model.json 會位於 %ExportDestinationName% 層級
+- 匯出實體的 model.json 將位於 %ExportDestinationName% 層級
   - 範例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 ## <a name="export-the-data"></a>匯出資料

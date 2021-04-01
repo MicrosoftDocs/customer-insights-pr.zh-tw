@@ -1,7 +1,7 @@
 ---
 title: 新功能以及近期即將推出的功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270422"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598421"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-我們很高興宣布我們最新的更新！ 本文摘要說明公開預覽功能、正式發行增強功能以及功能更新。 若要查看長期功能計劃，請參閱 [Dynamics 365 和 Power Platform 發行計劃](https://docs.microsoft.com/dynamics365/release-plans/)。
+我們很高興宣布我們最新的更新！ 本文摘要說明公開預覽功能、正式發行增強功能以及功能更新。 若要查看長期功能計劃，請參閱 [Dynamics 365 和 Power Platform 發行計劃](/dynamics365/release-plans/)。
 
 您也可以觀看下列影片，多瞭解過去六個月已規劃的功能。
 
@@ -30,6 +30,40 @@ ms.locfileid: "5270422"
 
 > [!TIP]
 > 若要送出和票選功能要求和產品建議，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="february-2021-updates"></a>2021 年 2 月更新
+
+2021 年 2 月更新包含數個功能、效能升級和 BUG 修正。
+
+#### <a name="extensibility"></a>擴充性
+
+- **將客戶細分匯出至 AdRoll**
+
+  我們的匯出目的地成功擴展，包括 AdRoll 了。 您現在可以從 Customer Insights 匯出客戶細分到 AdRoll 對象，並把它當成廣告的基準。 如需更多資訊，請見 [AdRoll 連接器](export-adroll.md)。
+
+#### <a name="segments"></a>客戶細分
+ 
+- **複製客戶細分**
+  
+  要基於現有客戶細分建立新的客戶細分，您現在可以複製一個客戶細分並透過編輯複製完成的客戶細分進一步優化它。 
+
+- **新增其他屬性到客戶細分**
+
+  您現在可以把屬性包含進客戶細分輸出中，即使這些屬性不是客戶個人資料的一部分。 例如，將訂閱識別碼包括在一個客戶細分中，即使它是訂閱實體的一部分，而該實體與客戶實體有 M:1 關係。 只要屬性屬於與客戶實體相關的實體，您現在就可以把這些屬性包含進去。  
+
+#### <a name="predictions"></a>預測
+
+- **建立預測的產品建議**
+
+  以個人化和業務開發提高公司收入和建立客戶忠誠度，了解客戶有興趣購買什麼是必須的最初步驟之一。 提供的產品建議不符合客戶興趣可能會在客戶與公司之間產生隔閡感，並最終限制客戶的整體潛在收入和體驗。 
+
+  使用您自己的數據，您現在可以對客戶未來可能購買的產品建立預測。 想瞭解更多資訊，請參閱[產品建議預測](predict-product-recommendation.md)。
+
+#### <a name="system-administration"></a>系統管理
+
+- **複製環境支援更多類型的資料來源**
+
+  系統管理員可以將環境組態複製到在同一組織中的新環境中。 一些案例使用到的資料來源基於 Common Data Service data lake 或 Common Data Model 資料夾，為這些案例此這項功能擴展了複製環境功能。
 
 ## <a name="january-2021-updates"></a>2021 年 1 月更新
 

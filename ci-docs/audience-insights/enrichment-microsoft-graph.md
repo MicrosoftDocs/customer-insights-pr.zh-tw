@@ -2,19 +2,19 @@
 title: 使用 Microsoft Graph 富集客戶設定檔
 description: 使用 Microsoft Graph 的專有資料，使用品牌和興趣親和性來擴充您的客戶資料。
 ms.date: 12/10/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: aa46dac4f9c0d27881371877b14a92a6725710da
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269320"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596443"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>使用品牌和興趣親和性來擴充客戶設定檔 (預覽)
 
@@ -33,7 +33,7 @@ ms.locfileid: "5269320"
 
 我們使用 Microsoft Graph 的線上搜尋資料，在各種人口統計資料區段（依年限、性別或位置定義）尋找品牌和興趣親和性。 品牌或興趣的線上搜尋量，會決定人口統計區段對該品牌或興趣有多少親和性 (與其他區段相比)。
 
-[深入了解 Microsoft Graph](https://docs.microsoft.com/graph/overview)。
+[深入了解 Microsoft Graph](/graph/overview)。
 
 ## <a name="affinity-level-and-score"></a>親合性等級和分數
 

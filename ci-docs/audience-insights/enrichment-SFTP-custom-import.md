@@ -2,19 +2,19 @@
 title: SFTP 自訂匯入的富集
 description: 有關SFTP 自訂匯入富集的一般資訊。
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269596"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595845"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>使用自訂資料富集客戶設定檔 (預覽版)
 
@@ -50,7 +50,7 @@ ms.locfileid: "5269596"
 
 ## <a name="defining-field-mappings"></a>定義欄位對應 
 
-包含將在 SFTP 伺服器上匯入檔案的目錄也必須包含 *model.json* 檔案。 此檔案定義用來匯入資料的結構描述。 結構描述必須使用 [Common Data Model](https://docs.microsoft.com/common-data-model/) 指定欄位對應。 model.json 檔案的簡易範例如下：
+包含將在 SFTP 伺服器上匯入檔案的目錄也必須包含 *model.json* 檔案。 此檔案定義用來匯入資料的結構描述。 結構描述必須使用 [Common Data Model](/common-data-model/) 指定欄位對應。 model.json 檔案的簡易範例如下：
 
 ```
 {

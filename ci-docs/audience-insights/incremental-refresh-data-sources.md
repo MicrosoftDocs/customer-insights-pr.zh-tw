@@ -2,19 +2,19 @@
 title: 對 Power Query 式資料來源的增量重新整理
 description: 針對以 Power Query 為基礎的大型資料來源重新整理其新增及更新資料。
 ms.date: 09/28/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d4b01be75d25fa0e120904924a193171eefec579
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 03f76bcfc7336d8430146e8a26ffa649c6a17db0
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268538"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596811"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>適用於以 Power Query 為基礎之資料來源的累加重新整理
 

@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270194"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598329"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>根據 Azure Machine Learning Studio (經典版) 基礎使用各模型
 
@@ -37,7 +37,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 1. 搜尋 **Machine Learning Studio 工作區** 並選取 **建立**。
 
-1. 輸入[建立工作區](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace)所需的詳細資料。 根據您計畫匯入的資料量選擇 **Web 服務計畫價格層級**。 為了取得最佳效能，請選取地理上距離您最近的 **位置**。
+1. 輸入[建立工作區](/azure/machine-learning/studio/create-workspace)所需的詳細資料。 根據您計畫匯入的資料量選擇 **Web 服務計畫價格層級**。 為了取得最佳效能，請選取地理上距離您最近的 **位置**。
 
 1. 建立資源之後，Machine Learning Studio 工作區儀表板會出現。 選取 **啟動 Machine Learning Studio**。
 
@@ -65,7 +65,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
    ![設定預測型 Web 服務](media/predictive-webservice-control.png)
 
-1. 預測型 Web 服務實驗成功完成後，就可以將其部署作自動排程之用。 若要讓 Web 服務與 Customer Insights 搭配使用，請選取 **部署 Web 服務** > **部署 Web 服務 [新增] 預覽**。 [進一步了解部署 Web 服務](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service)。
+1. 預測型 Web 服務實驗成功完成後，就可以將其部署作自動排程之用。 若要讓 Web 服務與 Customer Insights 搭配使用，請選取 **部署 Web 服務** > **部署 Web 服務 [新增] 預覽**。 [進一步了解部署 Web 服務](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)。
 
    ![部署預測型 Web 服務](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 ![Azure Machine Learning Studio 中的流失模型](media/azure-machine-learning-model.png)
 
-我們也套用一種稱為 **排列特徵重要性** 的技術，這是模型最佳化的重要層面。 內建模型對最終預測從任何特定特徵所受的影響知之甚微。 特徵重要性計算機使用的是自訂演算法，可運算個別特徵對特定模型結果產生的影響。 特徵重要性已標準化為介於 + 1 到 -1 之間。 負值影響代表對應的特徵對結果有違反常理的影響，應該從模型移除。 正值影響表示此特徵對預測造成很大的影響。 因為是不同的計量，這些值並非相關係數。 如需詳細資訊，請見 [排列特徵重要性](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance)。
+我們也套用一種稱為 **排列特徵重要性** 的技術，這是模型最佳化的重要層面。 內建模型對最終預測從任何特定特徵所受的影響知之甚微。 特徵重要性計算機使用的是自訂演算法，可運算個別特徵對特定模型結果產生的影響。 特徵重要性已標準化為介於 + 1 到 -1 之間。 負值影響代表對應的特徵對結果有違反常理的影響，應該從模型移除。 正值影響表示此特徵對預測造成很大的影響。 因為是不同的計量，這些值並非相關係數。 如需詳細資訊，請見 [排列特徵重要性](/azure/machine-learning/studio-module-reference/permutation-feature-importance)。
 
 整個 [流失實驗可查詢 Azure AI 資源庫](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp)。
 
@@ -168,7 +168,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 ## <a name="integrate-custom-models"></a>整合自訂模型
 
-若要在 Customer Insights 中使用這些預測，您必須連同客戶識別碼一起 **匯出** 預測。 [將它們匯出到您預計匯出](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) 來源資料的同一個 Azure Blob 儲存體位置。 您可以將預測型 Web 服務排定為定期執行，並更新分數。
+若要在 Customer Insights 中使用這些預測，您必須連同客戶識別碼一起 **匯出** 預測。 [將它們匯出到您預計匯出](/azure/storage/common/storage-import-export-data-from-blobs) 來源資料的同一個 Azure Blob 儲存體位置。 您可以將預測型 Web 服務排定為定期執行，並更新分數。
 
 自訂模型產生的資料可用來進一步富集您的客戶資料。 如需詳細資訊，請參閱[自訂機器學習模型](custom-models.md)。
 

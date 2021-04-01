@@ -2,19 +2,19 @@
 title: 匯出 Customer Insights 資料到 Autopilot
 description: 瞭解如何設定與 Autopilot 的連接。
 ms.date: 12/08/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 33a8cd1ae4a77ce2248bc2805d25687c9a2c2732
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6d039c4afd84eaad942d214d4e6fb8ef7b1ec72a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269228"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596119"
 ---
 # <a name="connector-for-autopilot-preview"></a>適用 Autopilot 的連接器 (預覽版)
 

@@ -1,34 +1,34 @@
 ---
 title: 支援對象見解的語言
 description: 瞭解並組態語言支援。
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268170"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595462"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>支援對象見解能力的語言
 
-Dynamics 365 Customer Insights 對象見解能力支援數種語言。 此主題列出可用的語言，並提供對它們之間的變更支援，以及所翻譯內容的概覽。
+Dynamics 365 Customer Insights 的對象見解被翻譯成許多語言。 以下清單包含有關已翻譯且可取得的語言和資訊。 您還可以了解更多有關如何更改語言設定的資訊。 
 
 ## <a name="languages"></a>語言
 
 | 語言名稱 (英文)|  語言名稱 (母語) |
 | ------------- | ------------- |
 | 巴斯克文 | euskara |
-| 保加利亞文 | Български |
+| 保加利亞文 | БЪЛГАРСКИ |
 | 加泰蘭文 | català |
 | 中文 (簡體) | 中文(简体) |
-| 繁體中文 | 中文(繁體) |
+| 中文 (繁體) | 中文(繁體) |
 | 克羅埃西亞文 | hrvatski |
 | 捷克文 | Čeština |
 | 丹麥文 | dansk |
@@ -42,20 +42,20 @@ Dynamics 365 Customer Insights 對象見解能力支援數種語言。 此主題
 | 希臘文 | Ελληνικά |
 | 印度文 | हिंदी |
 | 匈牙利文 | magyar |
-| 印尼文 | Bahasa Indonesia |
+| 印尼文 | 印尼 |
 | 義大利文 | italiano |
 | 日文 | 日本語 |
-| 哈薩克文 | Қазақ |
+| 哈薩克文 | ҚАЗАҚ ТІЛІ |
 | 韓文 | 한국어 |
 | 拉脫維亞文 | latviešu |
 | 立陶宛文 | lietuvių |
-| 馬來文 | Bahasa Melayu |
-| 挪威文 (巴克摩) | norsk (bokmål) |
-| 波蘭文 | Polski |
+| 馬來文 | Melayu |
+| 巴克摩挪威文 | norsk bokmål |
+| 波蘭文 | polski |
 | 葡萄牙文 (巴西) | português |
 | 葡萄牙文 (葡萄牙) | português |
 | 羅馬尼亞文 | română |
-| 俄文 | Русский |
+| 俄文 | pусский |
 | 塞爾維亞文 (斯拉夫) | СРПСКИ |
 | 塞爾維亞文 (拉丁) | srpski |
 | 斯洛伐克文 | slovenčina |

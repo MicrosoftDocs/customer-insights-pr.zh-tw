@@ -2,19 +2,19 @@
 title: Power BI 連接器
 description: 了解如何在 Power BI 中使用 Dynamics 365 Customer Insights 連接器。
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477078"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596029"
 ---
 # <a name="connector-for-power-bi-preview"></a>適用於 Power BI 的連接器 (預覽)
 
@@ -23,7 +23,7 @@ ms.locfileid: "5477078"
 ## <a name="prerequisites"></a>先決條件
 
 - 您具有統一的客戶設定檔。
-- 最新版本的 [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) 已安裝在您的電腦上。 [進一步了解 Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop)。
+- 最新版本的 [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/)已安裝在您的電腦上。 [進一步了解 Power BI Desktop](/power-bi/desktop-what-is-desktop)。
 
 ## <a name="configure-the-connector-for-power-bi"></a>設定 Power BI 的連接器
 
@@ -47,7 +47,7 @@ ms.locfileid: "5477078"
 
 ## <a name="large-data-sets"></a>大型資料集
 
-Power BI 的 Customer Insights 連接器是設計來處理包含多達 1 百萬個客戶設定檔的資料集。 匯入較大型資料集或許可行，但需要花費很長時間。 此外，程序可能會因為 Power BI 的限制而發生逾時。 如需詳細資訊，請參閱 [Power BI：對處理大型資料集的建議](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets)。 
+Power BI 的 Customer Insights 連接器是設計來處理包含多達 1 百萬個客戶設定檔的資料集。 匯入較大型資料集或許可行，但需要花費很長時間。 此外，程序可能會因為 Power BI 的限制而發生逾時。 如需詳細資訊，請參閱 [Power BI：對處理大型資料集的建議](/power-bi/admin/service-premium-what-is#large-datasets)。 
 
 ### <a name="work-with-a-subset-of-data"></a>使用資料的子集
 
@@ -70,4 +70,3 @@ Power BI 的 Customer Insights 連接器是設計來處理包含多達 1 百萬�
 移除重複的關聯之後，請再次嘗試設定 Power BI連接器。 環境現在應該可以使用了。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

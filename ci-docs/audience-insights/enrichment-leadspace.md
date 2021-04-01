@@ -2,19 +2,19 @@
 title: 協力廠商 Enrichment Leadspace 的公司設定檔
 description: 有關協力廠商 Leadspace 富集作用的一般資訊。
 ms.date: 11/24/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 12eed91a7ca4ef7fde0d53cca4a1dfd398b4634f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269412"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597639"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>使用 Leadspace 擴充公司設定檔 (預覽)
 
