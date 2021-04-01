@@ -1,19 +1,20 @@
 ---
 title: 自訂機器學習模型 | Microsoft Docs
 description: 在 Dynamics 365 Customer Insights 中使用 Azure Machine Learning 的自訂模型。
-ms.date: 11/19/2020
-ms.reviewer: zacook
-ms.service: dynamics-365-ai
+ms.date: 03/22/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
+ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267224"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "5700658"
 ---
 # <a name="custom-machine-learning-models"></a>自訂機器學習模型
 
@@ -21,13 +22,18 @@ ms.locfileid: "5267224"
 
 ## <a name="responsible-ai"></a>負責的 AI
 
-預測提供各項功能建立更佳的客戶體驗、改善業務功能和營收資料流。 我們強烈建議您比對預測會有的影響後取出餘值，並以符合道德的方式偏移可能帶入的餘值。 進一步瞭解 Microsoft 如何 [定址負責的 AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6)。 您也可以瞭解 Azure Machine Learning 專門負責的機器學習 [技術與流程](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml)。
+預測提供各項功能建立更佳的客戶體驗、改善業務功能和營收資料流。 我們強烈建議您比對預測會有的影響後取出餘值，並以符合道德的方式偏移可能帶入的餘值。 進一步瞭解 Microsoft 如何 [定址負責的 AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6)。 您也可以瞭解 Azure Machine Learning 專門負責的機器學習 [技術與流程](/azure/machine-learning/concept-responsible-ml)。
 
 ## <a name="prerequisites"></a>先決條件
 
-- 目前此功能支援透過 [Machine Learning Studio (經典版)](https://studio.azureml.net) 和 [Azure Machine Learning 批次處理管道](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines) 發佈的 web 服務。
+- 目前此功能支援透過 [Machine Learning Studio (經典版)](https://studio.azureml.net) 和 [Azure Machine Learning 批次處理管道](/azure/machine-learning/concept-ml-pipelines) 發佈的 web 服務。
 
-- 您需要與您的 Azure Studio 執行個體產生關聯的 Azure Data Lake Gen2 儲存體帳戶使用此功能。 如需詳細資訊，請參閱[建立 Azure Data Lake Storage Gen2 儲存體帳戶](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+- 您需要與您的 Azure Studio 執行個體產生關聯的 Azure Data Lake Gen2 儲存體帳戶使用此功能。 如需詳細資訊，請參閱[建立 Azure Data Lake Storage Gen2 儲存體帳戶](/azure/storage/blobs/data-lake-storage-quickstart-create-account)。
+
+- 前往具備準銷售案源的 Azure Machine Learning 工作區，您需要具備 Azure Machine Learning 工作區負責人或使用者存取權系統管理員的權限。
+
+   > [!NOTE]
+   > 在您的 Customer Insights 執行個體與選取的 Azure web 服務或工作流程中的準銷售案源之間傳輸資料。 當您將資料轉移到 Azure 服務時，請確保將服務設為以必要的方式和位置處理資料，以符合組織中對此資料的任何法律或法規要求。
 
 ## <a name="add-a-new-workflow"></a>新增工作流程
 
@@ -45,8 +51,8 @@ ms.locfileid: "5267224"
 1. 選取與您的 web 服務相關聯的 **工作區**。 目前列出兩區：適用 Azure Machine Learning v1 (Machine Learning Studio (經典版)) 和 Azure Machine Learning v2 (Azure Machine Learning)。 如果您不確定哪個工作區適用您的 Machine Learning Studio (經典版) web 服務，請選取 **任一個**。
 
 1. 在 **包含您的模型的下拉式選單的 Web 服務** 中選擇 Machine Learning Studio (經典版) web 服務或 Azure Machine Learning 管道。 然後選取 **下一步**。
-   - 瞭解更多有關 [Machine Learning Studio (經典版) 中發佈 Web 服務](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - 深入瞭解關於 [使用 Designer 程式](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) 或 [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) 發佈 Azure Machine Learning 中的管道。 您的管道必須在 [管道端點](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) 下發佈。
+   - 瞭解更多有關 [Machine Learning Studio (經典版) 中發佈 Web 服務](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
+   - 深入瞭解關於 [使用 Designer 程式](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) 或 [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) 發佈 Azure Machine Learning 中的管道。 您的管道必須在 [管道端點](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) 下發佈。
 
 1. 各 **Web 服務輸入** 方面，請從對象見解選取符合的 **實體** 並選取 **下一步**。
    > [!NOTE]
@@ -54,7 +60,7 @@ ms.locfileid: "5267224"
 
    > [!div class="mx-imgBorder"]
    > ![設定工作流程](media/intelligence-screen2-updated.png "設定工作流程")
-   
+
 1. 請在 **模型輸出參數** 步驟中設定下列屬性：
    - Machine Learning Studio (經典版)
       1. 輸入您想讓 Web 服務輸出結果流入的輸出 **實體名稱**。
@@ -62,12 +68,12 @@ ms.locfileid: "5267224"
       1. 輸入您想讓管道輸出結果流入的輸出 **實體名稱**。
       1. 請從下拉式選單選取您的批次處理管道的 **輸出資料存放區參數名稱**。
       1. 請從下拉式選單選取您的批次處理管道的 **輸出路徑參數名稱**。
-      
+
       > [!div class="mx-imgBorder"]
       > ![模型輸出參數窗格](media/intelligence-screen3-outputparameters.png "模型輸出參數窗格")
 
 1. 請從辨識客戶的 **結果下拉式選單中的客戶識別碼** 選取符合的屬性並選取 **儲存**。
-   
+
    > [!div class="mx-imgBorder"]
    > ![客戶資料相關結果窗格](media/intelligence-screen4-relatetocustomer.png "客戶資料相關結果窗格")
 
@@ -95,7 +101,7 @@ ms.locfileid: "5267224"
       1. 請針對您的測試管道選取 **輸出路徑參數名稱**。
 
 1. 請從辨識客戶的 **結果下拉式選單中的客戶識別碼** 選取符合的屬性並選取 **儲存**。
-   您必須從類似客戶實體的客戶識別碼的推論輸出值選擇屬性。 如果您的資料集沒有此欄位，請選擇唯一識別該行的屬性。
+   從推論輸出中選擇屬性，其值類似客戶實體的客戶識別碼資料欄。 如果您的資料集沒有此欄位，請選擇唯一識別該行的屬性。
 
 ## <a name="run-a-workflow"></a>執行工作流程
 
@@ -113,5 +119,28 @@ ms.locfileid: "5267224"
 
 將會刪除您的工作流程。 您建立工作流程時所建立的 [實體](entities.md)仍然存在，而且可以從 **實體** 頁面來檢視此實體。
 
+## <a name="results"></a>結果​​
+
+工作流程的結果會儲存在模型輸出參數階段時設定的實體中。 您可以從[實體頁面](entities.md)或使用 [API 存取](apis.md)存取此資料。
+
+### <a name="api-access"></a>API 存取
+
+若要讓特定 OData 查詢從自訂模型實體取得資料，請使用下列格式：
+
+`https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
+
+1. 以 Customer Insights 環境的識別碼取代 `<your instance id>`，在您存取 Customer Insights 時可以在瀏覽器的網址列中找到識別碼。
+
+1. 將 `<custom model output entity>` 以實體名稱取代，即您在自訂模型設定的模型輸出參數步驟中所提供的名稱。
+
+1. 您想要為哪位客戶存取記錄，將 `<guid value>` 以其客戶識別碼取代。 您通常可以在[客戶個人資料頁面](customer-profiles.md)的 CustomerID 欄位中找到此識別碼。
+
+## <a name="frequently-asked-questions"></a>常見問題集
+
+- 為何在設定自訂模型工作流程時看不到我的準銷售案源？    
+  發生此問題的原因通常是由於準銷售案源的設定有問題。 確定[輸入參數已設定](azure-machine-learning-experiments.md#dataset-configuration)，而且[輸出資料存儲和路徑參數](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights)也已設定完成。
+
+- 錯誤「無法儲存智慧工作流程」是什麼意思？    
+  通常使用者看到此錯誤訊息，是當他沒有工作區的負責人或使用者存取權系統管理員權限。 使用者需要更高等級的權限，才能以作為服務的方式啟用 Customer Insights 來處理工作流程，而非以使用者認證進行工作流程的後續執行。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

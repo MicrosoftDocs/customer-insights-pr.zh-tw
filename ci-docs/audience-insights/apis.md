@@ -1,20 +1,20 @@
 ---
 title: 使用 API
 description: 使用 API 並瞭解限制。
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267514"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710450"
 ---
 # <a name="work-with-customer-insights-apis"></a>搭配 Customer Insights API 處理
 
@@ -36,7 +36,7 @@ Dynamics 365 Customer Insights 提供 API，根據您在 Customer Insights 中�
 
    :::image type="content" source="media/enable-apis.gif" alt-text=" 啟用 Customer Insights API":::
 
-1. 選取 **探索我們的 API** 試用 API。
+1. 選取 **探索我們的 API**[試用 API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)。
 
 1. 選擇 API 作業並選取 **嘗試**。
 
@@ -47,6 +47,9 @@ Dynamics 365 Customer Insights 提供 API，根據您在 Customer Insights 中�
 1. 滾動到側窗格底端後選取 **傳送**。
 
 HTTP 回應將很快在下方出現。
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="動態 gif 顯示如何選取測試 API。":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>在 Azure 入口網站建立新的應用程式註冊
 
@@ -61,6 +64,8 @@ HTTP 回應將很快在下方出現。
 
 1. 在您的新應用程式註冊上前往 **API 權限**。
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="動態 gif 顯示在應用程式註冊中設定 API 權限。":::
+
 1. 選取 **新增權限** 並選取側窗格中的 **Customer Insights**。
 
 1. **權限類型** 方面，請選取 **委派權限** 並選取 **使用者模擬** 權限。
@@ -71,9 +76,11 @@ HTTP 回應將很快在下方出現。
 
 您可以使用此應用程式註冊的應用程式/用戶端 ID 註冊 Microsoft 驗證程式庫（MSAL）取得持有人權杖，將您的要求傳送給 API。
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="動態 gif 顯示授與系統管理員的同意。":::
+
 如需 MSAL 詳細資訊，請見 [Microsoft 驗證程式庫（MSAL）總覽](https://docs.microsoft.com/azure/active-directory/develop/msal-overview)。
 
-如需有關 Azure 中的應用程式註冊詳細資訊，請見 [新 Azure 入口網站應用程式註冊體驗](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide)。
+如需有關 Azure 中的應用程式註冊詳細資訊，請見 [新 Azure 入口網站應用程式註冊體驗](/azure/active-directory/develop/app-registration-portal-training-guide)。
 
 如需使用 API（我們的用戶端程式庫）資訊，請見 [Customer Insights 用戶端程式庫](#customer-insights-client-libraries)。
 
@@ -101,6 +108,8 @@ HTTP 回應將很快在下方出現。
 
 1. 選取 **授與系統管理員同意...** 完成應用程式註冊。
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="動態 gif 顯示授與系統管理員的同意。":::
+
 1. 若要總結，我們必須將應用程式註冊名稱新增為 Customer Insights 使用者。    
    打開 Customer insights，前往 **管理員** > **權限** 並選取 **新增使用者**。
 
@@ -108,7 +117,7 @@ HTTP 回應將很快在下方出現。
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights 用戶端程式庫
 
-本節幫助您開始使用可用於 Customer Insights API 的用戶端程式庫。
+本節幫助您開始使用可用於 Customer Insights API 的用戶端程式庫。 您可以在 [Customer Insights GitHub 頁面](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries)上找到所有的程式庫來原始程式碼和範例應用程式。 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ HTTP 回應將很快在下方出現。
 
 #### <a name="use-the-c-client-library"></a>使用 C# 用戶端程式庫
 
-1. 使用 [Microsoft 驗證程式庫 (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) 取得 `AccessToken` 使用現有的 [Azure 應用程式註冊](#create-a-new-app-registration-in-the-azure-portal)。
+1. 使用 [Microsoft 驗證程式庫 (MSAL)](/azure/active-directory/develop/msal-overview) 取得 `AccessToken` 使用現有的 [Azure 應用程式註冊](#create-a-new-app-registration-in-the-azure-portal)。
 
 1. 一旦成功驗證並獲取權杖後，請建構新的或使用現有 `HttpClient`，連同附加的 **DefaultRequestHeaders "授權"** 設定為 **持有人 <access token>** 及 **Ocp-Apim-Subscription-Key** 設定為源自您的 Customer Insights 環境 [**訂閱金鑰**](#get-started-trying-the-customer-insights-apis)。    
    請適時重設 **授權** 標頭。 例如當權杖到期時。
@@ -141,5 +150,12 @@ HTTP 回應將很快在下方出現。
 1. 回應類型將很有可能是 `object`，因為方法會傳回多種類型 (例如，`IList<InstanceInfo>` 和 `ApiErrorResult`)。 若要檢查傳回類型，您可以將物件安全轉換成 [API 詳細資料頁面](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) 上指定的回應類型。    
    如果需要更多要求資訊，請使用 **HTTP 訊息方法** 存取原始回應物件。
 
+### <a name="nodejs-package"></a>NodeJS 套件
+
+可透過 NPM 使用 NodeJS 用戶端程式庫：https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Python 套件
+
+可透過 PyPi 使用 Python 用戶端程式庫：https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

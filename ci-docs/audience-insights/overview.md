@@ -2,19 +2,19 @@
 title: Dynamics 365 Customer Insights 的對象見解概述
 description: Dynamics 365 Customer Insights 的對象見解概述。
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5476985"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598620"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Dynamics 365 Customer Insights 的對象見解概述
 
@@ -25,7 +25,7 @@ ms.locfileid: "5476985"
 - **消除資料隔閡並整合客戶資料**
 
   - 輕鬆連接並整合資料 — [使用預先建立的連接器，從常見的資料來源](data-sources.md)引入交易、觀測及行為資料。
-  - 以智慧方式轉換客戶資料 — 建立符合 [Common Data Model](https://docs.microsoft.com/common-data-model/) 的統一客戶設定檔。 使用 AI/ML 導向建議來解析客戶身分識別。
+  - 以智慧方式轉換客戶資料 — 建立符合 [Common Data Model](/common-data-model/) 的統一客戶設定檔。 使用 AI/ML 導向建議來解析客戶身分識別。
 
 - **透過 Microsoft Graph 中包含的受眾智慧擴充**
 
@@ -42,7 +42,7 @@ ms.locfileid: "5476985"
 - **資料分析師/管理員：**
 
   - 存取集合豐富的連接器內嵌您的所有客戶資料。
-  - 可以整合客戶資料，並將其轉換成 [Common Data Model](https://docs.microsoft.com/common-data-model/) 格式。
+  - 可以整合客戶資料，並將其轉換成 [Common Data Model](/common-data-model/) 格式。
   - 利用 Microsoft Graph 中所包含受眾智慧提供的見解 (例如喜好品牌和興趣) 來充實客戶資訊。
   - 「點按非程式碼」組態和偵錯體驗協助您輕鬆組態對象見解並找出潛在問題。
   - 使用 AI 提供的建議，在各種截然不同的來源上清理和標準化客戶資料。  

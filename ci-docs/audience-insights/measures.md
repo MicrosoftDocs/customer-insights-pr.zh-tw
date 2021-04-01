@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269918"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654722"
 ---
 # <a name="define-and-manage-measures"></a>定義和管理量值
 
@@ -72,8 +72,8 @@ ms.locfileid: "5269918"
    1. 選取 **編輯維度**，以新增您要用來分組量值的資料屬性。 例如市/鎮或性別。 根據預設，會選取 *CustomerID* 維度以建立 *客戶層級的量值*。 如果您要建立 *業務層級的量值*，您可以移除預設維度。
    1. 選取 **完成**，新增維度至量值。
 
-1. 如果已對應的資料實體與客戶實體之間有多個路徑，您必須選擇一個已識別的[實體關聯路徑](relationships.md)。 視所選取的路徑而定，量值結果可能會不同。
-   1. 選取 **資料喜好設定**，然後選擇應該用來識別量值的實體路徑。
+1. 如果已對應的資料實體與 *客戶* 實體之間有多個路徑，您必須選擇一個已識別的[實體關聯路徑](relationships.md)。 視所選取的路徑而定，量值結果可能會不同。 
+   1. 選取 **資料喜好設定**，然後選擇應該用來識別量值的實體路徑。 如果只有單一路徑指向 *客戶* 實體，就不會顯示此控制項。
    1. 選取 **完成** 以套用至您的選取。 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="為量值選取實體路徑。":::

@@ -2,19 +2,19 @@
 title: 即時資料內嵌和限制
 description: 關於對象見解中即時能力的一般資訊。
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270270"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598559"
 ---
 # <a name="real-time-data-ingestion-preview"></a>即時資料擷取 (預覽)
 
@@ -54,7 +54,7 @@ ms.locfileid: "5270270"
 
 目前有兩種方式連接到即時 API：
 
-- [間接](#connect-via-the-dynamics-365-customer-insights-connector)，使用 [Dynamics 365 Customer Insights 連接器](https://docs.microsoft.com/connectors/customerinsights/)
+- [間接](#connect-via-the-dynamics-365-customer-insights-connector)，使用 [Dynamics 365 Customer Insights 連接器](/connectors/customerinsights/)
 - [直接](#connect-directly-to-the-real-time-api)，使用程式碼
 
 兩種方式都具有以下先決條件：
@@ -66,13 +66,13 @@ ms.locfileid: "5270270"
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>透過 Dynamics 365 Customer Insights 連接器連接
 
-即時 API 可以從專用的 Power Platform 連接器（[Dynamics 365 Customer Insights 連接器](https://docs.microsoft.com/connectors/customerinsights/)）擷取資料，而不需要撰寫和部署任何程式碼。    
-連接器可以執行與 API 相同的即時動作。 您需要進階連接器的有效授權。 如需詳細資訊，請參閱 [Power Apps 和 Power Automate 授權常見問題集](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq)。
+即時 API 可以從專用的 Power Platform 連接器（[Dynamics 365 Customer Insights 連接器](/connectors/customerinsights/)）擷取資料，而不需要撰寫和部署任何程式碼。    
+連接器可以執行與 API 相同的即時動作。 您需要進階連接器的有效授權。 如需詳細資訊，請參閱 [Power Apps 和 Power Automate 授權常見問題集](/power-platform/admin/powerapps-flow-licensing-faq)。
 
-- Power Platform [Power Apps 和/或 Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps 和/或 Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-如需建立流程的詳細資料，請參閱 [Power Automate 文件](https://docs.microsoft.com/power-automate/)。
+如需建立流程的詳細資料，請參閱 [Power Automate 文件](/power-automate/)。
 
 ## <a name="connect-directly-to-the-real-time-api"></a>直接連接至即時 API
 
