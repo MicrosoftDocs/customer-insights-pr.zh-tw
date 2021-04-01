@@ -2,73 +2,73 @@
 title: 實體和實體路徑之間的關係
 description: 從多個資料來源建立和管理實體之間的關係。
 ms.date: 04/14/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c25bfcb8e2a8223498dd1a5e8cfb3712a40ab85e
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269860"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595202"
 ---
-# <a name="relationships-between-entities"></a><span data-ttu-id="f6c6a-103">實體間的關聯</span><span class="sxs-lookup"><span data-stu-id="f6c6a-103">Relationships between entities</span></span>
+# <a name="relationships-between-entities"></a><span data-ttu-id="65dc5-103">實體間的關聯</span><span class="sxs-lookup"><span data-stu-id="65dc5-103">Relationships between entities</span></span>
 
-<span data-ttu-id="f6c6a-104">關聯可協助您連接實體，並在實體共用可從一個實體參考另一個實體的通用識別碼（外部索引鍵）時，產生資料圖形。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-104">Relationships help you connect entities and generate a graph of your data when entities share a common identifier (foreign key) that can be referenced from one entity to another.</span></span> <span data-ttu-id="f6c6a-105">連接的實體可讓您依據多個資料來源來定義區段和量值。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-105">Connected entities enable you to define segments and measures based on multiple data sources.</span></span>
+<span data-ttu-id="65dc5-104">關聯可協助您連接實體，並在實體共用可從一個實體參考另一個實體的通用識別碼（外部索引鍵）時，產生資料圖形。</span><span class="sxs-lookup"><span data-stu-id="65dc5-104">Relationships help you connect entities and generate a graph of your data when entities share a common identifier (foreign key) that can be referenced from one entity to another.</span></span> <span data-ttu-id="65dc5-105">連接的實體可讓您依據多個資料來源來定義區段和量值。</span><span class="sxs-lookup"><span data-stu-id="65dc5-105">Connected entities enable you to define segments and measures based on multiple data sources.</span></span>
 
-<span data-ttu-id="f6c6a-106">關聯有兩種類型。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-106">There are two types of relationships.</span></span> <span data-ttu-id="f6c6a-107">不可編輯的系統關聯（自動建立），以及由使用者建立和設定的自訂關聯。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-107">Non-editable system relationships, which are created automatically, and custom relationships created and configured by users.</span></span>
+<span data-ttu-id="65dc5-106">關聯有兩種類型。</span><span class="sxs-lookup"><span data-stu-id="65dc5-106">There are two types of relationships.</span></span> <span data-ttu-id="65dc5-107">不可編輯的系統關聯（自動建立），以及由使用者建立和設定的自訂關聯。</span><span class="sxs-lookup"><span data-stu-id="65dc5-107">Non-editable system relationships, which are created automatically, and custom relationships created and configured by users.</span></span>
 
-<span data-ttu-id="f6c6a-108">在比對和合併程序期間，會根據智慧型比對，在幕後建立系統關聯。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-108">During the match and merge processes, system relationships are created behind the scenes based on intelligent matching.</span></span> <span data-ttu-id="f6c6a-109">這些關聯有助於將客戶設定檔記錄關聯至其他對應實體的記錄。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-109">These relationships help relate the Customer Profile records with other corresponding entities' records.</span></span> <span data-ttu-id="f6c6a-110">下圖顯示當客戶實體與其他實體比對以產生最終的客戶設定檔實體時，建立了三個系統關聯。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-110">The following diagram illustrates the creation of three system relationships when the customer entity is matched with additional entities to produce the final Customer Profile entity.</span></span>
+<span data-ttu-id="65dc5-108">在比對和合併程序期間，會根據智慧型比對，在幕後建立系統關聯。</span><span class="sxs-lookup"><span data-stu-id="65dc5-108">During the match and merge processes, system relationships are created behind the scenes based on intelligent matching.</span></span> <span data-ttu-id="65dc5-109">這些關聯有助於將客戶設定檔記錄關聯至其他對應實體的記錄。</span><span class="sxs-lookup"><span data-stu-id="65dc5-109">These relationships help relate the Customer Profile records with other corresponding entities' records.</span></span> <span data-ttu-id="65dc5-110">下圖顯示當客戶實體與其他實體比對以產生最終的客戶設定檔實體時，建立了三個系統關聯。</span><span class="sxs-lookup"><span data-stu-id="65dc5-110">The following diagram illustrates the creation of three system relationships when the customer entity is matched with additional entities to produce the final Customer Profile entity.</span></span>
 
 > [!div class="mx-imgBorder"]
-> <span data-ttu-id="f6c6a-111">![關聯建立](media/relationships-entities-merge.png "關聯建立")</span><span class="sxs-lookup"><span data-stu-id="f6c6a-111">![Relationship creation](media/relationships-entities-merge.png "Relationship creation")</span></span>
+> <span data-ttu-id="65dc5-111">![關聯建立](media/relationships-entities-merge.png "關聯建立")</span><span class="sxs-lookup"><span data-stu-id="65dc5-111">![Relationship creation](media/relationships-entities-merge.png "Relationship creation")</span></span>
 
-- <span data-ttu-id="f6c6a-112">***CustomerToContact* 關聯** 是在客戶實體與連絡人實體之間建立的。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-112">***CustomerToContact* relationship** was created between the Customer entity and the Contact entity.</span></span> <span data-ttu-id="f6c6a-113">客戶實體會取得與連絡人實體索引鍵欄位 **contactId** 相關的 **Contact_contactId** 索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-113">The Customer entity gets the key field **Contact_contactId** to relate to the Contact entity key field **contactId**.</span></span>
-- <span data-ttu-id="f6c6a-114">***CustomerToAccount* 關聯** 是在客戶實體與帳戶實體之間建立的。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-114">***CustomerToAccount* relationship** was created between the Customer entity and the Account entity.</span></span> <span data-ttu-id="f6c6a-115">客戶實體會取得與帳戶實體索引鍵欄位 **accountId** 相關的 **Account_accountId** 索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-115">The Customer entity gets the key field **Account_accountId** to relate to the Account entity key field **accountId**.</span></span>
-- <span data-ttu-id="f6c6a-116">***CustomerToWebAccount* 關聯** 是在客戶實體與 WebAccount 實體之間建立的。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-116">***CustomerToWebAccount* relationship** was created between the Customer entity and the WebAccount entity.</span></span> <span data-ttu-id="f6c6a-117">客戶實體會取得與 WebAccount 實體索引鍵欄位 **webaccountId** 相關的 **WebAccount_webaccountId** 索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-117">The Customer entity gets the key field **WebAccount_webaccountId** to relate to the WebAccount entity key field **webaccountId**.</span></span>
+- <span data-ttu-id="65dc5-112">***CustomerToContact* 關聯** 是在客戶實體與連絡人實體之間建立的。</span><span class="sxs-lookup"><span data-stu-id="65dc5-112">***CustomerToContact* relationship** was created between the Customer entity and the Contact entity.</span></span> <span data-ttu-id="65dc5-113">客戶實體會取得與連絡人實體索引鍵欄位 **contactId** 相關的 **Contact_contactId** 索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="65dc5-113">The Customer entity gets the key field **Contact_contactId** to relate to the Contact entity key field **contactId**.</span></span>
+- <span data-ttu-id="65dc5-114">***CustomerToAccount* 關聯** 是在客戶實體與帳戶實體之間建立的。</span><span class="sxs-lookup"><span data-stu-id="65dc5-114">***CustomerToAccount* relationship** was created between the Customer entity and the Account entity.</span></span> <span data-ttu-id="65dc5-115">客戶實體會取得與帳戶實體索引鍵欄位 **accountId** 相關的 **Account_accountId** 索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="65dc5-115">The Customer entity gets the key field **Account_accountId** to relate to the Account entity key field **accountId**.</span></span>
+- <span data-ttu-id="65dc5-116">***CustomerToWebAccount* 關聯** 是在客戶實體與 WebAccount 實體之間建立的。</span><span class="sxs-lookup"><span data-stu-id="65dc5-116">***CustomerToWebAccount* relationship** was created between the Customer entity and the WebAccount entity.</span></span> <span data-ttu-id="65dc5-117">客戶實體會取得與 WebAccount 實體索引鍵欄位 **webaccountId** 相關的 **WebAccount_webaccountId** 索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="65dc5-117">The Customer entity gets the key field **WebAccount_webaccountId** to relate to the WebAccount entity key field **webaccountId**.</span></span>
 
-## <a name="create-a-relationship"></a><span data-ttu-id="f6c6a-118">建立關聯</span><span class="sxs-lookup"><span data-stu-id="f6c6a-118">Create a relationship</span></span>
+## <a name="create-a-relationship"></a><span data-ttu-id="65dc5-118">建立關聯</span><span class="sxs-lookup"><span data-stu-id="65dc5-118">Create a relationship</span></span>
 
-<span data-ttu-id="f6c6a-119">在 **關聯** 頁面上定義自訂關聯。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-119">Define custom relationships on the **Relationships** page.</span></span> <span data-ttu-id="f6c6a-120">每個關聯均包含來源實體（保存外部索引鍵的實體）和目標實體（來源實體之外部索引鍵所指向的實體）。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-120">Each relationship consists of a Source entity (the entity that holds the foreign key) and a Target entity (the entity that the source entity's foreign key points to).</span></span>
+<span data-ttu-id="65dc5-119">在 **關聯** 頁面上定義自訂關聯。</span><span class="sxs-lookup"><span data-stu-id="65dc5-119">Define custom relationships on the **Relationships** page.</span></span> <span data-ttu-id="65dc5-120">每個關聯均包含來源實體（保存外部索引鍵的實體）和目標實體（來源實體之外部索引鍵所指向的實體）。</span><span class="sxs-lookup"><span data-stu-id="65dc5-120">Each relationship consists of a Source entity (the entity that holds the foreign key) and a Target entity (the entity that the source entity's foreign key points to).</span></span>
 
-1. <span data-ttu-id="f6c6a-121">請在對象見解中前往 **資料** > **關係**。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-121">In audience insights, go to **Data** > **Relationships**.</span></span>
+1. <span data-ttu-id="65dc5-121">請在對象見解中前往 **資料** > **關係**。</span><span class="sxs-lookup"><span data-stu-id="65dc5-121">In audience insights, go to **Data** > **Relationships**.</span></span>
 
-2. <span data-ttu-id="f6c6a-122">選取 **新增關聯**。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-122">Select **New relationship**.</span></span>
+2. <span data-ttu-id="65dc5-122">選取 **新增關聯**。</span><span class="sxs-lookup"><span data-stu-id="65dc5-122">Select **New relationship**.</span></span>
 
-3. <span data-ttu-id="f6c6a-123">在 **新增關聯** 窗格上，提供下列資訊：</span><span class="sxs-lookup"><span data-stu-id="f6c6a-123">In the **Add relationship** pane, provide the following information:</span></span>
+3. <span data-ttu-id="65dc5-123">在 **新增關聯** 窗格上，提供下列資訊：</span><span class="sxs-lookup"><span data-stu-id="65dc5-123">In the **Add relationship** pane, provide the following information:</span></span>
 
    > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="f6c6a-124">![輸入關聯詳細資料](media/relationships-add.png "輸入關聯詳細資料")</span><span class="sxs-lookup"><span data-stu-id="f6c6a-124">![Enter relationship details](media/relationships-add.png "Enter relationship details")</span></span>
+   > <span data-ttu-id="65dc5-124">![輸入關聯詳細資料](media/relationships-add.png "輸入關聯詳細資料")</span><span class="sxs-lookup"><span data-stu-id="65dc5-124">![Enter relationship details](media/relationships-add.png "Enter relationship details")</span></span>
 
-   - <span data-ttu-id="f6c6a-125">**關聯名稱**：反映關聯用途的名稱（例如，**AccountWebLogs**）。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-125">**Relationship name**: Name that reflects the purpose of the relationship (for example, **AccountWebLogs**).</span></span>
-   - <span data-ttu-id="f6c6a-126">**描述**：關聯的描述。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-126">**Description**: Description of the relationship.</span></span>
-   - <span data-ttu-id="f6c6a-127">**來源實體**：選取在關聯中用作來源的實體（例如，WebLog）。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-127">**Source entity**: Select the entity that is used as a source in the relationship (for example, WebLog).</span></span>
-   - <span data-ttu-id="f6c6a-128">**基數**：選取來源實體記錄的基數。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-128">**Cardinality**: Select the cardinality of the source entity records.</span></span> <span data-ttu-id="f6c6a-129">例如，「很多」表示多個 Weblog 記錄與一個 WebAccount 相關聯。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-129">For example, "many" means that multiple Weblog records are related to one WebAccount.</span></span>
-   - <span data-ttu-id="f6c6a-130">**來源索引鍵欄位**：這代表來源實體中的外部索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-130">**Source key field**: This represents the foreign key field in the source entity.</span></span> <span data-ttu-id="f6c6a-131">例如，WebLog 有 **accountId** 外部索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-131">For example, WebLog has the **accountId** foreign key field.</span></span>
-   - <span data-ttu-id="f6c6a-132">**目標實體**：選取在關聯中用作目標的實體（例如，WebAccount）。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-132">**Target entity**: Select the entity that is used as a target in the relationship (for example, WebAccount).</span></span>
-   - <span data-ttu-id="f6c6a-133">**目標基數**：選取目標實體記錄的基數。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-133">**Target cardinality**: Select the cardinality of the target entity records.</span></span> <span data-ttu-id="f6c6a-134">例如，「一個」表示多個 Weblog 記錄與一個 WebAccount 相關聯。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-134">For example, "one" means that multiple Weblog records are related to one WebAccount.</span></span>
-   - <span data-ttu-id="f6c6a-135">**目標索引鍵欄位**：此欄位表示目標實體的索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-135">**Target key field**: This field represents the key field of target entity.</span></span> <span data-ttu-id="f6c6a-136">例如，WebAccount 有 **accountId** 索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-136">For example, WebAccount has the **accountId** key field.</span></span>
+   - <span data-ttu-id="65dc5-125">**關聯名稱**：反映關聯用途的名稱（例如，**AccountWebLogs**）。</span><span class="sxs-lookup"><span data-stu-id="65dc5-125">**Relationship name**: Name that reflects the purpose of the relationship (for example, **AccountWebLogs**).</span></span>
+   - <span data-ttu-id="65dc5-126">**描述**：關聯的描述。</span><span class="sxs-lookup"><span data-stu-id="65dc5-126">**Description**: Description of the relationship.</span></span>
+   - <span data-ttu-id="65dc5-127">**來源實體**：選取在關聯中用作來源的實體（例如，WebLog）。</span><span class="sxs-lookup"><span data-stu-id="65dc5-127">**Source entity**: Select the entity that is used as a source in the relationship (for example, WebLog).</span></span>
+   - <span data-ttu-id="65dc5-128">**基數**：選取來源實體記錄的基數。</span><span class="sxs-lookup"><span data-stu-id="65dc5-128">**Cardinality**: Select the cardinality of the source entity records.</span></span> <span data-ttu-id="65dc5-129">例如，「很多」表示多個 Weblog 記錄與一個 WebAccount 相關聯。</span><span class="sxs-lookup"><span data-stu-id="65dc5-129">For example, "many" means that multiple Weblog records are related to one WebAccount.</span></span>
+   - <span data-ttu-id="65dc5-130">**來源索引鍵欄位**：這代表來源實體中的外部索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="65dc5-130">**Source key field**: This represents the foreign key field in the source entity.</span></span> <span data-ttu-id="65dc5-131">例如，WebLog 有 **accountId** 外部索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="65dc5-131">For example, WebLog has the **accountId** foreign key field.</span></span>
+   - <span data-ttu-id="65dc5-132">**目標實體**：選取在關聯中用作目標的實體（例如，WebAccount）。</span><span class="sxs-lookup"><span data-stu-id="65dc5-132">**Target entity**: Select the entity that is used as a target in the relationship (for example, WebAccount).</span></span>
+   - <span data-ttu-id="65dc5-133">**目標基數**：選取目標實體記錄的基數。</span><span class="sxs-lookup"><span data-stu-id="65dc5-133">**Target cardinality**: Select the cardinality of the target entity records.</span></span> <span data-ttu-id="65dc5-134">例如，「一個」表示多個 Weblog 記錄與一個 WebAccount 相關聯。</span><span class="sxs-lookup"><span data-stu-id="65dc5-134">For example, "one" means that multiple Weblog records are related to one WebAccount.</span></span>
+   - <span data-ttu-id="65dc5-135">**目標索引鍵欄位**：此欄位表示目標實體的索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="65dc5-135">**Target key field**: This field represents the key field of target entity.</span></span> <span data-ttu-id="65dc5-136">例如，WebAccount 有 **accountId** 索引鍵欄位。</span><span class="sxs-lookup"><span data-stu-id="65dc5-136">For example, WebAccount has the **accountId** key field.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f6c6a-137">只支援多對一或一對一關聯。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-137">Only many-to-one and one-to-one relationships are supported.</span></span> <span data-ttu-id="f6c6a-138">多對多關聯可使用兩個多對一關聯和連結實體（用於連接來源實體和目標實體的實體）來建立。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-138">Many-to-many relationships can be created using two many-to-one relationships and a link entity (an entity that is used to connect the source entity and the target entity).</span></span>
+> <span data-ttu-id="65dc5-137">只支援多對一或一對一關聯。</span><span class="sxs-lookup"><span data-stu-id="65dc5-137">Only many-to-one and one-to-one relationships are supported.</span></span> <span data-ttu-id="65dc5-138">多對多關聯可使用兩個多對一關聯和連結實體（用於連接來源實體和目標實體的實體）來建立。</span><span class="sxs-lookup"><span data-stu-id="65dc5-138">Many-to-many relationships can be created using two many-to-one relationships and a link entity (an entity that is used to connect the source entity and the target entity).</span></span>
 
-## <a name="delete-a-relationship"></a><span data-ttu-id="f6c6a-139">刪除關聯</span><span class="sxs-lookup"><span data-stu-id="f6c6a-139">Delete a relationship</span></span>
+## <a name="delete-a-relationship"></a><span data-ttu-id="65dc5-139">刪除關聯</span><span class="sxs-lookup"><span data-stu-id="65dc5-139">Delete a relationship</span></span>
 
-1. <span data-ttu-id="f6c6a-140">請在對象見解中前往 **資料** > **關係**。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-140">In audience insights, go to **Data** > **Relationships**.</span></span>
+1. <span data-ttu-id="65dc5-140">請在對象見解中前往 **資料** > **關係**。</span><span class="sxs-lookup"><span data-stu-id="65dc5-140">In audience insights, go to **Data** > **Relationships**.</span></span>
 
-2. <span data-ttu-id="f6c6a-141">選取您要刪除之關聯的核取方塊。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-141">Select check boxes for the relationships you want to delete.</span></span>
+2. <span data-ttu-id="65dc5-141">選取您要刪除之關聯的核取方塊。</span><span class="sxs-lookup"><span data-stu-id="65dc5-141">Select check boxes for the relationships you want to delete.</span></span>
 
-3. <span data-ttu-id="f6c6a-142">在 **關聯** 表格頂端選取 **刪除**。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-142">Select **Delete** at the top of the **Relationships** table.</span></span>
+3. <span data-ttu-id="65dc5-142">在 **關聯** 表格頂端選取 **刪除**。</span><span class="sxs-lookup"><span data-stu-id="65dc5-142">Select **Delete** at the top of the **Relationships** table.</span></span>
 
-4. <span data-ttu-id="f6c6a-143">確認刪除。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-143">Confirm your deletion.</span></span>
+4. <span data-ttu-id="65dc5-143">確認刪除。</span><span class="sxs-lookup"><span data-stu-id="65dc5-143">Confirm your deletion.</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="f6c6a-144">後續步驟</span><span class="sxs-lookup"><span data-stu-id="f6c6a-144">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="65dc5-144">後續步驟</span><span class="sxs-lookup"><span data-stu-id="65dc5-144">Next step</span></span>
 
-<span data-ttu-id="f6c6a-145">系統和自訂關聯是根據已不再分散的多個資料來源來建立區段。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-145">System and custom relationships are used to create segments based on multiple data sources that are no longer siloed.</span></span> <span data-ttu-id="f6c6a-146">如需詳細資訊，請參閱[區段](segments.md)。</span><span class="sxs-lookup"><span data-stu-id="f6c6a-146">For more information, see [Segments](segments.md).</span></span>
+<span data-ttu-id="65dc5-145">系統和自訂關聯是根據已不再分散的多個資料來源來建立區段。</span><span class="sxs-lookup"><span data-stu-id="65dc5-145">System and custom relationships are used to create segments based on multiple data sources that are no longer siloed.</span></span> <span data-ttu-id="65dc5-146">如需詳細資訊，請參閱[區段](segments.md)。</span><span class="sxs-lookup"><span data-stu-id="65dc5-146">For more information, see [Segments](segments.md).</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

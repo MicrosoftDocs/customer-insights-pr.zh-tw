@@ -2,52 +2,52 @@
 title: 將 Customer Insights 資料匯出到 Azure Blob 儲存體
 description: 了解如何設定與 Azure Blob 儲存體的連接。
 ms.date: 09/18/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ecacf20365e78ced8859dfa54b1b16cb923c00eb
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 0986ee5caf5fa079994ca584fb2c4d9294ddb80b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269182"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596167"
 ---
-# <a name="connector-for-azure-blob-storage-preview"></a><span data-ttu-id="1288e-103">Azure Blob 儲存體的連接器 (預覽)</span><span class="sxs-lookup"><span data-stu-id="1288e-103">Connector for Azure Blob storage (preview)</span></span>
+# <a name="connector-for-azure-blob-storage-preview"></a><span data-ttu-id="21b8e-103">Azure Blob 儲存體的連接器 (預覽)</span><span class="sxs-lookup"><span data-stu-id="21b8e-103">Connector for Azure Blob storage (preview)</span></span>
 
-<span data-ttu-id="1288e-104">請在 Azure Blob 儲存體儲存您的 Customer Insights 資料或用它傳輸您的資料到其他應用程式。</span><span class="sxs-lookup"><span data-stu-id="1288e-104">Store your Customer Insights data in an Azure Blob storage or use it to transfer your data to other applications.</span></span>
+<span data-ttu-id="21b8e-104">請在 Azure Blob 儲存體儲存您的 Customer Insights 資料或用它傳輸您的資料到其他應用程式。</span><span class="sxs-lookup"><span data-stu-id="21b8e-104">Store your Customer Insights data in an Azure Blob storage or use it to transfer your data to other applications.</span></span>
 
-## <a name="configure-the-connector-for-azure-blob-storage"></a><span data-ttu-id="1288e-105">設定 Azure Blob 儲存體的連接器</span><span class="sxs-lookup"><span data-stu-id="1288e-105">Configure the connector for Azure Blob storage</span></span>
+## <a name="configure-the-connector-for-azure-blob-storage"></a><span data-ttu-id="21b8e-105">設定 Azure Blob 儲存體的連接器</span><span class="sxs-lookup"><span data-stu-id="21b8e-105">Configure the connector for Azure Blob storage</span></span>
 
-1. <span data-ttu-id="1288e-106">在對象見解中，前往 **系統管理員** > **匯出目的地**。</span><span class="sxs-lookup"><span data-stu-id="1288e-106">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="21b8e-106">在對象見解中，前往 **系統管理員** > **匯出目的地**。</span><span class="sxs-lookup"><span data-stu-id="21b8e-106">In audience insights, go to **Admin** > **Export destinations**.</span></span>
 
-1. <span data-ttu-id="1288e-107">在 **Azure Blob 儲存體** 底下，選取 **設定**。</span><span class="sxs-lookup"><span data-stu-id="1288e-107">Under **Azure Blob Storage**, select **Set up**.</span></span>
+1. <span data-ttu-id="21b8e-107">在 **Azure Blob 儲存體** 底下，選取 **設定**。</span><span class="sxs-lookup"><span data-stu-id="21b8e-107">Under **Azure Blob Storage**, select **Set up**.</span></span>
 
-1. <span data-ttu-id="1288e-108">輸入 Azure Blob 儲存體帳戶的 **帳戶名稱**、**帳戶金鑰** 和 **容器**。</span><span class="sxs-lookup"><span data-stu-id="1288e-108">Enter **Account name**, **Account key**, and **Container** for your Azure Blob storage account.</span></span>
-    - <span data-ttu-id="1288e-109">若要進一步了解如何尋找 Azure Blob 儲存體帳戶名稱及帳戶金鑰，請參閱 [管理 Azure 入口網站中的儲存體帳戶設定](https://docs.microsoft.com/azure/storage/common/storage-account-manage)。</span><span class="sxs-lookup"><span data-stu-id="1288e-109">To learn more about how to find the Azure Blob storage account name and account key, see [Manage storage account settings in the Azure portal](https://docs.microsoft.com/azure/storage/common/storage-account-manage).</span></span>
-    - <span data-ttu-id="1288e-110">若要了解如何建立容器，請參閱[建立容器](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)。</span><span class="sxs-lookup"><span data-stu-id="1288e-110">To learn how to create a container, see [Create a container](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span></span>
+1. <span data-ttu-id="21b8e-108">輸入 Azure Blob 儲存體帳戶的 **帳戶名稱**、**帳戶金鑰** 和 **容器**。</span><span class="sxs-lookup"><span data-stu-id="21b8e-108">Enter **Account name**, **Account key**, and **Container** for your Azure Blob storage account.</span></span>
+    - <span data-ttu-id="21b8e-109">若要進一步了解如何尋找 Azure Blob 儲存體帳戶名稱及帳戶金鑰，請參閱 [管理 Azure 入口網站中的儲存體帳戶設定](/azure/storage/common/storage-account-manage)。</span><span class="sxs-lookup"><span data-stu-id="21b8e-109">To learn more about how to find the Azure Blob storage account name and account key, see [Manage storage account settings in the Azure portal](/azure/storage/common/storage-account-manage).</span></span>
+    - <span data-ttu-id="21b8e-110">若要了解如何建立容器，請參閱[建立容器](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)。</span><span class="sxs-lookup"><span data-stu-id="21b8e-110">To learn how to create a container, see [Create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span></span>
 
-1. <span data-ttu-id="1288e-111">在 **顯示名稱** 欄位中，為目的地提供可辨識的名稱。</span><span class="sxs-lookup"><span data-stu-id="1288e-111">Give your destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="21b8e-111">在 **顯示名稱** 欄位中，為目的地提供可辨識的名稱。</span><span class="sxs-lookup"><span data-stu-id="21b8e-111">Give your destination a recognizable name in the **Display name** field.</span></span>
 
-1. <span data-ttu-id="1288e-112">選取 **下一步**。</span><span class="sxs-lookup"><span data-stu-id="1288e-112">Select **Next**.</span></span>
+1. <span data-ttu-id="21b8e-112">選取 **下一步**。</span><span class="sxs-lookup"><span data-stu-id="21b8e-112">Select **Next**.</span></span>
 
-1. <span data-ttu-id="1288e-113">選取每個要匯出至此目的地之實體旁邊的方塊。</span><span class="sxs-lookup"><span data-stu-id="1288e-113">Select the box next to each of the entities you want to export to this destination.</span></span>
+1. <span data-ttu-id="21b8e-113">選取每個要匯出至此目的地之實體旁邊的方塊。</span><span class="sxs-lookup"><span data-stu-id="21b8e-113">Select the box next to each of the entities you want to export to this destination.</span></span>
 
-1. <span data-ttu-id="1288e-114">選取 **儲存**。</span><span class="sxs-lookup"><span data-stu-id="1288e-114">Select **Save**.</span></span>
+1. <span data-ttu-id="21b8e-114">選取 **儲存**。</span><span class="sxs-lookup"><span data-stu-id="21b8e-114">Select **Save**.</span></span>
 
-<span data-ttu-id="1288e-115">匯出的資料會儲存在您設定的 Azure Blob 儲存體容器中。</span><span class="sxs-lookup"><span data-stu-id="1288e-115">Exported data is stored in the Azure Blob storage container you configured.</span></span> <span data-ttu-id="1288e-116">容器中會自動建立下列資料夾路徑：</span><span class="sxs-lookup"><span data-stu-id="1288e-116">The following folder paths are automatically created in your container:</span></span>
+<span data-ttu-id="21b8e-115">匯出的資料會儲存在您設定的 Azure Blob 儲存體容器中。</span><span class="sxs-lookup"><span data-stu-id="21b8e-115">Exported data is stored in the Azure Blob storage container you configured.</span></span> <span data-ttu-id="21b8e-116">容器中會自動建立下列資料夾路徑：</span><span class="sxs-lookup"><span data-stu-id="21b8e-116">The following folder paths are automatically created in your container:</span></span>
 
-- <span data-ttu-id="1288e-117">關於系統產生的來源實體和實體：`%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span><span class="sxs-lookup"><span data-stu-id="1288e-117">For source entities and entities generated by the system: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span></span>
-  - <span data-ttu-id="1288e-118">範例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span><span class="sxs-lookup"><span data-stu-id="1288e-118">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span></span>
-- <span data-ttu-id="1288e-119">匯出的實體的 model.json 會位於 %ExportDestinationName% 層級</span><span class="sxs-lookup"><span data-stu-id="1288e-119">The model.json for the exported entities will reside at the %ExportDestinationName% level</span></span>
-  - <span data-ttu-id="1288e-120">範例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span><span class="sxs-lookup"><span data-stu-id="1288e-120">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span></span>
+- <span data-ttu-id="21b8e-117">關於系統產生的來源實體和實體：`%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span><span class="sxs-lookup"><span data-stu-id="21b8e-117">For source entities and entities generated by the system: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span></span>
+  - <span data-ttu-id="21b8e-118">範例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span><span class="sxs-lookup"><span data-stu-id="21b8e-118">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span></span>
+- <span data-ttu-id="21b8e-119">匯出實體的 model.json 將位於 %ExportDestinationName% 層級</span><span class="sxs-lookup"><span data-stu-id="21b8e-119">The model.json for the exported entities will reside at the %ExportDestinationName% level</span></span>
+  - <span data-ttu-id="21b8e-120">範例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span><span class="sxs-lookup"><span data-stu-id="21b8e-120">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="1288e-121">匯出資料</span><span class="sxs-lookup"><span data-stu-id="1288e-121">Export the data</span></span>
+## <a name="export-the-data"></a><span data-ttu-id="21b8e-121">匯出資料</span><span class="sxs-lookup"><span data-stu-id="21b8e-121">Export the data</span></span>
 
-<span data-ttu-id="1288e-122">您可以[視需要匯出資料](export-destinations.md#export-data-on-demand)。</span><span class="sxs-lookup"><span data-stu-id="1288e-122">You can [export data on demand](export-destinations.md#export-data-on-demand).</span></span> <span data-ttu-id="1288e-123">匯出也會與每個[排定的重新整理](system.md#schedule-tab)一起執行。</span><span class="sxs-lookup"><span data-stu-id="1288e-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="21b8e-122">您可以[視需要匯出資料](export-destinations.md#export-data-on-demand)。</span><span class="sxs-lookup"><span data-stu-id="21b8e-122">You can [export data on demand](export-destinations.md#export-data-on-demand).</span></span> <span data-ttu-id="21b8e-123">匯出也會與每個[排定的重新整理](system.md#schedule-tab)一起執行。</span><span class="sxs-lookup"><span data-stu-id="21b8e-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
