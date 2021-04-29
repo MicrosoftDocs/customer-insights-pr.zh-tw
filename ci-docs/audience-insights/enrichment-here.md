@@ -1,7 +1,7 @@
 ---
 title: 藉助協力廠商 HERE Technologies 的富集作用
 description: 有關 HERE Technologies 協力廠商富集作用的一般資訊。
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597731"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896041"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies 客戶設定檔的富集作用 (預覽版)
 
@@ -26,35 +26,54 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 
 - 您已具備有效的 HERE Technologies 訂閱。 若要訂閱，您可以 [在這裡註冊](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) 或直接 [聯絡 HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you)。 [深入瞭解 HERE Technologies 的 Location Enrichment。](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- 您擁有 HERE Technologies API 金鑰。
+- 具備可以使用的 HERE [連接](connections.md)*或者* 您有 [系統管理員](permissions.md#administrator)權限和 HERE Technologies API 金鑰。
 
-- 您擁有 [系統管理員](permissions.md#administrator) 權限。
+## <a name="configure-the-enrichment"></a>擴充設定
 
-## <a name="configuration"></a>組態
+1. 移至 **資料** > **擴充**。 
 
-1. 移至 **資料** > **擴充**。
-
-1. 請在 HERE Technologies 圖格上選取 **富集我的資料**。
+1. 在 HERE Technologies 圖格上選取 **擴充我的資料**，然後選取 **開始使用**。
 
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies 圖格](media/HERE-tile.png "HERE Technologies 圖格")
 
-1. 輸入有效的 **HERE Technologies API 金鑰**。 選取 **我同意** 核取方塊，以檢閱 **資料隱私權和合規性** 並表示同意。 
+1. 在下拉式清單中選取一個[連接](connections.md)。 如果沒有可用的連接，請與系統管理員聯繫。 如果您是系統管理員，則可以選取 **新增連接** 來建立連接。 在下拉式清單中選擇 **HERE Technologies**。 
 
-1. 選取 **連接到 HERE** 確認這兩項輸入資料。
+1. 選取 **連接至 HERE Technologies** 以確認選取連接。
 
-1.  選取 **新增資料**，然後選擇要用 HERE Technologies 中的位置資料擴充的 **客戶資料集**。 您可以選取 **客戶** 實體來擴充所有的客戶設定檔，或選取客戶細分實體僅擴充位於該客戶細分的客戶設定檔。
+1.  選取 **下一步**，然後選擇想要用 HERE Technologies 的位置資料擴充的 **客戶資料集**。 您可以選取 **客戶** 實體來擴充所有的客戶設定檔，或選取客戶細分實體僅擴充位於該客戶細分的客戶設定檔。
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="選擇客戶資料集的螢幕擷取畫面。":::
 
-1. 選取是否要將欄位對應到主要和/或次要位址。 您可以為兩個位址指定欄位對應 (例如住宅和公司位址)，然後分別富集兩個位址的設定檔。 選取 **下一步**。
+1. 選取是否要將欄位對應到主要和/或次要位址。 您可以分別指定欄位對應到兩個地址並且指定擴充個人資料給兩個地址。 例如，如果有家庭和商務地址。 選取 **下一步**。
 
 1. 定義應使用您的哪些統一設定檔欄位，以尋找符合 HERE Technologies 的位置資料。 **街道 1** 和 **郵遞區號** 欄位是選取的主要和/或次要位址的必要欄位。 為了更高的符合準確性，可以新增更多欄位。
 
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies 富集組態頁面](media/enrichment-HERE-configuration.png "HERE Technologies 富集組態頁面")
 
-1. 選取 **套用** 完成欄位對應。
+1. 請選取 **下一步**，完成欄位對應。
+
+1. 提供擴充的名稱。 
+
+1. 檢閱選擇之後，請選取 **儲存擴充**。
+
+## <a name="configure-the-connection-for-here-technologies"></a>設定 HERE technologies 的連接 
+
+您必須是系統管理員才能設定連接。 在設定擴充時，請選取 **新增連接***或* 在 HERE Technologies 圖格上移至 **管理** > **連接** 並選取 **設定**。
+
+1. 在 **顯示名稱** 方塊中輸入連接的名稱。
+
+1. 提供有效的 HERE Technologies API 金鑰。
+
+1. 檢閱 **資料隱私權和合規性** 並選取 **我同意** 的核取方塊，表示同意
+
+1. 選取 **驗證** 來驗證設定。
+
+1. 完成驗證之後，請選取 **儲存**。
+
+> [!div class="mx-imgBorder"]
+   > ![HERE technologies 的連接設定頁面](media/enrichment-HERE-connection.png "HERE technologies 的連接設定頁面")
 
 ## <a name="enrichment-results"></a>擴充結果
 

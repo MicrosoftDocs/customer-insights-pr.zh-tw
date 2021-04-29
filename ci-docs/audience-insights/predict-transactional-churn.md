@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597179"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906846"
 ---
 # <a name="transactional-churn-prediction-preview"></a>交易性流失預測 (預覽版)
 
@@ -46,6 +46,14 @@ ms.locfileid: "5597179"
         - **時間戳記：** 由主索引鍵所識別之事件的日期和時間。
         - **事件：** 您要使用的事件的名稱。 例如雜貨店內稱為 "UserAction" 的欄位可能是客戶的優惠券用途。
         - **詳細資料：** 關於事件的詳細資訊。 例如雜貨店內稱為 "CouponValue" 的欄位可能是優惠券的貨幣值。
+- 建議的資料特性：
+    - 足夠的歷史資料：交易資料至少要是所選取時段的兩倍。 最好有二到三年的訂閱資料。 
+    - 每個客戶有多個購買：最好每個客戶至少有二個交易記錄。
+    - 客戶數量：至少 10 個客戶個人資料，最好超過 1,000 個不重複客戶。 少於 10 位客戶且歷史資料不足此模型將會失敗。
+    - 資料完整性：提供的實體，其中的資料欄位缺失值少於 20% 。
+
+> [!NOTE]
+> 對於客戶購買頻率高的公司 (每隔幾周)，建議選取較短的預測時段和流失定義。 對於低購買頻率 (隔幾個月或每年一次)，請選擇較長的預測時段和流失定義。
 
 ## <a name="create-a-transactional-churn-prediction"></a>建立交易性流失預測
 
@@ -129,7 +137,9 @@ ms.locfileid: "5597179"
 1. 選取您要檢閱的預測。
    - **預測名稱：** 建立時提供的預測名稱。
    - **預測類型：** 用於預測的模型類型
-   - **輸出實體：** 用於儲存預測輸出之實體的名稱。 您可以在 **資料** > **實體** 中找到具有此名稱的實體。
+   - **輸出實體：** 用於儲存預測輸出之實體的名稱。 您可以在 **資料** > **實體** 中找到具有此名稱的實體。    
+     在輸出實體中，*ChurnScore* 是發生流失的可能性和 *IsChurn* 是根據 *ChurnScore* 加上 0.5 閾值的二元標籤。 預設閾值可能不適用於您的案例。 以您喜歡的閾值[建立新的區段](segments.md#create-a-new-segment)。
+     並非所有的客戶都必須是活躍的客戶。 其中某些客戶可能有很長的時間沒有任何活動，而且已經被視為流失 (根據您的流失定義)。 預測已流失的使用者其流失的風險沒有用，因為這不是您感興趣的觀眾。
    - **預測欄位：** 此欄位只填入某些類型的預測，並不用在流失預測中。
    - **狀態：** 預測執行狀態。
         - **已排入佇列：** 預測正等待其他流程執行。

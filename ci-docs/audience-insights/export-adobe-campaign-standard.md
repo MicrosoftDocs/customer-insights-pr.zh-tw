@@ -1,7 +1,7 @@
 ---
 title: 將 Customer Insights 資料匯出到 Adobe Campaign Standard
 description: 瞭解如何在 Adobe Campaign Standard 中使用對象見解客戶細分。
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596305"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760271"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>在 Adobe Campaign Standard 中使用 Customer Insights 客戶細分 (預覽)
 
@@ -48,15 +48,21 @@ ms.locfileid: "5596305"
 
 ## <a name="export-your-target-audience"></a>匯出目標對象
 
+### <a name="configure-a-connection"></a>設定連接
+
 找出目標對象後，我們可以設定從對象見解到 Azure Blob 儲存體帳戶的匯出。
 
-1. 在對象見解中，前往 **系統管理員** > **匯出目的地**。
+1. 在對象見解中，移至 **管理** > **連接**。
 
-1. 在 **Adobe Campaign** 圖格中選取 **設定**。
+1. 選取 **新增連接**，然後選擇 **Adobe Campaign** 來設定此連接，或在 **Adobe Campaign** 圖格中選取 **設定**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Adobe Campaign Standard 的設定圖格。":::
 
-1. 為這個新的匯出目的地提供 **顯示名稱**，然後輸入您希望客戶細分匯出到的 Azure Blob 儲存體帳戶其 **帳戶名稱**、**帳戶金鑰**、和 **容器**。  
+1. 在 **顯示名稱** 中，給連接一個能夠辨識的名稱。 連接的名稱與類型能說明此連接。 我們建議您選取可以說明此連接用途和目標的名稱。
+
+1. 選擇可使用此連接的人員。 如果您不採取任何動作，預設值將為系統管理員。 如需詳細資訊，請參閱[設定匯出所需的權限](export-destinations.md#set-up-a-new-export)。
+
+1. 輸入要將客戶細分匯出到的 Azure Blob 儲存體帳戶其 **帳戶名稱**、**帳戶金鑰** 和 **容器**。  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="儲存體帳戶設定的螢幕擷取畫面。"::: 
 
@@ -64,7 +70,17 @@ ms.locfileid: "5596305"
 
    - 若要了解如何建立容器，請參閱[建立容器](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)。
 
-1. 選取 **下一步**。
+1. 選取 **儲存** 來完成連接。
+
+### <a name="configure-an-export"></a>設定匯出
+
+若您擁有取此類型的連接的存取權，則可以設定此匯出。 如需詳細資訊，請參閱[設定匯出所需的權限](export-destinations.md#set-up-a-new-export)。
+
+1. 移至 **資料** > **匯出**。
+
+1. 若要建立新匯出，請選取 **新增匯出**。
+
+1. 在 **匯出的連結** 欄位中，在 Adobe Campaign 區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的連接可供您使用。
 
 1. 選擇您要匯出的客戶細分。 在這個例子中，它是 **ChurnProneCustomers**。
 
@@ -83,11 +99,9 @@ ms.locfileid: "5596305"
 
 1. 選取 **儲存**。
 
-儲存匯出目的地後，您可以在 **管理** > **匯出** > **我的匯出目的地** 找到。
+儲存匯出目的地之後，您會在 **資料** > **匯出** 中找到它 。
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="醒目提示匯出清單和範例客戶細分的螢幕擷取畫面。":::
-
-現在，您能[依需求匯出客戶細分](export-destinations.md#export-data-on-demand)。 匯出也會與每個[排定的重新整理](system.md)一起執行。
+現在，您能[依需求匯出客戶細分](export-destinations.md#run-exports-on-demand)。 匯出也會與每個[排定的重新整理](system.md)一起執行。
 
 > [!NOTE]
 > 確認客戶細分記錄的匯出數量在 Adobe Campaign Standard 授權限制內。

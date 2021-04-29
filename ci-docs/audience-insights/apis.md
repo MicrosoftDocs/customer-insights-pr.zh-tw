@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
-ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
+ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
+ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "5710450"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "5873652"
 ---
 # <a name="work-with-customer-insights-apis"></a>搭配 Customer Insights API 處理
 
@@ -78,7 +78,7 @@ HTTP 回應將很快在下方出現。
 
 :::image type="content" source="media/grant-admin-consent.gif" alt-text="動態 gif 顯示授與系統管理員的同意。":::
 
-如需 MSAL 詳細資訊，請見 [Microsoft 驗證程式庫（MSAL）總覽](https://docs.microsoft.com/azure/active-directory/develop/msal-overview)。
+如需 MSAL 詳細資訊，請見 [Microsoft 驗證程式庫（MSAL）總覽](/azure/active-directory/develop/msal-overview)。
 
 如需有關 Azure 中的應用程式註冊詳細資訊，請見 [新 Azure 入口網站應用程式註冊體驗](/azure/active-directory/develop/app-registration-portal-training-guide)。
 

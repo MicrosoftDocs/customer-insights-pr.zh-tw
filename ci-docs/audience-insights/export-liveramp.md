@@ -1,7 +1,7 @@
 ---
 title: LiveRamp  連接器
-description: 了解如何將資料匯出到 LiveRamp。
-ms.date: 12/02/2020
+description: 了解如何設定連接並匯出至 LiveRamp。
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597547"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760317"
 ---
-# <a name="liverampreg-connector-preview"></a>LiveRamp&reg; 連接器 (預覽)
+# <a name="export-segments-to-liverampreg-preview"></a>將客戶細分匯出至 LiveRamp&reg; (預覽版)
 
-在 LiveRamp 中啟用您的資料，與遍佈數位、社交和電視生態系統的 500 多個平台進行連接。 在 LiveRamp 中使用您的資料，將廣告行銷活動設為目標、抑制和個人化。
+在 LiveRamp 中啟動您的資料，便能連接超過 500 多個平台，橫跨數位、社群和電視等領域。 在 LiveRamp 中使用您的資料，將廣告行銷活動設為目標、抑制和個人化。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites-for-a-connection"></a>連接的先決條件
 
 - 您需要 LiveRamp 訂閱才能使用此連接器。
 - 若要取得訂閱，請直接[與 LiveRamp 連絡](https://liveramp.com/contact/)。 [進一步了解 LiveRamp 上線](https://liveramp.com/our-platform/data-onboarding/)。
 
-## <a name="connect-to-liveramp"></a>連接至 LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>設定與 LiveRamp 的連接
 
-1. 在對象見解中，前往 **系統管理員** > **匯出目的地**。
+1. 移至 **管理** > **連接**。
 
-1. 在 **LiveRamp** 圖格中選取 **設定**。
+1. 選取 **新增連接**，然後選擇 **LiveRamp** 來設定連接。
 
-1. 在 **顯示名稱** 欄位中，為目的地提供可辨識的名稱。
+1. 在 **顯示名稱** 中，給連接一個能夠辨識的名稱。 連接的名稱與類型能說明此連接。 我們建議您選取可以說明此連接用途和目標的名稱。
+
+1. 選擇可使用此連接的人員。 如果您不採取任何動作，預設值將為系統管理員。 如需詳細資訊，請參閱[允許參與者使用匯出的連接](connections.md#allow-contributors-to-use-a-connection-for-exports)。
 
 1. 為您的 LiveRamp Secure FTP (SFTP) 帳戶提供 **使用者名稱** 和 **密碼**。
 這些認證可能與您的 LiveRamp 上線認證不同。
@@ -40,15 +42,25 @@ ms.locfileid: "5597547"
 
 1. 驗證成功後，選取 **我同意** 核取方塊，表示您對 **資料隱私權和合規性** 的同意。
 
-1. 選取 **下一步** 以設定 LiveRamp 連接器。
+1. 選取 **儲存** 來完成連接。
 
-## <a name="configure-the-connector"></a>設定連接器
+## <a name="configure-an-export"></a>設定匯出
+
+若您擁有取此類型的連接的存取權，則可以設定此匯出。 如需詳細資訊，請參閱[設定匯出所需的權限](export-destinations.md#set-up-a-new-export)。
+
+1. 移至 **資料** > **匯出**。
+
+1. 若要建立新的匯出，請選取 **新增目的地**。
+
+1. 在 **匯出的連結** 欄位中，在 LiveRamp 區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的連接可供您使用。
 
 1. 在 **選擇金鑰識別元** 欄位中，選取 **電子郵件**、**名稱和位址** 或 **電話** 以傳送至 LiveRamp 進行身分識別解析。
+   > [!div class="mx-imgBorder"]
+   > ![LiveRamp 連接器與屬性對應](media/export-liveramp-segments.png "LiveRamp 連接器與屬性對應")
 
 1. 從您的統一客戶實體中對應所選金鑰識別元的相應屬性。
 
-1. 選取 **新增屬性**，以對應要傳送至 LiveRamp 的其他屬性。
+1. 選取 **新增屬性** 對應更多屬性，以傳送至 LiveRamp。
 
    > [!TIP]
    > 傳送至 LiveRamp 的金鑰識別元屬性越多，您獲得的對應率可能會越高。
@@ -57,13 +69,10 @@ ms.locfileid: "5597547"
 
 1. 選取 **儲存**。
 
-> [!div class="mx-imgBorder"]
-> ![LiveRamp 連接器與屬性對應](media/export-liveramp-segments.png "LiveRamp 連接器與屬性對應")
+儲存匯出並不會立即執行匯出。
 
-## <a name="export-the-data"></a>匯出資料
+每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。 
 
-如果所有匯出先決條件皆已齊備，就會立即開始匯出。 匯出也會與每個[排定的重新整理](system.md#schedule-tab)一起執行。
-成功完成匯出之後，就可以登入 LiveRamp 上線來啟用和散發您的資料。
 
 ## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
 

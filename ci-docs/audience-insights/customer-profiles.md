@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596857"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896317"
 ---
 # <a name="customer-profiles"></a>客戶設定檔
 
@@ -59,7 +59,7 @@ ms.locfileid: "5596857"
 
 -   **客戶設定檔圖格：** 此圖格顯示與統一客戶設定檔實體不同的值。 這些詳細資料會包括電子郵件地址、名稱、城市等等。 
 
--   **潛在興趣、潛在品牌：** 顯示您是否已經組態第一方富集作用。 它代表客戶設定檔與此客戶可能有的類似設定檔的品牌潛在利益和關聯。 如需詳細資訊，請參閱[使用品牌及興趣同質性擴充客戶設定檔](enrichment-microsoft-graph.md)。
+-   **潛在興趣、潛在品牌：** 顯示您是否已經組態第一方富集作用。 它代表客戶設定檔與此客戶可能有的類似設定檔的品牌潛在利益和關聯。 如需詳細資訊，請參閱[使用品牌及興趣同質性擴充客戶設定檔](enrichment-microsoft.md)。
 
 -   **量值：** 顯示您是否已經組態特定類型的一個或多個量值：客戶屬性量值。 它們包括圍繞您的客戶在個別客戶等級的 KPI 計算值。 如需詳細資訊，請見 [定義和管理量值](measures.md)。
 

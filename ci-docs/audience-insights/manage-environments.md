@@ -1,7 +1,7 @@
 ---
 title: 建立和管理環境
 description: 瞭解如何註冊服務及管理環境。
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598283"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887976"
 ---
 # <a name="manage-environments"></a>管理環境
 
@@ -44,6 +44,9 @@ ms.locfileid: "5598283"
 
 建立新環境的方式有兩種。 您可以指定全新的環境設定，也可以從現有環境複製一些組態設定。
 
+> [!NOTE]
+> 每個 Customer Insights 授權，組織可以建立 *兩種* 環境。 如果您的組織購買授權超過一次，請[與我們的支援小組聯繫](https://go.microsoft.com/fwlink/?linkid=2079641)，增加可用環境的數目。 如需容量和附加容量的詳細資訊，請下載 [Dynamics 365 授權指南](https://go.microsoft.com/fwlink/?LinkId=866544)。
+
 若要建立環境：
 
 1. 在應用程式的標頭中選取 **環境** 選取器。
@@ -55,14 +58,14 @@ ms.locfileid: "5598283"
 
 1. 在 **建立新環境** 對話方塊中，選取 **新增環境**。
 
-   如果您想要 [從目前的環境複製資料](#additional-considerations-for-copy-configuration-preview)，請選取 **從現有環境複製**。 您會看到組織中所有可用環境的清單，您可以從此清單複製資料。
+   如果您想要 [從目前的環境複製資料](#considerations-for-copy-configuration-preview)，請選取 **從現有環境複製**。 您會看到組織中所有可用環境的清單，您可以從此清單複製資料。
 
 1. 提供下列詳細資料：
    - **名稱**：此環境的名稱。 如果您已複製現有環境，則欄位已填入資料，但是您可以變更此欄位。
    - **地區**：服務部署和託管所在的地區。
    - **類型**：選取要建立生產環境還是沙箱環境。
 
-2. 您可選擇性選取 **進階設定** 核取方塊：
+1. 您可選擇性選取 **進階設定** 核取方塊：
 
    - **將所有資料儲存到**：指定要儲存 Customer Insights 所產生之輸出資料的位置。 您有兩個選項：**Customer Insights 儲存空間** (由 Customer Insights 團隊管理的 Azure Data Lake) 和 **Azure Data Lake Storage Gen2** (您自己的 Azure Data Lake Storage)。 預設會選取 [Customer Insights 儲存空間] 選項。
 
@@ -75,20 +78,20 @@ ms.locfileid: "5598283"
 
    - Azure Data Lake Storage Gen2 選項方面，您可以在資源式選項和訂閱式選項之間選擇進行驗證。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 **容器** 名稱無法變更，將為 "customerinsights"。
    
-   - 如果您想要使用 [預測](predictions.md)或以 Microsoft Dataverse 設定共用資料給應用程式和解決方案，請在 **與 Microsoft Dataverse 資料共用的設定並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
+   - 如果您想要使用 [預測](predictions.md)、設定應用 Microsoft Dataverse 的應用程式和解決方案的資料共用，或者從內部部署資料來源中進行資料擷取，請在 **設定與 Microsoft Dataverse 共用資料並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
 
      > [!NOTE]
      > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
      > - 當您啟用資料共用給 Microsoft Dataverse Managed Data Lake 時，目前不支援[實體中遺失值的預測](predictions.md)。
 
      > [!div class="mx-imgBorder"]
-     > ![啟用與 Microsoft Dataverse 共用資料的組態選項](media/Datasharing-with-DataverseMDL.png)
+     > ![啟用與 Microsoft Dataverse 共用資料的組態選項](media/datasharing-with-DataverseMDL.png)
 
    當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 資料檔案和 model.json 檔案會根據您執行的程序，建立並新增至各自的子資料夾。
 
    如果您建立多個 Customer Insights 環境並選擇從您的儲存體帳戶環境中儲存輸出實體，各資料夾將針對容器含有 ci_<environmentid> 每個環境分開建立。
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>複製設定的其他考量 (預覽)
+### <a name="considerations-for-copy-configuration-preview"></a>複製設定的考量 (預覽版)
 
 下列組態設定已複製，
 
@@ -136,6 +139,18 @@ ms.locfileid: "5598283"
 4. 如果環境設定為在 Azure Data Lake Storage Gen2 中儲存資料，您可以更新 **帳戶金鑰**。 不過，您無法變更 **帳戶名稱** 或 **容器** 名稱。
 
 5. 或者您可以從帳戶金鑰式連接到資源式或訂閱式連接更新。 一旦升級，您就無法在更新後恢復到帳戶金鑰。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 更新連接時，您無法變更 **容器** 資訊。
+
+6. 或者，您可以在 **設定與 Microsoft Dataverse 共用資料並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 這些功能包含運用 Microsoft Dataverse 與應用程式和解決方案共用資料、從內部部署資料來源擷取資料、或使用[預測](predictions.md)。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
+
+   > [!NOTE]
+   > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
+   > - 當您以 Microsoft Dataverse Managed Data Lake 啟用資料共用時，目前不支援[預測實體中缺少的值](predictions.md)。
+
+   當您啟用與 Microsoft Dataverse 的資料共用，將對資料來源和其他程序觸發一次完整的重新整理。 如果程序目前正在執行並排入佇列，您將看不到用來啟用與 Microsoft Dataverse 共用資料的選項。 您可以等待這些程序完成，或者取消它們以啟用資料共用。 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="啟用與 Microsoft Dataverse 共用資料的設定選項。":::
+   
+   當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 根據您執行的程序，會建立資料檔案和 model.json 並新增至各自的子資料夾。
 
 ## <a name="reset-an-existing-environment"></a>重設現有環境中
 

@@ -1,7 +1,7 @@
 ---
 title: 管理使用者權限
 description: 了解有關權限和使用者角色。
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595692"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760363"
 ---
 # <a name="user-permissions"></a>使用者權限
 
@@ -31,10 +31,10 @@ ms.locfileid: "5595692"
 - 檢視並探索 **擴充** 頁面。
 - 使用 **實體** 頁面探索和匯出實體。
 - 使用 **系統** 頁面檢視系統程序的狀態。
-- 從 **區段** 頁面匯出區段。
+- 在 **匯出** 頁面中查看匯出。
 - 安裝和使用 **Power BI Customer Insights** 儀表板。
 
-## <a name="contributor"></a>投稿人
+## <a name="contributor"></a>參與者
 
 - 檢視者可用的所有權限。
 - 使用 **資料來源** 頁面載入和轉換資料。
@@ -43,15 +43,17 @@ ms.locfileid: "5595692"
 - 使用 **區段** 頁面建立區段。
 - 使用 **量值** 頁面建立量值。
 - 從 **擴充** 頁面管理設定並擴充客戶設定檔 (僅適用於第一方擴充內容)。
+- 以與參與者共用的連接來管理和建立匯出。 [進一步了解系統管理員如何讓參與者使用匯出的連接](connections.md#allow-contributors-to-use-a-connection-for-exports)。
 
-## <a name="administrator"></a>系統管理員
+## <a name="administrator"></a>管理員
 
 - 參與者可用的所有權限。
 - 在 **系統** 頁面上變更設定，包括工作語言和系統流程的重新整理排程。
 - 使用 **權限** 頁面查看和新增權限。
 - 使用 **搜尋和篩選索引** 頁面 (透過 **客戶** 頁面存取) 設定客戶頁面的搜尋和篩選條件定義。
-- 使用 **匯出目的地** 頁面定義 Dynamics 365 Sales 區段目的地。
+- 管理連接，並在 **連接** 頁面上允許其他使用者角色使用。
 - 從 **擴充** 頁面管理設定並擴充客戶設定檔 (適用於所有擴充內容)。
+- 在 **匯出** 頁面上管理和建立匯出。
 - 安裝和使用 **客戶卡片增益集**。
 - 新增和使用 **Power Apps 連接器**。
 - 啟用 [Customer Insights API](apis.md) 的使用方式。

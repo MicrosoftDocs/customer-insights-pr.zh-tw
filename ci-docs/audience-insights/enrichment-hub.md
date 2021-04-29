@@ -1,7 +1,7 @@
 ---
 title: 富集統一的客戶設定檔
 description: 使用功能富集您的客戶資料。
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597685"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895995"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -27,8 +27,8 @@ ms.locfileid: "5597685"
 
 在 **探索** 索引標籤上，您可找到下列擴充內容：
 
-- Microsoft Graph 所提供的[品牌](enrichment-microsoft-graph.md)
-- Microsoft Graph 所提供的[興趣](enrichment-microsoft-graph.md)
+- [Brands](enrichment-microsoft.md) 由 Microsoft 提供
+- [Interests](enrichment-microsoft.md) 由 Microsoft 提供
 - Leadspace 提供的 [公司資料](enrichment-leadspace.md)
 - Experian 所提供的[人口統計資料](enrichment-experian.md)
 - HERE Technologies 提供的 [位置資料](enrichment-here.md)
@@ -40,7 +40,7 @@ ms.locfileid: "5597685"
 
 移至 **我的擴充內容** 以查看所有已設定的擴充內容。 每個擴充內容都表示為一列，其中包含有關擴充內容的其他資訊。
 
-選取擴充內容以查看可用的選項。 或者，也可以選取清單項目上的省略符號 (...) 來查看選項。
+選取擴充內容以查看可用的選項。 您也可以選取清單上專案的省略號 (...) 來查看選項。
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="用來管理擴充清單中擴充內容的選項":::
 
@@ -52,5 +52,12 @@ ms.locfileid: "5597685"
 
 您可以選取清單中的擴充內容，一次執行或停用多項擴充。 檢視和編輯選項無法用來執行大量動作，僅適用於一次執行一項擴充。
 
+## <a name="enrichments-and-connections"></a>擴充與連接
+
+協力廠商擴充設定為要使用[連接](connections.md)，連結由系統管理員設定認證，並同意資料傳輸。 系統管理員和參與者都可以使用這些連接設定擴充。  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>多個相同類型的擴充
+
+在擴充設定期間，會指定要擴充的實體，這可讓您擴充個人資料的子集。 例如，只擴充特定客戶細分的資料。 您可以設定數個相同類型的擴充，並重複使用相同的連接。 某些擴充將限制相同類型的擴充可建立的數量。 在 **擴充** 頁面上可以看到限制和目前使用的值 。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
