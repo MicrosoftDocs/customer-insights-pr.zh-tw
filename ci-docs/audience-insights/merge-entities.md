@@ -1,7 +1,7 @@
 ---
 title: 將實體合併到資料統整中
 description: 合併實體以建立統整的客戶設定檔。
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,85 +9,121 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896501"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085566"
 ---
-# <a name="merge-entities"></a><span data-ttu-id="10001-103">合併實體</span><span class="sxs-lookup"><span data-stu-id="10001-103">Merge entities</span></span>
+# <a name="merge-entities"></a><span data-ttu-id="f08be-103">合併實體</span><span class="sxs-lookup"><span data-stu-id="f08be-103">Merge entities</span></span>
 
-<span data-ttu-id="10001-104">合併階段是資料統整程序的最後一個階段。</span><span class="sxs-lookup"><span data-stu-id="10001-104">The merge phase is the last phase in the data unification process.</span></span> <span data-ttu-id="10001-105">其目的在於協調衝突的資料。</span><span class="sxs-lookup"><span data-stu-id="10001-105">Its purpose is reconciling conflicting data.</span></span> <span data-ttu-id="10001-106">衝突資料的範例包括位於兩個資料集中的客戶名稱，但在各資料集中略有不同 (例如「Grant Marshall」與「Grant Marshal」)，或是格式不同的電話號碼 (617-803-091X 與 617803091X)。</span><span class="sxs-lookup"><span data-stu-id="10001-106">Examples of conflicting data could include a customer name found in two of your datasets but that shows up a little differently in each ("Grant Marshall" versus "Grant Marshal"), or a phone number that differs in format (617-803-091X versus 617803091X).</span></span> <span data-ttu-id="10001-107">合併這些相互衝突的資料點，是依屬性逐一進行。</span><span class="sxs-lookup"><span data-stu-id="10001-107">Merging those conflicting data points is done on an attribute-by-attribute basis.</span></span>
+<span data-ttu-id="f08be-104">合併階段是資料統整程序的最後一個階段。</span><span class="sxs-lookup"><span data-stu-id="f08be-104">The merge phase is the last phase in the data unification process.</span></span> <span data-ttu-id="f08be-105">其目的在於協調衝突的資料。</span><span class="sxs-lookup"><span data-stu-id="f08be-105">Its purpose is reconciling conflicting data.</span></span> <span data-ttu-id="f08be-106">衝突資料的範例包括位於兩個資料集中的客戶名稱，但在各資料集中略有不同 (例如「Grant Marshall」與「Grant Marshal」)，或是格式不同的電話號碼 (617-803-091X 與 617803091X)。</span><span class="sxs-lookup"><span data-stu-id="f08be-106">Examples of conflicting data could include a customer name found in two of your datasets but that shows up a little differently in each ("Grant Marshall" versus "Grant Marshal"), or a phone number that differs in format (617-803-091X versus 617803091X).</span></span> <span data-ttu-id="f08be-107">合併這些相互衝突的資料點，是依屬性逐一進行。</span><span class="sxs-lookup"><span data-stu-id="f08be-107">Merging those conflicting data points is done on an attribute-by-attribute basis.</span></span>
 
-<span data-ttu-id="10001-108">完成 [比對階段](match-entities.md)之後，您可以透過在 **統整** 頁面上選取 **合併** 圖標來開始合併階段。</span><span class="sxs-lookup"><span data-stu-id="10001-108">After completing the [match phase](match-entities.md), you start the merge phase by selecting the **Merge** tile on the **Unify** page.</span></span>
+:::image type="content" source="media/merge-fields-page.png" alt-text="資料統整處理中的合併頁面，顯示定義整合客戶個人資料且具有合併欄位的表格。":::
 
-## <a name="review-system-recommendations"></a><span data-ttu-id="10001-109">檢閱系統建議</span><span class="sxs-lookup"><span data-stu-id="10001-109">Review system recommendations</span></span>
+<span data-ttu-id="f08be-109">完成 [比對階段](match-entities.md)之後，您可以透過在 **統整** 頁面上選取 **合併** 圖標來開始合併階段。</span><span class="sxs-lookup"><span data-stu-id="f08be-109">After completing the [match phase](match-entities.md), you start the merge phase by selecting the **Merge** tile on the **Unify** page.</span></span>
 
-<span data-ttu-id="10001-110">在 **合併** 頁面上，您可以選擇並排除要在您的統整客戶設定檔實體 (設定程序的結果) 中合併的屬性。</span><span class="sxs-lookup"><span data-stu-id="10001-110">On the **Merge** page, you choose and exclude attributes to merge within your unified customer profile entity (the result of the configuration process).</span></span> <span data-ttu-id="10001-111">某些屬性會由系統自動合併。</span><span class="sxs-lookup"><span data-stu-id="10001-111">Some attributes are automatically merged by the system.</span></span>
+## <a name="review-system-recommendations"></a><span data-ttu-id="f08be-110">檢閱系統建議</span><span class="sxs-lookup"><span data-stu-id="f08be-110">Review system recommendations</span></span>
 
-### <a name="view-merged-attributes"></a><span data-ttu-id="10001-112">檢視合併的屬性</span><span class="sxs-lookup"><span data-stu-id="10001-112">View merged attributes</span></span>
+<span data-ttu-id="f08be-111">在 **資料** > **統整** > **合併** 中，您可以選擇並排除一些屬性，不要合併到整合客戶個人資料實體中。</span><span class="sxs-lookup"><span data-stu-id="f08be-111">On **Data** > **Unify** > **Merge**, you choose and exclude attributes to merge within your unified customer profile entity.</span></span> <span data-ttu-id="f08be-112">整合客戶個人資料是資料統整處理的結果。</span><span class="sxs-lookup"><span data-stu-id="f08be-112">The unified customer profile is the result of the data unification process.</span></span> <span data-ttu-id="f08be-113">某些屬性會由系統自動合併。</span><span class="sxs-lookup"><span data-stu-id="f08be-113">Some attributes are automatically merged by the system.</span></span>
 
-<span data-ttu-id="10001-113">若要查看其中一個自動合併屬性所包含的屬性，請選取該合併屬性。</span><span class="sxs-lookup"><span data-stu-id="10001-113">To view the attributes that are included in one of your automatically merged attributes, select that merged attribute.</span></span> <span data-ttu-id="10001-114">構成該合併屬性的兩個屬性會顯示在合併屬性下方的兩個新列中。</span><span class="sxs-lookup"><span data-stu-id="10001-114">The two attributes that compose that merged attribute display in two new rows beneath the merged attribute.</span></span>
+<span data-ttu-id="f08be-114">若要查看包含在自動合併屬性中的任一種屬性，請在表格的 **客戶欄位** 索引標籤中，選取該合併屬性。</span><span class="sxs-lookup"><span data-stu-id="f08be-114">To view the attributes that are included in one of your automatically merged attributes, select that merged attribute in the **Customer fields** tab of the table.</span></span> <span data-ttu-id="f08be-115">構成該合併屬性的屬性會顯示在合併屬性下方的兩個新列中。</span><span class="sxs-lookup"><span data-stu-id="f08be-115">The attributes that compose that merged attribute display in two new rows beneath the merged attribute.</span></span>
+
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a><span data-ttu-id="f08be-116">分割、重新命名、排除及編輯合併欄位</span><span class="sxs-lookup"><span data-stu-id="f08be-116">Separate, rename, exclude, and edit merged fields</span></span>
+
+<span data-ttu-id="f08be-117">您可以變更系統處理合併屬性的方式，生成整合客戶個人資料。</span><span class="sxs-lookup"><span data-stu-id="f08be-117">You can change how the system processes merged attributes to generate the unified customer profile.</span></span> <span data-ttu-id="f08be-118">選取 **顯示詳細資訊**，然後選擇要變更的內容。</span><span class="sxs-lookup"><span data-stu-id="f08be-118">Select **Show more** and choose what you want to change.</span></span>
+
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Options in the Show more drop-down menu to manage merged attributes.":::
+
+<span data-ttu-id="f08be-120">如需詳細資訊，請參閱下節。</span><span class="sxs-lookup"><span data-stu-id="f08be-120">For more information, see the following sections.</span></span>
+
+## <a name="separate-merged-fields"></a><span data-ttu-id="f08be-121">分割合併欄位</span><span class="sxs-lookup"><span data-stu-id="f08be-121">Separate merged fields</span></span>
+
+<span data-ttu-id="f08be-122">若要分割合併欄位，請在表格中尋找屬性。</span><span class="sxs-lookup"><span data-stu-id="f08be-122">To separate merged fields, find the attribute in the table.</span></span> <span data-ttu-id="f08be-123">分割欄位會以個別資料點顯示在整合的客戶個人資料上。</span><span class="sxs-lookup"><span data-stu-id="f08be-123">Separated fields show as individual data points on the unified customer profile.</span></span> 
+
+1. <span data-ttu-id="f08be-124">選取合併欄位。</span><span class="sxs-lookup"><span data-stu-id="f08be-124">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="f08be-125">選取 **顯示更多**，然後選擇 **分割欄位**。</span><span class="sxs-lookup"><span data-stu-id="f08be-125">Select **Show more** and choose **Separate fields**.</span></span>
+ 
+1. <span data-ttu-id="f08be-126">確認分割。</span><span class="sxs-lookup"><span data-stu-id="f08be-126">Confirm the separation.</span></span>
+
+1. <span data-ttu-id="f08be-127">選取 **儲存** 並 **執行** 來處理變更。</span><span class="sxs-lookup"><span data-stu-id="f08be-127">Select **Save** and **Run** to process the changes.</span></span>
+
+## <a name="rename-merged-fields"></a><span data-ttu-id="f08be-128">重新命名合併欄位</span><span class="sxs-lookup"><span data-stu-id="f08be-128">Rename merged fields</span></span>
+
+<span data-ttu-id="f08be-129">變更合併屬性的顯示名稱。</span><span class="sxs-lookup"><span data-stu-id="f08be-129">Change the display name of merged attributes.</span></span> <span data-ttu-id="f08be-130">您無法變更輸出實體的名稱。</span><span class="sxs-lookup"><span data-stu-id="f08be-130">You can't change the name of the output entity.</span></span>
+
+1. <span data-ttu-id="f08be-131">選取合併欄位。</span><span class="sxs-lookup"><span data-stu-id="f08be-131">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="f08be-132">選取 **顯示更多**，然後選擇 **重新命名**。</span><span class="sxs-lookup"><span data-stu-id="f08be-132">Select **Show more** and choose **Rename**.</span></span>
+
+1. <span data-ttu-id="f08be-133">確認變更顯示名稱。</span><span class="sxs-lookup"><span data-stu-id="f08be-133">Confirm the changed display name.</span></span> 
+
+1. <span data-ttu-id="f08be-134">選取 **儲存** 並 **執行** 來處理變更。</span><span class="sxs-lookup"><span data-stu-id="f08be-134">Select **Save** and **Run** to process the changes.</span></span>
+
+## <a name="exclude-merged-fields"></a><span data-ttu-id="f08be-135">排除合併欄位</span><span class="sxs-lookup"><span data-stu-id="f08be-135">Exclude merged fields</span></span>
+
+<span data-ttu-id="f08be-136">從整合的客戶個人資料中排除屬性。</span><span class="sxs-lookup"><span data-stu-id="f08be-136">Exclude an attribute from the unified customer profile.</span></span> <span data-ttu-id="f08be-137">如果欄位是用於其他程序中 (例如，客戶細分)，則請先從這些程序中移除該欄位，然後再從客戶個人資料中排除它。</span><span class="sxs-lookup"><span data-stu-id="f08be-137">If the field is used in other processes, for example in a segment, remove it from these processes before excluding it from the customer profile.</span></span> 
+
+1. <span data-ttu-id="f08be-138">選取合併欄位。</span><span class="sxs-lookup"><span data-stu-id="f08be-138">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="f08be-139">選取 **顯示更多**，然後選擇 **排除**。</span><span class="sxs-lookup"><span data-stu-id="f08be-139">Select **Show more** and choose **Exclude**.</span></span>
+
+1. <span data-ttu-id="f08be-140">確認排除。</span><span class="sxs-lookup"><span data-stu-id="f08be-140">Confirm the exclusion.</span></span>
+
+1. <span data-ttu-id="f08be-141">選取 **儲存** 並 **執行** 來處理變更。</span><span class="sxs-lookup"><span data-stu-id="f08be-141">Select **Save** and **Run** to process the changes.</span></span> 
+
+<span data-ttu-id="f08be-142">在 **合併** 頁面上，選取 **排除欄位** 以查看所有排除欄位的清單。</span><span class="sxs-lookup"><span data-stu-id="f08be-142">On the **Merge** page, select **Excluded fields** to see the list of all excluded fields.</span></span> <span data-ttu-id="f08be-143">此窗格可新增排除欄位。</span><span class="sxs-lookup"><span data-stu-id="f08be-143">This pane lets you add excluded fields back.</span></span>
+
+## <a name="manually-combine-fields"></a><span data-ttu-id="f08be-144">手動結合欄位</span><span class="sxs-lookup"><span data-stu-id="f08be-144">Manually combine fields</span></span>
+
+<span data-ttu-id="f08be-145">手動指定合併屬性。</span><span class="sxs-lookup"><span data-stu-id="f08be-145">Specify a merged attribute manually.</span></span> 
+
+1. <span data-ttu-id="f08be-146">在 **合併** 頁面上，選取 **結合欄位**。</span><span class="sxs-lookup"><span data-stu-id="f08be-146">On the **Merge** page, select **Combine fields**.</span></span>
+
+1. <span data-ttu-id="f08be-147">提供 **名稱** 和 **輸出欄位名稱**。</span><span class="sxs-lookup"><span data-stu-id="f08be-147">Provide a **Name** and an **Output field name**.</span></span>
+
+1. <span data-ttu-id="f08be-148">選擇欄位以新增。</span><span class="sxs-lookup"><span data-stu-id="f08be-148">Choose a field to add.</span></span> <span data-ttu-id="f08be-149">選擇 **新增欄位** 結合更多欄位。</span><span class="sxs-lookup"><span data-stu-id="f08be-149">Select **Add fields** to combine more fields.</span></span>
+
+1. <span data-ttu-id="f08be-150">確認排除。</span><span class="sxs-lookup"><span data-stu-id="f08be-150">Confirm the exclusion.</span></span>
+
+1. <span data-ttu-id="f08be-151">選取 **儲存** 並 **執行** 來處理變更。</span><span class="sxs-lookup"><span data-stu-id="f08be-151">Select **Save** and **Run** to process the changes.</span></span> 
+
+## <a name="change-the-order-of-fields"></a><span data-ttu-id="f08be-152">變更欄位順序</span><span class="sxs-lookup"><span data-stu-id="f08be-152">Change the order of fields</span></span>
+
+<span data-ttu-id="f08be-153">某些實體比其他實體包含更多詳細資料。</span><span class="sxs-lookup"><span data-stu-id="f08be-153">Some entities contain more details than others.</span></span> <span data-ttu-id="f08be-154">如果實體包含欄位的最新資料，您可以在合併值時，設定它優先於其他實體。</span><span class="sxs-lookup"><span data-stu-id="f08be-154">If an entity includes the latest data about a field, you can prioritize it over other entities when merging values.</span></span>
+
+1. <span data-ttu-id="f08be-155">選取合併欄位。</span><span class="sxs-lookup"><span data-stu-id="f08be-155">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="f08be-156">選取 **顯示更多**，然後選擇 **編輯**。</span><span class="sxs-lookup"><span data-stu-id="f08be-156">Select **Show more** and choose **Edit**.</span></span>
+
+1. <span data-ttu-id="f08be-157">在 **合併欄位** 窗格中，選取 **上移/下移** 來設定順序，或將它們拖放至想要的位置。</span><span class="sxs-lookup"><span data-stu-id="f08be-157">In the **Combine fields** pane, select **Move up/down** to set the order or drag and drop them in the desired position.</span></span>
+
+1. <span data-ttu-id="f08be-158">確認變更。</span><span class="sxs-lookup"><span data-stu-id="f08be-158">Confirm the change.</span></span>
+
+1. <span data-ttu-id="f08be-159">選取 **儲存** 並 **執行** 來處理變更。</span><span class="sxs-lookup"><span data-stu-id="f08be-159">Select **Save** and **Run** to process the changes.</span></span>
+
+## <a name="run-your-merge"></a><span data-ttu-id="f08be-160">執行合併</span><span class="sxs-lookup"><span data-stu-id="f08be-160">Run your merge</span></span>
+
+<span data-ttu-id="f08be-161">不論您手動合併屬性或讓系統合併，您都可以執行合併。</span><span class="sxs-lookup"><span data-stu-id="f08be-161">Whether you manually merge attributes or let the system merge them, you can always run your merge.</span></span> <span data-ttu-id="f08be-162">在 **合併** 頁面上，選取 **執行** 來開始處理。</span><span class="sxs-lookup"><span data-stu-id="f08be-162">Select **Run** on the **Merge** page to start the process.</span></span>
 
 > [!div class="mx-imgBorder"]
-> <span data-ttu-id="10001-115">![選取合併的屬性](media/configure-data-merge-profile-attributes.png "選取合併的屬性")</span><span class="sxs-lookup"><span data-stu-id="10001-115">![Select merged attribute](media/configure-data-merge-profile-attributes.png "Select merged attribute")</span></span>
+> <span data-ttu-id="f08be-163">![資料合併儲存與執行](media/configure-data-merge-save-run.png "資料合併儲存與執行")</span><span class="sxs-lookup"><span data-stu-id="f08be-163">![Data merge Save and Run](media/configure-data-merge-save-run.png "Data merge Save and Run")</span></span>
 
-### <a name="separate-merged-attributes"></a><span data-ttu-id="10001-116">分割合併的屬性</span><span class="sxs-lookup"><span data-stu-id="10001-116">Separate merged attributes</span></span>
+<span data-ttu-id="f08be-164">若只想要查看反映在整合客戶實體中的輸出，請選取 **只執行合併**。</span><span class="sxs-lookup"><span data-stu-id="f08be-164">Choose **Run only Merge** if you only want to see the output reflected in the unified customer entity.</span></span> <span data-ttu-id="f08be-165">下游程序將會按照[排程中定義的重新整理](system.md#schedule-tab)來重新整理。</span><span class="sxs-lookup"><span data-stu-id="f08be-165">Downstream processes will be refreshed as [defined in the refresh schedule](system.md#schedule-tab).</span></span>
 
-<span data-ttu-id="10001-117">若要分割或取消合併任何自動合併的屬性，請在 **設定檔屬性** 表格中尋找屬性。</span><span class="sxs-lookup"><span data-stu-id="10001-117">To separate or unmerge any of the automatically merged attributes, find the attribute in the **Profile attributes** table.</span></span>
+<span data-ttu-id="f08be-166">選擇 **執行合併及下游程序** 以變更來重新整理系統。</span><span class="sxs-lookup"><span data-stu-id="f08be-166">Choose **Run Merge and downstream processes** to refresh the system with your changes.</span></span> <span data-ttu-id="f08be-167">所有程序 (包括擴充、客戶細分和量值) 都會自動重新執行。</span><span class="sxs-lookup"><span data-stu-id="f08be-167">All processes, including enrichment, segments, and measures will rerun automatically.</span></span> <span data-ttu-id="f08be-168">在所有下游程序完成後，客戶個人資料會反映出您做的所有變更。</span><span class="sxs-lookup"><span data-stu-id="f08be-168">After all downstream processes have completed, the customer profiles reflect any changes you made.</span></span>
 
-1. <span data-ttu-id="10001-118">選取省略符號 (...) 按鈕。</span><span class="sxs-lookup"><span data-stu-id="10001-118">Select the ellipsis (...) button.</span></span>
-  
-2. <span data-ttu-id="10001-119">在下拉式清單中，選取 **分割欄位**。</span><span class="sxs-lookup"><span data-stu-id="10001-119">In the dropdown list, select **Separate fields**.</span></span>
-
-### <a name="remove-merged-attributes"></a><span data-ttu-id="10001-120">移除合併的屬性</span><span class="sxs-lookup"><span data-stu-id="10001-120">Remove merged attributes</span></span>
-
-<span data-ttu-id="10001-121">若要從最終的客戶設定檔實體中排除屬性，請在 **設定檔屬性** 表格中找到它。</span><span class="sxs-lookup"><span data-stu-id="10001-121">To exclude an attribute from the final customer profile entity, find it in the **Profile attributes** table.</span></span>
-
-1. <span data-ttu-id="10001-122">選取省略符號 (...) 按鈕。</span><span class="sxs-lookup"><span data-stu-id="10001-122">Select the ellipsis (...) button.</span></span>
-  
-2. <span data-ttu-id="10001-123">在下拉式清單中，選取 **不合併**。</span><span class="sxs-lookup"><span data-stu-id="10001-123">In the dropdown list, select **Don't merge**.</span></span>
-
-   <span data-ttu-id="10001-124">屬性會移至 **已從客戶記錄中移除** 區段。</span><span class="sxs-lookup"><span data-stu-id="10001-124">The attribute is moved to the **Removed from customer record** section.</span></span>
-
-## <a name="manually-add-a-merged-attribute"></a><span data-ttu-id="10001-125">手動新增合併的屬性</span><span class="sxs-lookup"><span data-stu-id="10001-125">Manually add a merged attribute</span></span>
-
-<span data-ttu-id="10001-126">若要新增合併的屬性，請移至 **合併** 頁面。</span><span class="sxs-lookup"><span data-stu-id="10001-126">To add a merged attribute, go to the **Merge** page.</span></span>
-
-1. <span data-ttu-id="10001-127">選取 **新增合併的屬性**。</span><span class="sxs-lookup"><span data-stu-id="10001-127">Select **Add merged attribute**.</span></span>
-
-2. <span data-ttu-id="10001-128">提供 **名稱** 以供稍後在 **合併** 頁面上識別它。</span><span class="sxs-lookup"><span data-stu-id="10001-128">Provide a **Name** to identify it on the **Merge** page later.</span></span>
-
-3. <span data-ttu-id="10001-129">或者，提供 **顯示名稱**，將顯示在統整客戶設定檔實體中。</span><span class="sxs-lookup"><span data-stu-id="10001-129">Optionally, provide a **Display name** to appear in the unified Customer Profile entity.</span></span>
-
-4. <span data-ttu-id="10001-130">設定 **選取重複的屬性**，以選取您要從相符的實體合併的屬性。</span><span class="sxs-lookup"><span data-stu-id="10001-130">Configure **Select duplicate attributes** to select the attributes that you want to merge from the matched entities.</span></span> <span data-ttu-id="10001-131">您也可以搜尋屬性。</span><span class="sxs-lookup"><span data-stu-id="10001-131">You can also search for attributes.</span></span>
-
-5. <span data-ttu-id="10001-132">設定 **依重要性排名**，以優先處理某個屬性。</span><span class="sxs-lookup"><span data-stu-id="10001-132">Set the **Rank by importance** to prioritize one attribute above the others.</span></span> <span data-ttu-id="10001-133">例如，如果 *WebAccountCSV* 實體包含有關 *全名* 屬性的最準確資料，您可以選取 *WebAccountCSV*，將此實體的優先順序設定高於 *ContactCSV*。</span><span class="sxs-lookup"><span data-stu-id="10001-133">For example, if the *WebAccountCSV* entity includes the most accurate data about the *Full Names* attribute, you could prioritize this entity over *ContactCSV* by selecting *WebAccountCSV*.</span></span> <span data-ttu-id="10001-134">因此，在提取 *全名* 屬性的值時，*WebAccountCSV* 會移至第一優先順序，而 *ContactCSV* 則移至第二優先順序。</span><span class="sxs-lookup"><span data-stu-id="10001-134">As a result, *WebAccountCSV* moves to first priority, while *ContactCSV* moves to second priority when pulling values for the *Full Name* attribute.</span></span>
-
-## <a name="run-your-merge"></a><span data-ttu-id="10001-135">執行合併</span><span class="sxs-lookup"><span data-stu-id="10001-135">Run your merge</span></span>
-
-<span data-ttu-id="10001-136">不論您手動合併屬性或讓系統合併，您都可以執行合併。</span><span class="sxs-lookup"><span data-stu-id="10001-136">Whether you manually merge attributes or let the system merge them, you can always run your merge.</span></span> <span data-ttu-id="10001-137">在 **合併** 頁面上，選取 **執行** 來開始處理。</span><span class="sxs-lookup"><span data-stu-id="10001-137">Select **Run** on the **Merge** page to start the process.</span></span>
-
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="10001-138">![資料合併儲存與執行](media/configure-data-merge-save-run.png "資料合併儲存與執行")</span><span class="sxs-lookup"><span data-stu-id="10001-138">![Data merge Save and Run](media/configure-data-merge-save-run.png "Data merge Save and Run")</span></span>
-
-<span data-ttu-id="10001-139">若要進行其他變更並重新執行步驟，您可以取消進行中的合併。</span><span class="sxs-lookup"><span data-stu-id="10001-139">To make additional changes and rerun the step, you can cancel an in-progress merge.</span></span> <span data-ttu-id="10001-140">選取 **重新整理中...**，然後在出現的側面窗格中選取 **取消工作**。</span><span class="sxs-lookup"><span data-stu-id="10001-140">Select **Refreshing ...** and select **Cancel job**  in the side pane that appears.</span></span>
-
-<span data-ttu-id="10001-141">在 **重新整理中** 文字變更為 **成功** 後，已根據您定義的原則完成合併並解決資料中的衝突。</span><span class="sxs-lookup"><span data-stu-id="10001-141">After the **Refreshing ...** text changes to **Successful**, merge has completed and resolved contradictions in your data according to the policies you defined.</span></span> <span data-ttu-id="10001-142">合併和未併入的屬性會包含在統整設定檔實體中。</span><span class="sxs-lookup"><span data-stu-id="10001-142">Merged and unmerged attributes are included in the unified profile entity.</span></span> <span data-ttu-id="10001-143">排除的屬性不會包含在統整設定檔實體中。</span><span class="sxs-lookup"><span data-stu-id="10001-143">Excluded attributes aren't included in the unified profile entity.</span></span>
-
-<span data-ttu-id="10001-144">如果這不是您第一次成功地進行合併，所有下游程序（包括擴充、區段化和量值）都會自動重新執行。</span><span class="sxs-lookup"><span data-stu-id="10001-144">If it wasn't the first time you ran a merge successfully, all downstream processes, including enrichment, segmentation, and measures will rerun automatically.</span></span> <span data-ttu-id="10001-145">在所有下游程序重新執行之後，客戶設定檔會反映您所做的任何變更。</span><span class="sxs-lookup"><span data-stu-id="10001-145">After all downstream processes have been rerun, the customer profiles reflect any changes you made.</span></span>
+<span data-ttu-id="f08be-169">若要進行更多變更並重新執行步驟，您可以取消進行中的合併。</span><span class="sxs-lookup"><span data-stu-id="f08be-169">To make more changes and rerun the step, you can cancel an in-progress merge.</span></span> <span data-ttu-id="f08be-170">選取 **重新整理中...**，然後在出現的側面窗格中選取 **取消工作**。</span><span class="sxs-lookup"><span data-stu-id="f08be-170">Select **Refreshing ...** and select **Cancel job**  in the side pane that appears.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="10001-146">任務/流程目前有 [六種類型的狀態](system.md#status-types)。</span><span class="sxs-lookup"><span data-stu-id="10001-146">There are [six types of status](system.md#status-types) for tasks/processes.</span></span> <span data-ttu-id="10001-147">此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。</span><span class="sxs-lookup"><span data-stu-id="10001-147">Additionally, most processes [depend on other downstream processes](system.md#refresh-policies).</span></span> <span data-ttu-id="10001-148">您可以選取程序的狀態，以查看整個工作的進度詳細資料。</span><span class="sxs-lookup"><span data-stu-id="10001-148">You can select the status of a process to see details on the progress of the entire job.</span></span> <span data-ttu-id="10001-149">針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。</span><span class="sxs-lookup"><span data-stu-id="10001-149">After selecting **See details** for one of the job's tasks, you find additional information: processing time, the last processing date, and all errors and warnings associated with the task.</span></span>
+> <span data-ttu-id="f08be-171">任務/流程目前有 [六種類型的狀態](system.md#status-types)。</span><span class="sxs-lookup"><span data-stu-id="f08be-171">There are [six types of status](system.md#status-types) for tasks/processes.</span></span> <span data-ttu-id="f08be-172">此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。</span><span class="sxs-lookup"><span data-stu-id="f08be-172">Additionally, most processes [depend on other downstream processes](system.md#refresh-policies).</span></span> <span data-ttu-id="f08be-173">您可以選取程序的狀態，以查看整個工作的進度詳細資料。</span><span class="sxs-lookup"><span data-stu-id="f08be-173">You can select the status of a process to see details on the progress of the entire job.</span></span> <span data-ttu-id="f08be-174">針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。</span><span class="sxs-lookup"><span data-stu-id="f08be-174">After selecting **See details** for one of the job's tasks, you find additional information: processing time, the last processing date, and all errors and warnings associated with the task.</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="10001-150">後續步驟</span><span class="sxs-lookup"><span data-stu-id="10001-150">Next Step</span></span>
+## <a name="next-step"></a><span data-ttu-id="f08be-175">後續步驟</span><span class="sxs-lookup"><span data-stu-id="f08be-175">Next Step</span></span>
 
-<span data-ttu-id="10001-151">設定[活動](activities.md)、[擴充](enrichment-hub.md)或[關聯](relationships.md)，以進一步了解您的客戶。</span><span class="sxs-lookup"><span data-stu-id="10001-151">Configure [activities](activities.md), [enrichment](enrichment-hub.md), or [relationships](relationships.md) to gain more insights about your customers.</span></span>
+<span data-ttu-id="f08be-176">設定[活動](activities.md)、[擴充](enrichment-hub.md)或[關聯](relationships.md)，以進一步了解您的客戶。</span><span class="sxs-lookup"><span data-stu-id="f08be-176">Configure [activities](activities.md), [enrichment](enrichment-hub.md), or [relationships](relationships.md) to gain more insights about your customers.</span></span>
 
-<span data-ttu-id="10001-152">如果您已設定活動、擴充或關聯，或者您已定義區段時，系統會自動加以處理來使用最新的客戶資料。</span><span class="sxs-lookup"><span data-stu-id="10001-152">If you already configured activities, enrichment, or relationships, or if you defined segments, they'll be processed automatically to use the latest customer data.</span></span>
-
-
-
+<span data-ttu-id="f08be-177">如果您已設定活動、擴充或客戶細分，則會自動處理它們，以使用最新的客戶資料。</span><span class="sxs-lookup"><span data-stu-id="f08be-177">If you already configured activities, enrichment, or segments, they'll be processed automatically to use the latest customer data.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
