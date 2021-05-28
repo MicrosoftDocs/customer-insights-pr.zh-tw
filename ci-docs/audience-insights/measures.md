@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887930"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049240"
 ---
 # <a name="define-and-manage-measures"></a>定義和管理量值
 
@@ -34,7 +34,7 @@ ms.locfileid: "5887930"
 
 1. 選取 **編輯名稱**，並提供量值的 **名稱**。 
    > [!NOTE]
-   > 如果您的新量值設定只有兩個欄位 (例如：CustomerID 和一個計算)，則會在名稱為 Customer_Measure 的系統生成實體中將輸出新增為新資料行。 而且，您將可以在整合客戶設定檔中看到量值的值。 其他量值會生成自己的實體。
+   > 如果您的新量值設定只有兩個欄位 (例如，CustomerID 和一個計算)，則會將輸出會為系統生成的實體新增一欄，名稱為 Customer_Measure。 而且，您將可以在整合客戶設定檔中看到量值的值。 其他量值會生成自己的實體。
 
 1. 在設定區域中，於 **選取函數** 下拉式功能表中選擇彙總函式。 彙總函式包括： 
    - **Sum**

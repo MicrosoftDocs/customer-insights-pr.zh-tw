@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595554"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085612"
 ---
 # <a name="match-entities"></a>比對實體
 
@@ -103,6 +103,18 @@ ms.locfileid: "5595554"
 
 > [!NOTE]
 > 規則的順序很重要。 比對演算法會嘗試根據您的第一個規則進行比對，並且只有在第一個規則沒有相符的時後繼續進行第二個規則。
+
+### <a name="change-the-entity-order-in-match-rules"></a>變更比對規則中的實體順序
+
+您可以為比對規則重新排序實體，以變更它們的處理順序。 由於變更的順序而發生衝突的規則將會被移除。 您必須用更新設定重新建立被移除的規則。
+
+1. 移至 **資料** > **統整** > **比對** 並選取 **編輯**。
+
+1. 在 **編輯規則** 窗格中，選取 **上移/下移** 控制項，或拖放實體以變更順序。
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="變更在 比對階段處理實體順序的選項。":::
+
+1. 選取 **完成** 以儲存規則。
 
 ## <a name="define-deduplication-on-a-match-entity"></a>請在比對實體上定義重複資料刪除
 

@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597915"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976078"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate 連接器 (預覽)
 
@@ -27,7 +27,7 @@ ms.locfileid: "5597915"
 - 當資料來源重新整理失敗時觸發。 
 - 當資料來源重新整理成功時觸發。
 - 在區段上越過閾值時觸發。 觸發程序受限在需要超過閾值以上。
-- 在業務量值上越過閾值時觸發。 觸發程序限制為必須超過閾值以上。
+- 在業務量值上越過閾值時觸發。 此處僅顯示缺少維度的業務量值。 觸發程序限制為必須超過閾值以上。
 - 當完成 (資料來源、區段、量值，...) 的完整重新整理時，會引發發射鍵。
 - 在完成統整程序 (對應、比對、合併) 機重新整理時觸發。
 

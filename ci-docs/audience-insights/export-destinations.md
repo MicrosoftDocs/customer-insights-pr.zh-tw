@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896133"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016604"
 ---
 # <a name="exports-preview-overview"></a>匯出 (預覽版) 概觀
 
 **匯出** 頁面會顯示所有已設定的匯出。 匯出與各種應用程式共用指定資料。 這可以包括客戶個人資料或實體、結構描述及對應詳細資料。 每個匯出都需要[由系統管理員設定的連接，來管理驗證和存取權](connections.md)。
-
-> [!NOTE]
-> 到 2021 年 3 月之前，匯出會自動建立到對應服務的連接。 現在在您建立匯出之前，需要[由系統管理員建立並共用的連接](connections.md)才能匯出。
 
 移至 **資料** > **匯出** 以查看匯出頁面。 所有使用者角色都擁有存取權，可以查看設定好的匯出。 在命令列中使用搜尋欄位，可用名稱、連接名稱或連線類型來尋找匯出。
 

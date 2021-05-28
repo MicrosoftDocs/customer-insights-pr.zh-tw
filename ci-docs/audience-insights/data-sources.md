@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887884"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085520"
 ---
 # <a name="data-sources-overview"></a>資料來源概觀
 
@@ -36,11 +36,9 @@ Dynamics 365 Customer Insights 中的對象見解功能從一組廣泛的來源�
 
 Power Platform 資料流程支援在對象見解中從內部部署的資料來源內嵌資料。 設定環境時，[在 Microsoft Dataverse 提供環境 URL](manage-environments.md#create-an-environment-in-an-existing-organization)，便可以在 Customer Insights 中啟用資料流程。
 
-將 Dataverse 環境與 Customer Insights 關聯之後，所建立的資料來源預設使用 [Power Platform 資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 資料流程使用資料閘道來支援內部部署連線。 在關聯 Dataverse 環境之前已存在的資料來源，請移除並重新建立，以使用內部部署資料閘道。
+將 Dataverse 環境與 Customer Insights 關聯之後，所建立的資料來源預設使用 [Power Platform 資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 資料流程使用資料閘道來支援內部部署連線。 在關聯 Dataverse 環境前就已存在的資料來源，請移除並重新建立，才能[使用內部部署資料閘道](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md)。
 
 來自現有 Power BI 或 Power Apps 環境的資料閘道將會顯示，並且可以在 Customer Insights 中重複使用。 資料來源頁面顯示的連結可前往 Power Platform 環境，並在其中查看和設定內部部署資料閘道。
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="資料來源頁面的螢幕擷取畫面，圖上為指向 Power Platform 環境的連結。":::
 
 ## <a name="review-ingested-data"></a>檢閱擷取的資料
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895995"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954477"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -29,6 +29,7 @@ ms.locfileid: "5895995"
 
 - [Brands](enrichment-microsoft.md) 由 Microsoft 提供
 - [Interests](enrichment-microsoft.md) 由 Microsoft 提供
+- Microsoft 提供的[增強地址](enrichment-enhanced-addresses.md)
 - Leadspace 提供的 [公司資料](enrichment-leadspace.md)
 - Experian 所提供的[人口統計資料](enrichment-experian.md)
 - HERE Technologies 提供的 [位置資料](enrichment-here.md)

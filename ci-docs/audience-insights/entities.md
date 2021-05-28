@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596397"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049384"
 ---
 # <a name="entities-in-audience-insights"></a>對象見解中的實體
 
@@ -37,12 +37,12 @@ ms.locfileid: "5596397"
 > [!div class="mx-imgBorder"]
 > ![選取實體](media/data-manager-entities-data.png "選取實體")
 
-- 預設會選取 **資料** 索引標籤，並顯示一份表格，其中列出有關實體各個記錄的詳細資料。
+- **資料** 索引標籤會顯示一個表格，其中列出有關實體中個別記錄的詳細資料。
 
 > [!div class="mx-imgBorder"]
 > ![欄位表格](media/data-manager-entities-fields.PNG "欄位表格")
 
-- **欄位** 索引標籤會顯示一個表格，用以檢視所選實體的詳細資料，例如欄位名稱、資料類型和類型。 **類型** 欄會顯示 Common Data Model 關聯的類型，它們是由系統自動識別或由使用者[手動對應](map-entities.md)。 這些語意類型可以不同於屬性的資料類型，例如，下列的欄位 *電子郵件* 有資料類型 *文字*，但是其 (語意) Common Data Model 類型可能是 *電子郵件* 或 *EmailAddress*。
+- **屬性** 索引標籤會被預設選取，並顯示用來檢閱所選實體詳細資料的表格，例如欄位名稱、資料類型和類型。 **類型** 欄會顯示 Common Data Model 關聯的類型，它們是由系統自動識別或由使用者[手動對應](map-entities.md)。 這些語意類型可以不同於屬性的資料類型，例如，下列的欄位 *電子郵件* 有資料類型 *文字*，但是其 (語意) Common Data Model 類型可能是 *電子郵件* 或 *EmailAddress*。
 
 > [!NOTE]
 > 這兩個表格只會顯示您實體之資料的範例。 若要查看完整資料集，請移至 **資料來源** 頁面，選取實體，選取 **編輯**，然後使用 Power Query 編輯器查看此實體的資料（如[資料來源](data-sources.md)中所述）。

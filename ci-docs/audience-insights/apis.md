@@ -1,7 +1,7 @@
 ---
 title: 使用 API
 description: 使用 API 並瞭解限制。
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873652"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016582"
 ---
 # <a name="work-with-customer-insights-apis"></a>搭配 Customer Insights API 處理
 
@@ -90,19 +90,13 @@ HTTP 回應將很快在下方出現。
 
 1. 在 Azure 入口網站中您的應用程式註冊上，前往 **API 權限**。
 
-1. 選取 **新增權限** 並選取側窗格中的 **Customer Insights**。
+1. 選取 **新增權限**。 
+
+1. 選取 **我的組織使用的 API** 索引標籤，然後從清單中選擇 **Dynamics 365 AI for Customer Insights**。 
 
 1. **權限類型** 方面，請選取 **應用程式權限** 並選取 **CustomerInsights.Api.All** 權限。
 
 1. 選取 **新增權限**。
-
-1. 若要對此應用程式權限給予系統管理員同意，您必須新增服務主體。
-
-   1. 安裝 Azure Active Directory (AD) PowerShell 模組：`Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. 連線到您的 AD 帳戶: `Connect-AzureAD -TenantId <your tenant id>`。 您可以在 **總覽** > **Azure Active Directory** 上找到您的租用戶 ID。
-   1. 執行下列命令新增 Azure AD 服務主體：`New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` 與 Customer Insights API 應用程式相關的 AppId 參數。
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text=" 服務主體範例":::
 
 1. 返回 **API 權限** 進行應用程式註冊。
 

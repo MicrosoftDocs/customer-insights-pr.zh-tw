@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759811"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059306"
 ---
 # <a name="export-segments-to-marketo-preview"></a>將客戶細分匯出至 Marketo (預覽版)
 
@@ -44,7 +44,7 @@ ms.locfileid: "5759811"
 
 1. 選擇可使用此連接的人員。 如果您不採取任何動作，預設值將為系統管理員。 如需詳細資訊，請參閱[允許參與者使用匯出的連接](connections.md#allow-contributors-to-use-a-connection-for-exports)。
 
-1. 輸入您的 **[Marketo 用戶端識別碼、用戶端秘密和 REST 端點主機名稱](https://developers.marketo.com/rest-api/authentication/)**。
+1. 輸入您的 **[Marketo 用戶端識別碼、用戶端秘密和 REST 端點主機名稱](https://developers.marketo.com/rest-api/authentication/)**。 REST 端點主機名稱僅是主機名稱，沒有 `https://`。 範例：`xyz-abc-123.mktorest.com`。 
 
 1. 選取 **我同意** 以便確認 **資料隱私權與合規性** 和選取 **連線** 初始化到 Marketo 的連接。
 
@@ -62,7 +62,7 @@ ms.locfileid: "5759811"
 
 1. 在 **匯出的連結** 欄位中，在 Marketo 區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的連接可供您使用。
 
-1. 輸入您的 **[Marketo 清單識別碼](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. 輸入您的 **[Marketo 清單識別碼](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**。 清單 ID 是純數字值。 例如，如果您的 Marketo 清單 ID 是 ST12345A7，請移除數字前後的字元，然後輸入 `12345`。 
 
 1. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 
 
@@ -74,7 +74,7 @@ ms.locfileid: "5759811"
 
 儲存匯出並不會立即執行匯出。
 
-每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。 在 Marketo 中，您現在可以在 [Marketo 清單](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) 下方找到您的區段。
+每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。 在 Marketo 中，您現在可以在 [Marketo 清單](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) 下方找到您的區段。
 
 
 ## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性

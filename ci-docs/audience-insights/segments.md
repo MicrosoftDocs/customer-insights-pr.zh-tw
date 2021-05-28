@@ -1,7 +1,7 @@
 ---
-title: 建立和管理區段
-description: 建立客戶的區段，以依據各種屬性來群組。
-ms.date: 03/02/2021
+title: 對象見解中的客戶細分
+description: 客戶細分概觀及如何建立並管理它們。
+ms.date: 05/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,79 +9,42 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
+ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597041"
+ms.lasthandoff: 05/14/2021
+ms.locfileid: "6034002"
 ---
-# <a name="create-and-manage-segments"></a>建立和管理區段
+# <a name="segments-overview"></a>客戶細分概觀
 
 區段讓您根據人口統計、交易性或行為屬性分組您的客戶。 為了達成業務目標，您可以使用區段來設定目標促銷活動、銷售活動和客戶支援動作。
 
-您可以在客戶設定檔實體及其相關實體周圍定義複雜的篩選。 每個區段會在處理後建立一組可匯出和採取相應動作的客戶記錄。 適用若干 [服務限制](service-limits.md)。
-
-除非另行說明，否則所有區段均屬 **動態區段**，按照反覆排程重新整理。
-
-下列範例說明區隔能力。 我們為在過去 90 天中至少訂購了 $500 貨物的客戶，*以及* 參與了已上呈之客戶服務通話的客戶，定義了區段。
-
-> [!div class="mx-imgBorder"]
-> ![多個群組](media/segmentation-group1-2.png "多個群組")
+符合客戶細分定義篩選的客戶個人資料稱為客戶細分的 *成員*。 適用若干 [服務限制](service-limits.md)。
 
 ## <a name="create-a-new-segment"></a>建立新區段
 
-區段會在 **區段** 頁面上加以管理。
+有很多方式可以建立新的客戶細分： 
 
-1. 請在對象見解中前往 **區段** 頁面。
+- 具備客戶細分產生器的複雜客戶細分：[空白客戶細分](segment-builder.md#create-a-new-segment)
+- 具有一個運算子的簡單客戶細分：[快速客戶細分](segment-builder.md#quick-segments)
+- 以 AI 支援的方式尋找類似客戶：[類似客戶](find-similar-customer-segments.md)
+- 基於量值或屬性，由 AI支援的建議：[改善量值的建議客戶細分](suggested-segments.md)
+- 根據活動提出的建議：[根據客戶活動所建議的客戶細分](suggested-segments-activity.md)
 
-1. 選取 **新增** > **空白區段**。
+## <a name="get-insights-on-existing-segments"></a>取得現有客戶細分的見解
 
-1. 在 **新增區段** 窗格中，選擇一種區段類型並提供 **名稱**。
+以[客戶細分見解](segment-insights.md)探索有關現有客戶細分的其他資訊。 找出兩個客戶細分的區別所在兩者的共同點。
 
-   您也可以提供顯示名稱以及有助於識別區段的描述。
+## <a name="find-similar-customers"></a>尋找類似的客戶
 
-1. 選取 **下一步** 以進入 **區段建立器** 頁面，您可以在其中定義群組。 群組是一組客戶。
-
-1. 選擇包含您要據以建立區段之屬性的實體。
-
-1. 選擇要據以建立區段的屬性。 此屬性可以有四個數值類型之一：數值、字串、日期或布林值。
-
-1. 為選取的屬性選擇運算子與值。
-
-   > [!div class="mx-imgBorder"]
-   > ![自訂群組篩選](media/customer-group-numbers.png "客戶群組篩選")
-
-   |號碼 |定義  |
-   |---------|---------|
-   |1     |Entity          |
-   |2     |屬性          |
-   |3    |運算子         |
-   |4    |值         |
-
-8. 如果實體是透過[關聯](relationships.md)連接至統整的客戶實體，則需要定義關聯路徑來建立有效的區段。 從關聯路徑新增實體，直到您可以從下拉清單中選取 **客戶：CustomerInsights** 實體。 然後，為每個條件選取 **所有記錄**。
-
-   > [!div class="mx-imgBorder"]
-   > ![建立區段期間的關聯路徑](media/segments-multiple-relationships.png "建立段落期間的關聯路徑")
-
-1. 根據預設，客戶細分會生成一個輸出實體，其中包含所有符合已定義篩選準則的客戶個人資料屬性。 如果客戶細分依據其他實體而非 *客戶* 實體，您可以將這些實體中的多個屬性新增至輸出實體。 選取 **專案屬性**，以選擇附加至輸出實體的屬性。  
-
-   
-   範例：有一份客戶細分是根據包含與 *客戶* 實體相關的客戶活動資料實體建立的。 此客戶細分會尋找過去 60 天中電話連絡技術服務人員的所有客戶。 您可以選擇將通話長度和通話次數附加至輸出實體中所有相符的客戶記錄。 若傳送電子郵件並附上線上說明文章連結和常見問題集給經常電話連絡的客戶，此資訊可能會非常實用。
-
-1. 選取 **儲存** 以儲存區段。 如果所有需求均已驗證，就會儲存和處理您的區段。 否則，它會儲存為草稿。
-
-1. 選取 **返回區段** 以返回 **區段** 頁面。
+藉由人工智慧的協助，尋找與選取的客戶細分成員相類似的客戶。 如需詳細資訊，請參閱[類似客戶](find-similar-customer-segments.md)。
 
 ## <a name="manage-existing-segments"></a>管理現有的區段
 
-在 **區段** 頁面上，您可以查看所有已儲存的區段並加以管理。
+移至 **客戶細分** 頁面，以查看所有已儲存的客戶細分並加以管理。
 
 每個區段都是由一個包含區段其他相關資訊的列所表示。
-
-您可以選取欄標題來排序欄中的區段。
-
-使用右上角的 **搜尋** 方塊來篩選區段。
 
 > [!div class="mx-imgBorder"]
 > ![管理現有區段的選項](media/segments-selected-segment.png "管理現有區段的選項")
@@ -106,71 +69,6 @@ ms.locfileid: "5597041"
 > [!TIP]
 > 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。
 
-## <a name="download-and-export-segments"></a>下載和匯出區段
-
-您可以將區段下載至 CSV 檔，或將它們匯出至 Dynamics 365 Sales。
-
-### <a name="download-segments-to-a-csv-file"></a>將區段下載至 CSV 檔
-
-1. 請在對象見解中前往 **區段** 頁面。
-
-2. 選取特定區段圖格中的省略符號。
-
-3. 從 [動作] 下拉式清單中，選取 **下載為 CSV**。
-
-### <a name="export-segments-to-dynamics-365-sales"></a>將區段匯出至 Dynamics 365 Sales
-
-在將區段匯出至 Dynamics 365 Sales 之前，系統管理員必須為 Dynamics 365 Sales [建立匯出目的地](export-destinations.md)。
-
-1. 請在對象見解中前往 **區段** 頁面。
-
-2. 選取特定區段圖格中的省略符號。
-
-3. 從動作下拉式清單中選取 **新增至**，然後選取要將資料傳送至的匯出目的地。
-
-## <a name="draft-mode-for-segments"></a>區段的草稿模式
-
-如果不符合處理區段的所有需求，您可以將區段儲存為草稿，並從 **區段** 頁面存取它。
-
-它會儲存為非使用中區段，在生效之前無法啟用它。
-
-## <a name="add-more-conditions-to-a-group"></a>新增更多條件至群組
-
-若要將更多條件新增至群組，您可以使用兩個邏輯運算子：
-
-- **AND** 運算子：在區段程序中兩個條件都必須符合。 當您跨不同實體定義條件時，此選項非常有用。
-
-- **OR** 運算子：在區段程序中，需要符合其中一項條件。 當您為相同實體定義多個條件時，此選項非常有用。
-
-   > [!div class="mx-imgBorder"]
-   > ![需要符合任一條件的 OR 運算子](media/segmentation-either-condition.png "需要符合任一條件的 OR 運算子")
-
-目前可以將 **OR** 運算子內嵌在 **AND** 運算子之下，但相反過來不行。
-
-## <a name="combine-multiple-groups"></a>結合多個群組
-
-每個群組都會產生一組特定的客戶。 您可以將這些群組結合在一起，包括您的業務案例所需的客戶。
-
-1. 請在對象見解中前往 **區段** 頁面並選取某區段。
-
-2. 選取 **新增群組**。
-
-   > [!div class="mx-imgBorder"]
-   > ![客戶群組新增群組](media/customer-group-add-group.png "客戶群組新增群組")
-
-3. 選取下列其中一組運算子：**聯集**、**交集** 或 **除外**。
-
-   > [!div class="mx-imgBorder"]
-   > ![客戶群組新增聯集](media/customer-group-union.png "客戶群組新增聯集")
-
-   選取集合運算子以定義新群組。 儲存不同群組可判定保留哪些資料：
-
-   - **聯集** 會聯合兩個群組。
-
-   - **交集** 會重疊兩個群組。 唯有兩個群組 *共有* 的資料才會在統整群組中保留。
-
-   - **差集** 會結合兩個群組。 唯有 *不與 B 組資料共有* 的 A 組資料才會保留。
-
 ## <a name="view-processing-history-and-segment-members"></a>查看處理歷史記錄和區段成員
 
 您可以透過查看資料的詳細資料，查看關於該區段的合併資料。
@@ -191,43 +89,4 @@ ms.locfileid: "5597041"
 >
 >此清單是相符區段成員的預覽，並顯示區段的前 100 個記錄，這樣您就可以快速評估並查看其定義（如有需要）。 若要查看所有相符的記錄，您需要[匯出區段](export-destinations.md)。
 
-## <a name="quick-segments"></a>快速區段
-
-除了區段建立器以外，也有另一個建立區段的路徑。 快速客戶細分可讓您使用單一運算子快速建立簡單的客戶細分，並提供即時見解。
-
-1. 在 **區段** 頁面上，選取 **新增** > **快速建立來源**。
-
-   - 選取 **設定檔** 選項，建立基於統整客戶實體的區段。
-   - 選取 **量值** 選項，以根據您先前在 **量值** 頁面上建立的每個客戶屬性類型建立區段。
-   - 選取 **智慧** 選項，以使用 **預測** 或 **自訂模型** 功能產生的其中一個輸出實體建立區段。
-
-2. 在 **新增快速區段** 對話方塊中，從 **欄位** 下拉式功能表中選取屬性。
-
-3. 系統將提供一些其他見解，可協助您建立更佳的客戶區段。
-   - 對於類別欄位，我們會顯示 10 個最高的客戶計數。 選擇 **值** 並選取 **檢閱**。
-
-   - 在數值屬性中，系統會顯示落在每個客戶百分位下的屬性值。 選擇 **運算子** 和 **值**，然後選取 **檢閱**。
-
-4. 系統將為您提供 **估計的區段大小**。 您可以選擇是否要產生您定義的區段，或先重新檢視它以取得不同的區段大小。
-
-    > [!div class="mx-imgBorder"]
-    > ![快速區段的名稱與估計](media/quick-segment-name.png "快速區段的名稱與估計")
-
-5. 提供區段的 **名稱**。 或者，提供 **顯示名稱**。
-
-6. 選取 **儲存** 以建立您的區段。
-
-7. 區段完成處理之後，您可以像您所建立的其他段落一樣來查看它。
-
-在下列案例中，我們建議使用區段建立器而不是建議的區段功能：
-
-- 建立篩選出類別欄位的區段（其中運算子不同於 **是** 運算子）
-- 建立含有數值欄位篩選的區段，其中運算子不同於 **介於之間**、**大於** 和 **小於** 運算子
-- 建立帶有日期類型欄位篩選的區段
-
-## <a name="next-steps"></a>後續步驟
-
-[匯出區段](export-destinations.md)並探索[客戶卡片](customer-card-add-in.md)和[連接器](export-power-bi.md)，以取得客戶等級的見解。
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../includes/footer-banner.md)] 

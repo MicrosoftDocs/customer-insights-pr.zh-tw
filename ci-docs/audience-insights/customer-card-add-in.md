@@ -1,7 +1,7 @@
 ---
-title: 安裝和組態客戶卡片增益集
-description: 安裝及設定 Dynamics 365 Customer Insights 客戶卡片增益集。
-ms.date: 01/20/2021
+title: Dynamics 365 應用程式的客戶卡片增益集
+description: 以此增益集顯示位於 Dynamics 365 應用程式中的對象見解資料。
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597317"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059578"
 ---
 # <a name="customer-card-add-in-preview"></a>客戶卡片增益集 (預覽)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-直接在 Dynamics 365 應用程式中取得您客戶的 360 度視圖。 透過客戶卡片增益集查看人口統計、見解及活動時間表。
+直接在 Dynamics 365 應用程式中取得您客戶的 360 度視圖。 在可支援的 Dynamics 365 應用程式中安裝客戶卡片增益集，您可以選擇顯示人口統計資訊、見解及活動時間軸。 增益集將從 Customer Insights 擷取資料，對被連接的 Dynamics 365 應用程式，不會影響其中的資料。 
 
 ## <a name="prerequisites"></a>先決條件
 
-- 已啟用整合介面的 Dynamics 365 應用程式 (例如銷售中心或客戶服務中心) 9.0 版及更新版本。
-- [從使用 Common Data Service](connect-power-query.md) 的 Dynamics 365 應用程式內嵌的客戶設定檔。
-- 客戶卡片增益集使用者在對象見解中必須 [新增為使用者](permissions.md)。
-- [組態的搜尋和篩選功能](search-filter-index.md)。
-- 人口統計控制項：在統整的客戶設定檔中可以使用人口統計欄位 (如年齡或性別)。
-- 擴充控制項：需要將使用中[擴充內容](enrichment-hub.md)套用至客戶設定檔。
-- 智慧控制項：需要使用 Azure Machine Learning ([預測](predictions.md) 或 [自訂模型](custom-models.md)) 產生的資料
-- 量值控制項：需要 [組態的量值](measures.md)。
-- 時間表控制項：需要 [已組態的活動](activities.md)。
+- 增益集只適用在 Dynamics 365 模型導向應用程式 (例如 Sales 或 Customer Service)，版本 9.0 或更新的版本。
+- 為了讓您的 Dynamics 365 資料對應至對象見解客戶個人資料，這些資料需要 [從 Dynamics 365 應用程式使用 Common Data Service 連接器進行內嵌](connect-power-query.md)。
+- 客戶卡片增益集的 Dynamics 365 使用者全部都必須[新增為](permissions.md)對象見解的使用者，才能查看資料。
+- 在對象見解中必要有[完成設定的搜尋和篩選功能](search-filter-index.md)才能查詢用來作業的資料。
+- 每個增益集控制項都依賴對象見解中的特定資料：
+  - 量值控制項：需要 [組態的量值](measures.md)。
+  - 智慧控制項：需要使用[預測](predictions.md)或[自訂模型](custom-models.md)生成資料。
+  - 人口統計控制項：在統整的客戶設定檔中可以使用人口統計欄位 (如年齡或性別)。
+  - 擴充控制項：需要將使用中[擴充內容](enrichment-hub.md)套用至客戶設定檔。
+  - 時間表控制項：需要 [已組態的活動](activities.md)。
 
 ## <a name="install-the-customer-card-add-in"></a>安裝客戶卡片增益集
 
@@ -56,9 +57,9 @@ ms.locfileid: "5597317"
    > [!NOTE]
    > 請檢查當您選取 **登入** 按鈕時，瀏覽器快顯封鎖程式不會封鎖驗證視窗。
 
-1. 選取您要擷取資料的環境。
+1. 選取您要從中提取資料的 Customer Insights 環境。
 
-1. 定義對應 Dynamics 365 應用程式記錄的欄位。
+1. 在 Dynamics 365 應用程式中定義記錄對欄位的對應。 視 Customer Insights 中的資料而定，您可以選擇對應下列選項：
    - 若要對應連絡人，請選取客戶實體中符合您的連絡人實體的識別碼欄位。
    - 若要對應帳戶，請選取客戶實體中符合您的帳戶實體的識別碼欄位。
 
