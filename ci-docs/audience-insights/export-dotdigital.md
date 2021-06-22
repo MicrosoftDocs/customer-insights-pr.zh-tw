@@ -9,14 +9,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d08504856e1c673ef32433b83bf491d7f4e8cee4
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 8b0bda638c9bc7bb9cb2fdb01be11489b44f28a5
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976836"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124401"
 ---
-# <a name="export-segment-lists-to-dotdigital-preview"></a>將客戶細分清單匯出至 DotDigital (預覽版)
+# <a name="export-segments-to-dotdigital-preview"></a>將客戶細分匯出至 DotDigital (預覽版)
 
 將統一的客戶設定檔區段匯出到 DotDigital 通訊錄，並用於行銷活動、電子郵件行銷及使用 DotDigital 組建客戶區段。 
 

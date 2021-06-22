@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034002"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111377"
 ---
 # <a name="segments-overview"></a>客戶細分概觀
 
@@ -32,22 +32,13 @@ ms.locfileid: "6034002"
 - 基於量值或屬性，由 AI支援的建議：[改善量值的建議客戶細分](suggested-segments.md)
 - 根據活動提出的建議：[根據客戶活動所建議的客戶細分](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>取得現有客戶細分的見解
-
-以[客戶細分見解](segment-insights.md)探索有關現有客戶細分的其他資訊。 找出兩個客戶細分的區別所在兩者的共同點。
-
-## <a name="find-similar-customers"></a>尋找類似的客戶
-
-藉由人工智慧的協助，尋找與選取的客戶細分成員相類似的客戶。 如需詳細資訊，請參閱[類似客戶](find-similar-customer-segments.md)。
-
 ## <a name="manage-existing-segments"></a>管理現有的區段
 
 移至 **客戶細分** 頁面，以查看所有已儲存的客戶細分並加以管理。
 
 每個區段都是由一個包含區段其他相關資訊的列所表示。
 
-> [!div class="mx-imgBorder"]
-> ![管理現有區段的選項](media/segments-selected-segment.png "管理現有區段的選項")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="已選取的客戶細分，有著選項下拉式清單及可用選項。":::
 
 選取客戶細分時，可使用下列動作：
 
@@ -59,7 +50,7 @@ ms.locfileid: "6034002"
   或者，也可以使用 **啟用/停用** 下拉式功能表中的 **稍後再排程** 功能，指定未來啟用和停用特定客戶細分的日期和時間。
 - **重新命名** 區段。
 - 將成員清單 **下載** 為 .CSV 檔案。
-- **新增至** 選項會傳送客戶細分中的客戶識別碼清單以供在另一個應用程式中處理。
+- **管理匯出**，以查看匯出相關的客戶細分並加以管理。 [深入了解匯出。](export-destinations.md)
 - **刪除** 區段。
 
 ## <a name="refresh-segments"></a>重新整理區段
@@ -68,6 +59,24 @@ ms.locfileid: "6034002"
 
 > [!TIP]
 > 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。
+
+## <a name="export-segments"></a>匯出區段
+
+您可以從客戶細分頁面或[匯出頁面](export-destinations.md)匯出客戶細分。 
+
+1. 移至 **區段** 頁。
+
+1. 在您要匯出的客戶細分上，選取 **顯示更多 [...]**。
+
+1. 從行動的下拉式清單中選取 **管理匯出**。
+
+1. 會打開 **匯出客戶細分 (預覽版)** 頁面。 您可以看到已設定的匯出，匯出會分成包含目前的客戶細分，或不包含的。
+
+   1. 若要將選取的客戶細分新增至匯出，請在清單中選取匯出，然後選取 **新增客戶細分**。
+
+   1. 若要使用選取的客戶細分建立新匯出，請選取 **新增匯出**。 如需建立匯出的詳細資訊，請參閱[設定新匯出](export-destinations.md#set-up-a-new-export)。
+
+1. 選取 **上一步** 以返回至客戶細分的主要頁面。
 
 ## <a name="view-processing-history-and-segment-members"></a>查看處理歷史記錄和區段成員
 

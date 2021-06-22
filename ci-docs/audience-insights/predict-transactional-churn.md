@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906846"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095592"
 ---
 # <a name="transactional-churn-prediction-preview"></a>交易性流失預測 (預覽版)
 
@@ -144,7 +144,7 @@ ms.locfileid: "5906846"
    - **狀態：** 預測執行狀態。
         - **已排入佇列：** 預測正等待其他流程執行。
         - **重新整理：** 預測目前正在產生將流入輸出實體的結果。
-        - **失敗：** 預測執行已失敗。 如需更多細節，[請回顧記錄](#troubleshoot-a-failed-prediction)。
+        - **失敗：** 預測執行已失敗。 如需更多細節，[請回顧記錄](manage-predictions.md#troubleshoot-a-failed-prediction)。
         - **已成功：** 預測已成功。 選取垂直省略符號下方的 **檢視** 來檢閱預測
    - **已編輯：** 變更預測設定的日期。
    - **上次重新整理：** 預測重新整理輸出實體中結果的日期。
@@ -168,35 +168,9 @@ ms.locfileid: "5906846"
        
     1. **最具影響力的因素：** 建立預測時，有許多納入考慮的因素。 每個因素都會根據模型建立的彙總預測來計算其重要性。 您可以使用這些因素來協助驗證預測結果。 您也可以稍後再使用此資訊來[建立客戶細分](segments.md)，這可能有助於影響客戶的流失風險。
 
-## <a name="troubleshoot-a-failed-prediction"></a>疑難排解失敗的預測
+## <a name="manage-predictions"></a>管理預測
 
-1. 請前往 **智慧** > **預測** 並選取 **我的預測** 索引標籤。
-
-1. 選取您要檢視錯誤記錄的預測旁的垂直刪節號。
-
-1. 選取 **記錄**。
-
-1. 檢閱所有錯誤。 可能發生的錯誤有數種類型，這些類型描述造成錯誤的狀況。 例如，沒有足夠資料而無法準確預測的錯誤，通常是透過載入額外資料到 Customer Insights 中來解決。
-
-## <a name="refresh-a-prediction"></a>重新整理預測
-
-測試會依照設定中所設定的同樣[資料重新整理排程](system.md#schedule-tab)自動重新整理。 您也可以手動重新整理它們。
-
-1. 請前往 **智慧** > **預測** 並選取 **我的預測** 索引標籤。
-
-1. 選取您要重新整理之預測旁邊的垂直省略符號。
-
-1. 選取 **重新整理**。
-
-## <a name="delete-a-prediction"></a>刪除預測
-
-刪除預測也會同時移除其輸出實體。
-
-1. 請前往 **智慧** > **預測** 並選取 **我的預測** 索引標籤。
-
-1. 選取您要刪除之預測旁邊的垂直省略符號。
-
-1. 選取 **刪除**。
+最佳化、疑難排解、重新整理或刪除預測都能夠做到。 檢閱輸入資料可用性報表，找出如何讓預測更快捷和更可靠。 如需詳細資訊，請參閱[管理預測](manage-predictions.md)。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

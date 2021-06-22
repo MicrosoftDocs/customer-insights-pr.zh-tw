@@ -1,7 +1,7 @@
 ---
 title: 建立和管理環境
 description: 瞭解如何註冊服務及管理環境。
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887976"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259089"
 ---
 # <a name="manage-environments"></a>管理環境
 
@@ -76,9 +76,9 @@ ms.locfileid: "5887976"
    > 我們只在建立環境時從同一個 Azure 區域支援 Azure Data Lake Gen2 儲存體帳戶。
    > 我們只支援 Azure Data Lake Gen2 階層命名空間 (HNS) 啟用的儲存體帳戶。
 
-   - Azure Data Lake Storage Gen2 選項方面，您可以在資源式選項和訂閱式選項之間選擇進行驗證。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 **容器** 名稱無法變更，將為 "customerinsights"。
+   - Azure Data Lake Storage Gen2 選項方面，您可以在資源式選項和訂閱式選項之間選擇進行驗證。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 **容器** 的名稱無法變更，將會是 `customerinsights`。
    
-   - 如果您想要使用 [預測](predictions.md)、設定應用 Microsoft Dataverse 的應用程式和解決方案的資料共用，或者從內部部署資料來源中進行資料擷取，請在 **設定與 Microsoft Dataverse 共用資料並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
+   - 如果您想要使用 [預測](predictions.md)、設定與 Microsoft Dataverse 資料共用，或者從內部部署資料來源中進行資料擷取，請在 **設定與 Microsoft Dataverse 共用資料並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
 
      > [!NOTE]
      > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
@@ -87,7 +87,7 @@ ms.locfileid: "5887976"
      > [!div class="mx-imgBorder"]
      > ![啟用與 Microsoft Dataverse 共用資料的組態選項](media/datasharing-with-DataverseMDL.png)
 
-   當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 資料檔案和 model.json 檔案會根據您執行的程序，建立並新增至各自的子資料夾。
+   當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 根據您的程序名稱，會建立資料檔案和 model.json 並新增至資料夾。
 
    如果您建立多個 Customer Insights 環境並選擇從您的儲存體帳戶環境中儲存輸出實體，各資料夾將針對容器含有 ci_<environmentid> 每個環境分開建立。
 
@@ -146,7 +146,7 @@ ms.locfileid: "5887976"
    > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
    > - 當您以 Microsoft Dataverse Managed Data Lake 啟用資料共用時，目前不支援[預測實體中缺少的值](predictions.md)。
 
-   當您啟用與 Microsoft Dataverse 的資料共用，將對資料來源和其他程序觸發一次完整的重新整理。 如果程序目前正在執行並排入佇列，您將看不到用來啟用與 Microsoft Dataverse 共用資料的選項。 您可以等待這些程序完成，或者取消它們以啟用資料共用。 
+   啟用與 Microsoft Dataverse 的資料共用後，將對資料來源和其他程序開始一次完整的重新整理。 如果程序目前正在執行，您看不到用來啟用與 Microsoft Dataverse 共用資料的選項。 等待這些程序完成，或者取消它們以啟用資料共用。 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="啟用與 Microsoft Dataverse 共用資料的設定選項。":::
    

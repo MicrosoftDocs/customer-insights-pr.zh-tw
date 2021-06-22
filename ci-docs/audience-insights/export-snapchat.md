@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 6565ab81599abcc0f94465e1153f08e0bc119839
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760485"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124033"
 ---
-# <a name="export-segment-lists-to-snapchat-preview"></a>將客戶細分清單匯出至 Snapchat (預覽版)
+# <a name="export-segments-to-snapchat-preview"></a>將客戶細分匯出至 Snapchat (預覽版)
 
 將整合客戶個人資料的客戶細分匯出至 Snapchat，並用於廣告。 
 

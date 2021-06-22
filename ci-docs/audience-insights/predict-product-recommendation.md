@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906754"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095546"
 ---
 # <a name="product-recommendation-prediction-preview"></a>產品建議預測 (預覽版)
 
@@ -205,33 +205,9 @@ ms.locfileid: "5906754"
        > [!div class="mx-imgBorder"]
        > ![清單上是受選個別客戶組的高信賴度建議](media/product-recommendation-highconfidence.PNG "清單上是受選個別客戶組的高信賴度建議")
 
-## <a name="fix-a-failed-prediction"></a>修正失敗的預測
+## <a name="manage-predictions"></a>管理預測
 
-1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
-
-1. 選取您要檢視其錯誤記錄檔的預測，並選取 **記錄檔**。
-
-1. 檢閱所有錯誤。 可能發生的錯誤有數種類型，這些類型描述造成錯誤的狀況。 例如，錯誤訊息顯示沒有足夠的資料進行準確預測，通常是將更多資料載入到 Customer Insights 中來加以解析。
-
-## <a name="refresh-a-prediction"></a>重新整理預測
-
-根據在設定中與[資料重新整理排程](system.md#schedule-tab)相同的設定，預測會自動重新整理。
-
-1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
-
-1. 選取您要重新整理之預測旁邊的垂直省略符號。
-
-1. 選取 **重新整理**。
-
-## <a name="delete-a-prediction"></a>刪除預測
-
-刪除預測也會移除其輸出實體。
-
-1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
-
-1. 選取您要刪除之預測旁邊的垂直省略符號。
-
-1. 選取 **刪除**。
+最佳化、疑難排解、重新整理或刪除預測都能夠做到。 檢閱輸入資料可用性報表，找出如何讓預測更快捷和更可靠。 如需詳細資訊，請參閱[管理預測](manage-predictions.md)。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595263"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129889"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>產品建議預測 (預覽版) 範例指南
 
@@ -22,7 +22,7 @@ ms.locfileid: "5595263"
 
 ## <a name="scenario"></a>案例
 
-Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖啡網站銷售。 他們的目標是瞭解他們應該建議哪些產品給他們的重複客戶。 知道客戶 **很可能購買** 哪些產品，可協助他們專注在特定項目並精簡行銷工作。
+Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Contoso 咖啡網站進行銷售。 他們的目標是瞭解他們應該建議哪些產品給他們的重複客戶。 知道客戶 **很可能購買** 哪些產品，可協助他們專注在特定項目並精簡行銷工作。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -65,7 +65,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
 1. 請在側邊窗格的 **名稱** 欄位中將您的資料來源從 **查詢** 重新命名為 **eCommercePurchases**。
 
-1. 儲存資料來源。
+1. **儲存** 資料來源。
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>從忠實結構描述內嵌客戶資料
@@ -83,11 +83,11 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
 1. 請在右側窗格的 **名稱** 欄位中將您的資料來源從 **查詢** 重新命名為 **loyCustomers**。
 
-1. 儲存資料來源。
+1. **儲存** 資料來源。
 
 ## <a name="task-2---data-unification"></a>任務 2 - 資料統整
 
-內嵌資料後，我們現在就會開始 **對應、比對、合併** 流程，以建立統整的客戶設定檔。 如需更多資訊，請見 [資料統整](data-unification.md)。
+擷取資料之後，我們會開始進行資料整合處理，以建立整合的客戶個人資料。 如需更多資訊，請見 [資料統整](data-unification.md)。
 
 ### <a name="map"></a>對應
 
@@ -156,7 +156,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
    - **產品數目**：將此值設定為 **5**。 這個設定為定義您想要向客戶建議多少產品。
 
-   - **建議客戶最近購買過的產品？**：選取 **是** 表示您想要建議裡加入客戶之前先購買的產品。
+   - **重複購買預期**：選取 **是** 表示您想要在建議中包括客戶在之前先購買的產品。
 
    - **回顧視窗：** 至少要選取 **365 天**。 此設定是定義模型要回顧客戶活動的天數，用來作為其建議的輸入值。
    

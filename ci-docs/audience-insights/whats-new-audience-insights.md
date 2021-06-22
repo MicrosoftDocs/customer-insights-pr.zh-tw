@@ -1,7 +1,7 @@
 ---
 title: 新功能以及近期即將推出的功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988910"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263241"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
@@ -26,6 +26,37 @@ ms.locfileid: "5988910"
 
 > [!TIP]
 > 若要送出和票選功能要求和產品建議，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="may-2021-updates"></a>2021 年 5 月更新
+
+2021 年 5 月的更新包括幾種功能、效能升級和 bug 修正。
+
+### <a name="data-ingestion"></a>資料擷取
+
+- **附加來自 Azure Data Lake Storage 的資料時查看或修改中繼資料或實體定義**，從 Azure Data Lake Storage 的 Common Data Model 資料夾附加資料時，您現在可以查看和編輯對象見解中的中繼資料或實體定義 。 此功能提供即時意見反應、模型驗證及錯誤檢查。 它可讓您順暢地編輯 model.json 和 manifest.json。
+
+### <a name="extensibility"></a>擴充性
+
+- **改進的客戶細分匯出、自訂排程和重複值** 現在您可以在清單中[看到特定客戶細分的所有匯出](export-destinations.md#view-exports-and-export-details)。 這個新的檢視表可協助管理指定客戶細分的使用方式並調整現有匯出或建立新匯出。    
+  您可以為個別匯出[定義自訂重新整理排程](export-destinations.md#schedule-and-run-exports)，或一次為複數匯出定義。 到目前為止，所有的匯出都是在每次系統重新整理時執行。    
+  您可以依據現有匯出來建立新匯出，而不需從頭開始建立新的匯出。
+
+- **將客戶細分匯出至 Microsoft Advertisingt** 我們已擴展了匯出目的地，現在包括 Microsoft Advertising。 使用整合客戶個人資料在 Microsoft Advertising 上建立「客戶比對」對象，並對這些對象使用 Advertising 行銷活動。 如需詳細資訊，請參閱 [將客戶細分匯出至 Microsoft Advertising](export-microsoft-advertising.md)。
+
+- **將客戶細分匯出至 LinkedIn Ads** 我們擴展了匯出目的地，包括 LinkedIn Ads，匯出您的整合客戶個人資料，便可讓您透過 linkedin 解鎖連絡人鎖定，以及公司鎖定。 如需詳細資訊，請參閱[將客戶細分匯出至 LinkedIn Ads](export-linkedin-ads.md)。
+
+
+- **將客戶細分匯出至 Omnisend** 我們已擴展了匯出目的地，現在包括 Omnisend。 使用在對象見解中建立的客戶細分來建立行銷活動、提供電子郵件行銷，並且以 Omnisend 使用特定客戶群組。 如需詳細資訊，請參閱 [將客戶細分匯出至 Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>預測
+
+- **輸入資料可用性報表** 輸入資料可用性報表提供整合檢視表，指出立即可用預測可能產生的錯誤和警告。 它也提供如何改善模型效能的建議。    
+  在模型完成其定型程序之後，才可使用此報表。 它是單獨為每個模型建立的，不管是否成功完成。
+  目前，此功能只適用在交易流失模型。 如需詳細資訊，請參閱[輸入資料可用性報表](manage-predictions.md#input-data-usability-report)。
+
+### <a name="relationships"></a>關聯性
+
+- **關聯視覺化檢視** 關聯視覺化檢視可讓您查看實體之間的所有現存關聯與其基數。 關聯現在是以群組分類：使用者建立、系統和繼承的關聯。 您也可以將匯出檢視表為影像。 如需詳細資訊，請參閱[查看關聯](relationships.md#view-relationships)。 
 
 ## <a name="april-2021-updates"></a>2021 年 4 月更新
 

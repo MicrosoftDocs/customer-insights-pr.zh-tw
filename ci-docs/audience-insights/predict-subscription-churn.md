@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906892"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095638"
 ---
 # <a name="subscription-churn-prediction-preview"></a>訂閱流失預測 (預覽)
 
@@ -147,30 +147,9 @@ ms.locfileid: "5906892"
        > [!div class="mx-imgBorder"]
        > ![顯示預測流失結果影響因素及其重要性的清單](media/subscription-churn-influentialfactors.PNG "顯示預測流失結果影響因素及其重要性的清單")
 
-## <a name="fix-a-failed-prediction"></a>修正失敗的預測
+## <a name="manage-predictions"></a>管理預測
 
-1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
-1. 選取您要檢視其錯誤記錄檔的預測，並選取 **記錄檔**。
-   > [!div class="mx-imgBorder"]
-   > ![結果功能表列的檢視，包含 [關閉]、[編輯模型] 和 [記錄檔] 按鈕](media/subscription-churn-logsbutton.PNG "結果功能表列的檢視，包含 [關閉]、[編輯模型] 和 [記錄檔] 按鈕")
-1. 檢閱所有錯誤。 可能發生的錯誤有數種類型，這些類型描述造成錯誤的狀況。 例如準確預測所需資料不足的錯誤，典型解決方案是載入額外資料。
-
-## <a name="refresh-a-prediction"></a>重新整理預測
-
-測試會依照設定中所設定的同樣[資料重新整理排程](system.md#schedule-tab)自動重新整理。
-
-1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
-1. 選取您要重新整理之預測旁邊的垂直省略符號。
-1. 選取 **重新整理**。
-
-## <a name="delete-a-prediction"></a>刪除預測
-
-1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
-1. 選取您要刪除之預測旁邊的垂直省略符號。
-1. 選取 **刪除**。
-
-> [!NOTE]
-> 刪除預測將會移除其輸出實體。
+最佳化、疑難排解、重新整理或刪除預測都能夠做到。 檢閱輸入資料可用性報表，找出如何讓預測更快捷和更可靠。 如需詳細資訊，請參閱[管理預測](manage-predictions.md)。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

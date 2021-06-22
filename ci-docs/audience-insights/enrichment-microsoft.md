@@ -1,7 +1,7 @@
 ---
 title: 使用 Microsoft 的資料擴充客戶個人資料
 description: 您可以使用 Microsoft 的專有資料以品牌和興趣相關性來擴充客戶資料。
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064881"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245697"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>使用品牌和興趣親和性來擴充客戶設定檔 (預覽)
 
@@ -69,12 +69,10 @@ ms.locfileid: "6064881"
 
 ### <a name="define-your-brands-or-interests"></a>定義您的品牌或興趣
 
-選取下列其中一個選項：
+使用下列其中一或兩個選項，最多選擇五個品牌或興趣：
 
-- **產業**：系統會找出與您的行業相關的最上層品牌或興趣，並使用它們擴充您的客戶資料。
-- **自行選擇**：從與您的組織最相關的品牌或興趣清單中，選取最多五個項目。
-
-若要新增品牌或興趣，請在輸入區域中輸入，以依據符合的字詞取得建議。 如果我們未列出您要尋找的品牌或興趣，請使用 **建議** 連結向我們傳送意見。
+- **產業**：從下拉式清單選取您的產業，然後選擇該產業中排名最高的品牌或興趣。
+- **自行選擇**：輸入與您的組織相關的品牌或興趣，然後從符合的建議中選擇。 如果我們未列出您要尋找的品牌或興趣，請使用 **建議** 連結向我們傳送意見。
 
 ### <a name="review-enrichment-preferences"></a>查看擴充喜好設定
 
