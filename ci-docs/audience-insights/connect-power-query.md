@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596903"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305881"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連接至 Power Query 資料來源
 
@@ -72,7 +72,7 @@ Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Custom
 
 1. 在對象見解中，前往 **資料** > **資料來源**。
 
-2. 選取您想要變更的資料來源旁邊的垂直省略符號，然後從下拉式功能表中選取 **編輯**。
+2. 在您要變更的資料來源旁邊選取垂直省略號，然後從下拉式功能表中選取 **編輯**。
 
    > [!div class="mx-imgBorder"]
    > ![編輯選項](media/edit-option-data-sources.png "編輯選項")

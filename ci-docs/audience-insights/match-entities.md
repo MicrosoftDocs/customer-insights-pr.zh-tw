@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085612"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306018"
 ---
 # <a name="match-entities"></a>比對實體
 
@@ -209,7 +209,7 @@ ms.locfileid: "6085612"
 
 您可以重新設定和微調大部分的比對參數。
 
-:::image type="content" source="media/match-rules-management.png" alt-text="下拉式功能表上比對規則選項的螢幕擷取畫面。":::
+:::image type="content" source="media/match-rules-management.png" alt-text="螢幕擷取畫面，圖上為有比對規則選項的下拉式功能表。":::
 
 - **變更您的規則順序**：若您定義了多個規則。 您可以通過選擇 **向上移動** 和 **向下移動** 選項或通過拖放來重新排序比對規則。
 
@@ -247,7 +247,7 @@ ms.locfileid: "6085612"
 
 1. 前往 **資料** > **資料來源** 並將範本檔案內嵌為新實體。 內嵌之後，您可以使用它們來指定比對設定。
 
-1. 在上傳檔案且實體可用之後，請再次選取 **自訂比對** 選項。 您會看到選項，以指定您想要加入的實體。 從下拉式功能表選取所需實體。
+1. 在上傳檔案且實體可用之後，請再次選取 **自訂比對** 選項。 您會看到選項，以指定您想要加入的實體。 從下拉式功能表中選擇需要的實體。
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="螢幕擷取畫面上為選擇覆寫自訂比對案例的對話方塊。":::
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896087"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304962"
 ---
 # <a name="connections-preview-overview"></a>連接 (預覽版) 概觀
 
@@ -42,7 +42,7 @@ ms.locfileid: "5896087"
 
 1. 移至 **連結** 索引標籤。
 
-1. 請選取 **新增連接** 建立新連接。 在下拉式功能表中選擇想要建立的連接類型。
+1. 請選取 **新增連接** 建立新連接。 從下拉式功能表中選擇您要建立的連接類型。
 
 1. 在 **設定連接** 窗格中，提供必要的詳細資料。 
    1. 以連結的 **顯示名稱** 與類型設定連接。 我們建議您選取可以說明此連接用途和目標的名稱。
@@ -74,7 +74,9 @@ ms.locfileid: "5896087"
 
 ## <a name="remove-a-connection"></a>移除連接
 
-如果要移除的連接用在擴充或匯出，必須先進行分離或移除。 移除對話方塊將引導您到相關的擴充或匯出。 分離的擴充和匯出會變成停用。 您可以在[擴充](enrichment-hub.md)或[匯出](export-destinations.md)頁面上新增另一個連接給它們，以重新啟動。
+如果要移除的連接用在擴充或匯出，必須先進行分離或移除。 移除對話方塊將引導您到相關的擴充或匯出。 
+
+分離的擴充和匯出會變成停用。 您可以在[擴充](enrichment-hub.md)或[匯出](export-destinations.md)頁面上新增另一個連接給它們，以重新啟動。
 
 1. 移至 **管理** > **連接 (預覽版)**。
 

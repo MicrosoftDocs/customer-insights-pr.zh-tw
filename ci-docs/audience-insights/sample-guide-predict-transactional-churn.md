@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595416"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306110"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>交易性流失預測 (預覽版) 範例指南
 
-本指南將以 Customer Insights 在交易性流失預測範例使用的下方資料從頭到尾向您說明。 本指南使用的所有資料並非真實的客戶資料，而是在您的 Customer Insights 訂閱內的 *示範* 環境中找到的 Contoso 資料集一部分。
+本指南將以 Customer Insights 在交易性流失預測範例使用的下方資料從頭到尾向您說明。 本指南中使用的所有資料都不是真實客戶數據，是在 Customer Insights 訂閱中 *示範* 環境中的 Contoso 資料集的一部分。
 
 ## <a name="scenario"></a>案例
 
-Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖啡網站銷售。 他們的目標是了解典型上定期購買他們產品的客戶在未來 60 天將不再是有效客戶。 知道哪一位客戶 **很有可能流失** 可協助他們持續聚焦行銷力量。
+Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Contoso 咖啡網站進行銷售。 他們的目標是了解典型上定期購買他們產品的客戶在未來 60 天將不再是有效客戶。 知道哪一位客戶 **很有可能流失** 可協助他們持續聚焦行銷力量。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -105,13 +105,13 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
    :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="統整 LoyaltyId 為主鍵。":::
 
-### <a name="match"></a>相符項目
+### <a name="match"></a>比對
 
 1. 請前往 **比對** 索引標籤並選取 **設定訂單**。
 
-1. 請在 **主要** 下拉式清單中選擇 **eCommerceContacts：電子商務** 為主要來源並包括所有記錄。
+1. 在 **主要** 下拉式清單中，選擇 **eCommerceContacts : eCommerce** 作為主要來源，並包含所有記錄。
 
-1. 請在 **實體 2** 下拉式清單中選擇 **loyCustomers：LoyaltyScheme** 並包括所有記錄。
+1. 在 **實體 2** 下拉清單中，選擇 **loyCustomers : LoyaltyScheme** 並包含所有記錄。
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="統整比對電子商務與忠誠度。":::
 
@@ -119,16 +119,16 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
 1. 使用 FullName 新增您的第一個條件。
 
-   * eCommerceContacts 方面，請在下拉式清單中選取 **FullName**。
-   * loyCustomers 方面，請在下拉式清單中選取 **FullName**。
+   * 在 eCommerceContacts ，請在下拉式清單中選擇 **全名**。
+   * 在 loyCustomers，請在下拉式清單中選擇 **全名**。
    * 選取 **正規化** 下拉式清單並選擇 **類型 (電話、名稱、地址、...)**。
    * 設定 **精密等級**：**基本** 與 **值**：**高**。
 
 1. 輸入新規則名稱 **FullName、電子郵件**。
 
    * 選取 **新增條件** 來新增電子郵件地址的第二個條件
-   * 實體 eCommerceContacts 方面，請在下拉式清單中選擇 **電子郵件**。
-   * 實體 loyCustomers 方面，請在下拉式清單中選擇 **電子郵件**。 
+   * 在 eCommerceContacts 實體，請在下拉式清單中選擇 **電子郵件**。
+   * 在loyCustomers 實體，請在下拉式清單中選擇 **電子郵件**。 
    * 保留正規化空白。 
    * 設定 **精密等級**：**基本** 與 **值**：**高**。
 

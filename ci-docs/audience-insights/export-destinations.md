@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253030"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305468"
 ---
 # <a name="exports-preview-overview"></a>匯出 (預覽版) 概觀
 
 **匯出** 頁面會顯示所有已設定的匯出。 匯出與各種應用程式共用指定資料。 這可以包括客戶個人資料或實體、結構描述及對應詳細資料。 每個匯出都需要[由系統管理員設定的連接，來管理驗證和存取權](connections.md)。
 
-移至 **資料** > **匯出** 以查看匯出頁面。 所有使用者角色都擁有存取權，可以查看設定好的匯出。 在命令列中使用搜尋欄位，可用名稱、連接名稱或連線類型來尋找匯出。
+移至 **資料** > **匯出** 以查看匯出頁面。 所有使用者角色都可以查看設定好的匯出。 使用命令列中的搜尋欄位，根據名稱、連接名稱或連接類型來尋找匯出。
 
 ## <a name="set-up-a-new-export"></a>設定新的匯出
 
@@ -65,7 +65,7 @@ ms.locfileid: "6253030"
 
 1. 移至 **資料** > **匯出**。
 
-1. 沒有編輯權限的使用者選取 **查看** 而非 **編輯** 來查看匯出詳細資料。
+1. 沒有編輯權限的使用者選取 **查看** 來查看匯出詳細資料，而非 **編輯**。
 
 1. 側邊窗格顯示匯出的設定。 若沒有編輯權限，就無法變更值。 選取 **關閉** 來返回匯出頁面。
 
@@ -73,7 +73,7 @@ ms.locfileid: "6253030"
 
 您設定的每個匯出都會有重新整理的排程。 在重新整理期間，系統會尋找新的或更新資料是要包含在匯出中的。 根據預設，會在每次[已排程的系統重新整理](system.md#schedule-tab)中執行匯出。 您可以自訂重新整理排程，或將它關閉以手動執行匯出。
 
-匯出排程可依您的環境狀態決定。 如果排程的匯出應該開始時，[相依性](system.md#refresh-policies)更新正在執行，則系統會先完成相依性，再執行匯出。 在 **重新整理** 資料行中，您可以看到上次匯出重新整理的時間。
+匯出排程可依您的環境狀態決定。 如果排程的匯出應該開始時，[相依性](system.md#refresh-policies)有更新正在進行，則系統會先完成更新，然後執行匯出。 在 **重新整理** 資料行中，您可以看到上次匯出重新整理的時間。
 
 ### <a name="schedule-exports"></a>匯出排程
 

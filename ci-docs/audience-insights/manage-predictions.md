@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095692"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315868"
 ---
 # <a name="manage-predictions"></a>管理預測
 
@@ -35,9 +35,6 @@ ms.locfileid: "6095692"
 輸入資料可用性報表提供錯誤和警告的整合檢視表，指出在您的立即可用的預測可能產生的錯誤和警告。 它也提供如何改善模型效能的建議。
 
 在模型完成其定型程序之後，才可使用此報表。 它是單獨為每個模型建立的，不管其是否成功完成。
-
-> [!NOTE]
-> 目前，此功能只能在交易流失模型運作。
 
 ### <a name="view-the-input-data-usability-report"></a>查看輸入資料可用性報表
 

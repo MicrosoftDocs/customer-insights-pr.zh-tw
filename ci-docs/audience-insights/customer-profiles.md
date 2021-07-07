@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896317"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304594"
 ---
 # <a name="customer-profiles"></a>客戶設定檔
 
@@ -57,13 +57,13 @@ ms.locfileid: "5896317"
 
 客戶詳細資料包括：
 
--   **客戶設定檔圖格：** 此圖格顯示與統一客戶設定檔實體不同的值。 這些詳細資料會包括電子郵件地址、名稱、城市等等。 
+-   **客戶個人資料圖格**：此圖格顯示與整合客戶個人資料實體不同的值。 這些詳細資料會包括電子郵件地址、名稱、城市等等。 
 
--   **潛在興趣、潛在品牌：** 顯示您是否已經組態第一方富集作用。 它代表客戶設定檔與此客戶可能有的類似設定檔的品牌潛在利益和關聯。 如需詳細資訊，請參閱[使用品牌及興趣同質性擴充客戶設定檔](enrichment-microsoft.md)。
+-   **潛在興趣、潛在品牌**：顯示您是否已經設定第一方擴充。 它代表客戶設定檔與此客戶可能有的類似設定檔的品牌潛在利益和關聯。 如需詳細資訊，請參閱[使用品牌及興趣同質性擴充客戶設定檔](enrichment-microsoft.md)。
 
--   **量值：** 顯示您是否已經組態特定類型的一個或多個量值：客戶屬性量值。 它們包括圍繞您的客戶在個別客戶等級的 KPI 計算值。 如需詳細資訊，請見 [定義和管理量值](measures.md)。
+-   **量值**：顯示您是否已經為一個特定類型「客戶屬性量值」，設定好一個或多個量值。 它們包括圍繞您的客戶在個別客戶等級的 KPI 計算值。 如需詳細資訊，請見 [定義和管理量值](measures.md)。
 
--   **活動時間表：** 顯示您是否已組態活動。 時間表視圖包含最近一次活動開始，依時間先後排序的客戶活動。 如需詳細資訊，請參閱[客戶活動](activities.md)。
+-   **活動時間表**：顯示您是否已設定好活動。 時間表視圖包含最近一次活動開始，依時間先後排序的客戶活動。 如需詳細資訊，請參閱[客戶活動](activities.md)。
 
 選取 **返回客戶** 以退回客戶搜尋頁面。
 

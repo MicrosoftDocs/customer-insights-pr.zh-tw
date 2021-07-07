@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965568"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305422"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>以增強的地址擴充的客戶個人資料
 
@@ -22,11 +22,11 @@ ms.locfileid: "5965568"
 
 ## <a name="how-we-enhance-addresses"></a>我們如何增強地址
 
-我們的模型以二步驟流程來增強地址。 首先，它會解析地址找出其組成部分，並將它們設定為結構化格式。 然後，我們使用人工智慧來更正、完成和標準化地址中的值。
+我們的模型以二步驟流程來增強地址。 首先，它會解析地址找出其組成部分，並將它們設定為結構化格式。 然後，我們使用 AI 來更正、完成並標準化地址中的值。
 
 ### <a name="example"></a>範例
 
-地址資訊可能是非標準格式且含有拼寫錯誤。 此模型可以修正這些問題，並在整合的客戶個人資料中建立一致的地址。
+地址資訊可能以非標準格式存在，並包含拼寫錯誤。 此模型可以修正這些問題，並在整合的客戶個人資料中建立一致的地址。
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ ms.locfileid: "5965568"
 2. 確認任何值 (如郵遞區號或街道名稱) 是有效的。
 3. 變更無法識別的值。
 
-此模型使用機器學習技術來增強地址。 在模型變更輸入值時套用高的信賴度閥值，則與任何使用中的模型一樣，不能保證 100% 準確性。
+此模型使用機器學習技術來增強地址。 雖然在模型更改輸入值時，我們套用了高信賴度閾值，但與任何基於機器學習的模型一樣，無法保證 100% 的準確性。
 
 ## <a name="supported-countries-or-regions"></a>支援的國家或地區
 
@@ -76,7 +76,7 @@ ms.locfileid: "5965568"
 1. 選取在資料集中格式化地址的方式。 若資料中的地址使用單一欄位，請選擇 **單一屬性位址**。 若資料中的地址使用超過一個資料欄位，請選擇 **複數屬性地址**。
 
    > [!NOTE]
-   > 國家/地區在單一屬性和複數屬性位址中都是必要的。 缺乏有效或受支援的國家/地區值的地址將不會被擴充
+   > 單屬性和多屬性位址都必須有國家/地區。 缺乏有效或受支援的國家/地區值的地址將不會被擴充。
 
 1.  請從整合客戶實體對應至地址欄位。
 
@@ -98,6 +98,6 @@ ms.locfileid: "5965568"
 
 ## <a name="next-steps"></a>後續步驟
 
-建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)、[量值](measures.md)，甚至[匯出資料](export-destinations.md)，以便傳送個人化體驗給您的客戶。
+建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)和 [量值 ](measures.md)，甚至 [匯出資料](export-destinations.md)，為您的客戶提供個人化的體驗。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

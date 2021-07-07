@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085566"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305616"
 ---
 # <a name="merge-entities"></a>合併實體
 
@@ -34,7 +34,7 @@ ms.locfileid: "6085566"
 
 您可以變更系統處理合併屬性的方式，生成整合客戶個人資料。 選取 **顯示詳細資訊**，然後選擇要變更的內容。
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Options in the Show more drop-down menu to manage merged attributes.":::
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="顯示更多的下拉式功能表中的選項，可管理合併屬性。":::
 
 如需詳細資訊，請參閱下節。
 

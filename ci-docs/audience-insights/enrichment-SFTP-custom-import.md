@@ -9,22 +9,22 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896271"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304640"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>使用自訂資料富集客戶設定檔 (預覽版)
 
-安全檔案傳輸通訊協定 (SFTP) 自訂匯入可讓您匯入沒有經過資料整合處理的資料。 那是一種靈活、安全且容易帶入您的資料的方式。 SFTP 自訂匯入功能可以和 [SFTP 匯出](export-sftp.md) 功能搭配使用，讓您匯出富集所需的客戶設定檔資料。 接著資料可以處理、富集和 SFTP 自訂匯入，將富集後的資料帶回 Dynamics 365 Customer Insights 的對象見解功能。
+安全檔案傳輸通訊協定 (SFTP) 自訂匯入功能可讓您匯入不需要透過資料統一處理的資料。 那是一種靈活、安全且容易帶入您的資料的方式。 SFTP 自訂匯入功能可以和 [SFTP 匯出](export-sftp.md) 功能搭配使用，讓您匯出富集所需的客戶設定檔資料。 然後可以處理和擴充資料，並使用 SFTP 自訂匯入將擴充後的資料帶回 Dynamics 365 Customer Insights 的對象見解功能。
 
 ## <a name="prerequisites"></a>先決條件
 
 若要組態 SFTP 自訂匯入，您務必符合下列先決條件：
 
-- 您必須要有匯入 SFTP 主機上檔案的檔案名和位置 (路徑)。
+- 您擁有將在 SFTP 主機上匯入的檔案名稱和位置 (路徑)。
 - 檔案 *model.json*，會為要匯入的資料指定 [Common Data Model 結構描述](/common-data-model/)。 此檔案必須和將匯入的檔案在同一個目錄中。
 - SFTP 連接已由系統管理員設定，*或* 您擁有[系統管理員](permissions.md#administrator)權限。 您會需要 SFTP 位置的使用者認證、URL 及連接埠號碼，該 SFTP 位置是匯入資料的所在處。
 
@@ -37,11 +37,11 @@ ms.locfileid: "5896271"
 
    :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="SFTP 自訂匯入圖格。":::
 
-1. 在下拉式清單中選取一個[連接](connections.md)。 如果沒有可用的連接，請與系統管理員聯繫。 如果您是系統管理員，則可以選取 **新增連接**，並從下拉式清單中選擇 **SFTP 自訂匯入** 來建立連接。
+1. 從下拉式清單選取一個[連結](connections.md)。 如果沒有可用的連接，請與系統管理員聯繫。 如果您是系統管理員，則可以選取 **新增連接**，然從下拉式清單中選擇 **SFTP 自訂匯入**，來建立連接。
 
 1. 選取 **連接至自訂匯入** 以確認選取的連接。
 
-1.  選取 **下一步**，然後輸入要匯入的資料檔案的 **檔案名** 和 **路徑**。
+1.  選取 **下一步**，然後輸入您要匯入的資料檔案的 **路徑** 和 **檔案名**。
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="輸入資料位置時的螢幕擷取畫面。":::
 
@@ -55,21 +55,21 @@ ms.locfileid: "5896271"
 
 1. 在 **顯示名稱** 方塊中輸入連接的名稱。
 
-1. 輸入要匯入的資料駐留在的 STFP 伺服器其有效的使用者名稱、密碼及主機 URL。
+1. 輸入匯入的資料駐留的 SFTP 伺服器其有效的使用者名、密碼及主機 URL。
 
 1. 選取 **我同意** 核取方塊，以檢閱 **資料隱私權和合規性** 並表示同意。
 
 1. 選取 **驗證** 來驗證設定。
 
-1. 驗證完成後，按一下 **儲存** 可以儲存連接。
+1. 驗證完成後，您可以選取 **儲存** 來儲存連接。
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Experian 連接設定頁面](media/enrichment-SFTP-connection.png "Experian 連接設定頁面")
 
 
 ## <a name="defining-field-mappings"></a>定義欄位對應 
 
-包含將在 SFTP 伺服器上匯入檔案的目錄也必須包含 *model.json* 檔案。 此檔案定義用來匯入資料的結構描述。 結構描述必須使用 [Common Data Model](/common-data-model/) 指定欄位對應。 model.json 檔案的簡易範例如下：
+包含將在 SFTP 伺服器上匯入檔案的目錄也必須包含 *model.json* 檔案。 此檔案定義用來匯入資料的結構描述。 結構描述必須使用 [Common Data Model](/common-data-model/) 來指定欄位對應。 model.json 檔案的簡易範例如下：
 
 ```
 {
@@ -123,6 +123,6 @@ ms.locfileid: "5896271"
 
 ## <a name="next-steps"></a>後續步驟
 
-建立在您擴充的客戶資料之上。 建立 [區段](segments.md)、[量值](measures.md) 和 [匯出資料](export-destinations.md) 以便將個人化的經驗傳遞給您的客戶。
+建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)和[量值](measures.md)，和[匯出資料](export-destinations.md)，為您的客戶提供個人化的體驗。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954477"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305238"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -22,7 +22,8 @@ ms.locfileid: "5954477"
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="擴充中心頁面":::
 
-請在對象見解中，前往 **資料** > **富集** 搭配富集選項處理。    
+請在對象見解中，前往 **資料** > **富集** 搭配富集選項處理。  
+
 您必須有參與者或系統管理員權限，才能建立或編輯擴充內容。 如需詳細資訊，請參閱[權限](permissions.md)。
 
 在 **探索** 索引標籤上，您可找到下列擴充內容：
@@ -31,7 +32,7 @@ ms.locfileid: "5954477"
 - [Interests](enrichment-microsoft.md) 由 Microsoft 提供
 - Microsoft 提供的[增強地址](enrichment-enhanced-addresses.md)
 - Leadspace 提供的 [公司資料](enrichment-leadspace.md)
-- Experian 所提供的[人口統計資料](enrichment-experian.md)
+- 由 Experian 提供的[人口統計](enrichment-experian.md)
 - HERE Technologies 提供的 [位置資料](enrichment-here.md)
 - 透過安全檔案傳輸通訊協定 (SFTP) 的 [自訂資料](enrichment-SFTP-custom-import.md)
 
@@ -39,7 +40,7 @@ ms.locfileid: "5954477"
 
 ## <a name="manage-existing-enrichments"></a>管理現有的擴充內容
 
-移至 **我的擴充內容** 以查看所有已設定的擴充內容。 每個擴充內容都表示為一列，其中包含有關擴充內容的其他資訊。
+移至 **我的擴充** 索引標籤，以查看所有設定好的擴充。 每個擴充內容都表示為一列，其中包含有關擴充內容的其他資訊。
 
 選取擴充內容以查看可用的選項。 您也可以選取清單上專案的省略號 (...) 來查看選項。
 

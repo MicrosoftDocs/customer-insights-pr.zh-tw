@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595324"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306064"
 ---
 # <a name="segment-insights-preview"></a>客戶細分深入解析 (預覽)
 
@@ -50,7 +50,7 @@ ms.locfileid: "5595324"
 
 - 與所選要進行分析的客戶細分重疊的成員數目。
 - 包含在其中一個客戶細分中，但不在其餘客戶細分中成員的數目。
-- 如果您在設定重疊分析時已選取欄位，則會在對應的索引標籤中找到這些欄位。 您可以使用篩選下拉式清單來選取任何感興趣的屬性層級，底端的表格將會顯示對應的資料。
+- 如果您在設定重疊分析時已選取欄位，則會在對應的索引標籤中找到這些欄位。 您可以使用篩選下拉式表單來選擇興趣的任何屬性層級，底部的資料表將顯示相應的資料。
 
 ## <a name="segment-differentiators"></a>客戶細分獨特性
 

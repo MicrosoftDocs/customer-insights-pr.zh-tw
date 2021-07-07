@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976308"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305330"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>將客戶細分匯出至 Google Ads (預覽版)
 
-將統一客戶設定檔區段匯出到 Google Ads 對象清單，並用它們在 Google Search、Gmail、YouTube 和 Google Display Network 上刊登廣告。 
+將整合客戶個人資料的客戶細分匯出到 Google Ads 對象清單中，並在 Google 搜尋、Gmail、YouTube和 Google Display Network 上使用它們進行廣告宣傳。 
 
 ## <a name="prerequisites-for-connection"></a>連接的先決條件
 
 -   您具有 [Google Ads 帳戶](https://ads.google.com/) 及對應的系統管理員認證。
--   您擁有[受核准的 Google Ads 開發人員權杖](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   您滿足[客戶比對原則](https://support.google.com/adspolicy/answer/6299717)的要求
--   您滿足[再行銷清單大小](https://support.google.com/google-ads/answer/7558048)的要求 
-
+-   您擁有[受核准的 Google Ads 開發人員權杖](https://developers.google.com/google-ads/api/docs/first-call/dev-token)。 
+-   您滿足[客戶比對原則](https://support.google.com/adspolicy/answer/6299717)的要求。
+-   您滿足[再行銷清單大小](https://support.google.com/google-ads/answer/7558048)的要求。
 -   Google Ads 和對應的識別碼中有現有的對象。 如需詳細資訊，請參閱 [Google Ads 對象](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)。
--   您有 [組態的區段](segments.md)
--   匯出區段的統一客戶設定檔包含代表電子郵件地址、名字和姓氏的欄位
+-   您有 [組態的區段](segments.md)。
+-   匯出區段的統一客戶設定檔包含代表電子郵件地址、名字和姓氏的欄位。
 
 ## <a name="known-limitations"></a>已知限制
 
@@ -68,7 +67,7 @@ ms.locfileid: "5976308"
 
 1. 若要建立新的匯出，請選取 **新增目的地**。
 
-1. 在 **匯出的連結** 欄位中，在 Google Ads 區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的連接可供您使用。
+1. 在 **匯出的連結** 欄位中，在 Google Ads 區段中選擇連接。 如果您沒有看到此區段名稱，則代表此類型中的連接沒有您可以使用的。
 
 1. 輸入您的 **[Google Ads 對象識別碼](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** 然後選取 **連接** 初始化到 Google Ads 的連接。
 
@@ -78,12 +77,14 @@ ms.locfileid: "5976308"
 
 儲存匯出並不會立即執行匯出。
 
-每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。 
+每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 
+
+您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。 
 
 ## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
 
 當您啟用 Dynamics 365 Customer Insights 將資料傳輸給 Google Ads 時，您允許在合規性邊界之外傳輸 Dynamics 365 Customer Insights 資料，包括潛在敏感性資料如個人資料。 Microsoft 將依據您的指示傳輸此資料，但您須負責確保 Google Ads 符合您可能應盡的任何隱私權或資訊安全義務。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
-您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此匯出目的地，以便不再繼續使用此功能。
+您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此匯出目的地，不再繼續使用此功能。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

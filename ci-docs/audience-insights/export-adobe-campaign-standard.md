@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760271"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305376"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>在 Adobe Campaign Standard 中使用 Customer Insights 客戶細分 (預覽)
 
-作為 Dynamics 365 Customer Insights 對象見解的使用者，您可能創建了多個客戶細分，鎖定相關對象來提高行銷廣告活動的效益。 在 Adobe Experience Platform 和 Adobe Campaign Standard 之類的應用程式中使用對象見解的客戶細分，您需要遵循本文中概述的幾個步驟。
+對於 Dynamics 365 Customer Insights 中對象見解的使用者，您可能已建立了一些客戶細分來鎖定相關的對象，讓您的行銷廣告活動更有效率。 在 Adobe Experience Platform 和 Adobe Campaign Standard 之類的應用程式中使用對象見解的客戶細分，您需要遵循本文中概述的幾個步驟。
 
 :::image type="content" source="media/ACS-flow.png" alt-text="本文概述步驟的流程圖。":::
 
@@ -54,7 +54,7 @@ ms.locfileid: "5760271"
 
 1. 在對象見解中，移至 **管理** > **連接**。
 
-1. 選取 **新增連接**，然後選擇 **Adobe Campaign** 來設定此連接，或在 **Adobe Campaign** 圖格中選取 **設定**
+1. 選取 **新增連接**，然後選擇 **Adobe Campaign** 來設定此連接，或在 **Adobe Campaign** 圖格中選取 **設定**。
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Adobe Campaign Standard 的設定圖格。":::
 
@@ -80,7 +80,7 @@ ms.locfileid: "5760271"
 
 1. 若要建立新匯出，請選取 **新增匯出**。
 
-1. 在 **匯出的連結** 欄位中，在 Adobe Campaign 區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的連接可供您使用。
+1. 在 **匯出的連結** 欄位中，在 Adobe Campaign 區段中選擇連接。 如果您沒有看到此區段名稱，則代表此類型中的連接沒有您可以使用的。
 
 1. 選擇您要匯出的客戶細分。 在這個例子中，它是 **ChurnProneCustomers**。
 
@@ -118,7 +118,7 @@ ms.locfileid: "5760271"
 
 要使用 Adobe Campaign Standard 中的客戶細分，我們需要擴充 Adobe Campaign Standard 中的個人資料結構描述，容納兩個額外的欄位。 瞭解在 Adobe Campaign Standard 中如何使用新欄位[擴充個人資料資源](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing)。
 
-在我們的範例中，這些欄位是 *客戶細分名稱和客戶細分日期 (可選)。*
+在我們的範例中，這些欄位是 *客戶細分名稱和客戶細分日期 (可選)*。
 
 我們將使用這些欄位在 Adobe Campaign Standard 中找出我們想要用在此活動的個人資料。
 
@@ -128,7 +128,7 @@ ms.locfileid: "5760271"
 
 現在一切都準備好了，我們需要從對象見解匯入準備好的對象資料到 Adobe Campaign Standard，以建立個人資料。 瞭解使用工作流程，[如何在 Adobe Campaign Standard 匯入個人資料](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences)。
 
-下圖中的匯入工作流程已設定為每 8 小時執行一次，並找出已匯出的對象見解客戶細分 (Azure Blob 儲存體中的 csv 檔案)。 工作流程以指定的資料行順序擷取 csv 檔案內容。 此工作流程已組建為能執行基本錯誤處理，及確保每個記錄有一個電子郵寄地址之後才在 Adobe Campaign Standard 將資料序列化。 工作流程還能從檔名中擷取資料細分名稱，再更新插入 ACS 個人資料。
+下面圖片中的匯入工作流程已設定為每 8 小時執行一次，並尋找匯出的對象見解客戶細分 (位於 Azure Blob 儲存體中的 csv 檔案)。 工作流程以指定的資料行順序擷取 csv 檔案內容。 此工作流程已組建為能執行基本錯誤處理，及確保每個記錄有一個電子郵寄地址之後才在 Adobe Campaign Standard 將資料序列化。 工作流程也會在 upsert 至 Adobe Campaign Standard 個人資料之前，先從檔案名中提取客戶細分名稱。
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Adobe Campaign Standard 使用者介面中匯入工作流程的螢幕擷取畫面。":::
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129889"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306156"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>產品建議預測 (預覽版) 範例指南
 
@@ -101,13 +101,13 @@ Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Conto
 
    ![統整 LoyaltyId 為主鍵。](media/unify-loyaltyid.png)
 
-### <a name="match"></a>相符項目
+### <a name="match"></a>比對
 
 1. 請前往 **比對** 索引標籤並選取 **設定訂單**。
 
-2. 請在 **主要** 下拉式清單中選擇 **eCommerceContacts：電子商務** 為主要來源並包括所有記錄。
+2. 在 **主要** 下拉式清單中，選擇 **eCommerceContacts : eCommerce** 作為主要來源，並包含所有記錄。
 
-3. 請在 **實體 2** 下拉式清單中選擇 **loyCustomers：LoyaltyScheme** 並包括所有記錄。
+3. 在 **實體 2** 下拉清單中，選擇 **loyCustomers : LoyaltyScheme** 並包含所有記錄。
 
    ![統整比對電子商務與忠誠度。](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Conto
 
 5. 使用 FullName 新增您的第一個條件。
 
-   - eCommerceContacts 方面，請在下拉式清單中選取 **FullName**。
-   - loyCustomers 方面，請在下拉式清單中選取 **FullName**。
+   - 在 eCommerceContacts ，請在下拉式清單中選擇 **全名**。
+   - 在 loyCustomers，請在下拉式清單中選擇 **全名**。
    - 選取 **正規化** 下拉式清單並選擇 **類型 (電話、名稱、地址、...)**。
    - 設定 **精密等級**：**基本** 與 **值**：**高**。
 
 6. 輸入新規則名稱 **FullName、電子郵件**。
 
    - 選取 **新增條件** 來新增電子郵件地址的第二個條件
-   - 實體 eCommerceContacts 方面，請在下拉式清單中選擇 **電子郵件**。
-   - 實體 loyCustomers 方面，請在下拉式清單中選擇 **電子郵件**。
+   - 在 eCommerceContacts 實體，請在下拉式清單中選擇 **電子郵件**。
+   - 在loyCustomers 實體，請在下拉式清單中選擇 **電子郵件**。
    - 保留正規化空白。
    - 設定 **精密等級**：**基本** 與 **值**：**高**。
 

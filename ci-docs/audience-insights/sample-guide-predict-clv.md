@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129935"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306339"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>客戶存留期值 (CLV) 預測範例指南
 
@@ -123,9 +123,9 @@ Contoso 是一家生產高品質咖啡和咖啡機的公司。 他們透過 Cont
 
 1. 請前往 **比對** 索引標籤並選取 **設定訂單**。
 
-1. 請在 **主要** 下拉式清單中選擇 **eCommerceContacts：電子商務** 為主要來源並包括所有記錄。
+1. 在 **主要** 下拉式清單中，選擇 **eCommerceContacts : eCommerce** 作為主要來源，並包含所有記錄。
 
-1. 請在 **實體 2** 下拉式清單中選擇 **loyCustomers：LoyaltyScheme** 並包括所有記錄。
+1. 在 **實體 2** 下拉清單中，選擇 **loyCustomers : LoyaltyScheme** 並包含所有記錄。
 
    ![統整比對電子商務與忠誠度。](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ Contoso 是一家生產高品質咖啡和咖啡機的公司。 他們透過 Cont
 
 1. 使用 FullName 新增您的第一個條件。
 
-   - eCommerceContacts 方面，請在下拉式清單中選取 **FullName**。
-   - loyCustomers 方面，請在下拉式清單中選取 **FullName**。
-   - 選取 **標準化** 下拉式清單並選擇 **類型 (電話、名稱、地址、...)**。
+   - 在 eCommerceContacts ，請在下拉式清單中選擇 **全名**。
+   - 在 loyCustomers，請在下拉式清單中選擇 **全名**。
+   - 選取 **標準化** 下拉式功能表，然後選擇 **類型 (電話、名稱、地址、...)**。
    - 設定 **精密等級**：**基本** 與 **值**：**高**。
 
 1. 輸入新規則名稱 **FullName、電子郵件**。
 
    - 選取 **新增條件** 來新增電子郵件地址的第二個條件
-   - 實體 eCommerceContacts 方面，請在下拉式清單中選擇 **電子郵件**。
-   - 實體 loyCustomers 方面，請在下拉式清單中選擇 **電子郵件**。
+   - 在 eCommerceContacts 實體，請在下拉式清單中選擇 **電子郵件**。
+   - 在loyCustomers 實體，請在下拉式清單中選擇 **電子郵件**。
    - 保留正規化空白。
    - 設定 **精密等級**：**基本** 與 **值**：**高**。
 

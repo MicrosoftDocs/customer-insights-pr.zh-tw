@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760091"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305514"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>在 Adobe Experience Platform 中使用 Customer Insights 客戶細分 (預覽)
 
-作為 Dynamics 365 Customer Insights 對象見解的使用者，您可能創建了多個客戶細分，鎖定相關對象來提高行銷廣告活動的效益。 在 Adobe Experience Platform 和 Adobe Campaign Standard 之類的應用程式中使用對象見解的客戶細分，您需要遵循本文中概述的幾個步驟。
+對於 Dynamics 365 Customer Insights 中對象見解的使用者，您可能已建立了一些客戶細分來鎖定相關的對象，讓您的行銷廣告活動更有效率。 在 Adobe Experience Platform 和 Adobe Campaign Standard 之類的應用程式中使用對象見解的客戶細分，您需要遵循本文中概述的幾個步驟。
 
 :::image type="content" source="media/AEP-flow.png" alt-text="本文概述步驟的流程圖。":::
 
@@ -55,9 +55,9 @@ ms.locfileid: "5760091"
 
 1. 移至 **管理** > **連接**。
 
-1. 選取 **新增連接**，然後選擇 **Azure blob 儲存體** 或在 **Azure Blob 儲存體** 圖格中選取 **設定**：
+1. 選取 **新增連接**，然後選擇 **Azure Blob 儲存體**，或在 **Azure Blob 儲存體** 圖格中選取 **設定** 來設定此連接。
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure Blob 儲存體的設定圖格。"::: 若要設定連接：
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure Blob 儲存體的設定圖格。"::: 
 
 1. 在 **顯示名稱** 中，給連接一個能夠辨識的名稱。 連接的名稱與類型能說明此連接。 我們建議您選取可以說明此連接用途和目標的名稱。
 
@@ -80,7 +80,7 @@ ms.locfileid: "5760091"
 
 1. 若要建立新匯出，請選取 **新增匯出**。
 
-1. 在 **匯出的連結** 欄位中，在 Azure Blob 儲存體區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的連接可供您使用。
+1. 在 **匯出的連結** 欄位中，在 Azure Blob 儲存體區段中選擇連接。 如果您沒有看到此區段名稱，則代表此類型中的連接沒有您可以使用的。
 
 1. 選擇您要匯出的客戶細分。 在這個例子中，它是 **ChurnProneCustomers**。
 
@@ -121,9 +121,10 @@ ms.locfileid: "5760091"
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>在 Adobe Campaign Standard 建立對象
 
-發送此行銷活動的電子郵件，我們將使用 Adobe Campaign Standard。 將資料匯入 Adobe Experience Platform 後，我們需要使用 Adobe Experience Platform 中的資料在 Adobe Campaign Standard 中[建立對象](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission)。
+若要傳送此行銷活動的電子郵件，我們將使用 Adobe Campaign Standard。 將資料匯入 Adobe Experience Platform 後，我們需要使用 Adobe Experience Platform 中的資料在 Adobe Campaign Standard 中[建立對象](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission)。
 
-了解在 Adobe Campaign Standard 中如何[使用客戶細分建立工具](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment)以 Adobe Experience Platform 的資料定義對象。
+
+了解在 Adobe Campaign Standard 中如何[使用客戶細分建立工具](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html)以 Adobe Experience Platform 的資料定義對象。
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>使用 Adobe Campaign Standard 建立和發送電子郵件
 

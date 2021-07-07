@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595370"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305700"
 ---
 # <a name="system-configuration"></a>系統設定
 
@@ -94,7 +94,7 @@ ms.locfileid: "5595370"
 
 ## <a name="api-usage-tab"></a>API 使用方式索引標籤
 
-尋找有關即時 API 用法的詳細資料，並查看在指定時間範圍中發生的事件。 在 **選取時間範圍** 下拉式功能表中選擇時間範圍。 
+尋找有關即時 API 用法的詳細資料，並查看在指定時間範圍中發生的事件。 您可以在 **選擇時間範圍** 下拉式清單中選擇時間範圍。 
 
 **API 用法** 包含三個區段： 
 - **API 呼叫** - 在選取的時間範圍中，會視覺化 API 彙總數量的圖表。

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700658"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305613"
 ---
 # <a name="custom-machine-learning-models"></a>自訂機器學習模型
 
@@ -72,7 +72,7 @@ ms.locfileid: "5700658"
       > [!div class="mx-imgBorder"]
       > ![模型輸出參數窗格](media/intelligence-screen3-outputparameters.png "模型輸出參數窗格")
 
-1. 請從辨識客戶的 **結果下拉式選單中的客戶識別碼** 選取符合的屬性並選取 **儲存**。
+1. 從 **結果中的客戶識別碼** 下拉式清單選取可以找到客戶對應屬性，並選取 **儲存**。
 
    > [!div class="mx-imgBorder"]
    > ![客戶資料相關結果窗格](media/intelligence-screen4-relatetocustomer.png "客戶資料相關結果窗格")
@@ -100,7 +100,7 @@ ms.locfileid: "5700658"
       1. 請針對您的測試管道選取 **輸出資料存放區參數名稱**。
       1. 請針對您的測試管道選取 **輸出路徑參數名稱**。
 
-1. 請從辨識客戶的 **結果下拉式選單中的客戶識別碼** 選取符合的屬性並選取 **儲存**。
+1. 從 **結果中的客戶識別碼** 下拉式清單選取可以找到客戶對應屬性，並選取 **儲存**。
    從推論輸出中選擇屬性，其值類似客戶實體的客戶識別碼資料欄。 如果您的資料集沒有此欄位，請選擇唯一識別該行的屬性。
 
 ## <a name="run-a-workflow"></a>執行工作流程

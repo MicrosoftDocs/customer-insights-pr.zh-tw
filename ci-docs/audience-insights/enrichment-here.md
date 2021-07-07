@@ -1,5 +1,5 @@
 ---
-title: 藉助協力廠商 HERE Technologies 的富集作用
+title: 以協力廠商 HERE Technologies 擴充進行擴充
 description: 有關 HERE Technologies 協力廠商富集作用的一般資訊。
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896041"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305284"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies 客戶設定檔的富集作用 (預覽版)
 
@@ -24,9 +24,9 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 
 若要組態 HERE Technologies 富集作用，必須符合下列先決條件：
 
-- 您已具備有效的 HERE Technologies 訂閱。 若要訂閱，您可以 [在這裡註冊](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) 或直接 [聯絡 HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you)。 [深入瞭解 HERE Technologies 的 Location Enrichment。](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- 您已具備有效的 HERE Technologies 訂閱。 若要訂閱，您可以[在這裡註冊](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) 或直接 [聯絡 HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you)。 [深入瞭解 HERE Technologies 的 Location Enrichment。](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- 具備可以使用的 HERE [連接](connections.md)*或者* 您有 [系統管理員](permissions.md#administrator)權限和 HERE Technologies API 金鑰。
+- 有可用的 HERE 的 [連接](connections.md)*或*，或者您有[系統管理員](permissions.md#administrator)權限和 HERE Technologies API 金鑰。
 
 ## <a name="configure-the-enrichment"></a>擴充設定
 
@@ -37,7 +37,7 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies 圖格](media/HERE-tile.png "HERE Technologies 圖格")
 
-1. 在下拉式清單中選取一個[連接](connections.md)。 如果沒有可用的連接，請與系統管理員聯繫。 如果您是系統管理員，則可以選取 **新增連接** 來建立連接。 在下拉式清單中選擇 **HERE Technologies**。 
+1. 從下拉式清單選取一個[連結](connections.md)。 如果沒有可用的連接，請與系統管理員聯繫。 如果您是系統管理員，則可以選取 **新增連接** 來建立連接。 從下拉式清單中選擇 **HERE Technologies**。 
 
 1. 選取 **連接至 HERE Technologies** 以確認選取連接。
 
@@ -58,7 +58,7 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 
 1. 檢閱選擇之後，請選取 **儲存擴充**。
 
-## <a name="configure-the-connection-for-here-technologies"></a>設定 HERE technologies 的連接 
+## <a name="configure-the-connection-for-here-technologies"></a>設定 HERE Technologies 的連接 
 
 您必須是系統管理員才能設定連接。 在設定擴充時，請選取 **新增連接***或* 在 HERE Technologies 圖格上移至 **管理** > **連接** 並選取 **設定**。
 
@@ -66,13 +66,13 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 
 1. 提供有效的 HERE Technologies API 金鑰。
 
-1. 檢閱 **資料隱私權和合規性** 並選取 **我同意** 的核取方塊，表示同意
+1. 檢閱並選取 **我同意**，提供您的 **資料隱私權和合規性** 許可。
 
 1. 選取 **驗證** 來驗證設定。
 
 1. 完成驗證之後，請選取 **儲存**。
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![HERE technologies 的連接設定頁面](media/enrichment-HERE-connection.png "HERE technologies 的連接設定頁面")
 
 ## <a name="enrichment-results"></a>擴充結果
@@ -85,12 +85,12 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 
 ## <a name="next-steps"></a>後續步驟
 
-建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)、[量值](measures.md)，甚至[匯出資料](export-destinations.md)，以便傳送個人化體驗給您的客戶。
+建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)和 [量值 ](measures.md)，甚至 [匯出資料](export-destinations.md)，為您的客戶提供個人化的體驗。
 
 ## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
 
 當您啟用 Dynamics 365 Customer Insights 將資料傳輸給 HERE Technologies 時，您允許在合規性邊界之外傳輸 Dynamics 365 Customer Insights 資料，包括潛在敏感性資料如個人資料。 Microsoft 將依據您的指示傳輸此資料，但您須負責確保 HERE Technologies 符合您可能應盡的任何隱私權或資訊安全義務。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
-您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此富集作用，以便不再繼續使用此功能。
+您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此擴充，不再繼續使用此功能。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
