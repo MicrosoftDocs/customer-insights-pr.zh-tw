@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095638"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556297"
 ---
 # <a name="subscription-churn-prediction-preview"></a>訂閱流失預測 (預覽)
 
@@ -63,7 +63,7 @@ ms.locfileid: "6095638"
 1. 請在對象見解中前往 **智慧**　 > **預測**。
 1. 選取 **預訂流失模型 (預覽)** 圖標，並選取 **使用此模型**。
    > [!div class="mx-imgBorder"]
-   > ![具有 [使用此模型] 按鈕的訂閱流失模型圖標](media/subscription-churn-usethismodel.PNG "具有 [使用此模型] 按鈕的訂閱流失模型圖標")
+   > ![具有「使用此模型」按鈕的訂閱流失模型圖標。](media/subscription-churn-usethismodel.PNG "具有 [使用此模型] 按鈕的訂閱流失模型圖標")
 
 ### <a name="name-model"></a>命名模型
 
@@ -86,11 +86,11 @@ ms.locfileid: "6095638"
     1. 選取與主要客戶實體相配的 **客戶實體**。
     1. 輸入描述此關聯的名稱。
        > [!div class="mx-imgBorder"]
-       > ![訂閱歷程記錄頁面，顯示如何建立與客戶的關聯](media/subscription-churn-subscriptionhistoryrelationship.PNG "訂閱歷程記錄頁面，顯示如何建立與客戶的關聯")
+       > ![訂閱歷程記錄頁面，顯示如何建立與客戶的關聯。](media/subscription-churn-subscriptionhistoryrelationship.PNG "訂閱歷程記錄頁面，顯示如何建立與客戶的關聯")
 1. 選取 **下一步**。
 1. 將語意欄位對應至訂閱歷程記錄實體中的屬性，然後選取 **儲存**。 如需欄位的描述，請查看[先決條件](#prerequisites)。
    > [!div class="mx-imgBorder"]
-   > ![預訂歷程記錄頁面，顯示對應至所選訂閱歷程記錄實體中欄位的語意屬性](media/subscription-churn-subscriptionhistorymapping.PNG "預訂歷程記錄頁面，顯示對應至所選訂閱歷程記錄實體中欄位的語意屬性")
+   > ![預訂歷程記錄頁面，顯示對應至所選訂閱歷程記錄實體中欄位的語義屬性。](media/subscription-churn-subscriptionhistorymapping.PNG "預訂歷程記錄頁面，顯示對應至所選訂閱歷程記錄實體中欄位的語意屬性")
 1. 選取 **客戶活動** 的 **新增資料**，然後選擇可提供先決條件中所述客戶活動資訊的實體。
 1. 選取與您要設定之客戶活動類型相配的活動類型。  如果看不到符合您所需活動類型的選項，請選取 **建立新的** 並提供名稱。
 1. 您必須設定從客戶活動實體到客戶實體的關聯。
@@ -101,7 +101,7 @@ ms.locfileid: "6095638"
 1. 將語意欄位對應至客戶活動實體中的屬性，然後選取 **儲存**。 如需欄位的描述，請查看[先決條件](#prerequisites)。
 1. (選用) 如果有任何您要加入的其他客戶活動，請重複上述步驟。
    > [!div class="mx-imgBorder"]
-   > ![定義實體關聯](media/subscription-churn-customeractivitiesmapping.PNG "客戶活動頁面，顯示對應至所選客戶活動實體中欄位的語意屬性")
+   > ![定義實體關聯。](media/subscription-churn-customeractivitiesmapping.PNG "客戶活動頁面，顯示對應至所選客戶活動實體中欄位的語意屬性")
 1. 選取 **下一步**。
 
 ### <a name="set-schedule-and-review-configuration"></a>設定排程並檢閱設定
@@ -115,7 +115,7 @@ ms.locfileid: "6095638"
 
 1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
    > [!div class="mx-imgBorder"]
-   > ![我的預測頁面的檢視表](media/subscription-churn-mypredictions.PNG "我的預測頁面的檢視表")
+   > ![我的預測頁面的檢視表。](media/subscription-churn-mypredictions.PNG "我的預測頁面的檢視表")
 1. 選取您要檢閱的預測。
    - **預測名稱：** 建立預測時提供的預測名稱。
    - **預測類型：** 預測使用的模型類型
@@ -131,7 +131,7 @@ ms.locfileid: "6095638"
    - **上次重新整理：** 預測重新整理輸出實體中結果的日期。
 1. 選取您要檢閱結果的預測旁邊的垂直省略符號，並選取 **檢視**。
    > [!div class="mx-imgBorder"]
-   > ![預測的垂直省略符號功能表的 [檢視] 選項包括編輯、重新整理、檢視、記錄和刪除](media/subscription-churn-verticalellipses.PNG "預測的垂直省略符號功能表的 [檢視] 選項包括編輯、重新整理、檢視、記錄和刪除")
+   > ![檢視垂直省略符號功能表中與預測有關的選項，包括編輯、重新整理、檢視、記錄和刪除。](media/subscription-churn-verticalellipses.PNG "預測的垂直省略符號功能表的 [檢視] 選項包括編輯、重新整理、檢視、記錄和刪除")
 1. 結果頁面中有三個主要的資料區段：
     1. **定型模型效能：** A、B 或 C 是可能的分數。 此分數表示預測的效能，可協助您做出決定以使用輸出實體中儲存的結果。
         - 分數是根據下列規則所決定：
@@ -139,13 +139,13 @@ ms.locfileid: "6095638"
             - **B** 當模型的準確預測至少佔預測總數的 50% 時，以及對客戶流失的準確預測百分比超過歷史平均流失率幅度最多 10% 時。
             - **C** 當模型的準確預測佔預測總數低於 50% 時，或者對客戶流失的準確預測百分比小於歷史平均流失率時。
                > [!div class="mx-imgBorder"]
-               > ![模型效能結果的檢視](media/subscription-churn-modelperformance.PNG "模型效能結果的檢視")
+               > ![模型效能結果的檢視。](media/subscription-churn-modelperformance.PNG "模型效能結果的檢視")
     1. **流失可能性 (客戶數目)：** 根據預測的流失風險分組的客戶群組。 稍後如果您想要建立有高度流失風險的客戶細分時，此資料可以協助您。 這類客戶細分有助於了解客戶細分成員分界所在的位置。
        > [!div class="mx-imgBorder"]
-       > ![顯示流失結果分佈的圖表，已從 0 到 100% 分解成不同範圍](media/subscription-churn-resultdistribution.PNG "顯示流失結果分佈的圖表，已從 0 到 100% 分解成不同範圍")
+       > ![以圖表顯示流失結果的分佈，從 0 到 100% 分成不同範圍。](media/subscription-churn-resultdistribution.PNG "顯示流失結果分佈的圖表，已從 0 到 100% 分解成不同範圍")
     1. **最具影響力的因素：** 建立預測時，有許多納入考慮的因素。 每個因素都有其針對模型所建立彙總預測而計算的重要性。 您可以使用這些因素來協助驗證預測結果。 您也可以稍後再使用此資訊來[建立客戶細分](segments.md)，這可能有助於影響客戶的流失風險。
        > [!div class="mx-imgBorder"]
-       > ![顯示預測流失結果影響因素及其重要性的清單](media/subscription-churn-influentialfactors.PNG "顯示預測流失結果影響因素及其重要性的清單")
+       > ![顯示預測流失結果影響因素及其重要性的清單。](media/subscription-churn-influentialfactors.PNG "顯示預測流失結果影響因素及其重要性的清單")
 
 ## <a name="manage-predictions"></a>管理預測
 

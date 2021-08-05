@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597501"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554297"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>符合 GDPR 的資料主體權利 (DSR) 要求
 
@@ -40,7 +40,7 @@ Customer Insights 管理員可以依照下列步驟移除已在資料來源中�
    2. 檢查 **狀態** 下的資料來源狀態。 核取記號表示已成功地進行重新整理。 警告三角形表示發生錯誤。 如果顯示警告三角形，請聯繫 D365CI@microsoft.com。
 
 > [!div class="mx-imgBorder"]
-> ![處理客戶資料的 GDPR 刪除要求](media/gdpr-data-sources.png "處理客戶資料的 GDPR 刪除要求")
+> ![處理客戶資料的 GDPR 刪除要求。](media/gdpr-data-sources.png "處理客戶資料的 GDPR 刪除要求")
 
 #### <a name="manage-delete-requests-for-user-data"></a>管理對使用者資料的刪除要求
 
@@ -52,7 +52,7 @@ Customer Insights 管理員可以依照下列步驟來刪除 Customer Insights �
 4. 選取 **移除**。
 
 > [!div class="mx-imgBorder"]
-> ![處理 GDPR 對使用者資料的刪除要求](media/gdpr-permissions.png "處理 GDPR 對使用者資料的刪除要求")
+> ![處理使用者資料的 GDPR 刪除要求。](media/gdpr-permissions.png "處理 GDPR 對使用者資料的刪除要求")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>回應 GDPR 資料主旨匯出要求
 

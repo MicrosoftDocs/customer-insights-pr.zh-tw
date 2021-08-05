@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306064"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554975"
 ---
 # <a name="segment-insights-preview"></a>客戶細分深入解析 (預覽)
 
@@ -44,7 +44,7 @@ ms.locfileid: "6306064"
 完成分析之後，在 **客戶細分** > **深入解析 (預覽)** 中尋找有關此深入解析的詳細資料。
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="客戶細分重疊深入解析詳細資料":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="客戶細分重疊深入解析詳細資料。":::
 
 選取深入解析以查看分析結果：
 
@@ -77,7 +77,7 @@ ms.locfileid: "6306064"
 完成分析之後，在 **客戶細分** > **深入解析 (預覽)** 中尋找有關此深入解析的詳細資料。
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="客戶細分獨特性深入解析詳細資料":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="客戶細分獨特性深入解析詳細資料。":::
 
 選取深入解析以查看分析結果。 獨特性分析包含兩個索引標籤。 **屬性** 索引標籤列出視為獨特性的設定檔屬性。 **量值** 索引標籤會列出獨特性。 每個索引標籤都包含下列詳細資料：
 

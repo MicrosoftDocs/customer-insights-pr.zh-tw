@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598329"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555159"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>根據 Azure Machine Learning Studio (經典版) 基礎使用各模型
 
@@ -41,7 +41,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 1. 建立資源之後，Machine Learning Studio 工作區儀表板會出現。 選取 **啟動 Machine Learning Studio**。
 
-   ![Azure Machine Learning Studio 使用者介面](media/azure-machine-learning-studio.png)
+   ![Azure Machine Learning Studio 使用者介面。](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>使用 Azure Machine Learning Studio
 
@@ -55,7 +55,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 1. 如果您建立新實驗，或使用資料庫中的實驗範本，則必須設定 **匯入資料** 屬性。 請使用引導式體驗或直接提供詳細資料存取包含資料的 Azure Blob 儲存體。  
 
-   ![Azure Machine Learning Studio 實驗](media/azure-machine-learning-studio-experiment.png)
+   ![Azure Machine Learning Studio 實驗。](media/azure-machine-learning-studio-experiment.png)
 
 1. 現在您可以建置自訂處理管線，以清理並預先處理資料、擷取功能，以及定型適當模型。
 
@@ -63,15 +63,15 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 1. 當您滿意模型的品質時，選取 **設定 Web 服務** > **預測型 Web 服務**。 此選項會將已定型模型與特徵化管線從定型實驗匯入至預測服務。 預測服務可以透過定型實驗中使用的結構描述，接受另一組輸入資料。
 
-   ![設定預測型 Web 服務](media/predictive-webservice-control.png)
+   ![設定預測型 Web 服務。](media/predictive-webservice-control.png)
 
 1. 預測型 Web 服務實驗成功完成後，就可以將其部署作自動排程之用。 若要讓 Web 服務與 Customer Insights 搭配使用，請選取 **部署 Web 服務** > **部署 Web 服務 [新增] 預覽**。 [進一步了解部署 Web 服務](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)。
 
-   ![部署預測型 Web 服務](media/predictive-webservice-deploy.png)
+   ![部署預測型 Web 服務。](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>資源庫中的範例模型
 
-本文會為模型使用 Contoso 飯店的虛構案例。 Contoso 飯店收集下列資料：
+此文章中，我們將使用虛構的 Contoso飯店案例來製作模型。 Contoso 飯店收集下列資料：
 
 - 包含飯店住宿活動的 CRM 資料。 資料集包含每個已登記客戶的住宿日期資訊。 其中也包含預訂、房間類型、消費明細等方面的相關資訊。 資料涵蓋從 2014 年 1 月至 2018 年 1 月的四年期間。
 - 飯店房客的客戶設定檔。 這些設定檔包含每個客戶的相關資訊，包括其姓名、生日、郵寄地址、性別和電話號碼。
@@ -87,13 +87,13 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 實驗範本可從資源庫匯入。 首先，請確保從 Azure Blob 儲存體匯入 **飯店留宿活動**、**客戶資料** 和 **服務使用方式資料** 的資料。
 
-   ![匯入流失模型的資料](media/import-data-azure-blob-storage.png)
+   ![匯入流失模型的資料。](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>特徵化
 
 根據流失定義，我們先找出將影響標籤的原始特色。 然後，將這些原始特徵處理成可用於機器學習模型的數值特徵。 資料整合發生於 Customer Insights，因此我們可以使用 *顧客識別碼* 加入這些表格。
 
-   ![靈結匯入的資料](media/join-imported-data.png)
+   ![加入匯入的資料。](media/join-imported-data.png)
 
 組建流失分析模型的特徵化動作會有一點難以應付。 資料是每天所記錄的新飯店活動的時間函數。 進行特徵化時，我們需要從動態資料產生靜態特徵。 在本案例中，我們使用一年的滑動視窗從飯店活動產生多個特徵。 我們還會將房間類型或預訂類型等分類特徵擴展成使用一位有效編碼的個別特徵。  
 
@@ -114,7 +114,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 下圖顯示 Azure Machine Learning Studio 提供的模型定型和評估管線：
 
-![Azure Machine Learning Studio 中的流失模型](media/azure-machine-learning-model.png)
+![Azure Machine Learning Studio 中的流失模型。](media/azure-machine-learning-model.png)
 
 我們也套用一種稱為 **排列特徵重要性** 的技術，這是模型最佳化的重要層面。 內建模型對最終預測從任何特定特徵所受的影響知之甚微。 特徵重要性計算機使用的是自訂演算法，可運算個別特徵對特定模型結果產生的影響。 特徵重要性已標準化為介於 + 1 到 -1 之間。 負值影響代表對應的特徵對結果有違反常理的影響，應該從模型移除。 正值影響表示此特徵對預測造成很大的影響。 因為是不同的計量，這些值並非相關係數。 如需詳細資訊，請見 [排列特徵重要性](/azure/machine-learning/studio-module-reference/permutation-feature-importance)。
 
@@ -148,7 +148,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 如同流失模型，我們正加入含有 CustomerID 的 ServiceCustomerID，以便按照各 CustomerID 一致性組建推薦產品。
 
-![建議模型特徵化](media/azure-machine-learning-model-featurization.png)
+![建議模型特徵化。](media/azure-machine-learning-model-featurization.png)
 
 資料源自三種不同實體，特徵則由其衍生。 與流失及 CLTV 案例相比，建議問題的特徵化有所不同。 推薦模型需要以三組特徵為資料的輸入格式。
 
@@ -156,13 +156,13 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 我們使用稱為 **訓練 Matchbox 推薦程式** 的演算法預測產品或服務，藉此訓練推薦模型。
 
-![產品建議演算法](media/azure-machine-learning-model-recommendation-algorithm.png)
+![產品建議演算法。](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 **訓練 Matchbox 推薦程式** 模型的三個輸入埠納入訓練服務使用方式資料、客戶描述 (非必要) 和服務描述使用。 目前有三種不同的模型評分方式。 其中一種適用模型評估，其間標準化折現累積增益 (Normalized Discounted Cumulative Gain，NDCG) 分數經算出後排列評級項目名次。 在此實驗中，我們的 NDCG 分數設定為 0.97。 另外兩個選項是針對整個可推薦服務目錄上的模型評分，或只針對使用者未曾使用過的項目評分。
 
 進一步端詳整個服務目錄的推薦分佈情況，我們注意到電話、WiFi 和快遞是預計推薦的前幾項服務。 這與我們從服務消費資料的分佈所發現的情況一致：
 
-![建議模型輸出](media/azure-machine-learning-model-output.png)
+![建議模型輸出。](media/azure-machine-learning-model-output.png)
 
 整個 [產品推薦實驗可在 Azure AI 資源庫存取。](https://gallery.azure.ai/Experiment/Recommendation-4)
 

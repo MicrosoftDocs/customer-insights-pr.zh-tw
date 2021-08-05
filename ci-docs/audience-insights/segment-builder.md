@@ -1,7 +1,7 @@
 ---
 title: 建立和管理區段
 description: 建立客戶的區段，以依據各種屬性來群組。
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064927"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685452"
 ---
 # <a name="create-and-manage-segments"></a>建立和管理區段
+
+> [!IMPORTANT]
+> 2021 年 9 月，客戶細分建立體驗有幾項變更會推出： 
+> - 客戶細分建立器看起來略有不同，增加了風格變化元素且改善了使用者流程。
+> - 在客戶細分建立器中，會啟用新的日期時間運算子和經過改進的日期選擇器。
+> - 您可以在客戶細分中新增或移除條件及規則。 
+> - 以 OR 條件開頭的巢狀規則將會變得可用。 您不再需要最外層的 AND 條件。
+> - 用來選取屬性的側邊窗格將繼續使用。
+> - 可以選取實體關聯路徑的選項。
+> 若要嘗試使用新的客戶細分建立器，請傳送主題為「Request to enable the new segment builder」的電子郵件至 cihelp [at] microsoft.com。 包括您的組織名稱和您沙箱環境的識別碼。
 
 對整合客戶實體周圍及相關實體，定義複雜篩選。 每個區段會在處理後建立一組可匯出和採取相應動作的客戶記錄。 區段會在 **區段** 頁面上加以管理。 
 
@@ -50,14 +60,14 @@ ms.locfileid: "6064927"
 1. 為選取的屬性選擇運算子與值。
 
    > [!div class="mx-imgBorder"]
-   > ![自訂群組篩選](media/customer-group-numbers.png "客戶群組篩選")
+   > ![自訂群組篩選。](media/customer-group-numbers.png "客戶群組篩選")
 
    |號碼 |定義  |
    |---------|---------|
-   |1     |Entity          |
+   |7     |Entity          |
    |2     |屬性          |
    |3    |運算子         |
-   |4    |值         |
+   |4    |數值         |
 
    1. 若要將更多條件新增至群組，您可以使用兩個邏輯運算子：
 
@@ -66,7 +76,7 @@ ms.locfileid: "6064927"
       - **OR** 運算子：在區段程序中，需要符合其中一項條件。 當您為相同實體定義多個條件時，此選項非常有用。
 
       > [!div class="mx-imgBorder"]
-      > ![需要符合任一條件的 OR 運算子](media/segmentation-either-condition.png "需要符合任一條件的 OR 運算子")
+      > ![需要符合任一條件的 OR 運算子。](media/segmentation-either-condition.png "需要符合任一條件的 OR 運算子")
 
       目前可以將 **OR** 運算子內嵌在 **AND** 運算子之下，但相反過來不行。
 
@@ -74,12 +84,12 @@ ms.locfileid: "6064927"
    選取 **新增群組**。
 
       > [!div class="mx-imgBorder"]
-      > ![客戶群組新增群組](media/customer-group-add-group.png "客戶群組新增群組")
+      > ![客戶群組新增群組。](media/customer-group-add-group.png "客戶群組新增群組")
 
    1. 選取集合運算子中的一個：**Union**、**Intersect** 或 **Except**。
 
    > [!div class="mx-imgBorder"]
-   > ![客戶群組新增聯集](media/customer-group-union.png "客戶群組新增聯集")
+   > ![客戶群組新增聯集。](media/customer-group-union.png "客戶群組新增聯集")
 
    - **聯集** 會聯合兩個群組。
 
@@ -90,7 +100,7 @@ ms.locfileid: "6064927"
 1. 如果實體是透過[關聯](relationships.md)連接至統整的客戶實體，則需要定義關聯路徑來建立有效的區段。 從關聯路徑新增實體，直到您可以從下拉清單中選取 **客戶：CustomerInsights** 實體。 然後，在各個步驟中選擇 **所有記錄**。
 
    > [!div class="mx-imgBorder"]
-   > ![建立區段期間的關聯路徑](media/segments-multiple-relationships.png "建立段落期間的關聯路徑")
+   > ![建立客戶細分時的關聯路徑。](media/segments-multiple-relationships.png "建立段落期間的關聯路徑")
 
 1. 根據預設，客戶細分會生成一個輸出實體，其中包含所有符合已定義篩選準則的客戶個人資料屬性。 如果客戶細分依據其他實體而非 *客戶* 實體，您可以將這些實體中的多個屬性新增至輸出實體。 選取 **專案屬性**，以選擇附加至輸出實體的屬性。  
   
@@ -127,7 +137,7 @@ ms.locfileid: "6064927"
 4. 系統將為您提供 **估計的區段大小**。 您可以選擇是否要產生您定義的區段，或先重新檢視它以取得不同的區段大小。
 
     > [!div class="mx-imgBorder"]
-    > ![快速區段的名稱與估計](media/quick-segment-name.png "快速區段的名稱與估計")
+    > ![快速客戶細分的名稱與估計。](media/quick-segment-name.png "快速區段的名稱與估計")
 
 5. 提供區段的 **名稱**。 或者，提供 **顯示名稱**。
 

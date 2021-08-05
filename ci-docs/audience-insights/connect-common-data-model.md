@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596535"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554884"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>使用 Azure Data Lake 帳戶連接至 Common Data Model 資料夾
 
@@ -45,7 +45,7 @@ ms.locfileid: "5596535"
 
 1. 您可以在使用資源式選項和訂閱式選項之間選擇進行驗證。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 輸入 **容器** 資訊並選取 **下一步**。
    > [!div class="mx-imgBorder"]
-   > ![在 Azure Data Lake 輸入新連接詳細資料的對話方塊](media/enter-new-storage-details.png)
+   > ![在 Azure Data Lake 輸入新連接詳細資料的對話方塊。](media/enter-new-storage-details.png)
    > [!NOTE]
    > 要對上述的容器或儲存體帳戶連接並建立資料來源，您必須擁有下列其中一種角色：
    >  - 儲存體 Blob 資料讀者
@@ -58,11 +58,11 @@ ms.locfileid: "5596535"
 
 1. 您可以在選取的 model.json 或 manifest.json f檔案中取得可用實體清單。 您可以檢閱可用實體清單並從中選取實體，然後選取 **儲存**。 所有選取的實體將從新資料來源內嵌。
    > [!div class="mx-imgBorder"]
-   > ![顯示 model.json 檔案中的實體清單 對話方塊](media/review-entities.png)
+   > ![顯示 model.json 檔案中實體清單的對話方塊。](media/review-entities.png)
 
 8. 指明您要啟用資料剖析功能的資料實體並選取 **儲存**。 資料分析可啟用分析與其他功能。 您可以選取整個實體，這會選取實體的所有屬性或選取您選擇的特定屬性。 根據預設，沒有實體會啟用於資料剖析。
    > [!div class="mx-imgBorder"]
-   > ![顯示資料剖析的對話方塊](media/dataprofiling-entities.png)
+   > ![顯示資料剖析的對話方塊。](media/dataprofiling-entities.png)
 
 9. 儲存您的選取項目後，**資料來源** 頁面隨即開啟。 現在應該會看到做為資料來源的 Common Data Model 資料夾連接。
 
@@ -81,12 +81,12 @@ ms.locfileid: "5596535"
 
 4. 或者，更新 **存取金鑰**，然後選取 **下一步**。
 
-   ![用來編輯和更新現有資料來源存金鑰的對話方塊](media/edit-access-key.png)
+   ![編輯和更新現有資料來源的存取金鑰的對話方塊。](media/edit-access-key.png)
 
 5. 或者您可以從帳戶金鑰到資源式或訂閱式的連接進行更新。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 更新連接時，您無法變更 **容器** 資訊。
    > [!div class="mx-imgBorder"]
 
-   > ![在 Azure Data Lake 輸入連結詳細資料至現有的儲存體帳戶的對話方塊](media/enter-existing-storage-details.png)
+   > ![輸入 Azure Data Lake 連結詳細資料到現有的儲存體帳戶的對話方塊。](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > 要對上述的容器或儲存體帳戶連接並建立資料來源，您必須擁有下列其中一種角色：

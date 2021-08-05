@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760317"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555435"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>將客戶細分匯出至 LiveRamp&reg; (預覽版)
 
@@ -56,7 +56,7 @@ ms.locfileid: "5760317"
 
 1. 在 **選擇金鑰識別元** 欄位中，選取 **電子郵件**、**名稱和位址** 或 **電話** 以傳送至 LiveRamp 進行身分識別解析。
    > [!div class="mx-imgBorder"]
-   > ![LiveRamp 連接器與屬性對應](media/export-liveramp-segments.png "LiveRamp 連接器與屬性對應")
+   > ![LiveRamp 連接器與屬性對應。](media/export-liveramp-segments.png "LiveRamp 連接器與屬性對應")
 
 1. 從您的統一客戶實體中對應所選金鑰識別元的相應屬性。
 

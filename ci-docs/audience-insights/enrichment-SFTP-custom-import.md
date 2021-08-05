@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304640"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555389"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>使用自訂資料富集客戶設定檔 (預覽版)
 
@@ -64,7 +64,7 @@ ms.locfileid: "6304640"
 1. 驗證完成後，您可以選取 **儲存** 來儲存連接。
 
    > [!div class="mx-imgBorder"]
-   > ![Experian 連接設定頁面](media/enrichment-SFTP-connection.png "Experian 連接設定頁面")
+   > ![Experian 連接設定頁面。](media/enrichment-SFTP-connection.png "Experian 連接設定頁面")
 
 
 ## <a name="defining-field-mappings"></a>定義欄位對應 

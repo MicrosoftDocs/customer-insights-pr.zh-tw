@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095546"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556114"
 ---
 # <a name="product-recommendation-prediction-preview"></a>產品建議預測 (預覽版)
 
@@ -64,7 +64,7 @@ ms.locfileid: "6095546"
 
 1. 選取 **產品建議模型 (預覽版)** 圖格和 **使用此模型**。
    > [!div class="mx-imgBorder"]
-   > ![使用此模型按鈕的產品建議模型圖格](media/product-recommendation-usethismodel.PNG "使用此模型按鈕的產品建議模型圖格")
+   > ![具有「使用此模型」按鈕的產品建議模型圖標。](media/product-recommendation-usethismodel.PNG "使用此模型按鈕的產品建議模型圖格")
 
 1. 查看有關模型需求的資訊。 如果您有必要的資料，請選取 **開始使用**。
 
@@ -93,7 +93,7 @@ ms.locfileid: "6095546"
 
 1. 將語義欄位對應到您的購買歷史記錄實體中的屬性，並選取 **下一步**。 如需欄位的描述，請查看[先決條件](#prerequisites)。
    > [!div class="mx-imgBorder"]
-   > ![定義實體關聯](media/product-recommendation-purchasehistorymapping.PNG "購買歷史記錄頁面，顯示的語意屬性可對應至選取的購買歷史記錄實體中欄位")
+   > ![定義實體關聯。](media/product-recommendation-purchasehistorymapping.PNG "購買歷史記錄頁面，顯示的語意屬性可對應至選取的購買歷史記錄實體中欄位")
 
 1. 如果欄位未填寫，請設定購買歷史記錄實體到 *客戶* 實體的關聯。
     1. 請選取 **購買歷史記錄實體**。
@@ -101,7 +101,7 @@ ms.locfileid: "6095546"
     1. 選取與主要客戶實體相配的 **客戶實體**。
     1. 輸入描述此關聯的名稱。
        > [!div class="mx-imgBorder"]
-       > ![購買歷史記錄頁面顯示建立對客戶的關聯](media/model-purchase-join.png "購買歷史記錄頁面顯示建立對客戶的關聯")
+       > ![購買歷史記錄頁面顯示對客戶關係的建立。](media/model-purchase-join.png "購買歷史記錄頁面顯示建立對客戶的關聯")
 
 1. 選取 **儲存**。
 
@@ -145,7 +145,7 @@ ms.locfileid: "6095546"
 
 1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
    > [!div class="mx-imgBorder"]
-   > ![我的預測頁面的檢視表](media/product-recommendation-mypredictions.PNG "我的預測頁面的檢視表")
+   > ![我的預測頁面的檢視表。](media/product-recommendation-mypredictions.PNG "我的預測頁面的檢視表")
 
 1. 選取您要檢閱的預測。
    - **預測名稱：** 建立預測時提供的預測名稱。
@@ -163,7 +163,7 @@ ms.locfileid: "6095546"
 
 1. 選取您要檢閱結果的預測旁邊的垂直省略符號，並選取 **檢視**。
    > [!div class="mx-imgBorder"]
-   > ![預測的垂直省略符號功能表的 [檢視] 選項包括編輯、重新整理、檢視、記錄和刪除](media/product-recommendation-verticalellipses.PNG "預測的垂直省略符號功能表的 [檢視] 選項包括編輯、重新整理、檢視、記錄和刪除")
+   > ![檢視垂直省略符號功能表中與預測有關的選項，包括編輯、重新整理、檢視、記錄和刪除。](media/product-recommendation-verticalellipses.PNG "預測的垂直省略符號功能表的 [檢視] 選項包括編輯、重新整理、檢視、記錄和刪除")
 
 1. 結果頁面中有五個主要資料區段：
     1. **定型模型效能：** A、B 或 C 是可能的分數。 此分數表示預測的效能，可協助您做出決定以使用輸出實體中儲存的結果。
@@ -173,13 +173,13 @@ ms.locfileid: "6095546"
             - **C** 如果 "Success @ K" 指標比基準低，則該模型被視為品質 **C**。
                
                > [!div class="mx-imgBorder"]
-               > ![模型效能結果的檢視](media/product-recommendation-modelperformance.PNG "模型效能結果的檢視")
+               > ![模型效能結果的檢視。](media/product-recommendation-modelperformance.PNG "模型效能結果的檢視")
             - **基準**：模型會透過所有客戶的購買總數來採用最常推薦的產品，並使用模型辨識出並習得的規則為客戶建立一組建議。 然後，會將預測與前排名最高產品 (以購買該產品的客戶數目計算) 進行比較。 如果客戶的建議產品中至少有一個產品也能高購買量產品中看到，則會將他們視為基準的一部分。 如果這樣的客戶每 100 位有 10 位曾購買建議的產品，則基準衡量為 10%。
             - **Success @ K**：使用交易記錄時段的驗證集為所有客戶建立建議，並以此建議與交易的驗證集進行比較。 例如，在 12 個月的時段中，可能會將第 12 個月保留為資料的驗證集。 如果此模型根據先前的 11 個月所學到的時間，可預測第 12 個月您所購買的至少一樣物品，則此客戶將會增加 "Success @ K" 的衡量標準。
     
     1. **最建議的產品 (含計數)：** 為客戶預測的五種最佳的產品。
        > [!div class="mx-imgBorder"]
-       > ![最建議的 5 個產品的圖表](media/product-recommendation-topproducts.PNG "最建議的 5 個產品的圖表")
+       > ![最建議的 5 個產品的圖表。](media/product-recommendation-topproducts.PNG "最建議的 5 個產品的圖表")
     
     1. **主要建議因素：** 模型會使用客戶的交易歷史記錄，來製作產品建議。 它會根據過去的購買內容學習模式，並尋找客戶與產品之間的相似處。 然後使用這些相似處來生成產品建議。
     以下是可能會影響模型生成產品建議的因素。 
@@ -190,20 +190,20 @@ ms.locfileid: "6095546"
         每個產品建議都會受到一個或多個因素的影響。 在圖表中，會視覺化每個影響因素對建議造成影響的百分比。 在下列範例中，100% 的建議受到過去交易的影響，60% 為客戶相似性，以及 22% 為產品相似性。 將滑鼠停留在圖表上的方塊，可查看影響因素所提供的確切百分比。
 
         > [!div class="mx-imgBorder"]
-        > ![關鍵建議因素](media/product-recommendation-keyrecommendationfactors.png "為生成產品建議，模型學習到的主要建議因素")
+        > ![關鍵建議因素。](media/product-recommendation-keyrecommendationfactors.png "為生成產品建議，模型學習到的主要建議因素")
        
      
    1. **資料統計資料**：提供模型所考慮的交易、客戶及產品數量的概覽。 這是根據用來學習模式和生成產品建議的輸入資料而定。
 
       > [!div class="mx-imgBorder"]
-      > ![資料統計資料](media/product-recommendation-datastatistics.png "資料統計資訊關於模型使用來學習模式的 inout 資料")
+      > ![資料統計資料。](media/product-recommendation-datastatistics.png "資料統計資訊關於模型使用來學習模式的 inout 資料")
 
       此區段顯示的統計資料是關於模型使用來學習模式並生成產品建議的資料點。 在模型設定中設定好的篩選，會套用在模型生成的輸出上。 但是，模型會使用所有可用的資料來學習模式。 因此，如果您在模型設定中使用產品篩選，此區段會顯示模型分析來學習各種模式的產品總數量，這可能與符合篩選準則定義的產品數量不同。
 
    1. **高信賴度的產品建議：** 提供給您的客戶建議範例，這些是模型認為客戶最有可能購買的。    
       如果新增了產品類別目錄，則產品產品識別碼會被取代為產品名稱。 產品名稱對預測提供更具備可操作性和最直觀的資訊。
        > [!div class="mx-imgBorder"]
-       > ![清單上是受選個別客戶組的高信賴度建議](media/product-recommendation-highconfidence.PNG "清單上是受選個別客戶組的高信賴度建議")
+       > ![清單上是受選個別客戶組的高信賴度建議。](media/product-recommendation-highconfidence.PNG "清單上是受選個別客戶組的高信賴度建議")
 
 ## <a name="manage-predictions"></a>管理預測
 

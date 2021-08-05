@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977367"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327354"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>匯出至 Azure Synapse Analytics (預覽版)
 
@@ -74,8 +74,10 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 1. 提供可辨識的 **顯示名稱** 給匯出並提供 **資料庫名稱**。
 
 1. 選取您要匯出到的 Azure Synapse Analytics 的實體。
+   > [!NOTE]
+   > 不支援基於 [Common Data Model 資料夾](connect-common-data-model.md)的資料來源。
 
-1. 選取 **儲存**。
+2. 選取 **儲存**。
 
 儲存匯出並不會立即執行匯出。
 

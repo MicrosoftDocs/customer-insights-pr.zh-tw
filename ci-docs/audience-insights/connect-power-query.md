@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305881"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554673"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連接至 Power Query 資料來源
 
@@ -42,7 +42,7 @@ Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Custom
 1. **Power Query - 編輯查詢** 對話方塊可讓您檢閱和精簡資料。 系統在所選取資料來源中識別的實體會出現在左窗格中。
 
    > [!div class="mx-imgBorder"]
-   > ![編輯查詢對話方塊](media/data-manager-configure-edit-queries.png "編輯查詢對話方塊")
+   > ![編輯查詢對話方塊。](media/data-manager-configure-edit-queries.png "編輯查詢對話方塊")
 
 1. 您也可以轉換資料。 選取要編輯或變換的實體。 使用 Power Query 視窗中的選項來套用變換。 每個轉換都會在 **套用的步驟** 底下列出。 Power Query 提供許多預建轉換選項。 如需詳細資訊，請參閱 [Power Query 轉換](/power-query/power-query-what-is-power-query#transformations)。
 
@@ -75,7 +75,7 @@ Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Custom
 2. 在您要變更的資料來源旁邊選取垂直省略號，然後從下拉式功能表中選取 **編輯**。
 
    > [!div class="mx-imgBorder"]
-   > ![編輯選項](media/edit-option-data-sources.png "編輯選項")
+   > ![編輯選項。](media/edit-option-data-sources.png "編輯選項")
 
 3. 在 **Power Query - 編輯查詢** 對話方塊中套用您的變更和轉換，如[建立新的資料來源](#create-a-new-data-source)一節中所述。
 

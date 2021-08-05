@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059578"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692195"
 ---
 # <a name="customer-card-add-in-preview"></a>客戶卡片增益集 (預覽)
 
@@ -25,7 +25,7 @@ ms.locfileid: "6059578"
 ## <a name="prerequisites"></a>先決條件
 
 - 增益集只適用在 Dynamics 365 模型導向應用程式 (例如 Sales 或 Customer Service)，版本 9.0 或更新的版本。
-- 為了讓您的 Dynamics 365 資料對應至對象見解客戶個人資料，這些資料需要 [從 Dynamics 365 應用程式使用 Common Data Service 連接器進行內嵌](connect-power-query.md)。
+- 為了讓您的 Dynamics 365 資料對應至對象見解客戶個人資料，這些資料需要 [從 Dynamics 365 應用程式使用 Microsoft Dataverse 連接器進行內嵌](connect-power-query.md)。
 - 客戶卡片增益集的 Dynamics 365 使用者全部都必須[新增為](permissions.md)對象見解的使用者，才能查看資料。
 - 在對象見解中必要有[完成設定的搜尋和篩選功能](search-filter-index.md)才能查詢用來作業的資料。
 - 每個增益集控制項都依賴對象見解中的特定資料：
@@ -50,7 +50,7 @@ ms.locfileid: "6059578"
 1. 選取 **Dynamics 365 Customer Insights 客戶卡片增益集 (預覽)** 解決方案的 **顯示名稱** 連結。
 
    > [!div class="mx-imgBorder"]
-   > ![選取顯示名稱](media/select-display-name.png "選取顯示名稱")
+   > ![選取顯示名稱。](media/select-display-name.png "選取顯示名稱")
 
 1. 選取 **登入**，然後輸入您用來設定 Customer Insights 的管理帳戶憑證。
 
@@ -64,7 +64,7 @@ ms.locfileid: "6059578"
    - 若要對應帳戶，請選取客戶實體中符合您的帳戶實體的識別碼欄位。
 
    > [!div class="mx-imgBorder"]
-   > ![連絡人識別碼欄位](media/contact-id-field.png "連絡人識別碼欄位")
+   > ![連絡人識別碼欄位。](media/contact-id-field.png "連絡人識別碼欄位")
 
 1. 選取 **儲存設定** 以儲存設定。
 
@@ -83,7 +83,7 @@ ms.locfileid: "6059578"
 1. 選取您要新增客戶卡片控制項的連絡人表單。
 
     > [!div class="mx-imgBorder"]
-    > ![選取連絡人表單](media/contact-active-forms.png "選取連絡人表單")
+    > ![選取連絡人表單。](media/contact-active-forms.png "選取連絡人表單")
 
 1. 若要新增控制項，請在表單編輯器中，將 **欄位總管** 中的任何欄位拖曳至要您希望控制項出現的位置。
 
@@ -110,7 +110,7 @@ ms.locfileid: "6059578"
 
 1. 在動作列中選取 **套用解決方案升級**。
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="在 Dynamics 365 應用程式的自訂區域中升級解決方案":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="在 Dynamics 365 應用程式的自訂區域中升級解決方案。":::
 
 1. 開始升級程序之後，會顯示載入指標直到升級完成。 如果不存在可更新的版本，會出現升級錯誤訊息。
 

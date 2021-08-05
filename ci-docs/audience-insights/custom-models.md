@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305613"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554838"
 ---
 # <a name="custom-machine-learning-models"></a>自訂機器學習模型
 
@@ -42,7 +42,7 @@ ms.locfileid: "6305613"
 1. 在 **名稱** 欄位中，為自訂模型提供可辨識的名稱。
 
    > [!div class="mx-imgBorder"]
-   > ![新增工作流程窗格的螢幕擷取畫面](media/new-workflowv2.png "新增工作流程窗格的螢幕擷取畫面")
+   > ![新增工作流程窗格的螢幕擷取畫面。](media/new-workflowv2.png "新增工作流程窗格的螢幕擷取畫面")
 
 1. 在 **包含您的 Web 服務的用戶** 中，選取包含 Web 服務的組織。
 
@@ -59,7 +59,7 @@ ms.locfileid: "6305613"
    > 自訂模型工作流程將會套用啟發型方法，根據欄位的名稱和資料類型，將 web 服務輸入欄位對應至實體屬性。 如果 web 服務欄位無法對應至實體，則會出現錯誤。
 
    > [!div class="mx-imgBorder"]
-   > ![設定工作流程](media/intelligence-screen2-updated.png "設定工作流程")
+   > ![設定工作流程。](media/intelligence-screen2-updated.png "設定工作流程")
 
 1. 請在 **模型輸出參數** 步驟中設定下列屬性：
    - Machine Learning Studio (經典版)
@@ -70,12 +70,12 @@ ms.locfileid: "6305613"
       1. 請從下拉式選單選取您的批次處理管道的 **輸出路徑參數名稱**。
 
       > [!div class="mx-imgBorder"]
-      > ![模型輸出參數窗格](media/intelligence-screen3-outputparameters.png "模型輸出參數窗格")
+      > ![模型輸出參數窗格。](media/intelligence-screen3-outputparameters.png "模型輸出參數窗格")
 
 1. 從 **結果中的客戶識別碼** 下拉式清單選取可以找到客戶對應屬性，並選取 **儲存**。
 
    > [!div class="mx-imgBorder"]
-   > ![客戶資料相關結果窗格](media/intelligence-screen4-relatetocustomer.png "客戶資料相關結果窗格")
+   > ![客戶資料相關結果窗格。](media/intelligence-screen4-relatetocustomer.png "客戶資料相關結果窗格")
 
 1. 您會看到 **工作流程已儲存** 畫面，其中包含工作流程的詳細資料。    
    如果您已針對 Azure Machine Learning 管道組態工作流程，對象見解將附加到包含管道的工作區。 對象見解在 Azure 工作區取得 **參與者** 角色。

@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595891"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692517"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>透過預測完成部分資料
 
@@ -31,11 +31,11 @@ ms.locfileid: "5595891"
 
 在您的組織可以使用預測功能之前，必須符合下列先決條件：
 
-1. 貴組織有 [在 Common Data Service](/ai-builder/build-model#prerequisites) 中設定的執行個體，它和 Customer Insights 位於同一個組織。
+1. 您的組織擁有[在 Microsoft Dataverse 中設定](/ai-builder/build-model#prerequisites)的執行個體，而且與 Customer Insights 位於相同的組織中。
 
-2. 您的環境會附加到您的 Common Data Service 執行個體。
+2. 您的對象見解環境會附加至您的 Dataverse 執行個體。
 
-如果您要 [建立新的環境](manage-environments.md)，請在 **建立環境** 對話方塊中加以設定，然後選取 **進階**。 如果您已建立環境，請移至其設定並選取 **進階**。 或者在 **使用預測** 區段中輸入您要附加環境的 Common Data Service 執行個體 URL。
+如果您要 [建立新的環境](get-started-paid.md)，請在 **建立環境** 對話方塊中加以設定，然後選取 **進階**。 如果您已建立環境，請移至其設定並選取 **進階**。 或者在 **使用預測** 區段中輸入您要附加環境的 Dataverse 執行個體 URL。
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>在客戶實體中建立預測
 
@@ -47,17 +47,17 @@ ms.locfileid: "5595891"
 
 4. 尋找想要預測值的屬性名稱，然後在 **摘要** 欄中選取 **概觀** 圖示。
    > [!div class="mx-imgBorder"]
-   > ![概觀圖示](media/intelligence-overviewicon.png "概觀圖示")
+   > ![概觀圖示。](media/intelligence-overviewicon.png "概觀圖示")
 
 5. 如果您的屬性缺少很多值，請選取 **預測遺失值**，繼續預測。
    > [!div class="mx-imgBorder"]
-   > ![顯示預測遺失值按鈕的概觀狀態](media/intelligence-overviewpredictmissingvalues.png "顯示預測遺失值按鈕的概觀狀態")
+   > ![顯示預測遺失值按鈕的概觀狀態。](media/intelligence-overviewpredictmissingvalues.png "顯示預測遺失值按鈕的概觀狀態")
 
 6. 提供預測結果的 **顯示名稱** 和 **輸出實體名稱**。
 
 7. 預先填入的選項清單將顯示可將值對應至預測類別的位置。 在此案例中，您的類別選項只有 0 或 1，因為這些選項對應至預測的 true/false 或二進位性質。 在 [類別] 欄中，將您想要在最終預測中分類為 "0" 的欄位值對應至 "0"，然後將您想要在最終預測中分類為 "1" 的項目對應至 "1"。
    > [!div class="mx-imgBorder"]
-   > ![顯示對應的欄位值至類別的範例](media/intelligence-categorymapping.png "顯示對應的欄位值至類別的範例")
+   > ![範例中顯示對應至類別的欄位值。](media/intelligence-categorymapping.png "顯示對應的欄位值至類別的範例")
 
 8. 選取 **完成**，預測將會得到處理。 處理工作需要花費一些時間，視資料的大小和複雜度而定。 根據您所建立之預測的 **輸出實體名稱**，在新實體中提供結果。
 
@@ -77,7 +77,7 @@ ms.locfileid: "5595891"
 
 5. 如果您建立的區段在來源欄位中有不完整的資料，您可以選擇預測遺失的值。
    > [!div class="mx-imgBorder"]
-   > ![預測按鈕](media/segments-predictoption.png "預測按鈕")
+   > ![預測按鈕。](media/segments-predictoption.png "預測按鈕")
 
 6. 提供預測結果的 **顯示名稱** 和 **輸出實體名稱**。
 
@@ -93,7 +93,7 @@ ms.locfileid: "5595891"
 
 4. 您將會在預測的檢視表中看到數個資料點。
    > [!div class="mx-imgBorder"]
-   > ![預測頁面](media/intelligence-predictionsviewpage.png "預測頁面")
+   > ![預測頁面。](media/intelligence-predictionsviewpage.png "預測頁面")
 
    - **預測值** 顯示您在欄位值對應至類別階段所建立的對應。 這些值是資料集中已對應至特定類別的值。
    -**主要影響因素** 是資料集中的因素，最有可能影響對應至特定類別之欄位值的預測信賴度。
@@ -139,7 +139,7 @@ ms.locfileid: "5595891"
 
 ## <a name="troubleshooting"></a>疑難排解​​
 
-如果由於發生錯誤而無法完成附加 Common Data Service 程序，則可以嘗試手動完成程序。 在附加程序中有兩個已知問題：
+如果由於發生錯誤而無法完成附加 Dataverse 程序，則可以嘗試手動完成程序。 在附加程序中有兩個已知問題：
 
 - Customer 卡片增益集解決方案並未安裝。
     1. 完成 [安裝和設定解決方案](customer-card-add-in.md)的指示。

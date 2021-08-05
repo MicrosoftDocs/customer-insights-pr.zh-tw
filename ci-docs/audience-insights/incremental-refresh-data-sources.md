@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 03f76bcfc7336d8430146e8a26ffa649c6a17db0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596811"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554149"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>適用於以 Power Query 為基礎之資料來源的累加重新整理
 
@@ -45,7 +45,7 @@ ms.locfileid: "5596811"
 1. 在 **增量重新整理設定** 中，您可以為所有在建立資料來源時選取的所有實體設定增量重新整理。
 
    > [!div class="mx-imgBorder"]
-   > ![設定資料來源中的實體以進行增量重新整理](media/incremental-refresh-settings.png "設定資料來源中的實體以進行增量重新整理")
+   > ![設定資料來源中的實體以進行累加式重新整理。](media/incremental-refresh-settings.png "設定資料來源中的實體以進行增量重新整理")
 
 1. 選取實體，並提供下列詳細資料：
 

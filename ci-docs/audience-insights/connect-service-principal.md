@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596489"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692103"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>使用適用對象見解的 Azure 服務主體連接到 Azure Data Lake Storage Gen2 帳戶
 
 使用 Azure 服務的自動化工具應始終具有限縮權限。 有別於以完整權限使用者身分登入應用程式的作法，Azure 提供服務主體。 請閱讀以便瞭解如何以使用 Azure 服務主體的 Azure Data Lake Storage Gen2 帳戶而不是儲存體帳戶金鑰連接對象見解。 
 
-您可以使用服務主體安全地將 [Common Data Model 資料夾新增或編輯為資料來源](connect-common-data-model.md) 或 [建立全新或更新現有的環境](manage-environments.md#create-an-environment-in-an-existing-organization)。
+您可以使用服務主體安全地將 [Common Data Model 資料夾新增或編輯為資料來源](connect-common-data-model.md) 或 [建立全新或更新現有的環境](get-started-paid.md)。
 
 > [!IMPORTANT]
 > - 要使用服務主體的 Azure Data Lake Gen2 儲存體帳戶必須已[啟用階層命名空間 (HNS)](/azure/storage/blobs/data-lake-storage-namespace)。
@@ -81,7 +81,7 @@ ms.locfileid: "5596489"
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>在附於對象見解的儲存體帳戶中輸入 Azure 資源識別碼或 Azure 訂閱詳細資料。
 
-在對象見解附加 Azure Data Lake Storage 帳戶，以 [儲存輸出資料](manage-environments.md) 或 [將其用作資料來源](connect-common-data-service-lake.md)。 選擇 Azure Data Lake 選項可讓您在資源式或訂閱式方法之間選擇。
+在對象見解附加 Azure Data Lake Storage 帳戶，以 [儲存輸出資料](manage-environments.md) 或 [將其用作資料來源](connect-dataverse-managed-lake.md)。 選擇 Azure Data Lake 選項可讓您在資源式或訂閱式方法之間選擇。
 
 請遵循下列步驟提供選取方法的必要資訊。
 

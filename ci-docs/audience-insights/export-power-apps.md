@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598145"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554103"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps 連接器 (預覽)
 
@@ -56,12 +56,12 @@ Customer Insights 是 [Power Apps 中許多可用資料來源](/powerapps/maker/
 1. 將 **資源庫** 控制項新增至您要建立的應用程式。
 
 > [!div class="mx-imgBorder"]
-> ![新增資源庫元素](media/connector-powerapps9.png "新增資源庫元素")
+> ![新增資源庫元素。](media/connector-powerapps9.png "新增資源庫元素")
 
 1. 選取 **客戶** 做為項目的資料來源。
 
     > [!div class="mx-imgBorder"]
-    > ![選取資料來源](media/choose-datasource-powerapps.png "選取資料來源")
+    > ![選取資料來源。](media/choose-datasource-powerapps.png "選取資料來源")
 
 1. 您可以在右邊變更資料面板，以選取要在資源庫上顯示之客戶實體欄位。
 

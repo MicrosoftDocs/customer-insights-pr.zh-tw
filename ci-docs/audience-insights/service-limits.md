@@ -1,7 +1,7 @@
 ---
 title: 服務限制
 description: 瞭解限制和約束。
-ms.date: 10/15/2020
+ms.date: 07/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b68ab833538db7020c8be8be7658c86f083f137a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 81253332cbea3110c0b3804db3a4d03b514f92d4
+ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598492"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6604359"
 ---
 # <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Dynamics 365 Customer Insights 對象見解能力的服務限制
 
@@ -23,6 +23,7 @@ ms.locfileid: "5598492"
 | 面積圖  | 限制  | 備註 |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | 客戶細分與量值 | 100 個區段或量值。 | 有效 [區段](segments.md) 和 [量值](measures.md) 結合後的總數不能超過 100。  |
+| 關係 | 實體路徑中關聯的 20 層深度。 | 當使用建立器介面建立[客戶細分](segments.md)或[量值](measures.md)時，開始實體與目標實體之間的實體路徑最多可以有 20 個關聯躍點。  |
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304594"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554608"
 ---
 # <a name="customer-profiles"></a>客戶設定檔
 
@@ -23,11 +23,11 @@ ms.locfileid: "6304594"
 客戶可以是個人或組織 (預覽)。 每個客戶或組織設定檔都是以圖標表示。 選取一個圖標以查看該特定客戶或組織的其他資訊。 使用頁面底部的分頁控制項，查看任何記錄。
 
 > [!div class="mx-imgBorder"] 
-> ![B2C 客戶設定檔](media/profiles-customers.png "B2C 客戶設定檔")
+> ![B2C 客戶個人資料。](media/profiles-customers.png "B2C 客戶設定檔")
 
 組織 (預覽)
 > [!div class="mx-imgBorder"] 
-> ![B2B 客戶設定檔](media/profile-customers-b2b.png "B2B 客戶設定檔")
+> ![B2B 客戶個人資料。](media/profile-customers-b2b.png "B2B 客戶設定檔")
 
 > [!NOTE]
 > 如果您在導覽中選 **客戶** 時看不到圖標，系統管理員必須在 **搜尋和篩選索引** 中[至少定義一個可搜尋屬性](search-filter-index.md)。
@@ -47,7 +47,7 @@ ms.locfileid: "6304594"
 2. 選取您要用來篩選客戶的屬性旁邊的方塊。
 
    > [!div class="mx-imgBorder"] 
-   > ![客戶設定檔](media/profiles-customers3.png "客戶設定檔")
+   > ![客戶個人資料。](media/profiles-customers3.png "客戶設定檔")
 
 3. 選取 **客戶** 頁面上的 **清除篩選條件** 移除您的篩選條件。
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305616"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650124"
 ---
 # <a name="merge-entities"></a>合併實體
 
@@ -109,7 +109,7 @@ ms.locfileid: "6305616"
 不論您手動合併屬性或讓系統合併，您都可以執行合併。 在 **合併** 頁面上，選取 **執行** 來開始處理。
 
 > [!div class="mx-imgBorder"]
-> ![資料合併儲存與執行](media/configure-data-merge-save-run.png "資料合併儲存與執行")
+> ![資料合併儲存與執行。](media/configure-data-merge-save-run.png "資料合併儲存與執行")
 
 若只想要查看反映在整合客戶實體中的輸出，請選取 **只執行合併**。 下游程序將會按照[排程中定義的重新整理](system.md#schedule-tab)來重新整理。
 
@@ -118,7 +118,9 @@ ms.locfileid: "6305616"
 若要進行更多變更並重新執行步驟，您可以取消進行中的合併。 選取 **重新整理中...**，然後在出現的側面窗格中選取 **取消工作**。
 
 > [!TIP]
-> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。
+> 執行合併程序後，請選取程序狀態以打開 **工作詳細資料** 窗格。 它提供處理時間、上次處理日期以及與工作相關的所有錯誤與警告的概覽。 選取 **查看詳細資料**，以查看參與比對程序的實體、解決衝突流程是否成功，以及更新是否已順利發布。  
+> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。  
+> :::image type="content" source="media/process-detail-path.png" alt-text="從工作狀態連結取得程序詳細資料的逐層探究路徑。":::
 
 ## <a name="next-step"></a>後續步驟
 

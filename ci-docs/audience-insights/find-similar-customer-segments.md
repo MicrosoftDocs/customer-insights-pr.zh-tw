@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596765"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554195"
 ---
 # <a name="similar-customers-preview"></a>類似的客戶 (預覽)
 
@@ -50,7 +50,7 @@ ms.locfileid: "5596765"
 處理類似的區段之後，您會在 **客戶細分** 頁面中發現列出新的客戶細分。
 
 > [!div class="mx-imgBorder"]
-> ![類似的客戶細分](media/expanded-segment.png "類似的客戶細分")
+> ![類似的客戶細分。](media/expanded-segment.png "類似的客戶細分")
 
 選取 動作列中的 **檢視**，以開啟客戶細分詳細資料。 此檢視表包含[相似性分數](#about-similarity-scores)的結果分佈相關資訊。 您也會在 **客戶細分成員預覽** 中找到相似性分數值。
 

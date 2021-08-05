@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304732"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554471"
 ---
 # <a name="work-with-customer-insights-apis"></a>搭配 Customer Insights API 處理
 
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insights 提供 API，可根據 Customer Insights 中的�
  
    啟用 API 會為您的執行個體建立 API 要求使用的主要和次要訂閱金鑰。 您可以選取 **系統管理** > **權限** > **APIs** 的 **重新產生主要** 或 **重新產生次要** 重新產生金鑰。
 
-   :::image type="content" source="media/enable-apis.gif" alt-text=" 啟用 Customer Insights API":::
+   :::image type="content" source="media/enable-apis.gif" alt-text=" 啟用 Customer Insights API。":::
 
 1. 選取 **探索我們的 API**[試用 API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)。
 
@@ -129,7 +129,7 @@ HTTP 回應將很快在下方出現。
  
    或者在 **NuGet 套裝程式管理員主控台** 中執行此命令：`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text=" 將 NuGet 套裝程式新增到 Visual Studio 專案":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text=" 將 NuGet 套件新增到 Visual Studio 專案。":::
 
 #### <a name="use-the-c-client-library"></a>使用 C# 用戶端程式庫
 
@@ -141,7 +141,7 @@ HTTP 回應將很快在下方出現。
 
 1. 將此 `HttpClient` 傳遞到 `CustomerInsights` 用戶端的建構過程。
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Httpclient 範例":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Httpclient 範例。":::
 
 1. 讓用戶端與「擴充方法」呼叫—例如，`GetAllInstancesAsync`。 如果偏好存取基礎 `Microsoft.Rest.HttpOperationResponse`，請使用「HTTP 訊息方法」—例如 `GetAllInstancesWithHttpMessagesAsync`。
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305284"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555297"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies 客戶設定檔的富集作用 (預覽版)
 
@@ -35,7 +35,7 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 1. 在 HERE Technologies 圖格上選取 **擴充我的資料**，然後選取 **開始使用**。
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies 圖格](media/HERE-tile.png "HERE Technologies 圖格")
+   > ![HERE Technologies 圖標。](media/HERE-tile.png "HERE Technologies 圖格")
 
 1. 從下拉式清單選取一個[連結](connections.md)。 如果沒有可用的連接，請與系統管理員聯繫。 如果您是系統管理員，則可以選取 **新增連接** 來建立連接。 從下拉式清單中選擇 **HERE Technologies**。 
 
@@ -50,7 +50,7 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 1. 定義應使用您的哪些統一設定檔欄位，以尋找符合 HERE Technologies 的位置資料。 **街道 1** 和 **郵遞區號** 欄位是選取的主要和/或次要位址的必要欄位。 為了更高的符合準確性，可以新增更多欄位。
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies 富集組態頁面](media/enrichment-HERE-configuration.png "HERE Technologies 富集組態頁面")
+   > ![HERE Technologies 擴充設定頁面。](media/enrichment-HERE-configuration.png "HERE Technologies 富集組態頁面")
 
 1. 請選取 **下一步**，完成欄位對應。
 
@@ -73,7 +73,7 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 1. 完成驗證之後，請選取 **儲存**。
 
    > [!div class="mx-imgBorder"]
-   > ![HERE technologies 的連接設定頁面](media/enrichment-HERE-connection.png "HERE technologies 的連接設定頁面")
+   > ![HERE technologies 的連接設定頁面。](media/enrichment-HERE-connection.png "HERE technologies 的連接設定頁面")
 
 ## <a name="enrichment-results"></a>擴充結果
 

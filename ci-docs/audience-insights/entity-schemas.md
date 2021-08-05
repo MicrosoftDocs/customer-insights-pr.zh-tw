@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596351"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692295"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model 中的實體結構描述
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596351"
 
 這是一種共用資料模型，可讓應用程式與資料整合者提供統一的資料定義，更加輕鬆地進行共同作業。 Common Data Model 包含具有標準實體、關聯、階層、特性等項目的豐富中繼資料系統。 其源自 Dynamics 365 應用程式，並且在 GitHub 以開放原始碼形式提供超過 260 個標準實體。 有龐大的內部及外部合作夥伴系統會根據 Common Data Model 發表業界特有的概念。
 
-現今有多個系統和平台實作 Common Data Model，包括 Power BI 資料流程和 Azure 資料服務。 這已經在 Common Data Service、Dynamics 365、Power Apps、Power BI 以及即將推出的 Azure 資料服務中受到支援，直接彰顯出 [Open Data Initiative](https://www.microsoft.com/open-data-initiative) 的價值。
+現今有多個系統和平台實作 Common Data Model，包括 Power BI 資料流程和 Azure 資料服務。 它在 Microsoft Dataverse、Dynamics 365、Power Apps、Power BI 以及即將推出的 Azure 資料服務中受到支援，為[開放的資料倡議](https://www.microsoft.com/open-data-initiative)累積價值。
 
 ## <a name="customer-insights-entity-schemas"></a>Customer Insights 實體結構描述
 
@@ -44,7 +44,7 @@ ms.locfileid: "5596351"
 
 您可以在 [Common Data Model 實體導航器中](https://microsoft.github.io/CDM/) 檢視實體。 選取 **從 GitHub 載入！** 按鈕，然後瀏覽至 **foundationCommon** > **crmCommon** > **解決方案** > **customerInsights**，您會在其中找到 Customer Insights 實體及其定義的清單。
 > [!div class="mx-imgBorder"]
-> ![顯示 CustomerActivity 實體的 CDM 實體導覽器](media/CDM-entity-navigator.png "顯示 CustomerActivity 實體的 CDM 實體導覽器")
+> ![顯示 CustomerActivity 實體的 CDM 實體導覽器。](media/CDM-entity-navigator.png "顯示 CustomerActivity 實體的 CDM 實體導覽器")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

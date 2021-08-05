@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597409"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554425"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>使用 Azure 機器學習式模型
 
@@ -52,7 +52,7 @@ Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合
      在 Designer 程式中打開 **選取資料集的欄位**，然後選取 **設定為管道參數**，您即可提供參數名稱。
 
      > [!div class="mx-imgBorder"]
-     > ![Designer 中的資料集參數化](media/intelligence-designer-dataset-parameters.png "Designer 中的資料集參數化")
+     > ![Designer 中的資料集參數化。](media/intelligence-designer-dataset-parameters.png "Designer 中的資料集參數化")
    
 * SDK 中的資料集參數 (Python)
    
@@ -78,7 +78,7 @@ Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合
 
 * Designer 程式提供 [匯出資料模組](/azure/machine-learning/algorithm-module-reference/export-data)，允許將管道輸出匯出到 Azure 儲存體。 目前模組必須使用資料儲存類型 **Azure Blob 儲存體** 並將 **資料儲存** 和相對 **路徑** 參數化。 管道執行資料儲存及產品可存取的路徑時，Customer Insights 會覆寫這兩個參數。
    > [!div class="mx-imgBorder"]
-   > ![匯出資料模組組態](media/intelligence-designer-importdata.png "匯出資料模組組態")
+   > ![匯出資料模組組態。](media/intelligence-designer-importdata.png "匯出資料模組組態")
    
 * 當使用代碼撰寫推論輸出時，您可以將輸出上傳到工作區中 *已註冊資料儲存* 內的路徑。 如果路徑和資料儲存在管道中參數化，Customer Insights 將可讀取和匯入推論輸出。 目前支援 csv 格式的單表格式輸出。 路徑必須包括目錄和檔案名稱。
 

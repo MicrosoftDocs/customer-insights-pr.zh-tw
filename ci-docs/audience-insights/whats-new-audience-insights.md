@@ -1,7 +1,7 @@
 ---
 title: 新功能以及近期即將推出的功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263241"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692379"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
@@ -26,6 +26,28 @@ ms.locfileid: "6263241"
 
 > [!TIP]
 > 若要送出和票選功能要求和產品建議，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="june-2021-updates"></a>2021 年 6 月更新
+
+2021 年 6 月更新包含數項功能、效能升級和 BUG 修正。
+
+### <a name="data-ingestion"></a>資料擷取
+
+- **已改善的資料整合程序更新** 您現在可以在[資料整合程序](data-unification.md)步驟中，查看更精細、改善後的動態狀態更新。 此功能可讓您追蹤詳細的進度，以了解程序流程，並在任何步驟需要處理時採取行動。
+
+### <a name="extensibility"></a>擴充性
+
+- **將客戶細分和其他資料匯出至 Salesforce Marketing Cloud** 我們已擴充匯出目標，加入了 [Salesforce Marketing Cloud](export-salesforce.md)。 您現在可以透過署名的 SFTP 匯出，將客戶細分和其他類型的資料匯出至 Salesforce 行銷雲Salesforce Marketing Cloud。 在 Salesforce 中資料匯入會以全自動化方式進行，並用於建立更有效率的行銷廣告活動。  
+ 
+- **將客戶細分匯出至 ActiveCampaign** 我們已擴充匯出目標，加入了 [ActiveCampaign](export-active-campaign.md)。 您在可以匯出客戶細分來建立行銷活動、執行電子郵件行銷，並且用在 ActiveCampaign 中的客戶特定群組。
+ 
+- **將客戶細分匯出至 Sendinblue** 我們已擴充匯出目標，加入了 [Sendinblue](export-sendinblue.md)。 您在可以匯出客戶細分來建立行銷活動、執行電子郵件行銷，並且搭配 Sendinblue 用在客戶特定群組。
+ 
+### <a name="ux-updates"></a>UX 更新 
+
+- **全新並增強的客戶頁面與個人資料詳細資料頁面** 我們重新設計了客戶頁面及個人資料詳細資料頁面，以改善使用者體驗和增加效能。 這些變更讓您可以您查看、排序、搜尋及篩選客戶。 篩選現在表示在 URL 中，可流暢地與其他使用者共用搜尋結果。 搜尋結果也可以儲存為客戶細分。    
+  客戶個人資料的詳細資料頁面現在會把資料分組在不同小節中 (如人口統計資料、識別碼及其他配置個人資料屬性)中，來改善可讀性。 個人資料詳細資料頁面上的其他區段現在更具互動性。 例如，活動區段可讓您篩選和排序。
+
 
 ## <a name="may-2021-updates"></a>2021 年 5 月更新
 
@@ -170,7 +192,7 @@ ms.locfileid: "6263241"
 
 - **複製環境支援更多類型的資料來源**
 
-  系統管理員可以將環境組態複製到在同一組織中的新環境中。 一些案例使用到的資料來源基於 Common Data Service data lake 或 Common Data Model 資料夾，為這些案例此這項功能擴展了複製環境功能。
+  系統管理員可以將環境組態複製到在同一組織中的新環境中。 此功能會針對資料來源是基於 Microsoft Dataverse使用受管理的 Data Lake 或Common Data Model 資料夾的案例，擴充複製環境功能。
 
 ## <a name="january-2021-updates"></a>2021 年 1 月更新
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 195bee789dc043057b47c12c8d93e6d53edb59cd
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976790"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692471"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>在 Dynamics 365 Marketing 中使用客戶細分 (預覽版)
 
@@ -24,7 +24,7 @@ ms.locfileid: "5976790"
 
 ## <a name="prerequisite-for-a-connection"></a>連接的先決條件
 
-- 連絡人記錄必須在 Dynamics 365 Marketing 中，才能將客戶細分從 Customer Insights 匯出至 Marketing。 瞭解如何[用 Common Data Services 在 Dynamics 365 Marketing 裡面](connect-power-query.md)內嵌連絡人 。
+- 連絡人記錄必須在 Dynamics 365 Marketing 中，才能將客戶細分從 Customer Insights 匯出至 Marketing。 瞭解如何[用 Microsoft Dataverse 在 Dynamics 365 Marketing 裡面](connect-power-query.md)內嵌連絡人 。
 
   > [!NOTE]
   > 將客戶細分中從對象見解中匯出到 Marketing，並不會在 Marketing 的執行個體中建立新的連絡人記錄。 Marketing 中的連絡人記錄必須內嵌在對象見解中，並當成資料來源使用。 他們也必須包含整合客戶實體中，才能客戶細分匯出前，先將客戶識別碼對應至連絡人的識別碼。

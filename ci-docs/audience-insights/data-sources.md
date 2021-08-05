@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304686"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692425"
 ---
 # <a name="data-sources-overview"></a>資料來源概觀
 
@@ -30,13 +31,13 @@ Dynamics 365 Customer Insights 中的對象見解功能從一組廣泛的來源�
 
 - [透過數十個 Power Query 連接器](connect-power-query.md)
 - [從 Common Data Model 資料夾](connect-common-data-model.md)
-- [從您自己的 Microsoft Dataverse 資料湖](connect-common-data-service-lake.md)
+- [從您自己的 Microsoft Dataverse 資料湖](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>從內部部署資料來源新增資料
 
-Microsoft Power Platform 資料流程支援在對象見解中從內部部署的資料來源內嵌資料。 設定環境時，[在 Microsoft Dataverse 提供環境 URL](manage-environments.md#create-an-environment-in-an-existing-organization)，便可以在 Customer Insights 中啟用資料流程。
+Microsoft Power Platform 資料流程支援在對象見解中從內部部署的資料來源內嵌資料。 設定環境時，[在 Microsoft Dataverse 提供環境 URL](get-started-paid.md)，便可以在 Customer Insights 中啟用資料流程。
 
-將 Dataverse 環境與 Customer Insights 關聯之後，所建立的資料來源預設使用 [Power Platform 資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 資料流程使用資料閘道來支援內部部署連線。 在關聯 Dataverse 環境前就已存在的資料來源，請移除並重新建立，才能[使用內部部署資料閘道](/data-integration/gateway/service-gateway-app.md)。
+將 Dataverse 環境與 Customer Insights 關聯之後，所建立的資料來源預設使用 [Power Platform 資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 資料流程使用資料閘道來支援內部部署連線。 在關聯 Dataverse 環境前就已存在的資料來源，請移除並重新建立，才能[使用內部部署資料閘道](/data-integration/gateway/service-gateway-app)。
 
 來自現有 Power BI 或 Power Apps 環境的資料閘道將會顯示，並且可以在 Customer Insights 中重複使用。 資料來源頁面顯示的連結，您可移至 Microsoft Power Platform 查看和設定內部部署資料閘道的環境。
 
@@ -45,9 +46,9 @@ Microsoft Power Platform 資料流程支援在對象見解中從內部部署的�
 您會看到每個擷取資料來源的名稱、其狀態以及該來源上次重新整理資料的時間。 您可以依據各欄位排序資料來源清單。
 
 > [!div class="mx-imgBorder"]
-> ![新增的資料來源](media/configure-data-datasource-added.png "新增的資料來源")
+> ![已新增資料來源。](media/configure-data-datasource-added.png "新增的資料來源")
 
-|Status  |描述  |
+|執行狀態  |描述  |
 |---------|---------|
 |成功   |如果 **重新整理的** 欄位提到時間，代表已成功內嵌資料來源。
 |未開始   |資料來源尚未內嵌任何資料或仍在草稿模式中。         |

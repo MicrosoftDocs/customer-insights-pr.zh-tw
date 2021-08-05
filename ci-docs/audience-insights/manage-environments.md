@@ -1,7 +1,7 @@
 ---
 title: 建立和管理環境
 description: 瞭解如何註冊服務及管理環境。
-ms.date: 06/15/2021
+ms.date: 07/22/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,125 +9,24 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 2f115269b9d07dd118ec18cc48b55de8aea9b5bb
+ms.sourcegitcommit: 98267da3f3eddbdfbc89600a7f54e5e664a8f069
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304870"
+ms.lasthandoff: 07/28/2021
+ms.locfileid: "6683463"
 ---
 # <a name="manage-environments"></a>管理環境
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-本文章解釋如何建立新組織及佈建環境。
+## <a name="switch-environments"></a>切換環境
 
-## <a name="sign-up-and-create-an-organization"></a>註冊和建立組織
+選取頁面右上角的 **環境** 控制項，以變更環境。
 
-1. 前往 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) 網站。
+:::image type="content" source="media/home-page-environment-switcher.png" alt-text="螢幕擷取畫面，圖為切換環境的控制項。":::
 
-2. 選取 **開始使用**。
-
-3. 選擇您偏好的註冊案例，並選取對應的連結。
-
-4. 接受條款及條件，然後選取 **繼續** 以開始建立組織。
-
-5. 建立環境之後，就會重新導向至 [Customer Insights](https://home.ci.ai.dynamics.com)。
-
-6. 使用示範環境來探索應用程式，或依照下一節中的步驟建立新環境。
-
-7. 指定環境設定之後，選取 **建立**。
-
-8. 待環境建立成功後，您即可登入。
-
-## <a name="create-an-environment-in-an-existing-organization"></a>在現有的組織中建立環境
-
-建立新環境的方式有兩種。 您可以指定全新的環境設定，也可以從現有環境複製一些組態設定。
-
-> [!NOTE]
-> 每個 Customer Insights 授權，組織可以建立 *兩種* 環境。 如果您的組織購買授權超過一次，請[與我們的支援小組聯繫](https://go.microsoft.com/fwlink/?linkid=2079641)，增加可用環境的數目。 如需容量和附加容量的詳細資訊，請下載 [Dynamics 365 授權指南](https://go.microsoft.com/fwlink/?LinkId=866544)。
-
-若要建立環境：
-
-1. 在應用程式的標頭中選取 **環境** 選取器。
-
-1. 選取 **新增**。
-
-   > [!div class="mx-imgBorder"]
-   > ![環境設定。](media/environment-settings-dialog.png)
-
-1. 在 **建立環境** 對話方塊中，選取 **新增環境**。
-
-   如果您想要 [從目前的環境複製資料](#considerations-for-copy-configuration-preview)，請選取 **從現有環境複製**。 您會看到組織中所有可用環境的清單，您可以從此清單複製資料。
-
-1. 提供下列詳細資料：
-   - **名稱**：此環境的名稱。 如果您已複製現有環境，則欄位已填入資料，但是您可以變更此欄位。
-   - **類型**：選取要建立生產環境還是沙箱環境。
-   - **地區**：服務部署和託管所在的地區。
-   
-1. 您可選擇性選取 **進階設定** 核取方塊：
-
-   - **將所有資料儲存到**：指定要儲存 Customer Insights 所產生之輸出資料的位置。 您將有兩個選項：**Customer Insights 儲存體** (由 Customer Insights 團隊管理的 Azure Data Lake) 和 **Azure Data Lake Storage**(您自己 Azure Data Lake Storage)。 預設會選取 [Customer Insights 儲存空間] 選項。
-
-     > [!NOTE]
-     > 將資料儲存至 Azure Data Lake Storage，即表示您同意將資料傳送並儲存在相應的 Azure 儲存體帳戶的地理位置，這可能不同於將資料儲存在 Dynamics 365 Customer Insights 中的位置。 [在 Microsoft 信任中心深入了解。](https://www.microsoft.com/trust-center)
-     >
-     > 目前，已擷取的實體永遠都是儲存在 Customer Insights 受管理的 Data Lake 中。 
-     > 
-     > 我們只支援在建立環境時選取相同 Azure 地區的 Azure Data Lake Storage 帳戶。 
-     > 
-     > 我們只支援已啟用階層命名空間的 Azure Data Lake Storage 帳戶。
-
-
-   - 在 Azure Data Lake Storage 選項中，進行驗證可以在資源型選項和訂閱型選項之間選擇。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 **容器** 的名稱無法變更，將會是 `customerinsights`。
-   
-   - 如果您想要使用 [預測](predictions.md)、設定與 Microsoft Dataverse 資料共用，或者從內部部署資料來源中進行資料擷取，請在 **設定與 Microsoft Dataverse 共用資料並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
-
-     > [!NOTE]
-     > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
-     > - 當您啟用資料共用給 Microsoft Dataverse Managed Data Lake 時，目前不支援[實體中遺失值的預測](predictions.md)。
-
-     > [!div class="mx-imgBorder"]
-     > ![啟用與 Microsoft Dataverse 共用資料的設定選項。](media/datasharing-with-DataverseMDL.png)
-
-   當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 根據您的程序名稱，會建立資料檔案和 model.json 並新增至資料夾。
-
-   如果您建立多個 Customer Insights 環境並選擇從您的儲存體帳戶環境中儲存輸出實體，各資料夾將針對容器含有 ci_<environmentid> 每個環境分開建立。
-
-### <a name="considerations-for-copy-configuration-preview"></a>複製設定的考量 (預覽版)
-
-下列組態設定已複製，
-
-- 功能設定
-- 內嵌/匯入的資料來源
-- 資料統一 (對應、比對、合併) 設定
-- 客戶細分
-- 量值
-- 關聯
-- 活動
-- 搜尋和篩選索引
-- 匯出目的地
-- 已排程的重新整理
-- 擴充內容
-- 模型管理
-- 角色指派
-
-下列設定 *未* 複製：
-
-- 客戶設定檔。
-- 資料來源認證。 您必須提供每個資料來源的認證，並手動重新整理資料來源。
-- 來自 Common Data Model 資料夾和 Dataverse 受管理的 Data Lake 的資料來源。 您必須使用與來源環境相同的名稱，手動建立這些資料來源。
-
-複製環境時，您會看到一則指示已建立新環境的確認訊息。 選取 **移至資料來源** 以查看資料來源清單。
-
-所有的資料來源都會顯示 **需要認證** 狀態。 編輯資料來源，並輸入認證以進行重新整理。
-
-> [!div class="mx-imgBorder"]
-> ![資料來源已複製。](media/data-sources-copied.png)
-
-重新整理資料來源之後，移至 **資料** > **統一**。 您會在此處找到來源環境的設定。 視需要編輯，或選取 **執行** 以開始進行資料統一處理程序，並建立統一的客戶實體。
-
-資料統一完成時，移至 **測量** 和 **分段** 進行重新整理。
+系統管理員能夠[建立](get-started-paid.md)和管理環境。
 
 ## <a name="edit-an-existing-environment"></a>編輯現有環境
 
@@ -147,13 +46,52 @@ ms.locfileid: "6304870"
 
    > [!NOTE]
    > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
-   > - 當您以 Microsoft Dataverse Managed Data Lake 啟用資料共用時，目前不支援[預測實體中缺少的值](predictions.md)。
+   > - 當啟用與 Microsoft Dataverse 受管理的 Data Lake 共用資料時，目前不支援對象見解(如果在環境中啟用的話) 中的 PowerBI 嵌入式報表和[預測缺失的值](predictions.md)。
 
    啟用與 Microsoft Dataverse 的資料共用後，將對資料來源和其他程序開始一次完整的重新整理。 如果程序目前正在執行，您看不到用來啟用與 Microsoft Dataverse 共用資料的選項。 等待這些程序完成，或者取消它們以啟用資料共用。 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="啟用與 Microsoft Dataverse 共用資料的設定選項。":::
    
    當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 根據您執行的程序，會建立資料檔案和 model.json 並新增至各自的子資料夾。
+
+## <a name="copy-the-environment-configuration"></a>複製環境設定
+
+當您建立新的環境時，您可以選擇從現有的環境複製設定。 
+
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="螢幕擷取畫面，圖為環境設定中的設定選項。":::
+
+您會看到組織中所有可用環境的清單，您可以從此清單複製資料。
+
+下列組態設定已複製，
+
+- 內嵌/匯入的資料來源
+- 資料統一 (對應、比對、合併) 設定
+- 客戶細分
+- 量值
+- 關聯
+- 活動
+- 搜尋和篩選索引
+- 匯出目的地
+- 已排程的重新整理
+- 擴充
+- 模型管理
+- 角色指派
+
+*不會* 複製下列資料：
+
+- 客戶設定檔。
+- 資料來源認證。 您必須提供每個資料來源的認證，並手動重新整理資料來源。
+- 來自 Common Data Model 資料夾和 Dataverse 受管理的 Data Lake 的資料來源。 您必須使用與來源環境相同的名稱，手動建立這些資料來源。
+
+複製環境時，您會看到一則指示已建立新環境的確認訊息。 選取 **移至資料來源** 以查看資料來源清單。
+
+所有的資料來源都會顯示 **需要認證** 狀態。 編輯資料來源，並輸入認證以進行重新整理。
+
+:::image type="content" source="media/data-sources-copied.png" alt-text="已複製且需要驗證的資料來源清單。":::
+
+重新整理資料來源之後，移至 **資料** > **統一**。 您會在此處找到來源環境的設定。 視需要編輯，或選取 **執行** 以開始進行資料統一處理程序，並建立統一的客戶實體。
+
+資料統一完成時，移至 **測量** 和 **分段** 進行重新整理。
 
 ## <a name="reset-an-existing-environment"></a>重設現有環境中
 

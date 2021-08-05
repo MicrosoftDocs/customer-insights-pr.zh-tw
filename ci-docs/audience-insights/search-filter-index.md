@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597133"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554011"
 ---
 # <a name="customer-profiles-search--filter-index"></a>客戶設定檔：搜尋及篩選索引
 
 統整您的客戶資料的結果是客戶設定檔實體，可提供整體客戶群的統整檢視。 若要快速 [尋找特定客戶或客戶群組的資訊](customer-profiles.md)，您可以在 **客戶** 頁面上設定 **搜尋** 和 **篩選** 功能。 請繼續閱讀，了解管理員如何在 **搜尋和篩選索引** 頁面上編輯屬性，以供使用者用來搜尋和篩選。
 
 > [!div class="mx-imgBorder"]
-> ![搜尋篩選](media/search-filter.png "搜尋篩選")
+> ![搜尋篩選。](media/search-filter.png "搜尋篩選")
 
 ## <a name="add-fields-and-specify-attributes"></a>新增欄位並指定屬性
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306018"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650308"
 ---
 # <a name="match-entities"></a>比對實體
 
@@ -138,7 +138,7 @@ ms.locfileid: "6306018"
    - **最近最少情況**：根據最近最少情況找出贏家記錄。 需要日期或數字欄位來定義最新。
  
    > [!div class="mx-imgBorder"]
-   > ![重複資料刪除規則步驟 1](media/match-selfconflation.png "重複資料刪除規則步驟 1")
+   > ![重複資料刪除規則步驟 1。](media/match-selfconflation.png "重複資料刪除規則步驟 1")
  
 1. 當選取實體並設定其合併偏好後，請選取 **新增規則**，以便在實體層級上定義重複資料刪除規則。
    - **選擇欄位** 列出該實體的所有可用欄位。 選擇要檢查重複的欄位。 選擇對每個客戶很可能是唯一的欄位。 例如，電子郵件地址，或姓名、城市和電話號碼的組合。
@@ -146,7 +146,7 @@ ms.locfileid: "6306018"
    - 您可以選取 **新增條件** 定義更多條件。
  
    > [!div class="mx-imgBorder"]
-   > ![重複資料刪除規則步驟 2](media/match-selfconflation-rules.png "重複資料刪除規則步驟 2")
+   > ![重複資料刪除規則步驟 2。](media/match-selfconflation-rules.png "重複資料刪除規則步驟 2")
 
   您可以為某實體建立多個重複資料刪除規則。 
 
@@ -179,7 +179,9 @@ ms.locfileid: "6306018"
 在 **實體** 頁面上，您將找到成功執行的結果(整合的客戶個人資料實體)。 在 **個人資料** 區段，您的整合客戶實體名稱為 **客戶**。 第一次成功的比對執行建立了整合 *客戶* 實體。 後續所有比對執行都會擴充該實體。
 
 > [!TIP]
-> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。
+> 執行比對程序後，請選取程序狀態以打開 **工作詳細資料** 窗格。 它提供處理時間、上次處理日期以及與工作相關的所有錯誤與警告的概覽。 選取 **查看詳細資料**，以查看參與比對程序的實體、適用的規則，以及更新是否已順利發布。  
+> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。  
+> :::image type="content" source="media/process-detail-path.png" alt-text="從工作狀態連結取得程序詳細資料的逐層探究路徑。":::
 
 ## <a name="review-and-validate-your-matches"></a>檢閱和驗證您的比對
 

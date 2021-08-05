@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309810"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555343"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>利用 Experian 的人口統計資訊擴充客戶個人資料 (預覽版)
 
@@ -39,7 +39,7 @@ Experian 是消費者和企業信用報告和行銷服務的全球領導者。 �
 1. 在 Experian 圖格上，選取 **擴充我的資料**。
 
    > [!div class="mx-imgBorder"]
-   > ![Experian 圖標](media/experian-tile.png "Experian tile")
+   > ![Experian 圖標。](media/experian-tile.png "Experian tile")
    > 
 
 1. 從下拉式清單選取一個[連結](connections.md)。 如果沒有可用的連接，請與系統管理員聯繫。 如果您是系統管理員，則可以選取 **新增連接**，然從下拉式清單中選擇 Experian，來建立連接。 

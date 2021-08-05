@@ -2,20 +2,20 @@
   href: index.yml
 - name: 產品概觀
   href: overview.md
+- name: 建立試用
+  href: audience-insights/get-started-trial.md
 - name: 存取您的環境
   href: 'https://home.ci.ai.dynamics.com/'
-- name: 對象見解
+- name: Audience Insights
   items:
     - name: 求助中樞
       href: audience-insights/index.yml
     - name: 能力總覽
       href: audience-insights/overview.md
-    - name: 免費試用
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: 新功能與更新功能
       href: audience-insights/whats-new-audience-insights.md
     - name: 建立新環境
-      href: audience-insights/home.md
+      href: audience-insights/get-started-paid.md
     - name: 學習模組
       items:
         - name: 內嵌資料
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: 新增 Common Data Model 資料夾做為資料來源
           href: audience-insights/connect-common-data-model.md
-        - name: 新增 Common Data Service 受管理資料湖
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: 新增 Dataverse 受管理資料湖
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: 資料來源的增量重新整理
           href: audience-insights/incremental-refresh-data-sources.md
         - name: 即時資料擷取
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: 使用 SFTP 自訂匯入豐富
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: 客戶細分與量值
+    - name: 客戶細分
       items:
         - name: 客戶細分概觀
           href: audience-insights/segments.md
-        - name: 建立區段和客戶群組
+        - name: 建立客戶細分
           href: audience-insights/segment-builder.md
         - name: 以量值為基礎的客戶細分建議
           href: audience-insights/suggested-segments.md
@@ -250,10 +250,12 @@
           href: engagement-insights/developer-resources.md
         - name: 概念和術語
           href: engagement-insights/glossary.md
-    - name: 事件
+    - name: 活動
       items:
         - name: 建立和修改事件
           href: engagement-insights/refined-events.md
+        - name: 辨識 web 事件是來自先前驗證的訪客
+          href: engagement-insights/unknown-to-known.md
         - name: 匯出事件
           href: engagement-insights/export-events.md
     - name: 報告
@@ -304,7 +306,9 @@
       items:
         - name: 刪除和匯出個人資料
           href: engagement-insights/delete-export-personal-data.md
+    - name: 區域可用性
+      href: engagement-insights/regional-availability.md
     - name: 服務限制
       href: engagement-insights/quotas.md
-- name: 連絡支援人員
+- name: 連絡支援服務
   href: 'https://admin.powerplatform.microsoft.com/support'

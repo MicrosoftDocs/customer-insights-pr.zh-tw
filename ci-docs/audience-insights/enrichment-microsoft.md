@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305146"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555481"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>使用品牌和興趣親和性來擴充客戶設定檔 (預覽)
 
@@ -27,7 +27,7 @@ ms.locfileid: "6305146"
 若要設定興趣親和性擴充，請移至 **探索** 索引標籤 ，並選取 **興趣** 圖標上的 **擴充我的資料**。
 
    > [!div class="mx-imgBorder"]
-   > ![編輯品牌與興趣圖標](media/BrandsInterest-tile-Hub.png "品牌與興趣圖標")
+   > ![編輯品牌與興趣圖標。](media/BrandsInterest-tile-Hub.png "品牌與興趣圖標")
 
 ## <a name="how-we-determine-affinities"></a>我們如何判斷相關性
 
@@ -123,7 +123,7 @@ ms.locfileid: "6305146"
 
 執行擴充程序之後，移至 **我的擴充內容** 以檢閱已擴充的客戶總數，以及擴充後客戶設定檔中的品牌或興趣明細。
 
-:::image type="content" source="media/my-enrichments.png" alt-text="執行擴充程序之後的結果預覽":::
+:::image type="content" source="media/my-enrichments.png" alt-text="執行擴充程序之後的結果預覽。":::
 
 在圖表中選取 **查看已擴充資料**，以查看擴充後的資料。 擴充的品牌資料會移至 **BrandAffinityFromMicrosoft** 實體。 興趣資料位於 **InterestAffinityFromMicrosoft** 實體中。 您也可以 **資料** > **實體** 的 **擴充** 群組中找到這些實體。
 
@@ -131,7 +131,7 @@ ms.locfileid: "6305146"
 
 您也可以在個別客戶卡片上查看品牌和興趣親和性。 移至 **客戶** 並選取客戶設定檔。 在客戶卡片中，您會發現該客戶人口統計設定檔中人員所喜好品牌或興趣的圖表。
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="包含擴充資料的客戶卡片":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="包含擴充資料的客戶卡片。":::
 
 ## <a name="next-steps"></a>後續步驟
 

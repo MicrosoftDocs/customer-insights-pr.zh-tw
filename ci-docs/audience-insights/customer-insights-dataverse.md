@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259181"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650032"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>在 Microsoft Dataverse 中使用 Customer Insights 資料
 
@@ -24,11 +24,11 @@ Customer Insights 提供可讓輸出實體在 [Microsoft Dataverse](/powerapps/m
 
 **使用現有 Dataverse 環境的組織**
 
-已使用 Dataverse 的組織在系統管理員設定對象見解時，可以[使用現有的 Dataverse 環境之一](manage-environments.md#create-an-environment-in-an-existing-organization)。 藉由提供連接 Dataverse 環境的 URL，將環境附加至新的對象見解環境。 要確保最佳的效能，Customer Insights 和 Dataverse 環境必須託管在相同的地區。
+已使用 Dataverse 的組織在系統管理員設定對象見解時，可以[使用現有的 Dataverse 環境之一](get-started-paid.md)。 藉由提供連接 Dataverse 環境的 URL，將環境附加至新的對象見解環境。 要確保最佳的效能，Customer Insights 和 Dataverse 環境必須託管在相同的地區。
 
 若要附加 Dataverse 環境，請在建立對象見解環境時，展開 **進階設定**。 提供 **Microsoft Dataverse 環境 URL**，並選取核取方塊來 **啟用資料共用**。
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **新增組織**
 

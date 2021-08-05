@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124217"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362499"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>將客戶細分匯出至 Mailchimp (預覽版)
 
@@ -38,7 +38,7 @@ ms.locfileid: "6124217"
 
 1. 移至 **管理** > **連接**。
 
-1. 選取 **新增連接**，然後選擇 **Autopilot** 來設定連接。
+1. 選擇 **新增連接** 並選擇 **Mailchimp** 來設定連接。
 
 1. 在 **顯示名稱** 中，給連接一個能夠辨識的名稱。 連接的名稱與類型能說明此連接。 我們建議您選取可以說明此連接用途和目標的名稱。
 

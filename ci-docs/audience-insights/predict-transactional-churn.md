@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095592"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559395"
 ---
 # <a name="transactional-churn-prediction-preview"></a>交易性流失預測 (預覽版)
 
@@ -47,7 +47,7 @@ ms.locfileid: "6095592"
         - **事件：** 您要使用的事件的名稱。 例如雜貨店內稱為 "UserAction" 的欄位可能是客戶的優惠券用途。
         - **詳細資料：** 關於事件的詳細資訊。 例如雜貨店內稱為 "CouponValue" 的欄位可能是優惠券的貨幣值。
 - 建議的資料特性：
-    - 足夠的歷史資料：交易資料至少要是所選取時段的兩倍。 最好有二到三年的訂閱資料。 
+    - 足夠的歷史資料：交易資料至少要是所選取時段的兩倍。 最好有 2 到 3 年的交易記錄。 
     - 每個客戶有多個購買：最好每個客戶至少有二個交易記錄。
     - 客戶數量：至少 10 個客戶個人資料，最好超過 1,000 個不重複客戶。 少於 10 位客戶且歷史資料不足此模型將會失敗。
     - 資料完整性：提供的實體，其中的資料欄位缺失值少於 20% 。
