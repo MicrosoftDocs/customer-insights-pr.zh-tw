@@ -4,17 +4,17 @@ metadata:
   author: m-hartmann
   description: 尋找從求助內容開始的相關文章。
   ms.author: mhart
-  ms.date: 10/29/2020
+  ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598446"
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036547"
 title: Dynamics 365 Customer Insights 文件
-summary: 尋找開始使用的實用資源並瞭解有關 Customer Insights 的功能和能力。
+summary: 尋找有用的資源，以便開始了解 Customer Insights 的功能。
 landingContent:
 - title: 目睹 Customer Insights
   linkLists:
@@ -23,16 +23,16 @@ landingContent:
     - text: Customer Insights 總覽
       url: overview.md
     - text: 發行計畫
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: 存取您的環境
-      url: https://home.ci.ai.dynamics.com/
+      url: /dynamics365-release-plan/
+    - text: 探索 CDP
+      url: https://dynamics.microsoft.com/ai/customer-insights/
 - title: 開始使用對象見解
   linkLists:
   - linkListType: get-started
     links:
     - text: 註冊試用版
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: 有什麼新功能？
+    - text: 最新消息
       url: audience-insights/whats-new-audience-insights.md
     - text: 對象見解文件
       url: audience-insights/index.yml

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685452"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377778"
 ---
 # <a name="create-and-manage-segments"></a>建立和管理區段
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685452"
 > - 用來選取屬性的側邊窗格將繼續使用。
 > - 可以選取實體關聯路徑的選項。
 > 若要嘗試使用新的客戶細分建立器，請傳送主題為「Request to enable the new segment builder」的電子郵件至 cihelp [at] microsoft.com。 包括您的組織名稱和您沙箱環境的識別碼。
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="客戶細分建立器的元素。" lightbox="media/segment-builder-overview.png":::
+>
+> 1 - 用規則和子規則整理您的客戶細分。 每個規則或子規則都由條件組成。 將條件與邏輯操作子相結合
+>
+> 2 - 在適用於規則的實體之間，選擇[關聯路徑](relationships.md)。 關係路徑決定哪些屬性可以在條件中使用。
+>
+> 3 - 管理規則和子規則。 更改規則的位置或將其刪除。
+>
+> 4 - 新增條件，並使用子規則組建正確的巢狀層級。
+>
+> 5 - 應用集合操作到連接的規則。
+>
+> 6 - 使用屬性窗格新增可用實體屬性或根據屬性建立條件。 窗格會基於選定關聯路徑顯示實體和屬性清單，這些實體和屬性可用於選定規則。
+>
+> 7 - 根據現有屬性新增條件到規則和子規則中，或將其新增到新規則中。
+>
+> 8 - 組建客戶細分時，復原和重做修改。
 
 對整合客戶實體周圍及相關實體，定義複雜篩選。 每個區段會在處理後建立一組可匯出和採取相應動作的客戶記錄。 區段會在 **區段** 頁面上加以管理。 
 
@@ -64,7 +81,7 @@ ms.locfileid: "6685452"
 
    |號碼 |定義  |
    |---------|---------|
-   |7     |Entity          |
+   |1     |Entity          |
    |2     |屬性          |
    |3    |運算子         |
    |4    |數值         |
@@ -147,6 +164,6 @@ ms.locfileid: "6685452"
 
 ## <a name="next-steps"></a>後續步驟
 
-[匯出區段](export-destinations.md)並探索[客戶卡片](customer-card-add-in.md)和[連接器](export-power-bi.md)，以取得客戶等級的見解。
+[匯出一個客戶細分](export-destinations.md)，並探索[客戶卡整合](customer-card-add-in.md)，以便在其他應用中使用客戶細分。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

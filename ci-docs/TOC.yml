@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: 服務限制
       href: engagement-insights/quotas.md
-- name: 連絡支援服務
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: 整合對象和參與見解
+  items:
+    - name: 連結參與見解與對象見解
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: 在參與見解報表中使用對象見解客戶細分
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: 使用人口統計學維度來分割行為資料
+      href: engagement-insights/curate-dimensions.md
+- name: 取得支援
+  href: 'https://dynamics.microsoft.com/en-us/support/'

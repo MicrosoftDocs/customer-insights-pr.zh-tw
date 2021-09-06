@@ -1,7 +1,7 @@
 ---
 title: 匯出 Customer Insights 資料到 Dynamics 365 Marketing
 description: 了解如何設定連接並匯出至 Dynamics 365 Marketing。
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692471"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417195"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>在 Dynamics 365 Marketing 中使用客戶細分 (預覽版)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-使用 [區段](segments.md) 產生行銷活動並使用 Dynamics 365 Marketing 聯絡特定族群的客戶。 如需詳細資訊，請參閱 [透過 Dynamics 365 Marketing 使用 Dynamics 365 Customer Insights 中的區段](/dynamics365/marketing/customer-insights-segments)
+使用 [區段](segments.md) 產生行銷活動並使用 Dynamics 365 Marketing 聯絡特定族群的客戶。 如需詳細資訊，請參閱 [搭配 Dynamics 365 Marketing 使用 Dynamics 365 Customer Insights 中的客戶細分](/dynamics365/marketing/customer-insights-segments)。
+
+如果您使用 Dynamics 365 Marketing 的新功能在 Dataverse 組織中進行即時客戶旅程協調流程，則無需建立對 Dynamics 365 Marketing 的標準匯出。 在連接 Marketing 和 Customer Insights 後，來自對象見解的聯絡人和客戶細分可直接在 Dynamics 365 Marketing 中找到。 在刪除現有匯出之前，請查看主題是[如何連接對象見解和 Dynamics 365 Marketing 客戶旅程協調流程](/dynamics365/marketing/real-time-marketing-ci-profile)的文件。
 
 ## <a name="prerequisite-for-a-connection"></a>連接的先決條件
 

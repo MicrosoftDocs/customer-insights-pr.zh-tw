@@ -1,7 +1,7 @@
 ---
 title: Dynamics 365 Customer Insights 的對象見解概述
 description: Dynamics 365 Customer Insights 的對象見解概述。
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539105"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034350"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Dynamics 365 Customer Insights 的對象見解概述
 
-對象見解協助您更深入瞭解您的客戶。 連接各種不同交易、行為及觀測來源的資料，以建立全方位客戶視角。 利用這些見解來推動以客戶為中心的體驗與程序。 統整和瞭解客戶資料並充分運用以取得智慧見解和動作。
+[對象見解，即 Dynamics 365 Customer Insights 的功能](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/)幫助您更加深入了解客戶。 連接各種不同交易、行為及觀測來源的資料，以建立全方位客戶視角。 利用這些見解來推動以客戶為中心的體驗與程序。 統整和瞭解客戶資料並充分運用以取得智慧見解和動作。
 
 ## <a name="main-benefits"></a>主要好處 
 
@@ -34,9 +34,9 @@ ms.locfileid: "6539105"
 
 - **推行您的商務程序並個人化客戶體驗**
 
-  - 在各種管道上推動個人化參與 — 為行銷、銷售和服務專業人員提供內建關聯式 Customer Insights，以及量身打造且已融入他們已經每天使用的商務應用程式的客戶設定檔
-  - 根據可自訂的設定檔、業務量值和區段，自動化以客戶為中心的體驗和程序。
-  - 啟用並擴充建立在 [Microsoft Power Platform](https://powerplatform.microsoft.com/) 的企業營運體驗。 使用威力強大的 PowerApps 低程式碼方法快速組建含嵌入見解的應用程式。  
+  - 推動跨管道的個人化參與—增強行銷、銷售和服務專業人員的能力。 使用現成、洞察和量身訂做的客戶個人資料卡，裡面整合了客戶已經使用的商務應用程式。
+  - 根據可自訂的個人資料、業務量值和區段，來自動化體驗和程序。
+  - 啟用並擴充建立在 [Microsoft Power Platform](https://powerplatform.microsoft.com/) 的企業營運體驗。 使用威力強大的 Power Apps 低程式碼方法快速組建含嵌入見解的應用程式。  
 
 ## <a name="key-audiences"></a>關鍵對象
 
@@ -50,13 +50,18 @@ ms.locfileid: "6539105"
 
 - **業務使用者：**
 
-  - 深入了解全方位客戶設定檔以及客戶旅程的端對端檢視。
+  - 深入了解全方位客戶個人資料及客戶旅程。
   - 透過預先建立的套件，在 Dynamics 365 商務程序中檢視全方位的客戶資料。
 
 - **業務分析員：**
 
   - 建立可自訂的設定檔、定義量值、建立區段並從預測分析中獲益，取得專屬於組織的 360 度客戶檢視。  
-  - 好幾個 Microsoft 和協力廠商的應用程式或 API 具備立即可用的連接器，能進一步處理見解。
+  - 對多個 Microsoft 和第三方應用程式或 API ，使用現成的連接器來處理見解。
 
+## <a name="pricing-and-licensing"></a>定價與授權
+
+Customer Insights 是每個租用戶授權，包括多種功能。 授權容量包括一組個人資料、每日系統重新整理、Power Platform 要求和兩個環境。 您可以購買額外的容量和授權來增加預設配額。 
+- 詳細容量和權利：[Dynamics 365 授權指南](https://go.microsoft.com/fwlink/?LinkId=866544)
+- 定價概述：[Dynamics 365 定價](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

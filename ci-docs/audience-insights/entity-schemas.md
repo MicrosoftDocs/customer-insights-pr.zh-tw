@@ -1,7 +1,7 @@
 ---
 title: Common Data Model 中的 Customer Insights 實體結構描述
 description: 搭配 Common Data Model 中的實體處理。
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692295"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380733"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model 中的實體結構描述
 
@@ -42,7 +42,7 @@ ms.locfileid: "6692295"
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>使用 Common Data Model 實體導覽器來檢視實體
 
-您可以在 [Common Data Model 實體導航器中](https://microsoft.github.io/CDM/) 檢視實體。 選取 **從 GitHub 載入！** 按鈕，然後瀏覽至 **foundationCommon** > **crmCommon** > **解決方案** > **customerInsights**，您會在其中找到 Customer Insights 實體及其定義的清單。
+您可以在 [Common Data Model 實體導航器中](https://microsoft.github.io/CDM/) 檢視實體。 在見解應用程式區段選取實體以獲取 Customer Insights 實體清單及其定義。
 > [!div class="mx-imgBorder"]
 > ![顯示 CustomerActivity 實體的 CDM 實體導覽器。](media/CDM-entity-navigator.png "顯示 CustomerActivity 實體的 CDM 實體導覽器")
 
