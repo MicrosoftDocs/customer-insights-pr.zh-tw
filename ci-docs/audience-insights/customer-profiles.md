@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554608"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032794"
 ---
 # <a name="customer-profiles"></a>客戶設定檔
 
@@ -69,7 +69,7 @@ ms.locfileid: "6554608"
 
 ## <a name="next-steps"></a>後續步驟
 
-[新增其他資料來源](data-sources.md)或[建立客戶區段](segments.md)。
+[新增更多資料來源](data-sources.md)、[擴充整合個人資料](enrichment-hub.md)，或[建立客戶細分](segments.md)，才能使用其他應用程式中的整合個人資料。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

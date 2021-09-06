@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e53d87c4f633cba09fecbc1c219f0ac2ec6bb5598a7902cbcf7398d26d6d7c6b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554011"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029389"
 ---
 # <a name="customer-profiles-search--filter-index"></a>客戶設定檔：搜尋及篩選索引
 
@@ -60,7 +60,7 @@ ms.locfileid: "6554011"
 
 ## <a name="next-steps"></a>後續步驟
 
-移至 **客戶** 頁面以搜尋客戶設定檔，或使用索引欄位來查看所有客戶設定檔的子集。
+檢閱[整合個人資料頁面](customer-profiles.md)以搜尋個人資料，或使用索引欄位來查看所有整合個人資料的子集。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

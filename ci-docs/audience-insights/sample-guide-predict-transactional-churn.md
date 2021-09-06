@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6556251"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029435"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>交易性流失預測 (預覽版) 範例指南
 
@@ -46,8 +46,7 @@ Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Conto
    - **DateOfBirth**：日期
    - **CreatedOn**：日期/時間/時區
 
-   [!div class="mx-imgBorder"]
-   ![轉換出生日期到日期。](media/ecommerce-dob-date.PNG "將出生日期轉換為日期")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="轉換出生日期到日期。":::
 
 1. 請在右側窗格的 **名稱** 欄位中將您的資料來源從 **查詢** 重新命名為 **eCommerceContacts**
 
