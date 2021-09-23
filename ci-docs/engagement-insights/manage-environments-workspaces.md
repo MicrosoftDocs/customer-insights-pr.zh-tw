@@ -4,17 +4,17 @@ description: 如何建立、重新命名及刪除工作區和環境。
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034032"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486025"
 ---
 # <a name="manage-environments-and-workspaces"></a>管理環境和工作區
 
@@ -85,13 +85,11 @@ ms.locfileid: "7034032"
 
 1. 選取 **新增成員** 以提供存取並[指派角色](user-roles.md)。 目前只有 **工作區系統管理員** 可以選用。
 
-1. 如果您設定了 [連接至對象見解](configure-connections.md)，您可以選取 **允許存取設定檔資料**，以允許成員根據[使用者設定檔](profile-reports.md) 來查看報表。
-
 1. 選取 **新增成員**，將它們新增至您的工作區。
 
 ## <a name="manage-an-environment"></a>管理環境
 
-做為環境管理員，您可以從左導覽窗格存取環境。 您可以配置環境設定、其他環境管理員、工作區以及[連接至對象見解](configure-connections.md)。 選取要在系統管理中心不同區域之間移動的索引標籤。
+做為環境管理員，您可以從左導覽窗格存取環境。 您可以進行環境設定、以及設定其他環境管理員及工作區。 選取要在系統管理中心不同區域之間移動的索引標籤。
 
 :::image type="content" source="media/New-environment.png" alt-text="環境系統管理中心。":::
 
@@ -123,8 +121,6 @@ ms.locfileid: "7034032"
 
 1. 選取 **新增成員** 以更新成員並[指派角色](user-roles.md)。 目前只有 **環境管理員** 可以選用。
 
-1. 如果您設定了 [連接至對象見解](configure-connections.md)，您可以選取 **允許存取設定檔資料**，以允許成員根據[使用者設定檔](profile-reports.md) 來查看報表。
-
 1. 選取 **新增成員**，將它們新增至您的環境。
 
 ### <a name="delete-an-environment"></a>刪除環境
@@ -143,7 +139,7 @@ ms.locfileid: "7034032"
 
 建立連接至對象見解，可讓您根據統一的客戶設定檔來查看業務開發見解中的報表。 
 
-如需詳細資訊，請參閱[設定連線](configure-connections.md)。
+如需更多資訊，請參見[建立對象見解與參與見解之間的連結](integrate-audience-insights-engagement-insights.md)。
 
 ## <a name="manage-personal-data"></a>管理個人資料
 

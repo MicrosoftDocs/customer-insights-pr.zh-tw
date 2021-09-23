@@ -1,24 +1,23 @@
 ---
-title: 支援對象見解的語言
+title: Dynamics 365 Customer Insights 支援的語言
 description: 瞭解並組態語言支援。
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035129"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483332"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>支援對象見解能力的語言
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 支援的語言
 
-Dynamics 365 Customer Insights 的對象見解被翻譯成許多語言。 以下清單包含有關已翻譯且可取得的語言和資訊。 您還可以了解更多有關如何更改語言設定的資訊。 
+Dynamics 365 Customer Insights 翻譯成許多語言。 以下清單包含有關已翻譯且可取得的語言和資訊。 您還可以了解更多有關如何更改語言設定的資訊。 
 
 ## <a name="languages"></a>語言
 
@@ -69,7 +68,7 @@ Dynamics 365 Customer Insights 的對象見解被翻譯成許多語言。 以下
 
 ## <a name="whats-translated"></a>翻譯內容
 
-應用程式使用您的語言偏好顯示如慣用語言表達的功能表、標籤文字和系統訊息元素。
+Customer Insights 使用您的語言喜好設定，以慣用語言來顯示功能表、標籤文字和系統訊息等元素。
 
 因為大部分的功能都是根據您的資料而定，所以部分項目仍然是以原始語言提供。 例如：
 

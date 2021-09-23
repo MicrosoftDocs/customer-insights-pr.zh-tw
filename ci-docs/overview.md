@@ -8,12 +8,12 @@ ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 0d04de418326152dafbbf020e6bb6d3b350ca806
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036501"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474093"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 產品總覽
 
@@ -33,5 +33,10 @@ ms.locfileid: "7036501"
 1. 在導覽窗格中，選取 **所有應用程式** 以打開 **選取您的焦點** 視窗。
 1. 選取 **立即移至**，以瀏覽您選擇的功能。
 
+## <a name="pricing-and-licensing"></a>定價與授權
+
+Customer Insights 是每個租用戶授權，包括多種功能。 您可以購買額外的容量和授權來增加預設配額。 
+- [定價概觀](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
+- 容量和權利：[Dynamics 365 授權指南](https://go.microsoft.com/fwlink/?LinkId=866544)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

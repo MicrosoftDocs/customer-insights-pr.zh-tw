@@ -1,20 +1,20 @@
 ---
 title: 客戶活動
-description: 定義客戶活動，並在客戶時間表中查看它們。
-ms.date: 04/07/2021
+description: 定義客戶活動，並在客戶個人資料的時間表中查看它們。
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033621"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494401"
 ---
 # <a name="customer-activities"></a>客戶活動
 
@@ -60,12 +60,15 @@ ms.locfileid: "7033621"
       - **其他詳細資料**：此活動相關資訊的欄位。
       - **圖示**：最能代表此活動類型的圖示。
       - **網址**：此欄位可包含有關此活動資訊的 URL。 例如，為此活動提供資訊的交易系統。 此 URL 可以是資料來源中的任何欄位，也可以使用 Power Query 轉換將其建構為新欄位。 URL 資料會儲存在 *整合活動* 實體中，而此實體可以在下游以[API](apis.md)使用。
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="在整合活動實體中指定客戶活動資料。":::
+
+   - **顯示在時間表中**
+      - 選擇是否要在客戶個人資料的時間表檢視中顯示此活動。 選取 **是** 以在時間表中顯示活動，或按一下 **否** 隱藏。
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="在整合活動實體中指定客戶活動資料。":::
 
 1. 選取 **下一步** 移至下一個步驟。 要儲存設定為 **其他** 的活動類型，您可以選取 **完成並審核** 以立即儲存活動。 
 
-1. 在 **活動類型** 步驟中，選取活動類型，然後可以選擇是否要用語意方式對應某些活動類型(以用於 Customer Insights 的其他區域)。 目前，在同意對應欄位之後，便可以在語義上對應 *訂閱* 和 *SalesOrderLine* 活動類型。 如果活動類型與新的活動不相關，您可以選擇 *其他* 或為自訂活動類型 *建立新的活動類型*。
+1. 在 **活動類型** 步驟中，選取活動類型，然後可以選擇是否要用語意方式對應某些活動類型(以用於 Customer Insights 的其他區域)。 目前，在同意對應欄位之後，便可以在語義上對應 *Feedback*、*Loyalty*、 *SalesOrder*、*SalesOrderLine* 和 *訂閱* 活動類型。 如果活動類型與新的活動不相關，您可以選擇 *其他* 或為自訂活動類型 *建立新的活動類型*。
 
 1. 選取 **下一步** 移至下一個步驟。 
 

@@ -1,19 +1,19 @@
 ---
 title: 建立對象見解與參與見解之間的連結
 description: 在對象見解與參與見解之間建立有效連結，啟用雙向共用資料。
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461003"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487097"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>建立對象見解與參與見解之間的連結
 
@@ -26,14 +26,14 @@ ms.locfileid: "7461003"
 ## <a name="prerequisites"></a>先決條件
 
 - 對象見解個人資料必須儲存您在 Azure Data Lake Storage的帳戶或儲存在 [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;受管理的 Data Lake 中。 
-
+- 此外，您的對象見解環境應具有關聯的 Dataverse 環境。 此外，如果該環境也是用 Dataverse 儲存資料，請確認您已在對象見解中核取 **啟用資料共用** 選項。 如需更多資訊，請參見[在對象見解建立並設定付費環境](../audience-insights/get-started-paid.md)。
 - 您需要參與見解和對象見解所在環境的系統管理員權限。
-
 - 連結的環境必須位於相同的地理區域。
 
 > [!NOTE]
-> - 如果您的對象見解訂閱是試用版，且使用對象見解內部的受管理的 Data Lake，請與取得 [pirequest@microsoft.com](mailto:pirequest@microsoft.com)協助。 
-> - 如果您的對象見解環境使用您自己的 Azure Data Lake Storage 來儲存資料，您需要將參與見解 Azure 服務主體新增至您的儲存帳戶。 如需詳細資訊，請移至[以 Azure 服務主體建立 Azure Data Lake Storage帳戶來使用對象見解](../audience-insights/connect-service-principal.md)。 此外，對象見解環境應具有相關聯的 [Dataverse 環境](../audience-insights/get-started-paid.md)。 
+> - 如果您的對象見解訂閱是使用對象見解內受管理的 Data Lake 的試用版，請與取得 [pirequest@microsoft.com](mailto:pirequest@microsoft.com)協助。 
+> - 如果您的對象見解環境使用您自己的 Azure Data Lake Storage 來儲存資料，您需要將參與見解 Azure 服務主體新增至您的儲存帳戶。 如需詳細資訊，請移至[以 Azure 服務主體建立 Azure Data Lake Storage帳戶來使用對象見解](../audience-insights/connect-service-principal.md)。 
+
 
 ## <a name="create-an-environment-link"></a>建立環境連結
 
@@ -75,6 +75,7 @@ ms.locfileid: "7461003"
 
    > [!IMPORTANT]
    > 如果在此步驟中未明確新增使用者，則參與見解中的使用者將無法看見資料。
+   > 若要讓對象見解客戶細分顯示在參與見解中，您必須先[執行合併和下游處理](../audience-insights/merge-entities.md)。 下游程序很重要，因為它們會生成唯一的資料表，以準備要與參與見解共用的對象見解客戶細分。 (如果已排程系統重新整理，則會自動包括下游程序。)
 
 1. 檢閱選取的項目，然後按一下 **完成**。
 

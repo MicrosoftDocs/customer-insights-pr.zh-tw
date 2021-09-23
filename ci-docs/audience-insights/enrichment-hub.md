@@ -1,7 +1,7 @@
 ---
 title: 富集統一的客戶設定檔
 description: 使用功能富集您的客戶資料。
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032518"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469946"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -29,6 +29,7 @@ ms.locfileid: "7032518"
 
 在 **探索** 索引標籤上，您可找到下列擴充內容：
 
+- 由 Microsoft 提供的 [Azure 地圖服務](enrichment-azure-maps.md)
 - [Brands](enrichment-microsoft.md) 由 Microsoft 提供
 - [Interests](enrichment-microsoft.md) 由 Microsoft 提供
 - Microsoft 提供的[增強地址](enrichment-enhanced-addresses.md)
@@ -62,5 +63,17 @@ ms.locfileid: "7032518"
 ## <a name="multiple-enrichments-of-the-same-type"></a>多個相同類型的擴充
 
 在擴充設定期間，會指定要擴充的實體，這可讓您擴充個人資料的子集。 例如，只擴充特定客戶細分的資料。 您可以設定數個相同類型的擴充，並重複使用相同的連接。 某些擴充將限制相同類型的擴充可建立的數量。 在 **擴充** 頁面上可以看到限制和目前使用的值 。
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>查看擴充程序的進度
+
+在重新整理時或重新整理完成後，您都可以查看擴充程序詳細資料，包括其狀態和潛在問題。 瞭解哪些程序包含在擴充的重新整理中，以及執行該程序所花費的時間。 擴充狀態支援 Experian、Leadspace、HERE Technologies、SFTP 匯入以及 Azure 地圖服務。
+
+查看擴充的狀態
+
+1. 移至 **資料** > **擴充**。 
+1. 在 **我的擴充** 索引標籤中，選取擴充的狀態以打開側邊窗格。 
+1. 在 **進度詳細資料** 窗格中，展開 **擴充** 區段。 
+1. 在您想要查看進度的擴充底下，選取 **查看詳細資料**。 
+1. 在 **工作詳細資料** 窗格中，選取 **顯示詳細資料**，以查看包含在擴充更新的程序及其狀態。 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

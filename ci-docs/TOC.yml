@@ -6,7 +6,7 @@
   href: audience-insights/get-started-trial.md
 - name: 存取您的環境
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Audience Insights
+- name: 對象見解
   items:
     - name: 求助中樞
       href: audience-insights/index.yml
@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: 新功能與更新功能
       href: audience-insights/whats-new-audience-insights.md
-    - name: 建立新環境
-      href: audience-insights/get-started-paid.md
+    - name: 開始使用
+      items:
+        - name: 快速入門手冊
+          href: audience-insights/get-started.md
+        - name: 建立新環境
+          href: audience-insights/get-started-paid.md
+        - name: 探索對象見解
+          href: audience-insights/home.md
     - name: 學習模組
       items:
         - name: 內嵌資料
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: 增強型地址
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: 以 Azure 地圖服務進行擴充
+          href: audience-insights/enrichment-azure-maps.md
         - name: 使用 HERE Technologies 豐富
           href: audience-insights/enrichment-here.md
         - name: 透過 Leadspace 擴充
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: API 參考
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: 服務限制
-      href: audience-insights/service-limits.md
-    - name: 符合 GDPR 的 DSR 要求
-      href: audience-insights/gdpr.md
-- name: 參與見解 (預覽版)
+- name: 業務開發見解 (預覽版)
   items:
     - name: 求助中樞
       href: engagement-insights/index.yml
     - name: 能力總覽
       href: engagement-insights/overview.md
-    - name: 免費試用
-      href: 'https://pi.dynamics.com/'
     - name: 開始使用
       items:
-        - name: 開始使用
+        - name: 快速入門手冊
           href: engagement-insights/get-started.md
         - name: 建立工作區
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: 管理環境和工作區
           href: engagement-insights/manage-environments-workspaces.md
-        - name: 組態連接
-          href: engagement-insights/configure-connections.md
         - name: 管理 cookie 和使用者同意
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: 刪除和匯出個人資料
-          href: engagement-insights/delete-export-personal-data.md
     - name: 區域可用性
       href: engagement-insights/regional-availability.md
-    - name: 服務限制
-      href: engagement-insights/quotas.md
 - name: 整合對象和參與見解
   items:
     - name: 連結參與見解與對象見解
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: 使用人口統計學維度來分割行為資料
       href: engagement-insights/curate-dimensions.md
+- name: 服務限制
+  href: service-limits.md
+- name: DSR 權利和要求
+  href: dsr-rights-requests.md
 - name: 取得支援
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

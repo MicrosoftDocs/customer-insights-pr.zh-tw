@@ -4,17 +4,17 @@ description: 如何使用漏斗圖報表來瞭解對象如何進行決策。
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032245"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498632"
 ---
 # <a name="create-and-manage-funnel-reports"></a>建立及管理漏斗圖報表
 
@@ -158,4 +158,21 @@ ms.locfileid: "7032245"
 1. 選取一個報表名稱以開啟。
 
 1. 選取您要移除的步驟，然後選取 **移除**。
+
+## <a name="funnel-insights"></a>漏斗圖見解 
+
+參與見解現在提供客戶的漏斗圖見解。 使用漏斗圖見解，深入瞭解客戶在漏斗圖報表中各步驟的行為。 當您建立並儲存新的漏斗圖報表時，會為您的報表自動生成漏斗圖見解。 
+
+您可以從下列類別，從主要等級和步驟等級查看漏斗圖見解： 
+
+ - 轉換率 
+ - 轉換時間 
+ - 完成時間 
+
+您可以使用這些見解深入探索客戶行為，並更清楚地瞭解漏斗圖報表的暫時擱置點和轉換。 
+
+每隔 24 小時漏斗圖見解會重新計算一次，以及在您 **儲存** 漏斗圖報表時進行重新計算。 
+
+> [!NOTE]
+> 若要查看漏斗圖的見解，必須在每次變更報表時，儲存報表。 
 

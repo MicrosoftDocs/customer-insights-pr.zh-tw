@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 726edb19a9fd97d80ae357103dc7d48ed38b005131ad44137b47d629a1c60b12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45c81a037258e42d8975e0372c104865a9d4cbfe
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033851"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466614"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>使用品牌和興趣親和性來擴充客戶設定檔 (預覽)
 
@@ -126,6 +126,8 @@ ms.locfileid: "7033851"
 :::image type="content" source="media/my-enrichments.png" alt-text="執行擴充程序之後的結果預覽。":::
 
 在圖表中選取 **查看已擴充資料**，以查看擴充後的資料。 擴充的品牌資料會移至 **BrandAffinityFromMicrosoft** 實體。 興趣資料位於 **InterestAffinityFromMicrosoft** 實體中。 您也可以 **資料** > **實體** 的 **擴充** 群組中找到這些實體。
+
+您可以看到一張圖表顯示客戶個人資料隨時間完成的擴充數量，並預覽擴充實體。 預覽圖格中的選取 **顯示更多**，以打開已擴充的實體。
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>查看客戶卡片上的擴充資料
 

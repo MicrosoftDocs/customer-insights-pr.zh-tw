@@ -1,7 +1,7 @@
 ---
 title: 新功能以及近期即將推出的功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 07/19/2021
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035953"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465195"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
@@ -26,6 +26,15 @@ ms.locfileid: "7035953"
 
 > [!TIP]
 > 若要送出和票選功能要求和產品建議，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="august-2021-updates"></a>2021 年 8 月更新
+
+2021 年 7 月及 8 月的更新包含新功能、效能升級和 BUG 修正。
+
+### <a name="extensibility"></a>擴充性
+
+- **將客戶細分匯出至 Klaviyo** 我們已擴充 [匯出目標，加入了Klaviyo](export-klaviyo.md)。 您在可以匯出客戶細分來建立行銷活動、執行電子郵件行銷，並且搭配 Klaviyo 使用特定客戶群組。 
+
 
 ## <a name="june-2021-updates"></a>2021 年 6 月更新
 

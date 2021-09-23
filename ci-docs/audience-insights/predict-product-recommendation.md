@@ -1,20 +1,20 @@
 ---
 title: 產品建議預測
 description: 預測一個客戶可能購買或互動的產品。
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034946"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494529"
 ---
 # <a name="product-recommendation-prediction-preview"></a>產品建議預測 (預覽版)
 
@@ -89,23 +89,24 @@ ms.locfileid: "7034946"
 
 ### <a name="add-required-data"></a>新增必要資料
 
-1. 對 **客戶交易歷史記錄** 選取 **新增資料** 接著選擇實體以提供[先決條件](#prerequisites) 中描述的交易/購買歷史記錄資訊。
+1. 側邊窗格包含所需交易記錄或購買歷史資訊，在其中選取 **新增資料**，然後選擇活動類型。
 
-1. 將語義欄位對應到您的購買歷史記錄實體中的屬性，並選取 **下一步**。 如需欄位的描述，請查看[先決條件](#prerequisites)。
-   > [!div class="mx-imgBorder"]
-   > ![定義實體關聯。](media/product-recommendation-purchasehistorymapping.PNG "購買歷史記錄頁面，顯示的語意屬性可對應至選取的購買歷史記錄實體中欄位")
+1. 在 **選擇活動** 底下，在選取的活動中，選擇計算要關注的特定活動。
 
-1. 如果欄位未填寫，請設定購買歷史記錄實體到 *客戶* 實體的關聯。
-    1. 請選取 **購買歷史記錄實體**。
-    1. 請在購買歷史記錄實體中選取找出客戶的 **欄位**。 必須關聯到 *客戶* 實體的主要客戶識別碼。
-    1. 選取與主要客戶實體相配的 **客戶實體**。
-    1. 輸入描述此關聯的名稱。
-       > [!div class="mx-imgBorder"]
-       > ![購買歷史記錄頁面顯示對客戶關係的建立。](media/model-purchase-join.png "購買歷史記錄頁面顯示建立對客戶的關聯")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="側邊窗格顯示在語義類型底下選擇特定活動。":::
+
+1. 如果尚未將活動對應至語義類型，請選取 **編輯** 來對應。 對應語義式活動的引導式體驗會打開。 在選取的活動類型中將資料對應到對應的欄位。
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="設定活動類型的頁面。":::
+
+1. 將活動對應至對應的語義類型之後，請選取 **下一步** 繼續 
+ 
+1. 將語義屬性對應至執行模型必須的欄位。
 
 1. 選取 **儲存**。
 
 1. 選取 **下一步**。
+
 
 ### <a name="configure-product-filters"></a>設定產品篩選
 

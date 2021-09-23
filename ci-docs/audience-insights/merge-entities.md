@@ -1,7 +1,7 @@
 ---
 title: 將實體合併到資料統整中
 description: 合併實體以建立統整的客戶設定檔。
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034992"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494309"
 ---
 # <a name="merge-entities"></a>合併實體
 
@@ -66,7 +66,7 @@ ms.locfileid: "7034992"
 
 從整合的客戶個人資料中排除屬性。 如果欄位是用於其他程序中 (例如，客戶細分)，則請先從這些程序中移除該欄位，然後再從客戶個人資料中排除它。 
 
-1. 選取合併欄位。
+1. 選取合併的欄位。
   
 1. 選取 **顯示更多**，然後選擇 **排除**。
 
@@ -76,17 +76,40 @@ ms.locfileid: "7034992"
 
 在 **合併** 頁面上，選取 **排除欄位** 以查看所有排除欄位的清單。 此窗格可新增排除欄位。
 
+## <a name="edit-a-merged-field"></a>編輯合併的欄位
+
+1.  選取合併的欄位。
+
+1.  選取 **顯示更多**，然後選擇 **編輯**。
+
+1.  指定如何以三個選項中之一將欄位結合或合併：
+    - **重要**：根據指定給參與欄位的重要性等級，找出勝出值。 這是預設合併選項。 選取 **上移/下移** 來設定重要性等級。
+    :::image type="content" source="media/importance-merge-option.png" alt-text="合併欄位對話方塊中的重要性選項。"::: 
+    - **最新**：根據新近度來找出勝出值。 要定義新近度，在合併欄位範圍中，每個參與的實體都需要一個日期或數字欄位。
+    :::image type="content" source="media/recency-merge-option.png" alt-text="合併欄位對話方塊中的新近度選項。":::
+    - **最低新近度**：根據最低的新近度來找出勝出值。 要定義新近度，在合併欄位範圍中，每個參與的實體都需要一個日期或數字欄位。
+
+1.  您可以新增其他欄位來參與合併程序。
+
+1.  您可以重新命名合併欄位。
+
+1. 選取 **完成** 套用變更。
+
+1. 選取 **儲存** 並 **執行** 來處理變更。 
+
 ## <a name="manually-combine-fields"></a>手動結合欄位
 
 手動指定合併屬性。 
 
 1. 在 **合併** 頁面上，選取 **結合欄位**。
 
-1. 提供 **名稱** 和 **輸出欄位名稱**。
+1. 在 **以...合併欄位** 中，以下拉式清單指定合併入選方原則。
 
 1. 選擇欄位以新增。 選擇 **新增欄位** 結合更多欄位。
 
-1. 確認排除。
+1. 提供 **名稱** 和 **輸出欄位名稱**。
+
+1. 選取 **完成** 套用變更。
 
 1. 選取 **儲存** 並 **執行** 來處理變更。 
 
@@ -103,6 +126,27 @@ ms.locfileid: "7034992"
 1. 確認變更。
 
 1. 選取 **儲存** 並 **執行** 來處理變更。
+
+## <a name="configure-customer-id-generation"></a>設定客戶識別碼產生 
+
+設定合併欄位之後，您可以定義如何生成 CustomerId 值，即唯一客戶個人資料識別碼。 資料整合程序中的合併步驟會生成唯一的客戶個人資料識別碼。 識別碼是客戶實體中的 *CustomerId*，是由資料整合程序所產生的。 
+
+客戶實體中的 CustomerId 是用非 null 的勝出主索引鍵其第一個值雜湊得到。 這些索引鍵來自比對和合併階段中使用的實體，並受比對順序的影響。因此比對順序的主要實體中主索引鍵變更時，所生成的 CustomerID 會變更。 因此，主索引鍵可能不會永遠代表相同的客戶。
+
+設定固定的客戶識別碼可讓您避免該行為。
+
+**設定唯一客戶識別碼**
+
+1. 移至 **整合** > **合併**。
+
+1. 在 **合併** 頁面，選取 **索引鍵** 的索引標籤。 
+
+1. 將滑鼠暫留在 **CustomerId** 列上，然後選取 **設定** 選項。
+   :::image type="content" source="media/customize-stable-id.png" alt-text="識別碼生成的自訂控制項。":::
+
+1. 最多選取五個欄位來構成唯一的客戶識別碼，而且更穩定。 不符合您設定的記錄，會使用系統設定的識別碼。  
+
+1. 選取 **完成**，並執行合併程式以套用您的變更。
 
 ## <a name="run-your-merge"></a>執行合併
 
