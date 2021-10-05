@@ -242,7 +242,7 @@
   items:
     - name: 求助中樞
       href: engagement-insights/index.yml
-    - name: 能力總覽
+    - name: 有關參與見解
       href: engagement-insights/overview.md
     - name: 開始使用
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: 區域可用性
       href: engagement-insights/regional-availability.md
-- name: 整合對象和參與見解
+- name: 在功能間共用資料
   items:
     - name: 連結參與見解與對象見解
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: DSR 權利和要求
   href: dsr-rights-requests.md
-- name: 取得支援
-  href: 'https://dynamics.microsoft.com/support/'

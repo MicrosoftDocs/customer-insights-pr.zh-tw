@@ -1,7 +1,7 @@
 ---
 title: 匯出 Customer Insights 資料到 Google Ads
 description: 了解如何設定連接並匯出至 Google Ads。
-ms.date: 03/03/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,19 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5977b3de9fbb0d97c0912e2ada6a313b0ab92498adf9cdbed48191c0e5143567
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031647"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558945"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>將客戶細分匯出至 Google Ads (預覽版)
 
 將整合客戶個人資料的客戶細分匯出到 Google Ads 對象清單中，並在 Google 搜尋、Gmail、YouTube和 Google Display Network 上使用它們進行廣告宣傳。 
+
+> [!IMPORTANT]
+> 目前，您只能建立新的連接，並將資料匯出至 Google Ads (如果您已經擁有受核准的 Google Ads 開發人員權杖)。 由於原則變更，我們將稍後更新 Google Ads 匯出，並提供不需要開發人員權杖的匯出選項，來確保您的體驗連續性並簡化匯出至 Google Ads 的過程。 我們建議您不要設定更多的 Google Ads 連接，以便更輕鬆地切換至新的匯出選項。
 
 ## <a name="prerequisites-for-connection"></a>連接的先決條件
 

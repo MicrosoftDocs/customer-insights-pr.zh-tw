@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035405"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558813"
 ---
 # <a name="set-up-a-trial-environment"></a>設定試用環境 
 
@@ -95,7 +95,7 @@ Dynamics 365 Customer Insights 試用版能讓您檢閱核心功能，並深入�
 
 - 試用版預設會有 30 天的使用時間。 不過，在第 23 天後，如果您登入試用版，則可以進行延長。
 - 在試用期間，您無法使用自己的 Azure Data Lake storage 帳戶，來儲存輸出資料。 但是，您可以從 Data Lake storage 帳戶擷取資料。
-- 啟動 Customer Insights 試用版會自動佈建 Dataverse 環境，在其中您最多可以儲存最多 3 GB 的資料。
+- 開始使用 Customer Insights 試用版時，最多可以儲存 3 GB 的資料到自動佈建的 Dataverse 環境中。
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>從試用版複製資料到付費訂閱
 

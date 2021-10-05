@@ -4,27 +4,27 @@ description: 尋找關於 SDKs 的資訊以及使用方法。
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036273"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558736"
 ---
 # <a name="developer-resources-overview"></a>開發人員資源總覽
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-本文列出所有可用的程式碼片段和範例，以供快速參考。 取得您平臺的事件發送器程式碼，並遵循教學指導進行。 
+本文列出所有可用的軟體開發套件 (SDK ) 程式碼片段和範例給開發人員，與 Dynamics 365 Customer Insights 共用資料。 依照下面的教學指導，取得您平台特有事件的程式碼。
 
 ## <a name="capture-events-from-websites"></a>從網站擷取事件
 
-- [如何在網站上新增程式碼片段](instrument-website.md)
+- [檢測網站](instrument-website.md)
 - [Web SDK 範例](websdk-sample.md)
 - [進階網站 SDK 檢測工具](advanced-SDK-implementation.md)
 

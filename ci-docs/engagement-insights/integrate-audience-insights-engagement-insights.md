@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487097"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559008"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>建立對象見解與參與見解之間的連結
 
@@ -54,6 +54,9 @@ ms.locfileid: "7487097"
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>啟用對象見解整合個人資料屬性和客戶細分
 
 在連結環境後，您可以選取連結環境的選擇性功能。 這些功能讓對象見解中的整合個人資料屬性和客戶細分，可以在客戶資料進行互動式分析。
+
+> [!IMPORTANT]
+> 若要讓對象見解客戶細分顯示在參與見解中，您必須先[執行合併和下游處理](../audience-insights/merge-entities.md)。 下游程序很重要，因為它們會生成唯一的資料表，以準備要與參與見解共用的對象見解客戶細分。 (如果已排程系統重新整理，則會自動包括下游程序。)
 
 **分析參與見解中的 Web 資料**
 

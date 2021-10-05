@@ -1,20 +1,20 @@
 ---
 title: 實體和實體路徑之間的關係
 description: 從多個資料來源建立和管理實體之間的關係。
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035221"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557342"
 ---
 # <a name="relationships-between-entities"></a>實體間的關聯
 
@@ -93,11 +93,11 @@ ms.locfileid: "7035221"
 - **變更為橫向/垂直版面配置**：變更實體與關聯的對齊方式。
 - **編輯**：在編輯窗格中更新自訂關聯的屬性，並儲存變更。
 
-### <a name="relationship-path"></a>關聯路徑
+## <a name="relationship-paths"></a>關聯路徑
 
-關聯路徑描述來源實體與目標實體之間由關聯連接的實體。 在建立客戶細分或量值時，包含整合個人資料實體以外的其他實體，而且有多個選項可抵達整合個人資料實體，會使用到關聯路徑。
+關聯路徑說明來源實體與目標實體之間被關聯相連的實體。 在建立客戶細分或量值時，包含整合個人資料實體以外的其他實體，而且有多個選項可抵達整合個人資料實體，會使用到關聯路徑。 
 
-關聯路徑會通知系統，以哪個關聯存取整合個人資料實體。 不同的關聯路徑可能會產生不同的結果。
+關聯路徑會提供系統要用哪個關聯存取整合個人資料實體。 不同的關聯路徑可能會產生不同的結果。
 
 例如，實體 *eCommerce_eCommercePurchases* 具有下列關聯至整合個人資料 *Customer* 實體：
 
@@ -105,7 +105,43 @@ ms.locfileid: "7035221"
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Customer
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Customer 
 
-關聯路徑會判斷在建立量值規則或客戶細分時，可以使用哪些實體。 選擇具有最長關聯路徑的選項，可能會產生較少的結果，因為符合的記錄必須存在在所有實體。 在此範例中，客戶必須透過電子商務購物 (eCommerce_eCommercePurchases)、銷售點(POS_posPurchases)，並參與我們的會員計畫 (loyaltyScheme_loyCustomers)。 選擇第一個選項時，您很可能會獲得更多結果，因為客戶只需存在在一個其他實體中。
+關聯路徑決定在建立量值或客戶細分規則時可以使用哪些實體。 選擇具有最長關聯路徑的選項，可能會產生較少的結果，因為符合的記錄必須存在在所有實體。 在此範例中，客戶必須透過電子商務購物 (eCommerce_eCommercePurchases)、銷售點(POS_posPurchases)，並參與我們的會員計畫 (loyaltyScheme_loyCustomers)。 選擇第一個選項時，您很可能會獲得更多結果，因為客戶只需存在在一個其他實體中。
+
+### <a name="direct-relationship"></a>直接關聯
+
+當來源實體使用一個關聯來關聯到一個目標實體時，會分類為 **直接關聯**。
+
+例如，如果某個名稱為 *eCommerce_eCommercePurchases* 的活動實體，僅透過  *ContactId* 連接至目標實體 *eCommerce_eCommerceContacts* 實體，則這是直接關聯。
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="來源實體直接連接至目標實體。":::
+
+#### <a name="multi-path-relationship"></a>多路徑關聯
+
+**多路徑關聯** 是一種特殊類型的直接關聯，會將一個來源實體連接至多個目標實體。
+
+例如，如果一個名稱為 *eCommerce_eCommercePurchases* 的活動實體，與關聯到 *eCommerce_eCommerceContacts* 和 *loyaltyScheme_loyCustomers* 兩個目標實體，則這是多路徑關聯。
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="來源實體透過多躍點關聯直接連接至一個以上的目標實體。":::
+
+### <a name="indirect-relationship"></a>間接關聯
+
+當來源實體關聯到目標實體之前，會關聯到一個以上的其他實體時，會分類到 **非直接關聯**。
+
+#### <a name="multi-hop-relationship"></a>多躍點關聯
+
+*多躍點關聯* 是一種 *間接關聯*，可讓您透過一個以上的其他中繼實體將來源實體連接至目標實體。
+
+例如，如果一個名為 *eCommerce_eCommercePurchasesWest* 的活動實體連接至名為 *eCommerce_eCommercePurchasesEast* 的中繼實體，然後連接至名為  *eCommerce_eCommerceContacts* 的目標實體，則這是多躍點關聯。
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="來源實體直接以中繼實體連接至目標實體。":::
+
+### <a name="multi-hop-multi-path-relationship"></a>多躍點、多路徑關聯
+
+多躍點和多路徑關聯可以一起使用，建立 **多躍點、多路徑關聯**。 這個特殊類型會結合 **多躍點** 和 **多路徑關聯** 的功能。 它可讓您在使用中繼實體時，連接至多個目標實體。
+
+例如，如果一個名為 *eCommerce_eCommercePurchasesWest* 的活動實體連接至名為 *eCommerce_eCommercePurchasesEast* 的中繼實體，然後連接至名為  *eCommerce_eCommerceContacts* 和 *loyaltyScheme_loyCustomers* 的兩個目標實體，則這是多躍點、多路徑關聯。
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="來源實體會直接連接至一個目標實體，並透過中繼實體連接至另一個目標實體。":::
 
 ## <a name="manage-existing-relationships"></a>管理現有關聯 
 
