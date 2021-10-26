@@ -1,7 +1,7 @@
 ---
-title: 資料統整
-description: 瞭解如何統一內嵌資料。
-ms.date: 04/16/2020
+title: 為您的客戶建立統一視圖
+description: 使用您的資料巡遍資料統一處理流程，以便建立客戶設定檔的單一主要資料集。
+ms.date: 10/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,14 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bf1bbcd31333c8a557b59b001112042a1783546ab0cd2af394d8af2953a493f4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-unify
+ms.openlocfilehash: 694bfd0e407975af64ca0971a73fe4c3f5ba5a23
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032748"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648061"
 ---
 # <a name="data-unification-overview"></a>資料整合概觀
 

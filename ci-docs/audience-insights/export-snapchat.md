@@ -1,7 +1,7 @@
 ---
 title: 將 Customer Insights 資料匯出至 Snapchat
 description: 了解如何設定連接並匯出至 Snapchat。
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 421dcd5ba5421597cf9dea71a9f9f25c7972a4f26fb49d4b042f8667a317ab5d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033391"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618650"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>將客戶細分匯出至 Snapchat (預覽版)
 
@@ -29,7 +29,7 @@ ms.locfileid: "7033391"
 ## <a name="known-limitations"></a>已知限制
 
 - 匯出到 Snapchat 時，會被限制為客戶細分。
-- 將最多 1 百萬筆個人資料匯出至 Snapchat 可能需要花費 15 分鐘的時間才能完成。 
+- 匯出多達 1 百萬個客戶設定檔到 Snapchat 最長花費 15 分鐘完成。 
 
 ## <a name="set-up-connection-to-snapchat"></a>設定與 Snapchat 的連接
 
@@ -63,7 +63,7 @@ ms.locfileid: "7033391"
 
 1. 輸入 [**Snapchat 對象識別碼**](https://businesshelp.snapchat.com/s/article/custom-audiences)。
 
-1. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 這必須匯出客戶細分到 Snapchat。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 這必須匯出客戶細分到 Snapchat。
 
 1. 選取您要匯出的客戶細分。 
 

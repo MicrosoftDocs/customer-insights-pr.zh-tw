@@ -1,32 +1,32 @@
 ---
 title: 協力廠商 Enrichment Leadspace 的公司設定檔
 description: 有關協力廠商 Leadspace 富集作用的一般資訊。
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031693"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617341"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>使用 Leadspace 擴充公司設定檔 (預覽)
 
-Leadspace 是一家提供 B2B 客戶資料平台的資料科學公司。 為客戶帶來統一客戶設定檔，讓各家公司可以擴充其資料。 擴充包括更多屬性，例如公司規模、位置、產業等等。
+Leadspace 是一家提供 B2B 客戶資料平台的資料科學公司。 它讓環境按帳戶隨著統一的客戶設定檔擴充其資料。 使用如公司規模、位置或行業的屬性擴充 *客戶設定檔*。 使用標題、角色或電子郵件驗證等屬性擴充 *連絡人設定檔*。
 
 ## <a name="prerequisites"></a>先決條件
 
 若要設定 Leadspace，必須符合以下先決條件：
 
 - 您有一個有效的 Leadspace 授權。
-- 您有公司的[統一客戶設定檔](customer-profiles.md)。
-- Leadspace 連接已由系統管理員設定，或者您有 [系統管理員](permissions.md#administrator)權限和「永久金鑰」(被稱為 **Leadspace 權杖**)。 如需產品的詳細資料，請直接聯繫 [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/)。
+- 您有按帳戶基礎的[統一客戶設定檔](customer-profiles.md)。
+- Leadspace 連接已由系統管理員設定，或者您有 [系統管理員](permissions.md#administrator)權限和「永久金鑰」(被稱為 **Leadspace 權杖**)。 如需產品的詳細資料，請直接聯繫 [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/)。
 
 ## <a name="configure-the-enrichment"></a>擴充設定
 
@@ -50,6 +50,10 @@ Leadspace 是一家提供 B2B 客戶資料平台的資料科學公司。 為客�
 
 1. 請選取 **下一步**，完成欄位對應。
 
+1. 如果您有想要擴充的 *連絡人設定檔*，請選取勾選方塊。 對象見解 將自動對應必要欄位。
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Leadspace 連絡人記錄擴充。":::
+ 
 1. 提供擴充的名稱，並在檢閱選擇後選取 **儲存擴充**。
 
 
@@ -81,7 +85,8 @@ Leadspace 是一家提供 B2B 客戶資料平台的資料科學公司。 為客�
 
 ## <a name="next-steps"></a>後續步驟
 
-建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)和 [量值 ](measures.md)，甚至 [匯出資料](export-destinations.md)，為您的客戶提供個人化的體驗。
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
 

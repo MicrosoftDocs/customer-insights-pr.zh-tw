@@ -1,7 +1,7 @@
 ---
 title: 將 Customer Insights 資料匯出至 Omnisend
 description: 了解如何設定連接並匯出至 Omnisend。
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 58b54dc24f4656f9dd376415a701539c8796e83e6d4e3c6754f5627ce77c5685
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031756"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619018"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>將客戶細分匯出至 Omnisend (預覽版)
 
@@ -28,9 +28,9 @@ ms.locfileid: "7031756"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 您最多可以將每個匯出的 1 百萬設定檔匯出至 Omnisend，這最多可能需要 4 個小時才能完成。
+- 您最多可以匯出 1 百萬個客戶設定檔到 Omnisend，它需要長達 4 小時完成。
 - 匯出到 Omnisend 時，會被限制為客戶細分。
-- 您可以匯出至 Omnisend 的個人資料數量，視您和 Omnisend 的合約而定。
+- 您可以匯出到 Omnisend 的客戶設定檔數目取決於您和 Omnisend 簽訂的契約。
 
 ## <a name="set-up-connection-to-omnisend"></a>設定與 Omnisend 的連接
 
@@ -62,7 +62,7 @@ ms.locfileid: "7031756"
 
 1. 在 **匯出的連結** 欄位中，在 Omnisend 區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的連接可供您使用。
 
-1. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 這必須匯出客戶細分到 Omnisend。 或者，您可以匯出名、姓、地址、國家/地區、市/鎮、縣/市、郵遞區號，以建立更多的個人化電子郵件。 選取 **新增屬性** 對應這些欄位。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 這必須匯出客戶細分到 Omnisend。 或者，您可以匯出名、姓、地址、國家/地區、市/鎮、縣/市、郵遞區號，以建立更多的個人化電子郵件。 選取 **新增屬性** 對應這些欄位。
 
 1. 選取 **儲存**。
 

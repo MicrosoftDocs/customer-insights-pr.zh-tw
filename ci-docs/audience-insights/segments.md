@@ -1,7 +1,7 @@
 ---
 title: 對象見解中的客戶細分
 description: 客戶細分概觀及如何建立並管理它們。
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036363"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617327"
 ---
 # <a name="segments-overview"></a>客戶細分概觀
 
@@ -26,11 +26,19 @@ ms.locfileid: "7036363"
 
 有很多方式可以建立新的客戶細分： 
 
-- 具備客戶細分產生器的複雜客戶細分：[空白客戶細分](segment-builder.md#create-a-new-segment)
-- 具有一個運算子的簡單客戶細分：[快速客戶細分](segment-builder.md#quick-segments)
-- 以 AI 支援的方式尋找類似客戶：[類似客戶](find-similar-customer-segments.md)
-- 基於量值或屬性，由 AI支援的建議：[改善量值的建議客戶細分](suggested-segments.md)
-- 根據活動提出的建議：[根據客戶活動所建議的客戶細分](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[個別客戶 (B2C)](#tab/b2c)
+
+- 內含區段 Builder 的複雜區段：[建立我們自己的](segment-builder.md#create-a-new-segment) 
+- 具有一個運算子的簡單客戶細分：[快速客戶細分](segment-builder.md#quick-segments) 
+- 以 AI 支援的方式尋找類似客戶：[類似客戶](find-similar-customer-segments.md) 
+- 基於量值或屬性，由 AI支援的建議：[改善量值的建議客戶細分](suggested-segments.md) 
+- 根據活動提出的建議：[根據客戶活動所建議的客戶細分](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[商務帳戶 (B2B)](#tab/b2b)
+
+- 內含區段 Builder 的複雜區段：[建立我們自己的](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>管理現有的區段
 
@@ -70,9 +78,9 @@ ms.locfileid: "7036363"
 
 1. 從動作下拉式清單中選擇 **管理匯出**。
 
-1. 會打開 **匯出客戶細分 (預覽版)** 頁面。 您可以看到已設定的匯出，匯出會分成包含目前的客戶細分，或不包含的。
+1. 會打開 **匯出客戶細分 (預覽版)** 頁面。 您可以看到所有以是否包含目前區段分組的匯出組態。
 
-   1. 若要將選取的客戶細分新增至匯出，請在清單中選取匯出，然後選取 **新增客戶細分**。
+   1. 若要將選取的區段新增到匯出，請 **編輯** 各自匯出以選取對應的區段，然後儲存。 在個別客戶環境中，您反而可以選取清單中的匯出和 **新增區段** 取得相同的結果。
 
    1. 若要使用選取的客戶細分建立新匯出，請選取 **新增匯出**。 如需建立匯出的詳細資訊，請參閱[設定新匯出](export-destinations.md#set-up-a-new-export)。
 

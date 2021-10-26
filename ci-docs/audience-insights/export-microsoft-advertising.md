@@ -1,7 +1,7 @@
 ---
 title: 將 Customer Insights 資料匯出到 Microsoft Advertising
 description: 了解如何設定連接並匯出至 Microsoft Advertising。
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8f8a4cbb9590f9c5311789154319283530e0a10343cccbe9c7aec99765b4fbf2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031446"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618051"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>將客戶細分匯出至 Microsoft Advertising (預覽版)
 
@@ -29,9 +29,9 @@ ms.locfileid: "7031446"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 每筆匯出中您最多可以將 50 萬筆個人資料匯出至 Microsoft Advertising。
+- 每次匯出最多可以匯出 500,000 個客戶設定檔到 Microsoft Advertising。
 - 匯出到 Microsoft Advertising 會被限制為客戶細分。
-- 將最多 50 萬筆個人資料匯出至 Microsoft Advertising 可能需要花費 10 分鐘的時間才能完成。 
+- 匯出多達 500,000 個客戶設定檔到 Microsoft Advertising 最長花費 10 分鐘完成。 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>設定連線至 Microsoft Advertising
@@ -68,7 +68,7 @@ ms.locfileid: "7031446"
 
 1. 輸入您的 **Microsoft Advertising 客戶識別碼和帳戶識別碼**。 當您登入 Microsoft Advertising 時，您可以在 URL 的參數中找到客戶識別碼 (`cid`) 和帳戶識別碼 (`aid`)。
 
-1. 在 **資料比對** 區段的 **電子郵件** 欄位中，在您的整合客戶個人資料中，選取具備客戶的電子郵件地址欄位。 這必須匯出客戶細分到 Microsoft Advertising。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取含客戶電子郵件地址的欄位。 這必須匯出客戶細分到 Microsoft Advertising。
 
 1. 選取 **儲存**。
 

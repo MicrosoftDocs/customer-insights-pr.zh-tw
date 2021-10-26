@@ -1,7 +1,7 @@
 ---
 title: 建立和管理環境
 description: 瞭解如何註冊服務及管理環境。
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034167"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645116"
 ---
 # <a name="manage-environments"></a>管理環境
 
@@ -26,7 +26,7 @@ ms.locfileid: "7034167"
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="螢幕擷取畫面，圖為切換環境的控制項。":::
 
-系統管理員能夠[建立](get-started-paid.md)和管理環境。
+系統管理員能夠[建立](create-environment.md)和管理環境。
 
 ## <a name="edit-an-existing-environment"></a>編輯現有環境
 
@@ -36,23 +36,9 @@ ms.locfileid: "7034167"
 
 2.  選取 **編輯** 圖示。
 
-3. 在 **編輯環境** 方塊中，您可以更新環境的 **顯示名稱**，但是不可以變更 **區域** 或 **類型**。
+3. 您可以在 **編輯環境** 方塊中更新環境設定。
 
-4. 如果環境設定要在 Azure Data Lake Storage 中儲存資料，您可以更新 **帳戶金鑰**。 不過，您無法變更 **帳戶名稱** 或 **容器** 名稱。
-
-5. 或者您可以將帳戶金鑰型連接更新到資源型或訂閱型連接。 一旦升級，您就無法在更新後恢復到帳戶金鑰。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 更新連接時，您無法變更 **容器** 資訊。
-
-6. 或者，您可以在 **設定與 Microsoft Dataverse 共用資料並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 這些功能包含運用 Microsoft Dataverse 與應用程式和解決方案共用資料、從內部部署資料來源擷取資料、或使用[預測](predictions.md)。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
-
-   > [!NOTE]
-   > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
-   > - 當啟用與 Microsoft Dataverse 受管理的 Data Lake 共用資料時，目前不支援對象見解(如果在環境中啟用的話) 中的 PowerBI 嵌入式報表和[預測缺失的值](predictions.md)。
-
-   啟用與 Microsoft Dataverse 的資料共用後，將對資料來源和其他程序開始一次完整的重新整理。 如果程序目前正在執行，您看不到用來啟用與 Microsoft Dataverse 共用資料的選項。 等待這些程序完成，或者取消它們以啟用資料共用。 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="啟用與 Microsoft Dataverse 共用資料的設定選項。":::
-   
-   當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 根據您執行的程序，會建立資料檔案和 model.json 並新增至各自的子資料夾。
+如需環境設定的詳細資訊，請參閱[建立新環境](create-environment.md)。
 
 ## <a name="copy-the-environment-configuration"></a>複製環境設定
 

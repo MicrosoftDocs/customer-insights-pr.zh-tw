@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558945"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617908"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>將客戶細分匯出至 Google Ads (預覽版)
 
@@ -35,9 +35,9 @@ ms.locfileid: "7558945"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 每個到 Google Ads 的匯出最多可達 1 百萬個設定檔。
+- 每次可匯出多達 1 百萬個客戶設定檔到 Google Ads。
 - 匯出到 Google Ads 被限制為區段。
-- 因供應商端的限制，匯出總計 1 百萬個設定檔的區段最長耗時 5 分鐘。 
+- 匯出總計 1 百萬個客戶設定檔的區段會因為供應商端的限制而花費 5 分鐘完成。 
 - Google Ads 中的相符最長耗時 48 小時。
 
 ## <a name="set-up-connection-to-google-ads"></a>設定與 Google Ads 的連接
@@ -74,7 +74,7 @@ ms.locfileid: "7558945"
 
 1. 輸入您的 **[Google Ads 對象識別碼](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** 然後選取 **連接** 初始化到 Google Ads 的連接。
 
-1. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。
 
 1. 選取您要匯出的客戶細分。 您總共最多可匯出 1 百萬個客戶設定檔到 Google Ads。
 

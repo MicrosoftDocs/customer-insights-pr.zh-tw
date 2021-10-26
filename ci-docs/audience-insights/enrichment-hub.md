@@ -1,7 +1,7 @@
 ---
 title: 富集統一的客戶設定檔
 description: 使用功能富集您的客戶資料。
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469946"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617545"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -27,16 +27,26 @@ ms.locfileid: "7469946"
 
 您必須有參與者或系統管理員權限，才能建立或編輯擴充內容。 如需詳細資訊，請參閱[權限](permissions.md)。
 
-在 **探索** 索引標籤上，您可找到下列擴充內容：
+您將會在 **探索** 索引標籤上發現所有支援的擴充選項。
 
-- 由 Microsoft 提供的 [Azure 地圖服務](enrichment-azure-maps.md)
+# <a name="individual-customers-b2c"></a>[個別客戶 (B2C)](#tab/b2c)
+
 - [Brands](enrichment-microsoft.md) 由 Microsoft 提供
 - [Interests](enrichment-microsoft.md) 由 Microsoft 提供
-- Microsoft 提供的[增強地址](enrichment-enhanced-addresses.md)
-- Leadspace 提供的 [公司資料](enrichment-leadspace.md)
+- Microsoft 提供的[增強地址](enrichment-enhanced-addresses.md) 
 - 由 Experian 提供的[人口統計](enrichment-experian.md)
-- HERE Technologies 提供的 [位置資料](enrichment-here.md)
-- 透過安全檔案傳輸通訊協定 (SFTP) 的 [自訂資料](enrichment-SFTP-custom-import.md)
+- 透過安全檔案傳輸通訊協定 (SFTP) 的 [自訂資料](enrichment-SFTP-custom-import.md) 
+- 由 Microsoft 提供的 [Azure 地圖服務](enrichment-azure-maps.md)
+
+# <a name="business-accounts-b2b"></a>[商務帳戶 (B2B)](#tab/b2b)
+
+- Leadspace 提供的 [公司資料](enrichment-leadspace.md)
+- Microsoft 提供的[增強地址](enrichment-enhanced-addresses.md) 
+- HERE Technologies 提供的 [位置資料](enrichment-here.md) 
+- 透過安全檔案傳輸通訊協定 (SFTP) 的 [自訂資料](enrichment-SFTP-custom-import.md) 
+- 由 Microsoft 提供的 [Azure 地圖服務](enrichment-azure-maps.md)
+
+---
 
 在 **我的擴充內容** 索引標籤上，您可以查看您已設定的擴充內容，並編輯其屬性。
 
@@ -58,7 +68,7 @@ ms.locfileid: "7469946"
 
 ## <a name="enrichments-and-connections"></a>擴充與連接
 
-協力廠商擴充設定為要使用[連接](connections.md)，連結由系統管理員設定認證，並同意資料傳輸。 系統管理員和參與者都可以使用這些連接設定擴充。  
+協力廠商擴充設定為要使用[連接](connections.md)，連結由系統管理員設定認證，並同意資料傳輸。 系統管理員和參與者可以使用連線組態擴充。  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>多個相同類型的擴充
 

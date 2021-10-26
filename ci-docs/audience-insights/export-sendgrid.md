@@ -1,7 +1,7 @@
 ---
 title: 匯出 Customer Insights 資料到 SendGrid
 description: 了解如何設定連接並匯出至 SendGrid。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: da3da5ea68d178deab3b9ab31dd810dee610f607
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036091"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617821"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>將客戶細分匯出至 SendGrid (預覽版)
 
@@ -29,10 +29,10 @@ ms.locfileid: "7036091"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 對 SendGrid 總計最多 100'000 份設定檔。
+- 總計最多 100,000 個客戶設定檔到 SendGrid。
 - 匯出到 SendGrid 被限制在客戶細分。
-- 匯出多達 100'000 份設定檔到 SendGrid 需要花費幾個小時。 
-- 您可以匯出到 SendGrid 的設定檔數量是根據且受限於您與 SendGrid 的合約。
+- 匯出高達 100,000 個客戶設定檔到 SendGrid 最長花費數小時完成。 
+- 您可以匯出到 SendGrid 的客戶設定檔數目取決於並受限於您和 SendGrid 簽訂的契約。
 
 ## <a name="set-up-connection-to-sendgrid"></a>設定與 SendGrid 的連接
 
@@ -66,7 +66,7 @@ ms.locfileid: "7036091"
 
 1. 輸入您的 **[SendGrid 清單識別碼](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**。
 
-1. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 對其他可選欄位 (如 **名**、**姓**、**國家/地區**、**縣/市**、**市/鎮** 和 **郵遞區號**) 重複相同步驟。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 對其他可選欄位 (如 **名**、**姓**、**國家/地區**、**縣/市**、**市/鎮** 和 **郵遞區號**) 重複相同步驟。
 
 1. 選取您要匯出的客戶細分。 我們強烈 **建議您不要匯出總計超過 100'000 份客戶設定檔** 至 SendGrid。 
 

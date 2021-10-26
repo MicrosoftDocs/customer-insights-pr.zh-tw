@@ -1,72 +1,97 @@
 ---
-title: 建立及修改精簡事件
-description: 如何建立及修改精簡事件。
+title: 建立和修改事件
+description: 建立及修改事件的方式。
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 0344bac5f4d43df853309f43c94d95f962937f77c936ed7305c5de4a08835f04
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 935dc4cd41218842e8406b747daef47de04e337a
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034764"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606184"
 ---
-# <a name="create-and-modify-refined-events"></a>建立及修改精簡事件
+# <a name="create-and-modify-events"></a>建立和修改事件
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
-
 
 事件是代表使用者行為的資料，類似於網站上的活動。
 
 - *基礎* 事件會在使用者查看頁面（查看事件）或與內容互動（動作事件）時進行記錄。
 - *精簡* 事件是基礎事件的虛擬視圖。 您可以藉由移除和新增屬性，或根據屬性值篩選事件，來定義精簡事件。
 
+## <a name="prerequisites"></a>先決條件
+
+若要取得事件，您必須先使用程式碼片段將您的網站資料連接業務開發見解。 如需更多資訊，請參閱[在網站上安裝網頁 SDK](instrument-website.md)。
+
+ :::image type="content" source="media/new-events-connect-data.png" alt-text="先連接您的資料。":::
+
+## <a name="create-refined-events"></a>建立精簡事件
+
 使用精簡事件來減少要[匯出](export-events.md) 的基礎事件範圍，或移除不需要曝光的屬性。
 
-## <a name="create-refined-events"></a>建立精修的事件
+> [!NOTE]
+> 一旦您將 Web SDK 新增到您的網站，您就能檢視基準事件並建立細緻事件。 
 
-有三種方法可以從基礎事件建立精簡事件。 
+若要檢視您的基準事件：
 
-1. 移至 **資料**> **事件**，然後選擇下列其中一個選項：
-    - 選取 **新增事件**，然後選取 **建立精簡事件**。
-    - 選取一個基礎事件以打開詳細的視圖，並從頂端功能表選取 **建立精簡事件**。
-    - 選取 **其他 [...]** 以打開基礎事件的捷徑功能表。 然後選取 **建立精簡事件**。
-    
-    :::image type="content" source="media/create-refined-events-options.png" alt-text="建立精簡事件的選項。":::
+1. 在左導覽窗格中，移至 **資料**。
 
-1. 在 **建立精簡事件** 對話方塊中，輸入下列資訊：
+1. 請選取 **事件** 查看工作區中所有事件的清單。
 
-- 若要建立新的活動，請從 **基礎事件** 下拉式選單中選取一個事件。
-- 在 **精簡事件顯示名稱** 方塊中輸入名稱。
-- （可選）更新建議的 **實際名稱** 而非使用空格。
+    :::image type="content" source="media/data-events.png" alt-text="檢視事件。":::
 
-3. 選取 **建立** 以套用您的設定。
+若要從基準事件建立精緻事件： 
 
-1. 在精簡事件的詳細視圖中，選取 **新增和移除屬性** 來打開 **編輯屬性** 窗格。 
+1. 請前往 **資料** > **事件**，並在畫面頂端選取 **+ 新事件**。
 
-1. 使用核取方塊來選取想要顯示和隱藏的屬性。 
-   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="編輯精簡事件的屬性。":::
+1. 請在 **新事件** 對話方塊中選取 **建立精緻事件** 和 **下一步**。
+   
+     :::image type="content" source="media/new-events-wizard.png" alt-text="新事件精靈。":::
+     
+1. 請在 **新事件** 對話方塊輸入下列資訊：
 
-1. 選取 **確認** 以套用您的選取。
+   - 請從 **基準事件** 下拉式清單選取某事件。
+   - 在 **精簡事件顯示名稱** 方塊中輸入名稱。
+   - （可選）更新建議的 **實際名稱** 而非使用空格。
 
-1. 選取 **儲存** 以儲存設定。
+1. 選取 **建立** 以套用您的設定。
 
-## <a name="edit-refined-events"></a>編輯精簡事件
-
-您可以變更精簡事件的名稱與屬性。
+精緻事件現在會出現在您的 **事件** 清單。
 
 ### <a name="edit-event-name"></a>編輯事件名稱
 
-1. 移至 **資料** > **事件**。 
-1. 選取事件的 **其他 [...]**，然後選取 **編輯名稱**。
-1. 更新事件名稱，然後選取 **重新命名**。
+您可以變更基準或精緻事件的名稱與屬性。
 
-### <a name="edit-selected-properties"></a>編輯已選取的屬性
+1. 移至 **資料** > **事件**。 
+
+1. 選取事件的 **其他 [...]**，然後選取 **編輯名稱**。
+    
+     :::image type="content" source="media/create-refined-events-options.png" alt-text="建立精簡事件的選項。":::
+
+3. 更新事件名稱，然後選取 **重新命名**。
+
+### <a name="view-the-details-of-a-refined-event"></a>檢視精緻事件的詳細資料：
+
+1. 請在 **事件** 清單中選取您的基準或精緻事件。 
+
+1. 請選取畫面上方的 **新增和移除屬性** 打開 **編輯屬性** 窗格。 
+
+     :::image type="content" source="media/add-remove-properties.png" alt-text="新增和移除屬性。":::
+
+1. 使用核取方塊來選取想要顯示和隱藏的屬性。 
+
+   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="編輯精簡事件的屬性。":::
+
+1. 請選取 **確認** 套用您的選取，接著選取 **儲存**。
+
+
+### <a name="edit-selected-properties-for-a-refined-event"></a>編輯精緻事件的選取屬性
 
 1. 移至 **資料** > **事件**，並選取精簡事件，以打開詳細的視圖。
 1. 選取 **新增和移除屬性**。 

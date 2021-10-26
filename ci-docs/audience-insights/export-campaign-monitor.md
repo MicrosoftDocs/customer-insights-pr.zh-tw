@@ -1,7 +1,7 @@
 ---
 title: 將 Customer Insights 資料匯出至 Campaign Monitor
 description: 了解如何設定連接並匯出至 Campaign Monitor。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d2cc3ec944faa1d77ffb44e8abb422d753c5625d0ccef75cbb7efb14cb7c3741
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031877"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618971"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>將客戶細分匯出至 Campaign Monitor (預覽版)
 
@@ -28,10 +28,10 @@ ms.locfileid: "7031877"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 每筆匯出中您最多可以將 1 百萬筆個人資料匯出至 Campaign Monitor。
+- 每次匯出，您最多可以匯出 1 百萬個客戶設定檔到 Campaign Monitor。
 - 僅限於客戶細分可被匯出至 Campaign Monitor。
-- 將最多 1 百萬筆個人資料匯出至 Campaign Monitor 可能需要花費 20 分鐘的時間才能完成。 
-- 您可以匯出至 Campaign Monitor 的個人資料數量與 Campaign Monitor 的合約有關且受到其限制。
+- 匯出多達 1 百萬個客戶設定檔到 Campaign Monitor 最長花費 20 分鐘完成。 
+- 您可以匯出到 Campaign Monitor 的客戶設定檔數目取決於並受限於您和 Campaign Monitor 簽訂的契約。
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>設定到 Campaign Monitor 的連接
 
@@ -66,7 +66,7 @@ ms.locfileid: "7031877"
 1. [**Campaign Monitor 清單識別碼**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
    在 Campaign Monitor 的 **帳戶設定** 中[生成 API 金鑰](https://www.campaignmonitor.com/api/getting-started/)，然後再查看 API 清單識別碼。  
 
-3. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 這必須匯出客戶細分到 Campaign Monitor。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 這必須匯出客戶細分到 Campaign Monitor。
 
 1. 選取 **儲存**。
 

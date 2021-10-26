@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557342"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622989"
 ---
 # <a name="relationships-between-entities"></a>實體間的關聯
 
@@ -68,6 +68,20 @@ ms.locfileid: "7557342"
 
 4. 選取 **儲存** 以建立自訂關聯。
 
+## <a name="set-up-account-hierarchies"></a>設定帳戶階層
+
+已組態商務帳戶做為主要目標對象的環境可組態相關商務帳戶的帳戶階層。 例如具有不同業務單位的公司。 
+
+組織建立帳戶階層以便更妥善管理帳戶及彼此之間的關聯。 對象見解 功能支援擷取的客戶資料中已存在的父代-子系帳戶階層。 例如來自 Dynamics 365 Sales 的帳戶。 這些階層可在對象見解中的 **關聯** 頁面上，帳戶階層索引標籤下組態。
+
+1. 請前往 **資料** > **關聯**。
+1. 選取 **帳戶階層** 索引標籤。
+1. 請選取 **新帳戶階層**。 
+1. 請在 **帳戶階層** 窗格中提供階層的名稱。 系統建立輸出實體的名稱。 您可以變更輸出名稱實體的名稱。
+1. 請選取包含您的帳戶階層的實體。 它通常位於包含帳戶的相同實體中。
+1. 請從選取的實體選取 **帳戶識別碼** 和 **帳戶父代識別碼** 
+1. 請選取 **儲存** 以套用設定並確定帳戶階層。
+
 ## <a name="view-relationships"></a>檢視關聯性
 
 關聯頁面會列出已建立的所有關聯。 每一列代表一個關聯，裡面也包含有關來源實體、目標實體和基數的詳細資料。 
@@ -105,7 +119,7 @@ ms.locfileid: "7557342"
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Customer
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Customer 
 
-關聯路徑決定在建立量值或客戶細分規則時可以使用哪些實體。 選擇具有最長關聯路徑的選項，可能會產生較少的結果，因為符合的記錄必須存在在所有實體。 在此範例中，客戶必須透過電子商務購物 (eCommerce_eCommercePurchases)、銷售點(POS_posPurchases)，並參與我們的會員計畫 (loyaltyScheme_loyCustomers)。 選擇第一個選項時，您很可能會獲得更多結果，因為客戶只需存在在一個其他實體中。
+關聯路徑決定在建立量值或客戶細分規則時可以使用哪些實體。 選擇具有最長關聯路徑的選項，可能會產生較少的結果，因為符合的記錄必須存在在所有實體。 在此範例中，客戶必須透過銷售點 (POS_posPurchases) 的電子商務 (eCommerce_eCommercePurchases) 購物，並參加我們的會員忠誠計畫 (loyaltyScheme_loyCustomers)。 選擇第一個選項時，您很可能會獲得更多結果，因為客戶只需存在在一個其他實體中。
 
 ### <a name="direct-relationship"></a>直接關聯
 

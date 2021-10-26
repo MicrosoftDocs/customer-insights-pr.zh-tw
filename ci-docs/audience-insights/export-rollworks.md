@@ -1,7 +1,7 @@
 ---
 title: 將 Customer Insights 資料匯出至 RollWorks
 description: 了解如何設定連接並匯出至 RollWorks。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f8f6a79db9cb4bb109c03a464d9f8c7f3b862ad5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034580"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617434"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>將客戶細分匯出至 RollWorks (預覽版)
 
@@ -28,11 +28,11 @@ ms.locfileid: "7034580"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 每筆匯出中您最多可以將 250'000 筆個人資料匯出至 RollWorks。
-- 您不能將少於 100 份個人資料的客戶細分匯出至 RollWorks。 
+- 每次匯出最多可以匯出 250,000 個客戶設定檔到 RollWorks。
+- 您不能匯出少於 100 個客戶設定檔的區段到 RollWorks。 
 - 匯出到 RollWorks 時，會被限制為客戶細分。
-- 將最多 250'000 份個人資料匯出至 RollWorks 可能需要花費 10 分鐘的時間才能完成。 
-- 您可以匯出至 RollWorks 的個人資料數量與 RollWorks 的合約有關且受到其限制。
+- 將最多 250,000 個客戶設定檔匯出到 RollWorks 最長會花費 10 分鐘完成。 
+- 您可以匯出到 RollWorks 的客戶設定檔數目取決於並受限於您和 RollWorks 簽訂的契約。
 
 ## <a name="set-up-connection-to-rollworks"></a>設定對 RollWorks 的連接
 
@@ -66,7 +66,7 @@ ms.locfileid: "7034580"
 
 1. 輸入您的 **RollWorks 廣告客戶識別碼** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles)。
 
-3. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 這必須匯出客戶細分到 RollWorks。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 這必須匯出客戶細分到 RollWorks。
 
 1. 選取您要匯出的客戶細分。 選取一個包含最少 100 個成員的客戶細分。 您無法匯出更小的客戶細分。 此外，會出一個客戶細分最大數量為每個匯出 250'000 個成員。 
 

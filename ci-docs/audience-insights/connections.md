@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033208"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605939"
 ---
 # <a name="connections-preview-overview"></a>連接 (預覽版) 概觀
 
@@ -47,6 +47,7 @@ ms.locfileid: "7033208"
 1. 在 **設定連接** 窗格中，提供必要的詳細資料。 
    1. 以連結的 **顯示名稱** 與類型設定連接。 我們建議您選取可以說明此連接用途和目標的名稱。
    1. 準確的欄位則依您要連接的服務而定。 在目標服務的相關文章中，可以了解特定連接的詳細資料。
+   1. 如果您 [使用自己的金鑰保存庫](use-azure-key-vault.md)儲存祕密，請使用 **金鑰保存庫** 並從清單選擇祕密。
 
 1. 選取 **儲存** 建立連結。
 
@@ -93,3 +94,6 @@ ms.locfileid: "7033208"
 
 1. 請選取 **刪除**，來確認刪除。
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>請借助您自己的金鑰保存庫管理的祕密設定連接
+
+某些連接需要像 API 金鑰或密碼之類的祕密。 某些連接支援儲存在您自己金鑰保存庫的祕密。 了解更多有關連接支援及在[您自己的金鑰保存庫上設定，以獲取觀眾見解的方法](use-azure-key-vault.md)。

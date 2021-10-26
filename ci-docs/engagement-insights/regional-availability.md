@@ -8,18 +8,18 @@ ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
-ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
+ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "7564584"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645391"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的區域可用性
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-參與見解，即 Dynamics 365 Customer Insights 的功能，正逐步引進到更多地區，讓客戶可以選擇地區來儲存資料。 系統管理員在[建立新環境](manage-environments-workspaces.md#create-an-environment)時，可以選擇地區。 
+參與見解，即 Dynamics 365 Customer Insights 的功能，正逐步引進到更多地區，讓客戶可以選擇地區來儲存資料。 系統管理員在[建立新環境](create-new-environment.md)時，可以選擇地區。 
 
 當您第一次設定參與見解，在進行[引導式首次執行體驗](quickstart.md)時，您可以選擇地區。 之後，每一個新的環境都您都可以選擇儲存資料的地區。
 

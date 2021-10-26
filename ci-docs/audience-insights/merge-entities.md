@@ -1,7 +1,7 @@
 ---
 title: 將實體合併到資料統整中
 description: 合併實體以建立統整的客戶設定檔。
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494309"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648244"
 ---
 # <a name="merge-entities"></a>合併實體
 
@@ -89,7 +91,7 @@ ms.locfileid: "7494309"
     :::image type="content" source="media/recency-merge-option.png" alt-text="合併欄位對話方塊中的新近度選項。":::
     - **最低新近度**：根據最低的新近度來找出勝出值。 要定義新近度，在合併欄位範圍中，每個參與的實體都需要一個日期或數字欄位。
 
-1.  您可以新增其他欄位來參與合併程序。
+1.  您可以新增更多欄位參加合併程式。
 
 1.  您可以重新命名合併欄位。
 
@@ -131,15 +133,15 @@ ms.locfileid: "7494309"
 
 設定合併欄位之後，您可以定義如何生成 CustomerId 值，即唯一客戶個人資料識別碼。 資料整合程序中的合併步驟會生成唯一的客戶個人資料識別碼。 識別碼是客戶實體中的 *CustomerId*，是由資料整合程序所產生的。 
 
-客戶實體中的 CustomerId 是用非 null 的勝出主索引鍵其第一個值雜湊得到。 這些索引鍵來自比對和合併階段中使用的實體，並受比對順序的影響。因此比對順序的主要實體中主索引鍵變更時，所生成的 CustomerID 會變更。 因此，主索引鍵可能不會永遠代表相同的客戶。
+客戶實體中的 CustomerId 是用非 null 的勝出主索引鍵其第一個值雜湊得到。 這些索引鍵來自比對和合併階段中使用的實體，並受比對順序的影響。因此比對順序的主要實體中主索引鍵變更時，所生成的 CustomerID 會變更。 因此主鍵值可能不見得全代表相同客戶。
 
-設定固定的客戶識別碼可讓您避免該行為。
+組態穩定的客戶識別碼能讓您避開那樣的行為。
 
 **設定唯一客戶識別碼**
 
 1. 移至 **整合** > **合併**。
 
-1. 在 **合併** 頁面，選取 **索引鍵** 的索引標籤。 
+1. 請選取 **金鑰** 索引標籤。 
 
 1. 將滑鼠暫留在 **CustomerId** 列上，然後選取 **設定** 選項。
    :::image type="content" source="media/customize-stable-id.png" alt-text="識別碼生成的自訂控制項。":::
@@ -147,6 +149,30 @@ ms.locfileid: "7494309"
 1. 最多選取五個欄位來構成唯一的客戶識別碼，而且更穩定。 不符合您設定的記錄，會使用系統設定的識別碼。  
 
 1. 選取 **完成**，並執行合併程式以套用您的變更。
+
+## <a name="group-profiles-into-households-or-clusters"></a>將設定檔以家戶或叢集單位分組
+
+作為客戶設定檔產生組態程式的一環，您可以定義規則，將相關設定檔編入叢集組別。 目前有兩種可用的叢集類型–家戶叢集和自訂叢集。 如果 *客戶* 實體包含語義欄位 *Person. LastName* 和 *Location.Address*，系統會自動選擇已有預定義規則的家戶。 您也可以使用自己的規則和條件建立叢集，類似[相符規則](match-entities.md#define-rules-for-match-pairs)。
+
+**定義家戶或叢集**
+
+1. 移至 **整合** > **合併**。
+
+1. 請在 **合併** 索引標籤上選取 **進階** > **建立叢集**。
+
+   :::image type="content" source="media/create-cluster.png" alt-text="控制項建立新叢集。":::
+
+1. 請在 **家戶** 或 **自訂** 叢集之間選擇。 如果 *客戶* 實體存在語義欄位 *Person.LastName* 和 *Location.Address*，會自動選取家戶。
+
+1. 提供叢集名稱並選取 **完成**。
+
+1. 請選取 **叢集** 索引標籤尋找您建立的叢集。
+
+1. 指明規則和條件以定義您的叢集。
+
+1. 請選取 **執行** 以執行合併程式和建立叢集。
+
+執行合併程式後會將叢集識別碼新增為 *客戶* 實體的新欄位。
 
 ## <a name="run-your-merge"></a>執行合併
 

@@ -2,8 +2,14 @@
   href: index.yml
 - name: 產品概觀
   href: overview.md
-- name: 建立試用
-  href: audience-insights/get-started-trial.md
+- name: 免費試用
+  items:
+    - name: 註冊免費試用版
+      href: trial-signup.md
+    - name: 試用服務常見問題
+      href: trial-FAQ.md
+- name: 從付費授權開始
+  href: paid-license.md
 - name: 存取您的環境
   href: 'https://home.ci.ai.dynamics.com/'
 - name: 對象見解
@@ -19,9 +25,11 @@
         - name: 快速入門手冊
           href: audience-insights/get-started.md
         - name: 建立新環境
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: 探索對象見解
           href: audience-insights/home.md
+    - name: 搭配商務帳戶
+      href: audience-insights/work-with-business-accounts.md
     - name: 學習模組
       items:
         - name: 內嵌資料
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: 列出客戶活動
           href: audience-insights/activities.md
+        - name: 定義語意對應
+          href: audience-insights/semantic-mappings.md
     - name: 資料擴充
       items:
         - name: 擴充客戶設定檔
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: 預測訂閱流失率
               href: audience-insights/predict-subscription-churn.md
-            - name: 預測交易性流失
+            - name: 預測交易流失
               href: audience-insights/predict-transactional-churn.md
             - name: 使用 Azure Machine Learning 的自訂模型
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: 訂閱流失預測範例指南
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: 交易性流失預測範例指南
+            - name: 交易流失預測範例指南
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: 產品建議預測範例指南
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: 管理多個環境
           href: audience-insights/manage-environments.md
-        - name: 使用服務主體連接到 ADLS 儲存體帳戶
-          href: audience-insights/connect-service-principal.md
         - name: 支援的語言
           href: audience-insights/supported-languages.md
+        - name: 安全性
+          items:
+            - name: 帶入您自己的 Key Vault
+              href: audience-insights/use-azure-key-vault.md
+            - name: 使用服務主體連接到 ADLS 儲存體帳戶
+              href: audience-insights/connect-service-principal.md
     - name: 擴充性
       items:
         - name: 整合來自參與度見解的 web 資料
@@ -248,6 +262,8 @@
       items:
         - name: 快速入門手冊
           href: engagement-insights/get-started.md
+        - name: 建立環境
+          href: engagement-insights/create-new-environment.md
         - name: 建立工作區
           href: engagement-insights/create-workspace.md
         - name: 從網站和行動裝置應用程式擷取事件

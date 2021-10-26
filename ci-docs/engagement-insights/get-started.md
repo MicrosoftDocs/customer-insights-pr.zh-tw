@@ -4,18 +4,18 @@ description: 協助資源概述能幫您快速開始使用。
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494584"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623667"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>開始使用 Dynamics 365 Customer Insights 業務開發見解功能（公開預覽版）
 
@@ -39,33 +39,47 @@ ms.locfileid: "7494584"
 
 1. 選取您的地區，如果您想加入接收電子郵件更新和優惠，請核取方塊。
 
-1. 檢閱 **參與見解 (預覽版) 使用條款** 和 **隱私權聲明**，然後選取 **探索示範** 以接受這些設定。
+1. 審閱業務開發見解(預覽版) **使用條款** 和 **隱私權聲明**，然後選取 **探索示範** 以接受這些設定。
 
 1. 使用一組範例資料來探索產品。
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>步驟 3：設定工作區並將程式碼新增至您的網站
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>步驟 3：設定工作區並建立報表
 
 工作區可讓您即時查看使用者活動，並儲存和管理報表。 將程式碼新增至您的網站，以開始收集 *事件*（來自使用者的活動資料）。
 
 1. [建立工作區](create-workspace.md) 並新增成員。
 
-1. [將程式碼新增至您的網站](instrument-website.md)或[行動裝置應用程式 ](developer-resources.md#capture-events-from-mobile-apps)，以查看使用者活動進入工作區。
+1. 將程式碼新增到您的[網站](instrument-website.md)或[行動裝置 App](developer-resources.md#capture-events-from-mobile-apps) 查看使用者進入工作區的活動。
 
 1. 查看[即時報表](view-reports.md)，根據瀏覽器、裝置、作業系統、位置和語言顯示活動中的使用者。 您也可以建立[自訂報表](custom-reports.md)，以建立您自己的視覺效果。
+
+1. 建立[維度](dimensions.md)並按照新使用者和傳回使用者排序訪客，[計量](metrics.md)有助於更瞭解使用者行為，而[區段](segments.md)可依據特徵或網站互動情況辨識訪客的子集。
     
 ## <a name="step-4-export-data-to-other-channels"></a>步驟 4：將資料匯出至其他通道
 
-您可以建立網站分析資料的 *精簡事件*（一個虛擬視圖）。 然後篩選並將資料匯出至 Azure Data Lake Storage。 您可以將匯出的資料內嵌為資料來源。 如需更多資訊，請參見[建立對象見解與參與見解之間的連結](integrate-audience-insights-engagement-insights.md)。
+您可以建立網站分析資料的 *精簡事件*（一個虛擬視圖）。 然後篩選並將資料匯出至 Azure Data Lake Storage。 您可以將匯出的資料內嵌為資料來源。
 
 1. [建立精簡事件](refined-events.md) 以匯出。
 
-1. [將資料匯出](export-events.md) 至 Data Lake Storage。
+1. [匯出資料](export-events.md)到 Azure Data Lake Storage。
 
 1. [建立觀眾見解與參與見解之間的連結](integrate-audience-insights-engagement-insights.md)，以在兩個功能之間共用資料。
 
+1. 使用 **未知到已知** 功能[從先前驗證的使用者認出 Ｗeb 事件](unknown-to-known.md)。
+
 1. 瞭解如何[刪除和匯出包含個人資訊的事件資料](delete-export-personal-data.md)。
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>步驟 5：建立和管理漏斗圖報表
+
+漏斗報表會從您的網站或行動應用程式收集客戶旅程期間的步驟資訊。 除了建立隨開即用設定檔報表和自訂報表以外，您可以建立漏斗圖報表找出您的客戶購買前的路徑。 
+
+1. [建立漏斗圖報表](funnel-reports.md)通知決策並找出最佳化與流程改善的部份。
+
+1. 一旦您已經使用業務開發見解 [Android SDK](get-started-android.md) 或 [iOS sdk](get-started-ios.md) 裝備您的行動裝置應用程式，即可建立交叉漏斗圖報表。
+
+1. 請使用 [Funnel Insights](funnel-reports.md#funnel-insights) 在漏斗圖報表中獲取客戶對各步驟行為的更深入見解。
  
-## <a name="step-5-stay-connected"></a>步驟 5：保持聯繫
+## <a name="step-6-stay-connected"></a>步驟 6：保持聯繫
 
 我們非常感激您的積極參與，且會在開發未來版本時仔細斟酌所有相關意見。 您可以透過下列其中一種管道分享您的意見反應並舉報問題：
 - [社群](https://go.microsoft.com/fwlink/?linkid=2141648)

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams 機器人
 description: 請借助機器人在 Microsoft Teams 中查閱統一的客戶設定檔。
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 9bf401124b0ffb21b046954056141e7703386d4911f89f34ffc0fcb84bf0f4be
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: cff696834e3dad00ce5b0f1b5bcb13d86354a4e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032472"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617591"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Dynamics 365 Customer Insights 團隊機器人 (預覽版)
 
@@ -31,6 +31,7 @@ ms.locfileid: "7032472"
 - [統一程序](data-unification.md)已完成。
 - 欄位已新增至[搜尋和篩選索引](search-filter-index.md)。
 - Customer Insights 和 Teams 位於相同的組織中。
+- 您的環境有主要目標對象設定為個人客戶。 不支援商務帳戶。
 
 ## <a name="configure-the-bot"></a>設定機器人
 

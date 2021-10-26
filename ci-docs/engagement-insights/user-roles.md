@@ -4,27 +4,33 @@ description: 工作區成員的可用角色和權限概述。
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036683"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645527"
 ---
 # <a name="roles-and-permissions"></a>角色和權限
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-工作區是您儲存和管理事件與報表的方式。 成員是指可以存取工作區的使用者。 您可以指派成員至您的工作區，並定義其角色和權限。 系統管理員角色可管理工作區和環境，並為其他使用者設定參與見解。 參與者角色適用那些不需要設定參與見解，但想要建立自己的報表、漏斗圖或客戶細分的分析員。
+工作區是您儲存和管理事件及報表的空間。 如需詳細資訊，請參閱[建立工作區與新增成員](create-workspace.md)。 
+
+工作區會包括下列角色和權限：
+
+- *成員* 角色是可以存取工作區的使用者。 您可以指派成員至您的工作區，並定義其角色和權限。 
+- *系統管理員* 角色管理工作區和環境，並為其他使用者組態業務開發見解。 
+- *參與者* 角色適用不需要組態業務開發見解，但想要建立自己的報表、漏斗圖或區段的分析人員。
 
 ## <a name="permissions"></a>權限
   
-下列圖表標示每個角色的權限。 
+下表辨識每個角色的權限。 
 
 | 權限 | 環境管理員 | 工作區管理員 | 環境投稿人 | 工作區投稿人 | 
 |--|--|--|--|--|

@@ -1,7 +1,7 @@
 ---
 title: 客戶活動
 description: 定義客戶活動，並在客戶個人資料的時間表中查看它們。
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494401"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617959"
 ---
 # <a name="customer-activities"></a>客戶活動
 
@@ -24,8 +24,7 @@ ms.locfileid: "7494401"
 
 您的資料來源能包含具有交易資料及活動資料的實體，這些資料可來自多個資料來源。 找出這些實體，並選取您要在客戶的時間表上檢視的活動。 選擇包含目標活動的實體。
 
-> [!NOTE]
-> 實體必須至少有一個類型為 **日期** 的屬性，才能包含在客戶時間表中，而且您無法新增不含 **日期** 欄位的實體。 如果找不到這樣的實體，就會停用 **新增活動** 控制項。
+實體必須至少有一個類型為 **日期** 的屬性，才能包含在客戶時間表中，而且您無法新增不含 **日期** 欄位的實體。 如果找不到這樣的實體，就會停用 **新增活動** 控制項。
 
 1. 在對象見解中，前往 **資料** > **活動**。
 
@@ -41,13 +40,16 @@ ms.locfileid: "7494401"
 
 1. 選取 **下一步** 前往下一個步驟。
 
-1. 在 **關聯** 步驟中，設定詳細資料，將您的活動資料連接至與其對應的客戶。 此步驟會視覺化呈現實體之間的連接。  
+1. 在 **關係** 步驟中組態詳細資料，將您的活動資料連接對應的客戶記錄。 此步驟會視覺化呈現實體之間的連接。  
 
    - **第一**：活動實體中的外部欄位，用來建立與另一個實體的關聯。
    - **第二**：與活動實體關聯的對應來源客戶實體。 您只能關聯資料整合程序中使用到的來源客戶實體。
    - **第三**：如果此活動實體與選取的來源客戶實體之間的關聯已存在，則關聯名稱將會處於唯讀模式。 如果不存在這樣的關聯，則會以您在此方塊中所提供的名稱來建立新關聯。
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="定義實體關聯。":::
+
+   > [!TIP]
+   > 在 B2B 環境中，您可以在帳戶實體與其他實體之間選取。 如果您選取帳戶實體，會自動設定關聯路徑。 其他實體方面，您必須先到達客戶實體，才能在一個或多個中間實體上定義關聯路徑。
 
 1. 選取 **下一步** 前往下一個步驟。 
 
@@ -95,5 +97,34 @@ ms.locfileid: "7494401"
 - **重新命名**：打開對話方塊，您可以在其中為選取的活動輸入不同的名稱。 選取 **儲存** 套用變更。
 
 - **刪除**：打開對話方塊，確認刪除選取的活動。 您也可以一次刪除多個活動，方法是先選取活動，然後選取刪除圖示。 請選取 **刪除**，以確認刪除。
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>在客戶設定檔上檢視活動時限
+
+組態客戶活動後，請在活動組態中選取 **顯示活動時間線**，尋找您的客戶設定檔上的所有客戶活動。
+
+若要為客戶開啟時間表，請前往 **顧客** 並選擇您要檢視的客戶設定檔。
+
+如果客戶已經參加您組態的活動，您可以在 **活動時間表** 區找到它。
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="在客戶設定檔中檢視組態的活動。":::
+
+在活動時間表中篩選活動的方式如下：
+
+- 您可以選取一個或多個活動圖示，細項分析結果，便於只納入選取的類型。
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="使用圖示篩選活動 (依類型)。":::
+
+- 您可以選取 **篩選條件** 開啟篩選面板組態您的時間表篩選條件。
+
+   1. 您可以按照 *活動類型* 和 *日期* 篩選
+   1. 選取 **套用** 以便在時間表中使用篩選條件。
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="使用篩選面板組態篩選條件。":::
+
+若要移除篩選，請選取套用時間表的每個篩選旁邊的 **x** 或選取 **清除篩選條件**。
+
+
+> [!NOTE]
+> 當您離開客戶設定檔時，會移除活動篩選條件。 每次在客戶設定檔上開啟時，您必須套用它們。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

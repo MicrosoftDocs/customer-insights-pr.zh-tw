@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032702"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618672"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>使用自訂資料富集客戶設定檔 (預覽版)
 
@@ -44,6 +44,8 @@ ms.locfileid: "7032702"
 1.  選取 **下一步**，然後輸入您要匯入的資料檔案的 **路徑** 和 **檔案名**。
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="輸入資料位置時的螢幕擷取畫面。":::
+
+1. 選取 **下一步**，並選擇客戶資料集。 這可以是所有的客戶設定檔或區段。
 
 1. 選取 **下一步** 並提供擴充的名稱以及輸出實體的名稱。 
 
@@ -123,6 +125,6 @@ ms.locfileid: "7032702"
 
 ## <a name="next-steps"></a>後續步驟
 
-建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)和[量值](measures.md)，和[匯出資料](export-destinations.md)，為您的客戶提供個人化的體驗。
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

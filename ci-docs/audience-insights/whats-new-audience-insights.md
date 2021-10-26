@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465195"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606044"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
@@ -26,6 +26,20 @@ ms.locfileid: "7465195"
 
 > [!TIP]
 > 若要送出和票選功能要求和產品建議，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="september-2021-updates"></a>2021 年 9 月更新
+
+2021 年 9 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="activities"></a>活動
+
+- **活動時間表改善** 我們已經延伸客戶設定檔上的活動時間表篩選條件。 此外您可以使用新盤形篩選條件依活動類型和日期篩選。 日期可使用不同條件篩選。 如需詳細資訊，請參閱[在客戶設定檔上查看活動時間表](activities.md#view-activity-timelines-on-customer-profiles)。
+
+### <a name="relationships"></a>關係
+
+- **多重跳接式關聯支援** 組態活動和定義實體之間的關聯時，請使用多重跳接式關聯。 多重跳接式關聯使用中間實體連接兩個實體。 組態活動時，您可以使用多重跳接式關聯將活動實體連接到中間實體，然後客戶實體。 您可以結合多重跳接式關聯與多重路徑關聯。 如需詳細資訊，請參閱[多重跳接式關聯](relationships.md#multi-hop-relationship)。
+
+- **多重路徑關聯支援** 組態活動和定義實體之間的關聯時，請使用多重跳徑關聯。 多重路徑關聯將來源實體與一個以上的實體產生關聯。 組態活動時，您可以使用多重路徑關聯將活動實體連接到一個以上的客戶實體。 您可以結合多重路徑關聯與多重跳接式關聯。 如需詳細資訊，請參閱[多重路徑關聯](relationships.md#multi-path-relationship)。
 
 ## <a name="august-2021-updates"></a>2021 年 8 月更新
 
@@ -55,7 +69,7 @@ ms.locfileid: "7465195"
 ### <a name="ux-updates"></a>UX 更新 
 
 - **全新並增強的客戶頁面與個人資料詳細資料頁面** 我們重新設計了客戶頁面及個人資料詳細資料頁面，以改善使用者體驗和增加效能。 這些變更讓您可以您查看、排序、搜尋及篩選客戶。 篩選現在表示在 URL 中，可流暢地與其他使用者共用搜尋結果。 搜尋結果也可以儲存為客戶細分。    
-  客戶個人資料的詳細資料頁面現在會把資料分組在不同小節中 (如人口統計資料、識別碼及其他配置個人資料屬性)中，來改善可讀性。 個人資料詳細資料頁面上的其他區段現在更具互動性。 例如，活動區段可讓您篩選和排序。
+  客戶個人資料的詳細資料頁面現在會把資料分組在不同小節中 (如人口統計資料、識別碼及其他配置個人資料屬性)中，來改善可讀性。 個人資料詳細資料頁面上的其他區段現在更具互動性。 例如，活動分段允許篩選和排序。
 
 
 ## <a name="may-2021-updates"></a>2021 年 5 月更新

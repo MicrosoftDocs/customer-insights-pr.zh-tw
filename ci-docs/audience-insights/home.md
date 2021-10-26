@@ -1,7 +1,7 @@
 ---
 title: 對象見解中的首頁
 description: 開始在首頁上探索應用程式。
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469945"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617684"
 ---
 # <a name="explore-audience-insights"></a>探索對象見解
 
@@ -23,7 +23,7 @@ ms.locfileid: "7469945"
 
 :::image type="content" source="media/home-page.png" alt-text="螢幕擷取畫面，圖為顯示範例見解的首頁畫面。":::
 
-1 - 在 Customer Insights 的功能之間切換 2 - 使用左側窗格瀏覽不同區域 3 - 找出您作業的環境，並並以系統管理員身份管理環境 4 - 為 Customer Insights 指定個人設定
+1-在 Customer Insights 2 的功能之間切換-使用左窗格在不同區域之間導覽，並選擇主要目標對象 3-找出您要工作的環境，並以系統管理員身份管理環境 4-指明 Customer Insights 的個人設定
 
 在 **最新客戶細分** 底下，您可以根據您定義的人口統計、行為或交易屬性來查看客戶群組。 [建立客戶細分](segments.md)可協助您將您的客戶群分組，並找出更好的商務活動的目標。
 

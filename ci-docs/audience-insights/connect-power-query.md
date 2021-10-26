@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 3be417845a41c8f25c71bfc0823f42571157759b224e46d5e114037ee3df8329
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033254"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643484"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連接至 Power Query 資料來源
 
 Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Customer Insights 支援大部分這些連接器。 新增以 Power Query 連接器為基礎的資料來源通常要依照下一節中所述的步驟進行。 不過，視您使用的連接器而定，也需要不同的資訊。 如需詳細資訊，請參閱 [Power Query 連接器參考](/power-query/connectors/)中個別連接器的文件。
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
 ## <a name="create-a-new-data-source"></a>建立新的資料來源
 

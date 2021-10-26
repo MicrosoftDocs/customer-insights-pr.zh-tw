@@ -1,7 +1,7 @@
 ---
 title: 匯出 Customer Insights 資料到 Marketo
 description: 了解如何設定連接並匯出至 Marketo。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033483"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619155"
 ---
 # <a name="export-segments-to-marketo-preview"></a>將客戶細分匯出至 Marketo (預覽版)
 
@@ -29,10 +29,10 @@ ms.locfileid: "7033483"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 每個到 Marketo 的匯出最多可達 1 百萬個設定檔。
+- 每次匯出到 Marketo 的客戶設定檔多達 1 百萬。
 - 匯出到 Marketo 被限制為區段。
-- 匯出總計為 1 百萬個設定檔的分段可能需要 3 小時的時間。 
-- 您可以匯出到 Marketo 的設定檔數量端賴且受限於您與 Marketo 的合約。
+- 總計匯出 1 百萬個客戶設定檔的區段最久會花費 3 小時。 
+- 您可以匯出到 Marketo 的客戶設定檔數目取決於並受限於您和 Marketo 簽訂的契約。
 
 ## <a name="set-up-connection-to-marketo"></a>設定對 Marketo 的連接
 
@@ -64,7 +64,7 @@ ms.locfileid: "7033483"
 
 1. 輸入您的 **[Marketo 清單識別碼](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**。 清單 ID 是純數字值。 例如，如果您的 Marketo 清單 ID 是 ST12345A7，請移除數字前後的字元，然後輸入 `12345`。 
 
-1. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 
 
 1. 或者，您可以匯出 **名**、**姓**、**市/鎮**、**縣/市** 和 **國家/地區**，以建立更多的個人化電子郵件。 選取 **新增屬性** 對應這些欄位。
 

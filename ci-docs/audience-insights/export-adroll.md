@@ -1,7 +1,7 @@
 ---
 title: 匯出 Customer Insights 資料到 AdRoll
 description: 了解如何設定連接並匯出至 AdRoll。
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032061"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617321"
 ---
 # <a name="export-segments-to-adroll-preview"></a>將客戶細分匯出至 AdRoll (預覽版)
 
@@ -28,11 +28,11 @@ ms.locfileid: "7032061"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 您一次最多可以匯出 250,000 筆個人資料到 AdRoll。
-- 您不能將少於 100 份個人資料的客戶細分匯出至 AdRoll。 
+- 您一次最多可以匯出 250,000 個客戶設定檔到 AdRoll。
+- 您不能匯出少於 100 個客戶設定檔的區段到 AdRoll。 
 - 對 AdRoll 的匯出被限制為客戶細分。
-- 匯出最多 250,000 個人資料至 AdRoll 可能需要 10 分鐘的時間才能完成。 
-- 您可以匯出到 AdRoll 的個人資料數量取決於您與 AdRoll 的合約。
+- 將最多 250,000 個客戶設定檔匯出到 AdRoll 最長會花費 10 分鐘完成。 
+- 您可以匯出 AdRoll 的客戶設定檔數目取決於您和 AdRoll 簽訂的契約。
 
 ## <a name="set-up-connection-to-adroll"></a>設定到 AdRoll 的連接
 
@@ -66,7 +66,7 @@ ms.locfileid: "7032061"
 
 1. 輸入您的 **AdRoll 廣告客戶識別碼**。 如需詳細資訊，請參閱 [AdRoll 廣告客戶個人資料](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles)。
 
-3. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 必需將客戶細分匯出至 AdRoll。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 必需將客戶細分匯出至 AdRoll。
 
 1. 選取您要匯出的客戶細分。 選取一個包含最少 100 個成員的客戶細分。 您無法匯出更小的客戶細分。 此外，匯出一個客戶細分的最大數量為每個匯出 250,000 個成員。 
 
