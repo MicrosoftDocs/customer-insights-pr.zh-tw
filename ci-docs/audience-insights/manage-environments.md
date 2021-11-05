@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645116"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673723"
 ---
 # <a name="manage-environments"></a>管理環境
 
@@ -67,7 +67,8 @@ ms.locfileid: "7645116"
 
 - 客戶設定檔。
 - 資料來源認證。 您必須提供每個資料來源的認證，並手動重新整理資料來源。
-- 來自 Common Data Model 資料夾和 Dataverse 受管理的 Data Lake 的資料來源。 您必須使用與來源環境相同的名稱，手動建立這些資料來源。
+
+- 取自 Common Data Model 資料夾和 Dataverse 託管資料湖的資料來源。 您必須使用與來源環境相同的名稱，手動建立這些資料來源。
 
 複製環境時，您會看到一則指示已建立新環境的確認訊息。 選取 **移至資料來源** 以查看資料來源清單。
 

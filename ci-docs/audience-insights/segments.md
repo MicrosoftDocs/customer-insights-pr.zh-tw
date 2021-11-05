@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617327"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673750"
 ---
 # <a name="segments-overview"></a>客戶細分概觀
 
@@ -26,7 +26,7 @@ ms.locfileid: "7617327"
 
 有很多方式可以建立新的客戶細分： 
 
-# <a name="individual-customers-b2c"></a>[個別客戶 (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
 - 內含區段 Builder 的複雜區段：[建立我們自己的](segment-builder.md#create-a-new-segment) 
 - 具有一個運算子的簡單客戶細分：[快速客戶細分](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ ms.locfileid: "7617327"
 - 基於量值或屬性，由 AI支援的建議：[改善量值的建議客戶細分](suggested-segments.md) 
 - 根據活動提出的建議：[根據客戶活動所建議的客戶細分](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[商務帳戶 (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
 
 - 內含區段 Builder 的複雜區段：[建立我們自己的](segment-builder.md#create-a-new-segment)
 

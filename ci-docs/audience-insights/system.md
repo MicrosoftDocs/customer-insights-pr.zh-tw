@@ -1,7 +1,7 @@
 ---
 title: 對象見解中的系統組態
 description: 瞭解 Dynamics 365 Customer Insights 對象見解能力中的系統設定。
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035885"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651830"
 ---
 # <a name="system-configuration"></a>系統設定
 
@@ -24,9 +24,9 @@ ms.locfileid: "7035885"
 - [API 使用情況](#api-usage-tab)
 - [關於](#about-tab)
 - [一般](#general-tab)
+- [安全性](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![系統頁面。](media/system-tabs.png "系統頁面")
+:::image type="content" source="media/system-tabs.png" alt-text="系統頁面上的設定索引標籤。":::
 
 ## <a name="status-tab"></a>狀態索引標籤
 
@@ -84,9 +84,15 @@ ms.locfileid: "7035885"
 
 ## <a name="general-tab"></a>[一般] 索引標籤
 
-**一般** 索引標籤、**語言** 和 **國家/地區格式** 中有兩個選項。
+您可以在 **一般** 索引標籤上變更語言和國家/地區格式。
 
-應用程式 [支援幾種語言](supported-languages.md)。 若要變更您的慣用語言，請從下拉式功能表中選擇 **語言**。
+Customer Insights [支援多種語言](/dynamics365/get-started/availability)。 應用程式使用您的語言偏好顯示如慣用語言表達的功能表、標籤文字和系統訊息元素。
+
+匯入的資料和您以手動方式輸入的資訊不會進行翻譯。
+
+### <a name="update-the-settings"></a>更新設定
+
+若要變更您的慣用語言，請從下拉式功能表中選擇 **語言**。
 
 若要變更日期、時間及數位的慣用格式，請使用 **國家/地區格式** 下拉式功能表。 格式預覽會顯示在此欄位下。 當您選擇新語言時，系統會自動建議一項選取項目。
 
@@ -105,6 +111,13 @@ ms.locfileid: "7035885"
 
    使用到[即時資料擷取的操作](real-time-data-ingestion.md)的作業，其中包含帶有望遠鏡符號的按鈕，可以查看即時 API 的使用方式。 選取此按鈕打開內含目前環境中即時 API 使用方式詳細資料的側窗格。   
    使用 **即時 API 使用方式** 窗格中的 **分組依據** 方塊，以選擇如何最好地呈現您的即時互動。 您可以依據 API 方法、實體限定名稱 (擷取的實體)、建立者(事件來源)、結果 (成功或失敗) 或錯誤碼來分組資料。 資料可以表示為歷史圖和表格。
+
+## <a name="security-tab"></a>安全性索引標籤
+
+**安全性** 索引標籤能讓您連結自己的 [Azure 金鑰保存庫](/azure/key-vault/general/basic-concepts)到環境並進行管理。
+專用的金鑰保存庫可用來在組織的法令遵循邊界內分階段使用秘密。 對象見解可使用 Azure 金鑰保存庫的秘密[設定與](connections.md)協力廠商系統的連線。
+
+如需更多資訊，請參閱[帶上您自己的 Azure 金鑰保存庫](use-azure-key-vault.md)。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

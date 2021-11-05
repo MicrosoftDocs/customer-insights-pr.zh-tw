@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617545"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672989"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -29,7 +29,7 @@ ms.locfileid: "7617545"
 
 您將會在 **探索** 索引標籤上發現所有支援的擴充選項。
 
-# <a name="individual-customers-b2c"></a>[個別客戶 (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
 - [Brands](enrichment-microsoft.md) 由 Microsoft 提供
 - [Interests](enrichment-microsoft.md) 由 Microsoft 提供
@@ -38,7 +38,7 @@ ms.locfileid: "7617545"
 - 透過安全檔案傳輸通訊協定 (SFTP) 的 [自訂資料](enrichment-SFTP-custom-import.md) 
 - 由 Microsoft 提供的 [Azure 地圖服務](enrichment-azure-maps.md)
 
-# <a name="business-accounts-b2b"></a>[商務帳戶 (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
 
 - Leadspace 提供的 [公司資料](enrichment-leadspace.md)
 - Microsoft 提供的[增強地址](enrichment-enhanced-addresses.md) 

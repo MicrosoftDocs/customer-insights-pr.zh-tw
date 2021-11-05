@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623091"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673313"
 ---
 # <a name="exports-preview-overview"></a>匯出 (預覽版) 概觀
 
@@ -32,14 +32,14 @@ ms.locfileid: "7623091"
 
 ### <a name="export-segments"></a>匯出區段
 
-**在商務客戶 (B2B) 或個別客戶 (B2C) 環境中匯出區段**  
-大部分匯出選項支援這兩種類型的環境。 匯出區段到各種目標系統已訂定特定要求。 一般而言，區段成員、客戶設定檔包含連絡人資訊。 由於這通常是建立在個別客戶 (B2C) 區段的案例，不見得是商務帳戶 (B2B) 區段為主的案例。 
+**在商務帳戶 (B 到 B) 或個別消費者 (B 到 C) 環境匯出區段**  
+大部分匯出選項支援這兩種類型的環境。 匯出區段到各種目標系統已訂定特定要求。 一般而言，區段成員、客戶設定檔包含連絡人資訊。 由於這通常是建立在個別消費者 (B 到 C) 區段的個案，不一定非得是商務帳戶 (B 到 B) 為主的區段個案。 
 
-**商務帳戶 (B2B) 的區段匯出環境**  
+**商務帳戶 (B 到 B) 的區段匯出環境**  
 - 商務帳戶環境脈絡裡的區段是根據 *帳戶* 實體建構。 若要將帳戶區段原態匯出，目標系統必須支援純帳戶區段。 當您在定義匯出時選擇 **公司** 選項時，就能適用 [LinkedIn](export-linkedin-ads.md) 案例。
 - 所有其他目標系統皆需要來自連絡人實體欄位。 若要確保帳戶區段能從相關連絡人檢索資料，您的區段定義必須是連絡人實體的專案屬性。 了解更多有關如何[組態區段和專案屬性](segment-builder.md)。
 
-**個別客戶環境中的區段匯出 (B2C)**  
+**個別消費者環境的區段匯出 (B 到 C)**  
 - 個別客戶環境脈絡裡的區段是根據 *統一客戶設定檔* 實體建構。 可匯出符合目標系統需求的每一個區段 (例如電子郵件地址)。
 
 **區段匯出限制**  

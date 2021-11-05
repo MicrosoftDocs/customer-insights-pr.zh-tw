@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622849"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673360"
 ---
 # <a name="define-and-manage-measures"></a>定義和管理量值
 
@@ -28,7 +28,7 @@ ms.locfileid: "7622849"
 
 本節將引導您從頭開始建立新的量值。 您可以使用資料實體從已設定關係的資料實體建構量值，連接統一客戶設定檔實體。
 
-# <a name="individual-customers-b2c"></a>[個別客戶 (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
 1. 請在對象見解中前往 **量值**。
 
@@ -92,7 +92,7 @@ ms.locfileid: "7622849"
 
 1. 移至 **量值**，以查看清單中的新建立的量值。
 
-# <a name="business-accounts-b2b"></a>[商務帳戶 (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
 
 1. 請在對象見解中前往 **量值**。
 
@@ -164,7 +164,7 @@ ms.locfileid: "7622849"
 
 常用量值有預先定義範本，您可以用範本來建立。 範本的詳細說明及引導式體驗可協助您輕鬆建立量值。 範本是根據 *整合活動* 實體中的對應資料建立的。 因此，請確認在範本建立量值之前，已經設定了[客戶活動](activities.md)。
 
-# <a name="individual-customers-b2c"></a>[個別客戶 (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
 常用量值有預先定義範本，您可以用範本來建立。 範本的詳細說明及引導式體驗可協助您輕鬆建立量值。 範本是根據 *整合活動* 實體中的對應資料建立的。 因此，請確認在範本建立量值之前，已經設定了[客戶活動](activities.md)。
 
@@ -212,7 +212,7 @@ ms.locfileid: "7622849"
 
 1. 您現在可以選取 **執行** 來計算量值的結果。 若要稍後調整，請選取 **儲存草稿**。
 
-# <a name="business-accounts-b2b"></a>[商務帳戶 (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
 
 唯有在個別客戶為主要目標對象的環境建立的量值才能使用此項功能。
 

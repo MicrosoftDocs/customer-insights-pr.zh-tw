@@ -1,7 +1,7 @@
 ---
 title: 開始使用商務帳戶做為主要目標對象
 description: 了解有關商務帳戶做為主要目標對象 Dynamics 365 Customer Insights。
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644978"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673677"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>搭配對象見解中的商務帳戶
 
-Dynamics 365 Customer Insights 中的對象見解功能讓您為不同的主要目標對象組態您的環境：個別客戶 (B2C) 和商務帳戶 (B2B)。 在 B2C 案例中，資料以個人為中心。 B2B 方面，主要目標對象是帳戶-組織或公司-與連絡人。 本文幫助您開始使用商務帳戶環境。 它會根據您的環境焦點列出對象見解功能區的差異。 如需有關差異的詳細資訊，請審閱功能區文件。 
+Dynamics 365 Customer Insights 的對象見解功能讓您為不同的主要目標對象組態自己的環境：個別消費者 (B 到 C) 和商務帳戶 (B 到 B)。 在 B 到 C 案例中，資料以個人為中心。 B 到 B 方面，主要目標對象是帳戶-組織或公司-和連絡人。 本文幫助您開始使用商務帳戶環境。 它會根據您的環境焦點列出對象見解功能區的差異。 如需有關差異的詳細資訊，請審閱功能區文件。 
 
 ## <a name="create-an-environment-for-business-accounts"></a>為商務帳戶建立環境
 
@@ -32,7 +32,7 @@ Dynamics 365 Customer Insights 中的對象見解功能讓您為不同的主要�
 
 如果貴組織維護個別客戶和商務帳戶的環境，您可以使用左窗格的切換器選擇主要目標對象。
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="切換器可變更個別客戶與業務帳戶之間的主要目標對象。":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="切換器可變更個別客戶與業務帳戶之間的主要目標對象。":::
 
 ## <a name="supported-feature-areas"></a>支援功能區
 

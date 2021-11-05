@@ -1,7 +1,7 @@
 ---
 title: 由機器學習支援的客戶細分
 description: 讓機器學習協助您根據客戶屬性尋找全新且值得注意的客戶細分。
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028350"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673173"
 ---
 # <a name="suggested-segments-preview"></a>建議客戶細分 (預覽版)
 
@@ -23,7 +23,7 @@ ms.locfileid: "7028350"
 > [!NOTE]
 > 建議客戶細分的功能使用自動方法來評估資料，並根據該資料進行預測，因此可當作是剖析的方法，也就是由一般資料保護規定 (「GDPR」) 定義那個術語「剖析」。 您使用此功能來處理資料將受到 GDPR 或其他法律或規定的制約。 您有責任確保您對 Dynamics 365 Customer Insights 的使用，包括此功能、符合所有適用法律和規定，包括隱私權、個人資料、生物資料、資料保護和通訊保密性的相關法律。
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="在 Customer Insights 中的建議客戶細分頁面，在側邊窗格顯示建議的詳細資料。":::
+:::image type="content" source="media/suggested-segments.png" alt-text="建議的區段頁面會在側窗格中顯示建議細節。":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>改善 KPI 的建議客戶細分
 
@@ -49,7 +49,7 @@ ms.locfileid: "7028350"
 
 使用數值屬性 (例如 *年收入* 或 *會員期間* 作為主要屬性)，系統會建議的客戶細分，是數值屬性的平均值比所有客戶高或低的。
 
-分類屬性 (如 *客戶滿意度*) 當作主要屬性，結果會建議的客戶細分，是在特定類別中擁有較高或較低的百分比的客戶 (比較屬於相同類別的所有客戶百分比)。 例如，*將客戶滿意度* 選為主要屬性，並且此屬性由三個類別 (*低*、*中* 和 *高*)組成。 對於每個類別，會建議的客戶細分是對比所有客戶在該類別的比例，相同類別百分比明顯較高或較低的客戶。 如果所有客戶中的 22% 都有 *高* 滿意度，則只有 *高* 滿意度明顯較高或較低比例的客戶細分 (與22% 相比) 會在該類別被建議。 同樣地，如果具備統計上的顯著，每個其他類別 (*低* 和 *中*) 都會有建議的客戶細分。
+分類屬性 (如 *客戶滿意度*) 當作主要屬性，結果會建議的客戶細分，是在特定類別中擁有較高或較低的百分比的客戶 (比較屬於相同類別的所有客戶百分比)。 例如，*將客戶滿意度* 選為主要屬性，並且此屬性由三個類別 (*低*、*中* 和 *高*)組成。 各類別方面，將會建議分屬該類別客戶的百分比，比同類別中所有客戶比例高或低的區段。 如果其中 22% 的客戶皆有 *高* 滿意度，那麼只有該類別中 *高* 滿意度客戶的比例比 22% 高或低的區段才會納入建議範圍。 同樣地，如果具備統計上的顯著，每個其他類別 (*低* 和 *中*) 都會有建議的客戶細分。
 
 > [!NOTE]
 > 目前，我們僅支援的主要分類屬性最多具備 10 個類別。 如果您想要根據超過 10 個類別的主要屬性查看客戶細分建議，我們建議您將某些類別分成一組，將類別數減少到 10 個以下 (含)。 這項限制只適用在主要屬性。 若是影響分類屬性，目前最多支援 100 個類別。
@@ -77,7 +77,7 @@ ms.locfileid: "7028350"
 
 當 AI 模型生成好建議之後，您會發現它們列在 **客戶細分** > **建議 (預覽版)**。
  
-選取建議的客戶細分，以檢閱該建議的詳細資料，包括平均值與客戶細分成員的比較。 您也可以檢閱 AI 模型習得用來建議選取的區段的屬性值或規則。
+請選取建議的區段，以便審查該項建議的細節。 您也可以檢閱 AI 模型習得用來建議選取的區段的屬性值或規則。
 
 ## <a name="save-a-suggestion-as-a-segment"></a>將建議另存為客戶細分
 

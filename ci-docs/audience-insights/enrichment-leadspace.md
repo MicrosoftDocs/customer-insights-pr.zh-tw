@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 685b1683b0c90eab04b130552d2cb23a8ab7a235
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617341"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673220"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>使用 Leadspace 擴充公司設定檔 (預覽)
 
-Leadspace 是一家提供 B2B 客戶資料平台的資料科學公司。 它讓環境按帳戶隨著統一的客戶設定檔擴充其資料。 使用如公司規模、位置或行業的屬性擴充 *客戶設定檔*。 使用標題、角色或電子郵件驗證等屬性擴充 *連絡人設定檔*。
+Leadspace 是一間提供 B 到 B 客戶資料平台的資料科學公司。 它讓環境按帳戶隨著統一的客戶設定檔擴充其資料。 使用如公司規模、位置或行業的屬性擴充 *客戶設定檔*。 使用標題、角色或電子郵件驗證等屬性擴充 *連絡人設定檔*。
 
 ## <a name="prerequisites"></a>先決條件
 

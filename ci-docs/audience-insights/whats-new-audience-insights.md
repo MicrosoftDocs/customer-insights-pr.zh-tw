@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606044"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673805"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
@@ -166,7 +166,7 @@ ms.locfileid: "7606044"
 - **將客戶細分匯出至 Constant Contact** 我們已擴展了匯出目的地，現在包括 Constant Contact。 您現在可以從 Customer Insights 將客戶細分匯出至 Constant Contact 清單，並用來當作行銷廣告活動的基準。   
    如需詳細資訊，請參閱[匯出資料至 Constant Contact](export-constant-contact.md)。
 
-- **將客戶細分匯出至 RollWorks** 我們已擴展了匯出目的地，現在包括 RollWorks。 您現在可以從 Customer Insights 將客戶細分匯出至 RollWorks 對象，並用來當作 B2B 廣告的基準。    
+- **將客戶細分匯出至 RollWorks** 我們已擴展了匯出目的地，現在包括 RollWorks。 您現在可以從 Customer Insights 匯出區段到 RollWorks 對象，並將它們用做您刊登 B 到 B 廣告的基準線。    
    如需詳細資訊，請參閱[匯出資料至 RollWorks](export-rollworks.md)。
 
 - **將客戶細分匯出至 Snapchat** 我們已擴展了匯出目的地，現在包括 Snapchat。 您現在可以從 Customer Insights 將客戶細分匯出至 Snapchat 對象，並用來當作廣告的基準。     

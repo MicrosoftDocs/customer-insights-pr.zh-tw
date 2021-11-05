@@ -9,16 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4403c6f535f5dc60919be3717073d52640bbe61a
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bb74e35799410b92b64e48e065b45efda82490ca
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619201"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672943"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>將客戶細分清單匯出至 Facebook 廣告管理員 (預覽版)
 
 將統一客戶設定檔的區段匯出至 Facebook 廣告管理員，以建立 Facebook 和 Instagram 上的行銷活動。
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
 ## <a name="prerequisites-for-connection"></a>連接的先決條件
 
