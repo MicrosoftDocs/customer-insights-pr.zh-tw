@@ -1,7 +1,7 @@
 ---
 title: 公司資料增強
 description: 使用 Microsoft 模型來擴充和標準化公司資料。
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770160"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813909"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>使用增強型公司設定資料來擴充公司資料
 
@@ -51,7 +51,8 @@ Microsft
 
 1.  確認公司的身份。 我們不會驗證輸入內容是否為現有的組織，或驗證是否有公司使用輸出內容做為其標準名稱。
 2.  全面涵蓋全球公司。 Microsoft 的已彙集的公司資料可涵蓋全球範圍，但提供的涵蓋區域大部分在澳大利亞、加拿大、英國和美國。
-3.  保證資料的準確性或新穎度。 隨著商務資訊經常變更，我們無法保證提供的增強型公司資料總是準確或最新的。
+3.  以全面標準化公司地址。 目前我們支援標準化這些國家/地區中的地址：澳大利亞、加拿大、法國、德國、義大利、日本、英國和美國。
+4.  保證資料的準確性或新穎度。 隨著商務資訊經常變更，我們無法保證提供的增強型公司資料總是準確或最新的。
 
 ## <a name="configure-the-enrichment"></a>擴充設定
 
