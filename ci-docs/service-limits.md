@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483649"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791972"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Customer Insights 功能的服務限制
 
@@ -26,7 +26,7 @@ ms.locfileid: "7483649"
 
 | 面積圖  | 限制  | 注意事項 |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| 客戶細分與量值 | 100 個區段或量值。 | 有效 [區段](audience-insights/segments.md) 和 [量值](audience-insights/measures.md) 結合後的總數不能超過 100。  |
+| 客戶細分、量值以及預測 | 300  | [客戶細分](audience-insights/segments.md)、[量值](audience-insights/measures.md)和[預測](audience-insights/predictions.md)總數不能超過 300。  |
 | 關係 | 實體路徑中關聯的 20 層深度。 | 當使用建立器介面建立[客戶細分](audience-insights/segments.md)或[量值](audience-insights/measures.md)時，開始實體與目標實體之間的實體路徑最多可以有 20 個關聯躍點。  |
 
 

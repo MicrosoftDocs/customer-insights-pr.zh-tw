@@ -1,7 +1,7 @@
 ---
 title: 語意對應 (預覽版)
 description: 語意對應總覽及使用方法。
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622925"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731933"
 ---
 # <a name="semantic-mappings"></a>語意對應
 
@@ -75,8 +75,7 @@ ms.locfileid: "7622925"
 
 1. 若要稍候執行語意對應，請選取語意對應和 **重新整理**。
 
-> [!TIP]
-> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>管理現有的語意對應
 
@@ -91,5 +90,6 @@ ms.locfileid: "7622925"
 - **重新命名**：打開對話方塊，您可以針對選取的語意對應輸入不同名稱。 選取 **儲存** 套用變更。
 
 - **刪除**：打開對話方塊確認是否刪除選取的語意對應。 您也可以藉由選取語意對應和刪除圖示一次刪除多個語意對應。 請選取 **刪除**，以確認刪除。
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: 使用預測完成部分資料
 description: 使用預測填滿未完成的客戶資料。
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,17 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645024"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732368"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>透過預測完成部分資料
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>透過預測完成部分資料 (已取代)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> 此功能將自 **2021 年 11 月 5 日** 起 **被取代**。 在移除功能之前，目前的實作將繼續運作，但是您將無法使用下列指示建立新的整合。
 
 預測可讓您輕鬆建立預測值，以增強您對客戶的了解。 您可以在 **智慧** > **預測** 頁面上選取 **我的預測** 查看您已在觀眾見解其他部分中組態的預測，並允許進一步自訂它們。
 
@@ -60,6 +61,8 @@ ms.locfileid: "7645024"
    > ![範例中顯示對應至類別的欄位值。](media/intelligence-categorymapping.png "顯示對應的欄位值至類別的範例")
 
 8. 選取 **完成**，預測將會得到處理。 處理工作需要花費一些時間，視資料的大小和複雜度而定。 根據您所建立之預測的 **輸出實體名稱**，在新實體中提供結果。
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>建立區段時建立預測
 

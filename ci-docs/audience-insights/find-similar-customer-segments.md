@@ -9,16 +9,18 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034519"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799673"
 ---
 # <a name="similar-customers-preview"></a>類似的客戶 (預覽)
 
 此功能可讓您使用人工智慧來尋找客戶群中類似的客戶。 您必須至少已建立一個客戶細分，才能使用此功能。 擴充現有客戶細分準則有助於尋找與該客戶細分類似的客戶。
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *尋找類似的客戶* 使用自動化方式來評估資料並根據該資料進行預測，因此具有可做為剖析方法使用的功能，因為該詞彙是一般資料保護規定 (「GDPR」) 所定義。 若客戶使用此功能來處理資料，可能會受到 GDPR 或其他法律或法規的制約。 您負責確保您對 Dynamics 365 Customer Insights 的使用，包括預測、符合所有適用法律和規定，包括隱私權、個人資料、生物資料、資料保護和通訊機密性相關法律。

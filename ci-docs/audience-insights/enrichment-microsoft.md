@@ -1,7 +1,7 @@
 ---
 title: 使用 Microsoft 的資料擴充客戶個人資料
 description: 您可以使用 Microsoft 的專有資料以品牌和興趣相關性來擴充客戶資料。
-ms.date: 06/14/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 51b150cbf5d9cfb3a5df42e680bcfa57ec5496cb
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617867"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732532"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>使用品牌和興趣親和性來擴充客戶設定檔 (預覽)
 
@@ -116,8 +116,7 @@ ms.locfileid: "7617867"
 
 視您的客戶資料大小而定，可能需要數分鐘的時間才能完成擴充執行。
 
-> [!TIP]
-> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 對其中一個工作的選取 **查看詳細資料** 之後，您會發現其他資訊：處理時間、上次處理日期以及所有與此工作相關的錯誤和警告。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="enrichment-results"></a>擴充結果
 

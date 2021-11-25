@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483648"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732670"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>符合 GDPR 的資料主體權利 (DSR) 要求
 
@@ -79,7 +79,14 @@ Customer Insights 管理員可以依照下列步驟來刪除 Customer Insights �
 2. 認可匯出所要求之使用者資料的確認。
 3. 透過用戶管理員電子郵件地址接收匯出的資料。
 
-## <a name="engagement-insights"></a>參與見解
+## <a name="consent-management-preview"></a>同意管理 (預覽版)
+
+同意管理功能不會直接收集使用者資料。 此功能只會匯入和處理由其他應用程式中的使用者提供的同意資料。
+
+若要移除特定使用者的同意資料，請到資料來源 (同意管理功能擷取的位置) 中移除。 在重新整理資料來源之後，移除的資料也會在同意中心被移除。 使用同意實體的應用程式也會在 [重新整理](audience-insights/system.md#refresh-processes)後，刪除已在來源上移除的資料。 為了回應資料主體要求而從所有其他程序和應用程式中移除使用者的資料後，我們建議您後盡快重新整理資料來源。
+
+
+## <a name="engagement-insights-preview"></a>業務開發見解 (預覽版)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>刪除和匯出包含終端使用者可識別資訊的事件資料
 

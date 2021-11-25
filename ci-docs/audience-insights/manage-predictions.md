@@ -1,7 +1,7 @@
 ---
 title: 預測案例的共用工作
 description: 了解如何管理、疑難排解及修正預測。
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036455"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731978"
 ---
 # <a name="manage-predictions"></a>管理預測
 
@@ -50,12 +50,12 @@ ms.locfileid: "7036455"
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="輸入資料可用性報表範例，顯示內有錯誤、警告和建議的資料表。":::
 
-- 名稱：錯誤、警告或建議的描述性名稱。
-- 步驟：模型階段，定型或分數，參照資訊。
-- 狀態：資訊的嚴重性 (錯誤、警告、建議)。
-- 資料行名稱：若要改善模型效能，實體中的需要修改的資料行。
-- 實體名稱：若要改善模型效能，需要修改的實體名稱。
-- 詳細資料：錯誤、警告或建議的詳細資料。
+- **名稱：** 錯誤、警告或建議的描述性名稱。
+- **步驟：** 模型階段，定型或分數，參照資訊。
+- **狀態：** 資訊的嚴重性 (錯誤、警告、建議)。
+- **資料行名稱：** 需要修改來改善模型效能的實體內資料行。
+- **實體名稱：** 需要修改來改善模型效能的實體名稱。
+- **詳細資料：** 錯誤、警告或建議的詳細資料。
 
 ## <a name="refresh-a-prediction"></a>重新整理預測
 
@@ -66,6 +66,8 @@ ms.locfileid: "7036455"
 1. 選取您要重新整理之預測旁邊的垂直省略符號。
 
 1. 選取 **重新整理**。
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>刪除預測
 

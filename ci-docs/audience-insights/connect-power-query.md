@@ -1,7 +1,7 @@
 ---
 title: 透過 Power Query 連接器內嵌資料
 description: 以 Power Query 為基礎的資料來源連接器。
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643484"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732208"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連接至 Power Query 資料來源
 
@@ -79,6 +79,8 @@ Power Query 提供一組廣泛的連接器以擷取資料。 Dynamics 365 Custom
    > [!div class="mx-imgBorder"]
    > ![編輯選項。](media/edit-option-data-sources.png "編輯選項")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. 在 **Power Query - 編輯查詢** 對話方塊中套用您的變更和轉換，如[建立新的資料來源](#create-a-new-data-source)一節中所述。
 
 4. 完成編輯後，選取 Power Query 中的 **儲存** 以儲存變更。

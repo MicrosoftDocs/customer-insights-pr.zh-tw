@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643352"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792018"
 ---
 # <a name="customer-card-add-in-preview"></a>客戶卡片增益集 (預覽)
 
@@ -34,7 +34,7 @@ ms.locfileid: "7643352"
   - **量值控制項**：需要類型客戶屬性[組態的量值](measures.md)。
   - **智慧控制項**：需要以[預測](predictions.md)或[自訂模型](custom-models.md)產生的資料。
   - **客戶詳細資料控制項**：設定檔的所有欄位皆可在統一的客戶設定檔使用。
-  - **擴充控制項**：需要有效[擴充](enrichment-hub.md)套用到客戶設定檔。
+  - **擴充控制項**：需要有效[擴充](enrichment-hub.md)套用到客戶設定檔。 卡片增益集支援下列擴充：[品牌](enrichment-microsoft.md)(由 Microsoft 提供的)、[興趣](enrichment-microsoft.md)(由 Microsoft 提供的)。
   - **連絡人控制項**：需要連絡人類型的語義實體定義。
   - **時間表控制項**：需要[已組態的活動](activities.md)。
 

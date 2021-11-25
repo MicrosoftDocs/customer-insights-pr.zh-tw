@@ -1,7 +1,7 @@
 ---
 title: 搜尋和篩選客戶設定檔
 description: 快速尋找有關所指定屬性的統整客戶設定檔和篩選的相關資訊。
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469947"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732024"
 ---
 # <a name="customer-profiles-search--filter-index"></a>客戶設定檔：搜尋及篩選索引
 
 統整您的客戶資料的結果是客戶設定檔實體，可提供整體客戶群的統整檢視。 若要快速 [尋找特定客戶或客戶群組的資訊](customer-profiles.md)，您可以在 **客戶** 頁面上設定 **搜尋** 和 **篩選** 功能。 請繼續閱讀，了解管理員如何在 **搜尋和篩選索引** 頁面上編輯屬性，以供使用者用來搜尋和篩選。
 
-> [!div class="mx-imgBorder"]
-> ![搜尋篩選。](media/search-filter.png "搜尋篩選")
+   :::image type="content" source="media/search-filter.png" alt-text="搜尋篩選":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>新增欄位並指定屬性
 

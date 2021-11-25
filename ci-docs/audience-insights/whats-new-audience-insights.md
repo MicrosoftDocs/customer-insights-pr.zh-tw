@@ -1,7 +1,7 @@
 ---
 title: 新功能以及近期即將推出的功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673805"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753107"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
@@ -26,6 +26,41 @@ ms.locfileid: "7673805"
 
 > [!TIP]
 > 若要送出和票選功能要求和產品建議，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="october-2021-updates"></a>2021 年 10 月更新
+
+2021 年 10 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="b-to-b"></a>B 到 B
+
+從 2021 年 10 月開始，在 Customer Insights 中您可以使用商務客戶及其相關連絡人。 在之前，應用程式大多為個人消費者量身訂做。 除了新環境類型，也已更新數個功能區域來支援 B 到 B 案例。 如需已支援的 B 到 B 功能概述，請參閱 [對象見解中的商務客戶](work-with-business-accounts.md)。
+
+下列各節重點節錄了一些關鍵區域，都已修改為可支援商務客戶和個人消費者。
+
+#### <a name="export-segments-based-on-business-accounts"></a>匯出以商務客戶建立的客戶細分
+
+在對象見解中的所有客戶細分匯出均可在商務客戶的內容上使用。 大多數的客戶細分需要額外的設定並且在基礎客戶細分有 [聯絡人資訊投影](segment-builder.md#create-a-new-segment) ，才能用於商務客戶。 如需詳細資訊，請參閱[匯出客戶細分](export-destinations.md#export-segments)。
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>使用 LinkedIn Ads 匯出商務客戶
+
+LinkedIn Ads 匯出現在可對聯絡人目標和公司目標使用商務客戶的內容。 選取公司木邀作為 LinkedIn 匯出主要焦點時，您可以匯出以商務客戶建立的客戶細分，而不需要投影連絡人資訊。 如需詳細資訊，請移至相關文件：[LinkedIn Ads 匯出 ](export-linkedin-ads.md)以及 [連絡人目標 ](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)與 [公司目標之間的區別 ](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting)。 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>根據商務客戶及其階層建立量值
+
+量值建立器可讓您依商務客戶建立量值，並選擇是否使用階層資訊。 階層資訊可用來彙總整個客戶及其相關的所有子客戶中的量值計算。 例如，您可以建立量值，像是由階層定義的每個商務客戶群組的總收入。 如需詳細資訊，請見 [定義和管理量值](measures.md)。
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>根據商務客戶及其階層建立客戶細分
+
+客戶細分建立器可讓您建立商務客戶的客戶細分，並可選擇客戶細分中是否每個客戶都包括連絡人資訊。 如果您已設定客戶階層，您可以在客戶細分建立時使用客戶階層資訊。 如需詳細資訊，請參閱[建立新客戶細分](segment-builder.md#create-a-new-segment)。
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>利用流失趨勢的深入見解來保留您的商務客戶
+
+客戶流失預測模型現在也支援商務客戶。 您可以評估不只是對客戶造成的流失風險，而不只是客戶，也包括客戶和購買產品或服務類別的組合。 這項新增功能可協助瞭解您的客戶是否很有可能停止大部分的購買或只停止特定類別的貨物或服務。 為進一步協助您使用此 AI 模型，這項功能也會列出客戶可能發生改動的原因。 如需詳細資訊，請參閱 [預測交易流失 (預覽版) ](predict-transactional-churn.md)。
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>在客戶檢視表中查看商務客戶連絡人
+
+如果商務客戶對應至相關的客戶，則 Customer Insights 應用程式會在客戶詳細資料檢視表中顯示這些相關連絡人。 如需詳細資訊，請參閱[客戶個人資料](customer-profiles.md)。
+
 
 ## <a name="september-2021-updates"></a>2021 年 9 月更新
 

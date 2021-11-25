@@ -1,7 +1,7 @@
 ---
 title: 比對資料統整的實體
 description: 相符的實體組合成資料集並建立統一客戶設定檔。
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648198"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732624"
 ---
 # <a name="match-entities"></a>比對實體
 
@@ -180,10 +180,7 @@ ms.locfileid: "7648198"
 
 在 **實體** 頁面上，您將找到成功執行的結果(整合的客戶個人資料實體)。 在 **個人資料** 區段，您的整合客戶實體名稱為 **客戶**。 第一次成功的比對執行建立了整合 *客戶* 實體。 後續所有比對執行都會擴充該實體。
 
-> [!TIP]
-> 執行比對程序後，請選取程序狀態以打開 **工作詳細資料** 窗格。 它提供處理時間、上次處理日期以及與工作相關的所有錯誤與警告的概覽。 選取 **查看詳細資料**，以查看參與比對程序的實體、適用的規則，以及更新是否已順利發布。  
-> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。  
-> :::image type="content" source="media/process-detail-path.png" alt-text="從工作狀態連結取得程序詳細資料的逐層探究路徑。":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>檢閱和驗證您的比對
 

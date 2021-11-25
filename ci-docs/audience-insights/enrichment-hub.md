@@ -1,7 +1,7 @@
 ---
 title: 富集統一的客戶設定檔
 description: 使用功能富集您的客戶資料。
-ms.date: 09/30/2021
+ms.date: 11/05/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
+ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7672989"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "7770107"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -42,6 +42,7 @@ ms.locfileid: "7672989"
 
 - Leadspace 提供的 [公司資料](enrichment-leadspace.md)
 - Microsoft 提供的[增強地址](enrichment-enhanced-addresses.md) 
+- Microsoft 提供的[增強型公司資料](enrichment-enhanced-company-data.md)
 - HERE Technologies 提供的 [位置資料](enrichment-here.md) 
 - 透過安全檔案傳輸通訊協定 (SFTP) 的 [自訂資料](enrichment-SFTP-custom-import.md) 
 - 由 Microsoft 提供的 [Azure 地圖服務](enrichment-azure-maps.md)

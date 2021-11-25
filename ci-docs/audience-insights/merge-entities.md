@@ -1,7 +1,7 @@
 ---
 title: 將實體合併到資料統整中
 description: 合併實體以建立統整的客戶設定檔。
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648244"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732762"
 ---
 # <a name="merge-entities"></a>合併實體
 
@@ -187,10 +187,9 @@ ms.locfileid: "7648244"
 
 若要進行更多變更並重新執行步驟，您可以取消進行中的合併。 選取 **重新整理中...**，然後在出現的側面窗格中選取 **取消工作**。
 
-> [!TIP]
-> 執行合併程序後，請選取程序狀態以打開 **工作詳細資料** 窗格。 它提供處理時間、上次處理日期以及與工作相關的所有錯誤與警告的概覽。 選取 **查看詳細資料**，以查看參與比對程序的實體、解決衝突流程是否成功，以及更新是否已順利發布。  
-> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。  
-> :::image type="content" source="media/process-detail-path.png" alt-text="從工作狀態連結取得程序詳細資料的逐層探究路徑。":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="從工作狀態連結取得程序詳細資料的逐層探究路徑。":::
 
 ## <a name="next-step"></a>後續步驟
 

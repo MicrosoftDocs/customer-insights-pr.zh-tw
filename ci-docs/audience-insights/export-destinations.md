@@ -1,7 +1,7 @@
 ---
 title: 從 Customer Insights 匯出資料
 description: 管理匯出到共用資料 。
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673313"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732125"
 ---
 # <a name="exports-preview-overview"></a>匯出 (預覽版) 概觀
 
@@ -97,7 +97,9 @@ ms.locfileid: "7673313"
 
 您設定的每個匯出都會有重新整理的排程。 在重新整理期間，系統會尋找新的或更新資料是要包含在匯出中的。 根據預設，會在每次[已排程的系統重新整理](system.md#schedule-tab)中執行匯出。 您可以自訂重新整理排程，或將它關閉以手動執行匯出。
 
-匯出排程可依您的環境狀態決定。 如果排程的匯出應該開始時，[相依性](system.md#refresh-policies)有更新正在進行，則系統會先完成更新，然後執行匯出。 在 **重新整理** 資料行中，您可以看到上次匯出重新整理的時間。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+匯出排程可依您的環境狀態決定。 如果排程的匯出應該開始時，[相依性](system.md#refresh-processes)有更新正在進行，則系統會先完成更新，然後執行匯出。 在 **重新整理** 資料行中，您可以看到上次匯出重新整理的時間。
 
 ### <a name="schedule-exports"></a>匯出排程
 

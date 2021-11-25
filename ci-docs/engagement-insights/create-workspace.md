@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645300"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673372"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>建立新工作區和新增成員
 
@@ -26,17 +26,17 @@ ms.locfileid: "7645300"
 
 ## <a name="create-a-new-workspace"></a>建立新工作區
 
-建立工作區的程序包括設定用來管理工作區的 *環境*。 環境是可以包含一或多個工作區的空間。 您可以使用環境來管理您的工作區和與 Customer Insights 對象見解功能的連線。
+建立工作區的程序包括設定用來管理工作區的 *環境*。 環境是可以包含一或多個工作區的空間。 您可以使用環境來管理您的工作區和與對象見解功能的連接。
 
-1. 從工作區切換器中選取 **新增**。
+1. 從工作區切換器中選取 **+新增**。
 
-   :::image type="content" source="media/new-workspace.png" alt-text="在導覽窗格及描述中帶有標注的 Customer insights 頁面。":::
+   :::image type="content" source="media/new-workspace.png" alt-text="在導覽窗格及說明中帶有標注的 Customer Insights 頁面。":::
 
 1. 請在 **工作區** 窗格輸入 **工作區名稱**。
 
    :::image type="content" source="media/workspace-name.png" alt-text="請鍵入工作區名稱。":::
 
-1. 請選擇您要量值的平台類型 (Web 或 mobile)。
+1. 請選擇您要測量的平台類型 (Web 或 Mobile)。
 
 1. 請選取 **顯示進階設定** 啟用或停用這些非必要設定：
 
