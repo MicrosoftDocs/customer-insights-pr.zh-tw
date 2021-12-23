@@ -1,7 +1,7 @@
 ---
 title: 自訂機器學習模型 | Microsoft Docs
 description: 在 Dynamics 365 Customer Insights 中使用 Azure Machine Learning 的自訂模型。
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032932"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881774"
 ---
 # <a name="custom-machine-learning-models"></a>自訂機器學習模型
+
+> [!NOTE]
+> Machine Learning Studio (傳統) 將於 2024 年 8 月 31 日停止支援。 我們建議您在該日期之前轉換到 [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning)。
+>
+> 從 2021 年 12 月 1 月開始，您將無法建立新的 Machine Learning Studio (傳統) 資源。 到 2024 年 8 月 31 日，您可以繼續使用現有的 Machine Learning Studio (傳統) 資源。 如需詳細資訊，請參閱[遷移至 Azure Machine Learning](/azure/machine-learning/migrate-overview)。
+
 
 **智慧** > **自訂模型** 讓您根據 Azure Machine Learning 模型管理工作流程。 工作流程協助您選擇要用來產生見解的資料，並將結果對應您的統一客戶資料。 如需組建自訂 ML 模型的詳細資訊，請見 [使用 Azure Machine Learning 模型](azure-machine-learning-experiments.md)。
 
@@ -26,7 +32,7 @@ ms.locfileid: "7032932"
 
 ## <a name="prerequisites"></a>先決條件
 
-- 目前此功能支援透過 [Machine Learning Studio (經典版)](https://studio.azureml.net) 和 [Azure Machine Learning 批次處理管道](/azure/machine-learning/concept-ml-pipelines) 發佈的 web 服務。
+- 此功能支援那些透過 [Azure Machine Learning 批次處理管道](/azure/machine-learning/concept-ml-pipelines)發行的 web 服務 。
 
 - 您需要與您的 Azure Studio 執行個體產生關聯的 Azure Data Lake Gen2 儲存體帳戶使用此功能。 如需詳細資訊，請參閱[建立 Azure Data Lake Storage Gen2 儲存體帳戶](/azure/storage/blobs/data-lake-storage-quickstart-create-account)。
 
@@ -48,11 +54,10 @@ ms.locfileid: "7032932"
 
 1. 如果您的 Azure Machine Learning 訂閱與 Customer Insights 位於不同的用戶，請選取 **登入**，並針對所選組織使用您的認證登入。
 
-1. 選取與您的 web 服務相關聯的 **工作區**。 目前列出兩區：適用 Azure Machine Learning v1 (Machine Learning Studio (經典版)) 和 Azure Machine Learning v2 (Azure Machine Learning)。 如果您不確定哪個工作區適用您的 Machine Learning Studio (經典版) web 服務，請選取 **任一個**。
+1. 選取與您的 web 服務相關聯的 **工作區**。 
 
-1. 在 **包含您的模型的下拉式選單的 Web 服務** 中選擇 Machine Learning Studio (經典版) web 服務或 Azure Machine Learning 管道。 然後選取 **下一步**。
-   - 瞭解更多有關 [Machine Learning Studio (經典版) 中發佈 Web 服務](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - 深入瞭解關於 [使用 Designer 程式](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) 或 [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) 發佈 Azure Machine Learning 中的管道。 您的管道必須在 [管道端點](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) 下發佈。
+1. **在包含您的模型 Web 服務** 下拉式清單中，選擇 Azure Machine Learning 管道。 然後選取 **下一步**。    
+   深入瞭解關於 [使用 Designer 程式](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) 或 [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) 發佈 Azure Machine Learning 中的管道。 您的管道必須在 [管道端點](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) 下發佈。
 
 1. 各 **Web 服務輸入** 方面，請從對象見解選取符合的 **實體** 並選取 **下一步**。
    > [!NOTE]
@@ -62,9 +67,6 @@ ms.locfileid: "7032932"
    > ![設定工作流程。](media/intelligence-screen2-updated.png "設定工作流程")
 
 1. 請在 **模型輸出參數** 步驟中設定下列屬性：
-   - Machine Learning Studio (經典版)
-      1. 輸入您想讓 Web 服務輸出結果流入的輸出 **實體名稱**。
-   - Azure Machine Learning
       1. 輸入您想讓管道輸出結果流入的輸出 **實體名稱**。
       1. 請從下拉式選單選取您的批次處理管道的 **輸出資料存放區參數名稱**。
       1. 請從下拉式選單選取您的批次處理管道的 **輸出路徑參數名稱**。
@@ -93,9 +95,6 @@ ms.locfileid: "7032932"
 1. 各 **Web 服務輸入** 方面，您可以從對象見解更新符合的 **實體**。 然後選取 **下一步**。
 
 1. 請在 **模型輸出參數** 步驟中設定下列屬性：
-   - Machine Learning Studio (經典版)
-      1. 輸入您想讓 Web 服務輸出結果流入的輸出 **實體名稱**。
-   - Azure Machine Learning
       1. 輸入您想讓管道輸出結果流入的輸出 **實體名稱**。
       1. 請針對您的測試管道選取 **輸出資料存放區參數名稱**。
       1. 請針對您的測試管道選取 **輸出路徑參數名稱**。

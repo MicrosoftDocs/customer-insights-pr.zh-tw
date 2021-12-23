@@ -1,7 +1,7 @@
 ---
 title: 啟動客戶細分的同意規則
 description: 依照這些步驟，在對象見解中連結同意資料並啟動同意檢查。 系統管理員也可以停用同意檢查。
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790767"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884064"
 ---
 # <a name="activate-consent-rules"></a>啟用同意規則
 
@@ -49,3 +49,6 @@ ms.locfileid: "7790767"
 1. 選取 **同意 (預覽版)** 索引標籤。
 
 1. 在 **啟用同意檢查** 區段中，切換設定為 **關閉**。
+
+> [!TIP]
+> 若要停止使用同意管理功能，請參閱[同意中心 (預覽版) 中的系統設定](../consent-management/system-settings.md)。

@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770107"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884206"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -46,6 +46,7 @@ ms.locfileid: "7770107"
 - HERE Technologies 提供的 [位置資料](enrichment-here.md) 
 - 透過安全檔案傳輸通訊協定 (SFTP) 的 [自訂資料](enrichment-SFTP-custom-import.md) 
 - 由 Microsoft 提供的 [Azure 地圖服務](enrichment-azure-maps.md)
+- Microsoft 提供的[客戶參與度資料](enrichment-office.md)
 
 ---
 

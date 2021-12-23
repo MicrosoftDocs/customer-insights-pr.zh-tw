@@ -1,7 +1,7 @@
 ---
 title: 使用服務主體連接到 Azure Data Lake Storage 帳戶
 description: 使用 Azure 服務主體連接到您的 Data Lake。
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645162"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900233"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>使用 Azure 服務主體連接到 Azure Data Lake Storage 帳戶
 
-使用 Azure 服務的自動化工具應始終具有限縮權限。 有別於以完整權限使用者身分登入應用程式的作法，Azure 提供服務主體。 深入閱讀，了解如何使用 Azure 服務本體與連接 Dynamics 365 Customer Insights 與 Azure Data Lake Storage 帳戶而非使用儲存體帳戶金鑰。 
+本文討論如何使用 Azure 服務主體 (而不是儲存帳戶金鑰) 來把 Dynamics 365 Customer Insights 連結至 Azure Data Lake Storage 帳戶。 
 
-您可以使用服務主體安全地[新增 Common Data Model 資料夾為資料來源或編輯它](connect-common-data-model.md)，或者[建立或更新環境](create-environment.md)。
+使用 Azure 服務的自動化工具應始終具有限縮權限。 有別於以完整權限使用者身分登入應用程式的作法，Azure 提供服務主體。 您可以使用服務主體，安全地將 [Common Data Model 資料夾新增或編輯成資料來源](connect-common-data-model.md)或是[建立或更新環境](create-environment.md)。
 
 > [!IMPORTANT]
 > - 使用服務主體的 Data Lake 儲存帳戶必須[啟用階層命名空間](/azure/storage/blobs/data-lake-storage-namespace)。
-> - 您需要適用您的 Azure 訂閱的系統管理員權限建立服務主體。
+> - 您需要 Azure 訂閱的系統管理員權限，才能建立服務主體。
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>為 Customer Insights 建立 Azure 服務主體
 
-在為對象見解或參與見解建立新的服務主體之前，請檢查組織中是否已存在該主體。
+在建立 Customer Insights 的新服務主體之前，請檢查它是否已存在於組織中。
 
 ### <a name="look-for-an-existing-service-principal"></a>尋找現有的服務主體
 

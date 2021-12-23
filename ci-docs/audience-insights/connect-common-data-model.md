@@ -1,7 +1,7 @@
 ---
 title: 將常用資料模型資料連接到 Azure Data Lake 帳戶
 description: 搭配使用 Azure Data Lake Storage 的 Common Data Model 資料處理。
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033116"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900187"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>使用 Azure Data Lake 帳戶連接至 Common Data Model 資料夾
 
@@ -30,7 +30,7 @@ ms.locfileid: "7033116"
 
 - 您想要連接和內嵌資料的 Azure Data Lake 必須與 Dynamics 365 Customer Insights 環境位於相同的 Azure 區域中。 不支援從不同 Azure 區域的 Data Lake 連接到 Common Data Model 資料夾。 若要瞭解環境的 Azure 區域，請前往對象見解中的 **系統管理員** > **系統** > **關於**。
 
-- 儲存在線上服務中的資料可能會儲存在有別於在 Dynamics 365 Customer Insights 處理或儲存的資料位置。匯入或連接至儲存在線上服務的資料，即表示您同意可以將資料傳輸或儲存至 Dynamics 365 Customer Insights。 [在 Microsoft 信任中心深入了解。](https://www.microsoft.com/trust-center)
+- 儲存在線上服務中的資料可能會儲存在跟 Dynamics 365 Customer Insights 處理或儲存資料不同的位置。 匯入或連接至儲存在線上服務的資料，即表示您同意可以將資料傳輸或儲存至 Dynamics 365 Customer Insights。 [在 Microsoft 信任中心深入了解](https://www.microsoft.com/trust-center)。
 
 ## <a name="connect-to-a-common-data-model-folder"></a>連線至 Common Data Model 資料夾
 
@@ -38,12 +38,11 @@ ms.locfileid: "7033116"
 
 1. 選取 **新增資料來源**。
 
-1. 選取 **連接到 Common Data Model 資料夾**，輸入資料來源 **名稱**，然後選取 **下一步**。 命名方針： 
-   - 名稱必須以字母開頭。
-   - 只能使用字母和數字。 不可以使用空格和特殊字元。
-   - 接受 3 到 64 個字元。
+1. 選取 **Azure Data Lake Storage**，輸入資料來源的 **名稱**，然後選取 **下一步**。
 
-1. 您可以在使用資源式選項和訂閱式選項之間選擇進行驗證。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 輸入 **容器** 資訊並選取 **下一步**。
+   - 如果出現提示，請選取一個與您的產業相關的範例資料集，然後選取 **下一步**。 
+
+1. 您可以在使用資源式選項和訂閱式選項之間選擇進行驗證。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 輸入 **伺服器位址**，選取 **登入**，然後選取 **下一步**。
    > [!div class="mx-imgBorder"]
    > ![在 Azure Data Lake 輸入新連接詳細資料的對話方塊。](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ ms.locfileid: "7033116"
    > [!NOTE]
    > 所有關聯到環境中另一個資料來源的 model.json 或 manifest.json 檔案將不會顯示在清單中。
 
-1. 您可以在選取的 model.json 或 manifest.json f檔案中取得可用實體清單。 您可以檢閱可用實體清單並從中選取實體，然後選取 **儲存**。 所有選取的實體將從新資料來源內嵌。
+1. 您將會在選定的 model.json 或 manifest.json 檔案中看到可用實體的清單。 檢閱並從用實體清單中選取，然後選取 **儲存**。 所有選取的實體將從新資料來源內嵌。
    > [!div class="mx-imgBorder"]
    > ![顯示 model.json 檔案中實體清單的對話方塊。](media/review-entities.png)
 
-8. 指明您要啟用資料剖析功能的資料實體並選取 **儲存**。 資料分析可啟用分析與其他功能。 您可以選取整個實體，這會選取實體的所有屬性或選取您選擇的特定屬性。 根據預設，沒有實體會啟用於資料剖析。
+8. 指示您想啟用資料分析的資料實體，接著選取 **儲存**。 資料分析可啟用分析與其他功能。 您可以選取整個實體，這會選取實體的所有屬性或選取您選擇的特定屬性。 根據預設，沒有實體會啟用於資料剖析。
    > [!div class="mx-imgBorder"]
    > ![顯示資料剖析的對話方塊。](media/dataprofiling-entities.png)
 

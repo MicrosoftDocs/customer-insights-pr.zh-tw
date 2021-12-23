@@ -1,7 +1,7 @@
 ---
 title: Azure 機器學習實驗
 description: 在 Dynamics 365 Customer Insights 中使用 Azure 機器學習式模型。
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033162"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881728"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>使用 Azure 機器學習式模型
 
-Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務見解的機器學習模型來源。 整合 Customer Insights 和 Machine Learning Studio (經典版) 和 Azure 機器學習的 Customer Insights 以使用您自己的自訂模型。 請參閱 [Machine Learning Studio (經典版) 實驗](machine-learning-studio-experiments.md) 了解以 Machine Learning Studio (經典版) 為基礎的實驗範例。 
+Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務見解的機器學習模型來源。 Customer Insights 可與 Azure Machine Learning 整合來使用您自己的自訂模型。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 ## <a name="work-with-azure-machine-learning-designer"></a>搭配 Azure Machine Learning 設計師處理
 
-Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合與模組，類似 Machine Learning Studio (經典版)。 如果已經組態，您從設計師建立的批次處理管道就能整合到 Customer Insights。 
+Azure Machine Learning 設計師提供了視覺效果的畫布，您可以在其中拖放資料集和模組。 如果已經組態，您從設計師建立的批次處理管道就能整合到 Customer Insights。 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>搭配 Azure Machine Learning SDK 處理
 

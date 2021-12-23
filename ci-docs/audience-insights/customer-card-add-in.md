@@ -1,20 +1,20 @@
 ---
-title: Dynamics 365 應用程式的客戶卡片增益集
+title: Dynamics 365 應用程式的客戶卡片增益集 (影片)
 description: 以此增益集顯示位於 Dynamics 365 應用程式中的對象見解資料。
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792018"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903977"
 ---
 # <a name="customer-card-add-in-preview"></a>客戶卡片增益集 (預覽)
 
@@ -34,7 +34,7 @@ ms.locfileid: "7792018"
   - **量值控制項**：需要類型客戶屬性[組態的量值](measures.md)。
   - **智慧控制項**：需要以[預測](predictions.md)或[自訂模型](custom-models.md)產生的資料。
   - **客戶詳細資料控制項**：設定檔的所有欄位皆可在統一的客戶設定檔使用。
-  - **擴充控制項**：需要有效[擴充](enrichment-hub.md)套用到客戶設定檔。 卡片增益集支援下列擴充：[品牌](enrichment-microsoft.md)(由 Microsoft 提供的)、[興趣](enrichment-microsoft.md)(由 Microsoft 提供的)。
+  - **擴充控制項**：需要有效[擴充](enrichment-hub.md)套用到客戶設定檔。 卡片增益集增益集支援以下擴充：Microsoft 提供的[品牌](enrichment-microsoft.md)、Microsoft 提供的[興趣](enrichment-microsoft.md)、Microsoft 提供的 [Office 參與度資料](enrichment-office.md)。
   - **連絡人控制項**：需要連絡人類型的語義實體定義。
   - **時間表控制項**：需要[已組態的活動](activities.md)。
 

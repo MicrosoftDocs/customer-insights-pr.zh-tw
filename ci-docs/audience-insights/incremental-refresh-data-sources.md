@@ -1,7 +1,7 @@
 ---
 title: 對 Power Query 式資料來源的增量重新整理
 description: 針對以 Power Query 為基礎的大型資料來源重新整理其新增及更新資料。
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377824"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900245"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>適用於以 Power Query 為基礎之資料來源的累加重新整理
+
+本文討論如何對基於 Power Query 的資料來源設定累加式重新整理。
 
 對資料來源進行累加重新整理可提供下列好處：
 
@@ -30,9 +32,9 @@ ms.locfileid: "7377824"
 
 1. [以 Power Query 為基礎建立新的資料來源](connect-power-query.md)。
 
-1. 提供資料來源的名稱。
+1. 提供資料來源的 **名稱**。
 
-1. 選取支援增量重新整理的資料來源，例如 Azure SQL 資料庫。
+1. 選取支援累加式重新整理的資料來源，例如 [ Azure SQL 資料庫](/power-query/connectors/azuresqldatabase)。
 
 1. 選取要內嵌的實體或資料表。
 

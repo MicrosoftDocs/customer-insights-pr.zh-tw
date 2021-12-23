@@ -1,7 +1,7 @@
 ---
 title: 新功能以及近期即將推出的功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753107"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884252"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
@@ -26,6 +26,18 @@ ms.locfileid: "7753107"
 
 > [!TIP]
 > 若要送出和票選功能要求和產品建議，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="november-2021-updates"></a>2021 年 11 月更新
+
+2021 年 11 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="segment-membership-now-available-in-dataverse"></a>客戶細分成員資格現在可在 Dataverse 中使用
+
+客戶個人資料的客戶細分成員資格資訊，以及客戶個人資料和見解，現在可在 Dataverse 中使用。 Dynamics 365 動作應用程式和模型導向應用程式可以使用此資料，來查詢特定客戶的客戶細分成員資格詳細資料。
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>活動支援商務客戶連絡人層級詳細資料
+
+您現在可以設定、顯示及篩選商務客戶活動時間表中的連絡人活動，以更清楚地瞭解哪些客戶連絡人參與特定活動。
 
 ## <a name="october-2021-updates"></a>2021 年 10 月更新
 

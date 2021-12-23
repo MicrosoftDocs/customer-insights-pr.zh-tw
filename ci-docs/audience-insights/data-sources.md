@@ -1,7 +1,7 @@
 ---
 title: 使用資料來源內嵌資料
 description: 了解如何從不同的來源匯入資料。
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732117"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900326"
 ---
 # <a name="data-sources-overview"></a>資料來源概觀
 
@@ -25,19 +25,22 @@ Dynamics 365 Customer Insights 中的對象見解功能從一組廣泛的來源�
 
 ## <a name="add-a-data-source"></a>新增資料來源
 
-根據您所選擇的選項，參考有關如何新增資料來源的詳細文章。
+根據您選擇的選項，查閱詳細文章了解如何新增資料來源。
 
-有三種主要方式可以新增資料來源：
+您可以新增下列資料來源：
 
-- [透過數十個 Power Query 連接器](connect-power-query.md)
-- [從 Common Data Model 資料夾](connect-common-data-model.md)
-- [從您自己的 Microsoft Dataverse 資料湖](connect-dataverse-managed-lake.md)
+- [Power Query 連接器](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse 湖](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> 如果您使用的是試用版，匯入方法區段會包含 **Customer Insights 資料庫** 選項。 選擇此選項則可選取給各種產業使用的範例資料集。 如需詳細資訊，請參閱 [Dynamics 365 Customer Insights 試用](../trial-signup.md)。
 
 ## <a name="add-data-from-on-premises-data-sources"></a>從內部部署資料來源新增資料
 
-Microsoft Power Platform 資料流程支援在對象見解中從內部部署的資料來源內嵌資料。 設定環境時，[在 Microsoft Dataverse 提供環境 URL](create-environment.md)，便可以在 Customer Insights 中啟用資料流程。
+Microsoft Power Platform 資料流程支援在對象見解中從內部部署的資料來源內嵌資料。 若要在 Customer Insights 中啟用資料流程，可以在設定環境時，[提供 Microsoft Dataverse環境 URL](create-environment.md)。
 
-將 Dataverse 環境與 Customer Insights 關聯之後，所建立的資料來源預設使用 [Power Platform 資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 資料流程使用資料閘道來支援內部部署連線。 在關聯 Dataverse 環境前就已存在的資料來源，請移除並重新建立，才能[使用內部部署資料閘道](/data-integration/gateway/service-gateway-app)。
+在將 Dataverse 環境與 Customer Insights 關聯之後，根據預設，新建立的資料來源使用 [Power Platform 資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 資料流程使用資料閘道來支援內部部署連線。 您可以移除在 Dataverse 環境關聯之前[使用內部部署資料閘道](/data-integration/gateway/service-gateway-app)的資料來源並重新建立。
 
 來自現有 Power BI 或 Power Apps 環境的資料閘道將會顯示，並且可以在 Customer Insights 中重複使用。 資料來源頁面顯示的連結，您可移至 Microsoft Power Platform 查看和設定內部部署資料閘道的環境。
 
