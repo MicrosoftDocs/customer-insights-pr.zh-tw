@@ -1,5 +1,5 @@
 ---
-title: 訂閱流失預測 (影片)
+title: 訂閱流失預測 (含影片)
 description: 預測客戶是否面臨不再使用您公司的訂閱產品或服務的風險。
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903939"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967691"
 ---
 # <a name="subscription-churn-prediction-preview"></a>訂閱流失預測 (預覽)
 
@@ -77,7 +77,7 @@ ms.locfileid: "7903939"
 1. 輸入 **訂閱結束後經過的天數** 的數值，表示您的業務考量中將客戶視為已流失狀態的天數。 這段時間通常適合像優惠方案或其他為避免失去客戶而在行銷上所做努力這樣的商務活動。
 1. 輸入 **展望未來以預測流失的天數** 以設定要預測流失的時間範圍。 例如，若要預測客戶在接下來 90 天的流失風險，以配合您的行銷挽留工作。 根據您的特定業務需求不同，預測較長或較短時間的流失風險可能會更難解決在流失風險個人資料中的因素。 選取 **下一步** 以繼續
    >[!TIP]
-   > 您隨時都可以選取 **儲存後關閉**，將預測儲存為草稿。 您可在 **我的預測** 索引標籤中找到草稿預測來繼續。
+   > 您隨時可以選取 **儲存草稿**，儲存預測草稿。 您可在 **我的預測** 索引標籤中找到草稿預測來繼續。
 
 ### <a name="add-required-data"></a>新增必要資料
 

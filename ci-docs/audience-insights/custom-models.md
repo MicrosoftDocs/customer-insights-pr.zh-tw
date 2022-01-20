@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881774"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967645"
 ---
 # <a name="custom-machine-learning-models"></a>自訂機器學習模型
 
@@ -40,6 +40,8 @@ ms.locfileid: "7881774"
 
    > [!NOTE]
    > 在您的 Customer Insights 執行個體與選取的 Azure web 服務或工作流程中的準銷售案源之間傳輸資料。 當您將資料轉移到 Azure 服務時，請確保將服務設為以必要的方式和位置處理資料，以符合組織中對此資料的任何法律或法規要求。
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>新增工作流程
 

@@ -1,7 +1,7 @@
 ---
-title: Dynamics 365 應用程式的客戶卡片增益集 (影片)
+title: Dynamics 365 應用程式的客戶卡片增益集 (含影片)
 description: 以此增益集顯示位於 Dynamics 365 應用程式中的對象見解資料。
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903977"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945417"
 ---
 # <a name="customer-card-add-in-preview"></a>客戶卡片增益集 (預覽)
 
@@ -27,12 +27,12 @@ ms.locfileid: "7903977"
 ## <a name="prerequisites"></a>先決條件
 
 - 增益集只適用在 Dynamics 365 模型導向應用程式 (例如 Sales 或 Customer Service)，版本 9.0 或更新的版本。
-- 為了讓您的 Dynamics 365 資料能對應對象見解客戶設定檔，需要[從 Dynamics 365 App 使用 Microsoft Dataverse 連接器擷取](connect-power-query.md)。
+- 為了讓您的 Dynamics 365 資料能對應對象見解的客戶個人資料，我們建議[使用 Microsoft Dataverse 連接器從 Dynamics 365 App 擷取](connect-power-query.md)。 如果您使用不同的方法來擷取 Dynamics 365 連絡人(或客戶)，則必須確認 `contactid`(或 `accountid`) 欄位[在資料整合程序的對應步驟中，已設為該資料來源的主索引鍵](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。 
 - 客戶卡片增益集的 Dynamics 365 使用者全部都必須[新增為](permissions.md)對象見解的使用者，才能查看資料。
 - 在對象見解中必要有[完成設定的搜尋和篩選功能](search-filter-index.md)才能查詢用來作業的資料。
 - 每個增益集控制項仰賴對象見解中的特定資料。 某些資料和控制項只能在特定類型的環境中使用。 如果因為選取的環境類型無法使用控制項，增益集組態將會通知您。 了解更多有關[環境使用案例](work-with-business-accounts.md)。
   - **量值控制項**：需要類型客戶屬性[組態的量值](measures.md)。
-  - **智慧控制項**：需要以[預測](predictions.md)或[自訂模型](custom-models.md)產生的資料。
+  - **智慧控制項**：需要使用[預測或自訂模型](predictions-overview.md)生成資料。
   - **客戶詳細資料控制項**：設定檔的所有欄位皆可在統一的客戶設定檔使用。
   - **擴充控制項**：需要有效[擴充](enrichment-hub.md)套用到客戶設定檔。 卡片增益集增益集支援以下擴充：Microsoft 提供的[品牌](enrichment-microsoft.md)、Microsoft 提供的[興趣](enrichment-microsoft.md)、Microsoft 提供的 [Office 參與度資料](enrichment-office.md)。
   - **連絡人控制項**：需要連絡人類型的語義實體定義。

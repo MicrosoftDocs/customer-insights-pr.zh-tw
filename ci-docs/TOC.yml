@@ -80,7 +80,7 @@
       items:
         - name: 擴充客戶設定檔
           href: audience-insights/enrichment-hub.md
-        - name: 品牌與興趣親和性
+        - name: 品牌與興趣
           href: audience-insights/enrichment-microsoft.md
         - name: 增強型地址
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: 預測交易流失
               href: audience-insights/predict-transactional-churn.md
+            - name: 在客戶意見反應中的情感分析
+              href: audience-insights/sentiment-analysis.md
             - name: 使用 Azure Machine Learning 的自訂模型
               href: audience-insights/custom-models.md
             - name: 完成部分遺失的資料

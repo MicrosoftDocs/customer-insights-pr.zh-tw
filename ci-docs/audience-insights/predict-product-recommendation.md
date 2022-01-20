@@ -1,7 +1,7 @@
 ---
 title: 產品建議預測
 description: 預測一個客戶可能購買或互動的產品。
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494529"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967784"
 ---
 # <a name="product-recommendation-prediction-preview"></a>產品建議預測 (預覽版)
 
@@ -79,11 +79,11 @@ ms.locfileid: "7494529"
 1. 設定想要向客戶建議的 **產品數目**。 依照傳送方式此值填充資料。 如果您可以建議三種產品，請依此設定此值。
    
    >[!TIP]
-   > 您隨時都可以選取 **儲存後關閉**，將預測儲存為草稿。 您可以在 **我的預測** 索引標籤中找到預測草稿。
+   > 您隨時可以選取 **儲存草稿**，儲存預測草稿。 您可以在 **我的預測** 索引標籤中找到預測草稿。
 
-1. 如果您想 **建議客戶最近購買過的產品**，請選擇。
+1. 選擇是否要在 **預期重複的採購** 欄位中包括客戶最近購買的產品。
 
-1. 如果您已選取 *不要* 建議最近購買過的產品，請設定 **回顧視窗**。 此設定指定模型向使用者再次推薦產品前，考量的時間範圍。 例如，指定客戶每兩年購買一台筆記本電腦。 此視窗將查看過去兩年的購買歷史記錄，如果找到項目，則將該項目從建議中篩選掉。
+1. 設定 **回顧範圍**。 此設定指定模型向使用者再次推薦產品前，考量的時間範圍。 例如，指定客戶每兩年購買一台筆記本電腦。 此視窗將查看過去兩年的購買歷史記錄，如果找到項目，則將該項目從建議中篩選掉。
 
 1. 選取 **下一個**
 

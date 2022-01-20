@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
-ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
+ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
+ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "7417195"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "7975114"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>在 Dynamics 365 Marketing 中使用客戶細分 (預覽版)
 
@@ -45,7 +45,7 @@ ms.locfileid: "7417195"
 
 1. 在 **伺服器管理帳戶** 區段中，選取 **登入**，然後選擇 Dynamics 365 Marketing 帳戶。
 
-1. 將客戶識別碼欄位對應到 Dynamics 365 連絡人識別碼。
+1. 將客戶實體中的「連絡人識別碼」欄位對應至「Dynamics 365 連絡人識別碼」。
 
 1. 選取 **儲存** 來完成連接。 
 

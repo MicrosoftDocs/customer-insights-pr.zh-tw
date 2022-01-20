@@ -1,7 +1,7 @@
 ---
-title: 交易流失預測 (影片)
+title: 交易流失預測 (含影片)
 description: 預測客戶是否面臨不再購買您的產品或服務的風險。
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904062"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967737"
 ---
 # <a name="transaction-churn-prediction-preview"></a>交易流失預測 (預覽版)
 
@@ -103,10 +103,10 @@ ms.locfileid: "7904062"
 
 1. 選取 **客戶流失模型 (預覽版)** 圖格和 **使用此模型**。
 
-1. 請在 **客戶流失模型** 窗格中選擇 **交易** 並選取 **開始使用**。
+1. 請在 **客戶流失模型 (預覽)** 窗格中選擇 **交易** 並選取 **開始使用**。
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="客戶流失模型窗格中的選取交易選項螢幕擷取畫面。":::
-
+ 
 ### <a name="name-model"></a>命名模型
 
 1. 提供模型的名稱，以便與其他模型有所區分。
@@ -117,11 +117,11 @@ ms.locfileid: "7904062"
 
 ### <a name="define-customer-churn"></a>定義客戶流失
 
-1. 設定天數視窗以便預測 **找出下一個可能流失的客戶** 欄位中的流失情況。 例如預測您的客戶在未來 90 天流失的風險，以便符合您的行銷留客心血。 預測較長或較短期間的風險會更難解決您的流失風險設定檔中的因素，但得視您的特定業務需求而定。
+1. 設定 **預測範圍**。 例如預測您的客戶在未來 90 天流失的風險，以便符合您的行銷留客心血。 預測較長或較短期間的風險會更難解決您的流失風險設定檔中的因素，但得視您的特定業務需求而定。
    >[!TIP]
-   > 您隨時都可以選取 **儲存後關閉**，將預測儲存為草稿。 您可在 **我的預測** 索引標籤中找到草稿預測來繼續。
+   > 您隨時可以選取 **儲存草稿**，儲存預測草稿。 您可在 **我的預測** 索引標籤中找到草稿預測來繼續。
 
-1. 在 **客戶未於下列期間購買，視同已流失：** 欄位中輸入天數以便定義流失情況。 例如倘若客戶在過去 30 天內未曾購買，則可能視同您已流失他們的生意。 
+1. 在 **流失定義** 欄位中輸入天數來定義流失。 例如倘若客戶在過去 30 天內未曾購買，則可能視同您已流失他們的生意。 
 
 1. 選取 **下一步** 以繼續。
 
@@ -129,19 +129,16 @@ ms.locfileid: "7904062"
 
 1. 側邊窗格包含所需交易記錄或購買歷史資訊，在其中選取 **新增資料**，然後選擇活動類型。
 
-1. 在 **選擇活動** 底下，在選取的活動中，選擇計算要關注的特定活動。
+1. 在 **選取活動** 底下，從選取的活動類型中，選取您想要進行計算的特定活動。
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="側邊窗格顯示在語義類型底下選擇特定活動。":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="側邊窗格顯示在語義類型底下選擇特定活動。":::
 
-1. 如果尚未將活動對應至語義類型，請選取 **編輯** 來對應。 對應語義式活動的引導式體驗會打開。 在選取的活動類型中將資料對應到對應的欄位。
+   如果尚未將活動對應至語義類型，請選取 **編輯** 來對應。 對應語義式活動的引導式體驗會打開。 在選取的活動類型中將資料對應到對應的欄位。
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="設定活動類型的頁面。":::
+1. 將語義屬性對應至執行模型必須的欄位。 如果未填滿下方欄位，請從您的購買歷史記錄實體將關係組態為 *客戶* 實體。 選取 **儲存**。
 
-1. 將活動對應至對應的語義類型之後，請選取 **下一步** 繼續
+1. 在 **新增必要的資料** 步驟中，如果您不想要新增其他活動，請選取 **下一步** 繼續。
 
-1. 將語義屬性對應至執行模型必須的欄位。 如果未填滿下方欄位，請從您的購買歷史記錄實體將關係組態為 *客戶* 實體。
-
-1. 選取 **下一步**。
 
 # <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 

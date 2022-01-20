@@ -1,5 +1,5 @@
 ---
-title: 將 Customer Insights 資料匯出至 SFTP 主機 (影片)
+title: 將 Customer Insights 資料匯出至 SFTP 主機 (含影片)
 description: 了解如何設定連接並匯出至 SFTP 位置。
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bb73c49cf87657b71e0c2f5934662b062eeffb21
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904109"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934877"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>將客戶細分和其他資料匯出至 SFTP (預覽版)
 
@@ -28,6 +28,7 @@ ms.locfileid: "7904109"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 目前不支援在防火牆後的 SFTP 目標。 
 - 匯出執行時間依您的系統效能而定。 我們建議伺服器最小配置為兩個 CPU 核心和 1 Gb 的記憶體。 
 - 匯出最多 1 億份客戶設定檔的實體時，在使用兩個 CPU 核心和 1 Gb 記憶體的最少建議配置時，可能需要 90 分鐘。 
 
