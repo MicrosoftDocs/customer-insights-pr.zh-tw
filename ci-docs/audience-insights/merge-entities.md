@@ -1,7 +1,7 @@
 ---
 title: 將實體合併到資料統整中
 description: 合併實體以建立統整的客戶設定檔。
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732762"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>合併實體
 
 合併階段是資料統整程序的最後一個階段。 其目的在於協調衝突的資料。 衝突資料的範例包括位於兩個資料集中的客戶名稱，但在各資料集中略有不同 (例如「Grant Marshall」與「Grant Marshal」)，或是格式不同的電話號碼 (617-803-091X 與 617803091X)。 合併這些相互衝突的資料點，是依屬性逐一進行。
@@ -99,11 +94,13 @@ ms.locfileid: "7732762"
 
 1. 選取 **儲存** 並 **執行** 來處理變更。 
 
-## <a name="manually-combine-fields"></a>手動結合欄位
+## <a name="combine-fields-manually"></a>手動合併欄位
 
-手動指定合併屬性。 
+手動指定合併屬性。
 
-1. 在 **合併** 頁面上，選取 **結合欄位**。
+1. 在 **合併** 頁面上，選取 **合併**。
+
+1. 選擇 **欄位** 選項。
 
 1. 在 **以...合併欄位** 中，以下拉式清單指定合併入選方原則。
 
@@ -114,6 +111,26 @@ ms.locfileid: "7732762"
 1. 選取 **完成** 套用變更。
 
 1. 選取 **儲存** 並 **執行** 來處理變更。 
+
+## <a name="combine-a-group-of-fields"></a>合併一組欄位群組
+
+將一組欄位當作單一單位處理。 例如，當我們的記錄包含欄位地址 1、地址 2、市/鎮、州/省和郵遞區號時。 想要讓我們的資料變得更加完整，我們可能不想要合併不同記錄的地址 2
+
+1. 在 **合併** 頁面上，選取 **合併**。
+
+1. 選擇 **欄位群組** 選項。
+
+1. 在 **以...排名群組** 中，以下拉式清單指定合併入選方原則。
+
+1. 如果您要新增其他欄位或其他群組到欄位，請選取 **新增** 並選擇。
+
+1. 提供每個合併欄位的 **名稱** 和 **輸出名稱**。
+
+1. 提供群組欄位的 **名稱**。 
+
+1. 選取 **完成** 套用變更。
+
+1. 選取 **儲存** 並 **執行** 來處理變更。
 
 ## <a name="change-the-order-of-fields"></a>變更欄位順序
 

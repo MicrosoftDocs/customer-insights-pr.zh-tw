@@ -1,7 +1,7 @@
 ---
 title: 新功能以及近期即將推出的功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 12/02/2021
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,62 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884252"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 我們很高興宣布我們最新的更新！ 本文摘要說明公開預覽功能、正式發行增強功能以及功能更新。 若要查看長期功能計劃，請參閱 [Dynamics 365 和 Power Platform 發行計劃](/dynamics365/release-plans/)。
 
 我們會逐一在各地區推出更新。 因此可能會在特定地區提前看到其他地區尚未推出的功能。 除非另有指示，您不需要採取任何動作，我們會在不停機的情況下自動更新應用程式。
 
 > [!TIP]
-> 若要送出和票選功能要求和產品建議，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+> 若要提出功能要求和產品建議並票選，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+
+## <a name="december-2021-updates"></a>2021 年 12 月更新
+
+2021 年 12 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>將 Customer Insights 日誌轉寄至 Azure 監視器
+
+Customer Insights 提供與 Azure 監視器的直接整合。 此功能包括稽核事件和作業事件。 Azure 監視器資源記錄可讓您監控並把記錄傳送至 Azure 儲存體、Azure Log Analytics，或將它們串流至 Azure 事件中樞。
+
+如需詳細資訊，請參閱[使用 Azure 監視器在 Dynamics 365 Customer Insights 中進行日誌轉發 (預覽版)](diagnostics.md)。
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>使用參與度資料擴充客戶個人資料
+
+使用 Microsoft Office 365 中的資料，經由 Office 365 應用程式以參與度的見解來擴充客戶個人資料。 參與度由電子郵件和會議活動組成，並根據客戶等級進行彙總。 例如，來自商務客戶的電子郵件數量或與該客戶的會議數量。 不會共用個別使用者的任何資料。 此擴充功能只有在英國、歐洲和北美地區才能使用。
+
+如需詳細資訊，請參閱 [使用參與度資料擴充客戶設定檔 (預覽版)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>進階資料整合功能
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>在個別屬性等級啟用衝突解決策略
+
+當在實體中重複資料刪除客戶記錄時，您可能不想要將完整記錄選為入選方。 現在我們允許您根據每個屬性的規則，從不同記錄合併最合適的欄位。 例如，您可以選擇保留最近的電子郵件，「及」來自不同記錄的最完整地址。 
+
+在單一實體中進行重複資料刪除和合併記錄時，您現在可以為各個屬性定義不同的合併規則。 以前，我們只會讓您選取單一合併規則 (根據新近度資料完整性保留記錄)，而且規則已在記錄等級套用至所有屬性。 當在記錄 A 中找到一些您要保留的資料，而且在記錄 B 中找到其他適當的資料時，過去那種方式並不理想。
+
+如需更多資訊，請見 [定義比對實體的重複資料刪除](match-entities.md#define-deduplication-on-a-match-entity)。
+
+#### <a name="custom-rules-for-matching"></a>適用比對的自訂規則
+
+有時您必須指定一般規則的例外，才能「不要」比對記錄。 當多個人員有夠多的相同資訊，系統將它們比對成單一個體時，就會發生這種現象。 例如，有相同姓氏的雙胞胎，居住在同一個市/鎮，並有著一樣的出生日期。
+
+例外會確保可以在整合規則中處理掉不正確的資料整合。 您可以將多個例外新增至規則。
+
+如需詳細資訊，請參閱[在規則中加入例外](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>提供其他衝突解決策略，並啟用屬性群組
+
+此功能可讓您將一組欄位當成單一單位處理。 例如，當我們的記錄包含欄位地址 1、地址 2、市/鎮、州/省和郵遞區號時。 想要讓我們的資料變得更加完整，我們可能不想要合併不同記錄的地址 2。
+
+您現在可以組合一組相關的欄位，並將單一合併策略套用至群組。 
+
+如需詳細資訊，請參閱[合併欄位群組](merge-entities.md#combine-a-group-of-fields)。
+
 
 ## <a name="november-2021-updates"></a>2021 年 11 月更新
 

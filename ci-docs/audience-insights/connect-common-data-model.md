@@ -1,7 +1,7 @@
 ---
 title: 將常用資料模型資料連接到 Azure Data Lake 帳戶
 description: 搭配使用 Azure Data Lake Storage 的 Common Data Model 資料處理。
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900187"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>使用 Azure Data Lake 帳戶連接至 Common Data Model 資料夾
 
 本文章提供如何使用您的 Azure Data Lake Storage Gen2 帳戶從 Common Data Model 資料夾內嵌資料的資訊。
@@ -26,7 +21,9 @@ ms.locfileid: "7900187"
 
 - 資料內嵌獨家支援 Azure Data Lake *Gen2* 儲存體帳戶。 您無法使用 Azure Data Lake Gen1 儲存體帳戶內嵌資料。
 
-- 若要以 Azure 服務主體驗證，請確定它已在您的租用戶中組態。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。
+- Azure Data Lake storage 帳戶必須已 [啟用階層命名空間功能](/azure/storage/blobs/data-lake-storage-namespace)。
+
+- 若要以 Azure 服務主體驗證，請確定它已在您的租用戶中設定完成。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。
 
 - 您想要連接和內嵌資料的 Azure Data Lake 必須與 Dynamics 365 Customer Insights 環境位於相同的 Azure 區域中。 不支援從不同 Azure 區域的 Data Lake 連接到 Common Data Model 資料夾。 若要瞭解環境的 Azure 區域，請前往對象見解中的 **系統管理員** > **系統** > **關於**。
 
