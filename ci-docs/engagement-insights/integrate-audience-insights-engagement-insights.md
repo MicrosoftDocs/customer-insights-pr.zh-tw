@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645572"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116004"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>建立對象見解與參與見解之間的連結
 
@@ -25,7 +25,7 @@ ms.locfileid: "7645572"
 
 ## <a name="prerequisites"></a>先決條件
 
-- 對象見解個人資料必須儲存您在 Azure Data Lake Storage的帳戶或儲存在 [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;受管理的 Data Lake 中。 
+- 對象見解個人資料必須儲存您在 Azure Data Lake Storage的帳戶或儲存在 [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash;受管理的 Data Lake 中。 
 - 此外，您的對象見解環境應具有關聯的 Dataverse 環境。 此外，如果該環境也是用 Dataverse 儲存資料，請確認您已在對象見解中核取 **啟用資料共用** 選項。 如需詳細資訊，請參閱[在對象見解中建立與組態環境](../audience-insights/create-environment.md)。
 - 您需要參與見解和對象見解所在環境的系統管理員權限。
 - 連結的環境必須位於相同的地理區域。

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900233"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088108"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>使用 Azure 服務主體連接到 Azure Data Lake Storage 帳戶
 
@@ -23,7 +23,7 @@ ms.locfileid: "7900233"
 使用 Azure 服務的自動化工具應始終具有限縮權限。 有別於以完整權限使用者身分登入應用程式的作法，Azure 提供服務主體。 您可以使用服務主體，安全地將 [Common Data Model 資料夾新增或編輯成資料來源](connect-common-data-model.md)或是[建立或更新環境](create-environment.md)。
 
 > [!IMPORTANT]
-> - 使用服務主體的 Data Lake 儲存帳戶必須[啟用階層命名空間](/azure/storage/blobs/data-lake-storage-namespace)。
+> - 將使用服務主體的 Data Lake Storage 帳戶必須是 Gen2 且已[啟用階層命名空間](/azure/storage/blobs/data-lake-storage-namespace)。 不支援 Azure Data Lake Gen1 storage 帳戶。
 > - 您需要 Azure 訂閱的系統管理員權限，才能建立服務主體。
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>為 Customer Insights 建立 Azure 服務主體

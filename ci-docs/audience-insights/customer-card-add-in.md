@@ -1,7 +1,7 @@
 ---
 title: Dynamics 365 應用程式的客戶卡片增益集 (含影片)
 description: 以此增益集顯示位於 Dynamics 365 應用程式中的對象見解資料。
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085197"
 ---
-
 # <a name="customer-card-add-in-preview"></a>客戶卡片增益集 (預覽)
 
 
@@ -113,5 +118,26 @@ manager: shellyha
 
 1. 開始升級程序之後，會顯示載入指標直到升級完成。 如果不存在可更新的版本，會出現升級錯誤訊息。
 
+## <a name="troubleshooting"></a>疑難排解​​
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>客戶卡片增益集的控制項找不到資料
+
+**問題回報：**
+
+即便正確設定好識別碼欄位，控制項也無法找到任何客戶資料。  
+
+**解決方式：**
+
+1. 請確定您已根據此指示：[設定客戶卡片增益集](#configure-the-customer-card-add-in)，設定好卡片增益集 
+
+1. 檢閱資料擷取設定。 編輯其中包含連絡人識別碼 GUID 的 Dynamics 365 系統資料來源。 如果連絡人識別碼 GUID 在 Power Query 編輯器中以大寫字元顯示，請嘗試以下步驟： 
+    1. 編輯資料來源，以在 Power Query 編輯器中打開資料來源。
+    1. 選取連絡人識別碼欄。
+    1. 在標頭中選取 **轉換** 查看可用的動作。
+    1. 選取 **小寫**。 驗證資料表中的 GUID 現在是否為小寫。
+    1. 儲存資料來源。
+    1. 執行資料擷取、整合和下游程序，將變更傳播至 GUID。 
+
+完成完整的重新整理之後，客戶卡片增益集控制項應會顯示預期的資料。 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: 富集統一的客戶設定檔
 description: 使用功能富集您的客戶資料。
-ms.date: 11/05/2021
+ms.date: 02/07/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884206"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098779"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -37,6 +37,7 @@ ms.locfileid: "7884206"
 - 由 Experian 提供的[人口統計](enrichment-experian.md)
 - 透過安全檔案傳輸通訊協定 (SFTP) 的 [自訂資料](enrichment-SFTP-custom-import.md) 
 - 由 Microsoft 提供的 [Azure 地圖服務](enrichment-azure-maps.md)
+- HERE Technologies 提供的 [位置資料](enrichment-here.md) 
 
 # <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
 

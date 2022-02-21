@@ -1,7 +1,7 @@
 ---
 title: 新功能以及近期即將推出的功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 01/27/2022
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088275"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
 
@@ -21,6 +26,17 @@ manager: shellyha
 
 > [!TIP]
 > 若要提出功能要求和產品建議並票選，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+
+## <a name="january-2022-updates"></a>2022 年 1 月更新
+
+2022 年 1 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>在您的客戶意見反應上的情感分析
+
+Customer Insights 提供新的 AI 支援功能，可綜合客戶情感並找出特定的業務層面，當作有目標的增進機會。 透過分析您的客戶意見反應，就可以用較低的成本取得準確的深入解析。 由自然語言處理 (NLP) 模型所支援的情感分析，為每個客戶識別碼生成兩個衍生見解。 情感分數 (-5 到 5) 和可適用的業務層面清單。 
+
+如需詳細資訊，請參閱[分析在客戶意見反應中的情感 (預覽版)](sentiment-analysis.md)。
 
 
 ## <a name="december-2021-updates"></a>2021 年 12 月更新
@@ -37,7 +53,7 @@ Customer Insights 提供與 Azure 監視器的直接整合。 此功能包括稽
 
 使用 Microsoft Office 365 中的資料，經由 Office 365 應用程式以參與度的見解來擴充客戶個人資料。 參與度由電子郵件和會議活動組成，並根據客戶等級進行彙總。 例如，來自商務客戶的電子郵件數量或與該客戶的會議數量。 不會共用個別使用者的任何資料。 此擴充功能只有在英國、歐洲和北美地區才能使用。
 
-如需詳細資訊，請參閱 [使用參與度資料擴充客戶設定檔 (預覽版)](enrichment-office.md)
+如需詳細資訊，請參閱[使用參與度資料擴充客戶設定檔 (預覽版)](enrichment-office.md)。
 
 ### <a name="advanced-data-unification-features"></a>進階資料整合功能
 

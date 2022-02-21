@@ -3,18 +3,18 @@ title: 試用版常見問答集-Dynamics 365 Customer Insights
 description: Customer Insights 試用版設定和管理相關的常見問題解決方案。 了解如何解決平台和應用程式特定的問題。
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642852"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115958"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights 試用版常見問題
 
@@ -63,7 +63,7 @@ ms.locfileid: "7642852"
 
 一般而言，當您升級至付費版本的 Customer Insights 時，我們建議使用您自己的資料開始重頭開始。 
 
-或者如果您只使用對象見解且購買 Customer Insights，您可以從試用環境複製您的資料。 您必須是 Customer Insights 試用版的系統管理員，以及組織中的 Microsoft 365 租用戶的全域系統管理員，或是 Dynamics 365 系統管理員，才能將試用環境設定遷移至付費環境。 
+或者如果您只使用對象見解且購買 Customer Insights，您可以從試用環境複製您的資料。 您必須是 Customer Insights 試用版的系統管理員和 Microsoft 365 的租用戶的全域系統管理員，或您組織中的 Dynamics 365 系統管理員，才能將設定從試用環境遷移至付費環境。 
 
 第一次登入付費 Customer Insights 執行個體之後，系統會要求您建立新的環境。 在此過程中，您可以選擇從現有的環境複製設定，並遷移大部分的設定。 如果您有上述權限，則試用環境將會顯示在此清單中。 如需詳細資訊，請參閱[複製環境設定](audience-insights/manage-environments.md#copy-the-environment-configuration)。
 
@@ -82,8 +82,9 @@ ms.locfileid: "7642852"
 
 試用版開放使用絕大部份的 Customer Insights 功能。
 
-下列功能尚未開放： 
+以下是 **不可用** 的功能： 
 - 您無法建立使用自己的 Azure 資料湖儲存體帳戶的新環境。
+- 您無法刪除試用環境。 
 
 ### <a name="how-long-does-the-trial-last"></a>試用版使用期間多久？
 

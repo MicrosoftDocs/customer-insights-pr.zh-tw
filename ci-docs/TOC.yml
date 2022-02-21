@@ -2,6 +2,22 @@
   href: index.yml
 - name: 產品概觀
   href: overview.md
+- name: 學習目錄
+  items:
+    - name: 開始使用
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: 內嵌資料
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: 建立統整的客戶設定檔
+      href: /learn/modules/unified-customer-profile/
+    - name: 使用對象見解
+      href: /learn/modules/working-with-customer-insights/
+    - name: 擴充資料並進行預測
+      href: /learn/modules/enrich-data/
+    - name: 管理外部連線
+      href: /learn/modules/configure-third-party-connections/
+    - name: 管理 Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: 免費試用
   items:
     - name: 註冊免費試用版
@@ -30,16 +46,6 @@
           href: audience-insights/home.md
     - name: 搭配商務帳戶
       href: audience-insights/work-with-business-accounts.md
-    - name: 學習模組
-      items:
-        - name: 內嵌資料
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: 建立統整的客戶設定檔
-          href: /learn/modules/unified-customer-profile/
-        - name: 使用應用程式
-          href: /learn/modules/working-with-customer-insights/
-        - name: 豐富資料和預測
-          href: /learn/modules/enrich-data/
     - name: 資料來源
       items:
         - name: 資料來源概觀
@@ -164,7 +170,7 @@
               href: audience-insights/export-adroll.md
             - name: Autopilot
               href: audience-insights/export-autopilot.md
-            - name: Azure Blob 儲存體
+            - name: Azure Blob Storage
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: DSR 權利和要求
   href: dsr-rights-requests.md
+- name: 取得支援
+  href: /power-platform/admin/get-help-support
