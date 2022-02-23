@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008755"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>分析客戶意見回饋中的情感（預覽版）
 
 現在的客戶期待有高品質的產品、服務和體驗。 特別是會提供意見反應的使用者。 組織要分析不斷增加的資料量，想要不降低其準確性和付出較高的勞動成本是很困難的。 Dynamics 365 Customer Insights 提供情感分析模型，讓組織可以在較低的成本下更準確地分析資料。

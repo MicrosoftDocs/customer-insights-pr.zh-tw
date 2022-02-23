@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046553"
 ---
-
 # <a name="merge-entities"></a>合併實體
 
 合併階段是資料統整程序的最後一個階段。 其目的在於協調衝突的資料。 衝突資料的範例包括位於兩個資料集中的客戶名稱，但在各資料集中略有不同 (例如「Grant Marshall」與「Grant Marshal」)，或是格式不同的電話號碼 (617-803-091X 與 617803091X)。 合併這些相互衝突的資料點，是依屬性逐一進行。
