@@ -4,17 +4,17 @@ description: 如何建立、編輯及刪除維度。
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 136da1e1265c7087d861712d34d011b09cb60ad5
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623622"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033987"
 ---
 # <a name="view-and-create-dimensions"></a>檢視和建立維度
 
@@ -22,7 +22,7 @@ ms.locfileid: "7623622"
 
 維度是事件的屬性，可以描述、篩選或分組資料。 如果您正在網站上執行行銷宣傳，您可以使用維度，依據新的和回訪的使用者來分類訪客。  
 
-Engagement見解包括對事件屬性的開箱即用 (OOB) 維度。 例如：
+參與見解包含對事件屬性的立即可用維度。 例如：
 
 - 瀏覽器名稱
 - 頁面名稱
@@ -49,16 +49,12 @@ Engagement見解包括對事件屬性的開箱即用 (OOB) 維度。 例如：
    :::image type="content" source="media/add-dimension.png" alt-text="新增事件的維度。":::
 
 1. 在 **建立維度** 窗格中，選取維度要依據的屬性。 屬性清單將顯示在工作區中所有尚未指派至維度的屬性。
-   
-   :::image type="content" source="media/create-new-dimension.png" alt-text="建立新維度。":::
-      
-3. 在 **函數名稱** 方塊中輸入函數名稱。 或者您可以選擇新增 **說明**。
-4. 選取 **建立流程** 以儲存維度。 在[自訂報表](custom-reports.md)或[客戶細分](segments.md)中使用此維度之前，可能需要一分鐘的時間。 
+1. 在 **函數名稱** 方塊中輸入函數名稱。 您可以選擇是否新增說明。
+1. 選取 **建立流程** 以儲存維度。 在[自訂報表](custom-reports.md)或[客戶細分](segments.md)中使用此維度之前，可能需要一分鐘的時間。 
 
 ## <a name="edit-a-dimension"></a>編輯維度
 
-您可以變更維度的名稱與說明。 您只能編輯使用者建立的維度，但不可以編輯系統維度。
-
+您可以變更維度的名稱與說明。
 
 1. 移至 **資料** > **維度**。
 1. 選取您要刪除的維度。

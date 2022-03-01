@@ -2,19 +2,19 @@
 title: 即時資料內嵌和限制
 description: 關於對象見解中即時能力的一般資訊。
 ms.date: 10/27/2020
-ms.reviewer: mhart
+ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 897c876306a39cd9d5842487b96cb2f0a8df7e656de0fb7f10fe8c7f53e2db6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035267"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689165"
 ---
 # <a name="real-time-data-ingestion-preview"></a>即時資料擷取 (預覽)
 
@@ -54,7 +54,7 @@ ms.locfileid: "7035267"
 
 目前有兩種方式連接到即時 API：
 
-- [間接](#connect-via-the-dynamics-365-customer-insights-connector)，使用 [Dynamics 365 Customer Insights 連接器](/connectors/customerinsights/)
+- [間接](#connect-via-the-dynamics-365-customer-insights-connector)，使用 [Dynamics 365 Customer Insights 連接器](https://docs.microsoft.com/connectors/customerinsights/)
 - [直接](#connect-directly-to-the-real-time-api)，使用程式碼
 
 兩種方式都具有以下先決條件：
@@ -66,13 +66,13 @@ ms.locfileid: "7035267"
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>透過 Dynamics 365 Customer Insights 連接器連接
 
-即時 API 可以從專用的 Power Platform 連接器（[Dynamics 365 Customer Insights 連接器](/connectors/customerinsights/)）擷取資料，而不需要撰寫和部署任何程式碼。    
-連接器可以執行與 API 相同的即時動作。 您需要進階連接器的有效授權。 如需詳細資訊，請參閱 [Power Apps 和 Power Automate 授權常見問題集](/power-platform/admin/powerapps-flow-licensing-faq)。
+即時 API 可以從專用的 Power Platform 連接器（[Dynamics 365 Customer Insights 連接器](https://docs.microsoft.com/connectors/customerinsights/)）擷取資料，而不需要撰寫和部署任何程式碼。    
+連接器可以執行與 API 相同的即時動作。 您需要進階連接器的有效授權。 如需詳細資訊，請參閱 [Power Apps 和 Power Automate 授權常見問題集](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq)。
 
-- Power Platform [Power Apps 和/或 Power Automate](/connectors/)
-- Azure [Logic Apps](/azure/connectors/apis-list)
+- Power Platform [Power Apps 和/或 Power Automate](https://docs.microsoft.com/connectors/)
+- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
 
-如需建立流程的詳細資料，請參閱 [Power Automate 文件](/power-automate/)。
+如需建立流程的詳細資料，請參閱 [Power Automate 文件](https://docs.microsoft.com/power-automate/)。
 
 ## <a name="connect-directly-to-the-real-time-api"></a>直接連接至即時 API
 
@@ -83,7 +83,6 @@ ms.locfileid: "7035267"
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>了解遙測的即時使用方式
 
-取得即時 API 的要求量和系統可能遭遇的問題相關資訊總覽。 您可以[存取即時遙測](system.md#api-usage-tab)。 
+取得即時 API 的要求量和系統可能遭遇的問題相關資訊總覽。 您可以移至 **管理** > **系統** > **API 使用方式**，[存取即時遙測](system.md#api-usage-tab)。 在 **作業** 表格中，使用即時方法的 API 作業行包含即時 API 使用方式檢視按鈕。 此按鈕透過望遠鏡符號視覺化。 選取此按鈕打開內含目前環境中即時 API 使用方式詳細資料的側窗格。
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+使用 **群組依據** 選取器選擇即時互動在時間表上的最佳呈現方式，範圍從過去 24 小時到最近 30 天。 您可以依據 API 方法、實體限定名稱 (擷取的實體)、建立者(事件來源)、結果 (成功或失敗) 或錯誤碼來分組資料。 資料可以表示為歷史圖和表格。

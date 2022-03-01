@@ -1,20 +1,21 @@
 ---
 title: 支援的預測案例概述
 description: Dynamics 365 Customer Insights 應用程式所涵蓋預測案例和選項。
-ms.date: 12/21/2021
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: get-started
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.custom: intro-internal
+ms.openlocfilehash: b73046844f6009a2b163b5eaadf5f63f75cda1d8
+ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978003"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "6539151"
 ---
 # <a name="predictions-overview"></a>預測概觀
 
@@ -23,21 +24,10 @@ Dynamics 365 Customer Insights 隨附多種選項，可讓您利用 AI 和機器
 ## <a name="out-of-box-models"></a>立即可用的模型
 
 開始使用預測資料最簡單的方法是預先定義模型，通常稱為立即可用模型。 他們只需要某些資料和結構，即可快速生成見解。 目前，有下列模型可以使用： 
-
-# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
-
-- [客戶存留期值](predict-customer-lifetime-value.md)：預測客戶在與公司的互動中可能的營收。
+- [客戶存留期值](predict-customer-lifetime-value.md)：預測客戶在與公司的互動中可能的營收。 
 - [產品建議](predict-product-recommendation.md)：根據採購行為和具有類似購買模式的客戶，提出一組預測產品建議。
 - [訂閱流失](predict-subscription-churn.md): 預測客戶是否有不再使用貴公司的訂閱產品或服務的風險。
 - [交易流失](predict-transactional-churn.md)：預測客戶是否在特定時間範圍不會再購買您的產品或服務。
-- [情感分析](sentiment-analysis.md)：分析客戶意見反應的情感，並找出經常提及的業務層面。
-
-# <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
-
-- [交易流失](predict-transactional-churn.md)：預測客戶是否在特定時間範圍不會再購買您的產品或服務。
-
----
-
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learnings 整合
 

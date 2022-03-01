@@ -1,6 +1,6 @@
 ---
-title: 客戶意見反應的情感分析
-description: 了解在 Dynamics 365 Customer Insights 中如何使用情感分析模型來處理客戶意見反應。
+title: 客戶意見反應的語義分析
+description: 瞭解在 Dynamics 365 Customer Insights 中如何使用情感分析模型來處理客戶意見反應。
 ms.date: 12/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
-ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
+ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8008755"
+ms.lasthandoff: 01/10/2022
+ms.locfileid: "7951074"
 ---
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>分析客戶意見回饋中的情感（預覽版）
 
@@ -38,7 +38,7 @@ ms.locfileid: "8008755"
 
 我們使用兩種 **自然語言處理 (NLP) 模型**：第一種會為每個意見反應指派情感分數。 第二種模型會將每個意見反應與可適用的業務部分關聯。 模型已使用來自社交媒體、零售、餐廳、消費品和汽車工業等來源的公用資料定型。    
   
-可關聯模型與意見反應資料的預先定義業務層面包括：
+- 可關聯模型與意見反應資料的預先定義業務層面包括：
 -   帳戶管理
 -   結帳和付款
 -   客戶支援

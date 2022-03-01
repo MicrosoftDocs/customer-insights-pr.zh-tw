@@ -1,7 +1,7 @@
 ---
 title: 使用預測完成部分資料
 description: 使用預測填滿未完成的客戶資料。
-ms.date: 11/01/2021
+ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,17 +9,16 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732368"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692517"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>透過預測完成部分資料 (已取代)
+# <a name="complete-your-partial-data-with-predictions"></a>透過預測完成部分資料
 
-> [!IMPORTANT]
-> 此功能將自 **2021 年 11 月 5 日** 起 **被取代**。 在移除功能之前，目前的實作將繼續運作，但是您將無法使用下列指示建立新的整合。
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 預測可讓您輕鬆建立預測值，以增強您對客戶的了解。 您可以在 **智慧** > **預測** 頁面上選取 **我的預測** 查看您已在觀眾見解其他部分中組態的預測，並允許進一步自訂它們。
 
@@ -36,7 +35,7 @@ ms.locfileid: "7732368"
 
 2. 您的對象見解環境會附加至您的 Dataverse 執行個體。
 
-如需詳細資訊，請參閱[建立新環境](create-environment.md)。
+如果您要 [建立新的環境](get-started-paid.md)，請在 **建立環境** 對話方塊中加以設定，然後選取 **進階**。 如果您已建立環境，請移至其設定並選取 **進階**。 或者在 **使用預測** 區段中輸入您要附加環境的 Dataverse 執行個體 URL。
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>在客戶實體中建立預測
 
@@ -61,8 +60,6 @@ ms.locfileid: "7732368"
    > ![範例中顯示對應至類別的欄位值。](media/intelligence-categorymapping.png "顯示對應的欄位值至類別的範例")
 
 8. 選取 **完成**，預測將會得到處理。 處理工作需要花費一些時間，視資料的大小和複雜度而定。 根據您所建立之預測的 **輸出實體名稱**，在新實體中提供結果。
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>建立區段時建立預測
 

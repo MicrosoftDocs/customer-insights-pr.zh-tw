@@ -4,23 +4,23 @@ description: 如何匯出精簡事件和基礎事件。
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 04/30/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606185"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032375"
 ---
 # <a name="export-events"></a>匯出事件
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-事件代表使用者的行為。 它會在使用者查看頁面（查看事件）或與內容互動（動作事件）時進行記錄。 當您可以決定要在報表中顯示資料的哪些屬性時，這個資料的虛擬視圖稱為 *精簡事件*。 如需詳細資訊，請參閱[建立和修改事件](refined-events.md)。
+事件代表使用者的行為。 它會在使用者查看頁面（查看事件）或與內容互動（動作事件）時進行記錄。 當您可以決定要在報表中顯示資料的哪些屬性時，這個資料的虛擬視圖稱為 *精簡事件*。 
 
 - 您可以將事件和精簡事件匯出至外部儲存體。 
 - 這些匯出是向前的資料串流。 您無法重新灌裝此串流。 
@@ -45,28 +45,26 @@ ms.locfileid: "7606185"
 
 ## <a name="export-events"></a>匯出事件
 
-帶出 **匯出事件** 對話方塊有兩種方法： 
+匯出事件的方式有兩種： 
 - 移至 **資料** > **匯出**，並選取 **新匯出**。
 - 移至 **資料** > **事件**，在要匯出的事件旁邊選取 **其他 [...]**，然後從下拉式功能表選取 **匯出**。 
 
-:::image type="content" source="media/new-export.png" alt-text="建立新匯出。":::
-
 將會一步一步引導您建立匯出：
 
-1. 提供 **匯出名稱**，然後選取 **下一步**。
+1. 提供 **匯出名稱**。
 
 1. 在 **事件選項** 下拉式清單中，選擇要納入匯出的基準事件和精簡事件。 
 
-1. 請在 **檔案結構** 分段中選取目標儲存體要建立新檔案的節奏 (每小時或每天)，然後選取 **下一步**。 事件在到達時會持續被匯出。
+1. 在 **檔案結構** 底下，選取要在目標儲存體中建立新檔案的節奏。 事件在到達時會持續被匯出。
 
-1. 請在 **選擇格式** 對話方塊中選取匯出的格式。 請在 **Common Data Model**、**CSV** 和 **JSON** 格式之間任選其一。 若要連同其他 Dynamics 365 應用程式匯出，我們建議 **Common Data Model** 格式。
+1. 選取匯出的格式。 您可以選擇 **一般資料模型**、**CSV** 和 **JSON** 格式。 匯出時若要一併使用其他 Dynamics 365 應用程式，我們建議您使用一般資料模型格式。
 
-1. 請在 **選擇目的地** 對話方塊中指明 Azure Data Lake Storage Gen 2 的位置。
+1. 在 **選擇目標** 步驟中，指定第二代 Azure Data Lake Storage 的位置。
     1. **第二代 ADLS 帳戶名稱** 是您要儲存匯出的目標儲存體帳戶名稱。 
     1. **資料夾路徑** 定義了匯出在儲存體帳戶的檔案系統和目錄結構中應儲存的地方。
     1. 您可以從 Azure 入口網站儲存體帳戶中找到 **共用金鑰**。
 
-1. 完成前請審閱並確認您選取的項目。
+1. 檢閱並確認您的選取。
 
 ## <a name="view-and-manage-exports"></a>檢視和管理匯出
 

@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673779"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645436"
 ---
 # <a name="manage-environments-and-workspaces"></a>管理環境和工作區
 
@@ -24,7 +24,7 @@ ms.locfileid: "7673779"
 
 本主題討論如何管理建立後的工作區和環境。 
 
-- *工作區* 是儲存和管理事件及報表的空間。 您可以在這裡即時查看使用者活動。 當您建立一個工作區時，請選取要傳送到工作區的資料類型。 目前，支援 Web 資料和行動裝置應用程式。 如需詳細資訊，請參閱[建立新工作區與新增成員](create-workspace.md)。
+- *工作區* 是儲存和管理事件及報表的空間。 您可以在這裡即時查看使用者活動。 當您建立一個工作區時，請選取要傳送到工作區的資料類型。 目前，支援 Web 資料和行動裝置應用程式。 如需詳細資訊，請參閱[建立工作區與新增成員](create-workspace.md)。
 
 - *環境* 是管理您的工作區和連線的空間。 如需詳細資訊，請參閱[建立新環境](create-new-environment.md)。
 
@@ -47,7 +47,7 @@ ms.locfileid: "7673779"
 
 ### <a name="delete-a-workspace"></a>刪除工作區
 
-刪除工作區會永久移除其所有內容、資料、設定和權限。 此動作無法復原。
+刪除工作區將永久移除其所有內容、資料、設定和權限。 此動作無法復原。
 
 1. 移至 **系統管理員** > **工作區**，然後選取 **設定**。
 
@@ -71,11 +71,19 @@ ms.locfileid: "7673779"
 
 :::image type="content" source="media/environment-edit.png" alt-text="環境系統管理中心。":::
 
-### <a name="edit-an-environment-name"></a>編輯環境名稱
+### <a name="rename-an-environment"></a>重新命名環境
 
 1. 移至 **系統管理員** > **環境**，然後選取 **設定**。
 
 1. 更新 **環境名稱**，然後選取 **儲存** 來套用變更。
+
+### <a name="manage-environment-members"></a>管理環境成員
+
+1. 移至 **系統管理員** > **環境**，然後選取 **成員**。
+
+1. 選取 **新增成員** 以更新成員並[指派角色](user-roles.md)。 目前只有 **環境管理員** 可以選用。
+
+1. 選取 **新增成員**，將它們新增至您的環境。
 
 ### <a name="delete-an-environment"></a>刪除環境
 
@@ -89,14 +97,6 @@ ms.locfileid: "7673779"
 
 1. 選取 **刪除** 永久刪除環境。
 
-### <a name="manage-environment-members"></a>管理環境成員
-
-1. 移至 **系統管理員** > **環境**，然後選取 **成員**。
-
-1. 選取 **新增成員** 以更新成員並[指派角色](user-roles.md)。 目前只有 **環境管理員** 可以選用。
-
-1. 選取 **新增成員**，將它們新增至您的環境。
-
 ## <a name="manage-connections"></a>管理連線
 
 建立連接至對象見解，可讓您根據統一的客戶設定檔來查看業務開發見解中的報表。 
@@ -107,6 +107,7 @@ ms.locfileid: "7673779"
 
 若要保護您的客戶個人資料，您可以刪除或匯出終端使用者的可識別資料。
 
-如需詳細資訊，請參閱[刪除和匯出包含個人資訊的事件資料](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information)。
+如需詳細資訊，請參閱[刪除和匯出包含個人資訊的事件資料](delete-export-personal-data.md)。
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

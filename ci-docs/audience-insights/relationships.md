@@ -1,20 +1,20 @@
 ---
 title: 實體和實體路徑之間的關係
 description: 從多個資料來源建立和管理實體之間的關係。
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622989"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171154"
 ---
 # <a name="relationships-between-entities"></a>實體間的關聯
 
@@ -68,20 +68,6 @@ ms.locfileid: "7622989"
 
 4. 選取 **儲存** 以建立自訂關聯。
 
-## <a name="set-up-account-hierarchies"></a>設定帳戶階層
-
-已組態商務帳戶做為主要目標對象的環境可組態相關商務帳戶的帳戶階層。 例如具有不同業務單位的公司。 
-
-組織建立帳戶階層以便更妥善管理帳戶及彼此之間的關聯。 對象見解 功能支援擷取的客戶資料中已存在的父代-子系帳戶階層。 例如來自 Dynamics 365 Sales 的帳戶。 這些階層可在對象見解中的 **關聯** 頁面上，帳戶階層索引標籤下組態。
-
-1. 請前往 **資料** > **關聯**。
-1. 選取 **帳戶階層** 索引標籤。
-1. 請選取 **新帳戶階層**。 
-1. 請在 **帳戶階層** 窗格中提供階層的名稱。 系統建立輸出實體的名稱。 您可以變更輸出名稱實體的名稱。
-1. 請選取包含您的帳戶階層的實體。 它通常位於包含帳戶的相同實體中。
-1. 請從選取的實體選取 **帳戶識別碼** 和 **帳戶父代識別碼** 
-1. 請選取 **儲存** 以套用設定並確定帳戶階層。
-
 ## <a name="view-relationships"></a>檢視關聯性
 
 關聯頁面會列出已建立的所有關聯。 每一列代表一個關聯，裡面也包含有關來源實體、目標實體和基數的詳細資料。 
@@ -96,7 +82,7 @@ ms.locfileid: "7622989"
 
 ### <a name="explore-the-relationship-visualizer"></a>探索關聯視覺化檢視
 
-視覺化檢視顯示網狀圖表，表示在連接實體間的現有關聯及其基數。 它也會視覺化關聯路徑。
+視覺化檢視顯示網狀圖表，表示在連接實體間的現有關聯及其基數。
 
 若要自訂檢視表，您可以透過在畫布上拖動方塊來變更位置。
 
@@ -106,56 +92,6 @@ ms.locfileid: "7622989"
 - **匯出成影像**：將目前的檢視表儲存為影像檔。
 - **變更為橫向/垂直版面配置**：變更實體與關聯的對齊方式。
 - **編輯**：在編輯窗格中更新自訂關聯的屬性，並儲存變更。
-
-## <a name="relationship-paths"></a>關聯路徑
-
-關聯路徑說明來源實體與目標實體之間被關聯相連的實體。 在建立客戶細分或量值時，包含整合個人資料實體以外的其他實體，而且有多個選項可抵達整合個人資料實體，會使用到關聯路徑。 
-
-關聯路徑會提供系統要用哪個關聯存取整合個人資料實體。 不同的關聯路徑可能會產生不同的結果。
-
-例如，實體 *eCommerce_eCommercePurchases* 具有下列關聯至整合個人資料 *Customer* 實體：
-
-- eCommerce_eCommercePurchases > Customer
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Customer
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Customer 
-
-關聯路徑決定在建立量值或客戶細分規則時可以使用哪些實體。 選擇具有最長關聯路徑的選項，可能會產生較少的結果，因為符合的記錄必須存在在所有實體。 在此範例中，客戶必須透過銷售點 (POS_posPurchases) 的電子商務 (eCommerce_eCommercePurchases) 購物，並參加我們的會員忠誠計畫 (loyaltyScheme_loyCustomers)。 選擇第一個選項時，您很可能會獲得更多結果，因為客戶只需存在在一個其他實體中。
-
-### <a name="direct-relationship"></a>直接關聯
-
-當來源實體使用一個關聯來關聯到一個目標實體時，會分類為 **直接關聯**。
-
-例如，如果某個名稱為 *eCommerce_eCommercePurchases* 的活動實體，僅透過  *ContactId* 連接至目標實體 *eCommerce_eCommerceContacts* 實體，則這是直接關聯。
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="來源實體直接連接至目標實體。":::
-
-#### <a name="multi-path-relationship"></a>多路徑關聯
-
-**多路徑關聯** 是一種特殊類型的直接關聯，會將一個來源實體連接至多個目標實體。
-
-例如，如果一個名稱為 *eCommerce_eCommercePurchases* 的活動實體，與關聯到 *eCommerce_eCommerceContacts* 和 *loyaltyScheme_loyCustomers* 兩個目標實體，則這是多路徑關聯。
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="來源實體透過多躍點關聯直接連接至一個以上的目標實體。":::
-
-### <a name="indirect-relationship"></a>間接關聯
-
-當來源實體關聯到目標實體之前，會關聯到一個以上的其他實體時，會分類到 **非直接關聯**。
-
-#### <a name="multi-hop-relationship"></a>多躍點關聯
-
-*多躍點關聯* 是一種 *間接關聯*，可讓您透過一個以上的其他中繼實體將來源實體連接至目標實體。
-
-例如，如果一個名為 *eCommerce_eCommercePurchasesWest* 的活動實體連接至名為 *eCommerce_eCommercePurchasesEast* 的中繼實體，然後連接至名為  *eCommerce_eCommerceContacts* 的目標實體，則這是多躍點關聯。
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="來源實體直接以中繼實體連接至目標實體。":::
-
-### <a name="multi-hop-multi-path-relationship"></a>多躍點、多路徑關聯
-
-多躍點和多路徑關聯可以一起使用，建立 **多躍點、多路徑關聯**。 這個特殊類型會結合 **多躍點** 和 **多路徑關聯** 的功能。 它可讓您在使用中繼實體時，連接至多個目標實體。
-
-例如，如果一個名為 *eCommerce_eCommercePurchasesWest* 的活動實體連接至名為 *eCommerce_eCommercePurchasesEast* 的中繼實體，然後連接至名為  *eCommerce_eCommerceContacts* 和 *loyaltyScheme_loyCustomers* 的兩個目標實體，則這是多躍點、多路徑關聯。
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="來源實體會直接連接至一個目標實體，並透過中繼實體連接至另一個目標實體。":::
 
 ## <a name="manage-existing-relationships"></a>管理現有關聯 
 
@@ -169,6 +105,6 @@ ms.locfileid: "7622989"
 
 ## <a name="next-step"></a>下一個步驟
 
-系統和自訂關聯是用來[建立客戶細分](segments.md)和[量值](measures.md)，利用已不再是筒倉式的多個資料來源。
+因為多個資料來源不再孤立，系統和自訂關聯可以用來[建立客戶細分](segments.md)。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

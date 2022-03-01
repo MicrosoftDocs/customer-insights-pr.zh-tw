@@ -1,20 +1,20 @@
 ---
 title: 對象見解中的客戶細分
 description: 客戶細分概觀及如何建立並管理它們。
-ms.date: 11/01/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978049"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617327"
 ---
 # <a name="segments-overview"></a>客戶細分概觀
 
@@ -26,7 +26,7 @@ ms.locfileid: "7978049"
 
 有很多方式可以建立新的客戶細分： 
 
-# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
+# <a name="individual-customers-b2c"></a>[個別客戶 (B2C)](#tab/b2c)
 
 - 內含區段 Builder 的複雜區段：[建立我們自己的](segment-builder.md#create-a-new-segment) 
 - 具有一個運算子的簡單客戶細分：[快速客戶細分](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ ms.locfileid: "7978049"
 - 基於量值或屬性，由 AI支援的建議：[改善量值的建議客戶細分](suggested-segments.md) 
 - 根據活動提出的建議：[根據客戶活動所建議的客戶細分](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
+# <a name="business-accounts-b2b"></a>[商務帳戶 (B2B)](#tab/b2b)
 
 - 內含區段 Builder 的複雜區段：[建立我們自己的](segment-builder.md#create-a-new-segment)
 
@@ -65,7 +65,8 @@ ms.locfileid: "7978049"
 
 您可以選取 **區段** 頁面上的 **全部重新整理**，一次重新整理所有區段，也可以在選取一個或多個區段，並從選項中選擇 **重新整理** 時重新整理這些區段。 或者，您也可以在 **管理員** > **系統** > **排程** 設定定期重新整理。
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。
 
 ## <a name="export-segments"></a>匯出區段
 
@@ -104,6 +105,5 @@ ms.locfileid: "7978049"
 > 此清單中顯示的欄位是根據區段實體的屬性。
 >
 >此清單是相符區段成員的預覽，並顯示區段的前 100 個記錄，這樣您就可以快速評估並查看其定義（如有需要）。 若要查看所有相符的記錄，您需要[匯出區段](export-destinations.md)。
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

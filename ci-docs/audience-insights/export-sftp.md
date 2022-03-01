@@ -1,5 +1,5 @@
 ---
-title: 將 Customer Insights 資料匯出至 SFTP 主機 (含影片)
+title: 匯出 Customer Insights 資料到 SFTP 主機
 description: 了解如何設定連接並匯出至 SFTP 位置。
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,18 +9,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934877"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035451"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>將客戶細分和其他資料匯出至 SFTP (預覽版)
 
 要在協力廠商應用程式中使用客戶資料，請將客戶資料匯出至安全檔案傳輸通訊協定 (SFTP) 位置。
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>連接的先決條件
 
@@ -28,7 +26,6 @@ ms.locfileid: "7934877"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 目前不支援在防火牆後的 SFTP 目標。 
 - 匯出執行時間依您的系統效能而定。 我們建議伺服器最小配置為兩個 CPU 核心和 1 Gb 的記憶體。 
 - 匯出最多 1 億份客戶設定檔的實體時，在使用兩個 CPU 核心和 1 Gb 記憶體的最少建議配置時，可能需要 90 分鐘。 
 

@@ -1,19 +1,19 @@
 ---
 title: 開始使用 Dynamics 365 Customer Insights 的付費授權版
 author: m-hartmann
-description: 愈來愈熟悉 Dynamics 365 Customer Insights 的首次執行體驗並探索其功能。
+description: 熟悉 Dynamics 365 Customer Insights 中的首次執行體驗，並探索其功能。
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: conceptual
+ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977635"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645669"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>購買 Customer Insights 之後可開始使用
 
@@ -29,7 +29,7 @@ Customer Insights 是每個租用戶授權，包括多種功能。 您可以購�
 
 ## <a name="start-with-customer-insights"></a>開始使用 Customer Insights
 
-首次執行體驗有助於您選擇最初您鎖定的 Customer Insights 重點，並以範例資料探索各項功能。 下一步是建立自己的環境並使用自己的資料。
+第一次執行體驗可幫助您選擇 Customer Insights 的初始焦點，並探索範例資料的功能。 下一步是建立自己的環境並使用自己的資料。
 
 **首次登入**：
 

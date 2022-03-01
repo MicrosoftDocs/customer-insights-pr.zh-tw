@@ -1,29 +1,29 @@
 ---
 title: 使用 API
 description: 使用 API 並瞭解限制。
-ms.date: 05/10/2021
+ms.date: 12/04/2020
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: wimohabb
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
-ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
+ms.openlocfilehash: 5a03e916676800afdd8692da865a1060952d5c4f
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "8100130"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689120"
 ---
 # <a name="work-with-customer-insights-apis"></a>搭配 Customer Insights API 處理
 
-Dynamics 365 Customer Insights 提供 API，可根據 Customer Insights 中的資料建立您自己的應用程式。
+Dynamics 365 Customer Insights 提供 API，根據您在 Customer Insights 中的資料建立您自己的應用程式。
 
 > [!IMPORTANT]
 > 這些 API 詳細資料會列在 [Customer Insights API 參考](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights)。 它們包含有關作業、參數和回應的其他資訊。
 
-本文說明如何存取 Customer Insights API、建立 Azure 應用程式註冊，以及開始使用可用的用戶端程式庫。
+本文章引導您存取 Customer Insights API、建立 Azure 應用程式註冊功能並協助您開始使用可用的用戶端程式庫。
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>嘗試使用 Customer Insights API
 
@@ -32,16 +32,15 @@ Dynamics 365 Customer Insights 提供 API，可根據 Customer Insights 中的�
 1. 若要在您的 Customer Insights 環境中啟用 API，請前往 **系統管理** > **權限**。 您必須具備系統管理員權限才能執行此動作。
 
 1. 前往 **API** 索引標籤，然後選取 **啟用** 按鈕。    
- 
    啟用 API 會為您的執行個體建立 API 要求使用的主要和次要訂閱金鑰。 您可以選取 **系統管理** > **權限** > **APIs** 的 **重新產生主要** 或 **重新產生次要** 重新產生金鑰。
 
-<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
+   :::image type="content" source="media/enable-apis.gif" alt-text=" 啟用 Customer Insights API":::
 
-1. 選取 **探索我們的 API**[試用 API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)。
+1. 選取 **探索我們的 API** 試用 API。
 
 1. 選擇 API 作業並選取 **嘗試**。
 
-1. 在側邊窗格中，將 **授權** 下拉式功能表中的值設為 **隱含**。 `Authorization` 標頭會以持有人權杖的方式新增。 將會自動填入您的訂閱金鑰。
+1. 在側面窗格中將 **授權** 下拉式功能表中的值設為 **隱性**。 `Authorization` 標頭與新增的持有人權杖一起使用。 將會自動填入您的訂閱金鑰。
   
 1. 或者新增所有必要的查詢參數。
 
@@ -49,27 +48,22 @@ Dynamics 365 Customer Insights 提供 API，可根據 Customer Insights 中的�
 
 HTTP 回應將很快在下方出現。
 
-<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
-
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>在 Azure 入口網站建立新的應用程式註冊
 
-這些步驟可協助您使用委派權限在 Azure 應用程式中開始使用 Customer Insights API。 請務必先完成[開始使用工作階段](#get-started-trying-the-customer-insights-apis)。
+這些步驟可幫助您開始在使用委派權限的 Azure 應用程式中使用 Customer Insights API。 請確定先完成 [開始使用區](#get-started-trying-the-customer-insights-apis)。
 
 1. 使用可存取 Customer Insights 資料的帳戶登入 [Azure 入口網站](https://portal.azure.com)。
 
 1. 選取左邊的 **應用程式註冊**。
 
 1. 選取 **新增註冊** 提供應用程式名稱並選擇帳戶類型。
- 
    或者新增重新導向 URL。 http://localhost 可足以用來開發本機電腦上的應用程式。
 
 1. 在您的新應用程式註冊上前往 **API 權限**。
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
 1. 選取 **新增權限** 並選取側窗格中的 **Customer Insights**。
 
-1. 在 **權限類型** 中，選取 **委派權限**，然後選取 **user_impersonation** 權限。
+1. **權限類型** 方面，請選取 **委派權限** 並選取 **使用者模擬** 權限。
 
 1. 選取 **新增權限**。 如果您需要在無使用者登入時存取 API，請查看 [伺服器對伺服器應用程式權限](#server-to-server-application-permissions) 區。
 
@@ -77,13 +71,11 @@ HTTP 回應將很快在下方出現。
 
 您可以使用此應用程式註冊的應用程式/用戶端 ID 註冊 Microsoft 驗證程式庫（MSAL）取得持有人權杖，將您的要求傳送給 API。
 
-<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
+如需 MSAL 詳細資訊，請見 [Microsoft 驗證程式庫（MSAL）總覽](https://docs.microsoft.com/azure/active-directory/develop/msal-overview)。
 
-如需 MSAL 詳細資訊，請見 [Microsoft 驗證程式庫（MSAL）總覽](/azure/active-directory/develop/msal-overview)。
+如需有關 Azure 中的應用程式註冊詳細資訊，請見 [新 Azure 入口網站應用程式註冊體驗](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide)。
 
-如需有關 Azure 中的應用程式註冊的詳細資訊，請參閱[註冊應用程式](/azure/active-directory/develop/quickstart-register-app.md#register-an-application)。
-
-如需在用戶端程式庫中使用 API 的更多資訊，請參閱[Customer Insights 用戶端程式庫](#customer-insights-client-libraries)。
+如需使用 API（我們的用戶端程式庫）資訊，請見 [Customer Insights 用戶端程式庫](#customer-insights-client-libraries)。
 
 ### <a name="server-to-server-application-permissions"></a>伺服器到伺服器應用程式權限
 
@@ -91,29 +83,32 @@ HTTP 回應將很快在下方出現。
 
 1. 在 Azure 入口網站中您的應用程式註冊上，前往 **API 權限**。
 
-1. 選取 **新增權限**。 
+1. 選取 **新增權限** 並選取側窗格中的 **Customer Insights**。
 
-1. 選取 **我的組織使用的 API** 索引標籤，然後從清單中選擇 **Dynamics 365 AI for Customer Insights**。 
-
-1. 在 **權限類型** 中，選取 **應用程式權限**，然後選取 **CustomerInsights.Api.All** 權限。
+1. **權限類型** 方面，請選取 **應用程式權限** 並選取 **CustomerInsights.Api.All** 權限。
 
 1. 選取 **新增權限**。
+
+1. 若要對此應用程式權限給予系統管理員同意，您必須新增服務主體。
+
+   1. 安裝 Azure Active Directory (AD) PowerShell 模組：`Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
+   1. 連線到您的 AD 帳戶: `Connect-AzureAD -TenantId <your tenant id>`。 您可以在 **總覽** > **Azure Active Directory** 上找到您的租用戶 ID。
+   1. 執行下列命令新增 Azure AD 服務主體：`New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` 與 Customer Insights API 應用程式相關的 AppId 參數。
+
+   :::image type="content" source="media/azureAD-service-principal.png" alt-text=" 服務主體範例":::
 
 1. 返回 **API 權限** 進行應用程式註冊。
 
 1. 選取 **授與系統管理員同意...** 完成應用程式註冊。
 
- <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
-
-1. 若要總結，我們必須將應用程式註冊名稱新增為 Customer Insights 使用者。  
-   
+1. 若要總結，我們必須將應用程式註冊名稱新增為 Customer Insights 使用者。    
    打開 Customer insights，前往 **管理員** > **權限** 並選取 **新增使用者**。
 
 1. 搜尋您的應用程式註冊名稱，從搜尋結果選取它，然後選取 **儲存**。
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights 用戶端程式庫
 
-本節幫助您開始使用可用於 Customer Insights API 的用戶端程式庫。 您可以在 [Customer Insights GitHub 頁面](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries)上找到所有的程式庫來原始程式碼和範例應用程式。 
+本節幫助您開始使用可用於 Customer Insights API 的用戶端程式庫。
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -126,35 +121,22 @@ HTTP 回應將很快在下方出現。
 1. 搜尋 **Microsoft.Dynamics.CustomerInsights.Api**。
 
 1. 選取 **安裝**，以便將套裝程式新增到專案。
- 
    或者在 **NuGet 套裝程式管理員主控台** 中執行此命令：`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
- <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text=" 將 NuGet 套裝程式新增到 Visual Studio 專案":::
 
 #### <a name="use-the-c-client-library"></a>使用 C# 用戶端程式庫
 
-1. 使用 [Microsoft 驗證程式庫 (MSAL)](/azure/active-directory/develop/msal-overview) 取得 `AccessToken` 使用現有的 [Azure 應用程式註冊](#create-a-new-app-registration-in-the-azure-portal)。
+1. 使用 [Microsoft 驗證程式庫 (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) 取得 `AccessToken` 使用現有的 [Azure 應用程式註冊](#create-a-new-app-registration-in-the-azure-portal)。
 
-1. 當您成功驗證並獲取權杖之後，請建立新的或使用現有的 `HttpClient`，並另外設定  **DefaultRequestHeaders "Authorization"** 為 **Bearer "access token"** 以及設定  **Ocp-Apim-Subscription-Key** 為 [Customer Insights 環境中您的 **訂閱金鑰**](#get-started-trying-the-customer-insights-apis)。   
- 
+1. 一旦成功驗證並獲取權杖後，請建構新的或使用現有 `HttpClient`，連同附加的 **DefaultRequestHeaders "授權"** 設定為 **持有人 <access token>** 及 **Ocp-Apim-Subscription-Key** 設定為源自您的 Customer Insights 環境 [**訂閱金鑰**](#get-started-trying-the-customer-insights-apis)。    
    請適時重設 **授權** 標頭。 例如當權杖到期時。
 
 1. 將此 `HttpClient` 傳遞到 `CustomerInsights` 用戶端的建構過程。
 
-<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Httpclient 範例":::
 
-1. 讓用戶端與「擴充方法」呼叫—例如，`GetAllInstancesAsync`。 如果偏好存取基礎 `Microsoft.Rest.HttpOperationResponse`，請使用「HTTP 訊息方法」—例如 `GetAllInstancesWithHttpMessagesAsync`。
+1. 讓用戶端與「擴充方法」通話，例如，`GetAllInstancesAsync`。 如果您偏愛存取基礎 `Microsoft.Rest.HttpOperationResponse`，請使用「HTTP 訊息方法」，例如 `GetAllInstancesWithHttpMessagesAsync`。
 
 1. 回應類型將很有可能是 `object`，因為方法會傳回多種類型 (例如，`IList<InstanceInfo>` 和 `ApiErrorResult`)。 若要檢查傳回類型，您可以將物件安全轉換成 [API 詳細資料頁面](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) 上指定的回應類型。    
-   
    如果需要更多要求資訊，請使用 **HTTP 訊息方法** 存取原始回應物件。
-
-### <a name="nodejs-package"></a>NodeJS 套件
-
-可透過 NPM 使用 NodeJS 用戶端程式庫：https://www.npmjs.com/package/@microsoft/customerinsights
-
-### <a name="python-package"></a>Python 套件
-
-可透過 PyPi 使用 Python 用戶端程式庫：https://pypi.org/project/customerinsights/
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

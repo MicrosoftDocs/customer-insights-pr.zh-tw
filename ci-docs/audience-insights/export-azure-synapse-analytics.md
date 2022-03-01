@@ -1,7 +1,7 @@
 ---
 title: 將 Customer Insights 資料匯出至 Azure Synapse Analytics
 description: 了解如何設定連接到 Azure Synapse Analytics。
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951032"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5977367"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>匯出至 Azure Synapse Analytics (預覽版)
 
@@ -49,8 +49,6 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 
 ### <a name="configure-a-connection"></a>設定連接
 
-若要建立連接，則服務主體和在 Customer Insights 中使用者帳戶需要在 Synapse Analytics 工作區的 *資源群組* 擁有 **讀者** 權限。 此外，Synapse Analytics 工作區的服務主體和使用者也需要 **Synapse 系統管理員** 權限。 
-
 1. 移至 **管理** > **連接**。
 
 1. 選取 **新增連接**，然後選擇 **Azure Synapse Analytics**，或在 **Azure Synapse Analytics** 圖格中選取 **設定**，來設定此連接。
@@ -65,7 +63,7 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 
 ### <a name="configure-an-export"></a>設定匯出
 
-若您擁有取此類型的連接的存取權，則可以設定此匯出。 若要使用共用的連接來設定匯出，您至少必須在 Customer Insights 中有 **參與者** 權限。 如需詳細資訊，請參閱[設定匯出所需的權限](export-destinations.md#set-up-a-new-export)。
+若您擁有取此類型的連接的存取權，則可以設定此匯出。 如需詳細資訊，請參閱[設定匯出所需的權限](export-destinations.md#set-up-a-new-export)。
 
 1. 移至 **資料** > **匯出**。
 
@@ -76,16 +74,12 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 1. 提供可辨識的 **顯示名稱** 給匯出並提供 **資料庫名稱**。
 
 1. 選取您要匯出到的 Azure Synapse Analytics 的實體。
-   > [!NOTE]
-   > 不支援基於 [Common Data Model 資料夾](connect-common-data-model.md)的資料來源。
 
-2. 選取 **儲存**。
+1. 選取 **儲存**。
 
 儲存匯出並不會立即執行匯出。
 
 每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。
-
-若要查詢匯出至 Synapse Analytics 的資料，您需要在匯出工作區中目標儲存空間有 **儲存體 Blob 資料讀者** 存取權。 
 
 ### <a name="update-an-export"></a>更新匯出
 

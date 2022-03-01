@@ -4,17 +4,17 @@ description: 如何建立、編輯及刪除客戶細分，以及在何處使用�
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623577"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036138"
 ---
 # <a name="view-and-create-segments"></a>檢視和建立客戶細分
 
@@ -44,27 +44,22 @@ ms.locfileid: "7623577"
 
 1. 選取 **新增區段**。
 
-1. 請在 **資源庫** 中選取您要做為篩選條件屬性旁邊的 (+)。 目前，您只能依據維度來建立客戶細分。
+1. 在 **資源庫** 中，選擇想要作為篩選的屬性。 目前，您只能依據維度來建立客戶細分。
 
-   :::image type="content" source="media/create-new-segment.png" alt-text="建立新區段。":::
-
-1. 請在 **規則** 區段中針對選取的屬性選取運算子與值。 下列的作業都被支援。
-
-   :::image type="content" source="media/choose-operator-segment.png" alt-text="選擇新區段的運算子。":::
-
+1. 為選取的屬性選擇運算子與值。 下列的作業都被支援。
    - **是**：需要完全相符才能包含值。 對單一值中使用 **等於**，或以 **任何** 包含多個值。
    - **不是**：需要完全相符才能排除值。 對單一值中使用 **等於**，或以 **任何** 包含多個值。
    - **起始為**：相符值起始的字串。
    - **結尾為**：相符值結尾的字串。
    - **包含**：相符值中要包含的字串。
 
-1. 若要將更多條件新增到群組，您可以使用邏輯運算子。 使用集合運算子時，映射屬性會被計入。
+1. 若要將更多條件新增至群組，您可以使用兩個邏輯運算子。 使用集合運算子時，映射屬性會被計入。
    - **AND** 運算子：在區段程序中兩個條件都必須符合。 當您跨不同實體定義條件時，此選項非常有用。
    - **OR** 運算子：在區段程序中，需要符合其中一項條件。 當您為相同實體定義多個條件時，此選項非常有用。
 
 1. 選取 **儲存**，然後命名客戶細分。 
 
-區段將列在 **區段** 頁面上，而您可以將它套用到工作區的所有報表和漏斗圖。
+該客戶細分會列在客戶細分頁面上，您可以將它套用至工作區中的所有報表和漏斗圖上。
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>在報表或漏斗圖使用客戶細分
 
@@ -72,7 +67,7 @@ ms.locfileid: "7623577"
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="網頁查看報表，包含展開的下拉式清單，可讓您選擇要套用哪些客戶細分。":::
 
-若要套用客戶細分，請打開報表或漏斗圖。 請選取 **+ 新增條件**，然後選擇 **依區段篩選**。 從清單上選擇您想要套用客戶細分。 該客戶細分會套用至報表。 如果圖表不支援該客戶細分，則會顯示錯誤。 如需詳細資訊，請參閱[建立和管理漏斗圖報表](funnel-reports.md)。
+若要套用客戶細分，請打開報表或漏斗圖。 選取 **新增條件**，然後選擇 **依客戶細分篩選**。 從清單上選擇您想要套用客戶細分。 該客戶細分會套用至報表。 如果圖表不支援該客戶細分，則會顯示錯誤。
  
 您可以 *最多將三個客戶細分* 套用至報表或漏斗。
 
@@ -96,7 +91,5 @@ ms.locfileid: "7623577"
 1. 在客戶細分清單中，選取 **更多 [...]**。 
 1. 在下拉式清單中，選擇 **刪除**。
 1. 請選取 **刪除**，確認刪除。
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

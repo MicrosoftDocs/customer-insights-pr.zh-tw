@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866878"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618281"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>將客戶細分匯出至 LinkedIn Ads (預覽版)
 
@@ -28,7 +28,6 @@ ms.locfileid: "7866878"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 您的 Customer Insights 中的客戶細分必須至少包含 300 個唯一設定檔。 
 - 每次匯出最多可以匯出 100K 個客戶設定檔到 LinkedIn Ads。
 - 匯出到 LinkedIn Ads 時，會被限制為客戶細分。
 - 匯出多達 100 K 個客戶設定檔到 LinkedIn Ads 最長花費 10 分鐘完成。 

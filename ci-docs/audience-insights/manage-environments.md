@@ -1,7 +1,7 @@
 ---
 title: 建立和管理環境
 description: 瞭解如何註冊服務及管理環境。
-ms.date: 12/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,63 +9,93 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8251cac9f95455b61eb0300b6c72cd4ab2969591
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046323"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259089"
 ---
 # <a name="manage-environments"></a>管理環境
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
+本文章解釋如何建立新組織及佈建環境。
 
-## <a name="switch-environments"></a>切換環境
+## <a name="sign-up-and-create-an-organization"></a>註冊和建立組織
 
-選取頁面右上角的 **環境** 控制項，以變更環境。
+1. 前往 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) 網站。
 
-:::image type="content" source="media/home-page-environment-switcher.png" alt-text="螢幕擷取畫面，圖為切換環境的控制項。":::
+2. 選取 **開始使用**。
 
-系統管理員能夠[建立](create-environment.md)和管理環境。
+3. 選擇您偏好的註冊案例，並選取對應的連結。
 
-## <a name="edit-an-existing-environment"></a>編輯現有環境
+4. 接受條款及條件，然後選取 **繼續** 以開始建立組織。
 
-您可以編輯現有環境的部分詳細資料。
+5. 建立環境之後，就會重新導向至 [Customer Insights](https://home.ci.ai.dynamics.com)。
 
-1.  在應用程式的標頭中選取 **環境** 選取器。
+6. 使用示範環境來探索應用程式，或依照下一節中的步驟建立新環境。
 
-2.  選取 **編輯** 圖示。
+7. 指定環境設定之後，選取 **建立**。
 
-3. 您可以在 **編輯環境** 方塊中更新環境設定。
+8. 待環境建立成功後，您即可登入。
 
-如需環境設定的詳細資訊，請參閱[建立新環境](create-environment.md)。
+## <a name="create-an-environment-in-an-existing-organization"></a>在現有的組織中建立環境
 
-## <a name="connect-to-microsoft-dataverse"></a>連線至 Microsoft Dataverse
-   
-**Microsoft Dataverse** 步驟讓您連接 Customer Insights 和您的 Dataverse 環境。
-
-若要使用[開箱即用預測模型](predictions-overview.md#out-of-box-models)，請組態與 Dataverse 共用的資料。 或者您可以從內部部署資料來源擷取，提供貴組織管理的 Microsoft Dataverse 環境 URL。 選取 **啟用資料共用** 功能以便和 Dataverse 託管的資料湖共用 Customer Insights 輸出資料。
-
-> [!IMPORTANT]
-> Customer Insights 與 Dataverse 必須位於相同的地區，才能啟用資料共用。
-
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="啟用與 Microsoft Dataverse 共用資料的設定選項。":::
+建立新環境的方式有兩種。 您可以指定全新的環境設定，也可以從現有環境複製一些組態設定。
 
 > [!NOTE]
-> Customer Insights 不支援的資料共用案例如下：
-> - 如果您儲存所有資料到 Azure Data Lake Storage，您就不能啟用與 Dataverse 託管的資料湖共用資料的功能。
-> - 如果您啟用與 Dataverse 共享資料的功能，您就無法[在實體建立預測或遺漏的數值](predictions.md)。
+> 每個 Customer Insights 授權，組織可以建立 *兩種* 環境。 如果您的組織購買授權超過一次，請[與我們的支援小組聯繫](https://go.microsoft.com/fwlink/?linkid=2079641)，增加可用環境的數目。 如需容量和附加容量的詳細資訊，請下載 [Dynamics 365 授權指南](https://go.microsoft.com/fwlink/?LinkId=866544)。
 
-## <a name="copy-the-environment-configuration"></a>複製環境設定
+若要建立環境：
 
-當您建立新的環境時，您可以選擇從現有的環境複製設定。 
+1. 在應用程式的標頭中選取 **環境** 選取器。
 
-:::image type="content" source="media/environment-settings-dialog.png" alt-text="螢幕擷取畫面，圖為環境設定中的設定選項。":::
+1. 選取 **新增**。
 
-您會看到組織中所有可用環境的清單，您可以從此清單複製資料。
+   > [!div class="mx-imgBorder"]
+   > ![環境設定](media/environment-settings-dialog.png)
+
+1. 在 **建立新環境** 對話方塊中，選取 **新增環境**。
+
+   如果您想要 [從目前的環境複製資料](#considerations-for-copy-configuration-preview)，請選取 **從現有環境複製**。 您會看到組織中所有可用環境的清單，您可以從此清單複製資料。
+
+1. 提供下列詳細資料：
+   - **名稱**：此環境的名稱。 如果您已複製現有環境，則欄位已填入資料，但是您可以變更此欄位。
+   - **地區**：服務部署和託管所在的地區。
+   - **類型**：選取要建立生產環境還是沙箱環境。
+
+1. 您可選擇性選取 **進階設定** 核取方塊：
+
+   - **將所有資料儲存到**：指定要儲存 Customer Insights 所產生之輸出資料的位置。 您有兩個選項：**Customer Insights 儲存空間** (由 Customer Insights 團隊管理的 Azure Data Lake) 和 **Azure Data Lake Storage Gen2** (您自己的 Azure Data Lake Storage)。 預設會選取 [Customer Insights 儲存空間] 選項。
+
+   > [!NOTE]
+   > 將資料儲存至 Azure Data Lake Storage，即表示您同意將資料傳送並儲存在相應的 Azure 儲存體帳戶的地理位置，這可能不同於將資料儲存在 Dynamics 365 Customer Insights 中的位置。 [在 Microsoft 信任中心深入了解。](https://www.microsoft.com/trust-center)
+   >
+   > 目前，已擷取的實體永遠都是儲存在 Customer Insights 管理的 Data Lake 中。
+   > 我們只在建立環境時從同一個 Azure 區域支援 Azure Data Lake Gen2 儲存體帳戶。
+   > 我們只支援 Azure Data Lake Gen2 階層命名空間 (HNS) 啟用的儲存體帳戶。
+
+   - Azure Data Lake Storage Gen2 選項方面，您可以在資源式選項和訂閱式選項之間選擇進行驗證。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 **容器** 的名稱無法變更，將會是 `customerinsights`。
+   
+   - 如果您想要使用 [預測](predictions.md)、設定與 Microsoft Dataverse 資料共用，或者從內部部署資料來源中進行資料擷取，請在 **設定與 Microsoft Dataverse 共用資料並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
+
+     > [!NOTE]
+     > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
+     > - 當您啟用資料共用給 Microsoft Dataverse Managed Data Lake 時，目前不支援[實體中遺失值的預測](predictions.md)。
+
+     > [!div class="mx-imgBorder"]
+     > ![啟用與 Microsoft Dataverse 共用資料的組態選項](media/datasharing-with-DataverseMDL.png)
+
+   當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 根據您的程序名稱，會建立資料檔案和 model.json 並新增至資料夾。
+
+   如果您建立多個 Customer Insights 環境並選擇從您的儲存體帳戶環境中儲存輸出實體，各資料夾將針對容器含有 ci_<environmentid> 每個環境分開建立。
+
+### <a name="considerations-for-copy-configuration-preview"></a>複製設定的考量 (預覽版)
 
 下列組態設定已複製，
 
+- 功能設定
 - 內嵌/匯入的資料來源
 - 資料統一 (對應、比對、合併) 設定
 - 客戶細分
@@ -75,26 +105,52 @@ ms.locfileid: "8046323"
 - 搜尋和篩選索引
 - 匯出目的地
 - 已排程的重新整理
-- 擴充
+- 擴充內容
 - 模型管理
 - 角色指派
 
-*不會* 複製下列資料：
+下列設定 *未* 複製：
 
 - 客戶設定檔。
 - 資料來源認證。 您必須提供每個資料來源的認證，並手動重新整理資料來源。
-
-- 取自 Common Data Model 資料夾和 Dataverse 託管資料湖的資料來源。 您必須使用與來源環境相同的名稱，手動建立這些資料來源。
+- Common Data Model 資料夾和 Common Data Service 受管理資料湖的資料來源。 您必須使用與來源環境相同的名稱，手動建立這些資料來源。
 
 複製環境時，您會看到一則指示已建立新環境的確認訊息。 選取 **移至資料來源** 以查看資料來源清單。
 
 所有的資料來源都會顯示 **需要認證** 狀態。 編輯資料來源，並輸入認證以進行重新整理。
 
-:::image type="content" source="media/data-sources-copied.png" alt-text="已複製且需要驗證的資料來源清單。":::
+> [!div class="mx-imgBorder"]
+> ![資料來源已複製](media/data-sources-copied.png)
 
 重新整理資料來源之後，移至 **資料** > **統一**。 您會在此處找到來源環境的設定。 視需要編輯，或選取 **執行** 以開始進行資料統一處理程序，並建立統一的客戶實體。
 
 資料統一完成時，移至 **測量** 和 **分段** 進行重新整理。
+
+## <a name="edit-an-existing-environment"></a>編輯現有環境
+
+您可以編輯現有環境的部分詳細資料。
+
+1.  在應用程式的標頭中選取 **環境** 選取器。
+
+2.  選取 **編輯** 圖示。
+
+3. 在 **編輯環境** 方塊中，您可以更新環境的 **顯示名稱**，但是不可以變更 **區域** 或 **類型**。
+
+4. 如果環境設定為在 Azure Data Lake Storage Gen2 中儲存資料，您可以更新 **帳戶金鑰**。 不過，您無法變更 **帳戶名稱** 或 **容器** 名稱。
+
+5. 或者您可以從帳戶金鑰式連接到資源式或訂閱式連接更新。 一旦升級，您就無法在更新後恢復到帳戶金鑰。 更多資訊請見 [使用 Azure 服務主體連接對象見解到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 更新連接時，您無法變更 **容器** 資訊。
+
+6. 或者，您可以在 **設定與 Microsoft Dataverse 共用資料並啟用其他功能** 下，提供 Microsoft Dataverse 環境 URL。 這些功能包含運用 Microsoft Dataverse 與應用程式和解決方案共用資料、從內部部署資料來源擷取資料、或使用[預測](predictions.md)。 選取 **啟用資料共用** 與 Microsoft Dataverse Managed Data Lake 共用 Customer Insights 輸出資料。
+
+   > [!NOTE]
+   > - 當您將所有資料儲存到自己的 Azure Data Lake Storage ，目前不支援共用資料給 Microsoft Dataverse Managed Data Lake。
+   > - 當您以 Microsoft Dataverse Managed Data Lake 啟用資料共用時，目前不支援[預測實體中缺少的值](predictions.md)。
+
+   啟用與 Microsoft Dataverse 的資料共用後，將對資料來源和其他程序開始一次完整的重新整理。 如果程序目前正在執行，您看不到用來啟用與 Microsoft Dataverse 共用資料的選項。 等待這些程序完成，或者取消它們以啟用資料共用。 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="啟用與 Microsoft Dataverse 共用資料的設定選項。":::
+   
+   當您執行流程如資料內嵌或區段建立時，對應資料夾會在您上述指定的儲存體帳戶中建立。 根據您執行的程序，會建立資料檔案和 model.json 並新增至各自的子資料夾。
 
 ## <a name="reset-an-existing-environment"></a>重設現有環境中
 
@@ -102,19 +158,19 @@ ms.locfileid: "8046323"
 
 1.  在應用程式的標頭中選取 **環境** 選取器。 
 
-2.  選取您要重設的環境，並選取省略號 (**...**)。 
+2.  選取您要重設的環境，並選取省略號 **...**。 
 
 3. 選擇 **重設** 選項。 
 
 4.  若要確認刪除，請輸入環境名稱並選取 **重設**。
 
-## <a name="delete-an-existing-environment"></a>刪除現有環境
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>刪除現有的環境 (只有系統管理員可以使用)
 
 作為管理員，您可以刪除您所管理的環境。
 
 1.  在應用程式的標頭中選取 **環境** 選取器。
 
-2.  選取您要重設的環境，並選取省略號 (**...**)。 
+2.  選取您要重設的環境，並選取省略號 **...**。 
 
 3. 選擇 **刪除** 選項。 
 

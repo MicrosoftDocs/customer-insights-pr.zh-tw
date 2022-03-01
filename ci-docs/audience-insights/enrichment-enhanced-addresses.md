@@ -1,7 +1,7 @@
 ---
 title: 地址增強擴充 (包括影片)
 description: 使用 Microsoft 模型擴充和標準化客戶個人資料的地址資訊。
-ms.date: 01/19/2022
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010879"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934913"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>以增強的地址擴充的客戶個人資料
 
@@ -98,19 +98,19 @@ ms.locfileid: "8010879"
 
 若要開始擴充程序，請從命令列中選取 **執行**。 您也可以讓系統在[排定的重新整理](system.md#schedule-tab)過程中自動執行擴充。 處理時間視客戶資料的大小而定。
 
-擴充程序完成後，您可以在 **我的擴充內容** 底下查看新擴充的客戶設定檔資料。 此外，您還會找到上次更新時間以及已擴充的個人資料數量。
+擴充程序完成後，您可以在 **我的擴充內容** 底下查看新擴充的客戶設定檔資料。 此外，您還會找到上次更新時間以及已擴充的設定檔數目。
 
-您可以在 **已擴充客戶預覽** 圖格中看到已擴充資料的範例。 選取 **查看更多**，並選取 **資料** 索引標籤，以存取每個擴充後個人資料的詳細資料。
+您可以選取 **檢視擴充的資料** 來存取每個已擴充設定檔的詳細檢視表。
 
 ### <a name="overview-card"></a>概覽卡片
 
 概覽卡片顯示擴充覆蓋率的詳細資料。 
 
-* **已處理且已變更的地址**：已成功擴充的客戶個人資料的地址數量。
+* **已處理且已變更的客戶**：已成功擴充的客戶個人資料數量。
 
-* **處理好卻未變更的地址**：識別完成但無法變更的客戶個人資料地址數量。 當輸入資料有效且無法由擴充改善時，通常會發生此問題。
+* **處理好卻未變更的客戶**：識別完成但無法變更的客戶個人資料數量。 當輸入資料有效且無法由擴充改善時，通常會發生此問題。
 
-* **未處理也未變更的地址**：無法識別也無法變更的客戶個人資料地址數量。 通常表示輸入資料無效或擴充不支援的輸入資料。
+* **未處理且未變更的客戶**：無法識別的客戶個人資料數量。 通常表示輸入資料無效或擴充不支援的輸入資料。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -4,17 +4,17 @@ metadata:
   author: m-hartmann
   description: 尋找從求助內容開始的相關文章。
   ms.author: mhart
-  ms.date: 03/02/2022
+  ms.date: 10/29/2020
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
-  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
+  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
+  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/10/2022
-  ms.locfileid: "8107189"
+  ms.lasthandoff: 03/15/2021
+  ms.locfileid: "5598446"
 title: Dynamics 365 Customer Insights 文件
-summary: 尋找有用的資源，以便開始了解 Customer Insights 的功能。
+summary: 尋找開始使用的實用資源並瞭解有關 Customer Insights 的功能和能力。
 landingContent:
 - title: 目睹 Customer Insights
   linkLists:
@@ -23,61 +23,39 @@ landingContent:
     - text: Customer Insights 總覽
       url: overview.md
     - text: 發行計畫
-      url: /dynamics365/release-plans/
-    - text: 探索 CDP
-      url: https://dynamics.microsoft.com/ai/customer-insights/
-  - linkListType: learn
-    links:
-    - text: Customer Insights 學習路徑
-      url: /learn/paths/build-customer-insights/
-- title: 開始使用 Customer Insights
+      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: 存取您的環境
+      url: https://home.ci.ai.dynamics.com/
+- title: 開始使用對象見解
   linkLists:
   - linkListType: get-started
     links:
     - text: 註冊試用版
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: 對象見解新增功能
+    - text: 有什麼新功能？
       url: audience-insights/whats-new-audience-insights.md
-    - text: 快速入門手冊
-      url: audience-insights/get-started.md
-  - linkListType: learn
-    links:
-    - text: 開始使用
-      url: /learn/modules/get-started-customer-data-platform/
-- title: 系統管理員對象見解
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: 組態系統
-      url: audience-insights/system.md
-    - text: 定義使用者權限
-      url: audience-insights/permissions.md
-    - text: 管理多個環境
-      url: audience-insights/manage-environments.md
-  - linkListType: learn
-    links:
-    - text: 管理 Customer Insights
-      url: /learn/modules/administer-customer-data-platform/
+    - text: 對象見解文件
+      url: audience-insights/index.yml
 - title: 保持聯絡
   linkLists:
   - linkListType: overview
     links:
     - text: 加入 Dynamics 365 社群
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-    - text: 分享您的構想
+    - text: 分享您的想法
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: 回報問題
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: 在功能間共用資料
+- title: 對象見解教學課程
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: tutorial
     links:
-    - text: 建立功能之間的連結
-      url: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - text: 建立報表使用的客戶細分
-      url: engagement-insights/integrate-audience-insights-segments.md
-    - text: 使用個人資料屬性進行互動式分析
-      url: engagement-insights/curate-dimensions.md
+    - text: 建立新環境
+      url: audience-insights/home.md
+    - text: 建立統整的客戶設定檔
+      url: /learn/modules/unified-customer-profile/
+    - text: 使用應用程式
+      url: /learn/modules/working-with-customer-insights/
 - title: 匯出對象見解資料
   linkLists:
   - linkListType: how-to-guide
@@ -88,6 +66,16 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: Power BI 連接器
       url: audience-insights/export-power-bi.md
+- title: 系統管理員對象見解
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 組態系統
+      url: audience-insights/system.md
+    - text: 定義使用者權限
+      url: audience-insights/permissions.md
+    - text: 管理多個環境
+      url: audience-insights/manage-environments.md
 - title: 關於參與見解 (預覽版)
   linkLists:
   - linkListType: overview

@@ -1,7 +1,7 @@
 ---
 title: 將 Customer Insights 資料匯出到 Salesforce Marketing Cloud
 description: 了解如何設定連接並匯出到 Salesforce Marketing Cloud。
-ms.date: 07/23/2021
+ms.date: 06/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b50539d6478a8fe196048f0fb421e5856f713a3ddc6577a637e593f90857ae8b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035543"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314585"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>匯出客戶細分和其他資料到 Salesforce Marketing Cloud (預覽版)
 
@@ -23,6 +23,11 @@ ms.locfileid: "7035543"
 ## <a name="prerequisites-for-connection"></a>連接的先決條件
 
 - 可用的 SFTP 主機和相應的系統管理員認證。 [如何為 Salesforce Marketing Cloud 設定 SFTP 位置](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
+
+## <a name="known-limitations"></a>已知限制
+
+- 匯出執行時間依您的系統效能而定。 我們建議伺服器最小配置為兩個 CPU 核心和 1 Gb 的記憶體。 
+- 使用推薦的最低配置時，輸出多達 1 億筆客戶個人資料的實體可能需要 90 分鐘。 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>設置與 Salesforce Marketing Cloud 的連接
 
