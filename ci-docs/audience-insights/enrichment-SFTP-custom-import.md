@@ -3,18 +3,17 @@ title: SFTP 自訂匯入的富集
 description: 有關SFTP 自訂匯入富集的一般資訊。
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304640"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229617"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>使用自訂資料富集客戶設定檔 (預覽版)
 
@@ -45,6 +44,8 @@ ms.locfileid: "6304640"
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="輸入資料位置時的螢幕擷取畫面。":::
 
+1. 選取 **下一步**，並選擇客戶資料集。 這可以是所有的客戶設定檔或區段。
+
 1. 選取 **下一步** 並提供擴充的名稱以及輸出實體的名稱。 
 
 1. 檢閱選擇之後，請選取 **儲存擴充**。
@@ -64,7 +65,7 @@ ms.locfileid: "6304640"
 1. 驗證完成後，您可以選取 **儲存** 來儲存連接。
 
    > [!div class="mx-imgBorder"]
-   > ![Experian 連接設定頁面](media/enrichment-SFTP-connection.png "Experian 連接設定頁面")
+   > ![Experian 連接設定頁面。](media/enrichment-SFTP-connection.png "Experian 連接設定頁面")
 
 
 ## <a name="defining-field-mappings"></a>定義欄位對應 
@@ -123,6 +124,6 @@ ms.locfileid: "6304640"
 
 ## <a name="next-steps"></a>後續步驟
 
-建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)和[量值](measures.md)，和[匯出資料](export-destinations.md)，為您的客戶提供個人化的體驗。
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

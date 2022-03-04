@@ -1,30 +1,35 @@
 ---
 title: 在 Microsoft Dataverse 中連線至資料表
 description: 從 Microsoft Dataverse 受管理的資料湖匯入資料。
-ms.date: 07/23/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: f92d64723e6a4d2fcebdbb3758519d4bfd4aeaf4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+searchScope:
+- ci-dataverse
+- customerInsights
+ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692564"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354131"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>連線至 Microsoft Dataverse 受管理資料湖中的資料
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-本文說明 Dataverse 使用者在 Dataverse 受管理的 Lake 中如何快速連接至分析實體。 您必須是 Dataverse 組織的系統管理員，才能繼續執行並查看受管理的資料湖中提供的實體清單。
+
+本文說明 Dataverse 使用者如何快速連接至位於 Microsoft Dataverse 受管理的 Lake 的分析實體。 
+
+> [!NOTE]
+> 您必須是 Dataverse 組織的系統管理員才能繼續進行並查看受管理的 Lake 可用的實體清單。
 
 ## <a name="important-considerations"></a>重要考量
 
-儲存在線上服務 (例如 Azure Data Lake Storage) 的資料可能會儲存在與處理資料所在位置不同的位置或儲存在 Dynamics 365 Customer Insights 中。匯入或連接至儲存在線上服務的資料，即表示您同意可以將資料傳輸或儲存至 Dynamics 365 Customer Insights。 [在 Microsoft 信任中心深入了解。](https://www.microsoft.com/trust-center)
+儲存在線上服務 (例如 Azure Data Lake Storage) 的資料可能會儲存在與處理資料所在位置不同的位置或儲存在 Dynamics 365 Customer Insights 中。 匯入或連接至儲存在線上服務的資料，即表示您同意可以將資料傳輸或儲存至 Dynamics 365 Customer Insights。 [在 Microsoft 信任中心深入了解](https://www.microsoft.com/trust-center)。
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>連接至 Dataverse 受管理的資料湖
 
@@ -32,12 +37,9 @@ ms.locfileid: "6692564"
 
 2. 選取 **新增資料來源**。
 
-3. 選取 **連接到 Microsoft Dataverse 受管理的 Lake**，然後選取 **下一步**。
+3. 選取 **Microsoft Dataverse**，然後選取 **下一步**。
 
-4. 輸入資料來源的 **名稱**，然後選取 **下一步**。 命名方針： 
-   - 名稱必須以字母開頭。
-   - 只能使用字母和數字。 不可以使用空格和特殊字元。
-   - 接受 3 到 64 個字元。
+4. 輸入資料來源的 **名稱**，然後選取 **下一步**。 
 
 5. 提供 Dataverse 組織的 **伺服器位址**，並選取 **登入**。
 

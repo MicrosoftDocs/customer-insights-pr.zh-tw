@@ -3,20 +3,24 @@ title: 客戶生命週期價值預測
 description: 預測活躍客戶的未來營收潛力。
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035359"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355779"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>客戶生命週期價值 (CLV) 預測 (預覽版)
+# <a name="customer-lifetime-value-clv-prediction"></a>客戶生命週期價值預測
 
 預測在一段定義好的未來時間中，個別活躍客戶將帶來的業務潛在價值 (營收)。 此功能可協助您實現許多目標： 
 - 找出高價值的客戶並處理這種見解
@@ -65,7 +69,7 @@ ms.locfileid: "7035359"
     - 資料完整性：輸入資料中必要欄位值的缺失要少於 20%   
 
 > [!NOTE]
-> - 模型需要客戶的交易歷史記錄。 目前只能設定一個交易記錄歷史記錄實體。 如果有多個購買/交易實體，請在資料內嵌之前，在 Power Query 將它們聯集。
+> - 模型需要客戶的交易歷史記錄。 目前只能設定一個交易記錄歷史記錄實體。 如果有多個購買/交易實體，您可以在開始資料擷取前，在 Power Query 將它們聯集。
 > - 如果是其他的客戶活動資料 (可選)，則可以新增任意數量的客戶活動實體供模型考量。
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>建立客戶生命週期價值預測
@@ -74,7 +78,7 @@ ms.locfileid: "7035359"
 
 1. 選取 **客戶生命週期價值** 圖格，然後選取 **使用模型**。 
 
-1. 在 **客戶生命週期價值 (預覽版)** 窗格中，選取 **開始使用**。
+1. 在 **客戶存留期值** 窗格中，選取 **開始使用**。
 
 1. **命名此模型** 及 **輸出實體名稱**，將它們與其他模型或實體區分開來。
 

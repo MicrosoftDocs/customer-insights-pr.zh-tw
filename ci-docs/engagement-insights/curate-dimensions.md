@@ -2,18 +2,17 @@
 title: 使用人口統計學維度來分割行為資料 (已整理的維度)
 description: 使用整合個人資料的已整理維度，以啟用對象見解客戶個人資料屬性。
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461093"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232957"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>使用人口統計學維度來分割行為資料
 
@@ -29,7 +28,7 @@ ms.locfileid: "7461093"
 - 參與見解的環境，在其中有連結至對象見解環境的客戶個人資料，此對象見解環境則是建立客戶細分和客戶個人資料的環境。 更多資訊：[建立對象見解與參與見解之間的連結](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> 在建立對象見解與參與見解環境之間的連結之後，您可能只想要能在參與見解中當作維度的特定客戶個人資料屬性的資料。 如需更多資訊，請移至[啟用對象見解整合個人資料屬性和客戶細分](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments)。<!--note from editor: Suggested. -->
+> 在建立對象見解與參與見解環境之間的連結之後，您可能只想要能在參與見解中當作維度的特定客戶個人資料屬性的資料。 如需更多資訊，請移至[啟用對象見解整合個人資料屬性和客戶細分](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments)。
 
 ## <a name="create-a-new-custom-report"></a>建立新自訂報表
 

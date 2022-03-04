@@ -1,20 +1,19 @@
 ---
 title: 將 Customer Insights 資料匯出至 Constant Contact
 description: 了解如何設定連接並匯出至 Constant Contact。
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 8841945814397ffa70c56638a8bed25499c1a06f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124263"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226393"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>將客戶細分匯出至 Constant Contact (預覽版)
 
@@ -28,10 +27,10 @@ ms.locfileid: "6124263"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 每筆匯出中您最多可以將 1 百萬筆個人資料匯出至 Constant Contact。
+- 每次匯出，您最多可以匯出 1 百萬個客戶設定檔到 Constant Contact。
 - 匯出到 Constant Contact 時，會被限制為客戶細分。
-- 將最多 1 百萬筆個人資料匯出至 Constant Contact 可能需要花費 1 小時的時間才能完成。 
-- 您可以匯出至 Constant Contact 的個人資料數量與 Constant Contact 的合約有關且受到其限制。
+- 匯出多達 1 百萬個客戶設定檔到 Constant Contact 最長花費 1 小時完成。 
+- 您可以匯出到 Constant Contact 的客戶設定檔數目取決於並受限於您和 Constant Contact 簽訂的契約。
 
 ## <a name="set-up-connection-to-constant-contact"></a>設定與 Constant Contact 的連結
 
@@ -47,7 +46,7 @@ ms.locfileid: "6124263"
 
 1. 選取 **連接** 來初始化與 Constant Contact 的連接。
 
-1. 選取 **與 AdRoll 驗證**，並提供系統管理員認證給 Constant Contact。 
+1. 選取 **驗證 Constant Contact**，並提供 Constant Contact 的管理認證。 
 
 1. 選取 **將您自己新增為匯出使用者** 並提供您的 Customer Insights 認證。
 
@@ -65,7 +64,7 @@ ms.locfileid: "6124263"
 
 1. 輸入您的 [**Constant Contact 清單識別碼**](https://app.constantcontact.com/pages/contacts/ui#lists)。 在 Constant Contact 中打開清單，以尋找 URL 中的清單識別碼。
 
-1. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 這必須匯出客戶細分到 Constant Contact。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 這必須匯出客戶細分到 Constant Contact。
 
 1. 或者將 名字 和 姓氏 匯出為其他欄位，以建立更多個人化電子郵件。 選取 **新增屬性** 對應這些欄位。
 

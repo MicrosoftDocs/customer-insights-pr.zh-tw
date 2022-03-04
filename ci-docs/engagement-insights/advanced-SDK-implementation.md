@@ -4,17 +4,16 @@ description: 使用 SDK 來規範您的網站時，要考慮的進階案例。
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 11/12/2020
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a083d8215f295af0884257a016b62b8c7e4ab2c7
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036318"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227188"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>進階網站 SDK 檢測工具
 
@@ -33,20 +32,20 @@ SDK 可讓您隨每個事件定義能傳送的使用者資訊。 您可以在稱
 - **authType**：用來取得已驗證使用者 ID 的驗證類型。
 - **name**：使用者的名稱。
 - **email**：使用者的電子郵件地址。
-    
-下列範例顯示一段傳送使用者資訊的程式碼片段。 在您看到以 * 表示的函數中，請將它替換為您執行呼叫的那些值：  
+
+下列範例顯示一段傳送使用者資訊的程式碼片段。 在您看到前面加上星號 * 符號的函數時，請以您的自訂實作取代該函數：
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     user:{
@@ -58,25 +57,25 @@ window, document
 […]
 ```
 
-您也可以在 SDK 上呼叫 `setUser(user: IUser)` API 來指定使用者資訊。 在呼叫 `setUser API` 後傳送的遙測將包含使用者資訊。
+您也可以呼叫 `setUser(user: IUser)` API 來指定使用者資訊。 在呼叫 `setUser` API 後傳送的遙測將包含使用者資訊。
 
 ## <a name="adding-custom-properties-for-each-event"></a>為每個事件新增自訂屬性
 
-SDK 可讓您隨每個事件傳送指定的自訂屬性。 您可以將自訂屬性指定為包含鍵值配對的物件（值可以是 `string | number | boolean` 類型）。 該物件可以新增至名為 `props` 的屬性，這類似於程式碼片段設定中的 `src`、`name` 和 `cfg` 屬性。 
+SDK 可讓您隨每個事件傳送指定的自訂屬性。 您可以將自訂屬性指定為包含鍵值配對的物件（值可以是 `string | number | boolean` 類型）。 您可以在屬性中新增名為 `props` 的物件 (類似程式碼片段設定中的`src`、`name` 和 `cfg`)。
 
 下列範例顯示一段傳送自訂屬性的程式碼片段：
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     props:{
@@ -87,7 +86,7 @@ window, document
 […]
 ```
 
-您也可以在 SDK 上呼叫 `setProperty(name: string, value: string | number | boolean)` API，個別指定自訂屬性。
+您也可以呼叫 `setProperty(name: string, value: string | number | boolean)` API 來指定個別自訂屬性。
 
 ## <a name="sending-custom-events"></a>傳送自訂事件
 

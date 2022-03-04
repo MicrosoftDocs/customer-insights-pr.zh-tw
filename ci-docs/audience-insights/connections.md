@@ -3,18 +3,20 @@ title: 從 Customer Insights 連接到其他服務。
 description: 共用資料給其他服務。
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304962"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354373"
 ---
 # <a name="connections-preview-overview"></a>連接 (預覽版) 概觀
 
@@ -47,6 +49,7 @@ ms.locfileid: "6304962"
 1. 在 **設定連接** 窗格中，提供必要的詳細資料。 
    1. 以連結的 **顯示名稱** 與類型設定連接。 我們建議您選取可以說明此連接用途和目標的名稱。
    1. 準確的欄位則依您要連接的服務而定。 在目標服務的相關文章中，可以了解特定連接的詳細資料。
+   1. 如果您 [使用自己的金鑰保存庫](use-azure-key-vault.md)儲存祕密，請使用 **金鑰保存庫** 並從清單選擇祕密。
 
 1. 選取 **儲存** 建立連結。
 
@@ -93,3 +96,6 @@ ms.locfileid: "6304962"
 
 1. 請選取 **刪除**，來確認刪除。
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>請借助您自己的金鑰保存庫管理的祕密設定連接
+
+某些連接需要像 API 金鑰或密碼之類的祕密。 某些連接支援儲存在您自己金鑰保存庫的祕密。 了解更多有關連接支援及在[您自己的金鑰保存庫上設定，以獲取觀眾見解的方法](use-azure-key-vault.md)。

@@ -4,17 +4,16 @@ description: 如何使用漏斗圖報表來瞭解對象如何進行決策。
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498632"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226250"
 ---
 # <a name="create-and-manage-funnel-reports"></a>建立及管理漏斗圖報表
 
@@ -163,13 +162,23 @@ ms.locfileid: "7498632"
 
 參與見解現在提供客戶的漏斗圖見解。 使用漏斗圖見解，深入瞭解客戶在漏斗圖報表中各步驟的行為。 當您建立並儲存新的漏斗圖報表時，會為您的報表自動生成漏斗圖見解。 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="漏斗圖見解。":::
+
+> [!NOTE]
+> 只能為 **不** 包括自訂維度的漏斗圖步驟生成漏斗圖見解。 若要為漏斗圖中的所有步驟建立漏斗圖見解，請使用參與見解的現成維度來建立您的漏斗圖步驟。 
+
 您可以從下列類別，從主要等級和步驟等級查看漏斗圖見解： 
 
- - 轉換率 
+ - 轉換率
+ -    結帳和購買間的轉換率為 22%。
  - 轉換時間 
+ -    購物車和結帳處之間的平均轉換時間為 23 分鐘。 
  - 完成時間 
+ -    客戶完成漏斗圖所花費的平均時間量為 47 分鐘。 
 
 您可以使用這些見解深入探索客戶行為，並更清楚地瞭解漏斗圖報表的暫時擱置點和轉換。 
+
+若要比較不同步驟的見解，請從見解卡片選取 **查看步驟明細** 或 **比較其他步驟**。 這些將顯示柱狀圖來比對漏斗各步驟的計量。 
 
 每隔 24 小時漏斗圖見解會重新計算一次，以及在您 **儲存** 漏斗圖報表時進行重新計算。 
 

@@ -1,24 +1,23 @@
 ---
 title: Common Data Model 中的 Customer Insights 實體結構描述
 description: 搭配 Common Data Model 中的實體處理。
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: f0af2a6d8a90ff01ea9d4eeb29f34113261fd0d4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692295"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230991"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model 中的實體結構描述
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) 是宣告式規格，以及標準實體的定義，這些實體代表各種不同商務應用程式與生產力應用程式上常用的概念和活動。 此模型也正在向觀測及分析資料延伸。 Common Data Model 提供定義完善、模組化且可擴充的商務實體 (例如帳戶、業務單位、案例、連絡人、潛在客戶、商機和產品)，以及與廠商、員工和客戶之間的互動 (例如活動和服務等級協定)。 任何人都可以在 Common Data Model 定義的基礎上進行建置和延伸，以捕捉其他業務特定創意。
 
@@ -42,7 +41,7 @@ ms.locfileid: "6692295"
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>使用 Common Data Model 實體導覽器來檢視實體
 
-您可以在 [Common Data Model 實體導航器中](https://microsoft.github.io/CDM/) 檢視實體。 選取 **從 GitHub 載入！** 按鈕，然後瀏覽至 **foundationCommon** > **crmCommon** > **解決方案** > **customerInsights**，您會在其中找到 Customer Insights 實體及其定義的清單。
+您可以在 [Common Data Model 實體導航器中](https://microsoft.github.io/CDM/) 檢視實體。 在見解應用程式區段選取實體以獲取 Customer Insights 實體清單及其定義。
 > [!div class="mx-imgBorder"]
 > ![顯示 CustomerActivity 實體的 CDM 實體導覽器。](media/CDM-entity-navigator.png "顯示 CustomerActivity 實體的 CDM 實體導覽器")
 

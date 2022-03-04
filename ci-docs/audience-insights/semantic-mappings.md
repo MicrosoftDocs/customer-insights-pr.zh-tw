@@ -1,22 +1,24 @@
 ---
 title: 語意對應 (預覽版)
 description: 語意對應總覽及使用方法。
-ms.date: 09/28/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622925"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353947"
 ---
-# <a name="semantic-mappings"></a>語意對應
+# <a name="semantic-mappings-preview"></a>語意對應 (預覽版)
 
 語意對應讓您將非活動資料對應到預先定義的結構描述。 這些結構描述有助於對象見解更瞭解您的資料屬性。 語意對應和提供的資料啟用對象見解中的新見解與功能。 若要將您的活動資料對應到結構描述，請審閱[活動](activities.md)文件。
 
@@ -75,8 +77,7 @@ ms.locfileid: "7622925"
 
 1. 若要稍候執行語意對應，請選取語意對應和 **重新整理**。
 
-> [!TIP]
-> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 針對其中一項作業的工作選取 **查看詳細資料** 之後，您會找到其他資訊：處理時間、上次處理日期以及所有與工作相關的錯誤和警告。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>管理現有的語意對應
 
@@ -91,5 +92,41 @@ ms.locfileid: "7622925"
 - **重新命名**：打開對話方塊，您可以針對選取的語意對應輸入不同名稱。 選取 **儲存** 套用變更。
 
 - **刪除**：打開對話方塊確認是否刪除選取的語意對應。 您也可以藉由選取語意對應和刪除圖示一次刪除多個語意對應。 請選取 **刪除**，以確認刪除。
+
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>使用 ContactProfile 語義實體對應來建立連絡人層級活動
+
+建立 *ContactProfile* 語義實體對應之後，您便可以擷取連絡人的活動。 它可讓您在活動時間表中查看連絡人負責每個活動的說明。 大部分步驟均遵循一般活動對應設定。
+
+   > [!NOTE]
+   > 若要讓連絡人層級運作，您必須在活動資料中同時擁有每個記錄的 **AccountID** 和 **ContactID** 屬性。
+
+1. [定義 *ContactProfile* 語義實體對應。](#define-a-contactprofile-semantic-entity-mapping) 並執行語義對應。
+
+1. 在對象見解中，前往 **資料** > **活動**。
+
+1. 若要建立新的活動，請選取 **新增活動**。
+
+1. 為活動命名，選取來源活動實體，然後選取活動實體的主索引鍵。
+
+1. 在 **關聯** 步驟中，以中間實體方式，建立活動來源資料與客戶之間的間接關係。 如需詳細資訊，請查看[直接和間接關聯路徑](relationships.md#relationship-paths)。
+   - 一個活動的關聯範例，名字是 *採購*：
+      - 在 **ContactID** 屬性上的 **購買來源活動資料** > **連絡人資料**
+      - 在屬性 **AccountID** 上的 **連絡人資料** > **客戶資料**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="範例關聯設定。":::
+
+1. 設定關聯之後，請選取 **下一步**，然後完成活動對應設定。 如需建立活動的詳細步驟，請參閱[定義活動](activities.md)。
+
+1. 執行您的活動對應。
+
+1. 您的連絡人層級活動現在會顯示在您的客戶時間表上。
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="設定連絡人活動後的最終結果":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>連絡人層級活動時間表篩選
+
+在設定連絡人層級活動對應並執行之後，您的客戶活動時間表將會更新。 根據您的 *ContactProfile* 設定而定，這會包含他們所處理之活動的識別碼或名稱。 您可以根據時間表中的連絡人來篩選活動，查看您有興趣的特定連絡人。 此外，透過選取 **未對應至連絡人的活動**，您可以查看未指派給特定連絡人的所有活動。
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="連絡人層級活動可用的篩選選項。":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,24 +1,28 @@
 ---
 title: 使用預測完成部分資料
 description: 使用預測填滿未完成的客戶資料。
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692517"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353993"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>透過預測完成部分資料
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>透過預測完成部分資料 (已取代)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> 此功能將自 **2021 年 11 月 5 日** 起 **被取代**。 在移除功能之前，目前的實作將繼續運作，但是您將無法使用下列指示建立新的整合。
 
 預測可讓您輕鬆建立預測值，以增強您對客戶的了解。 您可以在 **智慧** > **預測** 頁面上選取 **我的預測** 查看您已在觀眾見解其他部分中組態的預測，並允許進一步自訂它們。
 
@@ -35,7 +39,7 @@ ms.locfileid: "6692517"
 
 2. 您的對象見解環境會附加至您的 Dataverse 執行個體。
 
-如果您要 [建立新的環境](get-started-paid.md)，請在 **建立環境** 對話方塊中加以設定，然後選取 **進階**。 如果您已建立環境，請移至其設定並選取 **進階**。 或者在 **使用預測** 區段中輸入您要附加環境的 Dataverse 執行個體 URL。
+如需詳細資訊，請參閱[建立新環境](create-environment.md)。
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>在客戶實體中建立預測
 
@@ -60,6 +64,8 @@ ms.locfileid: "6692517"
    > ![範例中顯示對應至類別的欄位值。](media/intelligence-categorymapping.png "顯示對應的欄位值至類別的範例")
 
 8. 選取 **完成**，預測將會得到處理。 處理工作需要花費一些時間，視資料的大小和複雜度而定。 根據您所建立之預測的 **輸出實體名稱**，在新實體中提供結果。
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>建立區段時建立預測
 
@@ -110,7 +116,7 @@ ms.locfileid: "6692517"
 
 ## <a name="edit-a-prediction"></a>編輯預測
 
-建立預測之後，您可以在 AI Builder 中自訂模型，以增加模型的有效性。  
+建立預測之後，您可以在 AI Builder 中自訂模型，提高模型的效能。  
 
 1. 請在對象見解中前往 **智慧**  > **預測**  > **我的預測**。
 
@@ -118,14 +124,14 @@ ms.locfileid: "6692517"
 
 3. 在 **動作** 欄中選取省略符號，然後選擇 **檢視**。
 
-4. 選取 **在 AI Builder 中自訂**。
+4. 選取 **自訂 AI Builder**。
 
 5. 在 AI Builder 中更新您的模型。 [深入了解如何在 AI Builder 中管理模型](/ai-builder/manage-model#retrain-and-republish-existing-models)。
 
 下次執行預測時，會使用您所建立的更新模型。
 
 > [!NOTE]
-> 在 AI Builder 建立的新模型不會顯示在觀眾見解中，除非模型是從上列體驗建立。
+> 在 AI Builder 中建立的新模型不會顯示在對象見解中，除非該模型是從上列體驗建立的。
 
 ## <a name="remove-a-prediction"></a>移除預測
 

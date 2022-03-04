@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648107"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225413"
 ---
 # <a name="create-a-new-environment"></a>建立新環境 
 
@@ -46,7 +45,7 @@ ms.locfileid: "7648107"
 
 1. 請選取 **顯示進階設定** 啟用或停用這些非必要設定：
 
-   - 請將 **未知到已知** 切換成「已啟用」，以便將 Web 事件與先前驗證的使用者產生關聯。 如需詳細資訊，請參閱[從先前驗證的訪客識別 Web 事件](unknown-to-known.md)
+   - 請將 **未知到已知** 切換成「已啟用」，以便將 Web 事件與先前驗證的使用者產生關聯。 如需詳細資訊，請參閱[從先前驗證的訪客識別 Web 事件](unknown-to-known.md)。
    - 請將 **篩選條件 bot 流量** 切換成「已啟用」，以便藉由 bot 為此工作區移除 web 流量。 
 
 1. 完成時請選取 **完成**。 

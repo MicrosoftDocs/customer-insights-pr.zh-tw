@@ -1,22 +1,21 @@
 ---
 title: 產品建議預測
 description: 預測一個客戶可能購買或互動的產品。
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494529"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355741"
 ---
-# <a name="product-recommendation-prediction-preview"></a>產品建議預測 (預覽版)
+# <a name="product-recommendation-prediction"></a>產品建議預測
 
 產品建議模型會建立一組預測的產品建議。 建議是基於先前的購買行為和具有類似購買模式的客戶而建立的。 您可以在 **智慧** > **預測** 頁面上建立新的產品建議預測。 選取 **我的預測** 以查看您所建立的其他預測。
 
@@ -54,7 +53,7 @@ ms.locfileid: "7494529"
 
 > [!NOTE]
 > - 模型需要客戶的交易歷史記錄。 交易的定義非常靈活。 任何描述使用者-產品互動的資料都可以當作輸入。 例如，購買產品、上課或參加活動。
-> - 目前只能設定一個交易記錄歷史記錄實體。 如果有多個購買實體，請在資料內嵌之前，在 Power Query 將它們聯集。
+> - 目前只能設定一個交易記錄歷史記錄實體。 如果有多個購買實體，您可以在開始資料擷取前，在 Power Query 將它們聯集。
 > - 如果訂單和訂單詳細資料是不同的實體，請於用在模型之前，先連結它們。 在實體中只有訂單識別碼或收據識別碼時，模型無法運作。
 
 
@@ -62,7 +61,7 @@ ms.locfileid: "7494529"
 
 1. 在 Customer Insights 中，移至 **智慧** > **預測**。
 
-1. 選取 **產品建議模型 (預覽版)** 圖格和 **使用此模型**。
+1. 選取 **產品建議模型** 圖格，然後選取 **使用此模型**。
    > [!div class="mx-imgBorder"]
    > ![具有「使用此模型」按鈕的產品建議模型圖標。](media/product-recommendation-usethismodel.PNG "使用此模型按鈕的產品建議模型圖格")
 
@@ -79,11 +78,11 @@ ms.locfileid: "7494529"
 1. 設定想要向客戶建議的 **產品數目**。 依照傳送方式此值填充資料。 如果您可以建議三種產品，請依此設定此值。
    
    >[!TIP]
-   > 您隨時都可以選取 **儲存後關閉**，將預測儲存為草稿。 您可以在 **我的預測** 索引標籤中找到預測草稿。
+   > 您隨時可以選取 **儲存草稿**，儲存預測草稿。 您可以在 **我的預測** 索引標籤中找到預測草稿。
 
-1. 如果您想 **建議客戶最近購買過的產品**，請選擇。
+1. 選擇是否要在 **預期重複的採購** 欄位中包括客戶最近購買的產品。
 
-1. 如果您已選取 *不要* 建議最近購買過的產品，請設定 **回顧視窗**。 此設定指定模型向使用者再次推薦產品前，考量的時間範圍。 例如，指定客戶每兩年購買一台筆記本電腦。 此視窗將查看過去兩年的購買歷史記錄，如果找到項目，則將該項目從建議中篩選掉。
+1. 設定 **回顧範圍**。 此設定指定模型向使用者再次推薦產品前，考量的時間範圍。 例如，指定客戶每兩年購買一台筆記本電腦。 此視窗將查看過去兩年的購買歷史記錄，如果找到項目，則將該項目從建議中篩選掉。
 
 1. 選取 **下一個**
 

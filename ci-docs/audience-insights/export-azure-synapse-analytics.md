@@ -1,22 +1,21 @@
 ---
-title: 將 Customer Insights 資料匯出至 Azure Synapse Analytics
-description: 了解如何設定連接到 Azure Synapse Analytics。
-ms.date: 04/12/2021
+title: 將 Customer Insights 資料匯出到 Azure Synapse Analytics
+description: 了解如何設定 Azure Synapse Analytics 連線。
+ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977367"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231302"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>匯出至 Azure Synapse Analytics (預覽版)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>匯出資料至 Azure Synapse Analytics (預覽版)
 
 Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨量資料系統所需要的時間。 您可以在 [Azure Synapse](/azure/synapse-analytics/overview-what-is) 中內嵌和使用您的 Customer Insights 資料。
 
@@ -49,9 +48,11 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 
 ### <a name="configure-a-connection"></a>設定連接
 
+若要建立連接，則服務主體和在 Customer Insights 中使用者帳戶需要在 Synapse Analytics 工作區的 *資源群組* 擁有 **讀者** 權限。 此外，Synapse Analytics 工作區的服務主體和使用者也需要 **Synapse 系統管理員** 權限。 
+
 1. 移至 **管理** > **連接**。
 
-1. 選取 **新增連接**，然後選擇 **Azure Synapse Analytics**，或在 **Azure Synapse Analytics** 圖格中選取 **設定**，來設定此連接。
+1. 要設定連接，請選取 **新增連線**，然後選擇 **Azure Synapse Analytics** 或在 **Azure Synapse Analytics** 圖格上選取 **設定**。
 
 1. 在顯示名稱中，給連接一個能夠辨識的名稱。 連接的名稱與類型說明此連接。 我們建議您選取可以說明此連接用途和目標的名稱。
 
@@ -63,23 +64,27 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 
 ### <a name="configure-an-export"></a>設定匯出
 
-若您擁有取此類型的連接的存取權，則可以設定此匯出。 如需詳細資訊，請參閱[設定匯出所需的權限](export-destinations.md#set-up-a-new-export)。
+若您擁有取此類型的連接的存取權，則可以設定此匯出。 若要使用共用的連接來設定匯出，您至少必須在 Customer Insights 中有 **參與者** 權限。 如需詳細資訊，請參閱[設定匯出所需的權限](export-destinations.md#set-up-a-new-export)。
 
 1. 移至 **資料** > **匯出**。
 
 1. 若要建立新匯出，請選取 **新增匯出**。
 
-1. 在 **匯出連結** 的欄位中，在 **Azure Synapse Analytics** 區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的[連接](connections.md)可供您使用。
+1. 在 **匯出用連線** 欄位中，到 **Azure Synapse Analytics** 區段中選擇連線。 如果您看不到此區段名稱，代表沒有此類型的[連接](connections.md)可供您使用。
 
 1. 提供可辨識的 **顯示名稱** 給匯出並提供 **資料庫名稱**。
 
-1. 選取您要匯出到的 Azure Synapse Analytics 的實體。
+1. 選取要匯出至 Azure Synapse Analytics 的實體。
+   > [!NOTE]
+   > 不支援基於 [Common Data Model 資料夾](connect-common-data-model.md)的資料來源。
 
-1. 選取 **儲存**。
+2. 選取 **儲存**。
 
 儲存匯出並不會立即執行匯出。
 
 每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。
+
+若要查詢匯出至 Synapse Analytics 的資料，您需要在匯出工作區中目標儲存空間有 **儲存體 Blob 資料讀者** 存取權。 
 
 ### <a name="update-an-export"></a>更新匯出
 

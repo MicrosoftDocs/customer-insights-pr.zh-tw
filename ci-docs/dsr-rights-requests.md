@@ -3,18 +3,17 @@ title: 符合 GDPR 的資料主體權利 (DSR) 要求 | Microsoft Docs
 description: 回應資料主旨對 Dynamics 365 Customer Insights 對象見解能力的要求。
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483648"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350259"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>符合 GDPR 的資料主體權利 (DSR) 要求
 
@@ -79,71 +78,78 @@ Customer Insights 管理員可以依照下列步驟來刪除 Customer Insights �
 2. 認可匯出所要求之使用者資料的確認。
 3. 透過用戶管理員電子郵件地址接收匯出的資料。
 
-## <a name="engagement-insights"></a>參與見解
+## <a name="consent-management-preview"></a>同意管理 (預覽版)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>刪除和匯出包含終端使用者可識別資訊的事件資料
+同意管理功能不會直接收集使用者資料。 此功能只會匯入和處理由其他應用程式中的使用者提供的同意資料。
 
-下列各節描述如何刪除和匯出可能包含個人資料的事件資料。
+若要移除特定使用者的同意資料，請到資料來源 (同意管理功能擷取的位置) 中移除。 在重新整理資料來源之後，移除的資料也會在同意中心被移除。 使用同意實體的應用程式也會在 [重新整理](audience-insights/system.md#refresh-processes)後，刪除已在來源上移除的資料。 為了回應資料主體要求而從所有其他程序和應用程式中移除使用者的資料後，我們建議您後盡快重新整理資料來源。
 
-要刪除或匯出資料：
 
-1. 標記包含個人資訊之資料的事件屬性。
-2. 刪除或匯出與特定值相關的資料（例如，指定的使用者 ID）。
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>標記和更新事件屬性
+### Deleting and exporting event data containing end user identifiable information
 
-個人資料會在事件屬性等級上進行標記。 首先，標記被視為要刪除或匯出的屬性。
+The following sections describe how to delete and export event data that might contain personal data.
 
-若要標記事件屬性為包含個人資訊，請遵循下列步驟：
+To delete or export data:
 
-1. 打開包含事件的工作區。
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. 移至 **資料** > **事件**，以在選取的工作區中查看事件清單。
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. 選取您要標記的事件。
+1. Select the event you want to tag.
 
-1. 選取 **編輯屬性** 以打開列出所選取事件之所有屬性的窗格。
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. 選取 **...**，然後選擇 **編輯** 以到達 **更新屬性** 對話方塊。
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![編輯事件。](engagement-insights/media/edit-event.png "編輯事件")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. 在 **更新屬性** 視窗中，選擇右上角的 **...**，然後選擇 **包含 EUII** 方塊。 選擇 **更新** 以儲存變更。
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![儲存您的變更。](engagement-insights/media/update-property.png "儲存您的變更")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > 每次事件架構變更或建立一個新事件時，建議您評估有關的事件屬性，並根據需要將它們標記或取消標記為包含個人資料。
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>刪除或匯出帶標記的事件資料
+#### Delete or export tagged event data
 
-如果所有事件屬性都已根據先前步驟中所描述的方式適當地標記了，則環境管理員就會針對標記的事件資料發出刪除要求。
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-管理 EUII 移除或匯出要求
+To manage EUII deletion or export requests
 
-1. 移至 **管理員** > **環境** > **設定**。
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. 在 **管理終端使用者可識別資訊（EUII）** 區段中，選取 **管理 EUII**。
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>刪除
+##### Deletion
 
-若要進行刪除，您可以在 **刪除終端使用者可識別資訊（EUII）** 區段中，輸入以逗點分隔的使用者 ID 清單。 這些 ID 之後會透過精確的字串比對，與目前環境中所有專案裡之全部已標記的事件屬性進行比較。 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-若屬性值與其中一個提供的 ID 相符，就會永久刪除與其相關的事件。 由於此動作是不可逆的，所以您必須在選取 **刪除** 後確認刪除。
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Export
+##### Export
 
-當您要在 **匯出終端使用者可識別資訊（EUII）** 區段中定義事件屬性值時，匯出的程序與刪除的程序相同。 此外，您還需要提供 **Azure blob 儲存體的 URL**，才能指定匯出目標。 Azure Blob 的 URL 必須包含[共用存取簽章（SAS）](/azure/storage/common/storage-sas-overview)。
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-選取 **匯出** 之後，所有包含相符標記屬性的現有團隊事件都會以 CSV 格式匯出至匯出目標。
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>良好實務操作
+### Good practices
 
-* 請盡量避免傳送任何包含個人資料的事件。
-* 如果您需要傳送包含 EUII 資料的事件，請限制包含 EUII 資料的事件數目和事件屬性數目。 理想的狀態是，限制自己只傳送一個此類事件。
-* 務必確保有權存取已送出之個人資料的人員越少越好。
-* 對於包含個人資料的事件，請務必確認已設定一個屬性，可以發出唯一識別碼，此識別碼可以輕易地連結至特定使用者（例如，使用者 ID）。 這樣可以更輕鬆地隔開資料以及匯出或刪除正確的資料。
-* 在每個事件中只將一個屬性標記為包含個人資料。 理想狀態是只包含一個唯一識別碼。
-* 不要標記包含詳細值（例如，整個要求主體）的屬性。 當您決定要刪除或匯出哪些事件時，業務開發見解功能會使用精準的字串比對。
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

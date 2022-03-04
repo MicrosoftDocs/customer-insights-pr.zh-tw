@@ -1,24 +1,26 @@
 ---
 title: 匯出 Customer Insights 資料到 Google Ads
 description: 了解如何設定連接並匯出至 Google Ads。
-ms.date: 03/03/2021
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
-ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
+ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "6604267"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227000"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>將客戶細分匯出至 Google Ads (預覽版)
 
 將整合客戶個人資料的客戶細分匯出到 Google Ads 對象清單中，並在 Google 搜尋、Gmail、YouTube和 Google Display Network 上使用它們進行廣告宣傳。 
+
+> [!IMPORTANT]
+> 目前，您只能建立新的連接，並將資料匯出至 Google Ads (如果您已經擁有受核准的 Google Ads 開發人員權杖)。 由於原則變更，我們將稍後更新 Google Ads 匯出，並提供不需要開發人員權杖的匯出選項，來確保您的體驗連續性並簡化匯出至 Google Ads 的過程。 我們建議您不要設定更多的 Google Ads 連接，以便更輕鬆地切換至新的匯出選項。
 
 ## <a name="prerequisites-for-connection"></a>連接的先決條件
 
@@ -32,9 +34,9 @@ ms.locfileid: "6604267"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 每個到 Google Ads 的匯出最多可達 1 百萬個設定檔。
+- 每次可匯出多達 1 百萬個客戶設定檔到 Google Ads。
 - 匯出到 Google Ads 被限制為區段。
-- 因供應商端的限制，匯出總計 1 百萬個設定檔的區段最長耗時 5 分鐘。 
+- 匯出總計 1 百萬個客戶設定檔的區段會因為供應商端的限制而花費 5 分鐘完成。 
 - Google Ads 中的相符最長耗時 48 小時。
 
 ## <a name="set-up-connection-to-google-ads"></a>設定與 Google Ads 的連接
@@ -71,7 +73,7 @@ ms.locfileid: "6604267"
 
 1. 輸入您的 **[Google Ads 對象識別碼](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** 然後選取 **連接** 初始化到 Google Ads 的連接。
 
-1. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。
 
 1. 選取您要匯出的客戶細分。 您總共最多可匯出 1 百萬個客戶設定檔到 Google Ads。
 

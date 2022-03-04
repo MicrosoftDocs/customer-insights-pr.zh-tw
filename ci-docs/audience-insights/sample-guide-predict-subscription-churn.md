@@ -3,26 +3,28 @@ title: 訂閱流失預測範例指南
 description: 使用此範例指南試用訂閱流失創意預測模型。
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306293"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355603"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>訂閱流失預測 (預覽版) 範例指南
+# <a name="subscription-churn-prediction-sample-guide"></a>訂閱流失預測範例指南
 
 我們將以訂閱流失預測範例使用的下方範例資料從頭到尾向您說明。 
 
 ## <a name="scenario"></a>案例
 
-Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Contoso 咖啡網站進行銷售。 他們最近開始客戶的訂閱業務，讓客戶定期取用咖啡。 他們的目標是瞭解哪些已訂閱的客戶可能在接下來的幾個月取消訂閱。 知道哪一位客戶 **很有可能流失** 可協助他們持續聚焦行銷力量。
+Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖啡網站銷售。 他們最近開始客戶的訂閱業務，讓客戶定期取用咖啡。 他們的目標是瞭解哪些已訂閱的客戶可能在接下來的幾個月取消訂閱。 知道哪一位客戶 **很有可能流失** 可協助他們持續聚焦行銷力量。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -31,7 +33,7 @@ Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Conto
 
 ## <a name="task-1---ingest-data"></a>任務 1 - 內嵌資料
 
-具體回顧這些文章 [關於資料內嵌](data-sources.md) 和 [使用 Power Query 連接器匯入資料來源](connect-power-query.md)。 下列資訊假定您大體上已熟悉內嵌資料。 
+請特別檢閱關於[資料擷取](data-sources.md)和[使用 Power Query 連接器匯入資料來源](connect-power-query.md)的文章。 下列資訊假定您大體上已熟悉內嵌資料。 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>從電子商務平台內嵌客戶資料
 
@@ -168,7 +170,7 @@ Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Conto
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>任務 3 - 組態訂閱流失預測
 
-現在我們可以使用統整的客戶設定檔執行訂閱流失預測。 如需詳細步驟，請見 [訂閱流失預測 (預覽版)](predict-subscription-churn.md) 文章。 
+現在我們可以使用統整的客戶設定檔執行訂閱流失預測。 如需詳細步驟，請參閱[訂閱流失預測](predict-subscription-churn.md)的文章。 
 
 1. 前往 **智慧** > **發現** 並選取使用 **客戶流失模型**。
 

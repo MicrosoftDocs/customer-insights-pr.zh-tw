@@ -4,17 +4,16 @@ description: 使用可用的報表，以查看您網站上的即時活動。
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 03b0b4bab0d5d9c2ae641c85aac8174ec1668d45
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036638"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229730"
 ---
 # <a name="view-reports"></a>查看報告
 
@@ -92,12 +91,18 @@ ms.locfileid: "7036638"
 
 - **位置** 以國家/地區和市/鎮顯示應用程式的相關資訊。
 
-## <a name="filter-by-time-or-value"></a>依時間或值篩選
+## <a name="filter-by-time-or-date-range"></a>依時間或日期範圍篩選
 
-在 Web 或行動報表中，您可以選取時間範圍或值，以將聚焦在放在一個值或時間間隔。 
+您可以在 Web 或行動報表選取時間框或日期範圍，將焦點放在值或時段。 
 
-- 若要選取時間範圍，請從報表的下拉式清單中選取 **更多 [...]**。 即時使用報表無法啟用時間範圍選取；即時使用報表所使用的時間範圍為「現在」。
+- 若要選取時間框，請在報表檢視的右上角從報表的下拉式清單選取值。 您也可以選擇 **固定日期範圍**。 
 
-- 在大部分的報表中，可選取圖表或清單中的值，以用此選定值篩選報表。
+  :::image type="content" source="media/filter-by-time.png" alt-text="依時間或日期範圍篩選。":::   
+
+- 大多數報表都可選取圖表值或清單值篩選報表。
+
+> [!NOTE]
+> 即時使用報表無法啟用時間範圍選取；即時使用報表所使用的時間範圍為「現在」。
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

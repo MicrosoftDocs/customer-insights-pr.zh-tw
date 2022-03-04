@@ -3,20 +3,19 @@ title: 訂閱流失預測 (含影片)
 description: 預測客戶是否面臨不再使用您公司的訂閱產品或服務的風險。
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967691"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354683"
 ---
-# <a name="subscription-churn-prediction-preview"></a>訂閱流失預測 (預覽)
+# <a name="subscription-churn-prediction"></a>訂閱流失預測
 
 訂閱流失預測有助於預測客戶是否面臨不再使用您公司的訂閱產品或服務的風險。 您可以在 **智慧** > **預測** 頁面上建立新的訂閱流失預測。 選取 **我的預測** 以查看您所建立的其他預測。
 
@@ -63,7 +62,7 @@ ms.locfileid: "7967691"
 ## <a name="create-a-subscription-churn-prediction"></a>建立訂閱流失預測
 
 1. 請在對象見解中前往 **智慧**　 > **預測**。
-1. 選取 **預訂流失模型 (預覽)** 圖標，並選取 **使用此模型**。
+1. 選取 **訂閱流失模型** 圖格，然後選取 **使用此模型**。
    > [!div class="mx-imgBorder"]
    > ![具有「使用此模型」按鈕的訂閱流失模型圖標。](media/subscription-churn-usethismodel.PNG "具有 [使用此模型] 按鈕的訂閱流失模型圖標")
 

@@ -1,20 +1,22 @@
 ---
 title: Microsoft Dataverse 中的 Customer Insights 資料
 description: 在 Microsoft Dataverse 中以資料表使用 Customer Insights 實體。
-ms.date: 10/14/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645208"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355419"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>在 Microsoft Dataverse 中使用 Customer Insights 資料
 
@@ -45,6 +47,7 @@ Customer Insights 提供可讓輸出實體在 [Microsoft Dataverse](/powerapps/m
 - [CustomerMeasure](#customermeasure)
 - [擴充](#enrichment)
 - [預測](#prediction)
+- [客戶細分成員資格](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -120,4 +123,17 @@ AlternateKey 資料表包含參與整合程序的實體索引鍵。
 | 型號                | String      | 模型名稱                                                |
 | 值               | JSON 字串 | 模型產生的屬性清單 |
 | msdynci_predictionid | GUID        | 從 msdynci_identifier 生成的確定性 GUID | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| msdynci_identifier   | 字串      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>客戶細分成員資格
+
+此表格包含客戶設定檔的客戶細分成員資格資訊。
+
+| Column        | 類型​ | Description                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | 字串       | 客戶個人資料識別碼        |
+| SegmentProvider      | 字串       | 發佈客戶細分的應用程式。 預設：對象見解         |
+| SegmentMembershipType | 字串       | 此客戶細分成員資格記錄的客戶類型。 支援多個類型，例如，客戶、連絡人或帳戶。 預設：客戶  |
+| 客戶細分       | JSON 字串  | 客戶設定檔所屬的唯一客戶細分清單      |
+| msdynci_identifier  | 字串   | 客戶細分成員資格記錄的唯一識別碼。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | 從 `msdynci_identifier` 產生的決定性 GUID          |

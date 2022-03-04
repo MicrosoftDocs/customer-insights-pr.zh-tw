@@ -1,20 +1,19 @@
 ---
 title: 將 Customer Insights 資料匯出到 ActiveCampaign
 description: 了解如何設定連接並匯出到 ActiveCampaign。
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 089b9b0d76437e695f797f941ed384734d8f772e
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314587"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227799"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>匯出客戶細分到 ActiveCampaign (預覽版)
 
@@ -28,9 +27,9 @@ ms.locfileid: "6314587"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 您最多可以匯出 1 百萬筆客戶個人資料到 ActiveCampaign，這可能需要 90 分鐘才能完成。
+- 您最多可以匯出 1 百萬個客戶設定檔到 ActiveCampaign，它需要長達 90 分鐘完成。
 - 匯出到 ActiveCampaign 僅限於客戶細分。
-- 您可以匯出到 ActiveCampaign 的個人資料數量取決於您與 ActiveCampaign 的合約。
+- 您可以匯出到 ActiveCampaign 的客戶設定檔數目取決於您和 ActiveCampaign 簽訂的契約。
 
 ## <a name="set-up-connection-to-activecampaign"></a>設定到 ActiveCampaign 的連接
 
@@ -64,7 +63,7 @@ ms.locfileid: "6314587"
 
 1. 輸入您的 [**ActiveCampaign 清單識別碼**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign)。    
 
-3. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 這需要匯出客戶細分到 ActiveCampaign。 或者，您可以匯出名字、姓氏和電話來建立更個人化的電子郵件。 選取 新增屬性 對應這些欄位。
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 這需要匯出客戶細分到 ActiveCampaign。 或者，您可以匯出名字、姓氏和電話來建立更個人化的電子郵件。 選取 新增屬性 對應這些欄位。
 
 1. 選取 **儲存**。
 

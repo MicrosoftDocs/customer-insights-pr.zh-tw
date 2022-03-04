@@ -1,20 +1,19 @@
 ---
 title: Power Apps 連接器
 description: 連接 Power Apps 和 Power Automate。
-ms.date: 08/21/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.date: 10/01/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405239"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229021"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps 連接器 (預覽)
 
@@ -22,53 +21,55 @@ ms.locfileid: "4405239"
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>連接 Power Apps 和 Dynamics 365 Customer Insights
 
-Customer Insights 是 [Power Apps 中許多可用資料來源](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources)之一。
+Customer Insights 是 [Power Apps 中許多可用資料來源](/powerapps/maker/canvas-apps/working-with-data-sources)之一。
 
-請參閱 Power Apps 文件，了解如何[將資料連線新增至應用程式](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection)。 建議您另外檢閱 [Power Apps 如何使用委派來處理畫布應用程式中的大型資料集](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview)。
+請參閱 Power Apps 文件，了解如何[將資料連線新增至應用程式](/powerapps/maker/canvas-apps/add-data-connection)。 建議您另外檢閱 [Power Apps 如何使用委派來處理畫布應用程式中的大型資料集](/powerapps/maker/canvas-apps/delegation-overview)。
 
 ## <a name="available-entities"></a>可用的實體
 
 將 Customer Insights 新增為資料連線之後，您可以在 Power Apps 中選擇下列實體：
 
-- 客戶：使用[統整客戶設定檔](customer-profiles.md)中的資料。
-- 統整的客戶活動：在應用程式上顯示[統整的時間表](activities.md)。
+- **客戶**：使用來自[統一客戶設定檔](customer-profiles.md)的資料。
+- **UnifiedActivity**：在 App 裡顯示[活動時間表](activities.md)。
+- **ContactProfile**：顯示客戶的連絡人。 此實體只能用在對象見解環境的商務帳戶。
 
 ## <a name="limitations"></a>限制
 
 ### <a name="retrievable-entities"></a>可擷取的實體
 
-您只能透過 Power Apps 連接器擷取 **客戶**、**UnifiedActivity** 和 **客戶細分** 實體。 顯示其他實體，因為基礎連接器會透過 Power Automate 中的觸發程序支援這些實體。  
+您只能透過 Power Apps 連接器檢索 **客戶**、**UnifiedActivity**、**區段** 和 **ContactProfile**。 ContactProfile 只能用在對象見解執行個體的商務帳戶。 顯示其他實體，因為基礎連接器會透過 Power Automate 中的觸發程序支援這些實體。
 
 ### <a name="delegation"></a>委派
 
-委派適用於客戶實體和 UnifiedActivity 實體。 
+委派適用 **客戶** 實體和 **UnifiedActivity** 實體。 
 
 - **客戶** 實體的委派：若要使用此實體的委派，必須在 [搜尋 & 篩選條件索引](search-filter-index.md) 中編製欄位索引。  
-
 - **UnifiedActivity** 的委派：此實體的委派僅適用於 **ActivityId** 和 **CustomerId** 欄位。  
+- ContactProfile 的 **委派**：此實體的委派只適用 **ContactId** 和 **CustomerId** 欄位。 ContactProfile 只能用在對象見解環境的商務帳戶。
 
-- 如需委派的詳細資訊，請參閱 [Power Apps 可委派的函數和作業](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps)。 
+如需委派的詳細資訊，請前往 [Power Apps 委派功能和作業](/powerapps/maker/canvas-apps/delegation-overview)。 
 
 ## <a name="example-gallery-control"></a>範例庫控制項
 
-例如，您將客戶設定檔新增到 [資源庫控制項](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery)。
+您可以將客戶設定檔新增到[資源庫控制項](/powerapps/maker/canvas-apps/add-gallery)。
 
-1. 將 **資源庫** 控制項新增至您要建立的應用程式。
-
-> [!div class="mx-imgBorder"]
-> ![新增資源庫元素](media/connector-powerapps9.png "新增資源庫元素")
-
-1. 選取 **客戶** 做為項目的資料來源。
+1. 將 **資源庫** 控制項新增到您正在建構的應用程式。
 
     > [!div class="mx-imgBorder"]
-    > ![選取資料來源](media/choose-datasource-powerapps.png "選取資料來源")
+    > ![新增資源庫元素。](media/connector-powerapps9.png "新增資源庫元素。")
 
-1. 您可以在右邊變更資料面板，以選取要在資源庫上顯示之客戶實體欄位。
+2. 選取 **客戶** 做為項目的資料來源。
 
-1. 如果您想要在資源庫中顯示所選客戶的任何欄位，請填入標籤的 Text 屬性：**{Name_of_the_gallery}.Selected.{property_name}**
+    > [!div class="mx-imgBorder"]
+    > ![選取資料來源。](media/choose-datasource-powerapps.png "選取資料來源。")
 
-    範例：Gallery1.Selected.address1_city
+3. 您可以在右邊變更資料面板，以選取要在資源庫上顯示之客戶實體欄位。
 
-1. 若要顯示客戶的統整時間表，請新增資源庫元素，並新增 Items 屬性：**Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+4. 如果您想要在資源庫顯示選取客戶的任何欄位，請使用 **{Name_of_the_gallery}{property_name}**.Selected. 填入標籤的 **文字** 屬性  
+    - 例如：_Gallery1.Selected.address1_city_
 
-    範例：Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+5. 若要顯示客戶的統一時間表，請新增資源庫元素和使用 **篩選條件 ('UnifiedActivity', CustomerId = {Customer_Id})** 新增 **項目** 屬性  
+    - 例如：_Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

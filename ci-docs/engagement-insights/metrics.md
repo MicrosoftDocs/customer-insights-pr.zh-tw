@@ -4,17 +4,16 @@ description: 如何建立和編輯和刪除計量。
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 97189168e0f5586aad8be8089a1f9e27893c2115c7e805ddaab1efc00e11b860
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7e8c96f38af74f25080a40fd92e73f05c71320a8
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034259"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229806"
 ---
 # <a name="view-and-create-metrics"></a>檢視和建立計量
 
@@ -38,21 +37,24 @@ ms.locfileid: "7034259"
 1. 在左導覽窗格中，移至 **資料**。 
 1. 選取 **計量** 索引標籤，以查看工作區中所有計量的清單。 
    > [!NOTE]
-   > 系統生成的計量是唯讀的。 您無法變更或刪除它們。 您只能建立及編輯自訂計量。
+   > 系統生成的計量是唯讀的。 您無法編輯或刪除它們。 您只能建立及編輯自訂計量。
 
 ## <a name="create-a-metric"></a>建立計量
 
 環境和工作區系統管理員可以建立計量。 在建立計量之前，必須將事件屬性傳送至工作區。 根據基本事件傳送的事件屬性或使用 web SDK [傳送自訂事件屬性](advanced-SDK-implementation.md)，您可以建立計量。
 
 1. 移至 **資料** > **計量**。
-1. 選取 **新的計量**。
+1. 請選取 **新計量** 打開 **資源庫** 和 **未命名的新計量** 對話方塊。
 
    :::image type="content" source="media/new-metric.png" alt-text="新增計量到事件中。":::
 
-1. 若為格式，請選取 **整數** 或 **雙精準數** 資料類型。 整數即為無小數點整數。 若為雙精準數，您可以挑選一到三個小數位。
-1. 在 **資源庫** 窗格中，尋找計量要依據的事件屬性。
-1. 選取屬性旁邊的 **加號 (+)**，以在公式中使用它。 您只能依據一個屬性來建立公式。 
-1. 選擇下列其中一組彙整函數。 
+1. 請在 **未命名的新計量** 對話方塊中選取 **格式** 下拉式清單，並選擇 **整數** 或 **倍精度浮點數** 資料類型。 整數即為無小數點整數。 倍精度浮點數方面，您可以選擇小數點後一位和三位。
+
+   :::image type="content" source="media/create-new-metric.png" alt-text="建立新計量。":::
+   
+5. 請在 **資源庫** 窗格中尋找計量要依據的事件屬性。
+6. 選取屬性旁邊的 **加號 (+)**，以在公式中使用它。 您只能依據一個屬性來建立公式。 
+7. 選擇下列其中一組彙整函數。 
 
    - 總和：所有值的算術總計 
    - 平均值：所有值的平均值
@@ -68,12 +70,16 @@ ms.locfileid: "7034259"
 
 ## <a name="edit-a-metric"></a>編輯計量
 
+您只能編輯自訂的計量。
+
 1. 移至 **資料** > **計量**。
 1. 選取清單中的計量。
 1. 變更計量的定義
 1. 選取 **儲存**。
 
 ## <a name="change-the-name-of-a-metric"></a>變更計量的名稱
+
+您只能變更自訂計量的名稱。
 
 1. 移至 **資料** > **計量**。
 1. 對計量選取 **更多 [...]**，然後選擇 **編輯名稱**。
@@ -82,11 +88,15 @@ ms.locfileid: "7034259"
 
 ## <a name="delete-a-metric"></a>刪除計量
 
+您只能刪除自訂的計量。
+
 1. 移至 **資料** > **計量**。
 1. 對計量選取 **更多 [...]**，然後選擇 **刪除**。
 
    :::image type="content" source="media/delete-metric.png" alt-text="刪除事件中的計量。":::
 
 1. 請選取 **刪除**，以確認刪除。
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

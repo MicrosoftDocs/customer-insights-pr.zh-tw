@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645481"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350213"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>註冊免費 Dynamics 365 Customer Insights 試用版
 
@@ -32,23 +31,12 @@ Customer Insights 提供免費的 30 天試用版。 快速註冊後，就可以
 
 您的試用環境包括與付費版本相同的功能。 下面的連結會引導您瀏覽一些重要功能。
 
-### <a name="audience-insights"></a>對象見解
-
 - [對象見解 的快速入門。](audience-insights/get-started.md)
 - [新增更多使用者並指派權限。](audience-insights/permissions.md)
 - [擷取您的資料來源](audience-insights/data-sources.md)並以[資料整合程序](audience-insights/data-unification.md)執行資料，以取得[整合的客戶個人資料](audience-insights/customer-profiles.md)。
 - [擴充整合客戶個人資料](audience-insights/enrichment-hub.md)或[執行預測模型](audience-insights/predictions-overview.md)。
 - 建立[區段](audience-insights/segments.md)分組客戶和[量值](audience-insights/measures.md)以便評論 KPI。
 - 在其他應用程式中設定[連接](audience-insights/connections.md)和[匯出](audience-insights/export-destinations.md)，以處理您的資料子集。
-
-### <a name="engagement-insights"></a>參與見解
-
-- [Engagement見解快速入門。](engagement-insights/get-started.md)
-- [建立工作區](engagement-insights/create-workspace.md) 並新增成員。
-- [將程式碼新增到您的網站](engagement-insights/instrument-website.md)或[行動應用程式](engagement-insights/developer-resources.md#capture-events-from-mobile-apps)。
-- 查看[即時報表](engagement-insights/view-reports.md)或建立[自訂報表](engagement-insights/custom-reports.md)。
-- [建立精簡事件](engagement-insights/refined-events.md) 以匯出。
-- [匯出資料](engagement-insights/export-events.md)到 Azure Data Lake Storage。
 
 ## <a name="additional-resources"></a>其他資源
 

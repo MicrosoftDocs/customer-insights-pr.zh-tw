@@ -1,24 +1,26 @@
 ---
-title: 對 Power Query 式資料來源的增量重新整理
-description: 針對以 Power Query 為基礎的大型資料來源重新整理其新增及更新資料。
+title: 對建立在 Power Query 的資料來源進行累加式重新整理
+description: 對建立在 Power Query 的大型資料來源，重新整理全新與更新的資料。
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900245"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353671"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>適用於以 Power Query 為基礎之資料來源的累加重新整理
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>對建立在 Power Query 的資料來源進行累加式重新整理
 
-本文討論如何對基於 Power Query 的資料來源設定累加式重新整理。
+本文討論如何對建立在 Power Query 的資料來源設定累加式重新整理。
 
 對資料來源進行累加重新整理可提供下列好處：
 
@@ -28,9 +30,9 @@ ms.locfileid: "7900245"
 
 ## <a name="configure-incremental-refresh"></a>設定累加重新整理
 
-對象見解允許透過支援增量內嵌的 Power Query，對匯入的資料來源增量重新整理。 例如，包含日期和時間欄位 (表示資料記錄上次更新時間) 的 Azure SQL 資料庫。
+只要透過支援累加式擷取的 Power Query匯入，對象見解允許資料來源累加式重新整理。 例如，包含日期和時間欄位 (表示資料記錄上次更新時間) 的 Azure SQL 資料庫。
 
-1. [以 Power Query 為基礎建立新的資料來源](connect-power-query.md)。
+1. [建立新的 Power Query 資料來源](connect-power-query.md)。
 
 1. 提供資料來源的 **名稱**。
 
