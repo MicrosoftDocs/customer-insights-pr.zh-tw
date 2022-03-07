@@ -1,34 +1,30 @@
 ---
 title: 匯出 Customer Insights 資料到 Dynamics 365 Marketing
 description: 了解如何設定連接並匯出至 Dynamics 365 Marketing。
-ms.date: 08/24/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
+author: phkieffer
 ms.author: philk
 manager: shellyha
-searchScope:
-- ci-export
-- customerInsights
-ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a13f6f81f5e2570d3302d88c02755f1d86321a01
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353901"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759599"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>在 Dynamics 365 Marketing 中使用客戶細分 (預覽版)
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-
-使用 [區段](segments.md) 產生行銷活動並使用 Dynamics 365 Marketing 聯絡特定族群的客戶。 如需詳細資訊，請參閱 [搭配 Dynamics 365 Marketing 使用 Dynamics 365 Customer Insights 中的客戶細分](/dynamics365/marketing/customer-insights-segments)。
-
-如果您使用 Dynamics 365 Marketing 的新功能在 Dataverse 組織中進行即時客戶旅程協調流程，則無需建立對 Dynamics 365 Marketing 的標準匯出。 在連接 Marketing 和 Customer Insights 後，來自對象見解的聯絡人和客戶細分可直接在 Dynamics 365 Marketing 中找到。 在刪除現有匯出之前，請查看主題是[如何連接對象見解和 Dynamics 365 Marketing 客戶旅程協調流程](/dynamics365/marketing/real-time-marketing-ci-profile)的文件。
+使用 [區段](segments.md) 產生行銷活動並使用 Dynamics 365 Marketing 聯絡特定族群的客戶。 如需詳細資訊，請參閱 [透過 Dynamics 365 Marketing 使用 Dynamics 365 Customer Insights 中的區段](/dynamics365/marketing/customer-insights-segments)
 
 ## <a name="prerequisite-for-a-connection"></a>連接的先決條件
 
-- 連絡人記錄必須在 Dynamics 365 Marketing 中，才能將客戶細分從 Customer Insights 匯出至 Marketing。 瞭解如何[用 Microsoft Dataverse 在 Dynamics 365 Marketing 裡面](connect-power-query.md)內嵌連絡人 。
+- 連絡人記錄必須在 Dynamics 365 Marketing 中，才能將客戶細分從 Customer Insights 匯出至 Marketing。 瞭解如何[用 Common Data Services 在 Dynamics 365 Marketing 裡面](connect-power-query.md)內嵌連絡人 。
 
   > [!NOTE]
   > 將客戶細分中從對象見解中匯出到 Marketing，並不會在 Marketing 的執行個體中建立新的連絡人記錄。 Marketing 中的連絡人記錄必須內嵌在對象見解中，並當成資料來源使用。 他們也必須包含整合客戶實體中，才能客戶細分匯出前，先將客戶識別碼對應至連絡人的識別碼。
@@ -47,7 +43,7 @@ ms.locfileid: "8353901"
 
 1. 在 **伺服器管理帳戶** 區段中，選取 **登入**，然後選擇 Dynamics 365 Marketing 帳戶。
 
-1. 將客戶實體中的「連絡人識別碼」欄位對應至「Dynamics 365 連絡人識別碼」。
+1. 將客戶識別碼欄位對應到 Dynamics 365 連絡人識別碼。
 
 1. 選取 **儲存** 來完成連接。 
 

@@ -1,25 +1,20 @@
 ---
-title: 地址增強擴充 (包括影片)
+title: 地址增強擴充
 description: 使用 Microsoft 模型擴充和標準化客戶個人資料的地址資訊。
-ms.date: 01/19/2022
+ms.date: 04/21/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-searchScope:
-- ci-data-sources-enrichment
-- ci-data-sources-enrichment-details
-- ci-enrichments
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
+ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353626"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "5965568"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>以增強的地址擴充的客戶個人資料
 
@@ -27,13 +22,11 @@ ms.locfileid: "8353626"
 
 ## <a name="how-we-enhance-addresses"></a>我們如何增強地址
 
-我們的模型以二步驟流程來增強地址。 首先，它會解析地址找出其組成部分，並將它們設定為結構化格式。 然後，我們使用 AI 來更正、完成並標準化地址中的值。
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
+我們的模型以二步驟流程來增強地址。 首先，它會解析地址找出其組成部分，並將它們設定為結構化格式。 然後，我們使用人工智慧來更正、完成和標準化地址中的值。
 
 ### <a name="example"></a>範例
 
-地址資訊可能以非標準格式存在，並包含拼寫錯誤。 此模型可以修正這些問題，並在整合的客戶個人資料中建立一致的地址。
+地址資訊可能是非標準格式且含有拼寫錯誤。 此模型可以修正這些問題，並在整合的客戶個人資料中建立一致的地址。
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -57,7 +50,7 @@ ms.locfileid: "8353626"
 2. 確認任何值 (如郵遞區號或街道名稱) 是有效的。
 3. 變更無法識別的值。
 
-此模型使用機器學習技術來增強地址。 雖然在模型更改輸入值時，我們套用了高信賴度閾值，但與任何基於機器學習的模型一樣，無法保證 100% 的準確性。
+此模型使用機器學習技術來增強地址。 在模型變更輸入值時套用高的信賴度閥值，則與任何使用中的模型一樣，不能保證 100% 準確性。
 
 ## <a name="supported-countries-or-regions"></a>支援的國家或地區
 
@@ -65,10 +58,6 @@ ms.locfileid: "8353626"
 
 - 澳洲
 - 加拿大
-- 法國
-- 德國
-- 義大利
-- 日本
 - 英國
 - 美國
 
@@ -87,7 +76,7 @@ ms.locfileid: "8353626"
 1. 選取在資料集中格式化地址的方式。 若資料中的地址使用單一欄位，請選擇 **單一屬性位址**。 若資料中的地址使用超過一個資料欄位，請選擇 **複數屬性地址**。
 
    > [!NOTE]
-   > 單屬性和多屬性位址都必須有國家/地區。 缺乏有效或受支援的國家/地區值的地址將不會被擴充。
+   > 國家/地區在單一屬性和複數屬性位址中都是必要的。 缺乏有效或受支援的國家/地區值的地址將不會被擴充
 
 1.  請從整合客戶實體對應至地址欄位。
 
@@ -103,22 +92,12 @@ ms.locfileid: "8353626"
 
 若要開始擴充程序，請從命令列中選取 **執行**。 您也可以讓系統在[排定的重新整理](system.md#schedule-tab)過程中自動執行擴充。 處理時間視客戶資料的大小而定。
 
-擴充程序完成後，您可以在 **我的擴充內容** 底下查看新擴充的客戶設定檔資料。 此外，您還會找到上次更新時間以及已擴充的個人資料數量。
+擴充程序完成後，您可以在 **我的擴充內容** 底下查看新擴充的客戶設定檔資料。 此外，您還會找到上次更新時間以及已擴充的設定檔數目。
 
-您可以在 **已擴充客戶預覽** 圖格中看到已擴充資料的範例。 選取 **查看更多**，並選取 **資料** 索引標籤，以存取每個擴充後個人資料的詳細資料。
-
-### <a name="overview-card"></a>概覽卡片
-
-概覽卡片顯示擴充覆蓋率的詳細資料。 
-
-* **已處理且已變更的地址**：已成功擴充的客戶個人資料的地址數量。
-
-* **處理好卻未變更的地址**：識別完成但無法變更的客戶個人資料地址數量。 當輸入資料有效且無法由擴充改善時，通常會發生此問題。
-
-* **未處理也未變更的地址**：無法識別也無法變更的客戶個人資料地址數量。 通常表示輸入資料無效或擴充不支援的輸入資料。
+您可以選取 **檢視擴充的資料** 來存取每個已擴充設定檔的詳細檢視表。
 
 ## <a name="next-steps"></a>後續步驟
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)、[量值](measures.md)，甚至[匯出資料](export-destinations.md)，以便傳送個人化體驗給您的客戶。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

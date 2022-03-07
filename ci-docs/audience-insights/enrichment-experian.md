@@ -3,17 +3,18 @@ title: 以 Experian 協力廠商擴充進行擴充
 description: 關於 Experian協力廠商擴充的一般資訊。
 ms.date: 04/09/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
+ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229954"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "6309810"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>利用 Experian 的人口統計資訊擴充客戶個人資料 (預覽版)
 
@@ -38,7 +39,7 @@ Experian 是消費者和企業信用報告和行銷服務的全球領導者。 �
 1. 在 Experian 圖格上，選取 **擴充我的資料**。
 
    > [!div class="mx-imgBorder"]
-   > ![Experian 圖標。](media/experian-tile.png "Experian tile")
+   > ![Experian 圖標](media/experian-tile.png "Experian tile")
    > 
 
 1. 從下拉式清單選取一個[連結](connections.md)。 如果沒有可用的連接，請與系統管理員聯繫。 如果您是系統管理員，則可以選取 **新增連接**，然從下拉式清單中選擇 Experian，來建立連接。 
@@ -90,7 +91,7 @@ Experian 是消費者和企業信用報告和行銷服務的全球領導者。 �
 
 ## <a name="next-steps"></a>後續步驟
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)和 [量值 ](measures.md)，甚至 [匯出資料](export-destinations.md)，為您的客戶提供個人化的體驗。
 
 ## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
 

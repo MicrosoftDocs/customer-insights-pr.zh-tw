@@ -1,29 +1,24 @@
 ---
-title: 使用 AI 尋找類似客戶 (含影片)
+title: 使用 AI 尋找類似的客戶
 description: 使用人工智慧尋找類似的客戶細分。
 ms.date: 06/25/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-segment-builder
-- ci-segment-insights
-- customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355235"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596765"
 ---
 # <a name="similar-customers-preview"></a>類似的客戶 (預覽)
 
 此功能可讓您使用人工智慧來尋找客戶群中類似的客戶。 您必須至少已建立一個客戶細分，才能使用此功能。 擴充現有客戶細分準則有助於尋找與該客戶細分類似的客戶。
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *尋找類似的客戶* 使用自動化方式來評估資料並根據該資料進行預測，因此具有可做為剖析方法使用的功能，因為該詞彙是一般資料保護規定 (「GDPR」) 所定義。 若客戶使用此功能來處理資料，可能會受到 GDPR 或其他法律或法規的制約。 您負責確保您對 Dynamics 365 Customer Insights 的使用，包括預測、符合所有適用法律和規定，包括隱私權、個人資料、生物資料、資料保護和通訊機密性相關法律。
@@ -55,7 +50,7 @@ ms.locfileid: "8355235"
 處理類似的區段之後，您會在 **客戶細分** 頁面中發現列出新的客戶細分。
 
 > [!div class="mx-imgBorder"]
-> ![類似的客戶細分。](media/expanded-segment.png "類似的客戶細分")
+> ![類似的客戶細分](media/expanded-segment.png "類似的客戶細分")
 
 選取 動作列中的 **檢視**，以開啟客戶細分詳細資料。 此檢視表包含[相似性分數](#about-similarity-scores)的結果分佈相關資訊。 您也會在 **客戶細分成員預覽** 中找到相似性分數值。
 

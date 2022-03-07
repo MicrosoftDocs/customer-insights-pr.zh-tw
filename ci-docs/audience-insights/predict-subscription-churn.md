@@ -1,25 +1,24 @@
 ---
-title: 訂閱流失預測 (含影片)
+title: 訂閱流失預測
 description: 預測客戶是否面臨不再使用您公司的訂閱產品或服務的風險。
 ms.date: 08/19/2020
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354683"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595646"
 ---
-# <a name="subscription-churn-prediction"></a>訂閱流失預測
+# <a name="subscription-churn-prediction-preview"></a>訂閱流失預測 (預覽)
 
 訂閱流失預測有助於預測客戶是否面臨不再使用您公司的訂閱產品或服務的風險。 您可以在 **智慧** > **預測** 頁面上建立新的訂閱流失預測。 選取 **我的預測** 以查看您所建立的其他預測。
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > 試用以範例資料組成的訂購流失預測教學課程：[訂閱流失預測範例指南](sample-guide-predict-subscription-churn.md)。
@@ -50,21 +49,15 @@ ms.locfileid: "8354683"
         - **時間戳記：** 由主索引鍵所識別之事件的日期和時間。
         - **事件：** 您要使用的事件的名稱。 例如，串流視訊服務中名為「使用者動作」的欄位可能會有「已觀看」的值。
         - **詳細資料：** 關於事件的詳細資訊。 例如，串流視訊服務中名為「節目標題」的欄位可能會有「客戶已觀看的影片」的值。
-- 建議的資料特性：
-    - 足夠的歷史資料：訂閱資料至少要是所選取時段的兩倍。 最好有二到三年的訂閱資料。
-    - 訂閱狀態：資料包含每個客戶的使用中和非使用中的預訂，因此每個客戶識別碼有多個項目。
-    - 客戶數量：至少 10 個客戶個人資料，最好超過 1,000 個不重複客戶。 少於 10 位客戶且歷史資料不足此模型將會失敗。
-    - 資料完整性：提供的實體，其中的資料欄位缺失值少於 20% 。
-   
    > [!NOTE]
    > 您至少需要兩個您要計算其流失的 50% 客戶的活動記錄。
 
 ## <a name="create-a-subscription-churn-prediction"></a>建立訂閱流失預測
 
 1. 請在對象見解中前往 **智慧**　 > **預測**。
-1. 選取 **訂閱流失模型** 圖格，然後選取 **使用此模型**。
+1. 選取 **預訂流失模型 (預覽)** 圖標，並選取 **使用此模型**。
    > [!div class="mx-imgBorder"]
-   > ![具有「使用此模型」按鈕的訂閱流失模型圖標。](media/subscription-churn-usethismodel.PNG "具有 [使用此模型] 按鈕的訂閱流失模型圖標")
+   > ![具有 [使用此模型] 按鈕的訂閱流失模型圖標](media/subscription-churn-usethismodel.PNG "具有 [使用此模型] 按鈕的訂閱流失模型圖標")
 
 ### <a name="name-model"></a>命名模型
 
@@ -74,9 +67,9 @@ ms.locfileid: "8354683"
 ### <a name="define-customer-churn"></a>定義客戶流失
 
 1. 輸入 **訂閱結束後經過的天數** 的數值，表示您的業務考量中將客戶視為已流失狀態的天數。 這段時間通常適合像優惠方案或其他為避免失去客戶而在行銷上所做努力這樣的商務活動。
-1. 輸入 **展望未來以預測流失的天數** 以設定要預測流失的時間範圍。 例如，若要預測客戶在接下來 90 天的流失風險，以配合您的行銷挽留工作。 根據您的特定業務需求不同，預測較長或較短時間的流失風險可能會更難解決在流失風險個人資料中的因素。 選取 **下一步** 以繼續
+1. 輸入 **展望未來以預測流失的天數** 以設定要預測流失的時間範圍。 例如，若要預測客戶在接下來 90 天的流失風險，以配合您的行銷挽留工作。 預測一段較長或較短時間的流失風險，可能會更加難以處理流失風險設定檔中的因素，但這很大程度上取決於您的特定業務需求。 選取 **下一步** 以繼續
    >[!TIP]
-   > 您隨時可以選取 **儲存草稿**，儲存預測草稿。 您可在 **我的預測** 索引標籤中找到草稿預測來繼續。
+   > 您隨時都可以選取 **儲存後關閉**，將預測儲存為草稿。 您可在 **我的預測** 索引標籤中找到草稿預測來繼續。
 
 ### <a name="add-required-data"></a>新增必要資料
 
@@ -87,11 +80,11 @@ ms.locfileid: "8354683"
     1. 選取與主要客戶實體相配的 **客戶實體**。
     1. 輸入描述此關聯的名稱。
        > [!div class="mx-imgBorder"]
-       > ![訂閱歷程記錄頁面，顯示如何建立與客戶的關聯。](media/subscription-churn-subscriptionhistoryrelationship.PNG "訂閱歷程記錄頁面，顯示如何建立與客戶的關聯")
+       > ![訂閱歷程記錄頁面，顯示如何建立與客戶的關聯](media/subscription-churn-subscriptionhistoryrelationship.PNG "訂閱歷程記錄頁面，顯示如何建立與客戶的關聯")
 1. 選取 **下一步**。
 1. 將語意欄位對應至訂閱歷程記錄實體中的屬性，然後選取 **儲存**。 如需欄位的描述，請查看[先決條件](#prerequisites)。
    > [!div class="mx-imgBorder"]
-   > ![預訂歷程記錄頁面，顯示對應至所選訂閱歷程記錄實體中欄位的語義屬性。](media/subscription-churn-subscriptionhistorymapping.PNG "預訂歷程記錄頁面，顯示對應至所選訂閱歷程記錄實體中欄位的語意屬性")
+   > ![預訂歷程記錄頁面，顯示對應至所選訂閱歷程記錄實體中欄位的語意屬性](media/subscription-churn-subscriptionhistorymapping.PNG "預訂歷程記錄頁面，顯示對應至所選訂閱歷程記錄實體中欄位的語意屬性")
 1. 選取 **客戶活動** 的 **新增資料**，然後選擇可提供先決條件中所述客戶活動資訊的實體。
 1. 選取與您要設定之客戶活動類型相配的活動類型。  如果看不到符合您所需活動類型的選項，請選取 **建立新的** 並提供名稱。
 1. 您必須設定從客戶活動實體到客戶實體的關聯。
@@ -102,7 +95,7 @@ ms.locfileid: "8354683"
 1. 將語意欄位對應至客戶活動實體中的屬性，然後選取 **儲存**。 如需欄位的描述，請查看[先決條件](#prerequisites)。
 1. (選用) 如果有任何您要加入的其他客戶活動，請重複上述步驟。
    > [!div class="mx-imgBorder"]
-   > ![定義實體關聯。](media/subscription-churn-customeractivitiesmapping.PNG "客戶活動頁面，顯示對應至所選客戶活動實體中欄位的語意屬性")
+   > ![定義實體關聯](media/subscription-churn-customeractivitiesmapping.PNG "客戶活動頁面，顯示對應至所選客戶活動實體中欄位的語意屬性")
 1. 選取 **下一步**。
 
 ### <a name="set-schedule-and-review-configuration"></a>設定排程並檢閱設定
@@ -116,12 +109,11 @@ ms.locfileid: "8354683"
 
 1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
    > [!div class="mx-imgBorder"]
-   > ![我的預測頁面的檢視表。](media/subscription-churn-mypredictions.PNG "我的預測頁面的檢視表")
+   > ![我的預測頁面的檢視表](media/subscription-churn-mypredictions.PNG "我的預測頁面的檢視表")
 1. 選取您要檢閱的預測。
    - **預測名稱：** 建立預測時提供的預測名稱。
    - **預測類型：** 預測使用的模型類型
-   - **輸出實體：** 用於儲存預測輸出之實體的名稱。 您可以在 **資料** > **實體** 中找到具有此名稱的實體。    
-     在輸出實體中，*ChurnScore* 是發生流失的可能性和 *IsChurn* 是根據 *ChurnScore* 加上 0.5 閾值的二元標籤。 預設閾值可能不適用於您的案例。 以您喜歡的閾值[建立新的區段](segments.md#create-a-new-segment)。
+   - **輸出實體：** 用於儲存預測輸出之實體的名稱。 您可以在 **資料** > **實體** 中找到具有此名稱的實體。
    - **預測欄位：** 此欄位只有某些類型的預測才會填入，並在訂閱流失預測中並未使用。
    - **狀態：** 預測的執行的目前狀態。
         - **已排入佇列：** 預測目前正在等待其他要執行的程序。
@@ -132,7 +124,7 @@ ms.locfileid: "8354683"
    - **上次重新整理：** 預測重新整理輸出實體中結果的日期。
 1. 選取您要檢閱結果的預測旁邊的垂直省略符號，並選取 **檢視**。
    > [!div class="mx-imgBorder"]
-   > ![檢視垂直省略符號功能表中與預測有關的選項，包括編輯、重新整理、檢視、記錄和刪除。](media/subscription-churn-verticalellipses.PNG "預測的垂直省略符號功能表的 [檢視] 選項包括編輯、重新整理、檢視、記錄和刪除")
+   > ![預測的垂直省略符號功能表的 [檢視] 選項包括編輯、重新整理、檢視、記錄和刪除](media/subscription-churn-verticalellipses.PNG "預測的垂直省略符號功能表的 [檢視] 選項包括編輯、重新整理、檢視、記錄和刪除")
 1. 結果頁面中有三個主要的資料區段：
     1. **定型模型效能：** A、B 或 C 是可能的分數。 此分數表示預測的效能，可協助您做出決定以使用輸出實體中儲存的結果。
         - 分數是根據下列規則所決定：
@@ -140,17 +132,38 @@ ms.locfileid: "8354683"
             - **B** 當模型的準確預測至少佔預測總數的 50% 時，以及對客戶流失的準確預測百分比超過歷史平均流失率幅度最多 10% 時。
             - **C** 當模型的準確預測佔預測總數低於 50% 時，或者對客戶流失的準確預測百分比小於歷史平均流失率時。
                > [!div class="mx-imgBorder"]
-               > ![模型效能結果的檢視。](media/subscription-churn-modelperformance.PNG "模型效能結果的檢視")
+               > ![模型效能結果的檢視](media/subscription-churn-modelperformance.PNG "模型效能結果的檢視")
     1. **流失可能性 (客戶數目)：** 根據預測的流失風險分組的客戶群組。 稍後如果您想要建立有高度流失風險的客戶細分時，此資料可以協助您。 這類客戶細分有助於了解客戶細分成員分界所在的位置。
        > [!div class="mx-imgBorder"]
-       > ![以圖表顯示流失結果的分佈，從 0 到 100% 分成不同範圍。](media/subscription-churn-resultdistribution.PNG "顯示流失結果分佈的圖表，已從 0 到 100% 分解成不同範圍")
+       > ![顯示流失結果分佈的圖表，已從 0 到 100% 分解成不同範圍](media/subscription-churn-resultdistribution.PNG "顯示流失結果分佈的圖表，已從 0 到 100% 分解成不同範圍")
     1. **最具影響力的因素：** 建立預測時，有許多納入考慮的因素。 每個因素都有其針對模型所建立彙總預測而計算的重要性。 您可以使用這些因素來協助驗證預測結果。 您也可以稍後再使用此資訊來[建立客戶細分](segments.md)，這可能有助於影響客戶的流失風險。
        > [!div class="mx-imgBorder"]
-       > ![顯示預測流失結果影響因素及其重要性的清單。](media/subscription-churn-influentialfactors.PNG "顯示預測流失結果影響因素及其重要性的清單")
+       > ![顯示預測流失結果影響因素及其重要性的清單](media/subscription-churn-influentialfactors.PNG "顯示預測流失結果影響因素及其重要性的清單")
 
-## <a name="manage-predictions"></a>管理預測
+## <a name="fix-a-failed-prediction"></a>修正失敗的預測
 
-最佳化、疑難排解、重新整理或刪除預測都能夠做到。 檢閱輸入資料可用性報表，找出如何讓預測更快捷和更可靠。 如需詳細資訊，請參閱[管理預測](manage-predictions.md)。
+1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
+1. 選取您要檢視其錯誤記錄檔的預測，並選取 **記錄檔**。
+   > [!div class="mx-imgBorder"]
+   > ![結果功能表列的檢視，包含 [關閉]、[編輯模型] 和 [記錄檔] 按鈕](media/subscription-churn-logsbutton.PNG "結果功能表列的檢視，包含 [關閉]、[編輯模型] 和 [記錄檔] 按鈕")
+1. 檢閱所有錯誤。 可能發生的錯誤有數種類型，這些類型描述造成錯誤的狀況。 例如準確預測所需資料不足的錯誤，典型解決方案是載入額外資料。
+
+## <a name="refresh-a-prediction"></a>重新整理預測
+
+測試會依照設定中所設定的同樣[資料重新整理排程](system.md#schedule-tab)自動重新整理。
+
+1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
+1. 選取您要重新整理之預測旁邊的垂直省略符號。
+1. 選取 **重新整理**。
+
+## <a name="delete-a-prediction"></a>刪除預測
+
+1. 移至 **智慧** > **預測** 上的 **我的預測** 索引標籤。
+1. 選取您要刪除之預測旁邊的垂直省略符號。
+1. 選取 **刪除**。
+
+> [!NOTE]
+> 刪除預測將會移除其輸出實體。
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

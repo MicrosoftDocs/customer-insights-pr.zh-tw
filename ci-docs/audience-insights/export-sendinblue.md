@@ -1,19 +1,20 @@
 ---
 title: 將 Customer Insights 資料匯出到 Sendinblue
 description: 了解如何設定連接並匯出到 Sendinblue。
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8d870ff31ce2d441e619ac18899c4d1b6c69ca41
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231409"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036045"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>匯出客戶細分到 Sendinblue (預覽版)
 
@@ -28,10 +29,10 @@ ms.locfileid: "8231409"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 每次可匯出多達 1 百萬個客戶設定檔到 Sendinblue。
+- 對多匯出 1 百萬個客戶個人資料到 Sendinblue。
 - 匯出到 Sendinblue 僅限於客戶細分。
-- 總計匯出 1 百萬個客戶設定檔的區段最久會花費 90 分鐘。 
-- 您可以匯出到 Sendinblue 的客戶設定檔數目取決於並受限於您和 Sendinblue 簽訂的契約。
+- 匯出總共 1 百萬筆個人資料的客戶細分最多可能需要 90 分鐘的時間。 
+- 您與 Sendinblue 的合約決定並限制您可以匯出到 Sendinblue 的個人資料數量。
 
 ## <a name="set-up-connection-to-sendinblue"></a>設定到 Sendinblue 連接
 
@@ -63,7 +64,7 @@ ms.locfileid: "8231409"
 
 1. 輸入您的 **Sendinblue 清單識別碼** 
 
-1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 
+1. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 
 
 1. 或者，您可以匯出 **名字**、**姓氏** 和 **電話** 建立更個人化的電子郵件。 選取 **新增屬性** 對應這些欄位。
 

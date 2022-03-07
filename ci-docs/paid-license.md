@@ -4,21 +4,22 @@ author: m-hartmann
 description: 愈來愈熟悉 Dynamics 365 Customer Insights 的首次執行體驗並探索其功能。
 ms.author: mhart
 ms.date: 10/05/2021
-ms.topic: conceptual
+ms.service: customer-insights
+ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350121"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673426"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>購買 Customer Insights 之後可開始使用
 
 本文解釋貴組織購買訂閱後，如何在 Dynamics 365 Customer Insights 跨出第一步。 如果您想要購買 Customer Insights，連絡方式列在 [Dynamics 365 Customer Insights 網站](https://dynamics.microsoft.com/ai/customer-insights/)。 
 
-在購買 Customer Insights 的訂閱授權之後，Microsoft 365 租用戶的全域系統管理員會收到一封邀請他們建立環境的電子郵件。 
+在購買 Customer Insights 的訂閱授權之後，Microsoft 365 租用戶的全域系統管理員會收到一封電子郵件，邀請他們建立環境。 
 
 Customer Insights 是每個租用戶授權，包括多種功能。 您可以購買更多容量和授權，以增加預設配額。 
 - [定價概觀](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -39,7 +40,10 @@ Customer Insights 是每個租用戶授權，包括多種功能。 您可以購�
 
 ## <a name="create-your-own-environment"></a>建立自己的環境
 
-首次登入後，您將看到含有範例資料的環境。 您可以使用那項資料探索各項功能，並且熟悉應用程式。 若要使用您自己的資料，則必須[建立環境](audience-insights/get-started-paid.md)。
+首次登入後，您將看到含有範例資料的環境。 您可以使用那項資料探索各項功能，並且熟悉應用程式。 若要使用自己的資料，您必須在想要使用的功能中建立環境。
+
+- [在對象見解建立環境。](audience-insights/get-started-paid.md)
+- [在業務開發見解建立環境。](engagement-insights/create-new-environment.md) 
 
 
 

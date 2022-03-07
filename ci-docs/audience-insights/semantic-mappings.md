@@ -2,21 +2,19 @@
 title: 語意對應 (預覽版)
 description: 語意對應總覽及使用方法。
 ms.date: 12/01/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-searchScope:
-- ci-semantic-mapping
-- customerInsights
-ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353947"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881820"
 ---
 # <a name="semantic-mappings-preview"></a>語意對應 (預覽版)
 

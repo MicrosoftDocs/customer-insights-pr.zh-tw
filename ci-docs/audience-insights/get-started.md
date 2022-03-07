@@ -5,19 +5,17 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-searchScope:
-- ci-home
-- customerInsights
-ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353703"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645254"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>開始使用 Dynamics 365 Customer Insights 對象見解功能
 
@@ -39,7 +37,7 @@ ms.locfileid: "8353703"
 
 整合個人資料是取得見解並對資料進行動作的基礎。 從不同的來源取得資料，並執行資料整合程序以結合成整合個人資料。 指定擷取實體之間的關聯，來使用擴充功能將資訊新增至個人資料。 
 
-1. 由多個選項中建立資料來源，插入資料。 在[Power Query 連接器](connect-power-query.md)、[Common Data Model 料夾 ](connect-common-data-model.md)或 [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake) 之間做選擇。 
+1. 由多個選項中建立資料來源，插入資料。 在 [Power Query 連接器](connect-power-query.md)、[Common Data Model 資料夾](connect-common-data-model.md)或 [Microsoft Dataverse](connect-common-data-service-lake.md) 之間進行選擇。 
 
 1. 經由[對應](map-entities.md)、[比對](match-entities.md)及[合併](merge-entities.md)等階段，來執行[資料整合程序](data-unification.md)。
 

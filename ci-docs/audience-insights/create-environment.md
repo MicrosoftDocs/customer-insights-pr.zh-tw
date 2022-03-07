@@ -1,23 +1,21 @@
 ---
 title: 在 Customer Insights 建立環境
 description: 建立已授權的 Dynamics 365 Customer Insights 訂閱環境。
-ms.date: 02/24/2022
+ms.date: 12/06/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-searchScope:
-- ci-home
-- customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354085"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892328"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>在對象見解建立環境
 
@@ -30,7 +28,7 @@ ms.locfileid: "8354085"
 
 ## <a name="create-a-new-environment"></a>建立新環境
 
-在購買 Customer Insights 的訂閱授權之後，Microsoft 365 租用戶的全域系統管理員會收到一封邀請他們建立環境的電子郵件。 若要開始使用，請前往 [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start)。 
+在購買 Customer Insights 的訂閱授權之後，Microsoft 365 租用戶的全域系統管理員會收到一封電子郵件，邀請他們建立環境。 若要開始使用，請前往 [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start)。 
 
 引導式體驗幫助您按步就班蒐集新環境所需的全部資訊。 您需要對象見解的[系統管理員權限](permissions.md)建立或管理環境。
 
@@ -66,7 +64,7 @@ ms.locfileid: "8354085"
 > Customer Insights 目前支援如下：
 > - 從儲存在 Microsoft Dataverse 託管 Data Lake 的  Power BI 資料流程擷取實體。  
 > - 建立環境時，從您選取的相同 Azure 區域的 Azure Data Lake Storage 帳戶。
-> - 已啟用 *階層命名空間* 且是 Gen2 的 Azure Data Lake Storage 帳戶。 不支援 Azure Data Lake Gen1 storage 帳戶。
+> - 已啟用 *階層命名空間* 的 Azure Data Lake Storage 帳戶。
 
 在 Azure Data Lake Storage 選項中，進行驗證可以在資源型選項和訂閱型選項之間選擇。 如需更多資訊，請參閱[使用 Azure 服務主體連接 Azure Data Lake Storage 帳戶](connect-service-principal.md)。 **容器** 名稱將是 `customerinsights` 且無法變更。
 
@@ -78,14 +76,12 @@ ms.locfileid: "8354085"
    
 **Microsoft Dataverse** 步驟讓您連接 Customer Insights 和您的 Dataverse 環境。
 
-提供您 Microsoft Dataverse的環境，讓您可以使用 Dataverse 來共用資料 (個人資料和見解) 給商務應用程式 (例如 Dynamics 365 Marketing 或 Power Apps 的模型導向應用程式)。 如果您沒有 Dataverse環境，請將此欄位保留空白，我們會為您佈建。
-
-連接至 Dataverse 環境也讓您可以[使用 Power Platform 的資料流程和閘道從內部部署資料來源來擷取資料](data-sources.md#add-data-from-on-premises-data-sources)。 您也可以通過連接 Dataverse 環境來使用[立即可用的預測模型](predictions-overview.md?tabs=b2c#out-of-box-models)。
+若要使用[開箱即用預測模型](predictions-overview.md#out-of-box-models)，請組態與 Dataverse 共用的資料。 或者您可以從內部部署資料來源擷取，提供貴組織管理的 Microsoft Dataverse 環境 URL。 選取 **啟用資料共用** 功能以便和 Dataverse 託管的資料湖共用 Customer Insights 輸出資料。
 
 > [!IMPORTANT]
 > Customer Insights 與 Dataverse 必須位於相同的地區，才能啟用資料共用。
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="為全新實例自動啟用 Microsoft Dataverse 的資料共用。":::
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="啟用與 Microsoft Dataverse 共用資料的設定選項。":::
 
 > [!NOTE]
 > Customer Insights 不支援的資料共用案例如下：

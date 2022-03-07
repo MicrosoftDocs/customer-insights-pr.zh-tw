@@ -3,19 +3,20 @@ title: 產品建議預測
 description: 預測一個客戶可能購買或互動的產品。
 ms.date: 01/13/2022
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355741"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967784"
 ---
-# <a name="product-recommendation-prediction"></a>產品建議預測
+# <a name="product-recommendation-prediction-preview"></a>產品建議預測 (預覽版)
 
 產品建議模型會建立一組預測的產品建議。 建議是基於先前的購買行為和具有類似購買模式的客戶而建立的。 您可以在 **智慧** > **預測** 頁面上建立新的產品建議預測。 選取 **我的預測** 以查看您所建立的其他預測。
 
@@ -53,7 +54,7 @@ ms.locfileid: "8355741"
 
 > [!NOTE]
 > - 模型需要客戶的交易歷史記錄。 交易的定義非常靈活。 任何描述使用者-產品互動的資料都可以當作輸入。 例如，購買產品、上課或參加活動。
-> - 目前只能設定一個交易記錄歷史記錄實體。 如果有多個購買實體，您可以在開始資料擷取前，在 Power Query 將它們聯集。
+> - 目前只能設定一個交易記錄歷史記錄實體。 如果有多個購買實體，請在資料內嵌之前，在 Power Query 將它們聯集。
 > - 如果訂單和訂單詳細資料是不同的實體，請於用在模型之前，先連結它們。 在實體中只有訂單識別碼或收據識別碼時，模型無法運作。
 
 
@@ -61,7 +62,7 @@ ms.locfileid: "8355741"
 
 1. 在 Customer Insights 中，移至 **智慧** > **預測**。
 
-1. 選取 **產品建議模型** 圖格，然後選取 **使用此模型**。
+1. 選取 **產品建議模型 (預覽版)** 圖格和 **使用此模型**。
    > [!div class="mx-imgBorder"]
    > ![具有「使用此模型」按鈕的產品建議模型圖標。](media/product-recommendation-usethismodel.PNG "使用此模型按鈕的產品建議模型圖格")
 

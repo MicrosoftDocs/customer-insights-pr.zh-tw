@@ -3,17 +3,18 @@ title: 客戶存留期值預測範例指南
 description: 您可以依循此範例指南來嘗試客戶存留期值預測的模型。
 ms.date: 05/25/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354821"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306339"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>客戶存留期值 (CLV) 預測範例指南
 
@@ -21,7 +22,7 @@ ms.locfileid: "8354821"
 
 ## <a name="scenario"></a>案例
 
-Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso Coffee 網站銷售產品。 公司想要了解他們的客戶在未來 12 個月所能生成的價值 (營收)。 知道客戶在接下來的 12 個月中的預期價值，將可讓他們將行銷活動導向價值最高的客戶。
+Contoso 是一家生產高品質咖啡和咖啡機的公司。 他們透過 Contoso 咖啡網站銷售產品。 公司想要了解他們的客戶在未來 12 個月所能生成的價值 (營收)。 知道客戶在接下來的 12 個月中的預期價值，將可讓他們將行銷活動導向價值最高的客戶。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -30,7 +31,7 @@ Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso
 
 ## <a name="task-1---ingest-data"></a>任務 1 - 內嵌資料
 
-檢閱關於[資料擷取](data-sources.md)和[使用 Power Query 連接器匯入資料來源](connect-power-query.md)的文章。 下列資訊假定您大體上已熟悉內嵌資料。
+請查看文章：[關於資料擷取](data-sources.md)和 [使用 Power Query 連接器匯入資料來源](connect-power-query.md)。 下列資訊假定您大體上已熟悉內嵌資料。
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>從電子商務平台內嵌客戶資料
 
@@ -163,7 +164,7 @@ Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>工作 3 - 設定客戶存留期值預測
 
-透過整合客戶個人資料，我們現在可以執行客戶存留期值預測。 如需詳細步驟，請參閱 [客戶存留期值預測](predict-customer-lifetime-value.md)。
+透過整合客戶個人資料，我們現在可以執行客戶存留期值預測。 如需詳細步驟，請參閱 [客戶存留期值預測 (預覽版)](predict-customer-lifetime-value.md)。
 
 1. 移至 **智慧**  > **預測**，然後選取 **客戶存留期值模型**。
 

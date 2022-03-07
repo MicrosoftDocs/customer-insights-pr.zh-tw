@@ -3,35 +3,28 @@ title: 匯出 Customer Insights 資料到 Dynamics 365 Sales
 description: 了解如何設定連接並匯出至 Dynamics 365 Sales。
 ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-searchScope:
-- ci-export
-- customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 328bb2f26ebcea234fb645e5225930ab12f82a8b
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355006"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976216"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>在 Dynamics 365 Sales 中使用客戶細分 (預覽版)
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 使用您的客戶資料來建立行銷名單、追蹤工作流程，並透過 Dynamics 365 Sales 寄出促銷活動。
 
-## <a name="known-limitations"></a>已知限制
-
-- 匯出至 Dynamics 365 Sales 的每個客戶細分限制為 100'000 個成員。
-- 客戶細分匯出至 Dynamics 365 Sales 最多可能需要 3 小時的時間才能完成。 
-
 ## <a name="prerequisite-for-connection"></a>連接的先決條件
 
-1. 連絡人記錄必須存在於Dynamics 365 Sales 中，才能將客戶細分從 Customer Insights 匯出至 Sales。 瞭解如何[使用 Microsoft Dataverse 在 Dynamics 365 Sales 裡面](connect-power-query.md)內嵌連絡人。
+1. 連絡人記錄必須存在於Dynamics 365 Sales 中，才能將客戶細分從 Customer Insights 匯出至 Sales。 瞭解如何[使用 Common Data Services 在 Dynamics 365 Sales 裡面](connect-power-query.md)內嵌連絡人。
 
    > [!NOTE]
    > 將客戶細分中從對象見解中匯出到 Sales，並不會在 Sales 的執行個體中建立新的連絡人記錄。 Sales 中的連絡人記錄必須內嵌在對象見解中，並作為資料來源使用。 他們也必須包含整合客戶實體中，才能客戶細分匯出前，先將客戶識別碼對應至連絡人的識別碼。

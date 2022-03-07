@@ -2,25 +2,23 @@
 title: 在 Microsoft Dataverse 中連線至資料表
 description: 從 Microsoft Dataverse 受管理的資料湖匯入資料。
 ms.date: 12/06/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-searchScope:
-- ci-dataverse
-- customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354131"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900141"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>連線至 Microsoft Dataverse 受管理資料湖中的資料
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 本文說明 Dataverse 使用者如何快速連接至位於 Microsoft Dataverse 受管理的 Lake 的分析實體。 
 
