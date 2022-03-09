@@ -1,20 +1,23 @@
 ---
-title: 對應資料統整實體
-description: 對應資料以建立統整的客戶設定檔。
-ms.date: 09/25/2020
-ms.service: customer-insights
+title: 對應資料統一的實體與屬性
+description: 選取實體、屬性、主鍵及語義類型，將資料對應到統一客戶設定檔。
+ms.date: 10/18/2020
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 570683876b10cb83d8af14552ca9bea9d80613575005d49a9af37cc16b8e75c9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-map
+- ci-match
+- customerInsights
+ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034396"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354948"
 ---
 # <a name="map-entities-and-attributes"></a>對應實體和屬性
 
@@ -94,7 +97,7 @@ ms.locfileid: "7034396"
 
 如果是組織 (預覽)，則屬性類型會對應至「Organization.Name」
 > [!div class="mx-imgBorder"]
-> ![主索引鍵和屬性類型 B2B](media/configure-data-map-edit-b2b.png "主索引鍵和屬性類型 B2B")
+> ![主索引鍵和屬性類型 B 到 B。](media/configure-data-map-edit-b2b.png "主索引鍵和屬性類型 B 到 B")
 
 ## <a name="next-step"></a>下一個步驟
 

@@ -1,20 +1,19 @@
 ---
-title: 將 Customer Insights 資料匯出至 Facebook 廣告管理員 (影片)
+title: 將 Customer Insights 資料匯出至 Facebook 廣告管理員 (含影片)
 description: 了解如何設定連接並匯出至 Facebook 廣告管理員。
 ms.date: 04/15/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4b2dc2ff8e5286209bd2ec94df42e82f0944715c
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 781cf10e1bb5ddaf82d4a17c7a77e0c43c41a1c2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904136"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226485"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>將客戶細分清單匯出至 Facebook 廣告管理員 (預覽版)
 

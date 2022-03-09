@@ -1,20 +1,19 @@
 ---
 title: 將 Customer Insights 資料匯出到 Klaviyo
 description: 了解如何設定連接並匯出到 Klaviyo。
-ms.date: 08/13/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
+ms.openlocfilehash: 027aee70d9fdab0a92d7fd99209a6ac2ca3cc361
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7385778"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225442"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>匯出客戶細分清單到 Klaviyo (預覽)
 
@@ -28,10 +27,10 @@ ms.locfileid: "7385778"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 您每次最多可匯出 100'000 筆個人資料到 Klaviyo 。
+- 每次匯出最多可以匯出 100,000 個客戶設定檔到 Klaviyo。
 - 匯出到 Klaviyo 僅限於客戶細分。
-- 匯出最多 1 百萬筆個人資料至 Klaviyo 可能需要 20 分鐘的時間才能完成。 
-- 您與 Klaviyo 的合約決定並限制您可以匯出到 Klaviyo 的個人資料數量。
+- 匯出多達 1 百萬個客戶設定檔到 Klaviyo 最長花費 20 分鐘完成。 
+- 您可以匯出到 Klaviyo 的客戶設定檔數目取決於並受限於您和 Klaviyo 簽訂的契約。
 
 ## <a name="set-up-connection-to-klaviyo"></a>設定連線至 Klaviyo
 
@@ -67,7 +66,7 @@ ms.locfileid: "7385778"
 
 1. 輸入您的 [**Klaviyo 清單識別碼**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID)。     
 
-3. 在 **資料符合** 區段的 **電子郵件** 欄位中，選取代表客戶電子郵件地址的統一客戶設定檔欄位。 這需要匯出客戶細分到 Klaviyo。
+3. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 這需要匯出客戶細分到 Klaviyo。
 
 1. 選取 **儲存**。
 

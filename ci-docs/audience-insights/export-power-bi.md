@@ -1,20 +1,19 @@
 ---
 title: Power BI 連接器
 description: 了解如何在 Power BI 中使用 Dynamics 365 Customer Insights 連接器。
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596029"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225505"
 ---
 # <a name="connector-for-power-bi-preview"></a>適用於 Power BI 的連接器 (預覽)
 
@@ -39,7 +38,7 @@ ms.locfileid: "5596029"
 
 1. 在 **導覽器** 對話方塊中。 您會看到所有您有存取權的環境清單。 展開環境並打開任何資料夾 (實體、量值、區段、富集群)。 例如，開啟 **實體** 資料夾以查看所有您可匯入的實體。
 
-   ![Power BI 連接器導覽器](media/power-bi-navigator.png "Power BI 連接器導覽器")
+   ![Power BI 連接器導覽器。](media/power-bi-navigator.png "Power BI 連接器導覽器")
 
 1. 選取要包含的實體旁邊的核取方塊並 **載入**。 您可以從多個環境選取多個實體。
 
@@ -68,5 +67,11 @@ Power BI 的 Customer Insights 連接器是設計來處理包含多達 1 百萬�
 3. 移除任何已發現的重複關聯。
 
 移除重複的關聯之後，請再次嘗試設定 Power BI連接器。 環境現在應該可以使用了。
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>在 Power BI Desktop 中載入實體時，日期欄位發生錯誤
+
+載入實體中包含如 MM/DD/YYYY 日期格式的欄位時，可能會發生錯誤，因為與地區設定格式不相符。 當您的 Power BI Desktop 檔案設為其他地區而非「英文 (美國)」的設定時，就會發生此不相符現象，因為對象見解中的日期欄位會儲存為 US 格式。
+
+Power BI Desktop 檔案有單一地區設定，在檢索資料時套用。 要讓這些日期欄位可以正確解譯，請設定.BPI 檔案的地區設定為英文 (美國)。 [了解如何變更 Power BI Desktop 檔案的地區設定](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop)。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,24 +1,23 @@
 ---
 title: Azure 機器學習實驗
 description: 在 Dynamics 365 Customer Insights 中使用 Azure 機器學習式模型。
-ms.date: 11/30/2020
-ms.service: customer-insights
+ms.date: 12/02/2021
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3c3bed3dca40be748140a8b339191e6a42725714
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597409"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228878"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>使用 Azure 機器學習式模型
 
-Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務見解的機器學習模型來源。 整合 Customer Insights 和 Machine Learning Studio (經典版) 和 Azure 機器學習的 Customer Insights 以使用您自己的自訂模型。 請參閱 [Machine Learning Studio (經典版) 實驗](machine-learning-studio-experiments.md) 了解以 Machine Learning Studio (經典版) 為基礎的實驗範例。 
+Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務見解的機器學習模型來源。 Customer Insights 可與 Azure Machine Learning 整合來使用您自己的自訂模型。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -35,7 +34,7 @@ Dynamics 365 Customer Insights 中的統一資料是組建可產生額外業務�
 
 ## <a name="work-with-azure-machine-learning-designer"></a>搭配 Azure Machine Learning 設計師處理
 
-Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合與模組，類似 Machine Learning Studio (經典版)。 如果已經組態，您從設計師建立的批次處理管道就能整合到 Customer Insights。 
+Azure Machine Learning 設計師提供了視覺效果的畫布，您可以在其中拖放資料集和模組。 如果已經組態，您從設計師建立的批次處理管道就能整合到 Customer Insights。 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>搭配 Azure Machine Learning SDK 處理
 
@@ -52,7 +51,7 @@ Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合
      在 Designer 程式中打開 **選取資料集的欄位**，然後選取 **設定為管道參數**，您即可提供參數名稱。
 
      > [!div class="mx-imgBorder"]
-     > ![Designer 中的資料集參數化](media/intelligence-designer-dataset-parameters.png "Designer 中的資料集參數化")
+     > ![Designer 中的資料集參數化。](media/intelligence-designer-dataset-parameters.png "Designer 中的資料集參數化")
    
 * SDK 中的資料集參數 (Python)
    
@@ -78,7 +77,7 @@ Azure Machine Learning 設計師提供直觀畫布，您可以拖曳資料集合
 
 * Designer 程式提供 [匯出資料模組](/azure/machine-learning/algorithm-module-reference/export-data)，允許將管道輸出匯出到 Azure 儲存體。 目前模組必須使用資料儲存類型 **Azure Blob 儲存體** 並將 **資料儲存** 和相對 **路徑** 參數化。 管道執行資料儲存及產品可存取的路徑時，Customer Insights 會覆寫這兩個參數。
    > [!div class="mx-imgBorder"]
-   > ![匯出資料模組組態](media/intelligence-designer-importdata.png "匯出資料模組組態")
+   > ![匯出資料模組組態。](media/intelligence-designer-importdata.png "匯出資料模組組態")
    
 * 當使用代碼撰寫推論輸出時，您可以將輸出上傳到工作區中 *已註冊資料儲存* 內的路徑。 如果路徑和資料儲存在管道中參數化，Customer Insights 將可讀取和匯入推論輸出。 目前支援 csv 格式的單表格式輸出。 路徑必須包括目錄和檔案名稱。
 

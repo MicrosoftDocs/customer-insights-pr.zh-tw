@@ -1,37 +1,44 @@
 ---
 title: 使用 Microsoft 的資料擴充客戶個人資料
-description: 您可以使用 Microsoft 的專有資料以品牌和興趣相關性來擴充客戶資料。
-ms.date: 06/14/2021
+description: 使用 Microsoft 的專有資料，以品牌親和力和聲量佔有率擴充您的客戶資料。
+ms.date: 11/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 726edb19a9fd97d80ae357103dc7d48ed38b005131ad44137b47d629a1c60b12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 77972475c9a448186cee3b1b62eeda7b1996edfc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033851"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355309"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>使用品牌和興趣親和性來擴充客戶設定檔 (預覽)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>使用品牌親和度和聲量佔有率 (預覽版) 來擴充客戶個人資料
 
-您可以使用 Microsoft 的專有資料以品牌和興趣相關性來擴充客戶資料。 這些親和力建立在人口統計資料中與客戶相似的人員。 此資訊可協助您更清楚了解客戶，並根據客戶與特定品牌及興趣的親和性建立其區段。
+使用 Microsoft 的專有資料，以品牌親和度、興趣同質性，和聲量佔有率 (SoV) 擴充您的客戶資料。 這些品牌親和度與 SoV 都建立在與客戶人口統計相似之人員的資料上。 此資訊可協助您更好地瞭解您的客戶，並根據客戶對特定的品牌和興趣的親合度或 SoV 進一步區分。
 
 請在對象見解中前往 **資料** > **擴充** 以便 [設定和檢視擴充](enrichment-hub.md)。
 
-若要設定品牌親和性擴充，請移至 **探索** 索引標籤 ，並選取 **品牌** 圖標上的 **擴充我的資料**。
+若要設定品牌親合度和 SoV 擴充，請移至 **探索** 索引標籤，並在 **品牌** 圖格上，選取 **擴充我的資料**。
 
-若要設定興趣親和性擴充，請移至 **探索** 索引標籤 ，並選取 **興趣** 圖標上的 **擴充我的資料**。
+若要設定興趣同質性和 SoV 擴充，請移至 **探索** 索引標籤，並在 **興趣** 圖格上，選取 **擴充我的資料**。
 
    > [!div class="mx-imgBorder"]
    > ![編輯品牌與興趣圖標。](media/BrandsInterest-tile-Hub.png "品牌與興趣圖標")
 
-## <a name="how-we-determine-affinities"></a>我們如何判斷相關性
+## <a name="how-we-determine-affinities-and-sov"></a>我們如何判斷親合度與 SoV
 
-我們使用 Microsoft 的線上搜尋資料，來尋找各種人口統計資料細分 (由年齡、性別或位置所定義) 與品牌和興趣的相關性。 品牌或興趣的線上搜尋量，會決定人口統計區段對該品牌或興趣有多少親和性 (與其他區段相比)。
+我們使用 Microsoft 的線上搜尋資料，找出各種人口統計資料區段 (由年齡、性別或地點定義) 對品牌的親合度和 SoV。 品牌或興趣表單的線上搜尋量，是判斷親合度或 SoV 的基礎。 不過，這些都能提供不同的視角來瞭解您的客戶。
+
+- 親合度是各人口統計區段間的比較。 您可以使用此資訊來找出與其他區段相比，對指定品牌或興趣有最高親度的人口統計資料區段。
+
+- 聲量佔有率則是在您選取的品牌或興趣之間進行比較。 您可以使用此資訊來找出對指定人口統計資料區段哪個品牌或興趣有最高聲量佔有率 (與所選的其他品牌或興趣相比)。
 
 ## <a name="affinity-level-and-score"></a>親合性等級和分數
 
@@ -48,6 +55,10 @@ ms.locfileid: "7033851"
 |低     | 1-34        |
 
 根據您要測量親和性的細微程度，您可以使用親和性等級或分數。 親和性分數提供更精確的控制。
+
+## <a name="share-of-voice-sov"></a>聲量佔有率 (SoV)
+
+我們以 100 點的範圍計算 SoV。 每一個擴充的客戶個人資料，其對所有品牌或興趣的 SoV 總額增加上限為 100。 與親合度不同，SoV 是相對於您所選取的品牌和興趣。 例如，如果選取的品牌是 ('Microsoft'，'GitHub') 或 ('Microsoft' 'LinkedIn')，'Microsoft' 的 SoV 值可能是不同的。
 
 ## <a name="supported-countriesregions"></a>支援的國家/地區
 
@@ -82,7 +93,7 @@ ms.locfileid: "7033851"
 
 ### <a name="select-entity-to-enrich"></a>選取要擴充的實體
 
-選取 **擴充實體**，然後選擇想要用 Microsoft 的公司資料擴充的客戶資料集。 您可以選取客戶實體來擴充所有的客戶設定檔，或選取客戶細分實體僅擴充位於該客戶細分的客戶設定檔。
+選取 **擴充的實體**，然後選擇要使用 Microsoft 的資料進行擴充的資料集。 您可以選取客戶實體來擴充所有的客戶設定檔，或選取客戶細分實體僅擴充位於該客戶細分的客戶設定檔。
 
 ### <a name="map-your-fields"></a>對應欄位
 
@@ -116,8 +127,7 @@ ms.locfileid: "7033851"
 
 視您的客戶資料大小而定，可能需要數分鐘的時間才能完成擴充執行。
 
-> [!TIP]
-> 任務/流程目前有 [六種類型的狀態](system.md#status-types)。 此外，大部分程序都要[依賴其他下游程序](system.md#refresh-policies)。 您可以選取程序的狀態，以查看整個工作的進度詳細資料。 對其中一個工作的選取 **查看詳細資料** 之後，您會發現其他資訊：處理時間、上次處理日期以及所有與此工作相關的錯誤和警告。
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="enrichment-results"></a>擴充結果
 
@@ -125,17 +135,17 @@ ms.locfileid: "7033851"
 
 :::image type="content" source="media/my-enrichments.png" alt-text="執行擴充程序之後的結果預覽。":::
 
-在圖表中選取 **查看已擴充資料**，以查看擴充後的資料。 擴充的品牌資料會移至 **BrandAffinityFromMicrosoft** 實體。 興趣資料位於 **InterestAffinityFromMicrosoft** 實體中。 您也可以 **資料** > **實體** 的 **擴充** 群組中找到這些實體。
+您會看到一張圖表，其中有客戶個人資料隨時間的完成擴充的數量，以及擴充後實體的預覽。 請選取 **親合度等級** 或 **聲量佔有率** 圖表中的 **查看更多**，檢閱已擴充的資料。 品牌的擴充資料會移至 **BrandAffinityFromMicrosoft** 與 **BrandShareOfVoiceFromMicrosoft** 實體。 興趣的資料位於 **InterestAffinityFromMicrosoft** 和 **InterestShareOfVoiceFromMicrosoft** 實體中。 您也可以 **資料** > **實體** 的 **擴充** 群組中找到這些實體。
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>查看客戶卡片上的擴充資料
 
-您也可以在個別客戶卡片上查看品牌和興趣親和性。 移至 **客戶** 並選取客戶設定檔。 在客戶卡片中，您會發現該客戶人口統計設定檔中人員所喜好品牌或興趣的圖表。
+您也可以在各個客戶卡片上查看品牌和興趣 SoV。 移至 **客戶** 並選取客戶設定檔。 在客戶卡片中，您會找到品牌或興趣 SoV 的圖表，是根據屬於該客戶個人資料的人口統計的人員建立的。
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="包含擴充資料的客戶卡片。":::
 
 ## <a name="next-steps"></a>後續步驟
 
-建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)和 [量值](measures.md)，甚至[匯出資料](export-destinations.md)，為您的客戶提供個人化的體驗。
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

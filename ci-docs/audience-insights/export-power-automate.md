@@ -1,20 +1,19 @@
 ---
 title: Power Automate 連接器 | Microsoft Docs
 description: 在 Dynamics 365 Customer Insights 中建立 Microsoft Power Automate 的流程。
-ms.date: 01/20/2021
+ms.date: 06/24/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976078"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226704"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate 連接器 (預覽)
 
@@ -27,13 +26,14 @@ ms.locfileid: "5976078"
 - 當資料來源重新整理失敗時觸發。 
 - 當資料來源重新整理成功時觸發。
 - 在區段上越過閾值時觸發。 觸發程序受限在需要超過閾值以上。
-- 在業務量值上越過閾值時觸發。 此處僅顯示缺少維度的業務量值。 觸發程序限制為必須超過閾值以上。
-- 當完成 (資料來源、區段、量值，...) 的完整重新整理時，會引發發射鍵。
+- 在業務量值上越過閾值時觸發。 此處僅顯示缺少維度的業務量值。 觸發程序受限在需要超過閾值以上。
+- 完成 (資料來源、區段、量值，...) 的完整重新整理時的觸發程序。
 - 在完成統整程序 (對應、比對、合併) 機重新整理時觸發。
 
-[在 Power Automate 中設定您的觸發程序](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)。
+[在 Power Automate 中設定您的觸發程序。](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
 ## <a name="power-automate-actions"></a>Power Automate 動作
+
 Power Automate 連接器提供可用觸發程序以外的動作。 如需詳細資訊，請參閱《[Dynamics 365 Customer Insights Connector](/connectors/customerinsights/)》。
 
 ## <a name="create-a-power-automate-flow"></a>建立 Power Automate 流程

@@ -56,6 +56,8 @@
           href: audience-insights/connect-common-data-model.md
         - name: 新增 Dataverse 受管理資料湖
           href: audience-insights/connect-dataverse-managed-lake.md
+        - name: 新增 Azure Synapse Analytics
+          href: audience-insights/connect-synapse.md
         - name: 資料來源的增量重新整理
           href: audience-insights/incremental-refresh-data-sources.md
         - name: 即時資料擷取
@@ -120,8 +122,12 @@
           href: audience-insights/find-similar-customer-segments.md
     - name: 量值
       items:
-        - name: 定義量值和 KPI
+        - name: 量值概觀
           href: audience-insights/measures.md
+        - name: 建立新量值
+          href: audience-insights/measure-builder.md
+        - name: 使用量值範本
+          href: audience-insights/measure-templates.md
     - name: 預測
       items:
         - name: 以 AI 協助預測資料
@@ -252,8 +258,6 @@
               href: audience-insights/diagnostics.md
     - name: 擴充性
       items:
-        - name: 整合來自參與度見解的 web 資料
-          href: audience-insights/integrate-engagement-insights.md
         - name: 檢閱 Common Data Model 中的實體結構描述
           href: audience-insights/entity-schemas.md
         - name: Dataverse 中的 Customer Insights 資料
@@ -297,83 +301,7 @@
         - name: 使用同意資料建立預測
           href: consent-management/predictions-consent-data.md
 - name: 業務開發見解 (預覽版)
-  items:
-    - name: 求助中樞
-      href: engagement-insights/index.yml
-    - name: 有關參與見解
-      href: engagement-insights/overview.md
-    - name: 開始使用
-      items:
-        - name: 快速入門手冊
-          href: engagement-insights/get-started.md
-        - name: 建立環境
-          href: engagement-insights/create-new-environment.md
-        - name: 建立工作區
-          href: engagement-insights/create-workspace.md
-        - name: 從網站和行動裝置應用程式擷取事件
-          href: engagement-insights/developer-resources.md
-        - name: 概念和術語
-          href: engagement-insights/glossary.md
-    - name: 活動
-      items:
-        - name: 建立和修改事件
-          href: engagement-insights/refined-events.md
-        - name: 辨識 web 事件是來自先前驗證的訪客
-          href: engagement-insights/unknown-to-known.md
-        - name: 匯出事件
-          href: engagement-insights/export-events.md
-    - name: 報告
-      items:
-        - name: 查看報告
-          href: engagement-insights/view-reports.md
-        - name: 建立自訂報表
-          href: engagement-insights/custom-reports.md
-        - name: 建立統整的設定檔報表
-          href: engagement-insights/profile-reports.md
-        - name: 檢視和建立維度
-          href: engagement-insights/dimensions.md
-        - name: 檢視和建立計量
-          href: engagement-insights/metrics.md
-        - name: 檢視和建立客戶細分
-          href: engagement-insights/segments.md
-    - name: 旅程分析
-      items:
-        - name: 建立及管理漏斗圖報表
-          href: engagement-insights/funnel-reports.md
-    - name: 開發人員資源
-      items:
-        - name: 開發人員資源總覽
-          href: engagement-insights/developer-resources.md
-        - name: Web SDK 教學課程
-          href: engagement-insights/advanced-SDK-implementation.md
-        - name: Web SDK 範例
-          href: engagement-insights/websdk-sample.md
-        - name: Android SDK 教學課程
-          href: engagement-insights/get-started-android.md
-        - name: Android SDK 範例
-          href: engagement-insights/androidsdk-sample.md
-        - name: iOS SDK 教學課程
-          href: engagement-insights/get-started-ios.md
-        - name: iOS SDK 範例
-          href: engagement-insights/iossdk-sample.md
-    - name: 系統管理
-      items:
-        - name: 角色和權限
-          href: engagement-insights/user-roles.md
-        - name: 管理環境和工作區
-          href: engagement-insights/manage-environments-workspaces.md
-        - name: 管理 cookie 和使用者同意
-          href: engagement-insights/user-consent-storage.md
-    - name: 區域可用性
-      href: engagement-insights/regional-availability.md
-- name: 在功能間共用資料
-  items:
-    - name: 連結參與見解與對象見解
-      href: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - name: 在參與見解報表中使用對象見解客戶細分
-      href: engagement-insights/integrate-audience-insights-segments.md
-    - name: 使用人口統計學維度來分割行為資料
-      href: engagement-insights/curate-dimensions.md
+  href: engagement-insights/overview.md
 - name: 服務限制
   href: service-limits.md
 - name: DSR 權利和要求
