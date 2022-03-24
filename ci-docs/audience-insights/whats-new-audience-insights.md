@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232647"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376452"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
-
-
 
 我們很高興宣布我們最新的更新！ 本文摘要說明公開預覽功能、正式發行增強功能以及功能更新。 若要查看長期功能計劃，請參閱 [Dynamics 365 和 Power Platform 發行計劃](/dynamics365/release-plans/)。
 
@@ -26,6 +24,62 @@ ms.locfileid: "8232647"
 > [!TIP]
 > 若要提出功能要求和產品建議並票選，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
 
+
+## <a name="february-2022-updates"></a>2022 年 2 月更新
+
+2022 年 2 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="general-availability-for-prediction-models"></a>預測模型的正式發行
+
+立即可用的預測模型，其中包括 **訂閱流失**、**交易流失** 和 **客戶存留期值 (CLV)**，在Customer Insights 中正式發行。 
+
+如需詳細資訊，請參閱[預測概觀](predictions-overview.md)。
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>新資料來源：與 Azure Synapse Analytics 整合 (預覽版)
+
+Azure Synapse Analytics 是一項企業分析服務，可加快資料倉儲和大型資料系統的見解生成速度。
+
+如果您的組織已經使用 Azure Synapse Analytics 進階分析功能，並將輸出儲存在 Data Lake 資料庫中，您可以輕易地將這些資料擷取至 Customer Insights。 如需其他資訊，請參閱[連接至 Azure Synapse 資料來源 (預覽)](connect-synapse.md)。
+
+### <a name="liveramp-enrichment-preview"></a>LiveRamp 擴充 (預覽)
+
+LiveRamp 提供確定性的離線身分識別解析和客戶資料的整合。 您可以將客戶資料中的個人識別碼對應至 AbiliTec 標識圖表，並接收 AbiliTec 識別碼。 您可以使用這些識別碼來取得更好的整合客戶資料。
+
+如需詳細資訊，請參閱[使用 LiveRamp 身分識別資料擴充客戶個人資料(預覽版)](enrichment-liveramp.md)。
+
+### <a name="enrichment-for-data-sources-preview"></a>資料來源擴充 (預覽版)
+
+使用來自 Microsoft 和其他合作夥伴等來源的資料，在資料整合前擴充您的客戶資料。 資料來源擴充協助產生更高的資料完整性與品質，當您整合資料後，可取得更好的結果。
+
+如需詳細資訊，請參閱[資料來源擴充 (預覽版)](data-sources-enrichment.md)。
+
+### <a name="change-owner-of-environment"></a>變更環境擁有者
+
+雖然在 Customer Insights 可以有多個使用者擁有系統管理員權限，但是只有一個使用者是環境的負責人。 改進後的體驗可讓您變更環境的負責人，並在先前的負責人離開組織時宣告擁有權。 
+
+如需詳細資訊，請參閱[變更環境的負責人](manage-environments.md#change-the-owner-of-an-environment)。
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>資料準備程序列出損壞記錄的損壞原因
+
+現在，所有資料損壞的欄位，資料準備程序會在個別記錄層級顯示其損壞原因，以便於識別。 
+
+如需其他資訊，請參閱[損壞的資料來源](entities.md#corrupted-data-sources)。
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>參與見解功能中的報表功能結束預覽
+
+ Dynamics 365 Customer Insights 參與見解功能的預覽版已於2022 年 2 月 15 日終止。  
+這項變更表示 Customer Insights 試用體驗不再包括建立漏斗圖的能力，也不包含其他報表功能。
+
+我們邀請您探索並評估 [Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/)，即 Microsoft 客戶資料平臺 (CDP) ，的其他許多功能。    
+ 
+在轉換期間，現時預覽版的參與者仍然可以存取某些預覽功能：
+
+- 取得程式碼來檢測網站或行動應用程式 
+- 查看事件與事件屬性 
+- 利用內嵌及精簡事件增強整合個人資料檔，從客戶資料的完整價值中獲益
+  
+轉換期間，擷取的事件仍會串流至已連線的 Data Lake 中。 關閉此功能後，便會停止在參與見解與對象見解之間的資料共用，且不會將任何新事件傳送至已連線的儲存空間。
+如果您對功能預覽版的終止有任何問題，請直接與您的 Microsoft 帳戶團隊聯繫。 您的帳戶團隊將通知您新版的最新消息。 
 
 ## <a name="january-2022-updates"></a>2022 年 1 月更新
 

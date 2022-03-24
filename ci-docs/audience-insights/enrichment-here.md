@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 1cbbad9bfe559bcb15b23894fc7475507aae8add
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230372"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376270"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies 客戶設定檔的富集作用 (預覽版)
 
@@ -25,7 +25,7 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 
 - 您已具備有效的 HERE Technologies 訂閱。 若要訂閱，您可以[在這裡註冊](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) 或直接 [聯絡 HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you)。 [深入瞭解 HERE Technologies 的 Location Enrichment。](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- 有可用的 HERE 的 [連接](connections.md)*或*，或者您有[系統管理員](permissions.md#administrator)權限和 HERE Technologies API 金鑰。
+- 有可用的 HERE 的 [連接](connections.md)*或*，或者您有[系統管理員](permissions.md#admin)權限和 HERE Technologies API 金鑰。
 
 ## <a name="configure-the-enrichment"></a>擴充設定
 

@@ -1,7 +1,7 @@
 ---
 title: 富集統一的客戶設定檔
 description: 使用功能富集您的客戶資料。
-ms.date: 02/07/2022
+ms.date: 02/18/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: e8cac35ccf7012524dc22cb4a499dc605dd66346
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355373"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372692"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -42,6 +42,7 @@ ms.locfileid: "8355373"
 - 透過安全檔案傳輸通訊協定 (SFTP) 的 [自訂資料](enrichment-SFTP-custom-import.md) 
 - 由 Microsoft 提供的 [Azure 地圖服務](enrichment-azure-maps.md)
 - HERE Technologies 提供的 [位置資料](enrichment-here.md) 
+- 由 LiveRamp AbiliTec 提供的[身分識別](enrichment-liveramp.md)
 
 # <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
 
@@ -80,6 +81,10 @@ ms.locfileid: "8355373"
 ## <a name="multiple-enrichments-of-the-same-type"></a>多個相同類型的擴充
 
 在擴充設定期間，會指定要擴充的實體，這可讓您擴充個人資料的子集。 例如，只擴充特定客戶細分的資料。 您可以設定數個相同類型的擴充，並重複使用相同的連接。 某些擴充將限制相同類型的擴充可建立的數量。 在 **擴充** 頁面上可以看到限制和目前使用的值 。
+
+## <a name="enrich-data-sources-before-unification"></a>在整合之前擴充資料來源
+
+在資料整合處理之前，先擴充您的客戶資料，以提升資料比對的成果。 如需詳細資訊，請參閱[資料來源擴充](data-sources-enrichment.md)。
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>查看擴充程序的進度
 

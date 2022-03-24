@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355143"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376912"
 ---
 # <a name="match-entities"></a>比對實體
 
@@ -180,7 +180,19 @@ ms.locfileid: "8355143"
   - Deduplication_WinnerId：此欄位包含的勝出識別碼來自於已辨識的群組或叢集。 如果 Deduplication_WinnerId 與記錄的主索引鍵相同，則表示該記錄是勝出的記錄。
 - 用來定義重複資料刪除規則的欄位。
 - 規則和分數欄位，表示所套用的重複資料刪除規則和比對演算法回傳的分數。
-   
+ 
+## <a name="include-enriched-entities-preview"></a>包括已擴充的實體（預覽版）
+
+如果您在資料來源等級上擴充實體，請在執行比對程序之前，選取它們。 擴充實體可以改善整合結果。 如需詳細資訊，請參閱[資料來源擴充](data-sources-enrichment.md)。 
+
+已擴充實體包含原始資料來源欄位與已擴充的欄位。 因此，如果您選擇使用受已擴充的實體，則現有的設定不會受到影響。 但是，您可能需要更新比對規則，才能改用已擴充的欄位。
+
+1. 移至 **資料** > **整合** > **比對**，然後在頁面頂端選取 **使用已擴充實體**。
+
+1. 從使用 **已擴充的實體** 窗格中，選取一個或多個已擴充的實體。
+
+1. 選取 **完成**。 不論在哪使用來源實體 (例如相符順序或規則)，都會自動變更為已擴充實體。
+  
 ## <a name="run-the-match-process"></a>執行比對程序
 
 設定好比對規則，包括跨實體比對和重複資料刪除規則後，您可以執行比對程序。 

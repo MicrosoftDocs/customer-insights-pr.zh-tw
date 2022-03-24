@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354362"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376406"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>使用 Azure 監視器在 Dynamics 365 Customer Insights 轉寄記錄 (預覽版)
 
@@ -37,7 +37,7 @@ Customer Insights 會傳送下列事件記錄檔：
 若要在 Customer Insights 中設定診斷，必須符合下列先決條件：
 
 - 您必須具備有效的 [ Azure 訂閱](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)。
-- 您擁有 Customer Insights 中的[系統管理員](permissions.md#administrator)權限。
+- 您擁有 Customer Insights 中的[系統管理員](permissions.md#admin)權限。
 - 您擁有 Azure 中目的地資源的 **參與者** 及 **使用者存取系統管理員** 角色。 資源可以是 Azure 儲存體帳戶、Azure 事件中樞或 Azure Log Analytics 工作區。 如需詳細資訊，請參閱[使用 Azure 入口網站新增移除 Azure 角色指派](/azure/role-based-access-control/role-assignments-portal)。
 - Azure 儲存體、Azure 事件中樞或 Azure Log Analytics 符合的[目的地需求](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements)。
 - 在資源所屬的資源群組上至少要有 **讀者** 角色。
@@ -132,7 +132,7 @@ API 事件和工作流程事件有相同的結構以及不同的細節，請參�
 | `resultSignature` | 字串    | 選用          | 事件的結果狀態。 如果該作業對應到 REST API 呼叫，則它是 HTTP 狀態碼。        | `200`             |
 | `durationMs`      | Long      | 選用          | 作業的期間 (以毫秒為單位)。     | `133`     |
 | `callerIpAddress` | 字串    | 選用          | 呼叫者 IP 位址 (如果該作業對應到的 API 呼叫來自公開可見 IP 位址)。                                                 | `144.318.99.233`         |
-| `identity`        | 字串    | 選用          | 說明執行作業的使用者或應用程式的身分識別的 JSON 物件。       | 請參閱[身分識別](#identity-schema) 區段。     |  |
+| `identity`        | 字串    | 選用          | 說明執行作業的使用者或應用程式的身分識別的 JSON 物件。       | 請參閱[身分識別](#identity-schema) 區段。     |  
 | `properties`      | 字串    | 選用          | 對特定類別的事件有更多屬性的 JSON 物件。      | 請參閱[屬性](#api-properties-schema)區段。    |
 | `level`           | 字串    | 是必要欄位          | 事件的嚴重性層級。    | `Informational`、`Warning`、`Error` 或 `Critical`。           |
 | `uri`             | 字串    | 選用          | 絕對要求 URI。    |               |
@@ -230,7 +230,7 @@ API 事件和工作流程事件有相同的結構以及不同的細節，請參�
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | .是      | .是  | 有 `WorkflowEvent` 標示的事件為工作流程事件。                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | .是      | .是  | 工作流程執行的識別碼。 工作流程執行中的所有工作流程和工作事件都有著相同的 `workflowJobId`。                                                                                                                                   |
-| `properties.operationType`                   | .是      | .是  | 作業的識別碼，請參閱 [操作類型]。（#operation 類型）                                                                                                                                                                                       |
+| `properties.operationType`                   | .是      | .是  | 作業的識別碼，請參閱 [操作類型].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | .是      | 無   | 僅工作流程。 工作流程觸發的工作數。                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | .是      | 無   | 選擇性。 僅工作流程事件。 觸發工作流程的[使用者其 Azure Active Directory objectId ](/azure/marketplace/find-tenant-object-id#find-user-object-id)，也請參閱`properties.workflowSubmissionKind`。                                   |
 | `properties.workflowType`                    | .是      | 無   | `full` 或 `incremental` 重新整理。                                                                                                                                                                                                                            |
@@ -239,7 +239,7 @@ API 事件和工作流程事件有相同的結構以及不同的細節，請參�
 | `properties.startTimestamp`                  | .是      | .是  | UTC 時間戳記`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | .是      | .是  | UTC 時間戳記`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | .是      | .是  | UTC 時間戳記`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | .是      | .是  | Customer Insights `instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | .是      | .是  | Customer Insights `instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | 無       | .是  | - 對於 OperationType = `Export`，識別碼是匯出設定的 guid。 <br> - 對於 OperationType = `Enrichment`，它是擴充的 guid <br> - 對於 OperationType 是 `Measures`和 `Segmentation`，識別碼是實體名稱。 |
 | `properties.friendlyName`                    | 無       | .是  | 匯出的自訂名稱或被處理的實體。                                                                                                                                                                                           |
 | `properties.error`                           | 無       | .是  | 選擇性。 包含詳細資料的錯誤訊息。                                                                                                                                                                                                                  |

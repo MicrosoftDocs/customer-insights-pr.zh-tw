@@ -1,7 +1,7 @@
 ---
 title: 建立和管理環境
 description: 瞭解如何註冊服務及管理環境。
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354269"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376866"
 ---
 # <a name="manage-environments"></a>管理環境
-
-
 
 ## <a name="switch-environments"></a>切換環境
 
@@ -98,9 +96,29 @@ ms.locfileid: "8354269"
 
 資料統一完成時，移至 **測量** 和 **分段** 進行重新整理。
 
+## <a name="change-the-owner-of-an-environment"></a>變更環境負責人
+
+雖然在 Customer Insights 可以有多個使用者擁有系統管理員權限，但是只有一個使用者是環境的負責人。 根據預設，這會是建立環境的系統管理員。 作為環境的系統管理員，您可以將擁有權指派給具有系統管理員權限的其他使用者。
+
+1. 在應用程式的標頭中選取 **環境** 選取器。
+
+1. 選取 **編輯** 圖示。
+
+1. 在 **編輯環境** 方塊中，移至 **基本資訊** 步驟。
+
+1. 在 **變更環境的負責人** 欄位中，選擇環境的新負責人。  
+
+1. 選取 **檢閱及完成**，然後按一下 **更新** 來套用變更。 
+
+## <a name="claim-ownership-of-an-environment"></a>宣告環境的擁有權
+
+如果環境的負責人離開組織或其使用者帳戶已被刪除，則環境將沒有負責人。 具有系統管理員權限的使用者可以宣告擁有權，並成為新的負責人。 他們可以繼續擁有環境，或[將擁有權變更到其他系統管理員](#change-the-owner-of-an-environment)。 
+
+若要宣告擁有權，請選取 **取得擁有權** 按鈕，當原始負責人離開組織時，會在 Customer Insights 中每個頁面的頂端顯示該按鈕。
+
 ## <a name="reset-an-existing-environment"></a>重設現有環境中
 
-作為管理員，如果您要刪除所有組態並移除內嵌的資料，您可以將環境重設為空白狀態。
+作為環境負責人，若要刪除所有設定並移除擷取資料，您可以將環境重設為空白狀態。
 
 1.  在應用程式的標頭中選取 **環境** 選取器。 
 
@@ -112,7 +130,7 @@ ms.locfileid: "8354269"
 
 ## <a name="delete-an-existing-environment"></a>刪除現有環境
 
-作為管理員，您可以刪除您所管理的環境。
+作為環境的負責人，您可以刪除您管理的環境。
 
 1.  在應用程式的標頭中選取 **環境** 選取器。
 

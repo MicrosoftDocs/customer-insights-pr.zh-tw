@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 0db0c984f6bf9f7ded0704b6fa0caf39c7dace3a
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230624"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376774"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>使用 Leadspace 擴充公司設定檔 (預覽)
 
@@ -25,7 +25,7 @@ Leadspace 是一間提供 B 到 B 客戶資料平台的資料科學公司。 它
 
 - 您有一個有效的 Leadspace 授權。
 - 您有按帳戶基礎的[統一客戶設定檔](customer-profiles.md)。
-- Leadspace 連接已由系統管理員設定，或者您有 [系統管理員](permissions.md#administrator)權限和「永久金鑰」(被稱為 **Leadspace 權杖**)。 如需產品的詳細資料，請直接聯繫 [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/)。
+- Leadspace 連接已由系統管理員設定，或者您有 [系統管理員](permissions.md#admin)權限和「永久金鑰」(被稱為 **Leadspace 權杖**)。 如需產品的詳細資料，請直接聯繫 [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/)。
 
 ## <a name="configure-the-enrichment"></a>擴充設定
 

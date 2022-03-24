@@ -8,16 +8,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: dd90ef4576246b49d4a9c74005196ee9813a6744
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226704"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455897"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate 連接器 (預覽)
 
 資料變更時觸發自動發生的特定事件，或直接在 [Power Automate](https://flow.microsoft.com/) 中管理更複雜的流程。
+
+## <a name="known-limitations"></a>已知限制
+
+- 60 秒最多可以執行 100 個呼叫。 您可以使用 $skip 參數，多次呼叫 API 端點。 [了解 $skip 參數的詳細資訊](/connectors/customerinsights/#get-items-from-an-entity)。
 
 ## <a name="power-automate-triggers"></a>Power Automate 觸發程序
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228464"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376820"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>使用參與度資料擴充客戶個人資料 (預覽版)
 
@@ -28,7 +28,7 @@ ms.locfileid: "8228464"
 - 您必須有有效的 Office 365 雲端授權。
 - 您有依[商務客戶](work-with-business-accounts.md)建立的[整合客戶個人資料](customer-profiles.md)。
 - 您的 Customer Insights 環境必須有一個 [Microsoft Dataverse 組織附加](create-environment.md#step-3-connect-to-microsoft-dataverse)。
-- 您擁有[系統管理員](permissions.md#administrator)權限。
+- 您擁有[系統管理員](permissions.md#admin)權限。
 - 您擁有或可以取得您的 Office 365 租用戶系統管理員同意，在 Dynamics 365 應用程式使用 Office 365 資料提供 **組織的見解**。
 
 ## <a name="configure-the-enrichment"></a>擴充設定

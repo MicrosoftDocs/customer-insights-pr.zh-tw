@@ -1,7 +1,7 @@
 ---
 title: 管理使用者權限
 description: 了解有關權限和使用者角色。
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355927"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376728"
 ---
 # <a name="user-permissions"></a>使用者權限
 
@@ -48,7 +48,7 @@ ms.locfileid: "8355927"
 - 從 **擴充** 頁面管理設定並擴充客戶設定檔 (僅適用於第一方擴充內容)。
 - 以與參與者共用的連接來管理和建立匯出。 [進一步了解系統管理員如何讓參與者使用匯出的連接](connections.md#allow-contributors-to-use-a-connection-for-exports)。
 
-## <a name="administrator"></a>管理員
+## <a name="admin"></a>管理
 
 - 參與者可用的所有權限。
 - 在 **系統** 頁面上變更設定，包括工作語言和系統流程的重新整理排程。
@@ -60,6 +60,12 @@ ms.locfileid: "8355927"
 - 安裝和使用 **客戶卡片增益集**。
 - 新增和使用 **Power Apps 連接器**。
 - 啟用 [Customer Insights API](apis.md) 的使用方式。
+- [指派環境擁有權](manage-environments.md#change-the-owner-of-an-environment)給另一位系統管理員。
+
+## <a name="admin-owner"></a>系統管理員 (負責人)
+
+- 系統管理員可以使用所有權限。
+- [重設或刪除](manage-environments.md#reset-an-existing-environment)環境。
 
 ## <a name="assign-roles-and-permissions"></a>指派角色和權限
 

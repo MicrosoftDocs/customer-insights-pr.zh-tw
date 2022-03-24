@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229954"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376682"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>利用 Experian 的人口統計資訊擴充客戶個人資料 (預覽版)
 
@@ -25,7 +25,7 @@ Experian 是消費者和企業信用報告和行銷服務的全球領導者。 �
 
 - 您必須擁有 Experian 訂用帳戶。 若要取得訂閱，請直接[聯繫 Experian](https://www.experian.com/marketing-services/contact)。 [深入了解 Experian 資料擴充](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage)。
 
-- Experian 連接已由系統管理員設定，*或* 您擁有[系統管理員](permissions.md#administrator)權限。 您也需要 Experian 為您建立的支援 SSH 的安全傳輸 (ST) 帳戶的使用者識別碼、當事人識別碼和型號編號。
+- Experian 連接已由系統管理員設定，*或* 您擁有[系統管理員](permissions.md#admin)權限。 您也需要 Experian 為您建立的支援 SSH 的安全傳輸 (ST) 帳戶的使用者識別碼、當事人識別碼和型號編號。
 
 ## <a name="supported-countriesregions"></a>支援的國家/地區
 

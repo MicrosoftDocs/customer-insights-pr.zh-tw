@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350121"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455988"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>購買 Customer Insights 之後可開始使用
 
@@ -39,7 +39,4 @@ Customer Insights 是每個租用戶授權，包括多種功能。 您可以購�
 
 ## <a name="create-your-own-environment"></a>建立自己的環境
 
-首次登入後，您將看到含有範例資料的環境。 您可以使用那項資料探索各項功能，並且熟悉應用程式。 若要使用您自己的資料，則必須[建立環境](audience-insights/get-started-paid.md)。
-
-
-
+首次登入後，您將看到含有範例資料的環境。 您可以使用那項資料探索各項功能，並且熟悉應用程式。 若要使用您自己的資料，則必須[建立環境](/dynamics365/customer-insights/audience-insights/create-environment)。

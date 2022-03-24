@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355881"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376498"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>帶入您自己的 Azure 金鑰保存庫 (預覽版)
 
@@ -31,7 +31,7 @@ ms.locfileid: "8355881"
 
 - 您必須具備有效的 Azure 訂閱。
 
-- 您必須具備對象見解中[系統管理員](permissions.md#administrator)的角色。 瞭解更多有關[對象見解的使用者權限](permissions.md#assign-roles-and-permissions)。
+- 您必須具備對象見解中[系統管理員](permissions.md#admin)的角色。 瞭解更多有關[對象見解的使用者權限](permissions.md#assign-roles-and-permissions)。
 
 - 您在金鑰保存庫或其隸屬的資源群組上扮演[參與者](/azure/role-based-access-control/built-in-roles#contributor)和[使用者存取系統管理員](/azure/role-based-access-control/built-in-roles#user-access-administrator)的角色。 如需詳細資訊，請前往[使用 Azure 入口網站新增移除 Azure 角色指派](/azure/role-based-access-control/role-assignments-portal)。 如果您不具備金鑰保存庫上的使用者存取系統管理員角色，您必須分別為 Azure 對 Dynamics 365 Customer Insights 的服務主體設定角色型存取控制權限。 請遵照步驟針對應連結的金鑰保存庫[使用 Azure 服務主體](connect-service-principal.md)。
 
