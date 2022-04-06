@@ -1,7 +1,7 @@
 ---
 title: 富集統一的客戶設定檔
 description: 使用功能富集您的客戶資料。
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372692"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491948"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -97,5 +97,19 @@ ms.locfileid: "8372692"
 1. 在 **進度詳細資料** 窗格中，展開 **擴充** 區段。 
 1. 在您想要查看進度的擴充底下，選取 **查看詳細資料**。 
 1. 在 **工作詳細資料** 窗格中，選取 **顯示詳細資料**，以查看包含在擴充更新的程序及其狀態。 
+
+## <a name="enrichment-results"></a>擴充結果
+
+完成擴充後，您可以檢閱擴充結果。
+
+1. 移至 **資料** > **擴充**。 
+1. 選取需要更多資訊的擴充
+
+所有的擴充都會顯示基本資訊，例如擴充個人資料的數量、生成擴充實體的預覽，以及隨時間完成擴充的個人資料數量。 如果有的話，**已擴充欄位的客戶數** 可讓您鑽研到每個擴充的欄位。
+
+:::image type="content" source="media/enrichments-results.png" alt-text="擴充結果頁面。":::
+
+某些擴充也會顯示擴充類型的特定資訊。 如需詳細資訊，請參閱相關擴充文件。
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

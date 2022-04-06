@@ -1,23 +1,23 @@
 ---
 title: 在 Customer Insights 建立環境
 description: 建立已授權的 Dynamics 365 Customer Insights 訂閱環境。
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354085"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491903"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>在對象見解建立環境
 
@@ -83,14 +83,16 @@ ms.locfileid: "8354085"
 連接至 Dataverse 環境也讓您可以[使用 Power Platform 的資料流程和閘道從內部部署資料來源來擷取資料](data-sources.md#add-data-from-on-premises-data-sources)。 您也可以通過連接 Dataverse 環境來使用[立即可用的預測模型](predictions-overview.md?tabs=b2c#out-of-box-models)。
 
 > [!IMPORTANT]
-> Customer Insights 與 Dataverse 必須位於相同的地區，才能啟用資料共用。
+> 1. Customer Insights 與 Dataverse 必須位於相同的地區，才能啟用資料共用。
+> 1. Dataverse 環境中必須有全域系統管理員角色。 確認此 [Dataverse 環境是否關聯](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment)到特定的安全性群組，並確定您已被新增至這些安全性群組。
+> 1. 現有的 Customer Insights 環境尚未與該 Dataverse 環境相關聯。 了解如何[移除現有的 Dataverse 環境連接](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment)。
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="為全新實例自動啟用 Microsoft Dataverse 的資料共用。":::
 
-> [!NOTE]
-> Customer Insights 不支援的資料共用案例如下：
-> - 如果您儲存所有資料到 Azure Data Lake Storage，您就不能啟用與 Dataverse 託管的資料湖共用資料的功能。
-> - 如果您啟用與 Dataverse 共享資料的功能，您就無法[在實體建立預測或遺漏的數值](predictions.md)。
+有關啟用從 Azure Data Lake Storage 共用資料到 Microsoft Dataverse，如需詳細資訊，請參閱[連接至 Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse)。
+
+Customer Insights 不支援的資料共用案例如下：
+- 如果您啟用與 Dataverse 共享資料的功能，您就無法[在實體建立預測或遺漏的數值](predictions.md)。
 
 ### <a name="step-4-finalize-the-settings"></a>步驟 4：完成設定
 

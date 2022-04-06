@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354871"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523712"
 ---
 # <a name="customer-profiles"></a>客戶設定檔
 
 **客戶** 頁面顯示您的統一客戶設定檔的組合視圖。 一旦[建立統一客戶實體](data-unification.md)，客戶設定檔隨即可用。 本頁面讓您搜尋客戶並定義搜尋索引。
 
-客戶可以是個人或組織。 每個客戶設定檔均以圖格呈現。 使用分頁控制項取得更多筆記錄。 本卡片依據 **搜尋 & 篩選條件索引** 中的定義顯示來自 *客戶* 實體的欄位。 請選取圖格並在名為[客戶詳細資料頁面](customer-profiles.md#customer-details-page)的專用頁面中查看選取客戶的資料。
+客戶可以是個人或組織。 每個客戶設定檔均以圖格呈現。 使用分頁控制項取得更多筆記錄。 本卡片依據 **搜尋 & 篩選條件索引** 中的定義顯示來自 *客戶* 實體的欄位。 每張卡片中的欄位順序皆由系統挑選。
+
+請選取圖格並在名為[客戶詳細資料頁面](customer-profiles.md#customer-details-page)的專用頁面中查看選取客戶的資料。
 
 > [!div class="mx-imgBorder"] 
 > ![客戶頁面顯示結果圖格](media/customers-page-result-tiles-B2C.png "客戶頁面顯示結果圖格")

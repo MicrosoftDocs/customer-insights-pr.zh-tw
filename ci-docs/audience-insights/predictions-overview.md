@@ -1,19 +1,19 @@
 ---
 title: 支援的預測案例概述
 description: Dynamics 365 Customer Insights 應用程式所涵蓋預測案例和選項。
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228234"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487489"
 ---
 # <a name="predictions-overview"></a>預測概觀
 
@@ -36,6 +36,11 @@ Dynamics 365 Customer Insights 隨附多種選項，可讓您利用 AI 和機器
 - [交易流失](predict-transactional-churn.md)：預測客戶是否在特定時間範圍不會再購買您的產品或服務。
 
 ---
+
+> [!TIP]
+> 我們建議您定期使用更新過的資料來重新整理立即可用模型，以確保它們能準確地支援您的業務使用案例。 當系統擷取新的或更新的資料來源時，會對資料進行專門的重新整理。 但是，模型只會在此案例中重新評分，並繼續使用現有的訓練資料。
+> 
+> 在設定體驗中設定模型重新定型排程，您可以設定 **更新排程**。 模型將重新定型及重新評分此排程，且您可以隨時變更。
 
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learnings 整合

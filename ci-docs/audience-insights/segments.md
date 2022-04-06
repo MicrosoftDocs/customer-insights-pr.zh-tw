@@ -1,7 +1,7 @@
 ---
 title: 對象見解中的客戶細分
 description: 客戶細分概觀及如何建立並管理它們。
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355973"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508556"
 ---
 # <a name="segments-overview"></a>客戶細分概觀
 
@@ -68,7 +68,9 @@ ms.locfileid: "8355973"
 
 ## <a name="refresh-segments"></a>重新整理區段
 
-您可以選取 **區段** 頁面上的 **全部重新整理**，一次重新整理所有區段，也可以在選取一個或多個區段，並從選項中選擇 **重新整理** 時重新整理這些區段。 或者，您也可以在 **管理員** > **系統** > **排程** 設定定期重新整理。
+您可以選取 **區段** 頁面上的 **全部重新整理**，一次重新整理所有區段，也可以在選取一個或多個區段，並從選項中選擇 **重新整理** 時重新整理這些區段。 或者，您也可以在 **管理員** > **系統** > **排程** 設定定期重新整理。 設定定期重新整理時，會套用下列規則：
+- 所有具有 **動態** 或 **展開** 類型的客戶細分，都會在設定的步調自動重新整理。 重新整理完成時，**狀態** 會指示在重新整理該客戶細分是否有任何問題。 **上次重新整理** 時，會顯示上次成功重新整理的時間戳記。 如果發生錯誤，請選取錯誤查看問題的詳細資料。
+- 類型為 **靜態** 的客戶細分將 *不* 會自動重新整理。 **上次重新整理** 顯示上次執行的時間戳記，靜態客戶細分來自手動重新整理。
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231969"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487505"
 ---
 # <a name="export-segments-to-marketo-preview"></a>將客戶細分匯出至 Marketo (預覽版)
 
@@ -63,7 +63,7 @@ ms.locfileid: "8231969"
 
 1. 輸入您的 **[Marketo 清單識別碼](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**。 清單 ID 是純數字值。 例如，如果您的 Marketo 清單 ID 是 ST12345A7，請移除數字前後的字元，然後輸入 `12345`。 
 
-1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 
+1. 在 **資料對應** 區段中，至少選取一個代表客戶電子郵件地址或客戶 Marketo 識別碼的欄位。 
 
 1. 或者，您可以匯出 **名**、**姓**、**市/鎮**、**縣/市** 和 **國家/地區**，以建立更多的個人化電子郵件。 選取 **新增屬性** 對應這些欄位。
 

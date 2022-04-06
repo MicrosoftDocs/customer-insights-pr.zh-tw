@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376406"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523658"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>使用 Azure 監視器在 Dynamics 365 Customer Insights 轉寄記錄 (預覽版)
 
@@ -230,7 +230,7 @@ API 事件和工作流程事件有相同的結構以及不同的細節，請參�
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | .是      | .是  | 有 `WorkflowEvent` 標示的事件為工作流程事件。                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | .是      | .是  | 工作流程執行的識別碼。 工作流程執行中的所有工作流程和工作事件都有著相同的 `workflowJobId`。                                                                                                                                   |
-| `properties.operationType`                   | .是      | .是  | 作業的識別碼，請參閱 [操作類型].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | .是      | .是  | 作業的識別碼，請參閱[操作類型](#operation-types)。                                                                                                                                                                               |
 | `properties.tasksCount`                      | .是      | 無   | 僅工作流程。 工作流程觸發的工作數。                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | .是      | 無   | 選擇性。 僅工作流程事件。 觸發工作流程的[使用者其 Azure Active Directory objectId ](/azure/marketplace/find-tenant-object-id#find-user-object-id)，也請參閱`properties.workflowSubmissionKind`。                                   |
 | `properties.workflowType`                    | .是      | 無   | `full` 或 `incremental` 重新整理。                                                                                                                                                                                                                            |
