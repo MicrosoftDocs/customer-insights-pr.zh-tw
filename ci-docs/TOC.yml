@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: 探索對象見解
           href: audience-insights/home.md
+        - name: 使用標籤及資料行
+          href: audience-insights/work-with-tags-columns.md
         - name: 搭配商務帳戶
           href: audience-insights/work-with-business-accounts.md
     - name: 資料來源

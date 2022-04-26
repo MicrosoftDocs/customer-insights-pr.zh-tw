@@ -1,37 +1,36 @@
 ---
 title: 使用客戶細分建立器頁面建立客戶細分
 description: 建立客戶的區段，以依據各種屬性來群組。
-ms.date: 10/18/2021
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segments
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 6fa6f0738bf7fba94b2fb84a70ea17483aae8dac
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 1a28289ecb740ab6cdfa603b2cd66376e7e8b576
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354545"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529575"
 ---
 # <a name="create-segments"></a>建立客戶細分
 
-對整合客戶實體周圍及相關實體，定義複雜篩選。 每個區段會在處理後建立一組可匯出和採取相應動作的客戶記錄。 區段會在 **區段** 頁面上加以管理。 您可以使用區段 Builder [建立新區段](#create-a-new-segment)，或者從應用程式的其他區域[建立快速區段](#quick-segments)。 
+對整合客戶實體周圍及相關實體，定義複雜篩選。 每個區段會在處理後建立一組可匯出和採取相應動作的客戶記錄。 區段會在 **區段** 頁面上加以管理。 您可以使用區段 Builder [建立新區段](#create-a-new-segment)，或者從應用程式的其他區域[建立快速區段](#quick-segments)。
 
 > [!TIP]
-> - 快速區段只在 **個別客戶** 的環境中支援。    
-> - 以 **個別客戶** 為主的區段自動包括區段成員可用的連絡人資訊。 在 **商務帳戶** 環境中，區段以帳戶 (公司或子公司) 為主。 若要將連絡人資訊納入區段，請使用區段 Builder 的 **專案屬性** 功能。
->    - 請確保連絡人資料來源的[語義可對應 ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) 實體。
+> - 快速區段只在 **個別客戶** 的環境中支援。
+> - 以 **個別客戶** 為主的區段自動包括區段成員可用的連絡人資訊。 在 **商務帳戶** 環境中，區段以帳戶 (公司或子公司) 為主。 若要將連絡人資訊納入區段，請使用區段 Builder 的 **專案屬性** 功能。 請確保連絡人資料來源的[語義可對應 ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) 實體。
 
 ## <a name="segment-builder"></a>客戶細分建立器
 
-下圖顯示了客戶細分建立器的各個外觀。 這會顯示一個客戶細分，可以產生一個客戶團體。 客戶在特定時間範圍訂購貨物並收集獎勵積分或花費特定金額。 
+下圖顯示了客戶細分建立器的各個外觀。 這會顯示一個客戶細分，可以產生一個客戶團體。 客戶在特定時間範圍訂購貨物並收集獎勵積分或花費特定金額。
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="客戶細分建立器的元素。" lightbox="media/segment-builder-overview.png":::
 
@@ -65,11 +64,11 @@ ms.locfileid: "8354545"
 
 1. 您可以在區段 Builder 頁面上定義或撰寫規則。 規則包含定義一組客戶的一個或多個條件。
 
-1. 在 **Rule1** 區段中，選取您要用來篩選使客戶的實體屬性。 有兩種方式可選擇屬性： 
+1. 在 **Rule1** 區段中，選取您要用來篩選客戶的實體屬性。 有兩種方式可選擇屬性：
    - 在 **新增至規則** 窗格中檢閱可用實體和屬性的清單，並選取屬性旁邊的 **+** 圖示。 選擇是否要將屬性新增至現有規則，或使用它來建立新規則。
    - 在規則區段中輸入屬性的名稱，查看比對建議。
 
-1. 選擇運算子來指定條件的比對值。 屬性的值可以是四種資料類型之一：數字、字串、日期或布林值。 視屬性的資料類型而定，可以使用不同的運算子來指定條件。 含有商務帳戶的區段方面，可使用兩個特殊運算子包括擷取帳戶之間的潛在階層。 請使用運算子的 *子系* 和 *父代* 包括相關帳戶。 
+1. 選擇運算子來指定條件的比對值。 屬性的值可以是四種資料類型之一：數字、字串、日期或布林值。 視屬性的資料類型而定，可以使用不同的運算子來指定條件。 含有商務帳戶的區段方面，可使用兩個特殊運算子包括擷取帳戶之間的潛在階層。 請使用運算子的 *子系* 和 *父代* 包括相關帳戶。
 
 1. 選取 **新增條件**，將更多條件新增至規則。 若要在現在的規則底下建立規則，請選取 **新增子規則**。
 
@@ -77,7 +76,7 @@ ms.locfileid: "8354545"
 
    :::image type="content" source="media/relationship-path.png" alt-text="根據整合客戶實體對應的實體建立規則時，可能的關聯路徑。":::
 
-   例如，螢幕擷取畫面中的 *eCommerce_eCommercePurchases* 實體具有四個選項來對應 *Customer* 實體： 
+   例如，螢幕擷取畫面中的 *eCommerce_eCommercePurchases* 實體具有四個選項來對應 *Customer* 實體：
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Customer
    - eCommerce_eCommercePurchases > Customer
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Customer
@@ -101,11 +100,11 @@ ms.locfileid: "8354545"
       - **交集** 會重疊兩個群組。 唯有兩個群組 *共用* 的資料才會一直留在統一群組不變。
       - **差集** 會結合兩個群組。 只會保存與 B 群組資料 *不共用* 的 A 群組資料。
 
-1. 根據預設，客戶細分會生成輸出實體，其中包含符合已定義的篩選的所有客戶個人資料屬性。 如果客戶細分依據其他實體而非 *客戶* 實體，您可以將這些實體中的多個屬性新增至輸出實體。 選取 **專案屬性**，以選擇附加至輸出實體的屬性。 
+1. 根據預設，客戶細分會生成輸出實體，其中包含符合已定義的篩選的所有客戶個人資料屬性。 如果客戶細分依據其他實體而非 *客戶* 實體，您可以將這些實體中的多個屬性新增至輸出實體。 選取 **專案屬性**，以選擇附加至輸出實體的屬性。
 
    > [!IMPORTANT]
    > 以商務帳戶為主的區段方面，從 *ContactProfile* 實體的個別帳戶所屬一名或多名連絡人必須納入區段內，才能允許啟動區段或匯出區段到需要連絡人資訊的目的地。 如需更多關於 *ContactProfile* 實體的資訊，請參閱[語義對應](semantic-mappings.md)。
-   > 根據已預定連絡人屬性的商務帳戶區段輸出範例可能酷似： 
+   > 根據已預定連絡人屬性的商務帳戶區段輸出範例可能酷似：
    >
    > |識別碼  |客戶名稱  |收益  |連絡人名稱  | 連絡人角色|
    > |---------|---------|---------|---------|---|
@@ -117,14 +116,16 @@ ms.locfileid: "8354545"
 
    > [!NOTE]
    > - **專案屬性** 只搭配和客戶實體有一對多關聯性的實體。 例如，一個客戶可以有多個訂閱。
-   > - 如果您想要預測的屬性距離 *客戶* 實體 (如關聯定義) 有一個以上的中繼段，應在每個組建的區段查詢規則中使用該屬性。 
-   > - 如果您想要預測的屬性距離 *客戶* 實體只有一個中繼段，則每個組建的區段查詢規則中毋須存在該屬性。 
+   > - 如果您想要預測的屬性距離 *客戶* 實體 (如關聯定義) 有一個以上的中繼段，應在每個組建的區段查詢規則中使用該屬性。
+   > - 如果您想要預測的屬性距離 *客戶* 實體只有一個中繼段，則每個組建的區段查詢規則中毋須存在該屬性。
    > - 使用集合運算子時，**預測的屬性** 會被做為因素考慮。
 
-1. 在儲存並執行該客戶細分之前，請選取客戶細分名稱旁邊的 **編輯詳細資料**。 為您的區段提供名稱，並更新對該區段建議的 **輸出實體名稱**。 您也可以在客戶細分中新增描述。
+1. 選取無標題客戶細分旁邊的 **編輯詳細資料**。 為您的區段提供名稱，並更新對該區段建議的 **輸出實體名稱**。 或者，將說明及[標籤](work-with-tags-columns.md#manage-tags)新增至客戶細分。
+
+   :::image type="content" source="media/segments_edit_details.png" alt-text="編輯詳細資料對話方塊。":::
 
 1. 請選取 **執行** 儲存區段、啟動區段，及根據所有規則和條件開始處理您的區段。 否則它將儲存為非使用中的區段。
-   
+
 1. 選取 **返回區段** 以返回 **區段** 頁面。
 
 1. 預設情況下，區段會以動態形式建立，形成動態區段。 這意謂著區段會在系統重新整理期間重新整理。 若要 [停止自動重新整理](segments.md#manage-existing-segments)，請選取區段並選擇 **製作靜態** 選項。 靜態區段可隨時[以手動方式重新整理](segments.md#refresh-segments)。
@@ -132,7 +133,7 @@ ms.locfileid: "8354545"
 > [!TIP]
 > - 在條件中設定此運算子時，客戶細分建立器無法從實體建議有效值。 您可以移至 **資料** > **實體** 並下載實體資料，以查看可用的值。
 > - 根據日期的條件，可讓您在固定日期與浮動日期範圍之間切換。
-> - 如果您有多重規則用於區段，您正在編輯的規則旁邊會有一條垂直的藍線。 
+> - 如果您有多重規則用於區段，您正在編輯的規則旁邊會有一條垂直的藍線。
 > - 您可以將規則和條件移至客戶細分定義中的其他位置。 選取規則或條件旁邊的 [...]，並選擇該規則或條件的移動方式。
 > - 指令列中的 **復原** 和 **重做** 控制項會讓您復原變更。
 
@@ -153,10 +154,9 @@ ms.locfileid: "8354545"
 
 4. 系統將為您提供 **估計的區段大小**。 您可以選擇是否要產生您定義的區段，或先重新檢視它以取得不同的區段大小。
 
-    > [!div class="mx-imgBorder"]
-    > ![快速客戶細分的名稱與估計。](media/quick-segment-name.png "快速區段的名稱與估計")
+   :::image type="content" source="media/quick-segment-name.png" alt-text="快速客戶細分的名稱與估計。":::
 
-5. 提供區段的 **名稱**。 或者，提供 **顯示名稱**。
+5. 提供客戶細分的 **輸出實體名稱** 及 **名稱**。 或者，新增[標籤](work-with-tags-columns.md#manage-tags)。
 
 6. 選取 **儲存** 以建立您的區段。
 

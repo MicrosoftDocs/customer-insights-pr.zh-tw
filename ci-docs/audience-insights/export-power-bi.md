@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225505"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552046"
 ---
 # <a name="connector-for-power-bi-preview"></a>適用於 Power BI 的連接器 (預覽)
 
@@ -72,6 +72,6 @@ Power BI 的 Customer Insights 連接器是設計來處理包含多達 1 百萬�
 
 載入實體中包含如 MM/DD/YYYY 日期格式的欄位時，可能會發生錯誤，因為與地區設定格式不相符。 當您的 Power BI Desktop 檔案設為其他地區而非「英文 (美國)」的設定時，就會發生此不相符現象，因為對象見解中的日期欄位會儲存為 US 格式。
 
-Power BI Desktop 檔案有單一地區設定，在檢索資料時套用。 要讓這些日期欄位可以正確解譯，請設定.BPI 檔案的地區設定為英文 (美國)。 [了解如何變更 Power BI Desktop 檔案的地區設定](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop)。
+Power BI Desktop 檔案有單一地區設定，在檢索資料時套用。 要讓這些日期欄位可以正確解譯，請設定.BPI 檔案的地區設定為英文 (美國)。 [了解如何變更 Power BI Desktop 檔案的地區設定](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop)。
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

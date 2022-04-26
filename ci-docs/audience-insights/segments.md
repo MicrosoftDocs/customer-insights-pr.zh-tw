@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508556"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529529"
 ---
 # <a name="segments-overview"></a>客戶細分概觀
 
@@ -47,24 +47,30 @@ ms.locfileid: "8508556"
 
 ## <a name="manage-existing-segments"></a>管理現有的區段
 
-移至 **客戶細分** 頁面，以查看所有已儲存的客戶細分並加以管理。
+移至 **客戶細分** 頁面，查看所有已儲存的客戶細分並加以管理。
 
 每個區段都是由一個包含區段其他相關資訊的列所表示。
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="選定的客戶細分，有選項下拉式清單和可用選項。":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="選定的客戶細分，有選項下拉式清單和可用選項。" lightbox="media/segments-selected-segment.png":::
 
 選取客戶細分時，可使用下列動作：
 
 - **檢視** 區段詳細資料，包括成員計數趨勢和區段成員的預覽。
+- 將成員清單 **下載** 為 .CSV 檔案。
 - **編輯** 區段以變更其屬性。
 - 為客戶細分 **建立複本**。 您可以選擇立刻編輯屬性，或只是儲存複本。
 - **重新整理** 區段以包括最新的資料。
-- **啟用** 或 **停用** 區段。 客戶細分有兩種可能狀態：使用中或非使用中。 編輯客戶細分時，將會用到這些狀態。 如果是非使用中客戶細分，雖有客戶細分定義存在，但尚未包含任何客戶。 啟用客戶細分時，其狀態會從 [非使用中] 變更為 [使用中]，並且開始尋找符合區段定義的客戶。 如果設定了 [已排定重新整理](system.md#schedule-tab)，則非使用中客戶細分會將 **狀態** 列示為 **已跳過**，表示甚至未嘗試重新整理。 啟用非使用中客戶細分時，此客戶細分會重新整理，並納入已排定重新整理。
+- **啟用** 或 **停用** 區段。 如果是非使用中客戶細分，雖有客戶細分定義存在，但尚未包含任何客戶。 啟用的的客戶細分會尋找符合客戶細分定義的客戶。 如果設定了 [已排定重新整理](system.md#schedule-tab)，則非使用中客戶細分會將 **狀態** 列示為 **已跳過**，表示甚至未嘗試重新整理。 啟用非使用中客戶細分時，此客戶細分會重新整理，並納入已排定重新整理。
   或者，也可以使用 **啟用/停用** 下拉式功能表中的 **稍後再排程** 功能，指定未來啟用和停用特定客戶細分的日期和時間。
+- 從客戶細分中 **[尋找類似的客戶](find-similar-customer-segments.md)**。
 - **重新命名** 區段。
+- **標籤** 可在客戶細分[管理標籤](work-with-tags-columns.md#manage-tags)。
 - 將成員清單 **下載** 為 .CSV 檔案。
 - **管理匯出**，以查看匯出相關的客戶細分並加以管理。 [深入了解匯出。](export-destinations.md)
 - **刪除** 區段。
+- **欄**，可[自訂顯示的欄](work-with-tags-columns.md#customize-columns)。
+- **篩選** 可[篩選標籤](work-with-tags-columns.md#filter-on-tags)。
+- **搜尋名稱**，依據客戶細分名稱進行搜尋。
 
 ## <a name="refresh-segments"></a>重新整理區段
 

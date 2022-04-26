@@ -1,23 +1,23 @@
 ---
 title: 使用 AI 尋找類似客戶 (含影片)
 description: 使用人工智慧尋找類似的客戶細分。
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355235"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561515"
 ---
 # <a name="similar-customers-preview"></a>類似的客戶 (預覽)
 
@@ -36,6 +36,8 @@ ms.locfileid: "8355235"
 
 1. 檢閱建議的新客戶細分名稱，並視需要加以變更。
 
+1. 或者，將[標籤](work-with-tags-columns.md#manage-tags)新增至新的客戶細分。
+
 1. 檢閱定義新客戶細分的欄位。 這些欄位定義系統嘗試尋找與來源客戶細分類似之客戶的根據。 系統預設會選取建議的欄位。
   可能會大幅降低模型效能的欄位會自動排除：
   
@@ -44,9 +46,9 @@ ms.locfileid: "8355235"
 
 1. 選擇要包含在新客戶細分中的是 **所有客戶** 還是僅限 **特定現有客戶細分** 中的客戶。
 
-1. 選取 **排除源客戶細分中的所有人** 核取方塊，以排除來源客戶細分中的客戶 。
-
 1. 根據預設，系統建議您在輸出中只包含目標對象大小的 20%。 視需要編輯此閾值。 增加閾值會降低精確度。
+
+1. 選取 **包括來源客戶細分中的成員以及類似屬性的客戶** 核取方塊，以包括來源客戶細分的客戶
 
 1. 選取頁面底部的 **執行** 開始分析資料集的二元分類工作 (機器學習方法)。
 
@@ -67,7 +69,7 @@ ms.locfileid: "8355235"
 
 若要重新整理類似的客戶細分，請在 **客戶細分** 頁面上選取該客戶細分，然後選取動作列中的 **重新整理**。
 
-編輯類似的客戶細分會重新處理您的資料。 先前建立的客戶細分會以重新整理的資料進行更新。    
+編輯類似的客戶細分會重新處理您的資料。 先前建立的客戶細分會以重新整理的資料進行更新。
 若要編輯類似的客戶細分，請在 **客戶細分** 頁面上選取該客戶細分，然後選取動作列中的 **編輯**。 套用您的變更，並選取 **執行** 開始進行處理。
 
 ## <a name="delete-a-similar-segment"></a>刪除類似的客戶細分
@@ -84,6 +86,5 @@ ms.locfileid: "8355235"
 - 介於 0.85 到 1 之間的相似性分數，是系統分類為 *非常類似* 的客戶
 
 相似性分數低於 0.4 的客戶不會包含在模型輸出中。 系統不會將這些客戶視為與來源客戶細分足夠類似。
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

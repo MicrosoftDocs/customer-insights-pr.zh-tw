@@ -1,22 +1,22 @@
 ---
 title: 從範本建立量值
 description: 以一般使用案例的範本定義量值。
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359901"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529391"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>使用範本建立量值
 
@@ -51,7 +51,9 @@ ms.locfileid: "8359901"
 
 1. 查看必要的資料，若有所有資料都在妥當位置，接著選取 **開始使用**。
 
-1. 在 **編輯名稱** 窗格中，設定量值和輸出實體的名稱。 
+1. 選取量值名稱旁邊的 **編輯詳細資料**。 提供量值的名稱。 或者，將[標籤](work-with-tags-columns.md#manage-tags)新增至量值。
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="編輯詳細資料對話方塊。":::
 
 1. 選取 **完成**。
 

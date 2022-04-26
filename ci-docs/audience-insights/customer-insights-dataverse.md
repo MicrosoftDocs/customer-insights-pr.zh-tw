@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse 中的 Customer Insights 資料
 description: 在 Microsoft Dataverse 中以資料表使用 Customer Insights 實體。
-ms.date: 11/25/2021
+ms.date: 04/05/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: bbbbf2a7f5edb81ee75f6e33988cd4721134b6e7
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355419"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547616"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>在 Microsoft Dataverse 中使用 Customer Insights 資料
 
-Customer Insights 提供可讓輸出實體在 [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md) 中使用的選項。 這種整合可透過少量/無程式碼方法，實現輕鬆的資料共用和自訂開發。 輸出實體將在 Dataverse 中等同資料表使用。 這些資料表可藉由 Power Apps 讓如[透過 Power Automate 自動化工作流程](/power-automate/getting-started)、[模型導向應用程式](/powerapps/maker/model-driven-apps/)和[畫布應用程式](/powerapps/maker/canvas-apps/)的案例啟用。 您可以把資料用在任何基於 Dataverse 資料表建立的其他應用程式。 目前的實作主要支援查詢，可用指定的客戶識別碼在對象見解實體中取得資料。
+Customer Insights 提供可讓輸出實體在 [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) 中使用的選項。 這種整合可透過少量/無程式碼方法，實現輕鬆的資料共用和自訂開發。 [輸出實體](#output-entities)可以作為 Dataverse 環境中的資料表。 您可以以 Dataverse 資料表，使用其他任何應用程式的資料。 這些資料表能實現多種案例，例如：以 Power Automate 自動化工作流程，或以 Power Apps 建立應用程式的。 目前的實作主要支援查詢，以給定客戶識別碼從適當的 Customer Insights 實體中取得資料。
 
 ## <a name="attach-a-dataverse-environment-to-customer-insights"></a>將 Dataverse 環境附加至 Customer Insights
 
-**使用現有 Dataverse 環境的組織**
+**現有組織**
 
-已使用 Dataverse 的組織在系統管理員設定對象見解時，可以[使用現有的 Dataverse 環境之一](create-environment.md)。 藉由提供連接 Dataverse 環境的 URL，將環境附加至新的對象見解環境。 要確保最佳的效能，Customer Insights 和 Dataverse 環境必須託管在相同的地區。
+系統管理員在建立 Customer Insights 環境時，可以把 Customer Insights 設定為[使用現有 Dataverse 環境](create-environment.md)。 藉由提供連接 Dataverse 環境的 URL，將環境附加至新的對象見解環境。 Customer Insights 和 Dataverse 環境必須位於相同的地區。 
+
+如果您不想要使用現有 Dataverse 的環境，系統會為您的租用戶中的 Customer Insights 資料建立新的環境。 
+
+> [!NOTE]
+> 如果您的組織已經在其租用戶中使用 Dataverse，請謹記 [Dataverse 環境的建立由系統管理員控制](/power-platform/admin/control-environment-creation)。例如，如果您正在您的組織帳戶中設定新的對象見解環境，而且系統管理員已禁止每個人 (除系統管理員) 建立 Dataverse 試用環境，您就無法建立新的試用環境。
+> 
+> 在 Customer Insights 中所建立的 Dataverse 試用環境有 3 GB 的儲存空間，不會計入該租用戶的整體容量權利中。 付費訂閱取得 Dataverse 的 15 GB 資料庫權利，並有 20 GB 的檔案儲存。
 
 **新增組織**
 
-如果您在設定 Customer Insights 時建立新組織，則會自動取得新的 Dataverse 環境。
-
-> [!NOTE]
-> 如果您的組織已經在其租用戶中使用 Dataverse，請謹記 [Dataverse 環境的建立由系統管理員控制](/power-platform/admin/control-environment-creation.md)。例如，如果您正在您的組織帳戶中設定新的對象見解環境，而且系統管理員已禁止每個人 (除系統管理員) 建立 Dataverse 試用環境，您就無法建立新的試用環境。
-> 
-> 在 Customer Insights 中所建立的 Dataverse 試用環境有 3 GB 的儲存空間，不會計入該租用戶的整體容量權利中。 付費訂閱取得 Dataverse 的 15 GB 資料庫權利，並有 20 GB 的檔案儲存。
+如果您在設定 Customer Insights 時建立新組織，系統就會在您的組織中自動建立新 Dataverse 的環境。
 
 ## <a name="output-entities"></a>輸出實體
 
@@ -129,11 +131,11 @@ AlternateKey 資料表包含參與整合程序的實體索引鍵。
 
 此表格包含客戶設定檔的客戶細分成員資格資訊。
 
-| Column        | 類型​ | Description                        |
+| Column        | 類型​ | Description                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | 字串       | 客戶個人資料識別碼        |
-| SegmentProvider      | 字串       | 發佈客戶細分的應用程式。 預設：對象見解         |
-| SegmentMembershipType | 字串       | 此客戶細分成員資格記錄的客戶類型。 支援多個類型，例如，客戶、連絡人或帳戶。 預設：客戶  |
-| 客戶細分       | JSON 字串  | 客戶設定檔所屬的唯一客戶細分清單      |
-| msdynci_identifier  | 字串   | 客戶細分成員資格記錄的唯一識別碼。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| CustomerId        | 字串       | 客戶個人資料識別碼        |
+| SegmentProvider      | 字串       | 發佈客戶細分的應用程式。 預設：對象見解         |
+| SegmentMembershipType | 字串       | 此客戶細分成員資格記錄的客戶類型。 支援多種類型，例如，客戶、連絡人或帳戶。 預設：客戶  |
+| 客戶細分       | JSON 字串  | 為客戶個人資料所屬，唯一客戶細分的清單      |
+| msdynci_identifier  | 字串   | 客戶細分成員資格記錄的唯一識別碼。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | 從 `msdynci_identifier` 產生的決定性 GUID          |
