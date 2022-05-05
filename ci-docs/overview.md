@@ -1,39 +1,41 @@
 ---
-title: 產品概觀
+title: Dynamics 365 Customer Insights 產品概觀
 author: m-hartmann
-description: 取得 Dynamics 365 Customer Insights 總覽及其能力。
+description: 取得 Dynamics 365 Customer Insights 和其主要功能的概覽。
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560423"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641890"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 產品總覽
 
- [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) 是 Microsoft 客戶資料平台 (CDP) 的一部分，協助提供個人化的客戶體驗。 平台的功能讓您能深入解析誰是你的客戶，以及他們與平台互動的方式。 從多個資源統整客戶資料取得單一的客戶檢視表。
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/)是 Microsoft 的客戶資料平台 (CDP)，協助提供個人化的客戶體驗。 應用程式提供可整體檢視和無與倫比的快速見解。 藉由將客戶資料整合營運及 IoT 資料來獲得最全方位的客戶檢視。 使用第一方和協力廠商資料來源擴充客戶個人資料。 
 
-[對象見解](audience-insights/overview.md)可協助將您的企業轉變成以客戶為中心的組織。 行銷、銷售和服務的專業人員在個人化體驗時，都有需要的見解。 連接交易、行為和觀察來源的資料，建立出 360 度的客戶檢視表。 利用專門提供可採取動作的 CDP 更快查看結果。 
-
-過去在 Customer Insights 中預覽的[參與見解](engagement-insights/overview.md)，此功能致力於收集 web 和 mobile 事件來取得更多見解。 此預覽已於 2022 年 2 月 15 日 結束。
+Customer Insights 大規模增強行銷、銷售和服務專業人員，提供客製化 1:1 互動，協助您將公司轉變為以客戶為中心的組織。 與 Microsoft 和協力廠商應用程式的全套集成可用於啟動即時見解，觸發有意義的行動。
  
-## <a name="choose-a-capability"></a>選擇能力
+連接交易、行為和人口統計的資料來源，建立 360 度的客戶檢視表。 由預建的 AI 模型推衍立即可用的見解，或使用無限尺度的進階分析解決方案，快速建立、測試及部署自訂 AI/ML 模型。
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="讓您瀏覽對象見解或參與度見解的 Customer Insights 頁面。":::
-
-選擇能力
-
-1. 在導覽窗格中，選取 **所有應用程式** 以打開 **選取您的焦點** 視窗。
-1. 選取 **立即移至**，以瀏覽您選擇的功能。
+運用建立在 Microsoft Azure 上的自助式、企業級 CDP ，維持對客戶資料的完整控制權，以確保有最高層級的資料控管與合規性。 運用內建隱私權、安全性和公司治理以及同意的管理工具，支援一般資料保護規定 (GDPR) 和其他法律要求和產業標準。
 
 ## <a name="pricing-and-licensing"></a>定價與授權
+Customer Insights 授權給每個租用戶，其中包括企業對客戶 (B2C) 和企業對企業 (B2B) 功能。 您可以購買附加元件授權的額外容量，以增加個人資料和客戶的數量。
 
-Customer Insights 是每個租用戶授權，包括多種功能。 您可以購買額外的容量和授權來增加預設配額。 
 - [定價概觀](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - 容量和權利：[Dynamics 365 授權指南](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Microsoft 大量授權網站](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>試試 Customer Insights 並開始使用
+
+立即開始使用[免費的 Customer Insights 試用](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d)，以您的客戶資料測試應用程式。 [了解如何快速存取並探索許多應用程式的主要功能](trial-signup.md)。 
+
+瀏覽[特色學習資源](https://dynamics.microsoft.com/ai/customer-insights/resources/)，包括分析報表、隨選網路研討會和客戶案例。
+
+透過我們的[入門指南](get-started.md)，了解如何深入瞭解您的使用者。
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

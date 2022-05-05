@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
-ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "8455988"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641844"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>購買 Customer Insights 之後可開始使用
 
@@ -34,9 +34,8 @@ Customer Insights 是每個租用戶授權，包括多種功能。 您可以購�
 
 1. 請前往 [Customer Insights 應用程式 URL](https://home.ci.ai.dynamics.com)。
 1. 使用您的工作或學校帳戶登入。 
-1. 同意服務條款並為您的 Customer Insights 執行個體設定內容偏好。
-1. 請先選擇轉入選取功能的開始頁面前，要聚焦的功能。
+1. 同意服務條款並為您的 Customer Insights 環境設定內容偏好。
 
 ## <a name="create-your-own-environment"></a>建立自己的環境
 
-首次登入後，您將看到含有範例資料的環境。 您可以使用那項資料探索各項功能，並且熟悉應用程式。 若要使用您自己的資料，則必須[建立環境](/dynamics365/customer-insights/audience-insights/create-environment)。
+首次登入後，您將看到含有範例資料的環境。 您可以使用那項資料探索各項功能，並且熟悉應用程式。 若要使用您自己的資料，則必須[建立環境](create-environment.md)。

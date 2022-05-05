@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229485"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641798"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights 試用版常見問題
 
@@ -62,13 +62,13 @@ ms.locfileid: "8229485"
 
 一般而言，當您升級至付費版本的 Customer Insights 時，我們建議使用您自己的資料開始重頭開始。 
 
-或者如果您只使用對象見解且購買 Customer Insights，您可以從試用環境複製您的資料。 您必須是 Customer Insights 試用版的系統管理員和 Microsoft 365 的租用戶的全域系統管理員，或您組織中的 Dynamics 365 系統管理員，才能將設定從試用環境遷移至付費環境。 
+或者，如果您只使用 Customer Insights，在購買 Customer Insights 時，您可以從試用環境複製您的資料。 您必須是 Customer Insights 試用版的系統管理員和 Microsoft 365 的租用戶的全域系統管理員，或您組織中的 Dynamics 365 系統管理員，才能將設定從試用環境遷移至付費環境。 
 
-第一次登入付費 Customer Insights 執行個體之後，系統會要求您建立新的環境。 在此過程中，您可以選擇從現有的環境複製設定，並遷移大部分的設定。 如果您有上述權限，則試用環境將會顯示在此清單中。 如需詳細資訊，請參閱[複製環境設定](audience-insights/manage-environments.md#copy-the-environment-configuration)。
+第一次登入付費 Customer Insights 執行個體之後，系統會要求您建立新的環境。 在此過程中，您可以選擇從現有的環境複製設定，並遷移大部分的設定。 如果您有上述權限，則試用環境將會顯示在此清單中。 如需詳細資訊，請參閱[複製環境設定](manage-environments.md#copy-the-environment-configuration)。
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>試用版限制和配額是什麼？
 
-- 您無法使用自己的 Azure 資料湖儲存體帳戶在試用對象見解期間儲存輸出資料。 但是，您可以從 Data Lake storage 帳戶擷取資料。
+- 您無法使用 Azure Azure Data Lake Storage 帳戶在 Customer Insights 試用期間儲存輸出資料。 但是，您可以從 Data Lake storage 帳戶擷取資料。
 - 開始使用 Customer Insights 試用版時，您最多可以儲存 3 GB 的資料到自動佈建的 Dataverse 環境。
 
 ## <a name="customer-insights-specific-questions"></a>Customer Insights 特定問題
