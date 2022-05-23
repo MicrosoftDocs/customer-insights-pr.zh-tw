@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645721"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755344"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>使用 Azure 地圖服務擴充客戶個人資料 (預覽版)
 
@@ -51,7 +51,7 @@ Azure 地圖服務提供以位置為中心的資料和服務，利用內建位�
 
 1. 請選取 **下一步**，完成欄位對應。
 
-1. 評估是否要修改 **進階設定**。 提供這些功能是為了提供最大的彈性，以處理進階使用案例，但是預設值在大多數案例中是足夠的：
+1. 評估是否要修改 **進階設定**。 這些設定是為了提供處理進階使用案例時的最大彈性，但是預設值在大多數案例中將會夠用：
    - **地址類型**：預設行為是擴充會回傳最相符地址，即使是不完整的。 若要只取得完整的地址 &mdash;例如，包含房屋號碼的地址 &mdash;請清除 **點地址** 外的所有的核取方塊。 
    - **語言**：根據預設，會確定地址位於的地區，以該地區語言來傳回地址。 若要套用標準地址語言，請從下拉式功能表中選取語言。 例如，選取 **英語** 時，會傳回 **Copenhagen, Denmark** 而非 **København, Danmark**。
 
@@ -89,7 +89,7 @@ Azure 地圖服務提供以位置為中心的資料和服務，利用內建位�
 
 ## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
 
-當您啟用 Dynamics 365 Customer Insights 將資料傳輸到 Azure 地圖服務時，您允許在 Dynamics 365 Customer Insights 合規性邊界之外傳輸資料，包括潛在的敏感性資料 (例如個人資料)。 Microsoft 將會依您的指示傳送這類資料，但是您必須負責確保 Azure 地圖服務符合您可能會承擔的任何隱私權或資訊安全義務。 如需詳細資訊，請移至 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
+當您啟用 Dynamics 365 Customer Insights 將資料傳輸到 Azure 地圖服務時，您允許在 Dynamics 365 Customer Insights 合規性邊界之外傳輸資料，包括潛在的敏感性資料 (例如個人資料)。 Microsoft 將會在您指示時傳送這類資料，但是您必須負責確保 Azure Maps 符合您可能會承擔的任何隱私權或資訊安全義務。 如需詳細資訊，請移至 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
 您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此富集作用，以便不再繼續使用此功能。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

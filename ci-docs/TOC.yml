@@ -66,12 +66,18 @@
   items:
     - name: 資料整合概觀
       href: data-unification.md
-    - name: 對應實體和屬性
+    - name: 選取來源欄位
       href: map-entities.md
-    - name: 比對實體
+    - name: 移除重複資料記錄
+      href: remove-duplicates.md
+    - name: 比對條件
       href: match-entities.md
-    - name: 合併實體
+    - name: 整合客戶欄位
       href: merge-entities.md
+    - name: 審查資料整合
+      href: review-unification.md
+    - name: 更新整合設定
+      href: data-unification-update.md
 - name: 資料擴充
   items:
     - name: 擴充客戶設定檔
@@ -282,6 +288,8 @@
       href: apis.md
     - name: API 參考
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: OData 範例查詢
+      href: odata-examples.md
 - name: 同意管理 (預覽版)
   items:
     - name: 求助中樞

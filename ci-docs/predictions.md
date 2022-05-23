@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645879"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740709"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>透過預測完成部分資料 (已取代)
 
@@ -37,7 +37,7 @@ ms.locfileid: "8645879"
 
 1. 您的組織擁有[在 Microsoft Dataverse 中設定](/ai-builder/build-model#prerequisites)的執行個體，而且與 Customer Insights 位於相同的組織中。
 
-2. 您的對象見解環境會附加至您的 Dataverse 執行個體。
+2. 您的 Customer Insights 環境已附加至您的 Dataverse 執行個體。
 
 如需詳細資訊，請參閱[建立新環境](create-environment.md)。
 

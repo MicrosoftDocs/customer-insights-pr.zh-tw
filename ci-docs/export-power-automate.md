@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645904"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741169"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate 連接器 (預覽)
 
@@ -25,14 +25,14 @@ ms.locfileid: "8645904"
 
 ## <a name="power-automate-triggers"></a>Power Automate 觸發程序
 
-使用觸發程序來建立雲端流程並自動化重複工作，例如通知或更多進階動作。 
+使用觸發程序來建立雲端流程並自動化重複工作，例如通知或更多進階動作。
 
-- 當資料來源重新整理失敗時觸發。 
+- 當資料來源重新整理失敗時觸發。
 - 當資料來源重新整理成功時觸發。
 - 在區段上越過閾值時觸發。 觸發程序受限在需要超過閾值以上。
 - 在業務量值上越過閾值時觸發。 此處僅顯示缺少維度的業務量值。 觸發程序受限在需要超過閾值以上。
 - 完成 (資料來源、區段、量值，...) 的完整重新整理時的觸發程序。
-- 在完成統整程序 (對應、比對、合併) 機重新整理時觸發。
+- 完成整合程序的重新整理時的觸發器。
 
 [在 Power Automate 中設定您的觸發程序。](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

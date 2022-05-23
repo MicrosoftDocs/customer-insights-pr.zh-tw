@@ -1,19 +1,19 @@
 ---
 title: 交易性流失預測範例指南
 description: 使用此範例指南試用交易性流失創意預測模型。
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645919"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741309"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>交易性流失預測範例指南
 
@@ -86,69 +86,13 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
 1. 儲存資料來源。
 
-
 ## <a name="task-2---data-unification"></a>任務 2 - 資料統整
 
-內嵌資料後，我們現在就會開始 **對應、比對、合併** 流程，以建立統整的客戶設定檔。 如需更多資訊，請見 [資料統整](data-unification.md)。
-
-### <a name="map"></a>對應
-
-1. 內嵌資料後，將電子商務的聯絡人與忠誠度資料對應到常用資料類型。 請前往 **資料** > **統整** > **對應**。
-
-1. 選取代表客戶設定檔的實體 – **eCommerceContacts** 和 **loyCustomers**。 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="統整電子商務與忠誠度資料來源。":::
-
-1. 選取 **ContactId** 做為 **eCommerceContacts** 主鍵，而 **LoyaltyID** 做為 **loyCustomers** 主鍵。
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="統整 LoyaltyId 為主鍵。":::
-
-### <a name="match"></a>比對
-
-1. 請前往 **比對** 索引標籤並選取 **設定訂單**。
-
-1. 在 **主要** 下拉式清單中，選擇 **eCommerceContacts : eCommerce** 作為主要來源，並包含所有記錄。
-
-1. 在 **實體 2** 下拉清單中，選擇 **loyCustomers : LoyaltyScheme** 並包含所有記錄。
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="統整比對電子商務與忠誠度。":::
-
-1. 選取 **建立新規則**
-
-1. 使用 FullName 新增您的第一個條件。
-
-   * 在 eCommerceContacts ，請在下拉式清單中選擇 **全名**。
-   * 在 loyCustomers，請在下拉式清單中選擇 **全名**。
-   * 選取 **正規化** 下拉式清單並選擇 **類型 (電話、名稱、地址、...)**。
-   * 設定 **精密等級**：**基本** 與 **值**：**高**。
-
-1. 輸入新規則名稱 **FullName、電子郵件**。
-
-   * 選取 **新增條件** 來新增電子郵件地址的第二個條件
-   * 在 eCommerceContacts 實體，請在下拉式清單中選擇 **電子郵件**。
-   * 在loyCustomers 實體，請在下拉式清單中選擇 **電子郵件**。 
-   * 保留正規化空白。 
-   * 設定 **精密等級**：**基本** 與 **值**：**高**。
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="統整比對規則的名稱和電子郵件。":::
-
-7. 選取 **儲存** 和 **執行**。
-
-### <a name="merge"></a>執行合併​​
-
-1. 請前往 **合併** 索引標籤。
-
-1. 在 **loyCustomers** 實體的 **ContactId** 上，將顯示名稱變更為 **ContactIdLOYALTY**，以便將它與其他內嵌的識別碼區分開來。
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="從忠誠度識別碼重新命名 contactid。":::
-
-1. 選取 **儲存** 並 **執行** 以便開始合併流程。
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>任務 3 - 組態交易流失預測
 
-現在我們可以使用統整的客戶設定檔執行訂閱流失預測。 如需詳細步驟，請參閱[訂閱流失預測](predict-subscription-churn.md)的文章。 
+透過整合的客戶個人資料，現在可以執行交易流失預測。 如需詳細步驟，請參閱[交易流失預測](predict-transactional-churn.md)的文章。 
 
 1. 前往 **智慧** > **發現** 並選取使用 **客戶流失模型**。
 
@@ -180,7 +124,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
 ## <a name="task-4---review-model-results-and-explanations"></a>任務 4 - 評論模型結果和解釋
 
-讓模型完成資料的定型與計分。 您現在可以評論訂閱流失模型解釋。 如需更多資訊，請見 [評論預測狀態和結果](predict-subscription-churn.md#review-a-prediction-status-and-results)。
+讓模型完成資料的定型與計分。 您現在可以審查流失模型說明。 如需更多資訊，請見 [評論預測狀態和結果](predict-transactional-churn.md#review-a-prediction-status-and-results)。
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>任務 5 - 建立高流失風險客戶的區段
 
@@ -192,14 +136,12 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="使用模型輸出建立區段。":::
 
-1. 選取 **OOBSubscriptionChurnPrediction** 端點並定義區段： 
+1. 選取 **OOBeCommerceChurnPrediction** 端點並定義客戶細分： 
    - 欄位：ChurnScore
    - 運算子：大於
    - 值：0.6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="設定訂閱流失區段。":::
 
-您現在有動態更新的區段，其找出對此訂閱業務而言屬於高流失風險的客戶。
+您現在有一個動態更新的客戶細分，用來識別高流失風險的客戶。
 
 如需詳細資訊，請參閱[建立和管理客戶細分](segments.md)。
 

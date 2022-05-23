@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645753"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741493"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>匯出資料至 Azure Synapse Analytics (預覽版)
 
@@ -34,7 +34,7 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 
 - 啟用中的 Azure 訂用帳戶。
 
-- 如果使用新的 Azure Data Lake Storage  Gen2 帳戶，則 *Customer Insights 的服務主體* 需要 **儲存體 Blob 資料參與者** 權限。 瞭解更多有關 [以 Azure 服務主體連接至 Azure Data Lake Storage Gen2 帳戶，以獲得對象見解](connect-service-principal.md)。 Data Lake Storage Gen2 **必須** 已啟用的[階層命名空間](/azure/storage/blobs/data-lake-storage-namespace)。
+- 如果使用新的 Azure Data Lake Storage  Gen2 帳戶，則 *Customer Insights 的服務主體* 需要 **儲存體 Blob 資料參與者** 權限。 深入瞭解如何[使用 Customer Insights 的 Azure 服務主體來連接 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。 Data Lake Storage Gen2 **必須** 已啟用的[階層命名空間](/azure/storage/blobs/data-lake-storage-namespace)。
 
 - 在 Azure Synapse workspace 所在的資源群組，於 *服務主體* 和 *在 Customer Insights 中具有管理員權限的 Azure AD 使用者* 至少需被指派 **讀者** 權限。 如需詳細資訊，請參閱[使用 Azure 入口網站指派 Azure 角色](/azure/role-based-access-control/role-assignments-portal)。
 

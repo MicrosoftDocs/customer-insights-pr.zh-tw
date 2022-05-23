@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645778"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755488"
 ---
 # <a name="customer-activities"></a>客戶活動
 
-在 Dynamics 365 Customer Insights 中將[不同資料來源](data-sources.md)的客戶活動結合，以建立時間表依時間順序列出活動。 將時間表加入到具備[客戶卡片增益集](customer-card-add-in.md)解決方案的 Dynamics 365 應用程式中或加入到 Power BI 儀表板中。
+在 Dynamics 365 Customer Insights 中合併來自[不同資料來源](data-sources.md)的客戶活動。 建立時間表，讓您依時間順序列出活動。 以[客戶卡增益集](customer-card-add-in.md)解決方案將時間表加入 Dynamics 365 應用程式中。
 
 ## <a name="define-an-activity"></a>定義活動
 
@@ -78,7 +78,7 @@ ms.locfileid: "8645778"
 
 1. 選取 **下一步** 移至下一個步驟。 要儲存設定為 **其他** 的活動類型，您可以選取 **完成並審核** 以立即儲存活動。 
 
-1. 在 **活動類型** 步驟中，選取活動類型，然後可以選擇是否要用語意方式對應某些活動類型(以用於 Customer Insights 的其他區域)。 目前，在同意對應欄位之後，便可以在語義上對應 *Feedback*、*Loyalty*、 *SalesOrder*、*SalesOrderLine* 和 *訂閱* 活動類型。 如果活動類型與新的活動不相關，您可以選擇 *其他* 或為自訂活動類型 *建立新的活動類型*。
+1. 在 **活動類型** 步驟中，選取活動類型，然後可以選擇是否要用語意方式對應某些活動類型(以用於 Customer Insights 的其他區域)。 目前，*意見反應*、 *忠誠度*、*SalesOrder*、 *SalesOrderLine* 以及 *訂閱* 活動類型在同意對應欄位之後，也支援語意。 如果活動類型與新的活動不相關，您可以選擇 *其他* 或為自訂活動類型 *建立新的活動類型*。
 
 1. 選取 **下一步** 移至下一個步驟。 
 
@@ -110,7 +110,7 @@ ms.locfileid: "8645778"
 
 若要為客戶開啟時間表，請前往 **顧客** 並選擇您要檢視的客戶設定檔。
 
-如果客戶已經參加您組態的活動，您可以在 **活動時間表** 區找到它。
+如果客戶已經參加一個設定好的活動，您便可以在 **活動時間表** 區找到活動。
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="在客戶設定檔中檢視組態的活動。":::
 

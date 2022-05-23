@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645737"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755626"
 ---
 # <a name="customer-card-add-in-preview"></a>客戶卡片增益集 (預覽)
-
-
 
 直接在 Dynamics 365 應用程式中取得您客戶的 360 度視圖。 隨著支援的 Dynamics 365 App 安裝 Customer Card 增益集，您可以選擇顯示客戶設定檔欄位、見解和活動時間表。 增益集將從 Customer Insights 擷取資料，對被連接的 Dynamics 365 應用程式，不會影響其中的資料。
 
@@ -31,7 +29,7 @@ ms.locfileid: "8645737"
 ## <a name="prerequisites"></a>先決條件
 
 - 增益集只適用在 Dynamics 365 模型導向應用程式 (例如 Sales 或 Customer Service)，版本 9.0 或更新的版本。
-- 為了讓您的 Dynamics 365 資料能對應 Customer Insights 的客戶個人資料，我們建議[使用 Microsoft Dataverse 連接器從 Dynamics 365 App 擷取](connect-power-query.md)。 如果您使用不同的方法來擷取 Dynamics 365 連絡人(或客戶)，則必須確認 `contactid`(或 `accountid`) 欄位[在資料整合程序的對應步驟中，已設為該資料來源的主索引鍵](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。 
+- 為了讓您的 Dynamics 365 資料能對應 Customer Insights 的客戶個人資料，我們建議[使用 Microsoft Dataverse 連接器從 Dynamics 365 App 擷取](connect-power-query.md)。 如果您使用不同的方法來擷取 Dynamics 365 連絡人(或客戶)，則必須確認 `contactid`(或 `accountid`) 欄位[在資料整合程序的對應步驟中，已設為該資料來源的主索引鍵](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。
 - 客戶卡片增益集所有 Dynamics 365 使用者，必須在Customer Insights 中[新增為使用者](permissions.md)，才能查看資料。
 - 在 Customer Insights 中[完成搜尋和篩選功能設定](search-filter-index.md)才能讓查詢資料運作。
 - 每個增益集控制項依賴 Customer Insights 中的特定資料。 某些資料和控制項只能在特定類型的環境中使用。 如果因為選取的環境類型無法使用控制項，增益集組態將會通知您。 了解更多有關[環境使用案例](work-with-business-accounts.md)。
@@ -132,16 +130,16 @@ ms.locfileid: "8645737"
 
 **解決方式：**
 
-1. 請確定您已根據此指示：[設定客戶卡片增益集](#configure-the-customer-card-add-in)，設定好卡片增益集 
+1. 請確定您已根據此指示：[設定客戶卡片增益集](#configure-the-customer-card-add-in)，設定好卡片增益集
 
-1. 檢閱資料擷取設定。 編輯其中包含連絡人識別碼 GUID 的 Dynamics 365 系統資料來源。 如果連絡人識別碼 GUID 在 Power Query 編輯器中以大寫字元顯示，請嘗試以下步驟： 
+1. 檢閱資料擷取設定。 編輯其中包含連絡人識別碼 GUID 的 Dynamics 365 系統資料來源。 如果連絡人識別碼 GUID 在 Power Query 編輯器中以大寫字元顯示，請嘗試以下步驟：
     1. 編輯資料來源，以在 Power Query 編輯器中打開資料來源。
     1. 選取連絡人識別碼欄。
     1. 在標頭中選取 **轉換** 查看可用的動作。
     1. 選取 **小寫**。 驗證資料表中的 GUID 現在是否為小寫。
     1. 儲存資料來源。
-    1. 執行資料擷取、整合和下游程序，將變更傳播至 GUID。 
+    1. 執行資料擷取、整合和下游程序，將變更傳播至 GUID。
 
-完成完整的重新整理之後，客戶卡片增益集控制項應會顯示預期的資料。 
+系統完成完整的重新整理之後，客戶卡片增益集控制項應會顯示預期的資料。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

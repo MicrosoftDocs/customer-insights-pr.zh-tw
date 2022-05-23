@@ -1,110 +1,83 @@
 ---
-title: 對應資料統一的實體與屬性
-description: 選取實體、屬性、主鍵及語義類型，將資料對應到統一客戶設定檔。
-ms.date: 10/18/2020
+title: 選取資料整合的來源欄位
+description: 整合程序的第一個步驟是選取實體、屬性、主索引鍵及語意類型，將資料對應至整合客戶個人資料。
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645754"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740985"
 ---
-# <a name="map-entities-and-attributes"></a>對應實體和屬性
+# <a name="select-source-fields-for-data-unification"></a>選取資料整合的來源欄位
 
-**對應** 是資料整合程序的第一個階段。 對應包含三個階段：
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *實體選取*：找出可組合的實體，可產生具有更完整客戶資訊的資料集。
-- *屬性選取*：針對每個實體，識別想要在 *比對* 和 *合併* 階段中組合和調整的欄。 這些欄位稱為 *屬性*。
-- *主索引鍵語意類型選擇*：對於每個實體，找出您要定義為該實體之主索引鍵的屬性，並針對每個屬性，找出最能準確描述該屬性的語意類型。
+整合的第一個步驟是到您想整合的資料集，選取其中的實體與欄位。 選取包含客戶相關詳細資料的實體，例如名稱、位址、電話號碼和電子郵件。 您可以選取一個或一個以上的值。
 
-如需資料統合一般流程的詳細資訊，請參閱[統整](data-unification.md)。
+## <a name="select-entities-and-fields"></a>選取實體與欄位
 
-## <a name="select-the-first-entities"></a>選取第一個實體
+1. 請前往 **資料** > **整合**。
 
-1. 請前往 **資料** > **統整** > **對應**。
+   :::image type="content" source="media/m3_unify_land.png" alt-text="螢幕擷取畫面：醒目提示 [開始使用] 的第一次執行體驗的整合登陸頁面。":::
 
-2. 選擇 **選取實體** 以開始對應階段。
+1. 請然後選取 **開始使用**。
 
-3. 選取要在 *比對* 和 *合併* 階段中使用的實體和屬性。 您可以從實體個別選取所需的屬性，或選取實體層級上的 **包括所有欄位** 核取方塊，以加入實體中的所有屬性。 我們建議至少選取兩個實體，才能受益於資料統合程序。
+1. 在 **來源欄位** 頁面上，選取 **選取實體和欄位**。 **選取實體與欄位** 窗格隨即顯示。
 
-   > [!div class="mx-imgBorder"]
-   > ![新增實體範例。](media/data-manager-configure-map-add-entities-example.png "新增實體範例")
+1. 至少選取一個實體。
 
-   在此範例中，我們要新增 **eCommerceContacts** 及 **loyCustomers** 實體。 您可以選擇這些實體來衍生有關哪些線上商務客戶是忠誠度方案成員的見解。
-   
-   您可以在所有屬性與實體中搜尋關鍵字，以選取想要對應的必要屬性。
-   
-     > [!div class="mx-imgBorder"]
-   > ![搜尋欄位範例。](media/data-manager-configure-map-search-fields-example.png "搜尋欄位範例")
+1. 針對每個選定的實體，找出您要用來比對客戶記錄的欄位，以及要加入整合個人資料的欄位。 這些欄位稱為 *屬性*。 藉由選取實體層級的核取方塊，您可以個別選取實體的必要屬性，或包含實體的所有屬性。 您可以在所有屬性與實體中搜尋關鍵字，以選取想要對應的必要屬性。
 
-4. 選取 **套用** 以確認您的選取。
+   :::image type="content" source="media/m3_select_entities.png" alt-text="選定實體和屬性的螢幕擷取畫面。":::
+
+   在此範例中，我們要新增 **Contacts** 與 **CustomerLoyalty** 實體。 您可以選擇這些實體來衍生有關哪些線上商務客戶是忠誠度方案成員的見解。
+
+1. 選取 **套用** 以確認您的選取。 顯示選定實體和屬性。
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>選取屬性的主索引鍵與語意類型
 
-選取實體之後，**對應** 頁面會列出選取的實體供您檢閱。 定義實體的主索引鍵，並在實體中識別屬性的語意類型。
+   :::image type="content" source="media/m3_select_primary.png" alt-text="未選取主索引鍵的選定實體其螢幕擷取畫面。" lightbox="media/m3_select_primary.png":::
 
-- **主索引鍵**：選取一個屬性做為每個實體的主索引鍵。 若要讓屬性成為有效的主索引鍵，其中不能包含重複值、遺漏值或 Null 值。 字串、整數及 GUID 資料類型屬性支援做為主索引鍵，並且會顯示在欄位中，供您選取。
+對每個實體，執行下列步驟。
 
-- **屬性語意類型**：屬性的類別，例如電子郵件地址或名稱。 若要使用 AI 模型進行語意智慧預測、節省時間並改善準確性，請將 **智慧對應** 設定為 **開啟**。 智慧對應會在 **類型** 欄位中反白顯示 AI 提供的語意建議。 如果將其設定為 **關閉**，您看到的會是我們的一般對應建議。 您可以從可用的選項清單選取任何語意類型，並覆寫建議的選取項目。
+1. 選擇 **主索引鍵**。 主索引鍵是實體的唯一屬性。 若要讓屬性成為有效的主索引鍵，其中不能包含重複值、遺漏值或 Null 值。 字串、整數及 GUID 資料類型屬性均支援主索引鍵。
 
-> [!div class="mx-imgBorder"]
-> ![屬性類型和語義預測。](media/data-manager-configure-map-add-attributes-semantic-prediction.png "屬性類型和語意預測")
+1. 若要將 AI 模型用於智慧型語意預測，以節省時間並改善準確性，請確保已啟用 **智慧對應**。 智慧對應會在 **類型** 欄位中反白顯示 AI 提供的語意建議。 您可以從可用選項清單中選取任何語意類型，以覆寫建議的選取。
 
-您也可以新增自訂實體類型。 選取該屬性的類型欄位，然後輸入自訂語意類型名稱。 如此一來，您也可以變更系統識別的屬性類型。
+1. 對每個屬性，選擇能最恰當地描述該屬性的語意 **類型**，例如名稱、市/鎮或電子郵件地址。
 
-所有由系統自動識別語意類型的屬性，都會在 **檢閱對應欄位** 區段中分為群組。 檢閱這些屬性及其語意類型，因為資料統合的合併步驟會使用這些屬性來組合您的實體。
+   > [!NOTE]
+   > 語意類型 *Person. FullName* 應該對應至一個欄位，以填充客戶卡中的客戶名稱。 否則，客戶卡片將會以未命名的方式顯示。
 
-沒有自動對應至語意類型的屬性會在 **定義未對應欄位中的資料** 區段分為群組。 選取未對應屬性的語意類型欄位，或輸入您的自訂屬性類型名稱。
+   1. 若要變更系統自動識別的屬性類型，請選取其他類型。 如果類型不存在，請選取屬性的 **類型** 欄位，然後輸入自訂的語意類型名稱，以建立自訂的語意類型。
 
-> [!div class="mx-imgBorder"]
-> ![主索引鍵和屬性類型。](media/data-manager-configure-map-add-attributes.png "主索引鍵和屬性類型")
+   1. 若若要新增包含連結至公用個人資料圖片或標誌 URL 的屬性，請選取包含該 URL 的實體和欄位。 在 **類型** 欄位中，請輸入下列內容：
+      - 對於人員：Person.ProfileImage
+      - 對於組織：Organization.LogoImage
 
-> [!NOTE]
-> 一個欄位應該對應至語意類型 Person.FullName，以便填入客戶卡片中的客戶名稱。 否則，客戶卡片將會以未命名的方式顯示。 
+   1. 在帳戶名稱屬性的 **類型** 欄位中輸入 "Organization.Name"。
 
-## <a name="add-and-remove-attributes-and-entities"></a>新增和移除屬性及實體
+1. 檢閱自動識別語意類型的屬性。 這些屬性會列在 **檢閱對應的欄位**。 只有相同類型的屬性才可以在 **整合客戶欄位** 步驟中組合。 語意類型是用來自動建議見解。 確保您在所有選定的實體中選擇的類型是一致的。
 
-1. 在 **統整** > **對應** 中，選取 **編輯欄位**。
+1. 對於未自動對應至語意類型的屬性，可以選取語意類型欄位、輸入您的自訂屬性類型名稱，或將它們保留為未對應。 這些屬性列在 **未對應欄位中定義資料**。
 
-2. 在 **編輯欄位** 窗格中，新增或移除屬性及實體。 使用搜尋或捲動方式，尋找並選取感興趣的屬性及實體。 如果屬性或實體已經相符，就無法加以移除。
+1. 在完成每個實體的步驟之後，請選取 **儲存來源欄位**。
 
-   > [!div class="mx-imgBorder"]
-   > ![新增或移除屬性。](media/configure-data-map-edit.png "新增或移除屬性")
+1. 選取 **下一步**。
 
-3. 選取 **套用**。
-
-## <a name="add-images-to-profiles"></a>將影像新增至設定檔
-
-如果實體包含公開提供的設定檔影像或標誌的 URL，您可以將它們新增至統整的客戶設定檔。
-
-選取實體，並尋找包含設定檔影像 URL 的欄位。 在 **類型** 輸入欄位中，手動輸入下列值： 
-- 對於人員：Person.ProfileImage
-- 對於組織：Organization.LogoImage
-
-繼續執行統合步驟，並確定包含影像 URL 的屬性也已新增至[合併](merge-entities.md)步驟中。
-
-## <a name="set-attributes-for-organizations"></a>設定組織的屬性
-
-如果是組織 (預覽)，則屬性類型會對應至「Organization.Name」
-> [!div class="mx-imgBorder"]
-> ![主索引鍵和屬性類型 B 到 B。](media/configure-data-map-edit-b2b.png "主索引鍵和屬性類型 B 到 B")
-
-## <a name="next-step"></a>下一個步驟
-
-在資料統合程序中，移至 **比對** 頁面。 造訪 [**比對**](match-entities.md)，了解此階段的相關資訊。
-
-> [!TIP]
-> 請查看下列影片：[開始使用：建立統整的客戶設定檔](https://youtu.be/oBfGEhucAxs)。
-
+> [!div class="nextstepaction"]
+> [後續步驟：移除重複資料](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

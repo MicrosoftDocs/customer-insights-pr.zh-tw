@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653558"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740893"
 ---
 # <a name="user-permissions"></a>使用者權限
 
@@ -41,7 +41,7 @@ ms.locfileid: "8653558"
 
 - 檢視者可用的所有權限。
 - 使用 **資料來源** 頁面載入和轉換資料。
-- 完成 *資料統整* 區 (**對應**、**比對** 和 **合併**) 打造統整的客戶設定檔實體。
+- 完成 ***資料整合**，會產生整合客戶個人資料實體。
 - 定義 **關聯** 和 **活動**。
 - 使用 **區段** 頁面建立區段。
 - 使用 **量值** 頁面建立量值。

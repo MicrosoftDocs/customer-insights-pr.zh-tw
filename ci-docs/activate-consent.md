@@ -1,23 +1,22 @@
 ---
 title: 啟動客戶細分的同意規則
 description: 依照這些步驟，在 Dynamics 365 Customer Insights 中連結同意資料並啟動同意檢查。 系統管理員也可以停用同意檢查。
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645742"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755160"
 ---
 # <a name="activate-consent-rules"></a>啟用同意規則
 
-[同意中心 (預覽版)](consent-management/overview.md) 可讓您協調不同來源的同意資料。 您可以使用整合的 *同意* 實體套用預設同意檢查。 在同意資料匯入同意中心且設定資料的規則之後，*同意* 實體會自動同步處理至 Dynamics 365 Customer Insights。
+[同意中心 (預覽版)](consent-management/overview.md) 可讓您協調不同來源的同意資料。 您可以使用整合的 *同意* 實體套用預設同意檢查。 在匯入同意資料且設定對應規則之後，*同意* 實體會自動同步處理至 Dynamics 365 Customer Insights。
 
 ## <a name="enable-consent-checks"></a>啟用同意檢查
 

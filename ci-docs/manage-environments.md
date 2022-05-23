@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645880"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741031"
 ---
 # <a name="manage-environments"></a>管理環境
 
@@ -127,10 +127,10 @@ OR
 下列組態設定已複製，
 
 - 內嵌/匯入的資料來源
-- 資料統一 (對應、比對、合併) 設定
+- 資料整合設定
 - 客戶細分
 - 量值
-- 關聯
+- 關係
 - 活動
 - 搜尋和篩選索引
 - 匯出目的地

@@ -1,8 +1,8 @@
 ---
 title: 訂閱流失預測範例指南
 description: 使用此範例指南試用訂閱流失創意預測模型。
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645868"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741401"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>訂閱流失預測範例指南
 
@@ -112,61 +112,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
 ## <a name="task-2---data-unification"></a>任務 2 - 資料統整
 
-內嵌資料後，我們現在就會開始 **對應、比對、合併** 流程，以建立統整的客戶設定檔。 如需更多資訊，請見 [資料統整](data-unification.md)。
-
-### <a name="map"></a>對應
-
-1. 內嵌資料後，將電子商務的聯絡人與忠誠度資料對應到常用資料類型。 請前往 **資料** > **統整** > **對應**。
-
-1. 選取代表客戶設定檔的實體 – **eCommerceContacts** 和 **loyCustomers**。 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="統整電子商務與忠誠度資料來源。":::
-
-1. 選取 **ContactId** 做為 **eCommerceContacts** 主鍵，而 **LoyaltyID** 做為 **loyCustomers** 主鍵。
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="統整 LoyaltyId 為主鍵。":::
-
-### <a name="match"></a>比對
-
-1. 請前往 **比對** 索引標籤並選取 **設定訂單**。
-
-1. 在 **主要** 下拉式清單中，選擇 **eCommerceContacts : eCommerce** 作為主要來源，並包含所有記錄。
-
-1. 在 **實體 2** 下拉清單中，選擇 **loyCustomers : LoyaltyScheme** 並包含所有記錄。
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="統整比對電子商務與忠誠度。":::
-
-1. 選取 **建立新規則**
-
-1. 使用 FullName 新增您的第一個條件。
-
-   * 在 eCommerceContacts ，請在下拉式清單中選擇 **全名**。
-   * 在 loyCustomers，請在下拉式清單中選擇 **全名**。
-   * 選取 **正規化** 下拉式清單並選擇 **類型 (電話、名稱、地址、...)**。
-   * 設定 **精密等級**：**基本** 與 **值**：**高**。
-
-1. 輸入新規則名稱 **FullName、電子郵件**。
-
-   * 選取 **新增條件** 來新增電子郵件地址的第二個條件
-   * 在 eCommerceContacts 實體，請在下拉式清單中選擇 **電子郵件**。
-   * 在loyCustomers 實體，請在下拉式清單中選擇 **電子郵件**。 
-   * 保留正規化空白。 
-   * 設定 **精密等級**：**基本** 與 **值**：**高**。
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="統整比對規則的名稱和電子郵件。":::
-
-7. 選取 **儲存** 和 **執行**。
-
-### <a name="merge"></a>執行合併​​
-
-1. 請前往 **合併** 索引標籤。
-
-1. 在 **loyCustomers** 實體的 **ContactId** 上，將顯示名稱變更為 **ContactIdLOYALTY**，以便將它與其他內嵌的識別碼區分開來。
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="從忠誠度識別碼重新命名 contactid。":::
-
-1. 選取 **儲存** 並 **執行** 以便開始合併流程。
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>任務 3 - 組態訂閱流失預測
 

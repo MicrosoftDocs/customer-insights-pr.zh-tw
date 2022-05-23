@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645796"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739152"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>使用 Azure 服務主體連接到 Azure Data Lake Storage 帳戶
 
@@ -40,7 +40,7 @@ ms.locfileid: "8645796"
 
 3. 請在 **管理** 下方選取 **企業應用程式**。
 
-4. 搜尋名稱為 `Dynamics 365 AI for Customer Insights` 的 Microsoft 應用程式識別碼 `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff`。
+4. 篩選 **應用程式識別碼起始為** `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` 或搜尋名稱 `Dynamics 365 AI for Customer Insights`。
 
 5. 如果您發現相符的記錄，表示服務主體已存在。 
    

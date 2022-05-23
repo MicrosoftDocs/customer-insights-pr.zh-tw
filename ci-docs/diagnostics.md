@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645725"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755252"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>使用 Azure 監視器在 Dynamics 365 Customer Insights 轉寄記錄 (預覽版)
 
@@ -27,8 +27,8 @@ Customer Insights 會傳送下列事件記錄檔：
 - **稽核事件**
   - **APIEvent** - 讓變更追蹤能透過 Dynamics 365 Customer Insights 完成。
 - **作業事件**
-  - **WorkflowEvent** -工作流程允許設定[資料來源](data-sources.md)、[整合](data-unification.md)和[豐富](enrichment-hub.md)，並最終把資料 [匯出](export-destinations.md)至其他系統。 所有的步驟都可以單獨完成 (例如，觸發單一匯出) 或協調 (例如，在資料來源進行資料重新整理，且這將觸發整合程序，而整合程序會提取新的擴充並在完成後匯出其他系統)。 如需詳細資訊，請參閱 [WorkflowEvent 結構描述](#workflow-event-schema)。
-  - **APIEvent** - 所有對 Dynamics 365 Customer Insights 的客戶執行個體的 API 呼叫。 如需詳細資訊，請參閱 [APIEvent 結構描述](#api-event-schema)。
+  - **WorkflowEvent** -工作流程允許設定[資料來源](data-sources.md)、[整合](data-unification.md)、[擴充](enrichment-hub.md)，並最終把資料 [匯出](export-destinations.md)至其他系統。 所有的步驟都可以分別執行 (例如，觸發單一匯出)。 也可以執行已協調 (例如，資料重新整理觸發其資料來源的整合程序，改程序進行擴充以及在完成後將資料匯出至另一個系統)。 如需更多資訊，請參閱 [WorkflowEvent 結構描述](#workflow-event-schema)。
+  - **APIEvent** - 所有對 Dynamics 365 Customer Insights 的客戶執行個體的 API 呼叫。 如需更多資訊，請參閱 [APIEvent 結構描述](#api-event-schema)。
 
 ## <a name="set-up-the-diagnostic-settings"></a>設定診斷設定
 
@@ -55,7 +55,7 @@ Customer Insights 會傳送下列事件記錄檔：
 
 1. 選擇具備目的地資源的 Azure 訂閱其 **租用戶**，並選取 **登入**。
 
-1. 選取 **資源類型**（儲存體、事件中樞或記錄分析）。
+1. 選取 **資源類型** (儲存體、事件中樞或記錄分析)。
 
 1. 選取目的地資源的 **訂閱**。
 
@@ -182,7 +182,7 @@ API 事件和工作流程事件有相同的結構以及不同的細節，請參�
 
 ### <a name="workflow-event-schema"></a>工作流程事件結構描述
 
-工作流程包含多個步驟。 [內嵌資料來源](data-sources.md)、[整合](data-unification.md)、[擴充](enrichment-hub.md)和[匯出](export-destinations.md)資料。 所有的步驟都可以單獨執行，或使用下列程序協調。 
+工作流程包含多個步驟。 [內嵌資料來源](data-sources.md)、[整合](data-unification.md)、[擴充](enrichment-hub.md)和[匯出](export-destinations.md)資料。 所有的步驟都可以單獨執行，或使用下列程序協調。
 
 #### <a name="operation-types"></a>作業類型
 
@@ -215,7 +215,7 @@ API 事件和工作流程事件有相同的結構以及不同的細節，請參�
 | `time`          | TimeStamp | 是必要欄位          | 事件的時間戳記 (UTC)。                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | 字串    | 是必要欄位          | 發出事件的執行個體其 ResourceId。                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | 字串    | 是必要欄位          | 代表此事件的操作名稱。 `{OperationType}.[WorkFlow|Task][Started|Completed]`。 請參閱[操作類型](#operation-types)作為參考。 | `Segmentation.WorkflowStarted`，<br> `Segmentation.TaskStarted`， <br> `Segmentation.TaskCompleted`， <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | 字串    | 是必要欄位          | 事件的記錄類別。 工作流程事件永遠是`Operational`                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | 字串    | 是必要欄位          | 事件的記錄類別。 工作流程事件永遠是`Operational`                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | 字串    | 是必要欄位          | 事件的狀態。 `Running`、`Skipped`、`Successful`、`Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Long      | 選用          | 作業的期間 (以毫秒為單位)。                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | 字串    | 選用          | 對特定類別的事件有更多屬性的 JSON 物件。                                                                                        | 請參閱[工作流程屬性](#workflow-properties-schema)子區段                                                                                                       |

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 85995cbd7f797810bfb6ecdc8a24d56542f0b5a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645734"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741355"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>在 Microsoft Dataverse 中使用 Customer Insights 資料
 
@@ -54,7 +54,7 @@ Customer Insights 的部分輸出實體可用作 Dataverse 中的資料表。 �
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-此資料表包含來自 Customer Insights 的整合客戶個人資料。 整合客戶個人資料的結構描述依照合併程序中所使用的實體和屬性而定。 客戶個人資料結構描述通常包含 [CustomerProfile 的 Common Data Model 定義中 ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile)的屬性子集。
+此資料表包含來自 Customer Insights 的整合客戶個人資料。 整合客戶個人資料的結構描述，將依資料整合處理使用的實體和屬性決定。 客戶個人資料結構描述通常包含 [CustomerProfile 的 Common Data Model 定義中 ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile)的屬性子集。
 
 ### <a name="alternatekey"></a>AlternateKey
 

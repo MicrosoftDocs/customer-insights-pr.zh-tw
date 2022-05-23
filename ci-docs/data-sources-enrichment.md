@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645729"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755676"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>資料來源擴充 (預覽版)
 
@@ -26,7 +26,7 @@ ms.locfileid: "8645729"
 1. 請前往 **資料** > **整合**。 選取您要擴充的實體，並選取一個屬性作為實體的主索引鍵。 如需詳細資訊，請參閱[選取主索引鍵](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。
 
 1. 移至 **資料** > **資料來源**。
- 
+
 1. 請在您要擴充的資料來源旁邊，選取垂直省略符號，接著選取 **擴充**。
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="資料來源擴充頁面。":::

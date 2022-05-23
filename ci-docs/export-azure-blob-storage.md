@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645825"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757376"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>將客戶細分清單及其他資料匯出至 Azure Blob 儲存體 (預覽版)
 
@@ -44,7 +44,7 @@ ms.locfileid: "8645825"
 若您擁有取此類型的連接的存取權，則可以設定此匯出。 如需詳細資訊，請參閱[設定匯出所需的權限](export-destinations.md#set-up-a-new-export)。
 
 > [!IMPORTANT]
-> 如果您已打開 Azure Blob 儲存體帳戶的虛刪除設定，匯出將會失敗。 關閉虛刪除，將資料匯出至 blob。 如需詳細資訊，請參閱[啟用 blob 虛刪除](/azure/storage/blobs/soft-delete-blob-enable.md)
+> 如果您已打開 Azure Blob 儲存體帳戶的虛刪除設定，匯出將會失敗。 關閉虛刪除，將資料匯出至 blob。 如需詳細資訊，請參閱[啟用 blob 虛刪除](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. 移至 **資料** > **匯出**。
 
