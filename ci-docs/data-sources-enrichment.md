@@ -1,19 +1,19 @@
 ---
 title: 資料來源擴充
 description: 在進行資料整合程序前，擴充資料來源。
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755676"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800271"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>資料來源擴充 (預覽版)
 
@@ -27,7 +27,7 @@ ms.locfileid: "8755676"
 
 1. 移至 **資料** > **資料來源**。
 
-1. 請在您要擴充的資料來源旁邊，選取垂直省略符號，接著選取 **擴充**。
+1. 請在您要擴充的資料來源旁邊，選取垂直省略符號 (&vellip;)，接著選取 **擴充**。
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="資料來源擴充頁面。":::
 
@@ -41,11 +41,12 @@ ms.locfileid: "8755676"
 
 - [增強型地址](enrichment-enhanced-addresses.md)
 - [增強公司資料](enrichment-enhanced-company-data.md)
+- [取自 LiveRamp 的身分識別資料](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>管理現有的資料來源擴充
 
 移至 **我的擴充** 索引標籤，以查看所有設定好的擴充。
 
-選取擴充以查看可用的選項。 您也可以選取清單上專案的省略號 (...) 來查看選項。 如果您已設定數個擴充，則可以使用搜尋方塊快速尋找。
+選取擴充以查看可用的選項。 您也可以選取清單項目上的垂直省略符號 (&vellip;) 來查看選項。 如果您已設定數個擴充，則可以使用搜尋方塊快速尋找。
 
 您可以查看、編輯、執行或刪除資料來源擴充。 如需更多資訊，請參閱[管理現有擴充](enrichment-hub.md)。

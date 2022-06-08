@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645862"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800086"
 ---
 # <a name="create-segments"></a>建立客戶細分
 
@@ -134,8 +134,9 @@ ms.locfileid: "8645862"
 > - 在條件中設定此運算子時，客戶細分建立器無法從實體建議有效值。 您可以移至 **資料** > **實體** 並下載實體資料，以查看可用的值。
 > - 根據日期的條件，可讓您在固定日期與浮動日期範圍之間切換。
 > - 如果您有多重規則用於區段，您正在編輯的規則旁邊會有一條垂直的藍線。
-> - 您可以將規則和條件移至客戶細分定義中的其他位置。 選取規則或條件旁邊的 [...]，並選擇該規則或條件的移動方式。
+> - 您可以將規則和條件移至客戶細分定義中的其他位置。 選取規則或條件旁邊的垂直省略符號 (&vellip;)，並選擇該規則或條件的移動方式和位置。
 > - 指令列中的 **復原** 和 **重做** 控制項會讓您復原變更。
+> - 建立客戶細分之後，某些客戶細分可讓您[追蹤客戶細分的使用方式](segments.md#track-usage-of-a-segment)。
 
 ## <a name="quick-segments"></a>快速區段
 

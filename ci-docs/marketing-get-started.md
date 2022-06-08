@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653704"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833298"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>在 Dynamics 365 Marketing 中使用整合個人資料
 
@@ -23,7 +23,6 @@ ms.locfileid: "8653704"
 - 基本動態內容 (如個人化權杖)，是來自電子郵件、簡訊和推播通知中，並由整合 Customer Insights 個人資料中擷取出的量值 (例如：忠誠度狀態、訂閱續訂日期、上層客戶或任何其它量值)。
 - 將資料從 Marketing 載入至 Customer Insights 中，並將其與其他來源的客戶資料相結合。
 - 套用 Customer Insights 資料清理、擴充和模糊比對等工具。
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>在即時行銷中使用擴充客戶設定檔
 
@@ -39,6 +38,6 @@ Customer Insights 可讓您優化來自多個來源的資料，並將其合併�
 
 ## <a name="pull-data-from-your-own-azure-data-lake-storage"></a>從您的 Azure Data Lake Storage 提取資料
 
-如果您想在 Marketing 中使用 Customer Insights 資料，則不受限於雲端儲存空間。 如果你已經準備好 Azure Data Lake Storage，則可以連接到 Customer Insights，然後與 Marketing 應用程式共用資料，就像使用雲端設定一樣。
+如果您想在 Marketing 中使用 Customer Insights 資料，則不受限於雲端儲存空間。 如果您已經準備好 Azure Data Lake Storage，則可以連接到 Customer Insights，然後與 Marketing 應用程式共用資料，就像使用雲端設定一樣。
 
-瞭解更多資訊：[啟用 Azure Data Lake Storage 共用資料到 Dataverse](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+瞭解更多資訊：[啟用 Azure Data Lake Storage 共用資料到 Dataverse](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

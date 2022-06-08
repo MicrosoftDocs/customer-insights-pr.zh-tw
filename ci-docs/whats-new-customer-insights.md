@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700927"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833620"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的新功能
 
@@ -58,6 +58,7 @@ LiveRamp 提供身分識別解析和客戶資料的整合。 您可以將客戶�
 如需詳細資訊，請參閱[使用 LiveRamp 身分識別資料擴充客戶個人資料(預覽版)](enrichment-liveramp.md)。
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>使用標籤和篩選來組織客戶細分和量值
+
 如果您的組織維持大量的客戶細分或量值，要尋找正確的一個或多個量值，常會有點難度。 這項新功能可讓您使用標籤和欄來組織清單。 這有助於快速、方便地尋找資料，並自訂檢視表。
 
 如需詳細資訊，請參閱[使用標籤和欄](work-with-tags-columns.md)。
@@ -65,9 +66,9 @@ LiveRamp 提供身分識別解析和客戶資料的整合。 您可以將客戶�
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>當使用儲存體帳戶帳戶時，可啟用對 Dataverse 共用資料
 
 如果您的環境使用 Azure Data Lake Storage 儲存 Customer Insights 資料，啟用對 Microsoft Dataverse 資料共用就需要額外設定。
-之前，只有在受管理的 Data Lake 中儲存資料時，才能啟用對 Dataverse 共用資料。 
+之前，只有在受管理的 Data Lake 中儲存資料時，才能啟用對 Dataverse 共用資料。
 
-如需詳細資訊，請參閱[啟用從 Azure Data Lake Storage 共用資料到 Dataverse (預覽版)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)。
+如需詳細資訊，請參閱[啟用從 Azure Data Lake Storage 共用資料到 Dataverse (預覽版)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)。
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>新增匯出目的地：Iterable 和 Braze
 
@@ -81,7 +82,6 @@ LiveRamp 提供身分識別解析和客戶資料的整合。 您可以將客戶�
 
 - Google Ads：新版本的 Google Ads 匯出連接器簡化了驗證體驗，現在讓您能自動建立新的 Google Ads 對象。 
 - Marketo：新版本的 Marketo 匯出連接器支援 Marketo 識別碼，可讓您避免資料重複、更新現有的記錄，以及在 Marketo 中建立新的記錄。 
-
 
 ## <a name="february-2022-updates"></a>2022 年 2 月更新
 

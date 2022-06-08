@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 04ae4ffd303a47add15044f313c96a23e5efcd76
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0d23a74b5ca68162ee21307705b1f781a7eb97e
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645910"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800549"
 ---
 # <a name="work-with-tags-and-columns"></a>使用標籤及資料行
 
@@ -37,7 +37,7 @@ ms.locfileid: "8645910"
 
 1. 選取想要管理其標籤的項目。
 
-1. 選取 **顯示其他 (...)**，然後選取 **標籤**。
+1. 選取垂直省略符號 (&vellip;) 並選取 **標籤**。
 
    :::image type="content" source="media/segments_list_tag.png" alt-text="選定的客戶細分，有選項下拉式清單和可用選項。"lightbox="media/segments_list_tag.png":::
 

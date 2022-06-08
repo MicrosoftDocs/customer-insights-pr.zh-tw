@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740709"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800640"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>透過預測完成部分資料 (已取代)
 
@@ -95,7 +95,7 @@ ms.locfileid: "8740709"
 
 2. 選取您要檢閱的預測。
 
-3. 在 **動作** 欄中選取省略符號，然後選擇 **檢視**。
+3. 在 **動作** 欄中選取垂直省略符號 (&vellip;)，然後選擇 **檢視**。
 
 4. 您將會在預測的檢視表中看到數個資料點。
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ ms.locfileid: "8740709"
 
 2. 選取您想編輯的預測。
 
-3. 在 **動作** 欄中選取省略符號，然後選擇 **檢視**。
+3. 在 **動作** 欄中選取垂直省略符號 (&vellip;)，然後選擇 **檢視**。
 
 4. 選取 **自訂 AI Builder**。
 
@@ -139,7 +139,7 @@ ms.locfileid: "8740709"
 
 2. 選取您要刪除的預測。
 
-3. 在 **動作** 欄中選取省略符號，然後選擇 **刪除**。
+3. 在 **動作** 欄中選取垂直省略符號 (&vellip;)，然後選擇 **刪除**。
 
 4. 確認刪除。
 
@@ -153,7 +153,7 @@ ms.locfileid: "8740709"
 - 應用程式權限並未授予。
     1. 移至 [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)。
     1. 選取 **環境**。
-    1. 選取您要新增權限的環境旁邊的省略符號，並選取 **設定**。
+    1. 選取您要新增權限的環境旁邊的垂直省略符號 (&vellip;)，並選取 **設定**。
     1. 展開 **使用者 + 權限**，然後選取 **使用者**。
     1. 選取 **+ 新增**，然後選取 **使用者**。
     1. 選取 **應用程式使用者**（如果尚未選取），並輸入下列資訊：

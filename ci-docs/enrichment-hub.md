@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653513"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800595"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
 
@@ -63,7 +63,7 @@ ms.locfileid: "8653513"
 
 移至 **我的擴充** 索引標籤，以查看所有設定好的擴充。 每個擴充內容都表示為一列，其中包含有關擴充內容的其他資訊。
 
-選取擴充以查看可用的選項。 您也可以選取清單上專案的省略號 (...) 來查看選項。 如果您已設定數個擴充，則可以使用搜尋方塊快速尋找。
+選取擴充以查看可用的選項。 您也可以選取清單項目上的垂直省略符號 (&vellip;) 來查看選項。 如果您已設定數個擴充，則可以使用搜尋方塊快速尋找。
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="擴充清單中用來管理擴充內容的選項。":::
 

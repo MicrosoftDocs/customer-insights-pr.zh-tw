@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: 學習目錄
   items:
-    - name: 開始使用
+    - name: 認證為 Microsoft Customer Data Platform 專家
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: 開始使用 Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
     - name: 內嵌資料
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: 從付費授權開始
       href: paid-license.md
-    - name: 建立新環境
-      href: create-environment.md
     - name: 探索 Customer Insights
       href: home.md
     - name: 使用標籤及資料行
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -254,12 +256,22 @@
       href: entities.md
     - name: 檢閱 Common Data Model 中的實體結構描述
       href: entity-schemas.md
-    - name: Dataverse 中的 Customer Insights 資料
-      href: customer-insights-dataverse.md
     - name: 建置關聯和連接的實體
       href: relationships.md
     - name: 定義語意對應
       href: semantic-mappings.md
+- name: 環境
+  items:
+    - name: 建立新環境
+      href: create-environment.md
+    - name: 連線至 Microsoft Dataverse
+      href: customer-insights-dataverse.md
+    - name: 使用您自己的 Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: 管理環境設定
+      href: manage-environments.md
+    - name: 使用服務主體連接至儲存體帳戶
+      href: connect-service-principal.md
 - name: 系統管理
   items:
     - name: 設定系統設定
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: 指派使用者權限
       href: permissions.md
-    - name: 連線概觀
-      href: connections.md
-    - name: 管理多個環境
-      href: manage-environments.md
     - name: 帶入您自己的 Key Vault
       href: use-azure-key-vault.md
-    - name: 使用服務主體連接至儲存體帳戶
-      href: connect-service-principal.md
     - name: 匯出診斷記錄
       href: diagnostics.md
-    - name: 服務限制
-      href: service-limits.md
-    - name: DSR 權利和要求
-      href: dsr-rights-requests.md
+    - name: 連線概觀
+      href: connections.md
 - name: API
   items:
     - name: 使用 API
@@ -324,5 +328,9 @@
       items:
         - name: 使用同意資料建立預測
           href: consent-management/predictions-consent-data.md
+- name: 服務限制
+  href: service-limits.md
+- name: DSR 權利和要求
+  href: dsr-rights-requests.md
 - name: 取得支援
   href: /power-platform/admin/get-help-support

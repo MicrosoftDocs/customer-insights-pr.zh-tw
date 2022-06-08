@@ -4,14 +4,14 @@ metadata:
   author: m-hartmann
   description: 尋找從求助內容開始的相關文章。
   ms.author: mhart
-  ms.date: 03/02/2022
+  ms.date: 05/18/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e3a9f6d5f4d23ca3e85fa3f69272a0162ca7bd2d
-  ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+  ms.openlocfilehash: e8134fa66ce47cdf8aeab144b8405104fb257f6c
+  ms.sourcegitcommit: 6108152b3d28a2ec140eae32a61dbf4317baa37b
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "8641646"
+  ms.lasthandoff: 05/19/2022
+  ms.locfileid: "8781354"
 title: Dynamics 365 Customer Insights 文件
 summary: 尋找有用的資源，以便開始了解 Customer Insights 的功能。
 landingContent:
@@ -43,16 +43,30 @@ landingContent:
     links:
     - text: 開始使用
       url: /learn/modules/get-started-customer-data-platform/
-- title: 統整資料
+- title: 內嵌資料
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: 資料來源概觀
       url: data-sources.md
+    - text: 使用 Power Query 連線
+      url: connect-power-query.md
+    - text: 連線至 Microsoft Dataverse
+      url: connect-dataverse-managed-lake.md
+  - linkListType: learn
+    links:
+    - text: 將您的資料內嵌到 Customer Insights
+      url: /learn/modules/ingest-data-customer-insights/
+- title: 統整資料
+  linkLists:
+  - linkListType: how-to-guide
+    links:
     - text: 統整概觀
       url: data-unification.md
     - text: 了解實體
       url: entities.md
+    - text: 檢閱統一設定檔
+      url: customer-profiles.md
   - linkListType: learn
     links:
     - text: 建立整合個人資料
@@ -99,20 +113,6 @@ landingContent:
     links:
     - text: 管理外部連線
       url: /learn/modules/configure-third-party-connections/
-- title: 管理應用程序
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: 組態系統
-      url: system.md
-    - text: 定義使用者權限
-      url: permissions.md
-    - text: 管理多個環境
-      url: manage-environments.md
-  - linkListType: learn
-    links:
-    - text: 管理 Customer Insights
-      url: /learn/modules/administer-customer-data-platform/
 - title: 管理 Customer Insights
   linkLists:
   - linkListType: how-to-guide

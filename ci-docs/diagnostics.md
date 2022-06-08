@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755252"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807571"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>使用 Azure 監視器在 Dynamics 365 Customer Insights 轉寄記錄 (預覽版)
 
@@ -38,7 +38,7 @@ Customer Insights 會傳送下列事件記錄檔：
 
 - 您必須具備有效的 [ Azure 訂閱](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)。
 - 您擁有 Customer Insights 中的[系統管理員](permissions.md#admin)權限。
-- 您擁有 Azure 中目的地資源的 **參與者** 及 **使用者存取系統管理員** 角色。 資源可以是 Azure 儲存體帳戶、Azure 事件中樞或 Azure Log Analytics 工作區。 如需詳細資訊，請參閱[使用 Azure 入口網站新增移除 Azure 角色指派](/azure/role-based-access-control/role-assignments-portal)。
+- 您擁有 Azure 中目的地資源的 **參與者** 及 **使用者存取系統管理員** 角色。 資源可以是 Azure Data Lake Storage 帳戶、Azure 事件中樞或 Azure Log Analytics 工作區。 如需詳細資訊，請參閱[使用 Azure 入口網站新增移除 Azure 角色指派](/azure/role-based-access-control/role-assignments-portal)。 在 Customer Insights 中設定診斷設定時必須有此權限，可以在安裝成功後變更。
 - Azure 儲存體、Azure 事件中樞或 Azure Log Analytics 符合的[目的地需求](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements)。
 - 在資源所屬的資源群組上至少要有 **讀者** 角色。
 

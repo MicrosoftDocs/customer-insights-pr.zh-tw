@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739198"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800456"
 ---
 # <a name="data-sources-overview"></a>資料來源概觀
 
@@ -76,7 +76,7 @@ Dynamics 365 Customer Insights 從一組廣泛的來源連接至資料。 連接
 
 1. 移至 **資料** > **資料來源**。
 
-2. 在您要重新整理的資料來源旁邊選取垂直省略號，然後從下拉式清單中選取 **重新整理**。
+2. 在您要重新整理的資料來源旁邊選取垂直省略符號 (&vellip;)，然後從下拉式清單中選取 **重新整理**。
 
 3. 資料來源現在會針對手動重新整理觸發。 重新整理資料來源將會更新資料來源中所有指定實體的實體結構描述和資料。
 
@@ -86,7 +86,7 @@ Dynamics 365 Customer Insights 從一組廣泛的來源連接至資料。 連接
 
 1. 移至 **資料** > **資料來源**。
 
-2. 在您要移除的資料來源旁邊選取垂直省略號，然後從下拉式功能表中選取 **刪除**。
+2. 在您要移除的資料來源旁邊選取垂直省略符號 (&vellip;)，然後從下拉式功能表中選取 **刪除**。
 
 3. 確認刪除。
 

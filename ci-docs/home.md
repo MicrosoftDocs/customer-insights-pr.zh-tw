@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743403"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768340"
 ---
 # <a name="explore-customer-insights"></a>探索 Customer Insights
 
@@ -28,9 +28,9 @@ ms.locfileid: "8743403"
 
 ## <a name="left-side-pane"></a>左側窗格
 
-使用左側窗格，瀏覽 Customer Insights 的不同區域。 
+使用左側窗格，瀏覽 Customer Insights 的不同區域。
 
-如果您使用商務帳戶和單個客戶，則可以選取主要對象並依此來設定您的焦點。 
+如果您使用商務帳戶和單個客戶，則可以選取主要對象並依此來設定您的焦點。
 
 ## <a name="application-header"></a>應用程式標頭
 
@@ -38,7 +38,7 @@ ms.locfileid: "8743403"
 
 笑臉圖示是 **意見反應** 控制項。 選取後可以分享給我們您的 Customer Insights 體驗。 我們積極聽取您的意見反應，並預先感謝您讓我們知道您喜歡什麼以及期待我們如何改善。
 
-**設定** 控制項 (以齒輪圖示表示) 可讓您收集 Customer Insights 的工作階段詳細資料，並為 Microsoft 365 的設定檔進行全域設定。 
+**設定** 控制項 (以齒輪圖示表示) 可讓您收集 Customer Insights 的工作階段詳細資料，並為 Microsoft 365 的設定檔進行全域設定。
 
 **說明** 選項，視覺化呈現為問號圖示，提供內容相關的說明連結和其他有用的資源。
 
@@ -46,7 +46,7 @@ ms.locfileid: "8743403"
 
 ## <a name="getting-started-with-customer-insights-section"></a>開始使用 Customer Insights 小節
 
-本節包含可協助您逐步完成設定 Customer Insights 環境。 
+本節包含可協助您逐步完成設定 Customer Insights 環境。
 
 1. **新增資料** 卡可協助您進行資料匯入。 Customer Insights 支援 [數個選項，可讓您匯入客戶的相關資料](data-sources.md)。 選取 **新增資料來源** 即可開始使用。
 1. 初始資料匯入成功後，您可以使用 **整合資料** 卡資料，並協調不同來源的資料 [建立整合客戶個人資料](data-unification.md)。 

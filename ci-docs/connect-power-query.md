@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645801"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800134"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連線到 Power Query 資料來源
 
@@ -76,7 +76,7 @@ Power Query提供一組各式各樣的連接器來內嵌資料。 Dynamics 365 C
 
 1. 移至 **資料** > **資料來源**。
 
-2. 在您要變更的資料來源旁邊選取垂直省略號，然後從下拉式功能表中選取 **編輯**。
+2. 在您要變更的資料來源旁邊選取垂直省略符號 (&vellip;)，然後從下拉式功能表中選取 **編輯**。
 
    > [!div class="mx-imgBorder"]
    > ![編輯選項。](media/edit-option-data-sources.png "編輯選項")

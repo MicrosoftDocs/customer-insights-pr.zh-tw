@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645761"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800410"
 ---
 # <a name="custom-machine-learning-models"></a>自訂機器學習模型
 
@@ -92,7 +92,7 @@ ms.locfileid: "8645761"
 
 ## <a name="edit-a-workflow"></a>編輯工作流程
 
-1. 在 **自訂模型** 頁面上，選取先前建立之工作流程旁邊 **動作** 欄中的垂直省略符號，然後選取 **編輯**。
+1. 在 **自訂模型** 頁面上，選取先前建立之工作流程旁邊 **動作** 欄中的垂直省略符號 (&vellip;)，然後選取 **編輯**。
 
 1. 您可以在 **顯示名稱** 欄位中更新您的工作流程可識別名稱，但不能變更已組態的 Web 服務或管道。 選取 **下一步**。
 
@@ -108,7 +108,7 @@ ms.locfileid: "8645761"
 
 ## <a name="run-a-workflow"></a>執行工作流程
 
-1. 在 **自訂模型** 頁面上，選取先前建立之工作流程旁邊 **動作** 欄中的垂直省略符號。
+1. 在 **自訂模型** 頁面上，選取先前建立之工作流程旁邊 **動作** 欄中的垂直省略符號 (&vellip;)。
 
 1. 選取 **執行**。
 
@@ -116,7 +116,7 @@ ms.locfileid: "8645761"
 
 ## <a name="delete-a-workflow"></a>刪除工作流程
 
-1. 在 **自訂模型** 頁面上，選取先前建立之工作流程旁邊 **動作** 欄中的垂直省略符號。
+1. 在 **自訂模型** 頁面上，選取先前建立之工作流程旁邊 **動作** 欄中的垂直省略符號 (&vellip;)。
 
 1. 選取 **刪除**，並確認刪除。
 

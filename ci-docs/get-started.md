@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741123"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833529"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>開始使用 Dynamics 365 Customer Insights
 
@@ -25,21 +25,21 @@ Customer Insights 可協助您深入瞭解您的客戶。 連接各種不同交�
 
 ## <a name="step-1-create-an-environment"></a>步驟 1：建立環境
 
-若要開始使用，您必須建立環境以在其中作業。 如果您的組織已經購買授權，請參閱[建立環境](create-environment.md)。 若要開始試用以進行 Customer Insights，請參閱[設定試用環境](trial-signup.md)。
+首先，建立一個工作環境。 如果您的組織已經購買授權，請參閱[建立環境](create-environment.md)。 若要開始試用以進行 Customer Insights，請參閱[設定試用環境](trial-signup.md)。
 
 ## <a name="step-2-explore-customer-insights"></a>步驟 2：探索 Customer Insights
 
-第一次登入 Customer Insights 時，您可以進行設定並探索產品。
+第一次登入 Customer Insights 時，請進行設定並探索產品。
 
 1. 使用您的 Microsoft Azure Active Directory (AAD) 使用者帳戶[登入 Customer Insights](https://home.ci.ai.dynamics.com)。
 
-1. [變更環境](manage-environments.md#switch-environments)以查看示範資料，並 [探索 Customer Insights](home.md)。
+1. 變更環境以查看示範資料，並[探索 Customer Insights](home.md)。
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>步驟 3：為您的資料擷取、整合和設定關聯
 
-整合個人資料是取得見解並對資料進行動作的基礎。 從不同的來源取得資料，並執行資料整合程序以結合成整合個人資料。 指定擷取實體之間的關聯，來使用擴充功能將資訊新增至個人資料。
+整合個人資料是取得見解並對資料進行動作的基礎。 從不同的來源取得資料，並執行資料整合程序以結合成整合個人資料。 指定已擷取實體之間的關聯，並使用擴充功能將資訊新增至設定檔。
 
-1. 由多個選項中建立資料來源，插入資料。 在[Power Query 連接器](connect-power-query.md)、[Common Data Model 料夾 ](connect-common-data-model.md)或 [Microsoft Dataverse](connect-dataverse-managed-lake.md) 之間做選擇。 
+1. 由多個選項中建立資料來源，插入資料。 在[Power Query 連接器](connect-power-query.md)、[Common Data Model 料夾 ](connect-common-data-model.md)或 [Microsoft Dataverse](connect-dataverse-managed-lake.md) 之間做選擇。
 
 1. 透過確認[來源欄位](map-entities.md)、移除[重複資料](remove-duplicates.md)、 [比對條件](match-entities.md)以及 [整合欄位](merge-entities.md)，執行[資料整合程序](data-unification.md)。
 
@@ -47,7 +47,7 @@ Customer Insights 可協助您深入瞭解您的客戶。 連接各種不同交�
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>步驟 4：利用預測、活動及量值來增強整合個人資料
 
-設定整合個人資料後，您可以增強資料，並進一步增加裡面提供的資訊。
+設定統一設定檔，可增強您的資料，並進一步增加他們所提供的資訊。
 
 1. 從擴充提供者的擴充庫中進行選擇，來擴充[您的客戶資料](enrichment-hub.md)。
 
@@ -59,7 +59,7 @@ Customer Insights 可協助您深入瞭解您的客戶。 連接各種不同交�
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>步驟 5：用各種匯出選項建立客戶細分並啟動資料
 
-現在您的資料已完成且包含了關於您的客戶的大量資訊，現在我們來看看有哪些方式能對該資料採取動作。
+現在您的資料已完成，而且包含關於您的客戶的大量資訊，請尋找對該資料採取動作的方式。
 
 1. [建立客戶細分](segments.md)，也就是客戶群的子集，以確保您的動作與目標客戶相關。
 

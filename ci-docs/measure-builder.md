@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645923"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800316"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>用量值產生器從頭開始建立量值
 
@@ -88,7 +88,7 @@ ms.locfileid: "8645923"
 
 1. 若要對量值新增更多計算，請選取 **新增計算**。 要使用實體進行新的計算，您只能在相同實體路徑進行。 在量值輸出實體中，更多計算將顯示為新的欄。
 
-1. 選取計算上的 **...**，從量值 **複製**、**重新命名** 或 **移除** 計算。
+1. 選取計算上的垂直省略符號 (&vellip;)，以從量值 **複製**、**重新命名** 或 **移除** 計算。
 
 1. 在 **預覽** 區域中，您會看到量值輸出實體的資料架構，其中包括篩選和維度。 預覽會動態反應設定中的變更。
 
@@ -158,7 +158,7 @@ ms.locfileid: "8645923"
    1. 請選取 **關聯路徑** 並選擇應用來找出量值的實體路徑。 如果只有單一路徑指向 *客戶* 實體，就不會顯示此控制項。
    1. 選取 **完成** 以套用至您的選取。
 
-1. 選取計算上的 **...**，從量值 **複製**、**重新命名** 或 **移除** 計算。
+1. 選取計算上的垂直省略符號 (&vellip;)，以從量值 **複製**、**重新命名** 或 **移除** 計算。
 
 1. 在 **預覽** 區域中，您會看到量值輸出實體的資料架構，其中包括篩選和維度。 預覽會動態反應設定中的變更。
 
