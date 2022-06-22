@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 795eaa3598257f5188070f6ea02d04e4423b66eb
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 6dfaa09cd80498e9a4e4dea6a07ce6e9d29105e2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833548"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011535"
 ---
 # <a name="how-to-create-a-new-environment"></a>作法：建立新環境
 
@@ -67,6 +67,7 @@ ms.locfileid: "8833548"
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>步驟 3：連線到 Microsoft Dataverse
 
 **Microsoft Dataverse** 步驟讓您連接 Customer Insights 和您的 Dataverse 環境。 與 Dataverse 共用資料，以便以 Dataverse 為基礎的商務應用程式搭配使用 (例如 Dynamics 365 Marketing 或 Power Apps 的模型導向應用程式)。
+
 
 如果您沒有自己的 Dataverse 環境，請將此欄位保留空白，我們會為您建立一個。
 

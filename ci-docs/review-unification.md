@@ -1,7 +1,7 @@
 ---
 title: 審查資料整合
 description: 審查資料整合步驟、建立整合客戶個人資料，以及審查結果
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741628"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844076"
 ---
 # <a name="review-data-unification"></a>審查資料整合
 
@@ -32,11 +32,13 @@ ms.locfileid: "8741628"
 
 1. 若要查看並進行任何變更，請在任一資料整合步驟上選取 **編輯**。
 
-1. 如果您對選取項目滿意，請選取 **建立客戶個人資料**。 建立整合客戶個人資料時，就會顯示 **整合** 頁面。 整合演算法需要一段時間才能完成，而且在完成前您無法變更設定。
+1. 如果您對選取項目滿意，請選取 **建立客戶個人資料**。 建立整合客戶個人資料時，就會顯示 **整合** 頁面。 除了 **來源欄位** 以外的所有磚都會顯示 **已排入佇列** 或 **重新整理中** 狀態。
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="整合頁面的螢幕擷取畫面，顯示「已排入佇列」或「重新整理中」的磚。":::
 
-當整合程序完成時，整合客戶個人資料實體 (稱為 *customer*) 會列在 **實體** 頁面的 **個人資料** 區段。 第一次成功的整合執行會建立整合的 *Customer* 實體。 所有後續的執行都會展開該實體。
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+整合演算法需要一段時間才能完成，而且在完成前您無法變更設定。 當整合程序完成時，整合客戶個人資料實體 (稱為 *customer*) 會列在 **實體** 頁面的 **個人資料** 區段。 第一次成功的整合執行會建立整合的 *Customer* 實體。 所有後續的執行都會展開該實體。
 
 ## <a name="review-the-results-of-data-unification"></a>審查資料整合結果
 

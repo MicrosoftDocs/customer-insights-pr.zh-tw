@@ -1,95 +1,95 @@
 ---
 title: 使用 Azure 地圖服務的位置資料擴充客戶個人資料
 description: 關於 Azure 地圖服務第一方企業擴充的一般資訊。
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755344"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953618"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>使用 Azure 地圖服務擴充客戶個人資料 (預覽版)
 
-Azure 地圖服務提供以位置為中心的資料和服務，利用內建位置智慧並根據地理空間資料來提供體驗。 Azure 地圖服務資料擴充服務改善客戶位置資訊的精準度。 它可將地址正規化和緯度及經度擷取等功能帶到 Dynamics 365 Customer Insights 中。
+Azure 地圖服務提供以位置為核心的資料和服務，利用內建位置智慧的地理空間資料來提供體驗。 Azure 地圖服務資料擴充服務改善客戶位置資訊的精準度。 它可將地址正規化和緯度及經度擷取等功能帶到 Dynamics 365 Customer Insights 中。
 
 ## <a name="prerequisites"></a>先決條件
 
-若要設定 Azure 地圖服務資料擴充，必須符合下列先決條件：
+- 一個有效的 Azure 地圖服務訂閱。 若要取得訂閱，請[註冊或取得免費試用](https://azure.microsoft.com/services/azure-maps/)。
 
-- 您必須擁有 Azure 地圖服務訂用帳戶。 若要取得訂閱，您可以[註冊或取得免費試用版](https://azure.microsoft.com/services/azure-maps/)。
-
-- 可以使用 Azure 地圖服務 [連接](connections.md)，*或者* 您具有[系統管理員](permissions.md#admin)權限和有效的 Azure 地圖服務 API 金鑰。
-
-## <a name="configure-the-enrichment"></a>擴充設定
-
-1. 移至 **資料** > **擴充**。 
-
-1. 在 **位置** 圖格上，選取 **擴充我的資料**。
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="Azure 地圖服務圖格。":::
-
-1. 從下拉式清單選取一個[連結](connections.md)。 如果沒有可用的 Azure 地圖服務連接，請與系統管理員聯繫。 如果您是系統管理員，您可以[設定 Azure 地圖服務的連接](#configure-the-connection-for-azure-maps)。 
-
-1. 選取 **下一步** 確認選取。
-
-1. 選擇您想要以 Azure 地圖服務位置資料擴充的 **客戶資料集**。 您可以選取 **客戶** 實體來擴充所有整合客戶個人資料，或選取一個客戶細分實體來增加該客戶細分中包含的客戶個人資料。
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="選擇客戶資料集時的螢幕擷取畫面。":::
-
-1. 選擇是否要將欄位對應至主要和/或次要地址。 您可以為這兩個地址指定欄位對應，並分別為兩個地址擴充個人資料 &mdash;例如，家庭地址和商務地址。 選取 **下一步**。
-
-1. 定義整合個人資料欄位，以用在 Azure 地圖服務中尋找符合的人口統計資料。 選擇的主要或次要地址必須要有 **街道 1** 和 **郵遞區號** 欄位。 為了獲得更高的精準度，您可以新增更多欄位。
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Azure 地圖服務擴充設定頁面。":::
-
-1. 請選取 **下一步**，完成欄位對應。
-
-1. 評估是否要修改 **進階設定**。 這些設定是為了提供處理進階使用案例時的最大彈性，但是預設值在大多數案例中將會夠用：
-   - **地址類型**：預設行為是擴充會回傳最相符地址，即使是不完整的。 若要只取得完整的地址 &mdash;例如，包含房屋號碼的地址 &mdash;請清除 **點地址** 外的所有的核取方塊。 
-   - **語言**：根據預設，會確定地址位於的地區，以該地區語言來傳回地址。 若要套用標準地址語言，請從下拉式功能表中選取語言。 例如，選取 **英語** 時，會傳回 **Copenhagen, Denmark** 而非 **København, Danmark**。
-
-1. 提供擴充的名稱。
-
-1. 檢閱您的選項，然後選取 **儲存擴充**。
+- Azure 地圖服務的[連接](connections.md)是由系統管理員[設定](#configure-the-connection-for-azure-maps)的。
 
 ## <a name="configure-the-connection-for-azure-maps"></a>設定 Azure 地圖服務的連接
 
-您必須是 Customer Insights 中的系統管理員，才能設定連接。 在設定擴充時，請選取 **新增連接**，或移至 **管理** > **連接** ，並在 Azure 地圖服務圖格上選取 **設定**。
+您必須是 Customer Insights 中的[系統管理員](permissions.md#admin)，且擁有有效的 Azure 地圖服務 API 金鑰。
 
-1. 在 **顯示名稱** 方塊中，輸入連接的名稱。
+1. 在設定擴充時，請選取 **新增連接**，或移至 **管理** > **連接** ，並在 Azure 地圖服務圖格上選取 **設定**。
 
-1. 提供有效的 Azure 地圖服務 API 金鑰。
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure 地圖服務連接設定頁面。":::
 
-1. 檢閱 **資料隱私權和合規性** 並選取 **我同意** 的核取方塊，表示同意
+1. 輸入連接的名稱以及有效的 Azure 地圖服務 API 金鑰。
 
-1. 選取 **驗證** 來驗證設定。
+1. 檢閱並選取 **我同意**，提供您的[資料隱私權和合規性](#data-privacy-and-compliance)許可。
 
-1. 完成驗證之後，請選取 **儲存**。
+1. 選取 **驗證** 來驗證設定，然後選取 **儲存**。
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure 地圖服務連接設定頁面。":::
+### <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
+
+當您啟用 Dynamics 365 Customer Insights 將資料傳輸到 Azure 地圖服務時，您允許在 Dynamics 365 Customer Insights 合規性邊界之外傳輸資料，包括潛在的敏感性資料 (例如個人資料)。 Microsoft 將會在您指示時傳送這類資料，但是您必須負責確保 Azure Maps 符合您可能會承擔的任何隱私權或資訊安全義務。 如需詳細資訊，請移至 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
+您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此富集作用，以便不再繼續使用此功能。
+
+## <a name="configure-the-enrichment"></a>擴充設定
+
+1. 移至 **資料** > **擴充**，然後選取 **探索** 索引標籤。
+
+1. 在 Microsoft Azure 地圖服務磚上的 **位置**，選取 **擴充我的資料**。
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="Azure 地圖服務圖格。":::
+
+1. 檢閱概覽，然後選擇 **下一步**。
+
+1. 選取連接。 如果沒有可用的連接，請與系統管理員聯繫。
+
+1. 選取 **下一步**。
+
+1. 選取 **客戶資料集**，然後選擇要使用 Microsoft 的資料進行擴充的個人資料或客戶細分。 *Customer* 實體可擴充所有客戶個人資料，然而客戶細分實體僅擴充位於該客戶細分的客戶個人資料。
+
+1. 定義要用於比對的整合個人資料欄位類型：主要和/或次要地址。 您可以分別指定欄位對應到兩個地址並且指定擴充個人資料給兩個地址。 例如，如果是住家地址或公司地址。 選取 **下一步**。
+
+1. 將您的欄位對應至 Azure 地圖服務的位置資料。 **街道 1** 和 **郵遞區號** 欄位是選取的主要和/或次要位址的必要欄位。 為了提高比對精準度，請新增更多的欄位。
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Azure 地圖服務的屬性對應。":::
+
+1. 請選取 **下一步**，完成欄位對應。
+
+1. 檢閱 **進階設定**，這提供最大的彈性來處理進階使用案例。 但是，下列預設值通常不需要變更。
+
+   - **地址類型**：即使未完成，也會回傳最佳地址比對結果。 若要只取得完整的地址 &mdash;例如，包含房屋號碼的地址 &mdash;請清除 **點地址** 外的所有的核取方塊。
+   - **語言**：根據地址地區，以該語言回傳地址。 若要套用標準地址語言，請從下拉式功能表中選取語言。 例如，選取 **英語** 時，會回傳 **Copenhagen, Denmark** 而不是 **København, Danmark**。
+   - **結果的最大數量**：每個地址的結果數量。
+
+1. 選取 **下一步**。
+
+1. 請提供擴充的 **名稱** 與 **輸出實體名稱**。
+
+1. 檢閱選擇之後，請選取 **儲存擴充**。
+
+1. 選取 **執行** 以開始擴充程序，或者直接關閉返回至 **擴充** 頁面。
 
 ## <a name="enrichment-results"></a>擴充結果
 
-若要開始擴充程序，請從命令列中選取 **執行**。 您也可以讓系統在[排定的重新整理](system.md#schedule-tab)過程中自動執行擴充。 處理時間將視客戶資料的大小與 API 回覆時間而定。
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-完成擴充程序後，您可以在 **我的擴充** 中檢閱最新擴充的客戶個人資料。 此外，您還會找到上次更新時間以及已擴充的設定檔數目。
-
-您可以選取 **檢視擴充的資料** 來存取每個已擴充設定檔的詳細檢視表。
+**已擴充欄位的客戶數** 可讓您向下鑽研到每個擴充的欄位。
 
 ## <a name="next-steps"></a>後續步驟
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
-
-當您啟用 Dynamics 365 Customer Insights 將資料傳輸到 Azure 地圖服務時，您允許在 Dynamics 365 Customer Insights 合規性邊界之外傳輸資料，包括潛在的敏感性資料 (例如個人資料)。 Microsoft 將會在您指示時傳送這類資料，但是您必須負責確保 Azure Maps 符合您可能會承擔的任何隱私權或資訊安全義務。 如需詳細資訊，請移至 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
-您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此富集作用，以便不再繼續使用此功能。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833758"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011877"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights 試用版常見問題
 
@@ -68,7 +68,7 @@ ms.locfileid: "8833758"
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>試用版限制和配額是什麼？
 
-- 您無法使用 Azure Azure Data Lake Storage 帳戶在 Customer Insights 試用期間儲存輸出資料。 但是，您可以從 Data Lake storage 帳戶擷取資料。
+- 在 Customer Insights 試用期間，您無法使用 Azure Data Lake Storage 帳戶儲存輸出資料。 但是，您可以從 Data Lake Storage 帳戶內嵌資料。
 - 開始使用 Customer Insights 試用版時，您最多可以儲存 3 GB 的資料到自動佈建的 Dataverse 環境。
 
 ## <a name="customer-insights-specific-questions"></a>Customer Insights 特定問題
@@ -83,7 +83,7 @@ ms.locfileid: "8833758"
 
 以下是 **不可用** 的功能：
 
-- 您無法建立使用自己的 Azure 資料湖儲存體帳戶的新環境。
+- 使用 Azure Data Lake Storage 帳戶的新環境將無法建立。
 - 您無法刪除試用環境。
 
 ### <a name="how-long-does-the-trial-last"></a>試用版使用期間多久？

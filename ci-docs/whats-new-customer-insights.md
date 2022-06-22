@@ -1,19 +1,19 @@
 ---
-title: 新功能以及近期即將推出的功能
+title: 新功能與更新功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833620"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843337"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的新功能
 
@@ -24,6 +24,37 @@ ms.locfileid: "8833620"
 > [!TIP]
 > 若要提出功能要求和產品建議並票選，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
 
+## <a name="may-2022-updates"></a>2022 年 5 月更新
+
+2022 年 5 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="updated-data-unification-experience"></a>更新的資料整合體驗
+
+ 資料整合可讓您將曾經不同的資料來源整合成單一主要資料集，並提供該資料的整合檢視表。 資料可以在單一實體或多個實體上整合。 首先，[選取實體和來源欄位](map-entities.md)、[移除重複的記錄](remove-duplicates.md)、指定[比對條件](match-entities.md)的規則，以及定義[要包括在整合客戶個人資料中的欄位](merge-entities.md)。
+
+如需詳細資訊，請參閱[資料整合概觀](data-unification.md)。
+
+### <a name="refreshed-home-page-in-customer-insights"></a>重整的 Customer Insights 首頁
+
+**首頁** 引導您完成主要功能的設定程序，並提供客戶細分、量值及擴充資料的摘要。 我們已重整體驗，更有效地提供相關資訊。
+
+如需詳細資訊，請參閱[匯出 Customer Insights](home.md)。
+
+### <a name="track-usage-of-a-segment"></a>追蹤客戶細分的使用方式
+
+如果應用程式是由連接至 Customer Insights 的 Dataverse 組織所建立，則現在開始可以[追蹤客戶細分的使用方式](segments.md#track-usage-of-a-segment)。 對於 [Dynamics 365 Marketing 的客戶旅程中使用的 Customer Insights 客戶細分](/dynamics365/marketing/real-time-marketing-ci-profile)，系統會通知您該客戶細分的使用方式。
+
+### <a name="export-to-criteo"></a>匯出至 Criteo
+
+Criteo 是可協助使用者管理數位廣告的線上平台。 您現在可以匯出匯出整合客戶個人資料的客戶細分以搭配 Criteo 產生廣告活動、提供電子郵件行銷，並且使用特定的客戶群組。
+
+如需詳細資訊，請參閱[匯出客戶細分至 Criteo (預覽版)](export-criteo.md)。
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>為環境建立而精簡的文件結構
+
+在 Customer Insights 中，我們已重新檢視過與環境建立和環境管理相關的協助文件。 這些文章現在會分組到目錄下的「環境」節點。 重建的文章在設定環境的各種不同方式上將提供更多指引，並有著更清晰的結構。 如果您有任何意見反應，請透過説明文章結尾附近的控制項目告訴我們。
+
+如需詳細資訊，請參閱[如何建立新環境](create-environment.md)。
 
 ## <a name="april-2022-updates"></a>2022 年 4 月更新
 

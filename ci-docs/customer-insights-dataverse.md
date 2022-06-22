@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833666"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011510"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>在 Microsoft Dataverse 中使用 Customer Insights 資料
 
 Customer Insights 提供可讓輸出實體用作 [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) 的選項。 這種整合可透過少量/無程式碼方法，實現輕鬆的資料共用和自訂開發。 [輸出實體](#output-entities)可以作為 Dataverse 環境中的資料表。 您可以以 Dataverse 資料表，使用其他任何應用程式的資料。 這些資料表能實現多種案例，例如：以 Power Automate 自動化工作流程，或以 Power Apps 建立應用程式的。
 
-連接至 Dataverse 環境也讓您可以[使用 Power Platform 的資料流程和閘道從內部部署資料來源來擷取資料](data-sources.md#add-data-from-on-premises-data-sources)。
+連接至 Dataverse 環境也讓您可以[使用 Power Platform 的資料流程和閘道從內部部署資料來源來擷取資料](connect-power-query.md#add-data-from-on-premises-data-sources)。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -57,7 +57,7 @@ Customer Insights 提供可讓輸出實體用作 [Microsoft Dataverse](/powerapp
 將 Dataverse 與您自己的 Azure Data Lake Storage 帳戶搭配使用時，有兩個限制：
 
 - Dataverse 組織與 Azure Data Lake Storage 帳戶之間存在一對一的對應關係。 Dataverse 組織連接至儲存體帳戶後，便無法連接至另一個儲存體帳戶。 這個限制可防止 Dataverse 不填入多個儲存體帳戶。
-- 如果需要設定 Azure Private Link 來存取您的 Azure Data Lake Storage 帳戶，則資料共用將無法運作，因為它位於防火牆後面。 Dataverse 目前不支援透過 Private Link 來連接至私人端點。
+- 如果需要設定 Azure Private Link 以存取您的 Azure Data Lake Storage 帳戶，則資料共用將無法進行，因為它在防火牆後面。 Dataverse 目前不支援透過 Private Link 來連接至私人端點。
 
 ### <a name="set-up-powershell"></a>設定 PowerShell
 

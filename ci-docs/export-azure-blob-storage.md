@@ -1,19 +1,19 @@
 ---
 title: 將 Customer Insights 資料匯出到 Azure Blob 儲存體
 description: 了解如何設定連接並匯出至 Blob 儲存體。
-ms.date: 10/06/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757376"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947128"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>將客戶細分清單及其他資料匯出至 Azure Blob 儲存體 (預覽版)
 
@@ -58,16 +58,19 @@ ms.locfileid: "8757376"
 
 儲存匯出並不會立即執行匯出。
 
-每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。     
+每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。
 
-您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。 
+您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。
 
 匯出的資料會儲存在您設定的 Blob 儲存體容器中。 容器中會自動建立下列資料夾路徑：
 
 - 關於系統產生的來源實體和實體：  
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - 範例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
+  
+  > [!TIP]
+  > 若匯出包含大量資料的實體，在每個匯出的相同資料夾中可能會產生多個 CSV 檔案。 基於效能因素，將進行分割匯出，以將完成匯出花費的時間降至最低。
+
 - 匯出實體的 model.json 將在 %ExportDestinationName% 層級。  
   - 範例: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 

@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800271"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011463"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>資料來源擴充 (預覽版)
 
@@ -29,9 +29,11 @@ ms.locfileid: "8800271"
 
 1. 請在您要擴充的資料來源旁邊，選取垂直省略符號 (&vellip;)，接著選取 **擴充**。
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="資料來源擴充頁面。":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="已醒目提示「擴充」的資料來源頁面":::
 
    **探索** 索引標籤會顯示[受支援的資料來源擴充選項](#supported-data-source-enrichments)。
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="資料來源擴充頁面。":::
 
 1. 選取 **擴充我的資料**，以設定資料來源擴充。 隨即自動填入輸出實體名稱。
 

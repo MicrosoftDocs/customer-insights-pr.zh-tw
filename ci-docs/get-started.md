@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833529"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011969"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>開始使用 Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Customer Insights 可協助您深入瞭解您的客戶。 連接各種不同交�
 
 整合個人資料是取得見解並對資料進行動作的基礎。 從不同的來源取得資料，並執行資料整合程序以結合成整合個人資料。 指定已擷取實體之間的關聯，並使用擴充功能將資訊新增至設定檔。
 
-1. 由多個選項中建立資料來源，插入資料。 在[Power Query 連接器](connect-power-query.md)、[Common Data Model 料夾 ](connect-common-data-model.md)或 [Microsoft Dataverse](connect-dataverse-managed-lake.md) 之間做選擇。
+1. 由多個選項中建立資料來源，插入資料。  [Azure Data Lake Storage (包括 Common Data Model)](connect-common-data-model.md)、 [Azure Synapse Analytics](connect-synapse.md)、[Microsoft Dataverse](connect-dataverse-managed-lake.md)，或 [Power Query 連接器](connect-power-query.md)之間做選擇。
 
 1. 透過確認[來源欄位](map-entities.md)、移除[重複資料](remove-duplicates.md)、 [比對條件](match-entities.md)以及 [整合欄位](merge-entities.md)，執行[資料整合程序](data-unification.md)。
 

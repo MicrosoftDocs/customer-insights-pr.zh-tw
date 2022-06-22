@@ -1,7 +1,7 @@
 ---
 title: 檢視客戶設定檔
 description: 取得您的統一客戶資料的組合視圖。
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755772"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947036"
 ---
 # <a name="customer-profiles"></a>客戶設定檔
 
@@ -55,9 +55,9 @@ ms.locfileid: "8755772"
 
 選取任何客戶圖格打開 **客戶詳細資料頁面**。 此視圖表包含選取客戶的統一資訊。 客戶詳細資料包括內容如下：
 
-**客戶設定檔圖格**：此方塊顯示統一 *客戶* 實體中的不同值。 若選取的客戶設定檔欄位沒有任何數值，不會顯示該欄位。 圖格結構化為下列區段：
+**客戶設定檔圖格**：此方塊顯示統一 *客戶* 實體中的不同值。 除了地址欄位，若選定的客戶個人資料欄位沒有任何值，則不會顯示該欄位。 圖格結構化為下列區段：
 
-- 第一個區段顯示一組預定義欄位，搜尋 & 篩選條件索引一部分的所有欄位隨之在後。 如果設定檔包含此類欄位，則所有位址相關欄位會組合成單行。
+- 第一個區段顯示一組預定義欄位，搜尋 & 篩選條件索引一部分的所有欄位隨之在後。 所有地址相關欄位會組合成單列，即便個人資料中不存在地址資訊，此列仍會顯示。
 - **此客戶的連絡人**：在商務帳戶環境中，您將看到此客戶的所有相關連絡人做為第二個區段。 每位連絡人均顯示於其欄位中。 空白欄位會隱藏。
 - **其他欄位**：顯示選取客戶的其餘欄位 (識別碼除外)。
 - **識別碼**：列出其對應實體名稱下方的所有識別碼。 欄位根據語義辨別為識別碼，依此將欄位分類。

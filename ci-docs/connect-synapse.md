@@ -1,7 +1,7 @@
 ---
 title: 內嵌 Azure Synapse Analytics 的資料
 description: 以 Azure Synapse 的資料庫作為 Dynamics 365 Customer Insights 的資料來源。
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645795"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011417"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>連接至 Azure Synapse 資料來源 (預覽版)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>連接至 Azure Synapse Analytics 資料來源 (預覽版)
 
 Azure Synapse Analytics 是一項企業分析服務，可加快資料倉儲和大型資料系統的見解生成速度。 Azure Synapse Analytics 彙集了企業資料倉儲中使用到的最佳 SQL 技術、用於巨量資料的 Spark 技術、用於日誌和時間序列分析的資料總管、用於資料整合和 ETL/ELT 的 Pipelines，以及其他 Azure 服務(例如，Power BI、Cosmos DB、和 AzureML) 的深度整合。
 
@@ -24,16 +24,14 @@ Azure Synapse Analytics 是一項企業分析服務，可加快資料倉儲和�
 
 ## <a name="prerequisites"></a>先決條件
 
-若要設定 Dynamics 365 Customer Insights 連結 Azure Synapse，必須符合以下先決條件：
-
 > [!IMPORTANT]
 > 請務必根據說明來設定全部的 **角色指派**。  
 
-## <a name="prerequisites-in-customer-insights"></a>Customer Insights 的先決條件
+**在 Customer Insights 中**：
 
 * 擁有 Customer Insights 中的 **系統管理員** 角色。 了解更多有關[Customer Insights 的使用者權限](permissions.md#assign-roles-and-permissions)。
 
-在 Azure 中： 
+**在 Azure 中**：
 
 - 啟用中的 Azure 訂用帳戶。
 
@@ -47,7 +45,7 @@ Azure Synapse Analytics 是一項企業分析服務，可加快資料倉儲和�
 
 - 在 Azure Synapse workspace 中，*Customer Insights 的服務主體* 需要指派 **Synapse 系統管理員** 角色。 如需詳細資訊，請參閱[如何設定 Synapse 工作區的存取控制](/azure/synapse-analytics/security/how-to-set-up-access-control)。
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>連接至 Azure Synapse Analytics 中的 Data Lake 資料庫
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>連接至 Azure Synapse Analytics 中的資料胡資料庫
 
 1. 移至 **資料** > **資料來源**。
 
@@ -55,14 +53,16 @@ Azure Synapse Analytics 是一項企業分析服務，可加快資料倉儲和�
 
 1. 選擇 **Azure Synapse Analytics (預覽版)** 方法。
 
-1. 提供資料來源的 **名稱**，然後選取 **下一步** 以建立資料來源。 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="連接至 Synapse Analytics 資料的對話方塊":::
+  
+1. 輸入資料來源的 **名稱** 和 **說明** (選填)。
 
 1. 選擇對 Azure Synapse Analytics [可用的連線](connections.md)，或建立一個新連線。
 
-1. 在選擇的 Azure Synapse Analytics 連線中，從連線的工作區中選擇一個 **Lake 資料庫**，然後選取 **下一步**。
+1. 在選定的 Azure Synapse Analytics 連接中，從連接的工作區中選擇一個 **資料庫**，然後選取 **下一步**。
 
-1. 從連線的資料庫中選取要內嵌的實體。 
+1. 從連結的資料庫中選取要內嵌的實體，然後選取 **下一步**。
 
-1. 或者，選擇允許進行資料分析的資料實體。 
+1. 或者，選擇允許進行資料分析的資料實體。
 
-1. 選取 **儲存** 以套用所選，並開始從連線至 Azure Synapse Analytics 內 Lake 資料庫表格的新建資料來源擷取資料。
+1. 選取 **儲存** 以套用所選，並開始從連線至 Azure Synapse Analytics 內 Lake 資料庫表格的新建資料來源擷取資料。 **資料來源** 頁面會打開，顯示處於 **重新整理** 狀態中的新資料來源。

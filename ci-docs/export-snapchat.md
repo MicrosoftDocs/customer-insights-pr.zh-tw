@@ -1,19 +1,19 @@
 ---
 title: 將 Customer Insights 資料匯出至 Snapchat
 description: 了解如何設定連接並匯出至 Snapchat。
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645885"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947266"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>將客戶細分匯出至 Snapchat (預覽版)
 
@@ -21,7 +21,8 @@ ms.locfileid: "8645885"
 
 ## <a name="prerequisites-for-a-connection"></a>連接的先決條件
 
--   您擁有 [Snapchat 商務帳號](https://business.snapchat.com/)、[Snapchat 廣告帳號](https://ads.snapchat.com/)以及對應的系統管理員認證。
+-   您擁有 [Snapchat 商務帳號](https://business.snapchat.com/)、[Snapchat 廣告帳號](https://ads.snapchat.com/)以及對應的系統管理員認證。 您必須至少是組織帳戶的成員，以及指定 AD 帳戶的資料管理員。 
+-   在 Snapchat 對象管理者中，至少有一個類型為 SAM (Snap 對象對比) 的對象。 
 -   在 Customer Insights 中，您具有[已設定的客戶細分](segments.md)。
 -   匯出區段的統一客戶設定檔包含代表電子郵件地址的欄位。
 
@@ -60,7 +61,7 @@ ms.locfileid: "8645885"
 
 1. 在 **匯出的連結** 欄位中，在 Snapchat 區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的連接可供您使用。
 
-1. 輸入 [**Snapchat 對象識別碼**](https://businesshelp.snapchat.com/s/article/custom-audiences)。
+1. 輸入 [**Snapchat 客戶細分/對象識別碼**](https://businesshelp.snapchat.com/s/article/custom-audiences)。 在 Snapchat 觀眾管理者中選取對象之後，即可在 URL 中找到對象的識別碼。 
 
 1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 這必須匯出客戶細分到 Snapchat。
 

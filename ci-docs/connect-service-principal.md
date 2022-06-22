@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833372"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011831"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>使用 Azure 服務主體連接到 Azure Data Lake Storage 帳戶
 
@@ -51,7 +51,13 @@ ms.locfileid: "8833372"
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>將權限授予服務主體以存取儲存體帳戶
 
-移至 Azure 入口網站，對服務主體授與您在其中使用 Customer Insights 的儲存體帳戶權限。
+移至 Azure 入口網站，對服務主體授與您在其中使用 Customer Insights 的儲存體帳戶權限。 必須把下列的其中一種角色指派給儲存體帳戶或容器：
+
+|認證|需求|
+|----------|------------|
+|目前登入使用者|**角色**：儲存體 Blob 資料讀者、儲存體 blob 參與者或儲存體 Blob 擁有者。<br>**等級**：可以在儲存體帳戶或容器上授與的權限。</br>|
+|Customer Insights 服務主體 -<br>使用 Azure Data Lake Storage 作為資料來源</br>|選項 1<ul><li>**角色**：儲存體 Blob 資料讀者、儲存體 blob 資料參與者或儲存體 Blob 資料擁有者。</li><li>**等級**：應該在儲存體帳戶授與的權限。</li></ul>選項 2 *(缺乏共用服務主體的儲存體帳戶權限)*<ul><li>**角色 1**：儲存體 Blob 資料讀者、儲存體 blob 資料參與者或儲存體 Blob 資料擁有者。</li><li>**等級**：應該在容器上授與的權限。</li><li>**角色 2**：儲存體 Blob 資料委派者。</li><li>**等級**：應該在儲存體帳戶授與的權限。</li></ul>|
+|Customer Insights 服務主體 - <br>使用 Azure Data Lake Storage 作為輸出或目的地</br>|選項 1<ul><li>**角色**：儲存體 blob 資料參與者或儲存體 Blob 擁有者。</li><li>**等級**：應該在儲存體帳戶授與的權限。</li></ul>選項 2 *(缺乏共用服務主體的儲存體帳戶權限)*<ul><li>**角色**：儲存體 blob 資料參與者或儲存體 Blob 擁有者。</li><li>**等級**：應該在容器上授與的權限。</li><li>**角色 2**：儲存體 Blob 委派者。</li><li>**等級**：應該在儲存體帳戶授與的權限。</li></ul>|
 
 1. 請前往 [Azure 管理員入口網站](https://portal.azure.com) 登入貴組織。
 
@@ -62,7 +68,7 @@ ms.locfileid: "8833372"
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="新增角色指派時， Azure 入口網站的螢幕擷取畫面。":::
 
 1. 在 **新增角色指派** 窗格上，設定下列屬性：
-   - 角色：**儲存體 Blob 資料參與者**
+   - 角色：建立在上述認證的儲存體 Blob 資料讀者、儲存體 blob 參與者或儲存體 Blob 擁有者。
    - 指派存取：**使用者、群組或服務主體**
    - 選取成員：**Dynamics 365 AI for Customer Insights** (您在此流程前面查詢的[服務主體](#create-a-new-service-principal))
 

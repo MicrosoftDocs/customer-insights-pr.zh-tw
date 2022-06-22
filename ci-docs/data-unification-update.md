@@ -1,7 +1,7 @@
 ---
 title: 更新整合設定
 description: 在整合設定中，更新重複規則、比對規則或整合欄位。
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755580"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844030"
 ---
 # <a name="update-the-unification-settings"></a>更新整合設定
 
@@ -43,8 +43,9 @@ ms.locfileid: "8755580"
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="頁面螢幕擷取畫面：醒目提示 [整合] 選項的資料整合頁面。":::
 
-   - 若要更新整合客戶個人資料 (包含或不包含相依性)，請參閱[客戶個人資料 的執行更新](#run-updates-to-the-unified-customer-profile)。
-   - 若要在不更新整合個人資料的情況下評估比對條件的品質，請參閱[執行比對條件](#run-matching-conditions)。 單一實體不會顯示 **僅執行比對條件** 選項。
+   - [執行比對條件](#run-matching-conditions)可以在不更新整合個人資料的情況下，快速評估比對條件 (重複資料刪除和比對規則) 的品質，。 單一實體不會顯示 **僅執行比對條件** 選項。
+   - [整合客戶個人資料](#run-updates-to-the-unified-customer-profile)以執行比對規則並更新整合客戶個人資料實體，且不影響相依性 (例如擴充、客戶細分或量值)。 相依程序不會執行，但是會根據[重新整理排程](system.md#schedule-tab)的定義進行重新整理。
+   - [整合客戶個人資料與相依性](#run-updates-to-the-unified-customer-profile)以執行比對規則並更新整合客戶個人資料實體以及所有相依性 (例如擴充、客戶細分或量值)。 所有程式都會自動重新執行。
 
 ## <a name="edit-source-fields"></a>編輯來源欄位
 
@@ -135,11 +136,13 @@ ms.locfileid: "8755580"
 
 ## <a name="run-matching-conditions"></a>執行比對條件
 
+執行比對條件僅執行重複資料刪除及比對規則，同時將更新 *Deduplication_* 與 *ConflationMatchPair* 實體。
+
 1. 在 **資料** > **整合** 頁面中，選取 **只執行比對條件**。
 
-   **重複資料記錄** 和 **比對條件** 磚會顯示 **已排入佇列** 或 **正在重新整理**。
+   **重複資料記錄** 和 **比對條件** 磚會顯示 **已排入佇列** 或 **正在重新整理** 狀態。
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. 當比對程序完成時，請在 **比對條件** 磚上選取 **編輯**。
 
@@ -153,10 +156,12 @@ ms.locfileid: "8755580"
 
 1. 從 **資料** > **整合** 頁面中，選取：
 
-   - **整合客戶個人資料**：更新整合客戶個人資料實體，且不影響相依性 (例如擴充、客戶細分或量值)。 相依程序不會執行，但是會根據[重新整理排程](system.md#schedule-tab)的定義進行重新整理。
+   - **整合客戶個人資料**：執行比對規則並更新整合客戶個人資料實體，且不影響相依性 (例如擴充、客戶細分或量值)。 相依程序不會執行，但是會根據[重新整理排程](system.md#schedule-tab)的定義進行重新整理。
 
-   - **整合客戶個人資料和相依性**：更新整合 個人資料和所有相依性。 所有程式都會自動重新執行。 在所有下游程序完成後，客戶個人資料就會反映更新的資料。
+   - **整合客戶個人資料和相依性**：執行比對規則並更新整合個人資料和所有相依性。 所有程式都會自動重新執行。 在所有下游程序完成後，客戶個人資料就會反映更新的資料。
 
-   **重複資料記錄**、**比對條件**，和 **整合客戶欄位** 磚會顯示 **已排入佇列** 或 **正在重新整理**。
+   **重複資料記錄**、**比對條件**，和 **整合客戶欄位** 磚會顯示 **已排入佇列** 或 **正在重新整理** 狀態。
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+在 **整合** 頁面上成功執行的結果，會顯示整合客戶個人資料的數量。

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645773"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947220"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>匯出區段清單和其他資料到 Azure Data Lake Storage Gen2 (預覽版)
 
@@ -21,11 +21,9 @@ ms.locfileid: "8645773"
 
 ## <a name="known-limitations"></a>已知限制
 
-1. 對於 Azure Data Lake Storage Gen2 而言，當您為自己的 Data Lake 建立儲存體帳戶時，您可以在[標準效能和進階效能層級](/azure/storage/blobs/create-data-lake-storage-account)之間任選其一。 如果您選擇進階效能層級，請選取進階塊體 blob 做為帳戶類型。 
+1. 對於 Azure Data Lake Storage Gen2 而言，當您為自己的 Data Lake 建立儲存體帳戶時，您可以在[標準效能和進階效能層級](/azure/storage/blobs/create-data-lake-storage-account)之間任選其一。 如果您選擇進階效能層級，請選取進階塊體 blob 做為帳戶類型。
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>設定連線到 Azure Data Lake Storage Gen2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>設定連線到 Azure Data Lake Storage Gen2
 
 1. 移至 **管理** > **連接**。
 
@@ -39,7 +37,7 @@ ms.locfileid: "8645773"
     - 若要瞭解如何建立要可搭配 Azure Data Lake Storage Gen2 使用的儲存體帳戶，請參閱[建立儲存體帳戶](/azure/storage/blobs/create-data-lake-storage-account)。 
     - 若要進一步了解 Azure Data Lake Gen2 帳戶名稱及帳戶金鑰，請參閱 [Azure 入口網站中的管理儲存體帳戶設定](/azure/storage/common/storage-account-manage)。
 
-1. 選取 **儲存** 來完成連接。 
+1. 選取 **儲存** 來完成連接。
 
 ## <a name="configure-an-export"></a>設定匯出
 
@@ -57,8 +55,12 @@ ms.locfileid: "8645773"
 
 儲存匯出並不會立即執行匯出。
 
-每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。 
+每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。
+您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。
 
-匯出的資料會儲存在您設定的 Azure Data Lake Gen 2 儲存體容器中。 
+匯出的資料會儲存在您設定的 Azure Data Lake Gen 2 儲存體容器中。
+
+> [!TIP]
+> 若匯出包含大量資料的實體，在每個匯出的相同資料夾中可能會產生多個 CSV 檔案。 基於效能因素，將進行分割匯出，以將完成匯出花費的時間降至最低。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

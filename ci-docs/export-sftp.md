@@ -1,19 +1,19 @@
 ---
 title: 將 Customer Insights 資料匯出至 SFTP 主機 (含影片)
 description: 了解如何設定連接並匯出至 SFTP 位置。
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645769"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947174"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>將客戶細分和其他資料匯出至 SFTP (預覽版)
 
@@ -28,8 +28,8 @@ ms.locfileid: "8645769"
 ## <a name="known-limitations"></a>已知限制
 
 - 目前不支援在防火牆後的 SFTP 目標。 
-- 匯出執行時間依您的系統效能而定。 我們建議伺服器最小配置為兩個 CPU 核心和 1 Gb 的記憶體。 
-- 匯出最多 1 億份客戶設定檔的實體時，在使用兩個 CPU 核心和 1 Gb 記憶體的最少建議配置時，可能需要 90 分鐘。 
+- 匯出執行時間依您的系統效能而定。 我們建議伺服器最小配置為兩個 CPU 核心和 1 Gb 的記憶體。
+- 匯出最多 1 億份客戶設定檔的實體時，在使用兩個 CPU 核心和 1 Gb 記憶體的最少建議配置時，可能需要 90 分鐘。
 
 ## <a name="set-up-connection-to-sftp"></a>設定與 SFTP 的連線
 
@@ -64,13 +64,17 @@ ms.locfileid: "8645769"
 1. 選取您要匯出的實體 (例如客戶細分)。
 
    > [!NOTE]
-   > 匯出時，每個選取的實體會分割成最多五個輸出檔。 
+   > 匯出時，每個選取的實體會分割成最多五個輸出檔。
 
 1. 選取 **儲存**。
 
 儲存匯出並不會立即執行匯出。
 
-每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。 
+每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。
+您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。
+
+> [!TIP]
+> 若匯出包含大量資料的實體，在每個匯出的相同資料夾中可能會產生多個 CSV 檔案。 基於效能因素，將進行分割匯出，以將完成匯出花費的時間降至最低。
 
 ## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
 
