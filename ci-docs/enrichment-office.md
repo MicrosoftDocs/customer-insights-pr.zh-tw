@@ -1,5 +1,5 @@
 ---
-title: 利用來自 Microsoft Office 365 的資料擴充客戶個人資料
+title: 利用來自 Microsoft Office 365 的資料擴充客戶設定檔 (預覽版)
 description: 使用 Microsoft Office 的專有資料，以參與度資料擴充您的客戶設定檔。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954123"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055664"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>使用參與度資料擴充客戶個人資料 (預覽版)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>利用來自 Microsoft Office 365 的資料擴充客戶設定檔 (預覽版)
 
-使用 Microsoft Office 365 中的資料，經由 Office 365 以參與度的見解來擴充客戶個人資料。 參與度由電子郵件和會議活動組成，並根據帳戶等級進行彙總。 例如，來自商務客戶的電子郵件數量或與該客戶的會議數量。 無法使用有關個別使用者的資料。
+使用 Microsoft Office 365 中的資料，經由 Office 365 應用程式以參與度的見解來擴充客戶個人資料。 參與度由電子郵件和會議活動組成，並根據帳戶等級進行彙總。 例如，來自商務客戶的電子郵件數量或與該客戶的會議數量。 無法使用有關個別使用者的資料。
 
 ## <a name="supported-countries-or-regions"></a>支援的國家或地區
 
@@ -75,7 +75,7 @@ ms.locfileid: "8954123"
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>擴充結果
+## <a name="view-enrichment-results"></a>查看擴充結果
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]這是 *Office* 實體。 *Office_UserEntity* 包含在擴充設定期間選定的電子郵件地址的 Active Directory ID。
 

@@ -1,5 +1,5 @@
 ---
-title: 以協力廠商 HERE Technologies 擴充進行擴充
+title: 透過 HERE Technologies 來擴充設定檔 (預覽版)
 description: 有關 HERE Technologies 協力廠商富集作用的一般資訊。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953663"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052041"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies 客戶設定檔的富集作用 (預覽版)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>透過 HERE Technologies 來擴充設定檔 (預覽版)
 
 HERE Technologies 是一間位置平台公司，提供以位置為中心的資料和服務。 HERE Technologies 的資料擴充服務改善客戶位置資訊的精準度。 此服務提供地址正規化、緯度和經度擷取等等。
 
@@ -72,7 +72,7 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 
 1. 選取 **執行** 以開始擴充程序，或者直接關閉返回至 **擴充** 頁面。
 
-## <a name="enrichment-results"></a>擴充結果
+## <a name="view-enrichment-results"></a>查看擴充結果
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

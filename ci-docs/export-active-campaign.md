@@ -1,5 +1,5 @@
 ---
-title: 將 Customer Insights 資料匯出到 ActiveCampaign
+title: 將客戶細分匯出至 ActiveCampaign
 description: 了解如何設定連接並匯出到 ActiveCampaign。
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5d15b9bf7383d06070ac92d7a729fc6e6e00c9d7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645819"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054698"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>匯出客戶細分到 ActiveCampaign (預覽版)
 
@@ -21,9 +21,9 @@ ms.locfileid: "8645819"
 
 ## <a name="prerequisites"></a>先決條件
 
--   您有一個 [ActiveCampaign 帳戶](https://www.activecampaign.com/)和相應的系統管理員認證。
--   在 Customer Insights 中，您具有[已設定的客戶細分](segments.md)。
--   在匯出的客戶細分中，整合的客戶個人資料包含有電子郵件地址的欄位。
+- 您有一個 [ActiveCampaign 帳戶](https://www.activecampaign.com/)和相應的系統管理員認證。
+- 在 Customer Insights 中，您具有[已設定的客戶細分](segments.md)。
+- 在匯出的客戶細分中，整合的客戶個人資料包含有電子郵件地址的欄位。
 
 ## <a name="known-limitations"></a>已知限制
 

@@ -21,14 +21,14 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: a7b10d985d5cba64b25595a3d7c101d6cb5c62a5
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645931"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080893"
 ---
-# <a name="relationships-between-entities"></a>實體間的關聯
+# <a name="relationships-between-entities-and-entity-paths"></a>實體和實體路徑之間的關係
 
 當實體共用一般識別碼 (外部索引鍵) 時，關聯會連接實體並定義資料圖形。 此外部索引鍵可以從一個實體參照到另一個實體。 連接的實體依據多個資料來源來啟用客戶細分和量值定義。
 

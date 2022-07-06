@@ -80,7 +80,7 @@
       href: data-unification-update.md
 - name: 資料擴充
   items:
-    - name: 擴充客戶設定檔
+    - name: 資料擴充概述
       href: enrichment-hub.md
     - name: Office 365 資料中的帳戶
       href: enrichment-office.md
@@ -112,7 +112,7 @@
       href: search-filter-index.md
     - name: 定義客戶活動
       href: activities.md
-    - name: Customer Insights 的同意管理
+    - name: 使用同意管理
       href: consent-management.md
 - name: 客戶細分
   items:
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Google Ads
           href: export-google-ads.md
+        - name: InMobi
+          href: export-inmobi.md
         - name: Iterable
           href: export-iterable.md
         - name: Klaviyo

@@ -1,5 +1,5 @@
 ---
-title: 以 Experian 協力廠商擴充進行擴充
+title: 利用 Experian 的人口統計資訊擴充客戶個人資料 (預覽版)
 description: 關於 Experian協力廠商擴充的一般資訊。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954077"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053011"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>利用 Experian 的人口統計資訊擴充客戶個人資料 (預覽版)
 
@@ -79,7 +79,7 @@ Experian 是消費者和企業信用報告和行銷服務的全球領導者。 �
 
 1. 選取 **執行** 以開始擴充程序，或者直接關閉返回至 **擴充** 頁面。
 
-## <a name="enrichment-results"></a>擴充結果
+## <a name="view-enrichment-results"></a>查看擴充結果
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

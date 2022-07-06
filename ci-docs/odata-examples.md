@@ -1,5 +1,5 @@
 ---
-title: Dynamics 365 Customer Insights API 的 OData 範例
+title: Customer Insights API 的 OData 查詢範例
 description: 開放式資料通訊協定 (OData) 查詢 Customer Insights API 以檢閱資料的常用範例。
 ms.date: 05/25/2022
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808451"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080963"
 ---
-# <a name="odata-query-examples"></a>OData 查詢範例
+# <a name="odata-query-examples-for-customer-insights-apis"></a>Customer Insights API 的 OData 查詢範例
 
 開放式資料通訊協定 (OData) 是建立在核心通訊協定 (例如 HTTP) 的資料存取通訊協定。 它使用普遍接受的方法 (例如網站的 REST)。 有多種可用來使用 OData 服務的程式庫和工具。
 

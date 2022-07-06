@@ -1,5 +1,5 @@
 ---
-title: 比對資料統整的實體
+title: 資料整合的比對條件
 description: 比對實體以建立統整的客戶設定檔。
 recommendations: false
 ms.date: 05/05/2022
@@ -14,14 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: bc470dd932c2c981adc5840bb52d60f8dfe0de61
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740939"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080871"
 ---
-# <a name="match-conditions"></a>比對條件
+# <a name="match-conditions-for-data-unification"></a>資料整合的比對條件
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 

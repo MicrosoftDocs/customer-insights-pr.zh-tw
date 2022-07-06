@@ -1,19 +1,19 @@
 ---
-title: 將 Customer Insights 資料匯出到 Azure Synapse Analytics
+title: 匯出資料至 Azure Synapse Analytics (預覽版)
 description: 了解如何設定 Azure Synapse Analytics 連線。
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741493"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080935"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>匯出資料至 Azure Synapse Analytics (預覽版)
 
@@ -72,13 +72,13 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 
 1. 在 **匯出用連線** 欄位中，到 **Azure Synapse Analytics** 區段中選擇連線。 如果您看不到此區段名稱，代表沒有此類型的[連接](connections.md)可供您使用。
 
-1. 提供可辨識的 **顯示名稱** 給匯出並提供 **資料庫名稱**。
+1. 提供可辨識的 **顯示名稱** 給匯出並提供 **資料庫名稱**。 匯出會在連接定義的工作區中建立新的 [Azure Synapse 湖資料庫](/azure/synapse-analytics/database-designer/concepts-lake-database)。
 
 1. 選取要匯出至 Azure Synapse Analytics 的實體。
    > [!NOTE]
    > 不支援基於 [Common Data Model 資料夾](connect-common-data-model.md)的資料來源。
 
-2. 選取 **儲存**。
+1. 選取 **儲存**。
 
 儲存匯出並不會立即執行匯出。
 

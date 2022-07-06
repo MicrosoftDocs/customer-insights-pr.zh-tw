@@ -1,5 +1,5 @@
 ---
-title: 作法 - 管理環境
+title: 作法：管理環境
 description: 了解如何以系統管理員的身分來管理現有的 Customer Insights 環境。
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: 62a5856edac5e66e5e42c93313d78fa6826469b3
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: fc3b3f404cf0ac84c782778414494289c803babe
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833482"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080954"
 ---
 # <a name="how-to-manage-environments"></a>作法：管理環境
 

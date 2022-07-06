@@ -1,6 +1,6 @@
 ---
-title: 帶入您自己的 Azure 金鑰保存庫管理祕密
-description: 瞭解如何將 Customer Insights 組態為使用您自己的 Azure 金鑰保存庫。
+title: 帶入您自己的 Azure 金鑰保存庫 (預覽版)
+description: 了解如何設定 Customer Insights 以使用您的 Azure Key Vault。
 ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
-ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
+ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "8763569"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080904"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>帶入您自己的 Azure 金鑰保存庫 (預覽版)
 

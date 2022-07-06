@@ -1,5 +1,5 @@
 ---
-title: 將 Customer Insights 資料匯出到 Adobe Campaign Standard
+title: 了解如何匯出 Customer Insights 客戶細分到 Adobe Campaign Standard (預覽版)
 description: 了解如何在 Adobe Campaign Standard中使用 Customer Insights 客戶細分。
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645831"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080866"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>在 Adobe Campaign Standard 中使用 Customer Insights 客戶細分 (預覽)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>了解如何匯出 Customer Insights 客戶細分到 Adobe Campaign Standard (預覽版)
 
 作為 Dynamics 365 Customer Insights 使用者，您可能會建立一些客戶細分，鎖定相關的對象，讓您的行銷廣告活動更有效率。 若要在 Adobe Experience Platform 及類似 Adobe Campaign Standard 的應用程式中使用來自 Customer Insights 的客戶細分，您需要執行本文中說明的幾個步驟。
 
@@ -23,9 +23,9 @@ ms.locfileid: "8645831"
 
 ## <a name="prerequisites"></a>先決條件
 
--   Dynamics 365 Customer Insights 授權
--   Adobe Campaign Standard 授權
--   Azure Blob 儲存體帳戶
+- Dynamics 365 Customer Insights 授權
+- Adobe Campaign Standard 授權
+- Azure Blob 儲存體帳戶
 
 ## <a name="campaign-overview"></a>行銷活動概觀
 

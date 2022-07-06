@@ -1,5 +1,5 @@
 ---
-title: SFTP 自訂匯入的富集
+title: 透過 SFTP 自訂匯入來擴充客戶設定檔 (預覽版)
 description: 有關SFTP 自訂匯入富集的一般資訊。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953709"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080863"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>使用自訂資料富集客戶設定檔 (預覽版)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>透過 SFTP 自訂匯入來擴充客戶設定檔 (預覽版)
 
 安全檔案傳輸通訊協定 (SFTP) 自訂匯入功能可讓您匯入不需要透過資料統一處理的資料。 那是一種靈活、安全且容易帶入您的資料的方式。 SFTP 自訂匯入功能可以和 [SFTP 匯出](export-sftp.md) 功能搭配使用，讓您匯出富集所需的客戶設定檔資料。 然後可以處理和擴充資料，而 SFTP 自訂匯入可以用來將已擴充資料傳回 Dynamics 365 Customer Insights。
 
@@ -120,7 +120,7 @@ ms.locfileid: "8953709"
 
 1. 選取 **執行** 以開始擴充程序，或者直接關閉返回至 **擴充** 頁面。
 
-## <a name="enrichment-results"></a>擴充結果
+## <a name="view-enrichment-results"></a>查看擴充結果
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

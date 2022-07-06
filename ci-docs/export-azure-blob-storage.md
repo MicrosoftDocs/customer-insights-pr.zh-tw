@@ -1,5 +1,5 @@
 ---
-title: 將 Customer Insights 資料匯出到 Azure Blob 儲存體
+title: 將資料匯出至 Azure Blob 儲存體 (預覽版)
 description: 了解如何設定連接並匯出至 Blob 儲存體。
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947128"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055480"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>將客戶細分清單及其他資料匯出至 Azure Blob 儲存體 (預覽版)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>將資料匯出至 Azure Blob 儲存體 (預覽版)
 
 將您的 Customer Insights 資料儲存在 Blob 儲存體，或使用它將資料傳輸至其他應用程式。
 

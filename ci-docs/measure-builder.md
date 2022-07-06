@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800316"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080950"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>用量值產生器從頭開始建立量值
+# <a name="create-new-measures-with-the-measure-builder"></a>用量值建立器建立新量值
 
 本文說明如何從頭開始建立新的[量值](measures.md)。 量值建立器可讓您使用數學運算子、彙總函數和篩選來定義計算。 與整合 *客戶* 實體相關的實體，其實體屬性可用於建立量值。
 

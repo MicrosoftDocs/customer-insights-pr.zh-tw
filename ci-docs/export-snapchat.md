@@ -1,5 +1,5 @@
 ---
-title: 將 Customer Insights 資料匯出至 Snapchat
+title: 將客戶細分匯出至 Snapchat (預覽版)
 description: 了解如何設定連接並匯出至 Snapchat。
 ms.date: 06/08/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: abe04cd1464c3f7df969da3c769329382d603d7e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947266"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051903"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>將客戶細分匯出至 Snapchat (預覽版)
 

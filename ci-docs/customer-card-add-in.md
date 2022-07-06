@@ -1,5 +1,5 @@
 ---
-title: Dynamics 365 應用程式的客戶卡片增益集 (含影片)
+title: Dynamics 365 應用程式的客戶卡片增益集 (預覽版) (含影片)
 description: 透過此增益集，顯示 Dynamics 365 應用程式中來自的 Customer Insights 的客戶個人資料。
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755626"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080846"
 ---
-# <a name="customer-card-add-in-preview"></a>客戶卡片增益集 (預覽)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 應用程式的客戶卡片增益集 (預覽版)
 
 直接在 Dynamics 365 應用程式中取得您客戶的 360 度視圖。 隨著支援的 Dynamics 365 App 安裝 Customer Card 增益集，您可以選擇顯示客戶設定檔欄位、見解和活動時間表。 增益集將從 Customer Insights 擷取資料，對被連接的 Dynamics 365 應用程式，不會影響其中的資料。
 

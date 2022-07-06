@@ -1,5 +1,5 @@
 ---
-title: Power Automate 連接器 | Microsoft Docs
+title: Power Automate 連接器 (預覽版) | Microsoft Docs
 description: 在 Dynamics 365 Customer Insights 中建立 Microsoft Power Automate 的流程。
 ms.date: 06/24/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741169"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080875"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate 連接器 (預覽)
 
-資料變更時觸發自動發生的特定事件，或直接在 [Power Automate](https://flow.microsoft.com/) 中管理更複雜的流程。
+資料變更時觸發自動發生的特定事件，或直接在 [Microsoft Power Automate](https://flow.microsoft.com/) 中管理更複雜的流程。
 
 ## <a name="known-limitations"></a>已知限制
 

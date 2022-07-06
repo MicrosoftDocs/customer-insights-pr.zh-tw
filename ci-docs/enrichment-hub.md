@@ -1,6 +1,6 @@
 ---
-title: 富集統一的客戶設定檔
-description: 使用功能富集您的客戶資料。
+title: 資料擴充 (預覽版) 概述
+description: 使用 Microsoft 和其他協力廠商服務的功能來豐富您的客戶資料。
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954031"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053854"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>客戶設定檔擴充 (預覽)
+# <a name="data-enrichment-preview-overview"></a>資料擴充 (預覽版) 概述
 
-使用 Microsoft 和其他合作夥伴等來源的資料來擴充您的客戶資料。
+使用 Microsoft 和其他合作夥伴等來源的資料來擴充您的客戶資料。 協力廠商擴充設定為要使用[連接](connections.md)，連結由系統管理員設定認證，並同意資料傳輸。 系統管理員和參與者可以使用連線組態擴充。  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>多個相同類型的擴充
+
+在擴充設定期間，會指定要擴充的實體，這可讓您擴充個人資料的子集。 例如，只擴充特定客戶細分的資料。 您可以設定數個相同類型的擴充，並重複使用相同的連接。 某些擴充將限制相同類型的擴充可建立的數量。 在 **擴充** 頁面的 **探索** 索引標籤上，可以在每個磚上看到限制和目前用途。
+
+## <a name="enrich-data-sources-before-unification"></a>在整合之前擴充資料來源
+
+在資料整合處理之前，先擴充您的客戶資料，以提升資料比對的成果。 如需詳細資訊，請參閱[資料來源擴充](data-sources-enrichment.md)。
+
+## <a name="create-an-enrichment"></a>建立擴充
+
+您必須有參與者或系統管理員[權限](permissions.md)，才能建立或編輯擴充內容。
+
+移至 **資料** > **擴充**。 在 **探索** 索引標籤會顯示所有支援的擴充選項。
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="擴充中心頁面。":::
-
-請移至 **資料** > **擴充** 來使用擴充選項。  
-
-您必須有參與者或系統管理員權限，才能建立或編輯擴充內容。 如需詳細資訊，請參閱[權限](permissions.md)。
-
-您將會在 **探索** 索引標籤上發現所有支援的擴充選項。
 
 # <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
@@ -57,45 +65,33 @@ ms.locfileid: "8954031"
 
 ---
 
-在 **我的擴充內容** 索引標籤上，您可以查看您已設定的擴充內容，並編輯其屬性。 您也可以從擴充建立[客戶細分](segments.md)或[量值](measures.md)。
-
 ## <a name="manage-existing-enrichments"></a>管理現有的擴充內容
 
-移至 **我的擴充** 索引標籤，以查看所有設定好的擴充。 每個擴充內容都表示為一列，其中包含有關擴充內容的其他資訊。
+移至 **資料** > **擴充**。 在 **我的擴充** 索引標籤中，查看設定好的擴充、它們的狀態、要更新的客戶數，以及上次重新整理資料的時間。 您可以用任何欄來排序擴充清單，或是使用搜尋方塊尋找您要管理的擴充。
 
-選取擴充以查看可用的選項。 您也可以選取清單項目上的垂直省略符號 (&vellip;) 來查看選項。 如果您已設定數個擴充，則可以使用搜尋方塊快速尋找。
+選取擴充來查看可用的動作。
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="擴充清單中用來管理擴充內容的選項。":::
 
 - **檢視** 包含擴充客戶設定檔數目的擴充內容詳細資料。
 - **編輯** 擴充內容設定。
-- **執行** 擴充以使用最新資料更新客戶設定檔。
-- **停用** 現有擴充內容，使其不再隨每次排定的重新整理自動進行重新整理。 上次成功重新整理的資料仍可繼續使用。 **啟用** 非使用中擴充內容，以重新開始隨每次排定的重新整理進行自動重新整理。
+- [**執行**](#run-or-refresh-enrichments)擴充以使用最新資料更新客戶設定檔。 在清單中選取多個擴充並一次執行。
+- **啟用** 或 **停用** 擴充 停用的擴充無法在[排程的重新整理](system.md#schedule-tab)進行重新整理。
 - **刪除** 擴充。
 
-要一次執行或停用多個擴充，請在清單中選取它們。 查看和編輯選項無法以批次動作使用。 一次只能進行一個。
-
-## <a name="enrichments-and-connections"></a>擴充與連接
-
-協力廠商擴充設定為要使用[連接](connections.md)，連結由系統管理員設定認證，並同意資料傳輸。 系統管理員和參與者可以使用連線組態擴充。  
-
-## <a name="multiple-enrichments-of-the-same-type"></a>多個相同類型的擴充
-
-在擴充設定期間，會指定要擴充的實體，這可讓您擴充個人資料的子集。 例如，只擴充特定客戶細分的資料。 您可以設定數個相同類型的擴充，並重複使用相同的連接。 某些擴充將限制相同類型的擴充可建立的數量。 在 **擴充** 頁面的 **探索** 索引標籤上，可以在每個磚上看到限制和目前用途。
-
-## <a name="enrich-data-sources-before-unification"></a>在整合之前擴充資料來源
-
-在資料整合處理之前，先擴充您的客戶資料，以提升資料比對的成果。 如需詳細資訊，請參閱[資料來源擴充](data-sources-enrichment.md)。
+您也可以從擴充建立[客戶細分](segments.md)或[量值](measures.md)。
 
 ## <a name="run-or-refresh-enrichments"></a>執行或重新整理擴充
 
-1. 選取 **執行** 開始進行擴充程序。 或者，您也可以讓系統在[排定的重新整理](system.md#schedule-tab)過程中自動執行擴充。 處理時間視客戶資料的大小而定。
+執行之後，擴充可在排程中自動重新整理，或依需要手動重新整理。
+
+1. 若要手動重新整理一個或多個擴充，請選取它們，然後選擇 **執行**。 若要 [排程自動重新整理](system.md#schedule-tab)，請前往 **系統管理** > **系統** > **排程**。 處理時間視客戶資料的大小而定。
 
 1. 又或者，[查看擴充程序的進度](#see-the-progress-of-the-enrichment-process)。
 
 1. 擴充程序完成後，請前往 **我的擴充** 以檢閱最新擴充的客戶個人資料、上次更新的時間以及擴充個人資料的數量。
 
-1. 選取擴充以查看其[擴充結果](#enrichment-results)。
+1. 選取擴充以查看其[擴充結果](#view-enrichment-results)。
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>查看擴充程序的進度
 
@@ -107,12 +103,12 @@ ms.locfileid: "8954031"
 1. 在您想要查看進度的擴充底下，選取 **查看詳細資料**。
 1. 在 **工作詳細資料** 窗格中，選取 **顯示詳細資料**，以查看包含在擴充更新的程序及其狀態。
 
-## <a name="enrichment-results"></a>擴充結果
+## <a name="view-enrichment-results"></a>查看擴充結果
 
 完成擴充後，檢閱擴充結果。
 
 1. 移至 **資料** > **擴充**。
-1. 在 **我的擴充** 索引標籤中，選取擴充以了解相關資訊。
+1. 在 **我的擴充** 索引標籤中，選取擴充以查看內容。
 
 所有的擴充都會顯示基本資訊，例如擴充個人資料的數量，以及隨時間完成擴充的個人資料數量。 **預覽已擴充的客戶個人資料** 磚顯示已生成擴充實體的範例。 若要查看更詳細的檢視表，選取 **查看更多**，並選取 **資料** 索引標籤。
 

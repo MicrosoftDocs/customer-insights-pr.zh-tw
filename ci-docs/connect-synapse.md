@@ -1,5 +1,5 @@
 ---
-title: 內嵌 Azure Synapse Analytics 的資料
+title: 連接至 Azure Synapse 資料來源 (預覽版)
 description: 以 Azure Synapse 的資料庫作為 Dynamics 365 Customer Insights 的資料來源。
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011417"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052689"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>連接至 Azure Synapse Analytics 資料來源 (預覽版)
 
@@ -59,7 +59,7 @@ Azure Synapse Analytics 是一項企業分析服務，可加快資料倉儲和�
 
 1. 選擇對 Azure Synapse Analytics [可用的連線](connections.md)，或建立一個新連線。
 
-1. 在選定的 Azure Synapse Analytics 連接中，從連接的工作區中選擇一個 **資料庫**，然後選取 **下一步**。
+1. 在選定的 Azure Synapse Analytics 連接中，從連接的工作區中選擇一個 **資料庫**，然後選取 **下一步**。 目前，我們只支援 *Lake 資料庫* 的資料庫類型。
 
 1. 從連結的資料庫中選取要內嵌的實體，然後選取 **下一步**。
 

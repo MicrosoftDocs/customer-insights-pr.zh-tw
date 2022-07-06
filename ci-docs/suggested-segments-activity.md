@@ -1,5 +1,5 @@
 ---
-title: 以活動為基礎的客戶細分建議。
+title: 根據活動 (預覽版) 所建議的客戶細分
 description: 讓機器學習協助您根據客戶活動尋找新的且值得注意的客戶細分。
 ms.date: 05/11/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 85c3cef3a8d531b31b64a7e5decbdc122c4383fc
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645850"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054330"
 ---
 # <a name="suggested-segments-based-on-activity-data-preview"></a>以活動資料為基礎的客戶細分建議 (預覽版)
 

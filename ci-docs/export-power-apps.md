@@ -1,5 +1,5 @@
 ---
-title: Power Apps 連接器
+title: Power Apps 連接器 (預覽)
 description: 連接 Power Apps 和 Power Automate。
 ms.date: 10/01/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e99d7d4f231eb2ade67f27c9e52c61af3a21b99d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 0b71f723d1e491d422d24b1be6616d2f33c95d40
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645959"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055250"
 ---
-# <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps 連接器 (預覽)
+# <a name="power-apps-connector-preview"></a>Power Apps 連接器 (預覽)
 
-透過 Power Apps 將統整的客戶設定檔帶入您的個人化應用程式。
+透過 Microsoft Power Apps 將統整的客戶設定檔帶入您的個人化應用程式。
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>連接 Power Apps 和 Dynamics 365 Customer Insights
 

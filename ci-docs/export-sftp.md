@@ -1,5 +1,5 @@
 ---
-title: 將 Customer Insights 資料匯出至 SFTP 主機 (含影片)
+title: 匯出資料至 SFTP 主機 (預覽版) (含影片)
 description: 了解如何設定連接並匯出至 SFTP 位置。
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947174"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080922"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>將客戶細分和其他資料匯出至 SFTP (預覽版)
+# <a name="export-data-to-sftp-preview"></a>匯出資料至 SFTP (預覽版)
 
 要在協力廠商應用程式中使用客戶資料，請將客戶資料匯出至安全檔案傳輸通訊協定 (SFTP) 位置。
 

@@ -1,5 +1,5 @@
 ---
-title: 使用服務主體連接到 Azure Data Lake Storage 帳戶
+title: 使用 Azure 服務主體連接到 Azure Data Lake Storage 帳戶
 description: 使用 Azure 服務主體連接到您的 Data Lake。
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011831"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080855"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>使用 Azure 服務主體連接到 Azure Data Lake Storage 帳戶
 

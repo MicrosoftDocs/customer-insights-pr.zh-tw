@@ -1,5 +1,5 @@
 ---
-title: 協力廠商 Enrichment Leadspace 的公司設定檔
+title: 透過 Leadspace 來擴充公司設定檔 (預覽版)
 description: 有關協力廠商 Leadspace 富集作用的一般資訊。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954169"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080867"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>使用 Leadspace 擴充公司設定檔 (預覽)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>透過 Leadspace 來擴充公司設定檔 (預覽版)
 
 Leadspace 是一間提供 B 到 B 客戶資料平台的資料科學公司。 它讓環境按帳戶隨著統一的客戶設定檔擴充其資料。 使用如公司規模、位置或行業的屬性擴充 *客戶設定檔*。 使用標題、角色或電子郵件驗證等屬性擴充 *連絡人設定檔*。
 
@@ -82,7 +82,7 @@ Leadspace 是一間提供 B 到 B 客戶資料平台的資料科學公司。 它
 
 1. 選取 **執行** 以開始擴充程序，或者直接關閉返回至 **擴充** 頁面。
 
-## <a name="enrichment-results"></a>擴充結果
+## <a name="view-enrichment-results"></a>查看擴充結果
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

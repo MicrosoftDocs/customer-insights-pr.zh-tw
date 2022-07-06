@@ -1,5 +1,5 @@
 ---
-title: 由機器學習支援的客戶細分
+title: 建議客戶細分 (預覽版)
 description: 讓機器學習協助您根據客戶屬性尋找全新且值得注意的客戶細分。
 ms.date: 10/15/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 5c7c6cc8231f758713b989bbe782aa03a4b78fa9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9229bef1c5df06de973aa671ca70c6c8462d51cf
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645849"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080917"
 ---
 # <a name="suggested-segments-preview"></a>建議客戶細分 (預覽版)
 

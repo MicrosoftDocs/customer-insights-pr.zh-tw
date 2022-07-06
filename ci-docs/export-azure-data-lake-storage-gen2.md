@@ -1,5 +1,5 @@
 ---
-title: 匯出 Customer Insights 資料到 Azure Data Lake Storage Gen2
+title: 匯出資料至 Azure Data Lake Storage Gen2 (預覽版)
 description: 瞭解如何設定與 Azure Data Lake Storage Gen2 的連接。
 ms.date: 10/06/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: c2446fba425203d2910b82134b73543a73c7ecf8
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947220"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080905"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>匯出區段清單和其他資料到 Azure Data Lake Storage Gen2 (預覽版)
+# <a name="export-data-to-azure-data-lake-storage-gen2-preview"></a>匯出資料至 Azure Data Lake Storage Gen2 (預覽版)
 
 將您的 Customer Insights 資料儲存在 Data Lake Storage Gen2 帳戶或使用它將資料傳輸到其他應用程式。
 

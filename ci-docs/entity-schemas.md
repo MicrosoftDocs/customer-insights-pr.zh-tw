@@ -1,5 +1,5 @@
 ---
-title: Common Data Model 中的 Customer Insights 實體結構描述
+title: Common Data Model 中的實體結構描述
 description: 搭配 Common Data Model 中的實體處理。
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757422"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054744"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model 中的實體結構描述
-
-
 
 [Common Data Model](/common-data-model/) 是宣告式規格，以及標準實體的定義，這些實體代表各種不同商務應用程式與生產力應用程式上常用的概念和活動。 此模型也正在向觀測及分析資料延伸。 Common Data Model 提供定義完善、模組化且可擴充的商務實體 (例如帳戶、業務單位、案例、連絡人、潛在客戶、商機和產品)，以及與廠商、員工和客戶之間的互動 (例如活動和服務等級協定)。 任何人都可以在 Common Data Model 定義的基礎上進行建置和延伸，以捕捉其他業務特定創意。
 

@@ -1,5 +1,5 @@
 ---
-title: 試用版常見問答集-Dynamics 365 Customer Insights
+title: Dynamics 365 Customer Insights 試用版常見問題
 description: Customer Insights 試用版設定和管理相關的常見問題解決方案。 了解如何解決平台和應用程式特定的問題。
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 41f112466d54c9923d0daf7c55d343f9b5c81d98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011877"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051489"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights 試用版常見問題
 

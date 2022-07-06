@@ -1,5 +1,5 @@
 ---
-title: Power BI 連接器
+title: Power BI 連接器 (預覽)
 description: 了解如何在 Power BI 中使用 Dynamics 365 Customer Insights 連接器。
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645886"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051259"
 ---
-# <a name="connector-for-power-bi-preview"></a>適用於 Power BI 的連接器 (預覽)
+# <a name="power-bi-connector-preview"></a>Power BI 連接器 (預覽)
 
-使用 Power BI Desktop 為您的資料建立視覺效果。 利用您的統整客戶資料建立其他見解並建立報表。
+使用 Microsoft Power BI Desktop 為您的資料建立視覺效果。 利用您的統整客戶資料建立其他見解並建立報表。
 
 ## <a name="prerequisites"></a>先決條件
 

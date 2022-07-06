@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft 的品牌和興趣資料擴充客戶個人資料
+title: 使用 Microsoft 的品牌和興趣資料擴充客戶設定檔 (預覽版)
 description: 使用 Microsoft 的專有資料，以品牌親和力和聲量佔有率擴充您的客戶資料。
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953755"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080911"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>使用品牌親和度和聲量佔有率 (預覽版) 來擴充客戶個人資料
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>使用 Microsoft 的品牌和興趣資料擴充客戶設定檔 (預覽版)
 
 使用 Microsoft 的專有資料，以品牌親和度、興趣同質性，和聲量佔有率 (SoV) 擴充您的客戶資料。 這些品牌親和度與 SoV 都建立在與客戶人口統計相似之人員的資料上。 此資訊可協助您更好地瞭解您的客戶，並根據客戶對特定的品牌和興趣的親合度或 SoV 進一步區分。
 
@@ -104,7 +104,7 @@ ms.locfileid: "8953755"
 
    當擴充個人資料時，我們會擴充在已選的品牌和興趣取得資料的客戶個人資料，包括不屬於選取的國家/地區的個人資料。 例如，如果您選取德國，而選取的品牌和興趣在美國我們有資料可以使用，我們將會擴充位於美國的個人資料。
 
-## <a name="enrichment-results"></a>擴充結果
+## <a name="view-enrichment-results"></a>查看擴充結果
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

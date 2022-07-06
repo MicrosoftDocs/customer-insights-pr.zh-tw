@@ -1,5 +1,5 @@
 ---
-title: 將常用資料模型資料連接到 Azure Data Lake 帳戶
+title: 使用 Azure Data Lake 帳戶連接至 Common Data Model 資料夾
 description: 搭配使用 Azure Data Lake Storage 的 Common Data Model 資料處理。
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011547"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080858"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>在 Azure Data Lake Storage 中連線至資料
 

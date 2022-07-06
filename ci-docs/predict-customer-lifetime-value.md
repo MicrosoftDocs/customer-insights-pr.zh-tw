@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645935"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055204"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>客戶生命週期價值預測
 
-預測在一段定義好的未來時間中，個別活躍客戶將帶來的業務潛在價值 (營收)。 此功能可協助您實現許多目標： 
+預測在一段定義好的未來時間中，個別活躍客戶將帶來的業務潛在價值 (營收)。 此功能可協助您實現許多目標：
 - 找出高價值的客戶並處理這種見解
 - 根據潛在價值建立策略性的客戶細分，便能在目標銷售、行銷及支援工作執行個人化行銷活動
 - 引導產品開發，專注能增加客戶價值的功能

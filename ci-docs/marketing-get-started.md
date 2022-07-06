@@ -6,14 +6,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 99ec463299a24ea81cfe26bb785e36bdefdcd080
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833298"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054422"
 ---
-# <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>在 Dynamics 365 Marketing 中使用整合個人資料
+# <a name="use-unified-customer-profiles-in-dynamics-365-marketing"></a>在 Dynamics 365 Marketing 中使用整合客戶設定檔
 
  [Dynamics 365 Marketing](/dynamics365/marketing/overview)提升客戶體驗，讓您在所有接觸點安排個人化旅程，以增強關聯並贏得忠誠度。 Dynamics 365 Marketing 應用程式與 Dynamics 365 Sales、 Dynamics 365 Customer Insights、Microsoft Teams 及其他產品徹底整合，可讓您使用資料和 AI 的力量做出更快更好的決策。
 

@@ -1,5 +1,5 @@
 ---
-title: 新功能與更新功能
+title: Dynamics 365 Customer Insights 的新功能
 description: 關於新功能、改善和 BUG 修正的資訊。
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843337"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054008"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的新功能
 

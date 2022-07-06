@@ -1,5 +1,5 @@
 ---
-title: 搜尋和篩選客戶設定檔
+title: 客戶設定檔：搜尋及篩選索引
 description: 快速尋找有關所指定屬性的統整客戶設定檔和篩選的相關資訊。
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: 35bfd6530b9b80a4b0ec8ff992d9014534721907
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645867"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050799"
 ---
 # <a name="customer-profiles-search--filter-index"></a>客戶設定檔：搜尋及篩選索引
 

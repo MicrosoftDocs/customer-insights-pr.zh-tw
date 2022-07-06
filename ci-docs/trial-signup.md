@@ -1,5 +1,5 @@
 ---
-title: 註冊免費試用版-Dynamics 365 Customer Insights
+title: 註冊免費 Dynamics 365 Customer Insights 試用版
 description: 了解如何快速註冊並開始使用 Customer Insights 免費試用版。 探索應用程式並尋找其他學習資源。
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641706"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080881"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>註冊免費 Dynamics 365 Customer Insights 試用版
 

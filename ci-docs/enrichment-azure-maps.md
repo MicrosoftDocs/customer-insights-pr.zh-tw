@@ -1,5 +1,5 @@
 ---
-title: 使用 Azure 地圖服務的位置資料擴充客戶個人資料
+title: 使用 Azure Maps 中的位置資料擴充客戶設定檔 (預覽版)
 description: 關於 Azure 地圖服務第一方企業擴充的一般資訊。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953618"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052597"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>使用 Azure 地圖服務擴充客戶個人資料 (預覽版)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>使用 Azure Maps 中的位置資料擴充客戶設定檔 (預覽版)
 
 Azure 地圖服務提供以位置為核心的資料和服務，利用內建位置智慧的地理空間資料來提供體驗。 Azure 地圖服務資料擴充服務改善客戶位置資訊的精準度。 它可將地址正規化和緯度及經度擷取等功能帶到 Dynamics 365 Customer Insights 中。
 
@@ -82,7 +82,7 @@ Azure 地圖服務提供以位置為核心的資料和服務，利用內建位�
 
 1. 選取 **執行** 以開始擴充程序，或者直接關閉返回至 **擴充** 頁面。
 
-## <a name="enrichment-results"></a>擴充結果
+## <a name="view-enrichment-results"></a>查看擴充結果
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

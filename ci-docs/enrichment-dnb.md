@@ -1,5 +1,5 @@
 ---
-title: 透過 Dun & Bradstreet 來擴充公司資料
+title: 透過 Dun & Bradstreet 擴充公司設定檔 (預覽版)
 description: Dun & Bradstreet 協力廠商的一般資訊。
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953881"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080892"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>透過 Dun & Bradstreet 來擴充公司資料 (預覽版)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>透過 Dun & Bradstreet 擴充公司設定檔 (預覽版)
 
 Dun & Bradstreet 為公司供應商業資料、分析和見解。 為客戶帶來統一客戶設定檔，讓各家公司可以擴充其資料。 擴充公司屬性包括 DUNS 編碼、公司規模、位置、產業等等。
 
@@ -102,7 +102,7 @@ Dun & Bradstreet 為公司供應商業資料、分析和見解。 為客戶帶�
 
 1. 選取 **執行** 以開始擴充程序，或者直接關閉返回至 **擴充** 頁面。
 
-## <a name="enrichment-results"></a>擴充結果
+## <a name="view-enrichment-results"></a>查看擴充結果
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
