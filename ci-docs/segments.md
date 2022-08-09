@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050937"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170671"
 ---
 # <a name="segments-overview"></a>客戶細分概觀
 
@@ -27,54 +27,68 @@ ms.locfileid: "9050937"
 
 符合客戶細分定義篩選的客戶個人資料稱為客戶細分的 *成員*。 適用若干 [服務限制](/dynamics365/customer-insights/service-limits)。
 
-## <a name="create-a-new-segment"></a>建立新區段
+## <a name="create-a-segment"></a>建立客戶細分
 
-有很多方式可以建立新的客戶細分： 
+選擇如何根據目標對象建立客戶細分。
 
 # <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
-- 內含區段 Builder 的複雜區段：[建立我們自己的](segment-builder.md#create-a-new-segment) 
-- 具有一個運算子的簡單客戶細分：[快速客戶細分](segment-builder.md#quick-segments) 
-- 以 AI 支援的方式尋找類似客戶：[類似客戶](find-similar-customer-segments.md) 
-- 基於量值或屬性，由 AI支援的建議：[改善量值的建議客戶細分](suggested-segments.md) 
-- 根據活動提出的建議：[根據客戶活動所建議的客戶細分](suggested-segments-activity.md) 
+- 包含客戶細分建立器的複雜客戶細分：[建立自己的](segment-builder.md)
+- 具有一個運算子的簡單客戶細分：[快速客戶細分](segment-quick.md)
+- 以 AI 支援的方式尋找類似客戶：[類似客戶](find-similar-customer-segments.md)
+- 根據量值或屬性的 AI 建議：[根據量值的建議客戶細分](suggested-segments.md)
+- 根據活動提出的建議：[根據客戶活動所建議的客戶細分](suggested-segments-activity.md)
 
 # <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
 
-- 內含區段 Builder 的複雜區段：[建立我們自己的](segment-builder.md#create-a-new-segment)
+- 包含客戶細分建立器的簡單或複雜客戶細分：[建立自己的](segment-builder.md)
 
 ---
 
 ## <a name="manage-existing-segments"></a>管理現有的區段
 
-移至 **客戶細分** 頁面，查看所有已儲存的客戶細分並加以管理。
+移至 **客戶細分** 頁面，以查看您建立的客戶細分、其狀態、成員數量，以及上次重新整理資料的時間。 您可以用任何欄來排序客戶細分清單，或是使用搜尋方塊尋找您要管理的客戶細分。
 
-每個區段都是由一個包含區段其他相關資訊的列所表示。
+選取客戶細分來查看可用的動作。
 
 :::image type="content" source="media/segments-selected-segment.png" alt-text="選定的客戶細分，有選項下拉式清單和可用選項。" lightbox="media/segments-selected-segment.png":::
 
-選取客戶細分時，可使用下列動作：
-
-- **檢視** 區段詳細資料，包括成員計數趨勢和區段成員的預覽。
+- [**檢視**](#view-segment-details)客戶細分詳細資料，包括成員計數趨勢和客戶細分成員的預覽。
 - 將成員清單 **下載** 為 .CSV 檔案。
 - **編輯** 區段以變更其屬性。
 - 為客戶細分 **建立複本**。 您可以選擇立即編輯其屬性，或儲存複本。
-- **重新整理** 區段以包括最新的資料。
-- **啟用** 或 **停用** 區段。 如果是非使用中客戶細分，雖有客戶細分定義存在，但尚未包含任何客戶。 啟用的的客戶細分會尋找符合客戶細分定義的客戶。 如果設定了 [已排定重新整理](system.md#schedule-tab)，則非使用中客戶細分會將 **狀態** 列示為 **已跳過**，表示甚至未嘗試重新整理。 啟用非使用中客戶細分時，此客戶細分會重新整理，並納入已排定重新整理。
-  或者，也可以使用 **啟用/停用** 下拉式功能表中的 **稍後再排程** 功能，指定未來啟用和停用特定客戶細分的日期和時間。
-- 從客戶細分中 **[尋找類似的客戶](find-similar-customer-segments.md)**。
+- [**重新整理**](#refresh-segments)客戶細分以包括最新的資料。
+- **啟用** 或 **停用** 區段。 非使用中客戶細分在 [已排程的重新整理](system.md#schedule-tab)期間不會重新整理，並且 **狀態** 列示為 **已跳過**，表示甚至未嘗試重新整理。 活動段根據其類型進行重新整理：靜態或動態。
+- 使 **靜態** 或 **動態** 成為客戶細分類型。 靜態客戶細分手動重新整理。 在系統重新整理期間，會自動重新整理動態客戶細分
+- 從客戶細分中 [**尋找類似的客戶**](find-similar-customer-segments.md)。
 - **重新命名** 區段。
 - **標籤** 可在客戶細分[管理標籤](work-with-tags-columns.md#manage-tags)。
-- 將成員清單 **下載** 為 .CSV 檔案。
-- **管理匯出**，以查看匯出相關的客戶細分並加以管理。 [深入了解匯出。](export-destinations.md)
+- [**管理匯出**](#export-segments)，以查看匯出相關的客戶細分並加以管理。 [深入了解匯出。](export-destinations.md)
 - **刪除** 區段。
 - **欄**，可[自訂顯示的欄](work-with-tags-columns.md#customize-columns)。
 - **篩選** 可[篩選標籤](work-with-tags-columns.md#filter-on-tags)。
 - **搜尋名稱**，依據客戶細分名稱進行搜尋。
 
+## <a name="view-segment-details"></a>檢視客戶細分詳細資料
+
+在 **客戶細分** 頁面上，選取客戶細分以查看處理歷史記錄和客戶細分成員。
+
+此頁面的上半部分包括趨勢圖形，其中會視覺化呈現成員計數的變化。 將游標移到資料點上方可查看特定日期的成員計數。 可變更視覺效果的時間範圍。
+
+:::image type="content" source="media/segment-time-range.png" alt-text="客戶細分時間範圍。":::
+
+下半部分包含區段成員的清單。
+
+> [!NOTE]
+> 此清單中顯示的欄位是根據區段實體的屬性。
+>
+>此清單是相符區段成員的預覽，並顯示區段的前 100 個記錄，這樣您就可以快速評估並查看其定義（如有需要）。 若要查看所有相符的記錄，請[匯出客戶細分](export-destinations.md)。
+
 ## <a name="refresh-segments"></a>重新整理區段
 
-您可以選取 **區段** 頁面上的 **全部重新整理**，一次重新整理所有區段，也可以在選取一個或多個區段，並從選項中選擇 **重新整理** 時重新整理這些區段。 或者，您也可以在 **管理員** > **系統** > **排程** 設定定期重新整理。 設定定期重新整理時，會套用下列規則：
+客戶細分可自動排程或依照需要情況手動重新整理。 若要手動重新整理一個或多個客戶細分，請選取它們，然後選擇 **重新整理**。
+
+若要 [排程自動重新整理](system.md#schedule-tab)，請前往 **系統管理** > **系統** > **排程**。 適用於以下規則：
 
 - 所有具有 **動態** 或 **展開** 類型的客戶細分，都會在設定的步調自動重新整理。 重新整理完成時，**狀態** 會指示在重新整理該客戶細分是否有任何問題。 **上次重新整理** 時，會顯示上次成功重新整理的時間戳記。 如果發生錯誤，請選取錯誤查看問題的詳細資料。
 - 類型為 **靜態** 的客戶細分將 *不* 會自動重新整理。 **上次重新整理** 顯示上次執行的時間戳記，靜態客戶細分來自手動重新整理。
@@ -83,17 +97,13 @@ ms.locfileid: "9050937"
 
 ## <a name="export-segments"></a>匯出區段
 
-您可以從客戶細分頁面或[匯出頁面](export-destinations.md)匯出客戶細分。 
+將客戶細分匯出至其他應用程式以進一步使用資料。 可從客戶細分頁面或[匯出頁面](export-destinations.md)匯出客戶細分。
 
-1. 移至 **區段** 頁。
+1. 前往 **客戶細分** 頁面，然後選取您想匯出的客戶細分。
 
-1. 選取要匯出之客戶細分的垂直省略符號 (&vellip;)。
+1. 選擇 **管理匯出**。 會打開 **匯出客戶細分 (預覽版)** 頁面。 依是否包含目前客戶細分的分組查看所有設定的匯出。
 
-1. 從動作下拉式清單中選擇 **管理匯出**。
-
-1. 會打開 **匯出客戶細分 (預覽版)** 頁面。 您可以看到所有以是否包含目前區段分組的匯出組態。
-
-   1. 若要將選取的區段新增到匯出，請 **編輯** 各自匯出以選取對應的區段，然後儲存。 在個別客戶環境中，您可以改為選取清單中的匯出和 **新增客戶細分** 以取得相同的結果。
+   1. 若要將選取的區段新增到匯出，請 **編輯** 各自匯出以選取對應的區段，然後儲存。 在個別客戶環境中，選取清單中的匯出和 **新增客戶細分** 以取得相同的結果。
 
    1. 若要使用選取的客戶細分建立新匯出，請選取 **新增匯出**。 如需建立匯出的詳細資訊，請參閱[設定新匯出](export-destinations.md#set-up-a-new-export)。
 
@@ -103,9 +113,9 @@ ms.locfileid: "9050937"
 
 如果您在應用程式中使用客戶細分 (這些客戶細分是根據連接至 Customer Insights 的相同 Microsoft Dataverse 組織)，則可以追蹤客戶細分的使用方式。 對於 [Dynamics 365 Marketing 的客戶旅程中使用的 Customer Insights 客戶細分](/dynamics365/marketing/real-time-marketing-ci-profile)，系統會通知您該客戶細分的使用方式。
 
-在編輯在 Customer Insights 環境中或在 Marketing 的客戶旅程中使用的客戶細分時，[客戶細分建立器](segment-builder.md)中的橫幅會通知您有關相依性的資訊。 您可以直接從標題中檢查相依性詳細資料，或是透過選取客戶細分建立器中的 **使用方式** 來檢查。
+在編輯在 Customer Insights 環境中或在 Marketing 的客戶旅程中使用的客戶細分時，[客戶細分建立器](segment-builder.md)中的橫幅會通知您有關相依性的資訊。 可直接從標題中檢查相依性詳細資料，或是透過選取客戶細分建立器中的 **使用方式** 來檢查。
 
-**客戶細分使用方式** 窗格會顯示有關此客戶細分在 Dataverse 應用程式中使用方式的詳細資料。 對於在客戶旅程中使用的客戶細分，您會發現一個連結，可檢查使用此客戶細分的 Marketing 旅程。 如果您擁有存取 Marketing 應用程式的權限，您可以在那裡存取更多詳細資料。
+**客戶細分使用方式** 窗格會顯示有關此客戶細分在 Dataverse 應用程式中使用方式的詳細資料。 對於在客戶旅程中使用的客戶細分，您會發現一個連結，可檢查使用此客戶細分的 Marketing 旅程。 如果您擁有存取 Marketing 應用程式的權限，可在那裡檢視更多詳細資料。
 
 :::image type="content" source="media/segment-usage-pane.png" alt-text="側邊窗格，包含客戶細分建立器中客戶細分使用方式的詳細資料。":::
 
@@ -118,25 +128,5 @@ ms.locfileid: "9050937"
 目前在下列 Dataverse 應用程式中追蹤使用方式：
 
 - [Dynamics 365 Marketing 中的客戶旅程](/dynamics365/marketing/real-time-marketing-ci-profile)
-
-## <a name="view-processing-history-and-segment-members"></a>查看處理歷史記錄和區段成員
-
-您可以透過查看資料的詳細資料，查看關於該區段的合併資料。
-
-在 **區段** 頁面上選取您想檢閱的區段。
-
-此頁面的上半部分包括趨勢圖形，其中會視覺化呈現成員計數的變化。 將游標移到資料點上方可查看特定日期的成員計數。
-
-您可以更新視覺效果的時間範圍。
-
-> [!div class="mx-imgBorder"]
-> ![客戶細分時間範圍。](media/segment-time-range.png "區段時間範圍")
-
-下半部分包含區段成員的清單。
-
-> [!NOTE]
-> 此清單中顯示的欄位是根據區段實體的屬性。
->
->此清單是相符區段成員的預覽，並顯示區段的前 100 個記錄，這樣您就可以快速評估並查看其定義（如有需要）。 若要查看所有相符的記錄，您需要[匯出區段](export-destinations.md)。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

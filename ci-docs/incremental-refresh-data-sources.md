@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012015"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207127"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Power Query 與 Azure Data Lake 資料來源的累加式重新整理
 
-本文討論對於對建立在 Power Query 或 Azure Data Lake 的資料來源，如何設定累加式重新整理。
-
-對資料來源進行累加重新整理可提供下列好處：
+根據 Power Query 或 Azure Data Lake 的資料來源增量重新整理具有下列優點：
 
 - **更快速的重新整理** -只有已變更的資料才會重新整理。 例如，您可能只會重新整理過去五天的歷史資料集。
 - **提高的可靠性** - 進行較小量的重新整理時，您不需要長時間維持與動態來源系統的連線，並可減少發生連線問題的風險。
@@ -73,6 +71,7 @@ Customer Insights 允許對連接至 Azure Data Lake Storage 的資料來源進�
 
    1. 完整資料、累加式資料更新插入和累加式資料刪除的 .csv 或 .parquet 檔案位於同一個根資料夾，請瀏覽至該根資料夾。
    1. 輸入完整資料和兩個累加式檔案的副檔名 (\.csv or \.parquet)。
+   1. 如果是 .csv 檔案，請選取欄分隔符號，以及是否要將檔案的第一列作為列標題。
    1. 選取 **儲存**。
 
 1. **在上次更新** 中，選取時間戳記屬性。

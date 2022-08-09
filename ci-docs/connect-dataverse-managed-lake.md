@@ -1,7 +1,7 @@
 ---
 title: 連線至 Microsoft Dataverse 受管理資料湖中的資料
 description: 從 Microsoft Dataverse 受管理的資料湖匯入資料。
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,24 +11,25 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 9ae0b964d8d39835715b7ddadc712e2338b855af
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080847"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206943"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>連線至 Microsoft Dataverse 受管理資料湖中的資料
 
-若分析實體在 Microsoft Dataverse 受管理的湖中，則 Microsoft Dataverse 的使用者可以快速連接。
+若分析實體在 Microsoft Dataverse 受管理的湖中，則 Microsoft Dataverse 的使用者可以快速連接。 只有一個環境的資料來源可同時使用同一個 Dataverse 管理湖。
 
 > [!NOTE]
 > 您必須是 Dataverse 組織的系統管理員才能繼續進行並查看受管理的 Lake 可用的實體清單。
 
-## <a name="important-considerations"></a>重要考量
+## <a name="prerequisites"></a>先決條件
 
-1. 儲存在線上服務 (例如 Azure Data Lake Storage) 的資料可能會儲存在與處理資料所在位置不同的位置或儲存在 Dynamics 365 Customer Insights 中。 匯入或連接至儲存在線上服務的資料，即表示您同意可以將資料傳輸或儲存至 Dynamics 365 Customer Insights。 [在 Microsoft 信任中心深入了解](https://www.microsoft.com/trust-center)。
-2. 只有啟用了[變更追蹤](/power-platform/admin/enable-change-tracking-control-data-synchronization)的 Dataverse 實體才會顯示。 這些實體可以匯出至 Dataverse-受管理的data lake，並用於 Customer Insights 中。 立即可用的 Dataverse 資料表預設會啟用變更追蹤。 您必須打開自訂資料表的變更追蹤。 若要檢查 Dataverse 資料表是否已啟用變更追蹤，請移至 [Power Apps](https://make.powerapps.com) > **資料** > **資料表**。 尋找感興趣的資料表，並選取該資料表。 請移至 **設定** > **進階選項**，然後檢閱 **追蹤變更** 設定。
+- 儲存在線上服務 (例如 Azure Data Lake Storage) 的資料可能會儲存在與處理資料所在位置不同的位置或儲存在 Dynamics 365 Customer Insights 中。 匯入或連接至儲存在線上服務的資料，即表示您同意可以將資料傳輸或儲存至 Dynamics 365 Customer Insights。 [在 Microsoft 信任中心深入了解](https://www.microsoft.com/trust-center)。
+
+- 只有啟用了[變更追蹤](/power-platform/admin/enable-change-tracking-control-data-synchronization)的 Dataverse 實體才會顯示。 這些實體可以匯出至 Dataverse-受管理的data lake，並用於 Customer Insights 中。 立即可用的 Dataverse 資料表預設會啟用變更追蹤。 您必須打開自訂資料表的變更追蹤。 若要檢查 Dataverse 資料表是否已啟用變更追蹤，請移至 [Power Apps](https://make.powerapps.com) > **資料** > **資料表**。 尋找感興趣的資料表，並選取該資料表。 請移至 **設定** > **進階選項**，然後檢閱 **追蹤變更** 設定。
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>連接至 Dataverse 受管理的資料湖
 
@@ -51,7 +52,9 @@ ms.locfileid: "9080847"
 
 1. 儲存您的選擇，開始從Dataverse同步選取的資料表。 您會在 **資料來源** 頁面上找到最近新增的連接。 它將會排入佇列進行重新整理，並在所有選取的資料表同步之前，實體計數顯示為 0。
 
-只有一個環境的資料來源可同時使用同一個 Dataverse 管理湖。
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+載入資料可能需要花費一些時間。 成功重新整理之後，即可從 [**實體**](entities.md)頁面查看擷取的資料。
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>編輯 Dataverse 受管理的資料湖資料來源
 
@@ -62,4 +65,10 @@ ms.locfileid: "9080847"
 
 1. 在您想要更新的資料來源旁邊，選取 **編輯**。
 
-1. 從可用實體清單選取額外實體，然後選取 **儲存**。
+1. 從可用實體清單選取額外實體。
+
+1. 按一下 **儲存** 以套用變更，並返回至 **資料來源** 頁面。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

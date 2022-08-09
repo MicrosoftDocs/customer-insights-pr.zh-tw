@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053011"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195926"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>利用 Experian 的人口統計資訊擴充客戶個人資料 (預覽版)
 
@@ -59,7 +59,7 @@ Experian 是消費者和企業信用報告和行銷服務的全球領導者。 �
 
 1. 檢閱概覽，然後選擇 **下一步**。
 
-1. 選取連接。 如果連接無法使用，請與系統管理員聯繫。
+1. 選取連接。 如果沒有可用的連接，請與系統管理員聯繫。
 
 1. 選取 **下一步**。
 

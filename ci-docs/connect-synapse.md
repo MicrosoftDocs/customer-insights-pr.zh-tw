@@ -1,7 +1,7 @@
 ---
 title: 連接至 Azure Synapse 資料來源 (預覽版)
 description: 以 Azure Synapse 的資料庫作為 Dynamics 365 Customer Insights 的資料來源。
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052689"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206897"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>連接至 Azure Synapse Analytics 資料來源 (預覽版)
 
@@ -66,3 +66,9 @@ Azure Synapse Analytics 是一項企業分析服務，可加快資料倉儲和�
 1. 或者，選擇允許進行資料分析的資料實體。
 
 1. 選取 **儲存** 以套用所選，並開始從連線至 Azure Synapse Analytics 內 Lake 資料庫表格的新建資料來源擷取資料。 **資料來源** 頁面會打開，顯示處於 **重新整理** 狀態中的新資料來源。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+載入資料可能需要花費一些時間。 成功重新整理之後，即可從 [**實體**](entities.md)頁面查看擷取的資料。
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

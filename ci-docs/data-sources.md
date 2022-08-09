@@ -1,7 +1,7 @@
 ---
 title: 資料來源概觀
 description: 了解如何從不同的來源匯入或內嵌資料。
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051443"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207081"
 ---
 # <a name="data-sources-overview"></a>資料來源概觀
 
 Dynamics 365 Customer Insights 提供連結以從廣泛的來源取用資料。 連接至資料來源通常稱為 *資料擷取* 程序。 內嵌資料後，您可以進行[整合](data-unification.md)、生成見解，並啟動資料，以建立個人化體驗。
 
-## <a name="add-data-sources"></a>新增資料來源
+## <a name="add-or-edit-data-sources"></a>新增或編輯資料來源
 
-您可以將資料來源附加到 Customer Insights 或選擇匯入資料來源。 下面連結提供新增資料來源的相關說明。
+您可以將資料來源附加到 Customer Insights 或選擇匯入資料來源。 下面連結提供新增和編輯資料來源的相關說明。
 
 **附加資料來源**
 
@@ -50,13 +50,18 @@ Dynamics 365 Customer Insights 提供連結以從廣泛的來源取用資料。 
 
 如果您的環境未使用 Power Platform 資料流程，則 **資料來源** 頁面只包含所有資料來源的清單。 顯示中沒有區段。
 
-移至 **資料** > **資料來源**，以查看每個內嵌資料來源的名稱、其狀態以及上次對該來源重新整理資料的時間。 您可以依據各欄位排序資料來源清單。
+## <a name="manage-existing-data-sources"></a>管理現有的資料來源
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="已新增資料來源。":::
+移至 **資料** > **資料來源**，以查看每個內嵌資料來源的名稱、其狀態以及上次對該來源重新整理資料的時間。 您可以用任何欄來排序資料來源，或是使用搜尋方塊尋找您要管理的資料來源。
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+選取資料來源來查看可用的動作。
 
-載入資料可能需要花費一些時間。 成功重新整理之後，即可從 **實體** 頁面查看擷取的資料。 如需詳細資訊，請參閱[實體](entities.md)。
+:::image type="content" source="media/data_sources_showmore.png" alt-text="已新增資料來源。":::
+
+- [**編輯**](#add-or-edit-data-sources)資料來源以變更其屬性。
+- [**重新整理**](#refresh-data-sources)資料來源以包括最新的資料。
+- 在整合之前 [**擴充**](data-sources-enrichment.md)資料來源。
+- **刪除** 資料來源。 只有在資料沒有進行任何處理 (如整合、見解、啟動或匯出) 時，才能刪除資料來源。
 
 ## <a name="refresh-data-sources"></a>重新整理資料來源
 
@@ -64,23 +69,12 @@ Dynamics 365 Customer Insights 提供連結以從廣泛的來源取用資料。 
 
 請前往 **系統管理員** > **系統** > [**排程**](system.md#schedule-tab)為內嵌資料來源設定系統排程的重新整理。
 
-若要依照需要重新整理資料來源，請遵循下列步驟：
+若要視需要重新整理資料來源：
 
 1. 移至 **資料** > **資料來源**。
 
-1. 在您要重新整理的資料來源旁邊選取垂直省略符號 (&vellip;)，然後從下拉式清單中選取 **重新整理**。 資料來源現在會針對手動重新整理觸發。 重新整理資料來源將會更新資料來源中所有指定實體的實體結構描述和資料。
+1. 選取您要重新整理的資料來源，然後選取 **重新整理**。 資料來源現在會針對手動重新整理觸發。 重新整理資料來源將會更新資料來源中所有指定實體的實體結構描述和資料。
 
-1. 如果您要取消現有的重新整理，且資料來源將恢復成上次重新整理狀態，請選取 **停止重新整理**。
-
-## <a name="delete-a-data-source"></a>刪除資料來源
-
-只有在資料沒有進行任何處理 (如整合、見解、啟動或匯出) 時，才能刪除資料來源。
-
-1. 移至 **資料** > **資料來源**。
-
-2. 在您要移除的資料來源旁邊選取垂直省略符號 (&vellip;)，然後從下拉式功能表中選取 **刪除**。
-
-3. 確認刪除。
-
+1. 選取狀態以打開 **進度詳細資料** 窗格並查看進度。 若要取消作業，請在窗格下方選取 **取消作業**。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: 如何連接到 Power Query 資料來源 (含影片)
 description: 透過 Power Query 連接器內嵌資料 (含影片)。
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080850"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207035"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連線到 Power Query 資料來源
 
@@ -41,22 +41,29 @@ Power Query提供一組各式各樣的連接器來內嵌資料。 Dynamics 365 C
 
 1. 在所選連接器的 **連接設定** 中輸入必要的詳細資料，然後選取 **下一步** 以查看資料的預覽。
 
-1. 選取 **轉換資料**。 在此步驟中，您會將實體新增至資料來源中。 實體是資料集。 如果您有包含多個資料集的資料庫，則每個資料集都是其自己的實體。
+1. 選取 **轉換資料**。
 
 1. **Power Query - 編輯查詢** 對話方塊可讓您檢閱和微調資料。 系統在所選取資料來源中識別的實體會出現在左窗格中。
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="編輯查詢對話方塊":::
 
-1. 您也可以轉換資料。 選取要編輯或變換的實體。 使用 Power Query 視窗中的選項來套用轉換。 每個轉換都會列在 **已套用的步驟**。 Power Query 提供許多預先建立的轉換選項。 如需詳細資訊，請參閱 [Power Query 轉換](/power-query/power-query-what-is-power-query#transformations)。
+1. 您也可以轉換資料。 選取要編輯或變換的實體。 使用 Power Query 視窗中的選項來套用轉換。 每個轉換都會列在 **已套用的步驟**。 Power Query 提供許多[預先建立的轉換](/power-query/power-query-what-is-power-query#transformations)選項。
 
    我們建議您使用下列轉換：
 
    - 如果您要從 CSV 檔案擷取資料，則第一列通常會包含標題。 移至 **轉換** 並選取 **以第一列為標頭**。
    - 確定資料類型已正確設定。 例如，如果是日期欄位，請選取日期類型。
 
-1. 若要在 **編輯查詢** 對話方塊中將其他實體新增至資料來源，請移至 **首頁**，然後選取 **取得資料**。 重複步驟 6-10，直到您對此資料來源新增所有實體為止。
+1. 若要在 **編輯查詢** 對話方塊中將其他實體新增至資料來源，請移至 **首頁**，然後選取 **取得資料**。 重複步驟 5-10，直到您對此資料來源新增所有實體為止。 如果您有包含多個資料集的資料庫，則每個資料集都是其自己的實體。
 
 1. 選取 **儲存**。 **資料來源** 頁面會打開，顯示處於 **重新整理** 狀態中的新資料來源。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+載入資料可能需要花費一些時間。 成功重新整理之後，即可從 [**實體**](entities.md)頁面查看擷取的資料。
+
+> [!CAUTION]
+> 根據 Power Query 的資料來源建立 [Dataverse 中的資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 請勿變更 Power Platform 系統管理中心中用於 Customer Insights 的資料流程名稱。 重命名資料流程會造成 Customer Insights 資料來源與 Dataverse 資料流程之間的參考發生問題。
 
 ### <a name="available-power-query-data-sources"></a>可用的 Power Query 資料來源
 
@@ -74,11 +81,13 @@ Power Query提供一組各式各樣的連接器來內嵌資料。 Dynamics 365 C
 
 > [!IMPORTANT]
 > 請確定您的閘道已更新為最新版本。 您可以從閘道畫面上的提示安裝更新並重新設定閘道，也[可以下載最新版本](https://powerapps.microsoft.com/downloads/)。 如果您不使用最新的閘道版本，資料流程重新整理會失敗，錯誤訊息會類似 **不支援此關鍵字：設定屬性。參數名稱：關鍵字**。
+>
+> Customer Insights 中的內部部署資料閘道錯誤通常是由設定問題所致。 如需疑難排解資料閘道的詳細資訊，請參閱 [疑難排解內部部署資料閘道](/data-integration/gateway/service-gateway-tshoot)。
 
 ## <a name="edit-power-query-data-sources"></a>編輯 Power Query 資料來源
 
 > [!NOTE]
-> 您可能無法變更目前用於應用程式程序之一（例如 *區段化*、*比對* 或 *合併*）的資料來源。
+> 您可能無法變更目前用於應用程式程序之一 (例如區段化或資料整合) 的資料來源。
 >
 > 在 **設定** 頁面，您可以追蹤每個使用中程序的進度。 當程序完成時，您可以返回 **資料來源** 頁面並進行變更。
 
@@ -86,8 +95,10 @@ Power Query提供一組各式各樣的連接器來內嵌資料。 Dynamics 365 C
 
 1. 在您想要更新的資料來源旁邊，選取 **編輯**。
 
-   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
 1. 在 **Power Query 編輯查詢** 對話方塊中，依[建立新的資料來源](#create-a-new-data-source)的區段所述，套用變更和轉換。
 
-1. 完成編輯後，請在 Power Query 選取 **儲存** 來儲存變更。
+1. 選取 **儲存** 以套用變更，並返回至 **資料來源** 頁面。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

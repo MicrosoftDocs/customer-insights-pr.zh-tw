@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645964"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171085"
 ---
 # <a name="transaction-churn-prediction"></a>交易流失預測
 
@@ -240,7 +240,7 @@ ms.locfileid: "8645964"
    - **預測名稱**：建立預測時提供的名稱。
    - **預測類型**：用於預測的模型類型
    - **輸出實體**：儲存預測輸出實體的名稱。 您可以在 **資料** > **實體** 中找到具有此名稱的實體。
-     在輸出實體中，*ChurnScore* 是發生流失的可能性和 *IsChurn* 是根據 *ChurnScore* 加上 0.5 閾值的二元標籤。 預設閾值可能不適用於您的案例。 以您喜歡的閾值[建立新的區段](segments.md#create-a-new-segment)。
+     在輸出實體中，*ChurnScore* 是發生流失的可能性和 *IsChurn* 是根據 *ChurnScore* 加上 0.5 閾值的二元標籤。 預設閾值可能不適用於您的案例。 以您喜歡的閾值[建立新的區段](segments.md#create-a-segment)。
      並非所有的客戶都必須是活躍的客戶。 其中某些客戶可能有很長的時間沒有任何活動，而且已經被視為流失 (根據您的流失定義)。 預測已經流失的客戶流失風險沒有多大用處，因為他們不是您感興趣的對象。
    - **預測欄位**：此欄位只能填滿某些類型的預測，不用在流失預測中。
    - **狀態**：預測執行狀態。

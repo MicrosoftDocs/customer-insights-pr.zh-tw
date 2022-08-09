@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080843"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207173"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>資料來源擴充 (預覽版)
 
@@ -21,9 +21,9 @@ ms.locfileid: "9080843"
 
 ## <a name="enrich-a-data-source"></a>擴充資料來源
 
-您必須具備參與者或系統管理員權限，才能建立或編輯擴充。 如需詳細資訊，請參閱[權限](permissions.md)。  
+您必須具備參與者或系統管理員[權限](permissions.md)，才能建立或編輯擴充。  
 
-1. 請前往 **資料** > **整合**。 選取您要擴充的實體，並選取一個屬性作為實體的主索引鍵。 如需詳細資訊，請參閱[選取主索引鍵](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。
+1. 請前往 **資料** > **整合**。 選取您要擴充的實體，並選取一個屬性作為實體的[主索引鍵](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。
 
 1. 移至 **資料** > **資料來源**。
 
@@ -47,8 +47,8 @@ ms.locfileid: "9080843"
 
 ## <a name="manage-existing-data-source-enrichments"></a>管理現有的資料來源擴充
 
-移至 **我的擴充** 索引標籤，以查看所有設定好的擴充。
+移至 **資料** > **擴充**。 在 **我的擴充** 索引標籤中，查看設定好的擴充、它們的狀態、要更新的客戶數，以及上次重新整理資料的時間。 您可以用任何欄來排序擴充清單，或是使用搜尋方塊尋找您要管理的擴充。
 
-選取擴充以查看可用的選項。 您也可以選取清單項目上的垂直省略符號 (&vellip;) 來查看選項。 如果您已設定數個擴充，則可以使用搜尋方塊快速尋找。
+選取擴充以查看可用的選項。 您也可以選取清單項目上的垂直省略符號 (&vellip;) 來查看選項。
 
-您可以查看、編輯、執行或刪除資料來源擴充。 如需更多資訊，請參閱[管理現有擴充](enrichment-hub.md)。
+您可以查看、編輯、執行或刪除資料來源擴充。 如需更多資訊，請參閱[管理現有擴充](enrichment-hub.md#manage-existing-enrichments)。

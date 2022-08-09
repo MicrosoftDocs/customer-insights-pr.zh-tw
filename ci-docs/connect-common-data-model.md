@@ -1,7 +1,7 @@
 ---
 title: 使用 Azure Data Lake 帳戶連接至 Common Data Model 資料夾
 description: 搭配使用 Azure Data Lake Storage 的 Common Data Model 資料處理。
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080858"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206989"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>在 Azure Data Lake Storage 中連線至資料
 
@@ -82,7 +82,7 @@ ms.locfileid: "9080858"
    :::image type="content" source="media/ADLS_required.png" alt-text="顯示對主索引鍵為必要項目的對話方塊":::
 
    > [!TIP]
-   > 若要在 JSON 編輯介面中編輯實體，請選取 **顯示更多** > **編輯結構描述檔案**。 進行變更並選取 **儲存**。
+   > 若要在 JSON 編輯介面中編輯實體，請選取實體，然後選取 **編輯結構描述檔案**。 進行變更並選取 **儲存**。
 
 1. 如果選定的實體需要累加式擷取，則 **累加式重新整理** 下顯示 **必要**。 若要對每一個實體，請參閱[為 Azure Data Lake 資料來源設定累加式重新整理](incremental-refresh-data-sources.md)。
 
@@ -101,6 +101,10 @@ ms.locfileid: "9080858"
    1. 選取 **完成**。
 
 1. 選取 **儲存**。 **資料來源** 頁面會打開，顯示處於 **重新整理** 狀態中的新資料來源。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+載入資料可能需要花費一些時間。 成功重新整理之後，即可從 [**實體**](entities.md)頁面查看擷取的資料。
 
 ### <a name="create-a-new-schema-file"></a>建立新的結構描述檔案
 
@@ -148,6 +152,9 @@ ms.locfileid: "9080858"
 
 1. 選取 **儲存**。 **資料來源** 頁面會打開，顯示處於 **重新整理** 狀態中的新資料來源。
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+載入資料可能需要花費一些時間。 成功重新整理之後，即可從 [**實體**](entities.md)頁面查看擷取的資料。
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>編輯 Azure Data Lake Storage 資料來源
 
@@ -179,8 +186,16 @@ ms.locfileid: "9080858"
       > [!IMPORTANT]
       > 如果現有的 model.json 或 manifest.json file檔案對實體集合有相依性，您將會看到錯誤訊息，且無法選取不同的 model.json 或 manifest.json 檔案。 在變更 model.json 或 manifest.json 檔案之前移除這些相依性，或以您要使用的 model.json 或 manifest.json 檔案建立新的資料來源來避免移除相依性。
    - 若要變更資料檔案位置或主索引鍵，請選取 **編輯**。
-   - 若要變更累加式擷取資料，請參閱[為 Azure Data Lake 資料來源設定累加式重新整理](incremental-refresh-data-sources.md)
+   - 若要變更累加式擷取資料，請參閱[為 Azure Data Lake 資料來源設定累加式重新整理](incremental-refresh-data-sources.md)。
+   - 僅變更機構名稱，使其符合 .json 檔案中的實體名稱。
+
+     > [!NOTE]
+     > 在擷取之後，一律保持 Customer Insights 中的實體名稱與 model.json 或 manifest.json 文件中的實體名稱相同。 在每次系統重新整理期間，Customer Insights 會使用 model.json 或 manifest.json 驗證所有實體名稱。 如果在 Customer Insights 內部或外部變更實體名稱，則會發生錯誤，因為 Customer Insights 在 .json 文件中找不到新實體名稱。 如果意外變更已擷取的實體名稱，請在 Customer Insights 中編輯實體名稱，使其符合 .json 檔案中的名稱。
 
 1. 選取 **屬性** 來新增或變更屬性，或啟用資料分析。 然後，選取 **完成**。
 
 1. 按一下 **儲存** 以套用變更，並返回至 **資料來源** 頁面。
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

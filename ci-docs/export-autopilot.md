@@ -1,52 +1,53 @@
 ---
 title: 將客戶細分匯出至 Autopilot (預覽版)
 description: 了解如何設定連接並匯出至 Autopilot。
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e3af3d03e70c4ce9d229c84c582ec4f302be8c9f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 449d2c5e32697e4a5d2c9dff4a5a1cbdb26aeb4d
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080887"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195050"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>將客戶細分匯出至 Autopilot (預覽版)
 
-將統整客戶設定檔的客戶細分匯出至 Autopilot，並在 Autopilot 中用來進行電子郵件行銷。 
+將統整客戶設定檔的客戶細分匯出至 Autopilot，並在 Autopilot 中用來進行電子郵件行銷。
 
 ## <a name="prerequisites-for-a-connection"></a>連接的先決條件
 
--   您具有 [Autopilot 帳戶](https://www.autopilothq.com/) 及對應的系統管理員認證。
--   在 Customer Insights 中，您具有[已設定的客戶細分](segments.md)。
--   匯出區段的統一客戶設定檔包含代表電子郵件地址的欄位。
+- [Autopilot 帳戶](https://www.autopilothq.com/) 及對應的系統管理員認證。
+- [Autopilot API 金鑰](https://autopilot.docs.apiary.io/#)
+- 在 Customer Insights 中的[已設定的客戶細分](segments.md)。
+- 匯出區段的統一客戶設定檔包含代表電子郵件地址的欄位。
 
 ## <a name="known-limitations"></a>已知限制
 
-- 您總共可以匯出 100,000 個客戶設定檔到 Autopilot。
-- 匯出到 Autopilot 被限制在客戶細分。
-- 匯出高達 100,000 個客戶設定檔到 Autopilot 最長花費數小時完成。 
-- 您可以匯出到 Autopilot 的客戶設定檔數目取決於並受限於您和 Autopilot 簽訂的契約。
+- 每次最多匯出 100,000 個客戶設定檔到 Autopilot，最長需花費數小時才能完成。 您可以匯出到 Autopilot 的客戶設定檔數目取決於您和 Autopilot 簽訂的契約。
+- 僅客戶細分。
 
 ## <a name="set-up-connection-to-autopilot"></a>設定對 Autopilot 的連接
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. 移至 **管理** > **連接**。
 
-1. 選取 **新增連接**，然後選擇 **Autopilot** 來設定連接。
+1. 選取 **新增連接**，然後選擇 **Autopilot**。
 
 1. 在 **顯示名稱** 中，給連接一個能夠辨識的名稱。 連接的名稱與類型能說明此連接。 我們建議您選取可以說明此連接用途和目標的名稱。
 
-1. 選擇可使用此連接的人員。 如果您不採取任何動作，預設值將為系統管理員。 如需詳細資訊，請參閱[允許參與者使用匯出的連接](connections.md#allow-contributors-to-use-a-connection-for-exports)。
+1. 選擇可使用此連接的人員。 根據預設，只有系統管理員。 如需詳細資訊，請參閱[允許參與者使用匯出的連接](connections.md#allow-contributors-to-use-a-connection-for-exports)。
 
-1. 請輸入 [Autopilot API 金鑰](https://autopilot.docs.apiary.io/#)。
+1. 請輸入 Autopilot API 金鑰。
 
-1. 選取 **我同意** 以確認 **資料隱私權與合規性**。
+1. 請檢查 [資料隱私權和合規性](connections.md#data-privacy-and-compliance)，並選取 **我同意**。
 
-1. 選取 **連接** 初始化與 Autopilot 的連接。
+1. 選取 **連接** 以初始化連接。
 
 1. 選取 **將您自己新增為匯出使用者** 並提供您的 Customer Insights 認證。
 
@@ -54,28 +55,24 @@ ms.locfileid: "9080887"
 
 ## <a name="configure-an-export"></a>設定匯出
 
-若您擁有取此類型的連接的存取權，則可以設定此匯出。 如需詳細資訊，請參閱[設定匯出所需的權限](export-destinations.md#set-up-a-new-export)。
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. 移至 **資料** > **匯出**。
 
-1. 若要建立新的匯出，請選取 **新增目的地**。
+1. 選取 **新增匯出**。
 
-1. 在 **匯出的連結** 欄位中，在 Autopilot 區段中選擇連接。 如果您看不到此區段名稱，代表沒有此類型的連接可供您使用。
+1. 在 **匯出的連結** 欄位中，在 Autopilot 區段中選擇連接。 如果沒有可用的連接，請與系統管理員聯繫。
 
-1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。 對其他可選欄位 (如 **名**、**姓**) 重複相同步驟。
+1. 輸入匯出的名稱。
 
-1. 選取您要匯出的客戶細分。 我們強烈 **建議您不要匯出總計超過 100'000 份客戶設定檔** 到 Autopilot。 
+1. 請在 **資料相符** 分段的 **電子郵件** 欄位中選取代表客戶電子郵件地址的欄位。
+
+1. 或者，匯出其他欄位，例如 **名字** 和 **姓氏**。
+
+1. 選擇要遵循已知限制匯出的客戶細分。
 
 1. 選取 **儲存**。
 
-儲存匯出並不會立即執行匯出。
-
-每次[排定重新整理](system.md#schedule-tab)會一起執行匯出。 您也可以依[需求匯出資料](export-destinations.md#run-exports-on-demand)。 
-
-## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
-
-當您啟用 Dynamics 365 Customer Insights 來傳輸資料給 Autopilot，您允許傳輸資料到 Dynamics 365 Customer Insights 合規性邊界之外，其中包括潛在敏感資料 (如個人資料)。 Microsoft 將依據您的指示傳輸此資料，但您有責任確保 Autopilot 符合任何您承擔的隱私權或資訊安全義務。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
-您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此匯出目的地，以便不再繼續使用此功能。
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947492"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188037"
 ---
 # <a name="use-customer-consent"></a>使用客戶同意
 
@@ -50,7 +50,7 @@ Dynamics 365 Customer Insights 可以匯入客戶的喜好設定並將其儲存�
 
 ## <a name="import-and-unify-consent-data"></a>匯入並整合同意資料
 
-同意資料匯入 Customer Insights 的方式，可以採用與其他資料來源相同的方式。 如需受支援資料的來源及匯入方式的詳細資訊，請參閱[資料來源概述](data-sources.md)。
+以與將其他資料來源擷取到 Customer Insights 相同的方式匯入同意資料。 如需受支援資料的來源及匯入方式的詳細資訊，請參閱[資料來源概述](data-sources.md)。
 
 如需整合資料來源的詳細資訊，請參閱[資料整合概述](data-unification.md)。
 
@@ -71,3 +71,5 @@ Dynamics 365 Customer Insights 可以匯入客戶的喜好設定並將其儲存�
 換言之，請確認匯入至 Customer Insights 的來源資料永遠是最新資訊。
 
 如需詳細資訊，請參閱[手動重新整理客戶細分](segments.md#refresh-segments)或[設定排程的重新整理](system.md#schedule-tab)。
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

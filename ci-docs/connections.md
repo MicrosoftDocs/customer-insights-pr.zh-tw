@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080842"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195164"
 ---
 # <a name="connections-preview-overview"></a>連接 (預覽版) 概觀
 
@@ -27,6 +27,12 @@ ms.locfileid: "9080842"
 **連接** 索引標籤顯示出所有使用中的連接。 每個連接顯示為清單上的一列。
 
 取得簡易概觀、說明，以及使用 **探索** 索引標籤上的每個擴充性選項，了解可以執行的動作。
+
+## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
+
+當您啟用 Dynamics 365 Customer Insights 將資料傳輸至協力廠商或其他 Microsoft 產品時，您允許傳輸資料到 Dynamics 365 Customer Insights 合規性邊界之外，包括潛在的敏感性資料 (例如個人資料)。 Microsoft 將依據您的指示傳輸此資料，但您須負責確保協力廠商符合您可能應盡的任何隱私權或資訊安全義務。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
+
+您的 Dynamics 365 Customer Insights 管理員可以隨時移除此連線，不再繼續使用該功能。
 
 ## <a name="exports"></a>匯出
 
@@ -41,8 +47,6 @@ ms.locfileid: "9080842"
 若要新增連接，您必須具備[系統管理員權限](permissions.md)。 如果您連至其他 Microsoft 服務，我們預設這兩個服務位於相同的組織中。
 
 1. 移至 **管理** > **連接 (預覽版)**。
-
-1. 移至 **連結** 索引標籤。
 
 1. 請選取 **新增連接** 建立新連接。 從下拉式功能表中選擇您要建立的連接類型。
 
@@ -99,3 +103,5 @@ ms.locfileid: "9080842"
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>請借助您自己的金鑰保存庫管理的祕密設定連接
 
 某些連接需要像 API 金鑰或密碼之類的祕密。 某些連接支援儲存在您自己金鑰保存庫的祕密。 了解更多支援的連接及在如何在[金鑰保存庫上設定 Customer Insights](use-azure-key-vault.md)。
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

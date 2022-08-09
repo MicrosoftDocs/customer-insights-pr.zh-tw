@@ -1,28 +1,56 @@
 ---
 title: Dynamics 365 Customer Insights 的新功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054008"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114236"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的新功能
 
 我們很高興宣布我們最新的更新！ 本文摘要說明公開預覽功能、正式發行增強功能以及功能更新。 若要查看長期功能計劃，請參閱 [Dynamics 365 和 Power Platform 發行計劃](/dynamics365/release-plans/)。
 
-我們會逐一在各地區推出更新。 因此可能會在特定地區提前看到其他地區尚未推出的功能。 除非另有指示，您不需要採取任何動作，我們會在不停機的情況下自動更新應用程式。
+我們會逐一在各地區推出更新。 因此可能會在特定地區提前看到其他地區尚未推出的功能。 除非另有說明，否則您無需執行任何動作，我們將自動更新應用程式，無需停機。
 
 > [!TIP]
 > 若要提出功能要求和產品建議並票選，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="june-2022-updates"></a>2022 年 6 月更新
+
+2022 年 6 月的更新包括新功能、效能升級和錯誤修正。
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>更新了資料來源和資料擷取的使用者體驗
+
+從各種資料來源匯入資料是在 Dynamics 365 Customer Insights 中整合客戶資料的基礎。 我們重新審視了資料來源匯入和連接的使用者體驗。 此更新旨在讓您更輕鬆地將資料擷取到 Customer Insights。
+
+如需更多資訊，請參閱[資料來源概觀](data-sources.md)。
+
+### <a name="export-to-inmobi"></a>匯出到 InMobi
+
+InMobi 協助品牌了解、識別、吸引和爭取消費者。 您可以透過 Azure Blob 儲存體帳戶將客戶細分和其他資料匯出到 InMobi 服務。
+
+如需更多資訊，請參閱[匯出到 InMobi (預覽版)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Customer Insights 中的加密箱支援
+
+客戶加密箱的介面可以審閱和核准 (或拒絕) 資料存取要求。 若需要客戶資料的資料存取權限以解決支援案例，就會出現這類要求。
+
+如需更多資訊，請參閱[使用客戶加密箱安全存取客戶資料 (預覽版)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview)
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>使用 Azure Private Link 來連接到您的資料
+
+Azure Private Link 允許 Customer Insights 透過虛擬網路中的私人端點連接到您的 Azure Data Lake Storage 帳戶。 對於未公開到公用網際網路的儲存體帳戶資料，Private Link 能進行對該限制網路的連接。
+
+如需更多資訊，請參閱[在 Customer Insights 中使用 Private Link](security-overview.md#private-links-tab)。
 
 ## <a name="may-2022-updates"></a>2022 年 5 月更新
 
@@ -169,7 +197,7 @@ LiveRamp 提供身分識別解析和客戶資料的整合。 您可以將客戶�
 - 查看事件與事件屬性 
 - 利用內嵌及精簡事件增強整合個人資料檔，從客戶資料的完整價值中獲益
   
-轉換期間，擷取的事件仍會串流至已連線的 Data Lake 中。 關閉此功能後，便會停止在資料共用，且不會將任何新事件傳送至已連線的儲存空間。
+轉換期間，擷取的事件仍會串流至已連線的 Data Lake 中。 關閉此功能後，將停止資料共用，並且不會向連接的儲存體傳送新事件。
 如果您對功能預覽版的終止有任何問題，請直接與您的 Microsoft 帳戶團隊聯繫。 您的帳戶團隊將通知您新版的最新消息。 
 
 ## <a name="january-2022-updates"></a>2022 年 1 月更新

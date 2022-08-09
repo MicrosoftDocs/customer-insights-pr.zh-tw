@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080959"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170810"
 ---
 # <a name="measures-overview"></a>量值概觀
 
-量值可協助您更清晰地了解客戶行為和業務績效。 它們會從[整合個人資料](data-unification.md)中檢查相關的值。 例如，公司想要查看 *每位客戶的總花費*，以瞭解單一客戶的購買歷史，或量值 *公司的總銷售人*，以瞭解整體業務中的總營收。  
+量值可協助您更清晰地了解客戶行為和業務績效。 它們會從[整合個人資料](data-unification.md)中檢查相關的值。 例如，公司想要查看 *每位客戶的總花費*，以瞭解單一客戶的購買歷史，或量值 *公司的總銷售人*，以瞭解整體業務中的總營收。
 
-量值可以使用[量值建立器](measure-builder.md) 建立，量值建立器是一種包含各種運算子和簡單對應選項的資料查詢平臺。 它可讓您篩選資料、分組結果、偵測 [實體關聯路徑](relationships.md)，以及預覽輸出。 [使用預先定義的範本](measure-templates.md)可以有效率的設定常用量值。
+查詢客戶資料和擷取深入解析來建立規劃商務活動的量值。 例如，建立 *每個客戶的總消費額* 以及 *每個客戶的總利潤額*，能協助找出大量消費額度高且利潤高的客戶。 然後，根據這些量值[建立客戶細分](segments.md)，來推動下一個最佳行動。
 
-規劃商務活動時，您可以使用量值建立工具查詢客戶資料並抽取見解。 例如，建立 *每個客戶的總消費額* 以及 *每個客戶的總利潤額*，能協助找出大量消費額度高且利潤高的客戶。 您可以根據這些量值[建立客戶細分](segments.md)，採取之後的最佳動作。
+## <a name="create-a-measure"></a>建立量值
 
-## <a name="manage-your-measures"></a>管理您的量值
+選擇如何根據目標對象建立量值。
 
-您可以在 **量值** 頁面上找到量值清單。
+# <a name="individual-consumers-b-to-c"></a>[個人消費者 (B2C)](#tab/b2c)
 
-您可以找到有關量值類型、建立者、建立日期、狀態及狀況的資訊。 當您從清單中選取量值時，您可以預覽輸出並下載 CSV 檔。
+- 使用量值建立器從頭開始：[建立自己的](measure-builder.md)。
+- 從常用的量值：[使用預先定義的範本](measure-templates.md)。
+
+# <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
+
+使用量值建立器從頭開始：[建立自己的](measure-builder.md)。
+
+---
+
+## <a name="manage-existing-measures"></a>管理現有的量值
+
+移至 **量值** 頁面，以查看您所建立的量值、其狀態、量值類型，以及上次重新整理資料的時間。 您可以用任何欄來排序量值清單，或是使用搜尋方塊尋找您要管理的量值。
+
+選取量值旁的按鈕來查看可用的動作。 選擇量值名稱以預覽輸出並下載 CSV 檔案。
 
 :::image type="content" source="media/measures-actions.png" alt-text="管理單一量值的動作。"lightbox="media/measures-actions.png":::
 
-選取量值時，可使用下列動作：
-
-- **編輯** 量值的設定。
-- **複製** 量值。 您可以選擇立刻編輯屬性，或只是儲存複本。
-- **重新整理** 根據最新資料的量值。 若要同時重新整理所有的量值，請選取所有量值，然後 **重新整理**。
+- **編輯** 量值以變更其屬性。
+- **重新整理** 量值以包括最新的資料。
 - **重新命名** 量值。
-- **啟用** 或 **停用**。 停用量值時，不會在[排程的重新整理](system.md#schedule-tab)時進行重新整理。
-- **標籤** 可在客戶細分[管理標籤](work-with-tags-columns.md#manage-tags)。
+- **啟用** 或 **停用** 量值。 非使用中量值在 [已排程的重新整理](system.md#schedule-tab)期間不會重新整理，並且 **狀態** 列示為 **已跳過**，表示甚至未嘗試重新整理。
+- **標記** 以針對量值[管理標籤](work-with-tags-columns.md#manage-tags)。
 - **刪除** 量值。
+- **欄**，可[自訂顯示的欄](work-with-tags-columns.md#customize-columns)。
+- **篩選** 可[篩選標籤](work-with-tags-columns.md#filter-on-tags)。
+- **搜尋名稱**，依據量值名稱進行搜尋。
+
+## <a name="refresh-measures"></a>重新整理量值
+
+量值可自動排程或依照需要情況手動重新整理。 若要手動重新整理一個或多個量值，請選取它們，然後選擇 **重新整理**。 若要 [排程自動重新整理](system.md#schedule-tab)，請前往 **系統管理** > **系統** > **排程**。
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>下一個步驟
-
-您可以使用現有的量值來建立[客戶細分](segments.md)。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

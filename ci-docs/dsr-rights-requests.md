@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947358"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146685"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>符合 GDPR 的資料主體權利 (DSR) 要求
 
@@ -31,18 +31,22 @@ ms.locfileid: "8947358"
 
 Customer Insights 提供下列產品內體驗，可刪除特定顧客或 使用者的個人資料：
 
-- **管理客戶資料的刪除要求**：Customer Insights 中的客戶資料擷取自 Customer Insights 之外的原始資料來源。 所有的 GDPR 刪除要求都必須在原始資料來源中執行。
+- **管理客戶資料的刪除要求**：Customer Insights 中的客戶資料擷取自 Customer Insights 之外的原始資料來源。 先在原始資料來源中執行 GDPR 刪除要求。
 - **管理 Customer Insights 使用者資料的刪除要求**：使用者資料透過 Customer Insights 建立。 所有的 GDPR 刪除要求都必須在 Customer Insights 中執行。
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>管理刪除客戶資料的要求
 
-Customer Insights 管理員可以依照下列步驟移除已在資料來源中刪除的客戶資料：
+Customer Insights 管理員可以依照下列步驟移除已在資料來源中刪除的客戶資料。 請確認已在您的資料來源中執行了刪除要求，然後再執行下列步驟。 
 
 1. 登入 Dynamics 365 Customer Insights。
-2. 移至 **資料** > **資料來源**
-3. 對於清單中每個包含已刪除之客戶資料的資料來源：
+1. 移至 **資料** > **資料來源**
+1. 對於清單中每個包含已刪除之客戶資料的資料來源：
    1. 選取垂直省略符號 (&vellip;)，然後選取 **重新整理**。
-   2. 檢查 **狀態** 下的資料來源狀態。 核取記號表示已成功地進行重新整理。 警告三角形表示發生錯誤。 如果顯示警告三角形，請聯繫 D365CI@microsoft.com。
+   1. 檢查 **狀態** 下的資料來源狀態。 核取記號表示已成功地進行重新整理。 警告三角形表示發生錯誤。 如果顯示警告三角形，請聯繫 D365CI@microsoft.com。
+1. 成功重新整理資料來源後，也請執行下游重新整理。 特別是，如果您未定期完整重新整理已排程的 Customer Insights。 
+
+> [!IMPORTANT]
+> 在刪除要求之後，不會在完整重新整理或執行下游重新整理中包括靜態客戶細分。 若要確定客戶資料也已從靜態客戶細分中移除，請使用重新整理的來源資料重新建立靜態客戶細分。
 
 > [!div class="mx-imgBorder"]
 > ![處理客戶資料的 GDPR 刪除要求。](media/gdpr-data-sources.png "處理客戶資料的 GDPR 刪除要求")
@@ -77,5 +81,10 @@ Customer Insights 管理員可以依照下列步驟來刪除 Customer Insights �
 1. 傳送電子郵件至 D365CI@microsoft.com，在要求中指定使用者的電子郵件地址。 Customer Insights 團隊會傳送電子郵件給已註冊的租用戶管理員電子郵件地址，要求確認匯出資料。
 2. 認可匯出所要求之使用者資料的確認。
 3. 透過用戶管理員電子郵件地址接收匯出的資料。
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 中的資料刪除處理
+
+1. 若資料分區和資料快照處於非使用狀態超過 30 天，將會刪除資料 (資料分區與資料快照)，這代表它們已透過資料來源的重新整理，由新的資料分區和快照所取代。
+2. 並非所有的資料和快照都會刪除。 根據定義，最新的資料分區和資料快照是使用中的，因為它們在 Customer Insights 中使用。 如果是最新資料，則過去 30 天未重新整理資料來源也沒關係。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

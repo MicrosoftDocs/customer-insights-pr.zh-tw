@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645932"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171039"
 ---
 # <a name="subscription-churn-prediction"></a>訂閱流失預測
 
@@ -121,7 +121,7 @@ ms.locfileid: "8645932"
    - **預測名稱：** 建立預測時提供的預測名稱。
    - **預測類型：** 預測使用的模型類型
    - **輸出實體：** 用於儲存預測輸出之實體的名稱。 您可以在 **資料** > **實體** 中找到具有此名稱的實體。    
-     在輸出實體中，*ChurnScore* 是發生流失的可能性和 *IsChurn* 是根據 *ChurnScore* 加上 0.5 閾值的二元標籤。 預設閾值可能不適用於您的案例。 以您喜歡的閾值[建立新的區段](segments.md#create-a-new-segment)。
+     在輸出實體中，*ChurnScore* 是發生流失的可能性和 *IsChurn* 是根據 *ChurnScore* 加上 0.5 閾值的二元標籤。 預設閾值可能不適用於您的案例。 以您喜歡的閾值[建立新的區段](segments.md#create-a-segment)。
    - **預測欄位：** 此欄位只有某些類型的預測才會填入，並在訂閱流失預測中並未使用。
    - **狀態：** 預測的執行的目前狀態。
         - **已排入佇列：** 預測目前正在等待其他要執行的程序。

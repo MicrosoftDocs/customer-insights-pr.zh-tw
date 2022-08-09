@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080966"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195648"
 ---
 # <a name="real-time-data-ingestion-preview"></a>即時資料擷取 (預覽)
 
@@ -28,7 +28,7 @@ ms.locfileid: "9080966"
 
 即時更新有過期時間，超過此時間後，就不會再從資料來源中覆寫該值：
 
-- 設定檔更新將保留 4 小時
+- 設定檔更新將保留四小時
 - 活動將保留 30 天
 
 這些值是您可以變更的 API 呼叫參數。 它們的目標是要確保您的來源資料仍然是事實資料的來源。 如果您想要拉長即時更新功能納入的時間，您必須將它們新增到資料來源，如此才能在下次排程重新整理期間拉出它們。

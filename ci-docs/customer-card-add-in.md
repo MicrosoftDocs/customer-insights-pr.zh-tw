@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080846"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194912"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 應用程式的客戶卡片增益集 (預覽版)
 
@@ -28,21 +28,25 @@ ms.locfileid: "9080846"
 
 ## <a name="prerequisites"></a>先決條件
 
-- 增益集只適用在 Dynamics 365 模型導向應用程式 (例如 Sales 或 Customer Service)，版本 9.0 或更新的版本。
-- 為了讓您的 Dynamics 365 資料能對應 Customer Insights 的客戶個人資料，我們建議[使用 Microsoft Dataverse 連接器從 Dynamics 365 App 擷取](connect-power-query.md)。 如果您使用不同的方法來擷取 Dynamics 365 連絡人(或客戶)，則必須確認 `contactid`(或 `accountid`) 欄位[在資料整合程序的對應步驟中，已設為該資料來源的主索引鍵](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。
+- Dynamics 365 模型導向應用程式 (例如 Sales 或 Customer Service)，版本 9.0 或更新的版本。
+- 為了讓您的 Dynamics 365 資料能對應 Customer Insights 的客戶個人資料，我們建議[使用 Microsoft Dataverse 連接器從 Dynamics 365 App 擷取](connect-power-query.md)。 如果您使用不同的方法來擷取 Dynamics 365 連絡人(或客戶)，則必須確認 `contactid`(或 `accountid`) 欄位設定為[在資料整合流程中該資料來源的主索引鍵](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。
 - 客戶卡片增益集所有 Dynamics 365 使用者，必須在Customer Insights 中[新增為使用者](permissions.md)，才能查看資料。
-- 在 Customer Insights 中[完成搜尋和篩選功能設定](search-filter-index.md)才能讓查詢資料運作。
+- 在 Customer Insights 中[設定搜尋和篩選功能](search-filter-index.md)。
 - 每個增益集控制項依賴 Customer Insights 中的特定資料。 某些資料和控制項只能在特定類型的環境中使用。 如果因為選取的環境類型無法使用控制項，增益集組態將會通知您。 了解更多有關[環境使用案例](work-with-business-accounts.md)。
-  - **量值控制項**：需要類型客戶屬性[組態的量值](measures.md)。
-  - **智慧控制項**：需要使用[預測或自訂模型](predictions-overview.md)生成資料。
-  - **客戶詳細資料控制項**：設定檔的所有欄位皆可在統一的客戶設定檔使用。
+  - **量值控制項**：需要[已設定的客戶屬性量值](measures.md)。
+  - **智慧控制項**：需要使用[預測或自訂模型](predictions-overview.md)產生資料。
+  - **客戶詳細資料控制項**：顯示統一客戶設定檔中可用設定檔的所有欄位。
   - **擴充控制項**：需要有效[擴充](enrichment-hub.md)套用到客戶設定檔。 卡片增益集增益集支援以下擴充：Microsoft 提供的[品牌](enrichment-microsoft.md)、Microsoft 提供的[興趣](enrichment-microsoft.md)、Microsoft 提供的 [Office 參與度資料](enrichment-office.md)。
-  - **連絡人控制項**：需要連絡人類型的語義實體定義。
-  - **時間表控制項**：需要[已組態的活動](activities.md)。
+  - **連絡人控制項**：需要連絡人語義實體定義。
+  - **時間表控制項**：需要[已設定的活動](activities.md)。
 
 ## <a name="install-the-customer-card-add-in"></a>安裝客戶卡片增益集
 
-客戶卡片增益集是 Dynamics 365 中 Customer Engagement 應用程式的解決方案。 若要安裝此解決方案，請移至 AppSource 並搜尋 **Dynamics Customer 卡片**。 選取 [AppSource 上的客戶卡片增益集](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview)，然後選取 **立即取得**。
+客戶卡片增益集是 Dynamics 365 中 Customer Engagement 應用程式的解決方案。 若要安裝解決方案：
+
+1. 移至 AppSource，然後搜尋 **Dynamics 客戶卡片**。
+
+1. 選取 [AppSource 上的客戶卡片增益集](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview)，然後選取 **立即取得**。
 
 您可能必須使用 Dynamics 365 應用程式的系統管理員認證登入，才能安裝解決方案。 若要將解決方案安裝到您的環境，可能需要花費一些時間。
 

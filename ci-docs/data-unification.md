@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 766e688cb80c50a0d620943f87b76eb84a2fb89a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080854"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139470"
 ---
 # <a name="data-unification-overview"></a>資料整合概觀
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 [設定資料來源](data-sources.md) 之後，您可以統一資料。 資料整合可讓您將曾經不同的資料來源整合成單一主要資料集，並提供該資料的整合檢視表。 對於個別消費者 (B 到 C)，資料會是以個人為中心，而整合提供客戶的整合檢視表。 對於商務客戶 (B 到 B)，資料會是以客戶為中心，而整合提供客戶的整合檢視表。
 

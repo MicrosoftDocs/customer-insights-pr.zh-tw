@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080863"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195786"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>透過 SFTP 自訂匯入來擴充客戶設定檔 (預覽版)
 
@@ -104,7 +104,7 @@ ms.locfileid: "9080863"
 
 1. 檢閱概覽，然後選擇 **下一步**。
 
-1. 選取連接。 如果連接無法使用，請與系統管理員聯繫。
+1. 選取連接。 如果沒有可用的連接，請與系統管理員聯繫。
 
 1. **選取顧客資料集**，然後選擇要擴充的個人資料或客戶細分。 *Customer* 實體可擴充所有客戶個人資料，然而客戶細分實體僅擴充位於該客戶細分的客戶個人資料。
 

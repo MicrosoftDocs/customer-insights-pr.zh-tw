@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cc65314f1b083694b60ac0a2625bea906be7272b
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054744"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183483"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model 中的實體結構描述
 
@@ -39,9 +39,8 @@ ms.locfileid: "9054744"
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>使用 Common Data Model 實體導覽器來檢視實體
 
-您可以在 [Common Data Model 實體導航器中](https://microsoft.github.io/CDM/) 檢視實體。 在見解應用程式區段選取實體以獲取 Customer Insights 實體清單及其定義。
-> [!div class="mx-imgBorder"]
-> ![顯示 CustomerActivity 實體的 CDM 實體導覽器。](media/CDM-entity-navigator.png "顯示 CustomerActivity 實體的 CDM 實體導覽器")
+可以在 [Common Data Model 實體導航器中](https://microsoft.github.io/CDM/) 檢視實體。 在見解應用程式區段選取實體以獲取 Customer Insights 實體清單及其定義。
 
+:::image type="content" source="media/CDM-entity-navigator.png" alt-text="顯示 CustomerActivity 實體的 CDM 實體導覽器。":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

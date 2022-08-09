@@ -1,19 +1,19 @@
 ---
 title: Power Automate 連接器 (預覽版) | Microsoft Docs
 description: 在 Dynamics 365 Customer Insights 中建立 Microsoft Power Automate 的流程。
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080875"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196108"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate 連接器 (預覽)
 
@@ -21,18 +21,18 @@ ms.locfileid: "9080875"
 
 ## <a name="known-limitations"></a>已知限制
 
-- 60 秒最多可以執行 100 個呼叫。 您可以使用 $skip 參數，多次呼叫 API 端點。 [了解 $skip 參數的詳細資訊](/connectors/customerinsights/#get-items-from-an-entity)。
+- 60 秒最多可以執行 100 個呼叫。 使用 [$skip 參數](/connectors/customerinsights/#get-items-from-an-entity)，多次呼叫 API 端點。
 
 ## <a name="power-automate-triggers"></a>Power Automate 觸發程序
 
-使用觸發程序來建立雲端流程並自動化重複工作，例如通知或更多進階動作。
+使用觸發程序來建立雲端流程並自動化重複工作，例如通知或更多進階動作。 在以下情況下使用觸發程序：
 
-- 當資料來源重新整理失敗時觸發。
-- 當資料來源重新整理成功時觸發。
-- 在區段上越過閾值時觸發。 觸發程序受限在需要超過閾值以上。
-- 在業務量值上越過閾值時觸發。 此處僅顯示缺少維度的業務量值。 觸發程序受限在需要超過閾值以上。
-- 完成 (資料來源、區段、量值，...) 的完整重新整理時的觸發程序。
-- 完成整合程序的重新整理時的觸發器。
+- 資料來源重新整理失敗。
+- 資料來源重新整理成功。
+- 在區段上越過閾值。 觸發程序受限在需要超過閾值以上。
+- 在業務量值上越過閾值。 此處僅顯示缺少維度的業務量值。 觸發程序受限在需要超過閾值以上。
+- 完整的排程重新整理完成時。 此觸發程序不適用於手動啟動的重新整理。
+- 統一流程的重新整理完成時。
 
 [在 Power Automate 中設定您的觸發程序。](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Power Automate 連接器提供可用觸發程序以外的動作。 如需詳細�
 
 ## <a name="create-a-power-automate-flow"></a>建立 Power Automate 流程
 
-1. 移至 **管理員** > **匯出目的地**。
+1. 移至 **管理** > **連接**。
 
 1. 在 **Power Automate** 圖格中，選取 **設定**。
 
@@ -53,7 +53,5 @@ Power Automate 連接器提供可用觸發程序以外的動作。 如需詳細�
 如何使用流程的範例： 
 - 若資料來源重新整理失敗，請將訊息張貼到 Microsoft Teams 頻道。 
 - 達到客戶細分上的閾值時，將電子郵件傳送給資料負責人。
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

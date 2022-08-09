@@ -14,16 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080943"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139647"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>為資料整合進行客戶欄位的整合
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 在整合程序的這個步驟中，請選取屬性並從可合併到整合個人資料實體中的屬性中排除。 例如，如果有三個實體中存在電子郵件資料，您可能會想要將所有三個不同的電子郵件欄位放在一起，或合併至整合個人資料的單一電子郵件欄位中。 系統會自動合併某些屬性。 您可以建立穩定且獨特的客戶識別碼，並將相關個人資料分組至叢集。
 
