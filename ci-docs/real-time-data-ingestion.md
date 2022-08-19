@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195648"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246098"
 ---
 # <a name="real-time-data-ingestion-preview"></a>即時資料擷取 (預覽)
 
 接近即時的功能可讓您看到您的客戶已使用您的產品或服務所進行的最新互動。
 
-[排程的重新整理](system.md#schedule-tab) 包括大量記錄和數次複雜作業。 首先，資料從資料來源拉出。 接下來，會統整資料，然後以額外資訊擴充。 每次執行此程序時，可能需要幾分鐘的時間。
+[排程的重新整理](schedule-refresh.md) 包括大量記錄和數次複雜作業。 首先，資料從資料來源拉出。 接下來，會統整資料，然後以額外資訊擴充。 每次執行此程序時，可能需要幾分鐘的時間。
 
 即時功能立即提供資料方便使用，直到後續排程的重新整理將此資料從資料來源拉出為止。
 
@@ -85,7 +85,7 @@ ms.locfileid: "9195648"
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>了解遙測的即時使用方式
 
-取得即時 API 的要求量和系統可能遭遇的問題相關資訊總覽。 您可以[存取即時遙測](system.md#api-usage-tab)。 
+取得即時 API 的要求量和系統可能遭遇的問題相關資訊總覽。 您可以[存取即時遙測](system.md#view-api-usage)。 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

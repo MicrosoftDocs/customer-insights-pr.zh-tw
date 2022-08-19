@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080934"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245455"
 ---
 # <a name="manage-predictions"></a>管理預測
 
@@ -58,7 +58,7 @@ ms.locfileid: "9080934"
 
 ## <a name="refresh-a-prediction"></a>重新整理預測
 
-測試會依照設定中所設定的同樣[資料重新整理排程](system.md#schedule-tab)自動重新整理。 您也可以手動重新整理它們。
+測試會依照設定中所設定的同樣[資料重新整理排程](schedule-refresh.md)自動重新整理。 您也可以手動重新整理它們。
 
 1. 請前往 **智慧** > **預測** 並選取 **我的預測** 索引標籤。
 

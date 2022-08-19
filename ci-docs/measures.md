@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170810"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245363"
 ---
 # <a name="measures-overview"></a>量值概觀
 
@@ -53,7 +53,7 @@ ms.locfileid: "9170810"
 - **編輯** 量值以變更其屬性。
 - **重新整理** 量值以包括最新的資料。
 - **重新命名** 量值。
-- **啟用** 或 **停用** 量值。 非使用中量值在 [已排程的重新整理](system.md#schedule-tab)期間不會重新整理，並且 **狀態** 列示為 **已跳過**，表示甚至未嘗試重新整理。
+- **啟用** 或 **停用** 量值。 非使用中量值在 [已排程的重新整理](schedule-refresh.md)期間不會重新整理，並且 **狀態** 列示為 **已跳過**，表示甚至未嘗試重新整理。
 - **標記** 以針對量值[管理標籤](work-with-tags-columns.md#manage-tags)。
 - **刪除** 量值。
 - **欄**，可[自訂顯示的欄](work-with-tags-columns.md#customize-columns)。
@@ -62,7 +62,7 @@ ms.locfileid: "9170810"
 
 ## <a name="refresh-measures"></a>重新整理量值
 
-量值可自動排程或依照需要情況手動重新整理。 若要手動重新整理一個或多個量值，請選取它們，然後選擇 **重新整理**。 若要 [排程自動重新整理](system.md#schedule-tab)，請前往 **系統管理** > **系統** > **排程**。
+量值可自動排程或依照需要情況手動重新整理。 若要手動重新整理一個或多個量值，請選取它們，然後選擇 **重新整理**。 若要 [排程自動重新整理](schedule-refresh.md)，請前往 **系統管理** > **系統** > **排程**。
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

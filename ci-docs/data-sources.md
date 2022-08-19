@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207081"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245639"
 ---
 # <a name="data-sources-overview"></a>資料來源概觀
 
@@ -67,7 +67,7 @@ Dynamics 365 Customer Insights 提供連結以從廣泛的來源取用資料。 
 
 資料來源可自動排程或依照需要情況手動重新整理。 [內部部署資料來源](connect-power-query.md#add-data-from-on-premises-data-sources)會根據在資料擷取時設定的排程自行重新整理。 對於附加的資料來源，資料擷取會使用該資料來源的最新資料。
 
-請前往 **系統管理員** > **系統** > [**排程**](system.md#schedule-tab)為內嵌資料來源設定系統排程的重新整理。
+請前往 **系統管理員** > **系統** > [**排程**](schedule-refresh.md)為內嵌資料來源設定系統排程的重新整理。
 
 若要視需要重新整理資料來源：
 

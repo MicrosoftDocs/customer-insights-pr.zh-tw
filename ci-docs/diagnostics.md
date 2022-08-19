@@ -1,7 +1,7 @@
 ---
-title: 使用 Azure 監視器在 Dynamics 365 Customer Insights 轉寄記錄 (預覽版)
+title: 匯出診斷記錄 (預覽版)
 description: 了解如何將記錄傳送至 Microsoft Azure 監視器。
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,71 +11,92 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052643"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245915"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>使用 Azure 監視器在 Dynamics 365 Customer Insights 轉寄記錄 (預覽版)
+# <a name="export-diagnostic-logs-preview"></a>匯出診斷記錄 (預覽版)
 
-Dynamics 365 Customer Insights 提供對 Azure 監視器的直接整合。 Azure 監視器資源記錄可讓您監控並把記錄傳送至 [Azure 儲存體](https://azure.microsoft.com/services/storage/)、[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)，或將它們串流至 [Azure 事件中樞](https://azure.microsoft.com/services/event-hubs/)。
+使用 Azure 監視器轉寄 Customer Insights 記錄。 Azure 監視器資源記錄可讓您監控並把記錄傳送至 [Azure 儲存體](https://azure.microsoft.com/services/storage/)、[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)，或將它們串流至 [Azure 事件中樞](https://azure.microsoft.com/services/event-hubs/)。
 
 Customer Insights 會傳送下列事件記錄檔：
 
 - **稽核事件**
-  - **APIEvent** - 讓變更追蹤能透過 Dynamics 365 Customer Insights 完成。
+  - **APIEvent** - 讓變更追蹤能透過 Dynamics 365 Customer Insights UI 完成。
 - **作業事件**
-  - **WorkflowEvent** -工作流程允許設定[資料來源](data-sources.md)、[整合](data-unification.md)、[擴充](enrichment-hub.md)，並最終把資料 [匯出](export-destinations.md)至其他系統。 所有的步驟都可以分別執行 (例如，觸發單一匯出)。 也可以執行已協調 (例如，資料重新整理觸發其資料來源的整合程序，改程序進行擴充以及在完成後將資料匯出至另一個系統)。 如需更多資訊，請參閱 [WorkflowEvent 結構描述](#workflow-event-schema)。
-  - **APIEvent** - 所有對 Dynamics 365 Customer Insights 的客戶執行個體的 API 呼叫。 如需更多資訊，請參閱 [APIEvent 結構描述](#api-event-schema)。
+  - **WorkflowEvent** -允許設定[資料來源](data-sources.md)、[整合](data-unification.md)、[擴充](enrichment-hub.md)，並最終把資料 [匯出](export-destinations.md)至其他系統。 這些步驟都可以分別執行 (例如，觸發單一匯出)。 它們也可以協調執行 (例如，資料來源的資料重新整理觸發整合程序，此程序將提取擴充以及在完成後將資料匯出至另一個系統)。 如需更多資訊，請參閱 [WorkflowEvent 結構描述](#workflow-event-schema)。
+  - **APIEvent** - 傳送客戶執行個體的所有 API 呼叫到 Dynamics 365 Customer Insights。 如需更多資訊，請參閱 [APIEvent 結構描述](#api-event-schema)。
 
 ## <a name="set-up-the-diagnostic-settings"></a>設定診斷設定
 
 ### <a name="prerequisites"></a>先決條件
 
-若要在 Customer Insights 中設定診斷，必須符合下列先決條件：
-
-- 您必須具備有效的 [ Azure 訂閱](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)。
-- 您擁有 Customer Insights 中的[系統管理員](permissions.md#admin)權限。
-- 您擁有 Azure 中目的地資源的 **參與者** 及 **使用者存取系統管理員** 角色。 資源可以是 Azure Data Lake Storage 帳戶、Azure 事件中樞或 Azure Log Analytics 工作區。 如需詳細資訊，請參閱[使用 Azure 入口網站新增移除 Azure 角色指派](/azure/role-based-access-control/role-assignments-portal)。 在 Customer Insights 中設定診斷設定時必須有此權限，可以在安裝成功後變更。
+- 啟用中的 [Azure 訂用帳戶](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)。
+-  Customer Insights 中的[系統管理員](permissions.md#admin)權限。
+- 您擁有 Azure 中目的地資源的[參與者及使用者存取系統管理員角色](/azure/role-based-access-control/role-assignments-portal) 。 資源可以是 Azure Data Lake Storage 帳戶、Azure 事件中樞或 Azure Log Analytics 工作區。 在 Customer Insights 中設定診斷設定時必須有此權限，不過在設定成功後可以變更。
 - Azure 儲存體、Azure 事件中樞或 Azure Log Analytics 符合的[目的地需求](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements)。
-- 在資源所屬的資源群組上至少要有 **讀者** 角色。
+- 在資源所屬的資源群組中至少要有 **讀者** 角色。
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>使用 Azure 監視器設定診斷
 
-1. 在 Customer Insights 中，選取 **系統** > **診斷** 以查看設定此執行個體的診斷目的地。
+1. 在 Customer Insights，移至 **管理員** > **系統** 並選取 **診斷** 索引標籤。
 
 1. 選取 **新增目的地**。
 
-   > [!div class="mx-imgBorder"]
-   > ![診斷連接](media/diagnostics-pane.png "診斷連接")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="診斷連接。":::
 
 1. 在 **診斷目的地的名稱** 欄位的名稱中輸入名稱。
 
-1. 選擇具備目的地資源的 Azure 訂閱其 **租用戶**，並選取 **登入**。
+1. 選取 **資源類型** (儲存體帳戶、事件中樞或記錄分析)。
 
-1. 選取 **資源類型** (儲存體、事件中樞或記錄分析)。
+1. 選取目的地資源的 **訂閱**、**資源群組** 和 **資源**。 如需權限和記錄資訊，請參閱[目的地資源的設定](#configuration-on-the-destination-resource)。
 
-1. 選取目的地資源的 **訂閱**。
-
-1. 選取目的地資源的 **資源群組**。
-
-1. 選取 **資源**。
-
-1. 確認 **資料隱私權與合規性** 聲明。
+1. 請檢查 [資料隱私權和合規性](connections.md#data-privacy-and-compliance)，並選取 **我同意**。
 
 1. 選取 **連接至系統** 以連接至目的地資源。 如果此 API 正在使用中且會生成事件，15 分鐘後記錄會在目的地開始顯示。
 
-### <a name="remove-a-destination"></a>移除目的地
+## <a name="configuration-on-the-destination-resource"></a>對目的地資源的設定
 
-1. 移至 **系統** > **診斷**。
+根據您在資源類型上做出的選擇，會自動產生下列變更：
+
+### <a name="storage-account"></a>Storage account
+
+Customer Insights 服務主體取得已選資源的 **儲存體帳戶參與者** 權限，並在已選的命名空間下建立兩個容器：
+
+- `insight-logs-audit` 包含 **稽核事件**
+- `insight-logs-operational` 包含 **作業事件**
+
+### <a name="event-hub"></a>事件中樞
+
+Customer Insights 服務主體取得資源的 **Azure 事件中樞資料擁有者** 權限，並在已選的命名空間下建立兩個事件中樞：
+
+- `insight-logs-audit` 包含 **稽核事件**
+- `insight-logs-operational` 包含 **作業事件**
+
+### <a name="log-analytics"></a>Log Analytics
+
+Customer Insights 服務主體取得資源的 **記錄分析參與者** 權限。 記錄將會在選定的 Log Analytics 工作區，位於 **記錄** > **資料表** > **記錄管理**。 展開 **記錄管理** 解決方案，並找到 `CIEventsAudit` 和 `CIEventsOperational` 資料表。
+
+- `CIEventsAudit` 包含 **稽核事件**
+- `CIEventsOperational` 包含 **作業事件**
+
+在 **查詢** 視窗中，展開 **稽核** 解決方案，並搜尋 `CIEvents` 找到提供的範例查詢 。
+
+## <a name="remove-a-diagnostics-destination"></a>移除診斷目的地
+
+1. 請前往 **系統管理員** > **系統**，然後選取 **診斷** 索引標籤。
 
 1. 選取清單中的診斷目的地。
 
+   > [!TIP]
+   > 移除目的地時，會停止記錄轉發，但不會刪除 Azure 訂用帳戶上的資源。 若要刪除 Azure 的資源，您可以在 **動作** 資料行中選取連結，打開選定資源的 Azure 入口網站，並在這裡進行刪除。 接著刪除診斷目的地。
+
 1. 在 **動作** 資料行中，選取 **刪除** 圖示。
 
-1. 確認刪除以停止記錄轉發。 Azure 訂閱上的資源將不會被刪除。 您可以在 **動作** 資料行中選取連結，打開選取資源的 Azure 入口網站，並在這裡進行刪除。
+1. 確認刪除並移除目的地以及停止記錄轉發。
 
 ## <a name="log-categories-and-event-schemas"></a>記錄類別及事件結構描述
 
@@ -89,36 +110,9 @@ Customer Insights 提供兩個類別：
 - **稽核事件**：[API 事件](#api-event-schema)，以追蹤服務上的設定變更。 `POST|PUT|DELETE|PATCH` 作業屬於此類別。
 - **作業事件**：使用服務時生成的 [API 事件](#api-event-schema)或[工作流程事件](#workflow-event-schema)。  例如，`GET`要求或工作流程的執行事件。
 
-## <a name="configuration-on-the-destination-resource"></a>對目的地資源的設定
-
-根據您在資源類型上做出的選擇，下列步驟將會自動套用：
-
-### <a name="storage-account"></a>Storage account
-
-Customer Insights 服務主體取得已選資源的 **儲存體帳戶參與者** 權限，並在已選的命名空間下建立兩個容器：
-
-- `insight-logs-audit` 包含 **稽核事件**
-- `insight-logs-operational` 包含 **作業事件**
-
-### <a name="event-hub"></a>事件中樞
-
-Customer Insights 服務主體取得已選資源的 **Azure 事件中樞資料擁有者** 權限，並在已選的命名空間下建立兩個事件中樞：
-
-- `insight-logs-audit` 包含 **稽核事件**
-- `insight-logs-operational` 包含 **作業事件**
-
-### <a name="log-analytics"></a>Log Analytics
-
-Customer Insights 服務主體取得資源的 **記錄分析參與者** 權限。 記錄將會在選定的 Log Analytics 工作區 **記錄** > **資料表** > **記錄管理** 下方。 展開 **記錄管理** 解決方案，並找到 `CIEventsAudit` 和 `CIEventsOperational` 資料表。
-
-- `CIEventsAudit` 包含 **稽核事件**
-- `CIEventsOperational` 包含 **作業事件**
-
-在 **查詢** 視窗中，展開 **稽核** 解決方案，並搜尋 `CIEvents` 找到提供的範例查詢 。
-
 ## <a name="event-schemas"></a>事件結構描述
 
-API 事件和工作流程事件有相同的結構以及不同的細節，請參閱 [API 事件架構](#api-event-schema)或[工作流程事件架構](#workflow-event-schema)。
+API 事件和工作流程事件有共同的結構，但有一些不同之處。 如需更多資訊，請參閱 [API 事件結構描述](#api-event-schema)或[工作流程事件結構描述](#workflow-event-schema)。
 
 ### <a name="api-event-schema"></a>API 事件結構描述
 
@@ -182,7 +176,7 @@ API 事件和工作流程事件有相同的結構以及不同的細節，請參�
 
 ### <a name="workflow-event-schema"></a>工作流程事件結構描述
 
-工作流程包含多個步驟。 [內嵌資料來源](data-sources.md)、[整合](data-unification.md)、[擴充](enrichment-hub.md)和[匯出](export-destinations.md)資料。 所有的步驟都可以單獨執行，或使用下列程序協調。
+工作流程包含多個步驟。 [內嵌資料來源](data-sources.md)、[整合](data-unification.md)、[擴充](enrichment-hub.md)和[匯出](export-destinations.md)資料。 所有的步驟都可以單獨執行，或使用下列程序協調執行。
 
 #### <a name="operation-types"></a>作業類型
 
@@ -220,7 +214,6 @@ API 事件和工作流程事件有相同的結構以及不同的細節，請參�
 | `durationMs`    | Long      | 選用          | 作業的期間 (以毫秒為單位)。                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | 字串    | 選用          | 對特定類別的事件有更多屬性的 JSON 物件。                                                                                        | 請參閱[工作流程屬性](#workflow-properties-schema)子區段                                                                                                       |
 | `level`         | 字串    | 是必要欄位          | 事件的嚴重性層級。                                                                                                                                  | `Informational`、`Warning` 或 `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>工作流程屬性結構描述
 
@@ -247,3 +240,5 @@ API 事件和工作流程事件有相同的結構以及不同的細節，請參�
 | `properties.additionalInfo.AffectedEntities` | 無       | .是  | 選擇性。 僅供 OperationType `Export`。 包含匯出中已設定的實體清單。                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | 無       | .是  | 選擇性。 僅供 OperationType `Export`。 匯出的詳細訊息。                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | 無       | .是  | 選擇性。 僅供 OperationType `Segmentation`。 表示客戶細分中成員的總數。                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

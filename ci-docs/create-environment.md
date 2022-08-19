@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142809"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245547"
 ---
 # <a name="how-to-create-a-new-environment"></a>作法：建立新環境
 
@@ -48,7 +48,7 @@ ms.locfileid: "9142809"
 
 提供下列詳細資料：
 
-- **名稱**：此環境的名稱。 如果您已複製現有環境，則欄位已填入資料，但是您可以變更此欄位。
+- **名稱**：此環境的名稱。 如果您已複製現有環境，則欄位已填入資料，但是您可以變更此欄位。 如果您有一個以上工作環境，請分別給予容易辨識的名稱。
 - **選擇您的業務**：選擇新環境的主要對象。 您可以搭配個別消費者 (B 到 C) 或[業務帳戶](work-with-business-accounts.md) (B 到 B)。 如果您的組織主要與個人有業務往來 (例如零售商或咖啡店)，請選擇個人消費者。 如果您的主要對象是其他公司 (例如汽車製造商或造紙公司)，請選擇商務帳戶。
 - **類型**：選取要建立生產環境還是沙箱環境。 沙箱環境不允許排程資料重新整理，是為實作前階段和測試準備的。 沙箱環境使用的主要對象與目前選取的生產環境相同。
 - **地區**：服務部署和託管所在的地區。 若要[使用自己的 Azure Data Lake Storage 帳戶](own-data-lake-storage.md)或[連接至現有的 Microsoft Dataverse 組織](customer-insights-dataverse.md)，則 Customer Insights 環境必須位於相同的區域。

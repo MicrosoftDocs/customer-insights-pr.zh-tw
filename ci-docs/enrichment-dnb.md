@@ -1,7 +1,7 @@
 ---
 title: 透過 Dun & Bradstreet 擴充公司設定檔 (預覽版)
 description: Dun & Bradstreet 協力廠商的一般資訊。
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196016"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237894"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>透過 Dun & Bradstreet 擴充公司設定檔 (預覽版)
 
@@ -25,7 +25,7 @@ Dun & Bradstreet 為公司供應商業資料、分析和見解。 為客戶帶�
 - 一個有效的 [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) 授權。
 - 公司的[整合客戶個人資料](customer-profiles.md)。
 - 已設定 Dun & Bradstreet [專案](#set-up-your-dun--bradstreet-project)。
-- Dun & Bradstreet 的[連接](connections.md) 是由系統管理員[設定](#configure-a-connection-for-dun--bradstreet)的。
+- Dun & Bradstreet 的[連接](connections.md)是由系統管理員[設定](#configure-a-connection-for-dun--bradstreet)的。
 
 ## <a name="set-up-your-dun--bradstreet-project"></a>設定 Dun & Bradstreet 專案
 
@@ -55,16 +55,11 @@ Dun & Bradstreet 為公司供應商業資料、分析和見解。 為客戶帶�
 
 1. 提供有效的 Dun & Bradstreet 認證和 Dun & Bradstreet 專案詳細資料 *區域、放置資料夾路徑及放置資料夾名稱*。 您可以從 Dun & Bradstreet 專案[取得此資訊](#set-up-your-dun--bradstreet-project)。
 
-1. 檢閱並選取 **我同意**，提供您的[資料隱私權和合規性](#data-privacy-and-compliance)許可。
+1. 請檢查 [資料隱私權和合規性](connections.md#data-privacy-and-compliance)，並選取 **我同意**。
 
 1. 選取 **驗證** 來驗證設定，然後選取 **儲存**。
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Dun & Bradstreet 的連接設定頁面":::
-
-### <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
-
-當您啟用 Dynamics 365 Customer Insights 對 Dun & Bradstreet 的資料傳輸時，您允許在 Dynamics 365 Customer Insights 合規性邊界之外傳輸資料，其中包括潛在敏感性資料，如個人資料。 Microsoft 將會在您指示時傳送這類資料，但是您必須負責確保 Dun & Bradstreet 符合您可能會承擔的任何隱私權或資訊安全義務。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
-您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此擴充，不再繼續使用此功能。
 
 ## <a name="supported-countries-or-regions"></a>支援的國家或地區
 

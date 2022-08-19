@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173787"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224285"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>使用已知和未知使用者的資料個人化您的體驗
 
-管理客戶資料並不是一項新挑戰，但隨著使用者瀏覽品牌提供的各種數字管道，變得越來越困難。 如果未登錄，則在一個頻道中已知 (已驗證) 的使用者在另一個頻道中將變為未知 (未驗證)。 問題通常是未經身份驗證 (未知) 的使用者沒有共同的 ID。 這可用於關聯有意義的設定檔文件屬性，並生成統一的客戶設定檔。 Customer Insights 能透過從源系統上的追蹤方法中擷取資料，協助解決此問題。 合併的未知和已知設定檔為組織提供了最新設定檔及其歷史交易、行為和人口統計資料的完整檢視。 甚至更進一步提供身份解析，允許您跨多個管道統一客戶活動，包括您的網站、店內購買、忠誠度計劃等。
+管理客戶資料並不是一項新挑戰，但隨著使用者瀏覽品牌提供的各種數字管道，變得越來越困難。 如果未登錄，則在一個頻道中已知 (已驗證) 的使用者在另一個頻道中將變為未知 (未驗證)。 問題通常是未經身份驗證 (未知) 的使用者沒有共同的 ID。 這可用於關聯有意義的設定檔文件屬性，並生成統一的客戶設定檔。 Customer Insights 能透過從源系統上的追蹤方法中擷取資料，協助解決此問題。 整合未知和已知設定檔，可為組織提供最新設定檔及其歷史交易、行為和人口統計資料的完整檢視。 甚至更進一步提供身份解析，允許您跨多個管道統一客戶活動，包括您的網站、店內購買、忠誠度計劃等。
 
 ## <a name="sample-scenario"></a>範例案例
 

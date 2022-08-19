@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196384"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259834"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>匯出資料至 Azure Synapse Analytics (預覽版)
 
@@ -24,7 +24,7 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 > [!NOTE]
 > 請務必根據說明來設定全部的 **角色指派**。
 
-- 在 Customer Insights 中，您的 Azure Active Directory (AD) 使用者帳戶必須具有[管理員角色](permissions.md#assign-roles-and-permissions)。
+- 在 Customer Insights 中，您的 Azure Active Directory (AD) 使用者帳戶必須具有[管理員角色](permissions.md#add-users)。
 
 在 Azure 中：
 
@@ -39,6 +39,8 @@ Azure Synapse 是一項分析服務，減少了深入解析跨資料倉儲和巨
 - *[Azure Synapse workspace 受管理的身分識別](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* 對資料所在的 Azure Data Lake Storage Gen2 帳戶具有 **儲存體 Blob 資料參與者** 權限，並連結到 Azure Synapse workspace。 深入瞭解如何[使用 Azure 入口網站指派 Azure 角色，以取得 blob 和佇列資料的存取權](/azure/storage/common/storage-auth-aad-rbac-portal)，以及[儲存體 blob 資料參與者權限](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor)。
 
 - 在 Azure Synapse workspace 中，*Customer Insights 的服務主體* 已指派 **Synapse 管理員**[角色](/azure/synapse-analytics/security/how-to-set-up-access-control)。
+
+- 如果您的 Customer Insights 環境儲存資料到 [自己的 Azure Data Lake Storage](own-data-lake-storage.md)，則設定連接至 Azure Synapse Analytics 的使用者至少需要 Data Lake Storage 帳戶的內建 **讀者** 角色。 如需詳細資訊，請參閱[使用 Azure 入口網站指派 Azure 角色](/azure/role-based-access-control/role-assignments-portal)。
 
 ## <a name="set-up-connection-to-azure-synapse"></a>設定與 Azure Synapse 的連線
 

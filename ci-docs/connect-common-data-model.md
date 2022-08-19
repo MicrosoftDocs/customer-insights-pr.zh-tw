@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206989"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245777"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>在 Azure Data Lake Storage 中連線至資料
 
@@ -56,8 +56,8 @@ ms.locfileid: "9206989"
 
 1. 您可以選擇下列其中一種選項，以 **連接使用的儲存體**。 如需更多資訊，請參閱[使用 Azure 服務主體將 Customer Insights 連接到 Azure Data Lake Storage Gen2 帳戶](connect-service-principal.md)。
 
-   - **Azure 資源**：輸入 **資源識別碼**。或者，如果您想透過 Azure Private Link 從儲存體帳戶中內嵌資料，請選取 **啟用 Private Link**。 如需詳細資訊，請參閱[私人連結](security-overview.md#private-links-tab)。
-   - **Azure 訂閱**：選取 **訂閱**，然後選取 **資源群組** 和 **儲存體帳戶**。 或者，如果您想透過 Azure Private Link 從儲存體帳戶中內嵌資料，請選取 **啟用 Private Link**。 如需詳細資訊，請參閱[私人連結](security-overview.md#private-links-tab)。
+   - **Azure 資源**：輸入 **資源識別碼**。或者，如果您想透過 Azure Private Link 從儲存體帳戶中內嵌資料，請選取 **啟用 Private Link**。 如需詳細資訊，請參閱[私人連結](security-overview.md#set-up-an-azure-private-link)。
+   - **Azure 訂閱**：選取 **訂閱**，然後選取 **資源群組** 和 **儲存體帳戶**。 或者，如果您想透過 Azure Private Link 從儲存體帳戶中內嵌資料，請選取 **啟用 Private Link**。 如需詳細資訊，請參閱[私人連結](security-overview.md#set-up-an-azure-private-link)。
   
    > [!NOTE]
    > 在容器或儲存體帳戶上您需要擁有下列任一個角色，才能建立資料來源：
@@ -176,7 +176,7 @@ ms.locfileid: "9206989"
         > - 儲存體 Blob 負責人
         > - 儲存體 Blob 資料參與者
 
-   - **啟用 Private Link** 如果您想透過 Azure Private Link 從儲存體帳戶中內嵌資料。 如需詳細資訊，請參閱[私人連結](security-overview.md#private-links-tab)。
+   - **啟用 Private Link** 如果您想透過 Azure Private Link 從儲存體帳戶中內嵌資料。 如需詳細資訊，請參閱[私人連結](security-overview.md#set-up-an-azure-private-link)。
 
 1. 選取 **下一步**。
 1. 變更下列：

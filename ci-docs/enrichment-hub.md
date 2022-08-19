@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053854"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245869"
 ---
 # <a name="data-enrichment-preview-overview"></a>資料擴充 (預覽版) 概述
 
@@ -76,7 +76,7 @@ ms.locfileid: "9053854"
 - **檢視** 包含擴充客戶設定檔數目的擴充內容詳細資料。
 - **編輯** 擴充內容設定。
 - [**執行**](#run-or-refresh-enrichments)擴充以使用最新資料更新客戶設定檔。 在清單中選取多個擴充並一次執行。
-- **啟用** 或 **停用** 擴充 停用的擴充無法在[排程的重新整理](system.md#schedule-tab)進行重新整理。
+- **啟用** 或 **停用** 擴充 停用的擴充無法在[排程的重新整理](schedule-refresh.md)進行重新整理。
 - **刪除** 擴充。
 
 您也可以從擴充建立[客戶細分](segments.md)或[量值](measures.md)。
@@ -85,7 +85,7 @@ ms.locfileid: "9053854"
 
 執行之後，擴充可在排程中自動重新整理，或依需要手動重新整理。
 
-1. 若要手動重新整理一個或多個擴充，請選取它們，然後選擇 **執行**。 若要 [排程自動重新整理](system.md#schedule-tab)，請前往 **系統管理** > **系統** > **排程**。 處理時間視客戶資料的大小而定。
+1. 若要手動重新整理一個或多個擴充，請選取它們，然後選擇 **執行**。 若要 [排程自動重新整理](schedule-refresh.md)，請前往 **系統管理** > **系統** > **排程**。 處理時間視客戶資料的大小而定。
 
 1. 又或者，[查看擴充程序的進度](#see-the-progress-of-the-enrichment-process)。
 
@@ -102,6 +102,8 @@ ms.locfileid: "9053854"
 1. 在 **進度詳細資料** 窗格中，展開 **擴充** 區段。
 1. 在您想要查看進度的擴充底下，選取 **查看詳細資料**。
 1. 在 **工作詳細資料** 窗格中，選取 **顯示詳細資料**，以查看包含在擴充更新的程序及其狀態。
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>查看擴充結果
 

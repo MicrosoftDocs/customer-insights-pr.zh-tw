@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206897"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259788"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>連接至 Azure Synapse Analytics 資料來源 (預覽版)
 
@@ -24,26 +24,30 @@ Azure Synapse Analytics 是一項企業分析服務，可加快資料倉儲和�
 
 ## <a name="prerequisites"></a>先決條件
 
+> [!NOTE]
+> 目前不支援任何[啟用防火牆](/azure/synapse-analytics/security/synapse-workspace-ip-firewall)的 Synapse 工作區。
 > [!IMPORTANT]
 > 請務必根據說明來設定全部的 **角色指派**。  
 
 **在 Customer Insights 中**：
 
-* 擁有 Customer Insights 中的 **系統管理員** 角色。 了解更多有關[Customer Insights 的使用者權限](permissions.md#assign-roles-and-permissions)。
+* 擁有 Customer Insights 中的 **系統管理員** 角色。 了解更多有關[Customer Insights 的使用者權限](permissions.md#add-users)。
 
 **在 Azure 中**：
 
 - 啟用中的 Azure 訂用帳戶。
 
-- 如果使用新的 Azure Data Lake Storage  Gen2 帳戶，則 *Customer Insights 的服務主體* 需要 **儲存體 Blob 資料參與者** 權限。 深入瞭解如何[使用 Customer Insights 的服務主體來連接 Azure Data Lake Storage](connect-service-principal.md)。 Data Lake Storage Gen2 **必須** 已啟用的[階層命名空間](/azure/storage/blobs/data-lake-storage-namespace)。
+- 如果使用新的 Azure Data Lake Storage Gen2 帳戶，則「適用 Customer Insights 的 Dynamics 365 AI」的 *Customer Insights 的服務主體* 需要 **儲存體 Blob 資料參與者** 權限。 深入瞭解如何[使用 Customer Insights 的服務主體來連接 Azure Data Lake Storage](connect-service-principal.md)。 Data Lake Storage Gen2 **必須** 已啟用的[階層命名空間](/azure/storage/blobs/data-lake-storage-namespace)。
 
-- 在 Azure Synapse workspace 所在的資源群組，於 *服務主體* 和 *Customer Insights 使用者* 至少需被指派 **讀者** 權限。 如需詳細資訊，請參閱[使用 Azure 入口網站指派 Azure 角色](/azure/role-based-access-control/role-assignments-portal)。
+- 在 Azure Synapse workspace 所在的資源群組，則「適用 Customer Insights 的 Dynamics 365 AI」的 *服務主體* 和 *Customer Insights 使用者* 至少需被指派 **讀者** 權限。 如需詳細資訊，請參閱[使用 Azure 入口網站指派 Azure 角色](/azure/role-based-access-control/role-assignments-portal)。
 
 - 在連結至 Azure Synapse 工作區且為資料所在的 Azure Data Lake Storage Gen2 帳戶，*使用者* 需要有 **儲存體 Blob 資料參與者** 權限。 深入瞭解如何[使用 Azure 入口網站指派 Azure 角色，以取得 blob 和佇列資料的存取權](/azure/storage/common/storage-auth-aad-rbac-portal)，以及[儲存體 blob 資料參與者權限](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor)。
 
 - 在連結至 Azure Synapse 工作區且為資料所在的 Azure Data Lake Storage Gen2 帳戶中，*[Azure Synapse 工作區受管理的身分識別](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* 需要 **儲存體 Blob 資料參與者** 權限。 深入瞭解如何[使用 Azure 入口網站指派 Azure 角色，以取得 blob 和佇列資料的存取權](/azure/storage/common/storage-auth-aad-rbac-portal)，以及[儲存體 blob 資料參與者權限](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor)。
 
-- 在 Azure Synapse workspace 中，*Customer Insights 的服務主體* 需要指派 **Synapse 系統管理員** 角色。 如需詳細資訊，請參閱[如何設定 Synapse 工作區的存取控制](/azure/synapse-analytics/security/how-to-set-up-access-control)。
+- 在 Azure Synapse workspace 中，「適用 Customer Insights 的 Dynamics 365 AI」的 *Customer Insights 的服務主體* 需要被指派 **Synapse 系統管理員** 角色。 如需詳細資訊，請參閱[如何設定 Synapse 工作區的存取控制](/azure/synapse-analytics/security/how-to-set-up-access-control)。
+
+- 如果您的 Customer Insights 環境儲存資料到 [自己的 Azure Data Lake Storage](own-data-lake-storage.md)，則設定連接至 Azure Synapse Analytics 的使用者至少需要 Data Lake Storage 帳戶的內建 **讀者** 角色。 如需詳細資訊，請參閱[使用 Azure 入口網站指派 Azure 角色](/azure/role-based-access-control/role-assignments-portal)。
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>連接至 Azure Synapse Analytics 中的資料胡資料庫
 
@@ -57,7 +61,7 @@ Azure Synapse Analytics 是一項企業分析服務，可加快資料倉儲和�
   
 1. 輸入資料來源的 **名稱** 和 **說明** (選填)。
 
-1. 選擇對 Azure Synapse Analytics [可用的連線](connections.md)，或建立一個新連線。
+1. 選擇對 Azure Synapse Analytics [可用的連接](connections.md)，或[建立一個新連接](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse)。
 
 1. 在選定的 Azure Synapse Analytics 連接中，從連接的工作區中選擇一個 **資料庫**，然後選取 **下一步**。 目前，我們只支援 *Lake 資料庫* 的資料庫類型。
 

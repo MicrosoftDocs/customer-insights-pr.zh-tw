@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011923"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246191"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>使用您自己的 Azure Data Lake Storage Gen2 帳戶
 
@@ -37,7 +37,7 @@ Customer Insights 中的系統管理員可以[建立環境](create-environment.m
 1. 選擇如何 **連接您的儲存體**。 您可以選擇資源型選項和訂閱型選項來進行驗證。 如需更多資訊，請參閱[使用 Azure 服務主體連接 Azure Data Lake Storage 帳戶](connect-service-principal.md)。
    - 對於 **Azure 訂閱**，請選擇 **訂閱**、**資源群組** 和包含 `customerinsights` 容器的 **儲存體帳戶**。
    - 對於 **帳戶金鑰**，請提供 Data Lake Storage 帳戶的 **帳戶名稱** 和 **帳戶金鑰**。 使用此驗證方法，表示您的組織輪換金鑰時您會收到通知。 在輪換時，您必須使用新的金鑰來[更新環境設定](manage-environments.md#edit-an-existing-environment)。
-1. 選擇是否要使用 Azure Azure Private Link 來連接至儲存體帳戶，並以兩個步驟[建立 Private Link 的連接](security-overview.md#private-links-tab)。
+1. 選擇是否要使用 Azure Azure Private Link 來連接至儲存體帳戶，並以兩個步驟[建立 Private Link 的連接](security-overview.md#set-up-an-azure-private-link)。
 
 當資料擷取等系統處理程序完成時，系統會在儲存體帳戶中建立對應的資料夾。 資料檔案和 *model.json* 檔案會根據處理名稱建立並新增到資料夾。
 

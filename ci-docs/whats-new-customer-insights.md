@@ -1,19 +1,19 @@
 ---
 title: Dynamics 365 Customer Insights 的新功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114236"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246001"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的新功能
 
@@ -23,6 +23,28 @@ ms.locfileid: "9114236"
 
 > [!TIP]
 > 若要提出功能要求和產品建議並票選，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="july-2022-updates"></a>2022 年 7 月更新
+
+2022 年 7 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="export-to-moengage"></a>匯出至 MoEngage
+
+將統整客戶設定檔的客戶細分匯出至 MoEngage，並在 MoEngage 中用來進行電子郵件行銷。
+
+如需詳細資訊，請參閱 [將客戶細分匯出至 MoEngage](export-moengage.md)。
+
+### <a name="ssh-support-for-sftp-based-exports"></a>支援 SFTP 型匯出的 SSH 
+
+連接至 SFTP 匯出目的地時，選擇是否要透過 SSH 或名稱/密碼來進行驗證。
+
+如需詳細資訊，請參閱[匯出資料至 SFTP 主機](export-sftp.md)。
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>使用已知和未知使用者的相關資料，將體驗個人化
+
+管理客戶資料並不是一項新挑戰，但隨著使用者瀏覽品牌提供的各種數字管道，變得越來越困難。 如果未登錄，則在一個頻道中已知 (已驗證) 的使用者在另一個頻道中將變為未知 (未驗證)。 問題通常是未經身份驗證 (未知) 的使用者沒有共同的 ID。 這可用於關聯有意義的設定檔文件屬性，並生成統一的客戶設定檔。 Customer Insights 能透過從源系統上的追蹤方法中擷取資料，協助解決此問題。
+
+如需詳細資訊，請參閱 [透過已知和未知使用者的資料，來個人化體驗](unknown-to-known.md)。
 
 ## <a name="june-2022-updates"></a>2022 年 6 月更新
 
@@ -50,7 +72,7 @@ InMobi 協助品牌了解、識別、吸引和爭取消費者。 您可以透過
 
 Azure Private Link 允許 Customer Insights 透過虛擬網路中的私人端點連接到您的 Azure Data Lake Storage 帳戶。 對於未公開到公用網際網路的儲存體帳戶資料，Private Link 能進行對該限制網路的連接。
 
-如需更多資訊，請參閱[在 Customer Insights 中使用 Private Link](security-overview.md#private-links-tab)。
+如需更多資訊，請參閱[在 Customer Insights 中使用 Private Link](security-overview.md#set-up-an-azure-private-link)。
 
 ## <a name="may-2022-updates"></a>2022 年 5 月更新
 

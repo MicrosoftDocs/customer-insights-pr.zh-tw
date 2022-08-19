@@ -1,19 +1,19 @@
 ---
 title: 使用 Azure Maps 中的位置資料擴充客戶設定檔 (預覽版)
 description: 關於 Azure 地圖服務第一方企業擴充的一般資訊。
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052597"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238032"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>使用 Azure Maps 中的位置資料擴充客戶設定檔 (預覽版)
 
@@ -35,14 +35,9 @@ Azure 地圖服務提供以位置為核心的資料和服務，利用內建位�
 
 1. 輸入連接的名稱以及有效的 Azure 地圖服務 API 金鑰。
 
-1. 檢閱並選取 **我同意**，提供您的[資料隱私權和合規性](#data-privacy-and-compliance)許可。
+1. 請檢查 [資料隱私權和合規性](connections.md#data-privacy-and-compliance)，並選取 **我同意**。
 
 1. 選取 **驗證** 來驗證設定，然後選取 **儲存**。
-
-### <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
-
-當您啟用 Dynamics 365 Customer Insights 將資料傳輸到 Azure 地圖服務時，您允許在 Dynamics 365 Customer Insights 合規性邊界之外傳輸資料，包括潛在的敏感性資料 (例如個人資料)。 Microsoft 將會在您指示時傳送這類資料，但是您必須負責確保 Azure Maps 符合您可能會承擔的任何隱私權或資訊安全義務。 如需詳細資訊，請移至 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
-您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此富集作用，以便不再繼續使用此功能。
 
 ## <a name="configure-the-enrichment"></a>擴充設定
 

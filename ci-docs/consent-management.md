@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 6c951219410b55adc34691f677158b574cea1e01
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188037"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245685"
 ---
 # <a name="use-customer-consent"></a>使用客戶同意
 
@@ -70,6 +70,6 @@ Dynamics 365 Customer Insights 可以匯入客戶的喜好設定並將其儲存�
 
 換言之，請確認匯入至 Customer Insights 的來源資料永遠是最新資訊。
 
-如需詳細資訊，請參閱[手動重新整理客戶細分](segments.md#refresh-segments)或[設定排程的重新整理](system.md#schedule-tab)。
+如需詳細資訊，請參閱[手動重新整理客戶細分](segments.md#refresh-segments)或[設定排程的重新整理](schedule-refresh.md)。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

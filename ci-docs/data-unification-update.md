@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139562"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245584"
 ---
 # <a name="update-the-unification-settings"></a>更新整合設定
 
@@ -42,7 +42,7 @@ ms.locfileid: "9139562"
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="頁面螢幕擷取畫面：醒目提示 [整合] 選項的資料整合頁面。":::
 
    - [執行比對條件](#run-matching-conditions)可以在不更新整合個人資料的情況下，快速評估比對條件 (重複資料刪除和比對規則) 的品質，。 單一實體不會顯示 **僅執行比對條件** 選項。
-   - [整合客戶個人資料](#run-updates-to-the-unified-customer-profile)以執行比對規則並更新整合客戶個人資料實體，且不影響相依性 (例如擴充、客戶細分或量值)。 相依程序不會執行，但是會根據[重新整理排程](system.md#schedule-tab)的定義進行重新整理。
+   - [整合客戶個人資料](#run-updates-to-the-unified-customer-profile)以執行比對規則並更新整合客戶個人資料實體，且不影響相依性 (例如擴充、客戶細分或量值)。 相依程序不會執行，但是會根據[重新整理排程](schedule-refresh.md)的定義進行重新整理。
    - [整合客戶個人資料與相依性](#run-updates-to-the-unified-customer-profile)以執行比對規則並更新整合客戶個人資料實體以及所有相依性 (例如擴充、客戶細分或量值)。 所有程式都會自動重新執行。
 
 ## <a name="edit-source-fields"></a>編輯來源欄位
@@ -154,7 +154,7 @@ ms.locfileid: "9139562"
 
 1. 從 **資料** > **整合** 頁面中，選取：
 
-   - **整合客戶個人資料**：執行比對規則並更新整合客戶個人資料實體，且不影響相依性 (例如擴充、客戶細分或量值)。 相依程序不會執行，但是會根據[重新整理排程](system.md#schedule-tab)的定義進行重新整理。
+   - **整合客戶個人資料**：執行比對規則並更新整合客戶個人資料實體，且不影響相依性 (例如擴充、客戶細分或量值)。 相依程序不會執行，但是會根據[重新整理排程](schedule-refresh.md)的定義進行重新整理。
 
    - **整合客戶個人資料和相依性**：執行比對規則並更新整合個人資料和所有相依性。 所有程式都會自動重新執行。 在所有下游程序完成後，客戶個人資料就會反映更新的資料。
 

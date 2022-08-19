@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139647"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213572"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>為資料整合進行客戶欄位的整合
 
@@ -58,6 +58,9 @@ ms.locfileid: "9139647"
 
 1. 指定如何以三個選項中之一將欄位結合或合併：
     - **重要**：根據指定給參與欄位的重要性等級，找出勝出值。 這是預設合併選項。 選取 **上移/下移** 來設定重要性等級。
+
+      > [!NOTE]
+      > Customer Insights 使用第一個非 null 值。 例如，給定的實體 A、B 和 C 依此順序排列時，如果 A.Name 和 B.Name 為 null，則會使用 C.Name 中的值。
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="合併欄位對話方塊中的重要性選項。":::
 

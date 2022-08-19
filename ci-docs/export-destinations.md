@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194958"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245317"
 ---
 # <a name="exports-preview-overview"></a>匯出 (預覽版) 概觀
 
@@ -79,7 +79,7 @@ ms.locfileid: "9194958"
 
 ## <a name="schedule-and-run-exports"></a>排程並執行多個匯出
 
-您設定的每個匯出都會有重新整理的排程。 在重新整理期間，系統會尋找新的或更新資料是要包含在匯出中的。 根據預設，會在每次[已排程的系統重新整理](system.md#schedule-tab)中執行匯出。 您可以自訂重新整理排程，或將它關閉以手動執行匯出。
+您設定的每個匯出都會有重新整理的排程。 在重新整理期間，系統會尋找新的或更新資料是要包含在匯出中的。 根據預設，會在每次[已排程的系統重新整理](schedule-refresh.md)中執行匯出。 您可以自訂重新整理排程，或將它關閉以手動執行匯出。
 
 匯出排程可依您的環境狀態決定。 如果排程的匯出應該開始時，[相依性](system.md#refresh-processes)有更新正在進行，則系統會先完成更新，然後執行匯出。 **重新整理** 欄會顯示上次匯出重新整理的時間。
 

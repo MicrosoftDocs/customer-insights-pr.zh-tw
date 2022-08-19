@@ -1,19 +1,19 @@
 ---
 title: 透過 HERE Technologies 來擴充設定檔 (預覽版)
 description: 有關 HERE Technologies 協力廠商富集作用的一般資訊。
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 86a070342193dd7afda38823d90f4bd28c8b862e
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196246"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237848"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>透過 HERE Technologies 來擴充設定檔 (預覽版)
 
@@ -33,16 +33,11 @@ HERE Technologies 是一間位置平台公司，提供以位置為中心的資�
 
 1. 輸入連接的名稱以及有效的 HERE Technologies API 金鑰。
 
-1. 檢閱並選取 **我同意**，提供您的[資料隱私權和合規性](#data-privacy-and-compliance)許可。
+1. 請檢查 [資料隱私權和合規性](connections.md#data-privacy-and-compliance)，並選取 **我同意**。
 
 1. 選取 **驗證** 來驗證設定，然後選取 **儲存**。
 
    :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="HERE technologies 的連接設定頁面。":::
-
-### <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
-
-當您啟用 Dynamics 365 Customer Insights 將資料傳輸給 HERE Technologies 時，您允許在合規性邊界之外傳輸 Dynamics 365 Customer Insights 資料，包括潛在敏感性資料如個人資料。 Microsoft 將依據您的指示傳輸此資料，但您須負責確保 HERE Technologies 符合您可能應盡的任何隱私權或資訊安全義務。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。
-您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此擴充，不再繼續使用此功能。
 
 ## <a name="configure-the-enrichment"></a>擴充設定
 
