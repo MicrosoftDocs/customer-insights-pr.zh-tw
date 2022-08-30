@@ -40,7 +40,7 @@
       href: home.md
     - name: 使用標籤及資料行
       href: work-with-tags-columns.md
-    - name: 搭配商務帳戶
+    - name: 使用商務客戶
       href: work-with-business-accounts.md
     - name: 與 Dynamics 365 Marketing 整合
       href: marketing-get-started.md
@@ -74,8 +74,10 @@
       href: match-entities.md
     - name: 整合客戶欄位
       href: merge-entities.md
-    - name: 審查資料整合
+    - name: 檢閱資料整合
       href: review-unification.md
+    - name: 建立統一連絡人設定檔
+      href: data-unification-contacts.md
     - name: 更新整合設定
       href: data-unification-update.md
 - name: 資料擴充

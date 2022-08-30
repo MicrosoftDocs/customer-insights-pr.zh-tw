@@ -2,7 +2,7 @@
 title: 為資料整合進行客戶欄位的整合
 description: 合併實體以建立統整的客戶設定檔。
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213572"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304003"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>為資料整合進行客戶欄位的整合
+# <a name="unify-customer-fields"></a>整合客戶欄位
 
-在整合程序的這個步驟中，請選取屬性並從可合併到整合個人資料實體中的屬性中排除。 例如，如果有三個實體中存在電子郵件資料，您可能會想要將所有三個不同的電子郵件欄位放在一起，或合併至整合個人資料的單一電子郵件欄位中。 系統會自動合併某些屬性。 您可以建立穩定且獨特的客戶識別碼，並將相關個人資料分組至叢集。
+在整合程序的這個步驟中，請選取屬性並從可合併到統一設定檔實體中的屬性中排除。 例如，如果有三個實體中存在電子郵件資料，您可能會想要將所有三個不同的電子郵件欄位放在一起，或合併至統一設定檔的單一電子郵件欄位中。 系統會自動合併某些屬性。 您可以建立穩定且不重複的客戶識別碼。 對於個別客戶，您可以在叢集中將相關設定檔組成群組。
 
-:::image type="content" source="media/m3_unify.png" alt-text="資料統整處理中的合併頁面，顯示定義整合客戶個人資料且具有合併欄位的表格。":::
+:::image type="content" source="media/m3_unify.png" alt-text="資料整合程序中的整合客戶欄位頁面，顯示包含可定義統一客戶設定檔之已合併欄位的表格。":::
 
 ## <a name="review-and-update-the-customer-fields"></a>檢閱和更新客戶欄位
 
@@ -47,7 +47,7 @@ ms.locfileid: "9213572"
 
 1. 或者，[生成客戶識別碼設定](#configure-customer-id-generation)。
 
-1. 或者，[將個人資料以家戶或叢集單位分組](#group-profiles-into-households-or-clusters)。
+1. 或者對 B 到 C，[在家戶或叢集中將設定檔組成群組](#group-profiles-into-households-or-clusters)。
 
 > [!div class="nextstepaction"]
 > [後續步驟：檢閱整合](review-unification.md)
@@ -88,7 +88,7 @@ ms.locfileid: "9213572"
 
 ### <a name="separate-merged-fields"></a>分割合併欄位
 
-若要分割合併欄位，請在表格中尋找屬性。 分割欄位會以個別資料點顯示在整合的客戶個人資料上。
+若要分割合併欄位，請在表格中尋找屬性。 分割欄位會以個別資料點顯示在整合的客戶設定檔上。
 
 1. 選取合併的欄位，然後選擇 **個別欄位**。
 
@@ -96,7 +96,7 @@ ms.locfileid: "9213572"
 
 ### <a name="exclude-fields"></a>排除欄位
 
-從整合客戶個人資料中排除合併或個別的欄位。 如果欄位是用於其他程序中 (例如，客戶細分)，則請先從這些程序中移除該欄位，然後再從客戶個人資料中排除它。
+從統一客戶設定檔中排除合併或個別的欄位。 如果欄位是用於其他程序中 (例如，客戶細分)，則請先從這些程序中移除該欄位，然後再從客戶設定檔中排除它。
 
 1. 選取合併的欄位，然後選擇 **排除**。
 
@@ -144,7 +144,7 @@ ms.locfileid: "9213572"
 
 ## <a name="configure-customer-id-generation"></a>設定客戶識別碼產生
 
-定義如何生成客戶識別碼值，獨特的客戶個人資料識別碼。 資料整合處理程序中的整合欄位步驟會生成唯一的客戶個人資料識別碼。 識別碼是 *Customer* 實體中的 *CustomerId* ，是由資料整合程序產生的。
+定義如何生成客戶識別碼值，獨特的客戶設定檔識別碼。 資料整合處理程序中的整合欄位步驟會生成唯一的客戶設定檔識別碼。 識別碼是 *Customer* 實體中的 *CustomerId* ，是由資料整合程序產生的。
 
 *CustomerId* 是根據 入選方 主索引鍵 的 第一個 非 null 值 的雜湊決定。 這些索引鍵來 自資料整合使用到的實體，並受比對順序的影響。 因此在主要實體的比對順序中的主索引鍵變更時，生成的客戶識別碼也會變更。 因此主索引鍵值 可能不見得永遠代表相同客戶。
 
@@ -161,7 +161,7 @@ ms.locfileid: "9213572"
 
 ## <a name="group-profiles-into-households-or-clusters"></a>將設定檔以家戶或叢集單位分組
 
-您可以定義規則，將相關個人資料分組至叢集。 目前有兩種可用的叢集類型–家戶叢集和自訂叢集。 如果 *客戶* 實體包含語義欄位 *Person. LastName* 和 *Location.Address*，系統會自動選擇已有預定義規則的家戶。 您也可以使用自己的規則和條件建立叢集，類似[相符規則](match-entities.md#define-rules-for-match-pairs)。
+對於個別客戶，您可以定義規則，在叢集中將相關設定檔組成群組。 目前有兩種可用的叢集類型–家戶叢集和自訂叢集。 如果 *客戶* 實體包含語義欄位 *Person. LastName* 和 *Location.Address*，系統會自動選擇已有預定義規則的家戶。 您也可以使用自己的規則和條件建立叢集，類似[相符規則](match-entities.md#define-rules-for-match-pairs)。
 
 1. 選取 **進階** > **建立叢集**。
 

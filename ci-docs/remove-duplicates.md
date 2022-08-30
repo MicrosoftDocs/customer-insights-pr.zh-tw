@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213617"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304463"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>在整合資料之前移除重復資料
 
@@ -47,7 +47,7 @@ ms.locfileid: "9213617"
 
 1. 在 **重複資料記錄** 頁面上，選取一個實體，然後選取 **新增規則** 來定義重複資料刪除規則。
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="螢幕擷取畫面：醒目提示 [顯示更多] 的重複資料記錄頁面":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="[重複資料記錄] 頁面的螢幕擷取畫面，其中已醒目提示實體並顯示 [新增規則]"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. 在 **新增規則** 窗格上輸入下列資訊：
       - **選取欄位**：對於檢查重複資料的實體，在其可用的欄位清單中選擇。 選擇對每個客戶很可能是唯一的欄位。 例如，電子郵件地址，或姓名、城市和電話號碼的組合。
@@ -80,9 +80,9 @@ ms.locfileid: "9213617"
       - **最多填滿**：找出填滿最多屬性的記錄作為勝出記錄。 這是預設合併選項。
       - **最新**：根據最新情況找出贏家記錄。 需要日期或數字欄位來定義最新。
       - **時間最接近**：以新近度最接近的，找出入選方記錄。 需要日期或數字欄位來定義新近度。
-      
+
       在繫結事件中，入選方記錄就是具有最大值 (PK) 或較大主索引鍵值的那一個。
-      
+
    1. 或者，若要在實體的各個屬性上定義合併喜好設定，請在窗格下方選取 **進階**。 例如，您可以選擇保留最近的電子郵件，「及」來自不同記錄的最完整地址。 展開實體以查看其所有屬性，並定義要用於個別屬性的選項。 如果您選擇基於新近度的選項，也需要指定定義新近度的日期/時間欄位。
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="進階合併喜好設定窗格顯示新近的電子郵件和完整的地址":::
@@ -96,18 +96,5 @@ ms.locfileid: "9213617"
 
 > [!div class="nextstepaction"]
 > [多個實體的下一個步驟：比對條件](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>將重複資料刪除輸出成實體
-
-重複資料刪除程序會為每個來源實體建立新的重複資料刪除實體。 這些實體與 **ConflationMatchPairs:CustomerInsights** 在 **實體** 頁面的 **系統** 區段中，名稱為 **Deduplication_DataSource_Entity**。
-
-重複資料刪除輸出實體包含下列資訊：
-
-- 識別碼/金鑰
-  - 主索引鍵與替代識別碼欄位。 替代識別碼欄位由一個記錄識別出的所有替代識別碼組成。
-  - 根據指定的重複資料刪除欄位，Deduplication_GroupId 欄位顯示實體中辨識出的群組或叢集，裡面都是類似記錄。 為系統處理的需求而被使用。 如果未指定手動重複資料刪除規則，並套用系統定義的重複資料刪除規則，您就不會在重複資料刪除輸出實體中找到此欄位。
-  - Deduplication_WinnerId：此欄位包含的勝出識別碼來自於已辨識的群組或叢集。 如果 Deduplication_WinnerId 與記錄的主索引鍵相同，則表示該記錄是勝出的記錄。
-- 用來定義重複資料刪除規則的欄位。
-- 規則和分數欄位，表示所套用的重複資料刪除規則和比對演算法回傳的分數。
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

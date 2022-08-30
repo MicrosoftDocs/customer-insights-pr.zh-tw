@@ -1,30 +1,30 @@
 ---
 title: 將客戶細分匯出至 LinkedIn Ads (預覽版)
 description: 了解如何設定連接並匯出至 LinkedIn Ads。
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196798"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304693"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>將客戶細分匯出至 LinkedIn Ads (預覽版)
 
-將整合客戶個人資料的客戶細分匯出至LinkedIn Ads，以建立符合的對象。 使用符合對象給公司鎖定和連絡人鎖定。
+將統一客戶設定檔的客戶細分匯出至LinkedIn Ads，以建立符合的對象。 使用符合對象給公司鎖定和連絡人鎖定。
 
 ## <a name="prerequisites"></a>先決條件
 
 - [LinkedIn Campaign Manager 帳戶](https://business.linkedin.com/marketing-solutions/ads)及對應的系統管理員認證。
 - [LinkedIn Campaign Manager 帳戶識別碼](https://www.linkedin.com/help/lms/answer/a424270)
 - 在 Customer Insights 中的[已設定的客戶細分](segments.md)。
-- 匯出區段的統一客戶設定檔包含代表電子郵件地址的欄位。
+- 視您在 LinkedIn 上選擇的是[連絡人目標](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)還是[公司目標](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting)，匯出的客戶細分至少需要一個特定欄位。 [設定匯出](#configure-an-export)時，可能的欄位會在 **資料比對** 步驟中列出。
 
 ## <a name="known-limitations"></a>已知限制
 

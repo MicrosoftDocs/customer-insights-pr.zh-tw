@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: fd32a3e37f4bbf57a5bd05f888fde39d32c02a82
+ms.sourcegitcommit: e5649ca0b3000cee0ca7c9eac7142cbd5f7dd2ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080881"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "9305594"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>註冊免費 Dynamics 365 Customer Insights 試用版
 
@@ -33,13 +33,13 @@ Customer Insights 提供免費的 30 天試用版。 快速註冊後，就可以
 
 - [開始使用 Customer Insights。](get-started.md)
 - [新增更多使用者並指派權限。](permissions.md)
-- [擷取您的資料來源](data-sources.md)並以[資料整合程序](data-unification.md)執行資料，以取得[整合的客戶個人資料](customer-profiles.md)。
-- [擴充整合客戶個人資料](enrichment-hub.md)或[執行預測模型](predictions-overview.md)。
+- [擷取您的資料來源](data-sources.md)並以[資料整合程序](data-unification.md)執行資料，以取得[整合的客戶設定檔](customer-profiles.md)。
+- [擴充統一客戶設定檔](enrichment-hub.md)或[執行預測模型](predictions-overview.md)。
 - 建立[區段](segments.md)分組客戶和[量值](measures.md)以便評論 KPI。
 - 在其他應用程式中設定[連接](connections.md)和[匯出](export-destinations.md)，以處理您的資料子集。
 
 ## <a name="additional-resources"></a>其他資源
 
-- [探索 Microsoft Learn 的訓練](/learn/browse/?filter-products=dynamics-dynamics-cust-insights)
+- [探索 Customer Insights 的學習路徑與課程模組](/learn/browse/?products=dynamics-cust-insights)
 - [試用服務常見問題](trial-faq.md)
 - [Dynamics 365 Customer Insights產品詳細資料](https://dynamics.microsoft.com/ai/customer-insights/)

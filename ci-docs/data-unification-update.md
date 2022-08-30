@@ -1,11 +1,11 @@
 ---
-title: 更新整合設定
-description: 在整合設定中，更新重複規則、比對規則或整合欄位。
-ms.date: 06/01/2022
+title: 更新客戶、帳戶或連絡人的整合設定
+description: 更新客戶或帳戶整合設定中的重複規則、比對規則或整合欄位。
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: v-wendysmith
-ms.author: mukeshpo
+author: Scott-Stabbert
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
@@ -13,20 +13,26 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245584"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304325"
 ---
-# <a name="update-the-unification-settings"></a>更新整合設定
+# <a name="update-unification-settings"></a>更新整合設定
 
-若要在建立整合個人資料後，立即審查或變更任何整合設定，請執行下列步驟。
+若要在建立統一設定檔後立即檢閱或變更任何整合設定，請執行下列步驟。
 
 1. 請前往 **資料** > **整合**。
 
-   :::image type="content" source="media/m3_unified.png" alt-text="資料整合後，資料整合頁面的螢幕擷取畫面。":::
+   對於個別客戶 (B 到 C)，**整合** 頁面會顯示統一客戶設定檔的數目，以及每個整合步驟的圖標。
+
+   :::image type="content" source="media/m3_unified.png" alt-text="資料整合後，資料整合頁面的螢幕擷取畫面。" lightbox="media/m3_unified.png":::
+
+   對於商務客戶 (B 到 B)，**整合** 頁面會顯示統一客戶設定檔的數目，以及每個客戶整合步驟的圖標。 如果連絡人已整合，則會顯示統一連絡人設定檔的數目，以及每個連絡人整合步驟的圖標。 根據您要更新的資訊，在 **整合帳戶** 或 **整合連絡人 (預覽版)** 底下選擇適當的圖標。
+
+   :::image type="content" source="media/b2b_unified.png" alt-text="資料整合頁面在整合帳戶和連絡人資料後的螢幕擷取畫面。" lightbox="media/b2b_unified.png":::
 
    > [!TIP]
    > 只有在選取多個實體時，才會顯示 **比對條件** 磚。
@@ -35,15 +41,15 @@ ms.locfileid: "9245584"
    - [來源欄位](#edit-source-fields)，可新增實體或屬性或變更屬性類型。
    - [重複資料記錄](#manage-deduplication-rules)，可管理重複資料刪除規則或合併喜好設定。
    - [比對條件](#manage-match-rules)，可在兩個或多個實體之間更新比對規則。
-   - [整合客戶欄位](#manage-unified-fields)，可合併或排除欄位。 您也可以將相關個人資料群組成叢集。
+   - [整合客戶欄位](#manage-unified-fields)，可合併或排除欄位。 您也可以將相關設定檔群組成叢集。
+   - [語意欄位](#manage-semantic-fields-for-unified-contacts)，用於管理整合連絡人欄位的語意類型。
+   - [關聯性](#manage-contact-and-account-relationships)，用於管理連絡人對帳戶的關聯。
 
 1. 進行變更之後，請選取您的下一個選項：
 
-   :::image type="content" source="media/m3_run_match_merge.png" alt-text="頁面螢幕擷取畫面：醒目提示 [整合] 選項的資料整合頁面。":::
-
-   - [執行比對條件](#run-matching-conditions)可以在不更新整合個人資料的情況下，快速評估比對條件 (重複資料刪除和比對規則) 的品質，。 單一實體不會顯示 **僅執行比對條件** 選項。
-   - [整合客戶個人資料](#run-updates-to-the-unified-customer-profile)以執行比對規則並更新整合客戶個人資料實體，且不影響相依性 (例如擴充、客戶細分或量值)。 相依程序不會執行，但是會根據[重新整理排程](schedule-refresh.md)的定義進行重新整理。
-   - [整合客戶個人資料與相依性](#run-updates-to-the-unified-customer-profile)以執行比對規則並更新整合客戶個人資料實體以及所有相依性 (例如擴充、客戶細分或量值)。 所有程式都會自動重新執行。
+   - [執行比對條件](#run-matching-conditions)可以在不更新統一設定檔的情況下，快速評估比對條件 (重複資料刪除和比對規則) 的品質。 單一實體不會顯示 **僅執行比對條件** 選項。
+   - [整合設定檔](#run-updates-to-the-unified-profile)，用於執行比對條件，以及在不影響相依性 (例如擴充、客戶細分或量值) 的情況下更新統一設定檔實體。 相依程序不會執行，但是會根據[重新整理排程](schedule-refresh.md)的定義進行重新整理。
+   - [整合設定檔與相依性](#run-updates-to-the-unified-profile)，用於執行比對條件、更新統一設定檔實體，以及更新所有相依性 (例如擴充、客戶細分或量值)。 所有程式都會自動重新執行。 在 B 到 B 中，對於更新統一設定檔的帳戶和連絡人實體都會執行整合。
 
 ## <a name="edit-source-fields"></a>編輯來源欄位
 
@@ -55,11 +61,11 @@ ms.locfileid: "9245584"
 
    顯示的對應與未對應欄位數量。
 
-1. 選取 **選取實體及欄位** 新增其他屬性或實體。 使用搜尋或捲動方式，尋找並選取感興趣的屬性及實體。 選取 **套用**。
+1. 若要新增其他屬性或實體，請選擇 **選取實體及欄位**。
 
-1. 您也可以選擇變更實體、屬性類型的主索引鍵，以及開啟或關閉 **智慧對應**。 如需詳細資訊，請參閱 [選取屬性的主索引鍵及語義類型](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。
+1. 您也可以選擇變更實體、屬性類型的主索引鍵，以及開啟或關閉 **智慧對應**。 如需詳細資訊，請參閱[選取來源欄位](map-entities.md)。
 
-1. 選取 **下一步** 以變更重複資料刪除規則，或選取 **儲存後關閉** 並返回[更新整合設定](#update-the-unification-settings)。
+1. 選取 **下一步** 以變更重複資料刪除規則，或選取 **儲存後關閉** 並返回[更新整合設定](#update-unification-settings)。
 
 ## <a name="manage-deduplication-rules"></a>管理重複資料刪除規則
 
@@ -69,7 +75,7 @@ ms.locfileid: "9245584"
 
    找到的重複資料記錄數量會顯示在 **重複資料** 下。 **記錄重複** 欄會顯示出現重複資料記錄的實體以及重複資料記錄的百分比。
 
-1. 如果新增了已擴充的實體，請選取 **使用已擴充實體**。 如需詳細資訊，請參閱[資料來源擴充](data-sources-enrichment.md)。
+1. 若要使用已擴充的實體，請選取 **使用已擴充實體**。 如需詳細資訊，請參閱[資料來源擴充](data-sources-enrichment.md)。
 
 1. 若要管理重複資料刪除規則，請選擇下列任一選項：
    - **建立新規則**：在適當實體下方選取 **新增規則**。 如需更多資訊，請見 [定義重複資料刪除規則](remove-duplicates.md#define-deduplication-rules)。
@@ -83,11 +89,9 @@ ms.locfileid: "9245584"
    1. 選取 **編輯合併喜好選項**，並變更 **保留記錄** 選項。
    1. 若要變更實體各別屬性的合併喜好設定，請選取 **進階** 並進行必要變更。
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="進階合併喜好設定的螢幕擷取畫面，其中顯示最新近的電子郵件和最完整的地址":::
-
    1. 選取 **完成**。
 
-1. 選取 **下一步** 來變更比對條件，或選取 **儲存後關閉** 並返回[更新整合設定](#update-the-unification-settings)。
+1. 選取 **下一步** 以變更比對條件，或選取 **儲存後關閉** 並返回[更新整合設定](#update-unification-settings)。
 
 ## <a name="manage-match-rules"></a>管理比對規則
 
@@ -98,13 +102,13 @@ ms.locfileid: "9245584"
    :::image type="content" source="media/m3_match_edit.png" alt-text="包含統計資料的比對規則及條件頁面的螢幕擷取畫面。" lightbox="media/m3_match_edit.png":::
 
    此頁面會顯示比對順序及已定義的規則以及下列統計資料：
-   - **唯一來源記錄** 顯示上次比對執行處理的個別來源記錄的數量。
-   - **比對和未比對的記錄** 醒目提示比對規則處理後保留多少唯一記錄。
-   - **僅限相符的記錄** 顯示所有比對組的相符數量。
+   - **唯一來源記錄** 顯示上次比對執行所處理個別來源記錄的數量。
+   - **比對和未比對的記錄** 醒目提示處理比對規則後剩餘多少不重複的記錄。
+   - **僅限相符的記錄** 顯示所有比對組的相符項目數量。
 
-1. 若要查看所有規則及其分數的結果，請選取 **查看上次執行**。 其結果會顯示，並包括替代連絡人識別碼。 您可以下載結果。
+1. 若要查看所有規則及其分數的結果，請選取 **查看上次執行**。 結果隨即顯示，並包括替代連絡人識別碼。 您可以下載結果。
 
-1. 若要查看特定規則的結果和分數，請選取規則，然後進行 **預覽**。 顯示結果。 您可以下載結果。
+1. 若要查看特定規則的結果和分數，請選取規則，然後進行 **預覽**。 結果隨即顯示。 您可以下載結果。
 
 1. 若要在規則上查看特定條件的結果和分數，請選取規則，然後選取 **編輯**。 在編輯窗格，在條件下選取 **預覽**。 您可以下載結果。
 
@@ -120,7 +124,7 @@ ms.locfileid: "9245584"
    - **複製規則**：選取規則，然後進行 **複製**，可運用修改來建立的類似規則。
    - **刪除規則**：選取規則，然後選取 **刪除**。
 
-1. 選取 **下一步** 來變更整合欄位，或選取 **儲存後關閉** 並返回[更新整合設定](#update-the-unification-settings)。
+1. 選取 **下一步** 以變更整合欄位，或選取 **儲存後關閉** 並返回[更新整合設定](#update-unification-settings)。
 
 ## <a name="manage-unified-fields"></a>管理整合欄位
 
@@ -130,7 +134,28 @@ ms.locfileid: "9245584"
 
 1. 請檢查合併和排除的欄位，並進行任何需要的變更。 在叢集中新增或編輯 CustomerID 索引鍵或群組設定檔。 如需詳細資訊，請參閱[整合客戶欄位](merge-entities.md)。
 
-1. 選取 **下一步** 可審查整合設定並 [更新整合個人資料和相依性](#run-updates-to-the-unified-customer-profile)，或者選取 **儲存後關閉** 並返回[更新整合設定](#update-the-unification-settings)進行更多變更。
+1. 對於客戶或帳戶，選取 **下一步** 以檢閱並[更新統一設定檔和相依性](#run-updates-to-the-unified-profile)。 或選取 **儲存後關閉** 並返回[更新整合設定](#update-unification-settings)以進行其他變更。
+
+   對於連絡人，選取 **下一步** 以管理語意欄位。 或選取 **儲存後關閉** 並返回[更新整合設定](#update-unification-settings)以進行其他變更。
+
+## <a name="manage-semantic-fields-for-unified-contacts"></a>管理整合連絡人的語意欄位
+
+1. 選取 **語意欄位** 圖標上的 **編輯**。
+
+1. 若要變更整合欄位的語意類型，請選取新的類型。 如需詳細資訊，請參閱[定義整合連絡人的語意欄位](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts)。
+
+1. 選取 **下一步** 以管理帳戶或連絡人關聯性，或選取 **儲存後關閉** 並返回[更新整合設定](#update-unification-settings)以進行其他變更。
+
+## <a name="manage-contact-and-account-relationships"></a>管理連絡人與帳戶關聯性
+
+1. 選取 **關聯性** 圖標上的 **編輯**。
+
+1. 若要變更連絡人與帳戶關聯性，請變更下列任何資訊：
+
+   - **來源連絡人實體的外部索引鍵**：選擇將連絡人實體連接至帳戶的屬性。
+   - **目標帳戶實體**：選擇與連絡人產生關聯的帳戶實體。
+
+1. 選取 **下一步** 以檢閱整合設定並 [更新統一設定檔和相依性](#run-updates-to-the-unified-profile)，或選取 **儲存後關閉** 並返回[更新整合設定](#update-unification-settings)以進行其他變更。
 
 ## <a name="run-matching-conditions"></a>執行比對條件
 
@@ -148,18 +173,15 @@ ms.locfileid: "9245584"
 
 1. 若要進行變更，請參閱 [管理重複資料刪除規則](#manage-deduplication-rules)或 [管理比對規則](#manage-match-rules)。
 
-1. 重新執行比對程序，或[執行客戶個人資料的更新](#run-updates-to-the-unified-customer-profile)。
+1. 重新執行比對程序，或[執行對設定檔的更新](#run-updates-to-the-unified-profile)。
 
-## <a name="run-updates-to-the-unified-customer-profile"></a>執行整合客戶個人資料的更新
+## <a name="run-updates-to-the-unified-profile"></a>執行對統一設定檔的更新
 
-1. 從 **資料** > **整合** 頁面中，選取：
+- 若要執行比對條件，並在 *不* 影響相依性 (例如客戶卡片、擴充、客戶細分或量值) 的情況下更新統一設定檔實體，請選取 **整合客戶設定檔**。 對於帳戶，選取 **整合帳戶** > **整合設定檔**。 對於連絡人，選取 **整合連絡人 (預覽版)** > **整合設定檔**。 相依程序不會執行，但是會根據[重新整理排程](schedule-refresh.md)的定義進行重新整理。
+- 若要執行比對條件、更新統一設定檔並執行所有相依性，請選取 **整合客戶設定檔和相依性**。 所有程式都會自動重新執行。 對於帳戶和連絡人，選取 **整合帳戶** > **整合設定檔和相依性**。 對更新這兩個統一設定檔的帳戶和連絡人執行比對條件，並執行所有其他相依性。
 
-   - **整合客戶個人資料**：執行比對規則並更新整合客戶個人資料實體，且不影響相依性 (例如擴充、客戶細分或量值)。 相依程序不會執行，但是會根據[重新整理排程](schedule-refresh.md)的定義進行重新整理。
+所有除了 **來源欄位** 以外的圖標都會顯示 **已排入佇列** 或 **重新整理中**。
 
-   - **整合客戶個人資料和相依性**：執行比對規則並更新整合個人資料和所有相依性。 所有程式都會自動重新執行。 在所有下游程序完成後，客戶個人資料就會反映更新的資料。
+[!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-   **重複資料記錄**、**比對條件**，和 **整合客戶欄位** 磚會顯示 **已排入佇列** 或 **正在重新整理** 狀態。
-
-   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
-
-在 **整合** 頁面上成功執行的結果，會顯示整合客戶個人資料的數量。
+成功執行的結果會顯示在出現統一設定檔數目的 **整合** 頁面上。

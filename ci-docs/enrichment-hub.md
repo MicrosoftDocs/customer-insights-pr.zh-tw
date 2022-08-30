@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245869"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304509"
 ---
 # <a name="data-enrichment-preview-overview"></a>資料擴充 (預覽版) 概述
 
@@ -27,7 +27,7 @@ ms.locfileid: "9245869"
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>多個相同類型的擴充
 
-在擴充設定期間，會指定要擴充的實體，這可讓您擴充個人資料的子集。 例如，只擴充特定客戶細分的資料。 您可以設定數個相同類型的擴充，並重複使用相同的連接。 某些擴充將限制相同類型的擴充可建立的數量。 在 **擴充** 頁面的 **探索** 索引標籤上，可以在每個磚上看到限制和目前用途。
+在擴充設定期間，會指定要擴充的實體，這可讓您擴充設定檔的子集。 例如，只擴充特定客戶細分的資料。 您可以設定數個相同類型的擴充，並重複使用相同的連接。 某些擴充將限制相同類型的擴充可建立的數量。 在 **擴充** 頁面的 **探索** 索引標籤上，可以在每個磚上看到限制和目前用途。
 
 ## <a name="enrich-data-sources-before-unification"></a>在整合之前擴充資料來源
 
@@ -52,7 +52,7 @@ ms.locfileid: "9245869"
 - HERE Technologies 提供的 [位置資料](enrichment-here.md)
 - 透過安全檔案傳輸通訊協定 (SFTP) 的 [SFTP 自訂資料](enrichment-SFTP-custom-import.md)
 
-# <a name="business-accounts-b-to-b"></a>[商務帳戶 (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[商務客戶 (B 到 B)](#tab/b2b)
 
 - Microsoft 提供的[客戶參與度資料](enrichment-office.md)
 - Dun&Bradstreet 提供的[公司資料](enrichment-dnb.md)
@@ -89,13 +89,13 @@ ms.locfileid: "9245869"
 
 1. 又或者，[查看擴充程序的進度](#see-the-progress-of-the-enrichment-process)。
 
-1. 擴充程序完成後，請前往 **我的擴充** 以檢閱最新擴充的客戶個人資料、上次更新的時間以及擴充個人資料的數量。
+1. 擴充程序完成後，請前往 **我的擴充** 以檢閱最新擴充的客戶設定檔、上次更新的時間以及擴充設定檔的數量。
 
 1. 選取擴充以查看其[擴充結果](#view-enrichment-results)。
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>查看擴充程序的進度
 
-在重新整理時或重新整理完成後，您都可以查看擴充程序詳細資料，包括其狀態和潛在問題。 瞭解哪些程序包含在擴充的重新整理中，以及執行該程序所花費的時間。 擴充狀態支援 Experian、Leadspace、HERE Technologies、SFTP 匯入以及 Azure 地圖服務。
+重新整理時或重新整理完成後，您都可以找到關於擴充處理的詳細資料，包括其狀態和潛在問題。 瞭解哪些程序包含在擴充的重新整理中，以及執行該程序所花費的時間。 擴充狀態支援 Experian、Leadspace、HERE Technologies、SFTP 匯入以及 Azure 地圖服務。
 
 1. 移至 **資料** > **擴充**。
 1. 在 **我的擴充** 索引標籤中，選取擴充狀態將打開側邊窗格。
@@ -112,7 +112,7 @@ ms.locfileid: "9245869"
 1. 移至 **資料** > **擴充**。
 1. 在 **我的擴充** 索引標籤中，選取擴充以查看內容。
 
-所有的擴充都會顯示基本資訊，例如擴充個人資料的數量，以及隨時間完成擴充的個人資料數量。 **預覽已擴充的客戶個人資料** 磚顯示已生成擴充實體的範例。 若要查看更詳細的檢視表，選取 **查看更多**，並選取 **資料** 索引標籤。
+所有的擴充都會顯示基本資訊，例如擴充設定檔的數量，以及隨時間完成擴充的設定檔數量。 **預覽已擴充的客戶設定檔** 磚顯示已生成擴充實體的範例。 若要查看更詳細的檢視表，選取 **查看更多**，並選取 **資料** 索引標籤。
 
 :::image type="content" source="media/enrichments-results.png" alt-text="擴充結果頁面。":::
 
