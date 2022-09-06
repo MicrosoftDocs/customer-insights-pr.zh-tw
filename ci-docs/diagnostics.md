@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245915"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352791"
 ---
 # <a name="export-diagnostic-logs-preview"></a>匯出診斷記錄 (預覽版)
 
@@ -36,8 +36,8 @@ Customer Insights 會傳送下列事件記錄檔：
 
 - 啟用中的 [Azure 訂用帳戶](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)。
 -  Customer Insights 中的[系統管理員](permissions.md#admin)權限。
+- Azure 上遵循 Azure 儲存體、Azure 事件中樞或 Azure Log Analytics 之[目的地需求](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements)的有效資源。
 - 您擁有 Azure 中目的地資源的[參與者及使用者存取系統管理員角色](/azure/role-based-access-control/role-assignments-portal) 。 資源可以是 Azure Data Lake Storage 帳戶、Azure 事件中樞或 Azure Log Analytics 工作區。 在 Customer Insights 中設定診斷設定時必須有此權限，不過在設定成功後可以變更。
-- Azure 儲存體、Azure 事件中樞或 Azure Log Analytics 符合的[目的地需求](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements)。
 - 在資源所屬的資源群組中至少要有 **讀者** 角色。
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>使用 Azure 監視器設定診斷

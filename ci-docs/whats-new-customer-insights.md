@@ -1,19 +1,19 @@
 ---
 title: Dynamics 365 Customer Insights 的新功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246001"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387272"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的新功能
 
@@ -23,6 +23,24 @@ ms.locfileid: "9246001"
 
 > [!TIP]
 > 若要提出功能要求和產品建議並票選，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="august-2022-updates"></a>2022 年 8 月更新
+
+2022 年 8 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="contact-unification-in-b-to-b-environments"></a>B 到 B 環境中的連絡人整合
+
+Customer Insights 中的 B 到 B 環境現在支援增強型資料整合體驗。
+
+除了客戶之外，您現在還可以整合連絡人來取得商務連絡人的完整檢視。 整合的連絡人與整合的客戶有關聯，而且現在會在客戶卡片上列出。 
+
+如需詳細資訊，請參閱[建立統一連絡人設定檔](data-unification-contacts.md)。
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>根據整合的連絡人建立和匯出客戶細分
+
+得益於新的連絡人整合，您可以使用連絡人、客戶或兩者的準則來建立連絡人的客戶細分。 您可匯出這些客戶細分，以便在其他服務中啟用。
+
+如需詳細資訊，請參閱[匯出概觀](export-destinations.md)。
 
 ## <a name="july-2022-updates"></a>2022 年 7 月更新
 

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246052"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387239"
 ---
 # <a name="configure-security-settings"></a>設定安全性設定
 
@@ -23,7 +23,7 @@ ms.locfileid: "9246052"
 
 查看和管理金鑰，此金鑰可將 [Customer Insights API](apis.md) 與環境中的資料搭配使用。
 
-1. 請前往 **系統** > **安全性**，然後選取 **API** 索引標籤。
+1. 移至 **管理** > **安全性**，並選取 **API** 索引標籤。
 
 1. 如果尚未設定 API 對環境的存取權限，請選取 **啟用**。 或者，若要封鎖環境的 API 存取，請選取 **停用** 並確認。
 

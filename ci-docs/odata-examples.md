@@ -1,27 +1,27 @@
 ---
 title: Customer Insights API 的 OData 查詢範例
 description: 開放式資料通訊協定 (OData) 查詢 Customer Insights API 以檢閱資料的常用範例。
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121552"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387192"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Customer Insights API 的 OData 查詢範例
 
 開放式資料通訊協定 (OData) 是建立在核心通訊協定 (例如 HTTP) 的資料存取通訊協定。 它使用普遍接受的方法 (例如網站的 REST)。 有多種可用來使用 OData 服務的程式庫和工具。
 
-本文列出一些經常要求的範例查詢，協助您以 [Customer Insights API](apis.md) 來建立自己的實作。
+為了協助您根據 [Customer Insights API](apis.md) 建立自己的實作，請檢閱一些經常要求的範例查詢。
 
-您必須修改查詢範例，才能讓它們在目標環境中運作： 
+修改查詢範例，使其在目標環境中運作：
 
 - {serviceRoot}：`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` ，其中 {instanceId} 是您要查詢的 Customer Insights 環境的 GUID。 [ListAllInstances 作業](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)可尋找您有權存取的 {InstanceId}。
 - {CID}：整合客戶記錄的 GUID。 範例：`ce759201f786d590bf2134bff576c369`。
@@ -31,7 +31,7 @@ ms.locfileid: "9121552"
 
 ## <a name="customer"></a>客戶
 
-下表包含 *Customer* 實體的一組範例查詢。
+對 *客戶* 實體的範例查詢。
 
 |查詢類型 |範例  | Note  |
 |---------|---------|---------|
@@ -46,11 +46,11 @@ ms.locfileid: "9121552"
 
 ## <a name="unified-activity"></a>整合活動
 
-下表包含 *UnifiedActivity* 實體的一組範例查詢。
+對 *UnifiedActivity* 實體的範例查詢。
 
 |查詢類型 |範例  | Note  |
 |---------|---------|---------|
-|CID​​ 活動     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | 列出特定客戶個人資料的活動 |
+|CID 活動     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | 列出特定客戶個人資料的活動 |
 |活動時間範圍    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  時間範圍中的客戶個人資料活動       |
 |活動類型    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
 |活動 (依顯示名稱)     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
@@ -59,7 +59,7 @@ ms.locfileid: "9121552"
 
 ## <a name="other-examples"></a>其他範例
 
-下表包含其他實體的一組範例查詢。
+對其他實體的範例查詢。
 
 |查詢類型 |範例  | Note  |
 |---------|---------|---------|
