@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387146"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411730"
 ---
 # <a name="service-limits-in-customer-insights"></a>Customer Insights 的服務限制
 
@@ -23,7 +23,7 @@ ms.locfileid: "9387146"
 
 | 面積圖  | 限制  | 注意事項 |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| 客戶細分、量值以及預測 | 300  | [客戶細分](segments.md)、[量值](measures.md)和[預測](predictions.md)總數不能超過 300。  |
+| 客戶細分、量值以及預測 | 300  | [客戶細分](segments.md)、[量值](measures.md)和[預測](predictions-overview.md)總數不能超過 300。  |
 | 關係 | 實體路徑中關聯的 20 層深度。 | 當使用建立器介面建立[客戶細分](segments.md)或[量值](measures.md)時，開始實體與目標實體之間的實體路徑最多可以有 20 個關聯躍點。  |
 
 ## <a name="fair-scheduling-of-jobs"></a>工作的公平排程

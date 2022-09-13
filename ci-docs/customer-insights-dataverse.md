@@ -1,7 +1,7 @@
 ---
 title: 在 Microsoft Dataverse 中使用 Customer Insights 資料
 description: 了解如何連接 Customer Insights 和 Microsoft Dataverse，以及了解匯出至 Dataverse 的輸出實體。
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303819"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424299"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>在 Microsoft Dataverse 中使用 Customer Insights 資料
 
@@ -136,6 +136,7 @@ OR
 Customer Insights 的部分輸出實體可用作 Dataverse 中的資料表。 以下各節說明這些資料表的預期結構描述。
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Customer Insights 的部分輸出實體可用作 Dataverse 中的資料表。 �
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-此資料表包含來自 Customer Insights 的統一客戶設定檔。 統一客戶設定檔的結構描述，將依資料整合處理使用的實體和屬性決定。 客戶設定檔結構描述通常包含 [CustomerProfile 的 Common Data Model 定義中 ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile)的屬性子集。
+此資料表包含來自 Customer Insights 的統一客戶設定檔。 統一客戶設定檔的結構描述，將依資料整合處理使用的實體和屬性決定。 客戶設定檔結構描述通常包含 [CustomerProfile 的 Common Data Model 定義中 ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile)的屬性子集。 在 B 到 B 案例中，客戶設定檔會包含整合客戶，而結構描述通常包含[客戶的 Common Data Model 定義](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account)中屬性的子集。
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile 包含關於連絡人的整合資訊。 連絡人是在 B 到 B 案例中[對應至客戶的個人](data-unification-contacts.md)。
+
+| Column                       | 類型​                | 名描述     |
+| ---------------------------- | ------------------- | --------------- |
+|  出生日期            | 日期時間       |  連絡人的出生日期               |
+|  縣/市                 | 文字 |  連絡人地址的縣/市               |
+|  ContactId            | 文字 |  連絡人設定檔的識別碼               |
+|  ContactProfileId     | 唯一識別碼   |  連絡人的 GUID               |
+|  CountryOrRegion      | 文字 |  連絡人地址的國家/地區               |
+|  CustomerId           | 文字 |  連絡人對應至之客戶的識別碼               |
+|  EntityName           | 文字 |  資料的來源實體                |
+|  FirstName            | 文字 |  連絡人的名字               |
+|  性別               | 文字 |  連絡人的性別               |
+|  Id                   | 文字 |  根據 `Identifier` 建立的決定性 GUID               |
+|  識別碼           | 文字 |  連絡人設定檔的內部識別碼：`ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | 文字 |  連絡人的職稱               |
+|  LastName             | 文字 |  連絡人的姓氏               |
+|  PostalCode           | 文字 |  連絡人地址的郵遞區號               |
+|  PrimaryEmail         | 文字 |  連絡人的電子郵件               |
+|  PrimaryPhone         | 文字 |  連絡人的電話號碼               |
+|  StateOrProvince      | 文字 |  連絡人地址的州或省               |
+|  StreetAddress        | 文字 |  連絡人地址的街道               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 AlternateKey 資料表包含參與整合程序的實體索引鍵。
 
-|Column  |類型​​  |描述  |
+|Column  |類型​  |名描述  |
 |---------|---------|---------|
-|DataSourceName    |String         | 資料來源的名稱。 例如: `datasource5`        |
-|EntityName        | 字串        | Customer Insights 的實體名稱 例如: `contact1`        |
-|AlternateValue    |字串         |對應至客戶識別碼的替代識別碼。 範例: `cntid_1078`         |
-|KeyRing           | 多行文字        | JSON 值  </br> 範例：: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | String        | 統一客戶設定檔的識別碼。         |
-|AlternateKeyId     | GUID         |  基於 msdynci_identifier 的 AlternateKey 確定性 GUID       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> 範例：`testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |文字         | 資料來源的名稱。 例如: `datasource5`        |
+|EntityName        | 文字        | Customer Insights 的實體名稱 例如: `contact1`        |
+|AlternateValue    |文字         |對應至客戶識別碼的替代識別碼。 範例: `cntid_1078`         |
+|KeyRing           | 文字        | JSON 值  </br> 範例：: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | 文字        | 統一客戶設定檔的識別碼。         |
+|AlternateKeyId     | 唯一識別碼        |  根據 `Identifier` 建立的 AlternateKey 決定性 GUID      |
+|識別碼 |   文字      |   `DataSourceName|EntityName|AlternateValue`  </br> 範例：`testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ AlternateKey 資料表包含參與整合程序的實體索引鍵。
 
 | Column            | 類型​        | 名描述                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | 字串      | 客戶設定檔識別碼                                                                      |
-| ActivityId        | 字串      | 客戶活動的內部識別碼 (主索引鍵)                                       |
-| SourceEntityName  | String      | 來源實體的名稱                                                                |
-| SourceActivityId  | String      | 來源實體的主索引鍵                                                       |
-| 活動類型      | String      | 語義活動類型或自訂活動的名稱                                        |
-| ActivityTimeStamp | DATETIME    | 活動時間戳記                                                                      |
-| 名稱             | 字串      | 活動的標題或名稱                                                               |
-| 名描述       | String      | 活動描述                                                                     |
-| URL               | String      | 連結至特定活動的外部 URL                                         |
-| SemanticData      | JSON 字串 | 包括此活動類型特有的語義對應欄位其索引鍵值對清單 |
-| RangeIndex        | String      | 用於排序活動時間表和有效範圍查詢的 Unix 時間戳記 |
-| mydynci_unifiedactivityid   | GUID | 客戶活動的內部識別碼 (ActivityId) |
+| CustomerId        | 文字      | 客戶設定檔識別碼                                                                      |
+| ActivityId        | 文字      | 客戶活動的內部識別碼 (主索引鍵)                                       |
+| SourceEntityName  | 文字      | 來源實體的名稱                                                                |
+| SourceActivityId  | 文字      | 來源實體的主索引鍵                                                       |
+| 活動類型      | 文字      | 語義活動類型或自訂活動的名稱                                        |
+| ActivityTimeStamp | 日期時間    | 活動時間戳記                                                                      |
+| 名稱             | 文字      | 活動的標題或名稱                                                               |
+| 名描述       | 文字      | 活動描述                                                                     |
+| URL               | 文字      | 連結至特定活動的外部 URL                                         |
+| SemanticData      | 文字 | 包括此活動類型特有的語義對應欄位其索引鍵值對清單 |
+| RangeIndex        | 文字      | 用於排序活動時間表和有效範圍查詢的 Unix 時間戳記 |
+| UnifiedActivityId   | 唯一識別碼 | 客戶活動的內部識別碼 (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 此資料表包含屬性型的客戶量值輸出資料。
 
-| Column             | 類型​​             | 描述                 |
+| Column             | 類型​             | 名描述                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | String           | 客戶設定檔識別碼        |
-| 量值           | JSON 字串      | 包含指定客戶的量值名稱與值其索引鍵值對清單 | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | 客戶設定檔識別碼 |
-
+| CustomerId         | 文字           | 客戶設定檔識別碼        |
+| 量值           | 文字      | 包含指定客戶的量值名稱與值其索引鍵值對清單 |
+| 識別碼 | 文字           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | 唯一識別碼     | 客戶設定檔識別碼 |
 
 ### <a name="enrichment"></a>擴充
 
 此資料表包含擴充程序的輸出。
 
-| Column               | 類型​​             |  描述                                          |
+| Column               | 類型​             |  名描述                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | String           | 客戶設定檔識別碼                                 |
-| EnrichmentProvider   | String           | 提供擴充提供者的名稱                                  |
-| EnrichmentType       | String           | 擴充類型                                      |
-| 值               | JSON 字串      | 擴充程序產生的屬性清單 |
-| msdynci_enrichmentid | GUID             | 從 msdynci_identifier 生成的確定性 GUID |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | 文字           | 客戶設定檔識別碼                                 |
+| EnrichmentProvider   | 文字           | 提供擴充提供者的名稱                                  |
+| EnrichmentType       | 文字           | 擴充類型                                      |
+| 數值               | 文字      | 擴充程序產生的屬性清單 |
+| EnrichmentId | 唯一識別碼            | 從 `Identifier` 產生的決定性 GUID |
+| 識別碼   | 文字           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>預測
 
@@ -211,25 +236,24 @@ AlternateKey 資料表包含參與整合程序的實體索引鍵。
 
 | Column               | 類型​        | 名描述                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | 字串      | 客戶設定檔識別碼                                  |
-| ModelProvider        | 字串      | 提供模型提供者的名稱                                      |
-| 型號                | String      | 模型名稱                                                |
-| 值               | JSON 字串 | 模型產生的屬性清單 |
-| msdynci_predictionid | GUID        | 從 msdynci_identifier 生成的確定性 GUID | 
-| msdynci_identifier   | 字串      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | 文字      | 客戶設定檔識別碼                                  |
+| ModelProvider        | 文字      | 提供模型提供者的名稱                                      |
+| 型號                | 文字      | 模型名稱                                                |
+| 數值               | 文字 | 模型產生的屬性清單 |
+| PredictionId | 唯一識別碼       | 從 `Identifier` 產生的決定性 GUID |
+| 識別碼   | 文字      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>客戶細分成員資格
 
 此表格包含客戶設定檔的客戶細分成員資格資訊。
 
-| Column        | 類型​ | Description                        |
+| Column        | 類型​ | 名描述                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | 字串       | 客戶設定檔識別碼        |
-| SegmentProvider      | 字串       | 發佈客戶細分的應用程式。      |
-| SegmentMembershipType | 字串       | 此客戶細分成員資格記錄的客戶類型。 支援多個類型，例如，客戶、連絡人或帳戶。 預設：客戶  |
-| 客戶細分       | JSON 字串  | 客戶設定檔所屬的唯一客戶細分清單      |
-| msdynci_identifier  | 字串   | 客戶細分成員資格記錄的唯一識別碼。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | 從 `msdynci_identifier` 產生的決定性 GUID          |
-
+| CustomerId        | 文字       | 客戶設定檔識別碼        |
+| SegmentProvider      | 文字       | 發佈客戶細分的應用程式。      |
+| SegmentMembershipType | 文字       | 此客戶細分成員資格記錄的客戶類型。 支援多個類型，例如，客戶、連絡人或帳戶。 預設：客戶  |
+| 客戶細分       | 文字  | 客戶設定檔所屬的唯一客戶細分清單      |
+| 識別碼  | 文字   | 客戶細分成員資格記錄的唯一識別碼。 `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | 唯一識別碼      | 從 `Identifier` 產生的決定性 GUID          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

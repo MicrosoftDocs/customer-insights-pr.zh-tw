@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: 使用 Azure Machine Learning 的自訂模型
           href: custom-models.md
-        - name: 完成部分遺失的資料
-          href: predictions.md
     - name: 範例指南
       items:
         - name: CLV 預測的範例指南

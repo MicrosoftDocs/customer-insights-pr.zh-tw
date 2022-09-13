@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246237"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395991"
 ---
 # <a name="view-system-configuration"></a>查看系統設定
 
@@ -38,12 +38,6 @@ ms.locfileid: "9246237"
    - **API 呼叫** - 在選取的時間範圍中，會視覺化 API 彙總數量的圖表。
    - **資料傳輸** - 圖表上顯示選取的時間範圍中，透過 API 傳送的資料總量。
    - **作業** - 表格上的列是每個可用的 API 作業，以及有關作業使用方式的詳細資料。 選取作業名稱並移至 [API 參考](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)。
-
-   使用 [即時資料擷取](real-time-data-ingestion.md)的作業包含望遠鏡符號的按鈕，可以查看即時的 API 使用狀況。
-
-   1. 選取望遠鏡圖示打開作業的 **即時 API 使用情況** 詳細資料窗格。
-   1. **選取時間範圍** 進行查看。
-   1. 使用 **分組依據** 方塊，可以選擇呈現即時互動的最好方式。 您可以依據 API **方法**、**實體限定名稱** (擷取的實體)、**建立者** (事件來源)、**結果** (成功或失敗) 或 **錯誤代碼** 來分組資料。 資料可以表示為歷史圖和表格。
 
 ## <a name="view-system-information"></a>檢視系統資訊
 

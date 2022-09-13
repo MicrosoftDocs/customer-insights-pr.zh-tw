@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387272"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409347"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的新功能
 
@@ -41,6 +41,14 @@ Customer Insights 中的 B 到 B 環境現在支援增強型資料整合體驗�
 得益於新的連絡人整合，您可以使用連絡人、客戶或兩者的準則來建立連絡人的客戶細分。 您可匯出這些客戶細分，以便在其他服務中啟用。
 
 如需詳細資訊，請參閱[匯出概觀](export-destinations.md)。
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>與 Microsoft Dataverse 保持一致的部署區域
+
+建立新的 Customer Insights 環境時，您可以選取要部署和託管服務所在的區域。 我們已更新區域選取項目，以便與 Microsoft Dataverse 及 Power Platform 保持一致。
+
+您現在可以輕鬆地選取與現有的 Microsoft Dataverse 環境或您的 Azure Data Lake Storage 帳戶相同的區域 (視 Customer Insights 在該區域的可用性而定)，如果您選擇該選項的話。
+
+如需詳細資訊，請參閱[建立新環境](create-environment.md)和[依地理位置劃分的產品可用性](https://dynamics.microsoft.com/availability-reports/)。
 
 ## <a name="july-2022-updates"></a>2022 年 7 月更新
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246098"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396051"
 ---
 # <a name="real-time-data-ingestion-preview"></a>即時資料擷取 (預覽)
 
@@ -82,10 +82,5 @@ ms.locfileid: "9246098"
 您可以將活動張貼為來源系統的格式或 UnifiedActivity 格式。 對 /api/instances/{instanceId}/manage/entities/UnifiedActivity 進行 API 呼叫，取得格式。
 
 此 API 詳細資料，包括參數和回應，均可參閱 [Customer Insights API 參考](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) 的 **EntityData** 區。 如需更多資訊，請見 [搭配 Customer Insights API 處理](apis.md)。
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>了解遙測的即時使用方式
-
-取得即時 API 的要求量和系統可能遭遇的問題相關資訊總覽。 您可以[存取即時遙測](system.md#view-api-usage)。 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

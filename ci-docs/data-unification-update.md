@@ -1,7 +1,7 @@
 ---
 title: 更新客戶、帳戶或連絡人的整合設定
 description: 更新客戶或帳戶整合設定中的重複規則、比對規則或整合欄位。
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304325"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392461"
 ---
 # <a name="update-unification-settings"></a>更新整合設定
 
@@ -35,10 +35,10 @@ ms.locfileid: "9304325"
    :::image type="content" source="media/b2b_unified.png" alt-text="資料整合頁面在整合帳戶和連絡人資料後的螢幕擷取畫面。" lightbox="media/b2b_unified.png":::
 
    > [!TIP]
-   > 只有在選取多個實體時，才會顯示 **比對條件** 磚。
+   > 只有在選取多個實體時，才會顯示 **比對條件** 圖標。
 
 1. 選取你想要更新的部分：
-   - [來源欄位](#edit-source-fields)，可新增實體或屬性或變更屬性類型。
+   - [來源欄位](#edit-source-fields)，用於新增實體或屬性，或變更屬性類型。 若要移除屬性，請參閱[移除整合欄位](#remove-a-unified-field)。 若要移除實體，請參閱[移除整合實體](#remove-a-unified-entity)。
    - [重複資料記錄](#manage-deduplication-rules)，可管理重複資料刪除規則或合併喜好設定。
    - [比對條件](#manage-match-rules)，可在兩個或多個實體之間更新比對規則。
    - [整合客戶欄位](#manage-unified-fields)，可合併或排除欄位。 您也可以將相關設定檔群組成叢集。
@@ -53,9 +53,7 @@ ms.locfileid: "9304325"
 
 ## <a name="edit-source-fields"></a>編輯來源欄位
 
-如果屬性或實體已經是整合的，您無法移除。
-
-1. 在 **來源欄位** 磚上選取 **編輯**。
+1. 在 **來源欄位** 圖標上選取 **編輯**。
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="螢幕擷取畫面：顯示主鍵數、對應和未對應欄位的來源欄位頁面":::
 
@@ -67,9 +65,83 @@ ms.locfileid: "9304325"
 
 1. 選取 **下一步** 以變更重複資料刪除規則，或選取 **儲存後關閉** 並返回[更新整合設定](#update-unification-settings)。
 
+### <a name="remove-a-unified-field"></a>移除整合欄位
+
+若要移除已整合的欄位，必須從任何相依性 (例如客戶細分、量值、擴充或關聯) 移除欄位。
+
+1. 移除欄位的所有相依性之後，請移至 **資料** > **整合**。
+
+1. 在 **整合客戶欄位** 圖標上選取 **編輯**。
+
+1. 選取所有出現欄位的項目，然後選取 **排除**。
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="[整合欄位] 頁面的螢幕擷取畫面，顯示選取的欄位和 [排除] 按鈕":::
+
+1. 選取 **完成** 以確認，然後選取 **儲存後關閉**。
+
+   > [!TIP]
+   > 如果看到訊息「無法儲存 Unify。 因為下游相依性，無法修改或刪除指定的資源」，則仍會在下游相依性中使用此欄位。
+
+1. 如果此欄位是在重複記錄或比對條件的規則中使用，請執行下列步驟。 否則，移至下一個步驟。
+   1. 在 **重複資料紀錄** 圖標上選取 **編輯**。
+   1. 從所有使用此欄位的規則中移除該欄位 (如果有的話)，然後選取 **下一步**。
+   1. 在 **比對條件** 頁面上，從所有使用此欄位的規則中移除該欄位 (如果有的話)，然後選取 **儲存後關閉**。
+   1. 選取 **整合** > **整合客戶設定檔和相依性**。 先等待整合完成，再移至下一個步驟。
+
+1. 在 **來源欄位** 圖標上選取 **編輯**。
+
+1. 選擇 **選取實體和欄位**，並清除每個出現的欄位旁邊的核取方塊。
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="[選取實體和欄位] 對話方塊的螢幕擷取畫面，顯示已清除的核取方塊":::
+
+1. 選取 **套用**。
+
+1. 選取 **儲存後關閉**。
+
+1. 選取 **整合** > **整合客戶設定檔和相依性** 以更新整合設定檔。
+
+### <a name="remove-a-unified-entity"></a>移除整合實體
+
+若要移除已整合的實體，必須從任何相依性 (例如客戶細分、量值、擴充或關聯) 移除實體。
+
+1. 移除實體的所有相依性之後，請移至 **資料** > **整合**。
+
+1. 在 **整合客戶欄位** 圖標上選取 **編輯**。
+
+1. 選取實體的所有欄位，然後選取 **排除**。
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="[整合欄位] 的螢幕擷取畫面，其中已選取實體所有的欄位並包含 [排除] 按鈕":::
+
+1. 選取 **完成** 以確認，然後選取 **儲存後關閉**。
+
+   > [!TIP]
+   > 如果看到訊息「無法儲存 Unify。 因為下游相依性，無法修改或刪除指定的資源」，則仍會在下游相依性中使用此實體。
+
+1. 在 **重複資料紀錄** 圖標上選取 **編輯**。
+
+1. 從實體中移除所有規則 (如果有的話)，然後選取 **下一步**。
+
+1. 在 **比對條件** 頁面上，選取實體，然後選取 **刪除**。
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="[比對條件] 的螢幕擷取畫面，其中已選取實體並包含 [刪除] 按鈕":::
+
+1. 選取 **儲存後關閉**。
+
+1. 在 **來源欄位** 圖標上選取 **編輯**。
+
+1. 選擇 **選取實體和欄位**，並清除實體旁邊的核取方塊。
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="[選取實體和欄位] 對話方塊的螢幕擷取畫面，其中已清除實體核取方塊":::
+
+1. 選取 **套用**。
+
+1. 選取 **儲存後關閉**。
+
+1. 選取 **整合** > **整合客戶設定檔和相依性** 以更新整合設定檔。
+
 ## <a name="manage-deduplication-rules"></a>管理重複資料刪除規則
 
-1. 在 **重複資料紀錄** 磚上選取 **編輯**。
+1. 在 **重複資料紀錄** 圖標上選取 **編輯**。
 
    :::image type="content" source="media/m3_duplicates_edit.png" alt-text="螢幕擷取畫面：顯示重複資料記錄數量的重複資料記錄頁面" lightbox="media/m3_duplicates_edit.png":::
 
@@ -97,7 +169,7 @@ ms.locfileid: "9304325"
 
 您可以重新設定和微調大部分的比對參數。 您無法新增或刪除實體。 比對規則不適用於單一實體。
 
-1. 在 **比對條件** 磚上選取 **編輯**。
+1. 在 **比對條件** 圖標上選取 **編輯**。
 
    :::image type="content" source="media/m3_match_edit.png" alt-text="包含統計資料的比對規則及條件頁面的螢幕擷取畫面。" lightbox="media/m3_match_edit.png":::
 
@@ -128,7 +200,7 @@ ms.locfileid: "9304325"
 
 ## <a name="manage-unified-fields"></a>管理整合欄位
 
-1. 在 **整合客戶欄位** 磚上選取 **編輯**。
+1. 在 **整合客戶欄位** 圖標上選取 **編輯**。
 
     :::image type="content" source="media/m3_merge_edit.png" alt-text="整合客戶欄位的螢幕擷取畫面":::
 
@@ -163,11 +235,11 @@ ms.locfileid: "9304325"
 
 1. 在 **資料** > **整合** 頁面中，選取 **只執行比對條件**。
 
-   **重複資料記錄** 和 **比對條件** 磚會顯示 **已排入佇列** 或 **正在重新整理** 狀態。
+   **重複資料記錄** 和 **比對條件** 圖標會顯示 **已排入佇列** 或 **正在重新整理** 狀態。
 
    [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-1. 當比對程序完成時，請在 **比對條件** 磚上選取 **編輯**。
+1. 當比對程序完成時，請在 **比對條件** 圖標上選取 **編輯**。
 
    :::image type="content" source="media/match-KPIs.png" alt-text="比對頁面上關鍵計量的螢幕擷取畫面 (已裁剪)，畫面上有數字和詳細資訊。":::
 

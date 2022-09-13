@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080958"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411821"
 ---
 # <a name="predictions-overview"></a>預測概觀
 
@@ -39,14 +39,11 @@ Dynamics 365 Customer Insights 隨附多種選項，可讓您利用 AI 和機器
 
 > [!TIP]
 > 我們建議您定期使用更新過的資料來重新整理立即可用模型，以確保它們能準確地支援您的業務使用案例。 當系統擷取新的或更新的資料來源時，會對資料進行專門的重新整理。 但是，模型只會在此案例中重新評分，並繼續使用現有的訓練資料。
-> 
+>
 > 在設定體驗中設定模型重新定型排程，您可以設定 **更新排程**。 模型將重新定型及重新評分此排程，且您可以隨時變更。
-
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learnings 整合
 
 如果組織已根據 Azure Machine Learning 試驗來使用機器學習案例，則 Customer Insights 中的自訂模型功能可協助您掌握全貌。 建立工作流程，來協助您選擇想要建立見解的資料，並將結果對應至您的整合客戶個人資料。 如需詳細資訊，請參閱[自訂機器學習模型](custom-models.md)。
 
-## <a name="ai-builder-prediction"></a>AI Builder 預測
-
-有時資料集不完整，也會遺失某些值。 Customer Insights 可協助預測客戶實體和客戶細分的遺失值。 如需詳細資訊，請參閱[以預測完成部分資料](predictions.md)。
+[!INCLUDE [footer-include](includes/footer-banner.md)]

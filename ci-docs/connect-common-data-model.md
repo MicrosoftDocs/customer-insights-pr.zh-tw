@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245777"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396036"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>在 Azure Data Lake Storage 中連線至資料
 
@@ -40,7 +40,9 @@ ms.locfileid: "9245777"
   - 儲存體 Blob 負責人
   - 儲存體 Blob 資料參與者
 
-- Data Lake Storage 中的資料應遵循的 Common Data Model 標準儲存，並使用 Common Data Model 資訊清單來表示資料檔案的結構描述 (*.csv* 或 .parquet)。 此資訊清單必須提供實體的詳細資料 (例如實體欄和資料類型) 以及資料檔案位置和檔案類型。 如需更多資訊，請前往 [Common Data Model 資訊清單](/common-data-model/sdk/manifest)。 如果此資訊清單不存在，則具備 Storage Blob 資料擁有者或儲存 Blob 資料參與者存取權限的管理使用者，可以在內嵌資料時定義結構描述。
+- 設定資料來源連接的使用者至少需要儲存體帳戶的儲存體 Blob 資料參與者權限。
+
+- Data Lake Storage 中的資料應遵循的 Common Data Model 標準儲存，並使用 Common Data Model 資訊清單來表示資料檔案的結構描述 (*.csv 或 *.parquet)。 此資訊清單必須提供實體的詳細資料 (例如實體欄和資料類型) 以及資料檔案位置和檔案類型。 如需更多資訊，請前往 [Common Data Model 資訊清單](/common-data-model/sdk/manifest)。 如果此資訊清單不存在，則具備 Storage Blob 資料擁有者或儲存 Blob 資料參與者存取權限的管理使用者，可以在內嵌資料時定義結構描述。
 
 ## <a name="connect-to-azure-data-lake-storage"></a>連線至 Azure Data Lake Storage
 
@@ -62,7 +64,7 @@ ms.locfileid: "9245777"
    > [!NOTE]
    > 在容器或儲存體帳戶上您需要擁有下列任一個角色，才能建立資料來源：
    >
-   >  - [儲存體 Blob 資料讀者] 足以讀取儲存體帳戶，並將資料內嵌至 Customer Insights。 
+   >  - [儲存體 Blob 資料讀者] 足以讀取儲存體帳戶，並將資料內嵌至 Customer Insights。
    >  - 如果您想要直接在 Customer Insights 中編輯資訊清單檔案，則需要 [儲存體 Blob 資料參與者] 或 [儲存體 Blob 資料負責人]。  
   
 1. 選擇包含資料和結構描述 (model.json or manifest.json 檔案) 的 **容器** 名稱，以從其中匯入資料，然後選取 **下一步**。

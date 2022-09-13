@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246333"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395946"
 ---
 # <a name="schedule-system-refresh"></a>排程系統重新整理
 
@@ -36,7 +36,7 @@ ms.locfileid: "9246333"
 
 1. 在 **每週**（預設）和 **每日** 重新整理之間選擇。 如果想要排定每週重新整理，請選取一或多個要執行重新整理的天數。
 
-1. 設定您的 **時區**，然後使用 **時間** 下拉式功能表來設定您的重新整理時間安排。 如果您想要在一天中安排多次重新整理，請選取 **新增其他時間**。
+1. 設定您的 **時區**，然後使用 **時間** 下拉式功能表來設定您的重新整理時間安排。 如果您想要在一天中安排多次重新整理，請選取 **新增其他時間**。 您最多可以新增四次重新整理。
 
 1. 選取 **儲存** 套用變更。
 
