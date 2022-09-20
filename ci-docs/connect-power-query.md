@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207035"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463255"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連線到 Power Query 資料來源
 
@@ -63,7 +63,9 @@ Power Query提供一組各式各樣的連接器來內嵌資料。 Dynamics 365 C
 載入資料可能需要花費一些時間。 成功重新整理之後，即可從 [**實體**](entities.md)頁面查看擷取的資料。
 
 > [!CAUTION]
-> 根據 Power Query 的資料來源建立 [Dataverse 中的資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 請勿變更 Power Platform 系統管理中心中用於 Customer Insights 的資料流程名稱。 重命名資料流程會造成 Customer Insights 資料來源與 Dataverse 資料流程之間的參考發生問題。
+>
+> - 根據 Power Query 的資料來源建立 [Dataverse 中的資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 請勿變更 Power Platform 系統管理中心中用於 Customer Insights 的資料流程名稱。 重命名資料流程會造成 Customer Insights 資料來源與 Dataverse 資料流程之間的參考發生問題。
+> - Customer Insights 中 Power Query 資料來源的並行評估有相同的[重新整理限制，如對 PowerBI.com 中資料流程的限制一樣](/power-query/power-query-online-limits#refresh-limits)。 如果資料更新因達到評估限制而失敗，建議您調整每個資料流程的重新整理排程，以確保不會同時處理資料來源。
 
 ### <a name="available-power-query-data-sources"></a>可用的 Power Query 資料來源
 
@@ -77,7 +79,7 @@ Power Query提供一組各式各樣的連接器來內嵌資料。 Dynamics 365 C
 
 在將 Dataverse 環境與 Customer Insights 關聯之後，根據預設，新建立的資料來源使用 [Power Platform 資料流程](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)。 資料流程使用資料閘道來支援內部部署連線。 您可以移除在 Dataverse 環境關聯之前[使用內部部署資料閘道](/data-integration/gateway/service-gateway-app)的資料來源並重新建立。
 
-來自現有 Power BI 或 Power Apps 環境的資料閘道將會顯示，並且可以在 Customer Insights 中重複使用。 資料來源頁面顯示的連結，您可移至 Microsoft Power Platform 查看和設定內部部署資料閘道的環境。
+您可以看到現有 Power BI 或 Power Apps 環境中的資料閘道，如果資料閘道與 Customer Insights 環境都在同一個 Azure 區域中，則可以在 Customer Insights 中重複使用這些閘道。 資料來源頁面顯示的連結，您可移至 Microsoft Power Platform 查看和設定內部部署資料閘道的環境。
 
 > [!IMPORTANT]
 > 請確定您的閘道已更新為最新版本。 您可以從閘道畫面上的提示安裝更新並重新設定閘道，也[可以下載最新版本](https://powerapps.microsoft.com/downloads/)。 如果您不使用最新的閘道版本，資料流程重新整理會失敗，錯誤訊息會類似 **不支援此關鍵字：設定屬性。參數名稱：關鍵字**。

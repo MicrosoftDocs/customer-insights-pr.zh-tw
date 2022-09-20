@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194912"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473632"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 應用程式的客戶卡片增益集 (預覽版)
 
@@ -32,7 +32,8 @@ ms.locfileid: "9194912"
 - 為了讓您的 Dynamics 365 資料能對應 Customer Insights 的客戶個人資料，我們建議[使用 Microsoft Dataverse 連接器從 Dynamics 365 App 擷取](connect-power-query.md)。 如果您使用不同的方法來擷取 Dynamics 365 連絡人(或客戶)，則必須確認 `contactid`(或 `accountid`) 欄位設定為[在資料整合流程中該資料來源的主索引鍵](map-entities.md#select-primary-key-and-semantic-type-for-attributes)。
 - 客戶卡片增益集所有 Dynamics 365 使用者，必須在Customer Insights 中[新增為使用者](permissions.md)，才能查看資料。
 - 在 Customer Insights 中[設定搜尋和篩選功能](search-filter-index.md)。
-- 每個增益集控制項依賴 Customer Insights 中的特定資料。 某些資料和控制項只能在特定類型的環境中使用。 如果因為選取的環境類型無法使用控制項，增益集組態將會通知您。 了解更多有關[環境使用案例](work-with-business-accounts.md)。
+- 某些資料和控制項只能在特定類型的環境中使用。 如果因為選取的環境類型無法使用控制項，增益集組態將會通知您。 此錯誤會在呈現控制項時顯示於控制項中。 了解更多有關[環境使用案例](work-with-business-accounts.md)。
+- 每個增益集控制項依賴 Customer Insights 中的特定資料。
   - **量值控制項**：需要[已設定的客戶屬性量值](measures.md)。
   - **智慧控制項**：需要使用[預測或自訂模型](predictions-overview.md)產生資料。
   - **客戶詳細資料控制項**：顯示統一客戶設定檔中可用設定檔的所有欄位。

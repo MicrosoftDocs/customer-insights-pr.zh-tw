@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304049"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460180"
 ---
 # <a name="exports-preview-overview"></a>匯出 (預覽版) 概觀
 
@@ -81,6 +81,11 @@ ms.locfileid: "9304049"
 ## <a name="schedule-and-run-exports"></a>排程並執行多個匯出
 
 您設定的每個匯出都會有重新整理的排程。 在重新整理期間，系統會尋找新的或更新資料是要包含在匯出中的。 根據預設，會在每次[已排程的系統重新整理](schedule-refresh.md)中執行匯出。 您可以自訂重新整理排程，或將它關閉以手動執行匯出。
+
+> [!TIP]
+> 使用下列最佳做法盡可能縮短客戶細分匯出處理時間：
+> - 將客戶細分實體分散在多個匯出中。
+> - 避免將所有匯出安排在同時排程。 在每個匯出的排程時間之間留出 30 分鐘或 1 小時的時間。
 
 匯出排程可依您的環境狀態決定。 如果排程的匯出應該開始時，[相依性](system.md#refresh-processes)有更新正在進行，則系統會先完成更新，然後執行匯出。 **重新整理** 欄會顯示上次匯出重新整理的時間。
 
