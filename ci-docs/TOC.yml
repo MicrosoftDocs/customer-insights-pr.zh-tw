@@ -7,21 +7,21 @@
 - name: 學習目錄
   items:
     - name: 認證為 Microsoft Customer Data Platform 專家
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: 開始使用 Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: 內嵌資料
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: 建立統整的客戶設定檔
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: 使用 Customer Insights
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: 擴充資料並進行預測
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: 管理外部連線
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: 管理 Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: 免費試用
   items:
     - name: 註冊免費試用版
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: 使用 Web 資料進行個人化
       href: unknown-to-known.md
+    - name: 管理未知的客戶設定檔
+      href: manage-unknown-profiles.md
 - name: 客戶細分
   items:
     - name: 客戶細分概觀

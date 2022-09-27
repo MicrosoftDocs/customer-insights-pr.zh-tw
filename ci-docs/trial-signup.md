@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: fd32a3e37f4bbf57a5bd05f888fde39d32c02a82
-ms.sourcegitcommit: e5649ca0b3000cee0ca7c9eac7142cbd5f7dd2ac
+ms.openlocfilehash: 13e0b22d40d909abdbea8e77c9b4795ee42271c8
+ms.sourcegitcommit: e02a0bf51b5440fcf3284d410f24ea652fe90723
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "9305594"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "9544299"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>註冊免費 Dynamics 365 Customer Insights 試用版
 
@@ -40,6 +40,6 @@ Customer Insights 提供免費的 30 天試用版。 快速註冊後，就可以
 
 ## <a name="additional-resources"></a>其他資源
 
-- [探索 Customer Insights 的學習路徑與課程模組](/learn/browse/?products=dynamics-cust-insights)
+- [探索 Customer Insights 的學習路徑與課程模組](/training/browse/?products=dynamics-cust-insights)
 - [試用服務常見問題](trial-faq.md)
 - [Dynamics 365 Customer Insights產品詳細資料](https://dynamics.microsoft.com/ai/customer-insights/)
