@@ -1,7 +1,7 @@
 ---
 title: 連線至 Microsoft Dataverse 受管理資料湖中的資料
 description: 從 Microsoft Dataverse 受管理的資料湖匯入資料。
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206943"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609783"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>連線至 Microsoft Dataverse 受管理資料湖中的資料
 
@@ -70,5 +70,93 @@ ms.locfileid: "9206943"
 1. 按一下 **儲存** 以套用變更，並返回至 **資料來源** 頁面。
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>發生擷取錯誤或資料損毀的常見原因
+
+下列檢查會在擷取的資料上執行，以找出損毀的記錄：
+
+- 欄位的值與其資料行的資料類型不相符。
+- 欄位包含的字元會造成資料行與預期的結構描述不相符。 例如：未正確格式化的引號、未跳脫引號或換行字元。
+- 如果有 datetime/date/datetimeoffset 資料行，當其不符合標準 ISO 格式時，需在模型中指定其格式。
+
+### <a name="schema-or-data-type-mismatch"></a>結構描述或資料類型不相符
+
+如果資料不符合結構描述，則會將記錄分類為已損毀。 請更正來源資料或結構說明，然後重新擷取資料。
+
+### <a name="datetime-fields-in-the-wrong-format"></a>日期時間欄位的格式錯誤
+
+實體中的日期時間欄位不是 ISO 或 en-US 格式。 在 Customer Insights 中，預設的日期時間格式是 en-US。 實體中的所有日期時間欄位都應有相同的格式。 Customer Insights 支援其他由註釋或特點提供的格式，這些註釋或特點是由模型或 manifest.json 中的來源或實體層級所產生。 例如: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  在 manifest. json 中，日期時間格式可以在實體層級或屬性層級指定。 在實體層級，在 *.manifest. cdm 中使用實體裡的「exhibitsTraits」來定義資料時間格式。 在屬性等級，在 entityname.cdm.json 中使用屬性裡的 「appliedTraits」。
+
+**實體層級的 Manifest json**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**屬性層級的 Entity.json**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

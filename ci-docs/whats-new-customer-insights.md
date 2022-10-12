@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409347"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609582"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的新功能
 
@@ -228,9 +228,9 @@ LiveRamp 提供身分識別解析和客戶資料的整合。 您可以將客戶�
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>資料準備程序列出損壞記錄的損壞原因
 
-資料準備現在會為所有含有損壞資料的欄位顯示損壞原因。 資訊在個別記錄層級提供，方便識別。 
+資料準備現在會為所有含有損壞資料的欄位顯示損壞原因。 資訊在個別記錄層級提供，方便識別。
 
-如需其他資訊，請參閱[損壞的資料來源](entities.md#corrupted-data-sources)。
+如需詳細資訊，請參閱[損毀資料來源](data-sources.md#corrupt-data-sources)。
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>參與見解功能中的報表功能結束預覽
 

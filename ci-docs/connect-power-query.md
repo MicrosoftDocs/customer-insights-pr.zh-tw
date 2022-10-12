@@ -1,7 +1,7 @@
 ---
 title: 如何連接到 Power Query 資料來源 (含影片)
 description: 透過 Power Query 連接器內嵌資料 (含影片)。
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463255"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609866"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>連線到 Power Query 資料來源
 
@@ -43,16 +43,17 @@ Power Query提供一組各式各樣的連接器來內嵌資料。 Dynamics 365 C
 
 1. 選取 **轉換資料**。
 
-1. **Power Query - 編輯查詢** 對話方塊可讓您檢閱和微調資料。 系統在所選取資料來源中識別的實體會出現在左窗格中。
+1. 在 **Power Query - 編輯查詢** 頁面中檢視和微調資料。 系統在所選取資料來源中識別的實體會出現在左窗格中。
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="編輯查詢對話方塊":::
 
-1. 您也可以轉換資料。 選取要編輯或變換的實體。 使用 Power Query 視窗中的選項來套用轉換。 每個轉換都會列在 **已套用的步驟**。 Power Query 提供許多[預先建立的轉換](/power-query/power-query-what-is-power-query#transformations)選項。
+1. 轉換您的資料。 選取要編輯或變換的實體。 使用 Power Query 視窗中的選項來套用轉換。 每個轉換都會列在 **已套用的步驟**。 Power Query 提供許多[預先建立的轉換](/power-query/power-query-what-is-power-query#transformations)選項。
 
-   我們建議您使用下列轉換：
-
-   - 如果您要從 CSV 檔案擷取資料，則第一列通常會包含標題。 移至 **轉換** 並選取 **以第一列為標頭**。
-   - 確定資料類型已正確設定。 例如，如果是日期欄位，請選取日期類型。
+   > [!IMPORTANT]
+   > 我們建議您使用下列轉換：
+   >
+   > - 如果您要從 CSV 檔案擷取資料，則第一列通常會包含標題。 移至 **轉換** 並選取 **以第一列為標頭**。
+   > - 確定資料類型已正確設定且符合資料。 例如，如果是日期欄位，請選取日期類型。
 
 1. 若要在 **編輯查詢** 對話方塊中將其他實體新增至資料來源，請移至 **首頁**，然後選取 **取得資料**。 重複步驟 5-10，直到您對此資料來源新增所有實體為止。 如果您有包含多個資料集的資料庫，則每個資料集都是其自己的實體。
 
@@ -102,5 +103,51 @@ Power Query提供一組各式各樣的連接器來內嵌資料。 Dynamics 365 C
 1. 選取 **儲存** 以套用變更，並返回至 **資料來源** 頁面。
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>發生擷取錯誤或資料損毀的常見原因
+
+### <a name="data-type-does-not-match-data"></a>資料類型不符合資料
+
+最常見的資料類型不符發生在日期欄位未設定為正確的日期格式時。
+
+資料可以在來源修正，並重新擷取。 或在 Customer Insights 中修正轉換。 若要修正轉換：
+
+1. 移至 **資料** > **資料來源**。
+
+1. 在含有損毀資料的資料來源旁邊，選取 **編輯**。
+
+1. 選取 **下一步**。
+
+1. 選取每個查詢，並尋找套用在「已套用步驟」的不正確轉換，或未使用日期格式轉換的日期欄。
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query - 編輯顯示不正確的日期格式":::
+
+1. 變更資料類型以正確符合資料。
+
+1. 選取 **儲存**。 該資料來源會重新整理
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>疑難排解 PPDF Power Query 型資料來源重新整理問題
+
+如果資料陳舊，或者在資料來源重新整理後收到錯誤，請執行下列步驟：
+
+1. 瀏覽至 [Power Platform](https://make.powerapps.com)。
+
+1. 為您的 Customer Insights 執行個體選取 **環境**。
+
+1. 瀏覽至 **資料流程**。
+
+1. 對於符合 Customer Insights 中資料來源的資料流程，請選取垂直省略符號 (&vellip;)，然後選取 **顯示重新整理歷程記錄**。
+
+1. 如果資料流程的 **狀態** 為 **成功**，則會變更 Power Query 型資料來源的擁有權：
+
+   1. 請從重新整理歷程記錄檢視重新整理排程。
+   1. 設定新負責人的排程並儲存設定。
+
+1. 如果資料流程的 **狀態** 是 **失敗**：
+
+   1. 下載重新整理歷程記錄檔案。
+   1. 檢視下載的檔案，看看失敗的原因。
+   1. 如果無法解決錯誤，請選取 **？** 若要開啟支援票證。 包括已下載的重新整理歷程記錄檔案。
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

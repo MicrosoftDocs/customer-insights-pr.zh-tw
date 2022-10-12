@@ -1,7 +1,7 @@
 ---
 title: 使用 Azure Data Lake 帳戶連接至 Common Data Model 資料夾
 description: 搭配使用 Azure Data Lake Storage 的 Common Data Model 資料處理。
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396036"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609932"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>在 Azure Data Lake Storage 中連線至資料
 
@@ -43,6 +43,10 @@ ms.locfileid: "9396036"
 - 設定資料來源連接的使用者至少需要儲存體帳戶的儲存體 Blob 資料參與者權限。
 
 - Data Lake Storage 中的資料應遵循的 Common Data Model 標準儲存，並使用 Common Data Model 資訊清單來表示資料檔案的結構描述 (*.csv 或 *.parquet)。 此資訊清單必須提供實體的詳細資料 (例如實體欄和資料類型) 以及資料檔案位置和檔案類型。 如需更多資訊，請前往 [Common Data Model 資訊清單](/common-data-model/sdk/manifest)。 如果此資訊清單不存在，則具備 Storage Blob 資料擁有者或儲存 Blob 資料參與者存取權限的管理使用者，可以在內嵌資料時定義結構描述。
+
+## <a name="recommendations"></a>建議
+
+為了獲得最佳效能，Customer Insights 建議分區的大小為 1 GB 或以下，且資料夾內的分區檔案數目不得超過 1000。
 
 ## <a name="connect-to-azure-data-lake-storage"></a>連線至 Azure Data Lake Storage
 
@@ -199,5 +203,101 @@ ms.locfileid: "9396036"
 1. 按一下 **儲存** 以套用變更，並返回至 **資料來源** 頁面。
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>發生擷取錯誤或資料損毀的常見原因
+
+在資料擷取期間，記錄可能會被視為已損毀的一些最常見原因包括：
+
+- 來源檔案與結構描述之間的資料類型和欄位值不相符
+- 來源檔案中的欄數與結構描述不相符
+- 與預期的結構描述相比，欄位包含會造成資料行偏斜的字元。 例如：未正確格式化的引號、反轉義的引號、換行字元或欄標字元。
+- 遺失分區檔案
+- 如果有 datetime/date/datetimeoffset 資料行，當其不符合標準格式時，需在結構描述中指定其格式。
+
+### <a name="schema-or-data-type-mismatch"></a>結構描述或資料類型不相符
+
+如果資料不符合結構描述，擷取過程會完成但帶有錯誤。 請更正來源資料或結構說明，然後重新擷取資料。
+
+### <a name="partition-files-are-missing"></a>遺失分區檔案
+
+- 如果擷取成功且未有任何損毀的記錄，但您看不到任何資料，請編輯您的 model. json 或 manifest json 檔案，確認已指定分區。 然後，[重新整理資料來源](data-sources.md#refresh-data-sources)。
+
+- 如果資料擷取發生的同時，資料來源正在自動排程重新整理期間進行重新整理，則分區檔案可能會空白或無法供 Customer Insights 處理。 若要讓上游重新整理排程，請變更[系統重新整理排程](schedule-refresh.md)或資料來源的重新整理排程。 調校時序，讓重新整理不會全部同時發生，並提供可在 Customer Insights 中處理的最新資料。
+
+### <a name="datetime-fields-in-the-wrong-format"></a>日期時間欄位的格式錯誤
+
+實體中的日期時間欄位不是 ISO 8601 或 en-us 格式。 在 Customer Insights 中，預設的日期時間格式是 en-US。 實體中的所有日期時間欄位都應有相同的格式。 Customer Insights 支援其他由註釋或特點提供的格式，這些註釋或特點是由模型或 manifest.json 中的來源或實體層級所產生。 例如: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  在 manifest. json 中，日期時間格式可以在實體層級或屬性層級指定。 在實體層級，在 *.manifest.cdm.json 中使用實體中的「exhibitsTraits」來定義日期時間格式。 在屬性等級，在 entityname.cdm.json 中使用屬性裡的 「appliedTraits」。
+
+**實體層級的 Manifest json**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**屬性層級的 Entity.json**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

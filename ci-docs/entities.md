@@ -1,7 +1,7 @@
 ---
 title: Customer Insights 中的實體
 description: 在實體頁面上檢視資料。
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183531"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610088"
 ---
 # <a name="entities-in-customer-insights"></a>Customer Insights 中的實體
 
@@ -61,27 +61,5 @@ ms.locfileid: "9183531"
   - **建立時間**：建立實體的日期與時間。
   - **編輯者**：修改實體的人員名稱。
   - **編輯時間**：修改實體的日期與時間。
-
-## <a name="entity-specific-information"></a>指定實體資訊
-
-下列各節將對系統建立的實體提供相關資訊。
-
-### <a name="corrupted-data-sources"></a>損毀的資料來源
-
-從資料來源擷取來的欄位，可能包含損壞的資料。 損毀欄位的記錄會在系統建立的實體中顯示。 得知損毀的記錄，讓您能找出來源系統上要檢閱和更新的資料。 下次重新整理資料來源之後，已更正的記錄會擷取至 Customer Insights，並傳遞至下游處理程序。 
-
-例如，'birthday' 資料行會將資料類型設定為 'date'。 一筆客戶記錄的生日輸入成 '01/01/19777'。 系統會將此記錄標記為已損毀。 某人現在到來源系統中把生日變更 '1977'。 自動重新整理資料來源之後，欄位現在會是有效的格式，而且該記錄將會從損毀實體中移除。
-
-移至 **資料** > **實體**，並在 **系統** 客戶細分中尋找損毀實體。 損毀實體的結構描述名稱：'DataSourceName_EntityName_corrupt'。 選取已損壞的實體，找出個別記錄等級中損壞的欄位和原因。
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="損壞原因。":::
-
-Customer Insights 仍然會處理損毀的記錄。 但是，當您使用整合資料時，可能會造成問題。
-
-下列檢查會在擷取的資料上執行，以找出損毀的記錄：
-
-- 欄位的值與其資料行的資料類型不相符。
-- 欄位包含的字元會造成資料行與預期的結構描述不相符。 例如：未正確格式化的引號、未跳脫引號或換行字元。
-- 如果有 datetime/date/datetimeoffset 資料行，當其不符合標準 ISO 格式時，在模型中必須指定其格式。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

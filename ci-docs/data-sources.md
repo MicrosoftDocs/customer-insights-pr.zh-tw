@@ -1,7 +1,7 @@
 ---
 title: 資料來源概觀
 description: 了解如何從不同的來源匯入或內嵌資料。
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245639"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610042"
 ---
 # <a name="data-sources-overview"></a>資料來源概觀
 
@@ -65,7 +65,9 @@ Dynamics 365 Customer Insights 提供連結以從廣泛的來源取用資料。 
 
 ## <a name="refresh-data-sources"></a>重新整理資料來源
 
-資料來源可自動排程或依照需要情況手動重新整理。 [內部部署資料來源](connect-power-query.md#add-data-from-on-premises-data-sources)會根據在資料擷取時設定的排程自行重新整理。 對於附加的資料來源，資料擷取會使用該資料來源的最新資料。
+資料來源可自動排程或依照需要情況手動重新整理。 [內部部署資料來源](connect-power-query.md#add-data-from-on-premises-data-sources)會根據在資料擷取時設定的排程自行重新整理。 如需疑難排解提示，請參閱[疑難排解 PPDF Power Query 型資料來源重新整理問題](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues)。
+
+對於附加的資料來源，資料擷取會使用該資料來源的最新資料。
 
 請前往 **系統管理員** > **系統** > [**排程**](schedule-refresh.md)為內嵌資料來源設定系統排程的重新整理。
 
@@ -76,5 +78,37 @@ Dynamics 365 Customer Insights 提供連結以從廣泛的來源取用資料。 
 1. 選取您要重新整理的資料來源，然後選取 **重新整理**。 資料來源現在會針對手動重新整理觸發。 重新整理資料來源將會更新資料來源中所有指定實體的實體結構描述和資料。
 
 1. 選取狀態以打開 **進度詳細資料** 窗格並查看進度。 若要取消作業，請在窗格下方選取 **取消作業**。
+
+## <a name="corrupt-data-sources"></a>損毀資料來源
+
+擷取的資料可能包含損毀的記錄，這可能會造成資料擷取過程完成但帶有錯誤或警告。
+
+> [!NOTE]
+> 如果資料擷取完成但帶有錯誤，則會略過利用此資料來源的後續處理 (例如，聯併或活動建立)。 如果擷取完成但帶有警告，則後續處理仍會繼續，但也許不會包含某些記錄。
+
+您可以在工作詳細資料中看到這些錯誤。
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="顯示損毀資料錯誤的工作詳細資料。":::
+
+損毀記錄會顯示在系統建立的實體中。
+
+### <a name="fix-corrupt-data"></a>修正損毀資料
+
+1. 若要查看損毀資料，請移至 **資料** > **實體**，並在 **系統** 區段中尋找損毀實體。 損毀實體的結構描述名稱：'DataSourceName_EntityName_corrupt'。
+
+1. 選取損毀實體，然後選取 **資料** 索引標籤。
+
+1. 找出記錄中損毀的欄位和原因。
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="損壞原因。" lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **資料** > **實體** 只會顯示損毀記錄的一部分。 若要查看所有損毀的記錄，請使用 [Customer Insights 匯出行程](export-destinations.md)，將檔案匯出至儲存體帳戶中的容器。 如果您使用自己的儲存體帳戶，也可以在您的儲存體帳戶中查看 Customer Insights 資料夾。
+
+1. 修正損毀的資料。 例如，如果是 Azure Data Lake 資料來源，請在 [Data Lake 儲存體中修正資料或更新 manifest/model. json 檔案中的資料類型](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data)。 如果是 Power Query 資料來源，請修正來源檔案中的資料，並在 **Power Query - 編輯查詢** 頁面上的[轉換步驟中更正資料類型](connect-power-query.md#data-type-does-not-match-data) 。
+
+下次重新整理資料來源之後，已更正的記錄會擷取至 Customer Insights，並傳遞至下游處理程序。
+
+例如，'birthday' 資料行會將資料類型設定為 'date'。 一筆客戶記錄的生日輸入成 '01/01/19777'。 系統會將此記錄標示為損毀。 在來源系統中將生日變更為「1977」。 在自動重新整理資料來源後，欄位現在會是有效的格式，而且該記錄已從損毀實體中移除。
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

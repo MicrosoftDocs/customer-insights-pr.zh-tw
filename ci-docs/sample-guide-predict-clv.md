@@ -1,23 +1,23 @@
 ---
 title: 客戶存留期值 (CLV) 預測範例指南
 description: 您可以依循此範例指南來嘗試客戶存留期值預測的模型。
-ms.date: 03/31/2022
+ms.date: 09/15/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 2013533ed225a396d21e51e63297d7608ce58ac6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: fec43b279326daa17fb179181f5e310c99d48bb7
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051627"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609628"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>客戶存留期值 (CLV) 預測範例指南
 
-本指南以範例逐步說明如何在 Customer Insights 中使用範例資料預測使用者存留期值 (CLV)。
+本指南會從頭到尾向您說明在 Customer Insights 中使用範例資料預測客戶終身價值 (CLV) 的範例。 我們建議您[在新環境中](manage-environments.md)嘗試這項預測。
 
 ## <a name="scenario"></a>案例
 
@@ -25,18 +25,17 @@ Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso
 
 ## <a name="prerequisites"></a>先決條件
 
-- 至少有 Customer Insights 中的[參與者權限](permissions.md)。
-- 我們建議您 [在新環境中](manage-environments.md) 執行下列步驟。
+- 至少 [參與者權限](permissions.md)。
 
 ## <a name="task-1---ingest-data"></a>任務 1 - 內嵌資料
 
-檢閱關於[資料擷取](data-sources.md)和[使用 Power Query 連接器匯入資料來源](connect-power-query.md)的文章。 下列資訊假定您大體上已熟悉內嵌資料。
+檢視[關於資料擷取](data-sources.md)和[連接至 Power Query 資料來源](connect-power-query.md)的文章。 下列資訊假定您大致上已熟悉擷取資料。
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>從電子商務平台內嵌客戶資料
 
-1. 建立名為 **電子商務** 的資料來源，選擇匯入選項並選取 **Text/CSV** 連接器。
+1. 建立名為 **電子商務** 的 Power query 資料來源，並選取 **文字/CSV** 連接器。
 
-1. 在電子商務連絡人輸入 URL [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts)。
+1. 輸入電子商務連絡人 URL https://aka.ms/ciadclasscontacts。
 
 1. 編輯資料時選取 **轉換**，接著 **使用第一行做為標頭**。
 
@@ -46,7 +45,7 @@ Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="將出生日期轉換為日期。":::
 
-1. 請在右側窗格的 '名稱' 欄位中將您的資料來源從 **查詢** 重新命名為 **eCommerceContacts**
+1. 請在右側窗格的 **名稱** 欄位中，將您的資料來源重新命名為 **eCommerceContacts**
 
 1. **儲存** 資料來源。
 
@@ -56,126 +55,136 @@ Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso
 
 1. 輸入 **線上購買** 資料 URL https://aka.ms/ciadclassonline。
 
-1. 編輯資料時選取 **轉換**，然後 **使用第一行做為標頭**。
+1. 編輯資料時選取 **轉換**，接著 **使用第一行做為標頭**。
 
 1. 更新下列欄位的資料類型：
    - **PurchasedOn**：日期/時間
    - **TotalPrice**：貨幣
 
-1. 請在側邊窗格的 **名稱** 欄位中將您的資料來源從 **查詢** 重新命名為 **eCommercePurchases**。
+1. 請在側窗格的 **名稱** 欄位中，將您的資料來源重新命名為 **eCommercePurchases**。
 
 1. **儲存** 資料來源。
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>從忠實結構描述內嵌客戶資料
 
-1. 建立稱為 **LoyaltyScheme** 的資料來源，選擇匯入選項並選取 **文字/CSV** 連接器。
+1. 建立名為 **LoyaltyScheme** 的資料來源，並選取 **文字/CSV** 連接器。
 
-1. 輸入電子商務連絡人 URL https://aka.ms/ciadclasscustomerloyalty。
+1. 輸入忠實客戶的 URL https://aka.ms/ciadclasscustomerloyalty。
 
-1. 編輯資料時選取 **轉換**，然後 **使用第一行做為標頭**。
+1. 編輯資料時選取 **轉換**，接著 **使用第一行做為標頭**。
 
 1. 更新下列欄位的資料類型：
    - **DateOfBirth**：日期
    - **RewardsPoints**: 整數
    - **CreatedOn**：日期/時間
 
-1. 請在右側窗格的 **名稱** 欄位中將您的資料來源從 **查詢** 重新命名為 **loyCustomers**。
+1. 請在右側窗格的 **名稱** 欄位中，將您的資料來源重新命名為 **loyCustomers**。
 
 1. **儲存** 資料來源。
 
 ### <a name="ingest-customer-data-from-website-reviews"></a>從網站審查中內嵌客戶資料
 
-1. 建立稱為 **網站** 的資料來源，選擇匯入選項並選取 **文字/CSV** 連接器。
+1. 建立名為 **網站** 的資料來源，並選取 **文字/CSV** 連接器。
 
-1. 輸入電子商務連絡人 URL https://aka.ms/CI-ILT/WebReviews。
+1. 輸入網站檢視的 URL https://aka.ms/CI-ILT/WebReviews。
 
-1. 編輯資料時選取 **轉換**，然後 **使用第一行做為標頭**。
+1. 編輯資料時選取 **轉換**，接著 **使用第一行做為標頭**。
 
 1. 更新下列欄位的資料類型：
-
    - **ReviewRating**：十進位數字
    - **ReviewDate**：日期
 
-1. 在右窗格的'名稱'欄位中，將您的資料來源從 **查詢** 重新命名為 **檢閱**。
+1. 請在右側窗格的 **名稱** 欄位中，將您的資料來源重新命名為 **檢視**。
 
 1. **儲存** 資料來源。
 
 ## <a name="task-2---data-unification"></a>任務 2 - 資料統整
 
+檢閱[關於資料統整](data-unification.md)的文章。 下列資訊假定您大致上已熟悉資料統整。
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-customer-lifetime-value-prediction"></a>工作 3 - 設定客戶存留期值預測
+## <a name="task-3---create-transaction-history-activity"></a>工作 3 - 建立交易歷程記錄活動
 
-透過整合客戶個人資料，我們現在可以執行客戶存留期值預測。 如需詳細步驟，請參閱 [客戶存留期值預測](predict-customer-lifetime-value.md)。
+檢閱[有關客戶活動](activities.md)的文章。 下列資訊假定您大致上已熟悉建立活動。
 
-1. 移至 **智慧**  > **預測**，然後選取 **客戶存留期值模型**。
+1. 建立名為 **eCommercePurchases** 的活動，並使用 *eCommercePurchases:eCommerce* 實體與其主索引鍵，**PurchaseId**。
 
-1. 瀏覽側邊窗格中的資訊，然後選取 **開始使用**。
+1. 建立 *eCommercePurchases* 和 *eCommerceContacts:eCommerce* 之間的關係，並使用 **ContactID** 做為外部索引鍵來連接兩個實體。
+
+1. 選取 **EventActivity** 的 **TotalPrice**，和 **時間戳記** 的 **PurchasedOn**。
+
+1. 選取 **活動類型** 的 **SalesOrderLine** ，並語義對應活動資料。
+
+1. 執行活動。
+
+1. 新增另一個活動，並將其欄位名稱對應至相應的欄位：
+   - **活動實體**：Reviews:Website
+   - **主索引鍵**：ReviewId
+   - **時間戳記**：ReviewDate
+   - **事件活動**：ActivityTypeDisplay
+   - **其他詳細資料**：ReviewRating
+   - **活動類型**：檢視
+
+1. 執行活動。
+
+## <a name="task-4---configure-customer-lifetime-value-prediction"></a>工作 4 - 設定客戶存留期值預測
+
+透過適當的統一客戶設定檔和建立的活動，執行客戶終身價值 (CLV) 預測。 如需詳細步驟，請參閱 [客戶存留期值預測](predict-customer-lifetime-value.md)。
+
+1. 請移至 **智慧** > **預測**。
+
+1. 在 **建立** 索引標籤上，選取 **客戶終身價值** 圖標上的 **使用模型**。
+
+1. 請然後選取 **開始使用**。
 
 1. 將模型命名為 **OOB 電子商務 CLV 預測** 和輸出實體 **OOBeCommerceCLVPrediction**。
 
-1. 為 CLV 模型定義模型喜好設定：
-   - **預測時間間隔**：**12 個月或 1 年**。 這個設定定義要預測客戶存留期值到未來多遠。
-   - **活躍客戶**：指定業務活躍客戶的平均。 設定歷史時間範圍，其中客戶必須至少有一個交易被視為有效。 此模型只能預測活躍的客戶 CLV。 選擇讓模型根據歷史交易記錄資料計算時間間隔，或選擇提供指定的時間範圍。 在本範例指南中，我們 **讓模型計算採購間隔**，這是預設選項。
-   - **高價值客戶**：定義高價值的客戶是前百分之幾的付費客戶。 模型使用此輸入，以您商務定義上的高價值客戶提供結果。 您可以選擇讓模型定義高價值客戶。 它使用能產生百分位數的啟發性規則。 您可以定義定義高價值的客戶是前百分之幾的未來付費客戶。 在本範例指南中，我們手動將高價值的客戶定義為 **前 30% 的活躍付費客戶**，並選取 **下一步**。
+1. 定義模型偏好：
+   - **預測時間區段**：**12 個月或 1 年** 以定義您要預測多久以後的 CLV。
+   - **活躍客戶**：'**讓模型計算購買間隔**，其中客戶在此時間範圍內必須至少有一筆交易才會被視為活躍。
+   - **高價值客戶**：手動定義高價值的客戶是 **活躍客戶的前 30%** 。
 
     :::image type="content" source="media/clv-model-preferences.png" alt-text="CLV 模型的引導式體驗中的喜好設定步驟。":::
 
+1. 選取 **下一步**。
+
 1. 在 **必要的資料** 步驟，選取 **新增資料** 以提供交易歷史資料。
 
-1. 新增 **eCommercePurchases : eCommerce** 實體，並對應模型所需的屬性：
-   - 交易識別碼：eCommerce.eCommercePurchases.PurchaseId
-   - 交易日期：eCommerce.eCommercePurchases.PurchasedOn
-   - 交易金額：eCommerce.eCommercePurchases.TotalPrice
-   - 產品識別碼：eCommerce.eCommercePurchases.ProductId
+    :::image type="content" source="media/clv-model-required.png" alt-text="在 CLV 模型的引導式體驗中新增所需資料步驟。":::
+
+1. 選取 **SalesOrderLine** 及 eCommercePurchases 實體，然後選取 **下一步**。 所需資料會從活動自動填入。 選取 **儲存**，然後選取 **下一步**。
+
+1. **其他資料 (選用)** 步驟可讓您新增更多客戶活動資料來取得更多客戶互動的深入解析。 在這個範例中，選取 **新增資料**，然後新增網頁檢視活動。
 
 1. 選取 **下一步**。
 
-1. 設定 **eCommercePurchases : eCommerce** 實體和 **eCommerceContacts : eCommerce** 之間的關聯。
+1. 在 **資料更新** 步驟中，設定模型排程為 **每月**。
 
-1. **其他資料 (可選)** 步驟可讓您新增更多的客戶活動資料。 這項資料可協助您深入解析客戶與您的業務間的互動，這可能會對 CLV 有貢獻。 新增關鍵的客戶互動 (例如 web 日誌、客戶服務記錄或獎勵計劃歷史記錄) 可以改善預測的準確性。 選取 **新增資料** 以包括更多客戶活動資料。
+1. 選取 **下一步**。
 
-1. 新增客戶活動實體，並將其欄位名稱對應至模型所需的對應欄位：
-   - 客戶活動實體：Reviews:Website
-   - 主索引鍵：Website.Reviews.ReviewId
-   - 時間戳記：Website.Reviews.ReviewDate
-   - 事件 (活動名稱)：Website.Reviews.ActivityTypeDisplay
-   - 詳細資料 (金額或值)：Website.Reviews.ReviewRating
+1. 評論所有詳細資料後，請選取 **儲存和執行**。
 
-1. 選取 **下一步**，然後設定交易資料與客戶資料間的活動與關聯：  
-   - 活動類型：選擇現有
-   - 活動標籤：檢閱
-   - 對應的標籤：Website.Reviews.UserId
-   - 客戶實體：eCommerceContacts:eCommerce
-   - 關聯：WebsiteReviews
+## <a name="task-5---review-model-results-and-explanations"></a>任務 5 - 評論模型結果和解釋
 
-1. 選取 **下一步** 以設定模型排程。
+讓模型完成資料的定型與計分。 檢視 [CLV 模型結果和說明](predict-customer-lifetime-value.md#view-prediction-results)。
 
-   模型需要定期進行定型，在擷取到新的資料時，學習新的模式。 在這個範例中，請選擇 **每月**。
-
-1. 檢閱所有詳細資料後，請選取 **儲存和執行**。
-
-## <a name="task-4---review-model-results-and-explanations"></a>任務 4 - 評論模型結果和解釋
-
-讓模型完成資料的定型與計分。 接下來，您可以檢閱 CLV 模型結果和解釋。 如需更多資訊，請見 [評論預測狀態和結果](predict-customer-lifetime-value.md#review-prediction-status-and-results)。
-
-## <a name="task-5---create-a-segment-of-high-value-customers"></a>工作 5 - 建立高價值客戶的客戶細分
+## <a name="task-6---create-a-segment-of-high-value-customers"></a>工作 6 - 建立高價值客戶的客戶細分
 
 執行模型會建立新的實體，列在 **資料** > **實體** 中。 您可以依據模型所建立的實體來建立新的客戶細分。
 
-1. 前往 **區段**。 
+1. 在結果頁面上，選取 **建立客戶細分**。
 
-1. 選取 **新增** 並選擇 **從...建立** > **智慧**。
+1. 使用 **OOBeCommerceCLVPrediction** 實體建立規則並定義客戶細分：
+   - **欄位**：CLVScore
+   - **運算子**：大於
+   - **值**：1500
 
-   ![使用模型輸出建立區段。](media/segment-intelligence.png)
+1. 選取 **儲存** 並 **執行** 客戶細分。
 
-1. 選取 **OOBeCommerceCLVPrediction** 實體並定義客戶細分：
-  - 欄位：CLVScore
-  - 運算子：大於
-  - 值：1500
+您現在有一個客戶細分，能識別出接下來的 12 個月中，預計生成超過 $1500 營收的客戶。 若擷取更多的資料，則會動態更新此分段。 如需詳細資訊，請參閱[建立和管理客戶細分](segments.md)。
 
-1. 選取 **檢閱** 並 **儲存** 客戶細分。
+> [!TIP]
+> 您也可以選取 **新** 並選擇 **從** > **智慧建立**，以從 **客戶細分** 頁面，建立預測模型的客戶細分。 如需詳細資訊，請參閱[使用快速客戶細分建立客戶細分](segment-quick.md)。
 
-您現在有一個客戶細分，能識別出接下來的 12 個月中，預計生成超過 $1500 營收的客戶。 若擷取更多的資料，則會動態更新此分段。
-
-如需詳細資訊，請參閱[建立和管理客戶細分](segments.md)。
+[!INCLUDE [footer-include](includes/footer-banner.md)]

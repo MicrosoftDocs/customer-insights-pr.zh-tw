@@ -1,7 +1,7 @@
 ---
 title: 排程系統重新整理
 description: 排程應重新整理系統的時間
-ms.date: 08/09/2022
+ms.date: 09/27/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: 4aac02b570357d2086f7a9d7340b0e4837157a0b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9395946"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610318"
 ---
 # <a name="schedule-system-refresh"></a>排程系統重新整理
 
 排程所有[內嵌資料來源](data-sources.md)的自動重新整理。 自動重新整理可協助確保資料來源更新會反映在您的統一客戶設定檔中。
 
 > [!NOTE]
-> 您管理的 Power Query 資料來源會依自己的排程來重新整理。 若要這些 Power Query 資料來源排程重新整理，請到 **資料來源** 頁面設定該特定資料來源的重新整理。
+> 您管理的 Power Query 資料來源會依自己的排程來重新整理。 若要這些 Power Query 資料來源排程重新整理，請到 **資料來源** 頁面設定該特定資料來源的重新整理。 將時機與上游資料重新整理排程對齊，這樣重新整理就不會一次全部進行。
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform資料流程重新整理設定。":::
 
 ## <a name="set-system-refresh-schedule"></a>設定系統重新整理排程

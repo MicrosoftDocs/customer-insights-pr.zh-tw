@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: 使用 Azure Machine Learning 的自訂模型
           href: custom-models.md
+        - name: 根據預測建立客戶細分
+          href: prediction-based-segment.md
     - name: 範例指南
       items:
         - name: CLV 預測的範例指南
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Azure Machine Learning 實驗
           href: azure-machine-learning-experiments.md
-    - name: 管理預測
-      href: manage-predictions.md
-    - name: 根據預測建立客戶細分
-      href: prediction-based-segment.md
 - name: 匯出選項
   items:
     - name: 匯出
