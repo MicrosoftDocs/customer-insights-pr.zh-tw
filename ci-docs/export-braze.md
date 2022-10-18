@@ -1,19 +1,19 @@
 ---
 title: 將客戶細分匯出至 Braze (預覽版)
 description: 了解如何設定 Braze 的連線和匯出。
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195097"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655267"
 ---
 # <a name="export-segments-to-braze-preview"></a>將客戶細分匯出至 Braze (預覽版)
 
@@ -23,6 +23,7 @@ ms.locfileid: "9195097"
 
 - 一個 [Braze 帳戶](https://www.braze.com/)及對應的系統管理員認證。
 - [BRAZE API 金鑰](https://www.braze.com/docs/api/basics/)
+- 您的 [Braze REST 端點](https://www.braze.com/docs/api/basics/#api-definitions) 
 - 在 Customer Insights 中的[已設定的客戶細分](segments.md)。
 - 在匯出客戶細分中的整合客戶個人資料，包含表示電子郵件地址和 Braze 客戶識別碼的欄位。
 
@@ -30,6 +31,7 @@ ms.locfileid: "9195097"
 
 - 匯出多達 1 百萬個客戶個人資料到 Braze 需要花費最多 40 分鐘完成。 您可以匯出到 Braze 的客戶設定檔數目取決於您和 Braze 簽訂的契約。
 - 僅客戶細分。
+- Braze 匯出不支援 Azure Private Link。
 
 ## <a name="set-up-connection-to-braze"></a>設定至 Braze 的連線
 
@@ -62,6 +64,8 @@ ms.locfileid: "9195097"
 1. 選取 **新增匯出**。
 
 1. 在 **匯出用的連線** 欄位，到 Braze 區段中選擇連線。 如果沒有可用的連接，請與系統管理員聯繫。
+
+1. 使用下列格式在 **主機名稱** 欄位中輸入 REST 端點：`rest.iad-03.braze.com`。
 
 1. 輸入匯出的名稱。
 

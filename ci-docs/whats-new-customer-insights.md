@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609582"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638341"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的新功能
 
@@ -23,6 +23,28 @@ ms.locfileid: "9609582"
 
 > [!TIP]
 > 若要提出功能要求和產品建議並票選，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+## <a name="september-2022-updates"></a>2022 年 9 月更新
+
+2022 年 9 月更新內容包括新功能、效能升級和 BUG 修正。
+
+### <a name="export-data-to-hubspot"></a>匯出資料至 HubSpot
+
+將整合客戶個人資料客戶細分匯出至 HubSpot，並在電子郵件行銷中使用這些資料。
+
+如需詳細資訊，請參閱 [將客戶細分匯出至 HubSpot](export-hubspot.md)。
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>從資料整合移除整合欄位或實體
+
+您可以從資料整合程序移除欄位和實體。
+
+如需詳細資訊，請參閱[移除整合欄位](data-unification-update.md#remove-a-unified-field)。
+
+### <a name="manage-unknown-customer-profiles"></a>管理未知的客戶設定檔
+
+令人難忘的個人化取決於您的客戶資料的豐富度和完整性，而 Customer Insights 可幫助您實現這些目標。 您可以管理使用者的客戶設定檔，對於這些使用者，除了識別碼以外，您沒有任何資訊。
+
+如需詳細資訊，請參閱[使用 Customer Insights 管理未知設定檔](manage-unknown-profiles.md)。
 
 ## <a name="august-2022-updates"></a>2022 年 8 月更新
 
