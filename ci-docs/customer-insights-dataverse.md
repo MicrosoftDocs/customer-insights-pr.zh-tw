@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424299"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671241"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>在 Microsoft Dataverse 中使用 Customer Insights 資料
 
@@ -63,6 +63,9 @@ Customer Insights 訂閱權限可讓您為組織現有的 [Dataverse 儲存體�
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>從您自己的 Azure Data Lake Storage 中啟用與 Dataverse 的資料共用 (預覽版)
 
 在 [您自己的 Azure Data Lake Storage 帳戶](own-data-lake-storage.md)中，確認設定 Customer Insights 環境的使用者是否對儲存體帳戶中的 `customerinsights` 容器至少有 **儲存體 Blob 資料讀者** 權限。
+
+> [!NOTE]
+> 只有在使用自己的 Azure Data Lake Storage 帳戶時，資料共用才適用。 如果 Customer Insights 環境使用預設 Dataverse 儲存體，則無法使用此設定。
 
 ### <a name="limitations"></a>限制
 
