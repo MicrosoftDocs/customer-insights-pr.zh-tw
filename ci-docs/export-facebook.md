@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195004"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724574"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>將客戶細分匯出至 Facebook Ads 管理員 (預覽版)
 
@@ -25,11 +25,13 @@ ms.locfileid: "9195004"
 
 - [Facebook 廣告帳戶](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) 且其中包含 [Facebook 商務帳戶](https://business.facebook.com/)。
 - [Facebook 廣告帳戶](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account)上的管理員權限。
+- 要在 Customer Insights 中設定關係的使用者必須接受「自訂受眾條款」。
 
 ## <a name="known-limitations"></a>已知限制
 
 - 最多可以匯出 10 百萬個客戶設定檔到 Facebook 廣告管理員，最長需要 90 分鐘才能完成。
 - 僅客戶細分。
+- Facebook Ads 整合不支援擁有超過 25 個廣告帳戶的使用者。
 - 僅 [客戶對象](https://www.facebook.com/business/help/744354708981227?id=2469097953376494)中的 Facebook *客戶清單*。
   > [!NOTE]
   > 在某些案例中，您可能會在下拉式清單中看到不同類型的自訂對象。 如果選擇 *客戶清單* 以外的類型，則匯出失敗。

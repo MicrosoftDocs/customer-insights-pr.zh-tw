@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196568"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725068"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>將客戶細分匯出至 Google Ads (預覽版)
 
@@ -30,6 +30,7 @@ ms.locfileid: "9196568"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 每次最多可匯出 100 萬個客戶資料至 Google Ads，由於提供者方面的限制，這可能需要 30 分鐘才能完成。
 - 僅客戶細分。
 - Google Ads 中的比對最長耗時 48 小時。

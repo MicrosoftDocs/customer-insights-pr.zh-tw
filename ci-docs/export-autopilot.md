@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 449d2c5e32697e4a5d2c9dff4a5a1cbdb26aeb4d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: b4b14ba9de2c7e20175fac664a705f2212a411fd
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195050"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724747"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>將客戶細分匯出至 Autopilot (預覽版)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9195050"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 每次最多匯出 100,000 個客戶設定檔到 Autopilot，最長需花費數小時才能完成。 您可以匯出到 Autopilot 的客戶設定檔數目取決於您和 Autopilot 簽訂的契約。
 - 僅客戶細分。
 

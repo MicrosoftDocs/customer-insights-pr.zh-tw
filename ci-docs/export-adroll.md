@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195740"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724668"
 ---
 # <a name="export-segments-to-adroll-preview"></a>將客戶細分匯出至 AdRoll (預覽版)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9195740"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 每次最多匯出 250,000 個客戶設定檔到 AdRoll，最長需要花費 10 分鐘才能完成。 您可以匯出 AdRoll 的客戶設定檔數目取決於您和 AdRoll 簽訂的契約。
 - 僅客戶細分。 客戶細分必須至少包含 100 個客戶設定檔。
 

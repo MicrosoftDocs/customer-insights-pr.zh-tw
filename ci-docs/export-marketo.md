@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f57cdfbb24df8a8ffa1670b426d50dbba2c5f40f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: cba40b74b86a40fc41db856760c9361b755a8864
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195234"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724930"
 ---
 # <a name="export-segments-to-marketo-preview"></a>將客戶細分匯出至 Marketo (預覽版)
 
@@ -29,6 +29,7 @@ ms.locfileid: "9195234"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 最多可以匯出一百萬個客戶設定檔到 Marketo，最長需要 3 小時才能完成。 您可以匯出到 Marketo 的客戶設定檔數目取決於您和 Marketo 簽訂的契約。
 - 僅客戶細分。
 

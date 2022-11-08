@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196062"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724976"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>將客戶細分匯出至 DotDigital (預覽版)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9196062"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 每次最多可匯出 100 萬個客戶資料至 DotDigital，由於提供者方面的限制，這可能需要三個小時才能完成。 您可以匯出到 DotDigital 的客戶設定檔數目取決於您和 DotDigital 簽訂的契約。
 - 僅客戶細分。
 

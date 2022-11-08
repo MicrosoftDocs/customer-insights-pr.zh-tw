@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d857bf5d11de86521c4a9d4fc665c020496d89d2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195602"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725115"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>將客戶細分匯出至 RollWorks (預覽版)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9195602"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 每次最多匯出 250,000 個客戶設定檔到 RollWorks，最長需要花費 10 分鐘才能完成。 您可以匯出到 RollWorks 的客戶設定檔數目取決於您和 RollWorks 簽訂的契約。
 - 僅客戶細分。
 

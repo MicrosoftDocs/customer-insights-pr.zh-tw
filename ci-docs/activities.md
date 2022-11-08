@@ -1,12 +1,12 @@
 ---
 title: 客戶或商務連絡人活動
 description: 定義客戶或商務連絡人活動，並在客戶設定檔的時間表中檢視這些活動。
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,12 +17,12 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304095"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723771"
 ---
 # <a name="customer-or-business-contact-activities"></a>客戶或商務連絡人活動
 
@@ -41,6 +41,9 @@ ms.locfileid: "9304095"
    - **活動名稱**：選取活動的名稱。
    - **活動實體**：選取包含交易資料或活動資料的實體。
    - **主索引鍵**：選取唯一識別記錄的欄位。 其中不得包含任何重複值、空白值或遺漏值。
+
+     > [!NOTE]
+     > 每個資料列的主索引鍵在所有資料來源重新整理中都必須保持一致。 如果資料列的主索引鍵已在資料來源重新整理中更新，則會在輸出活動實體中建立重複資料。 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="以名稱、實體和主索引鍵來設定活動資料。":::
 
@@ -132,7 +135,15 @@ ms.locfileid: "9304095"
 
 1. 選取 **新增活動**。
 
-1. 為活動命名，選取來源活動實體，然後選取活動實體的主索引鍵。
+1. 在 **活動資料** 步驟中，請輸入下列資訊：
+
+   - **活動名稱**：選取活動的名稱。
+   - **活動實體**：選取包含交易資料或活動資料的實體。
+   - **主索引鍵**：選取唯一識別記錄的欄位。 其中不得包含任何重複值、空白值或遺漏值。
+
+     > [!NOTE]
+     > 每個資料列的主索引鍵在所有資料來源重新整理中都必須保持一致。 如果資料列的主索引鍵已在資料來源重新整理中更新，則會在輸出活動實體中建立重複資料。 
+
 
 1. 在 **關聯** 步驟中，以中間實體方式，建立活動來源資料與客戶之間的間接關係。 如需詳細資訊，請查看[直接和間接關聯路徑](relationships.md#relationship-paths)。
    - 一個活動的關聯範例，名字是 *採購*：

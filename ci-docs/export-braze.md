@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655267"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725206"
 ---
 # <a name="export-segments-to-braze-preview"></a>將客戶細分匯出至 Braze (預覽版)
 
@@ -29,6 +29,7 @@ ms.locfileid: "9655267"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 匯出多達 1 百萬個客戶個人資料到 Braze 需要花費最多 40 分鐘完成。 您可以匯出到 Braze 的客戶設定檔數目取決於您和 Braze 簽訂的契約。
 - 僅客戶細分。
 - Braze 匯出不支援 Azure Private Link。

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffc591c01a5a9434cde41f2da25fa930a515b8c1
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: df38e9e88a9c116252fba26983b5f3711b46f051
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199085"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725252"
 ---
 # <a name="export-segments-to-moengage-preview"></a>將客戶細分匯出至 MoEngage (預覽版)
 
@@ -27,6 +27,7 @@ ms.locfileid: "9199085"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 每次最多匯出 100,000 個客戶設定檔到 MoEngage，最長需要花費 15 分鐘才能完成。 您可以匯出到 MoEngage 的客戶設定檔數目取決於您和 MoEngage 簽訂的契約。
 - 僅客戶細分。
 

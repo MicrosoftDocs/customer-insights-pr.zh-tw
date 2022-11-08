@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196936"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724884"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>匯出客戶細分到 Sendinblue (預覽版)
 
@@ -29,6 +29,7 @@ ms.locfileid: "9196936"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 最多可以匯出 1 百萬個客戶設定檔到 Sendinblue，最長需要 90 分鐘才能完成。 您可以匯出到 Sendinblue 的客戶設定檔數目取決於您和 Sendinblue 簽訂的契約。
 - 僅客戶細分。
 

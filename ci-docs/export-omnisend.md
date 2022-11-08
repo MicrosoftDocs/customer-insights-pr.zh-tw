@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196154"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725160"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>將客戶細分匯出至 Omnisend (預覽版)
 
@@ -28,6 +28,7 @@ ms.locfileid: "9196154"
 
 ## <a name="known-limitations"></a>已知限制
 
+- 不支援與自備儲存體 (BYOS) 搭配使用的私人連結。
 - 最多可以匯出 1 百萬個客戶設定檔到 Omnisend，它需要長達 4 小時完成。 您可以匯出到 Omnisend 的客戶設定檔數目取決於您和 Omnisend 簽訂的契約。
 - 僅客戶細分。
 
